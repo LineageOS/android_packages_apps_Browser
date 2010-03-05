@@ -744,6 +744,7 @@ public class BrowserActivity extends Activity
         registerReceiver(mNetworkStateIntentReceiver,
                          mNetworkStateChangedFilter);
         WebView.enablePlatformNotifications();
+        toggleNotificationBar(!mSettings.isFullScreen());
     }
 
     /**
@@ -3647,6 +3648,17 @@ public class BrowserActivity extends Activity
             return smartUrlFilter(inUri.toString());
         }
         return null;
+    }
+    
+    private void toggleNotificationBar(boolean showBar) {
+        if (showBar) {            
+            mTabControl.getBrowserActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+            mTabControl.getBrowserActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
+        else {
+            mTabControl.getBrowserActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            mTabControl.getBrowserActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+        }
     }
 
     protected static final Pattern ACCEPTED_URI_SCHEMA = Pattern.compile(
