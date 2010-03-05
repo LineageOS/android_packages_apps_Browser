@@ -41,6 +41,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Observable;
 
+//Wysie
+import android.view.WindowManager;
+
 /*
  * Package level class for storing various WebView and Browser settings. To use
  * this class:
@@ -75,6 +78,9 @@ class BrowserSettings extends Observable {
     private boolean landscapeOnly;
     private boolean loadsPageInOverviewMode;
     private boolean showDebugSettings;
+    private boolean showZoomControls = true;
+    private boolean fullScreen = false;
+    
     // HTML5 API flags
     private boolean appCacheEnabled;
     private boolean databaseEnabled;
@@ -202,6 +208,8 @@ class BrowserSettings extends Observable {
             s.setSavePassword(b.rememberPasswords);
             s.setLoadWithOverviewMode(b.loadsPageInOverviewMode);
             s.setPageCacheCapacity(pageCacheCapacity);
+            
+            s.showZoomControls(b.showZoomControls);
 
             // WebView inside Browser doesn't want initial focus to be set.
             s.setNeedInitialFocus(false);
@@ -302,6 +310,12 @@ class BrowserSettings extends Observable {
         zoomDensity = WebSettings.ZoomDensity.valueOf(
                 p.getString(PREF_DEFAULT_ZOOM, zoomDensity.name()));
         autoFitPage = p.getBoolean("autofit_pages", autoFitPage);
+        
+        //Wysie
+        showZoomControls = p.getBoolean("show_zoom_controls", showZoomControls);
+        fullScreen = p.getBoolean("full_screen_mode", fullScreen);
+        updateFullscreenStatus();
+        
         loadsPageInOverviewMode = p.getBoolean("load_page",
                 loadsPageInOverviewMode);
         boolean landscapeOnlyTemp =
@@ -364,6 +378,19 @@ class BrowserSettings extends Observable {
 
         update();
     }
+    
+    private void updateFullscreenStatus() {
+        if(fullScreen) {
+            mTabControl.getBrowserActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            mTabControl.getBrowserActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+        }
+        else {
+            mTabControl.getBrowserActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+            mTabControl.getBrowserActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
+        //mTabControl.getBrowserActivity().requestLayout();
+    }
+
 
     public String getHomePage() {
         return homeUrl;
