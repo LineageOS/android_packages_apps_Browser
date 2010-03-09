@@ -315,6 +315,7 @@ class BrowserSettings extends Observable {
         showZoomControls = p.getBoolean("show_zoom_controls", showZoomControls);
         fullScreen = p.getBoolean("full_screen_mode", fullScreen);
         updateFullscreenStatus();
+        userAgent = Integer.parseInt(p.getString("web_user_agent", "0"));
         
         loadsPageInOverviewMode = p.getBoolean("load_page",
                 loadsPageInOverviewMode);
