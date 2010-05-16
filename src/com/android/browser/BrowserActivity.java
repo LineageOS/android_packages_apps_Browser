@@ -151,6 +151,11 @@ import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
+import android.view.GestureDetector;
+import android.view.GestureDetector.SimpleOnGestureListener;
+import android.view.MotionEvent;
+import android.view.View.OnTouchListener;
+
 public class BrowserActivity extends Activity
     implements View.OnCreateContextMenuListener,
         DownloadListener {
@@ -341,7 +346,9 @@ public class BrowserActivity extends Activity
         mCustomViewContainer = (FrameLayout) mBrowserFrameLayout
                 .findViewById(R.id.fullscreen_custom_content);
         frameLayout.addView(mBrowserFrameLayout, COVER_SCREEN_PARAMS);
+        
         mTitleBar = new TitleBar(this);
+        mTitleBar.setOnTouchListener(onTitleBarTouchListener);
 
         // Create the tab control and our initial tab
         mTabControl = new TabControl(this);
@@ -443,6 +450,7 @@ public class BrowserActivity extends Activity
             mTabControl.setCurrentTab(t);
             attachTabToContentView(t);
             WebView webView = t.getWebView();
+            
             if (extra != null) {
                 int scale = extra.getInt(Browser.INITIAL_ZOOM_LEVEL, 0);
                 if (scale > 0 && scale <= 1000) {
@@ -481,7 +489,7 @@ public class BrowserActivity extends Activity
         String jsFlags = mSettings.getJsFlags();
         if (jsFlags.trim().length() != 0) {
             mTabControl.getCurrentWebView().setJsFlags(jsFlags);
-        }
+        }        
     }
 
     @Override
@@ -868,6 +876,8 @@ public class BrowserActivity extends Activity
         registerReceiver(mNetworkStateIntentReceiver,
                          mNetworkStateChangedFilter);
         WebView.enablePlatformNotifications();
+        
+        toggleNotificationBar(!mSettings.isFullScreen());
 
         if (mSettings.doFlick()) {
             if (mSensorManager == null) {
@@ -1034,6 +1044,7 @@ public class BrowserActivity extends Activity
             Shadow shadow = (Shadow) mFakeTitleBarHolder.findViewById(
                     R.id.shadow);
             shadow.setWebView(mainView);
+            mainView.setOnTouchListener(onBrowserTouchListener);
             mFakeTitleBarHolder.addView(mFakeTitleBar, 0, mFakeTitleBarParams);
             manager.addView(mFakeTitleBarHolder, params);
         }
@@ -2521,6 +2532,7 @@ public class BrowserActivity extends Activity
         }
         setFavicon(icon);
     }
+
 
     private final WebViewClient mWebViewClient = new WebViewClient() {
         @Override
@@ -4328,6 +4340,50 @@ public class BrowserActivity extends Activity
         return mTabControl.getTabCount();
       }
       return 0;
+    }
+    
+    private final OnTouchListener onBrowserTouchListener = new OnTouchListener() {
+        
+        public boolean onTouch(View v, MotionEvent event) {
+            if (mSettings.isFullScreen())
+                toggleNotificationBar(false);
+                
+            return true;
+        }
+    };
+    
+    private final OnTouchListener onTitleBarTouchListener = new OnTouchListener() {
+        GestureDetector detect = new GestureDetector(new ToggleNotificationBarListener()); {
+            detect.setIsLongpressEnabled(false);
+        }
+        
+        public boolean onTouch(View v, MotionEvent event) {
+            return detect.onTouchEvent(event);
+        }
+    };
+    
+    private class ToggleNotificationBarListener extends SimpleOnGestureListener {
+        private static final float MIN_VELOCITY_DIP = -100.0f;
+        private static final float MIN_VELOCITY_RISE = 100.0f;
+        
+        @Override
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            if (velocityY > MIN_VELOCITY_RISE) {
+                toggleNotificationBar(true);
+            }
+                return super.onFling(e1, e2, velocityX, velocityY);
+            }
+    }
+    
+    private void toggleNotificationBar(boolean showBar) {
+        if (showBar) {            
+            mTabControl.getBrowserActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+            mTabControl.getBrowserActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
+        else {
+            mTabControl.getBrowserActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            mTabControl.getBrowserActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+        }
     }
 
     protected static final Pattern ACCEPTED_URI_SCHEMA = Pattern.compile(

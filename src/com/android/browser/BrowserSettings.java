@@ -312,7 +312,6 @@ class BrowserSettings extends Observable {
         //Wysie
         showZoomControls = p.getBoolean("show_zoom_controls", showZoomControls);
         fullScreen = p.getBoolean("full_screen_mode", fullScreen);
-        updateFullscreenStatus();
         userAgent = Integer.parseInt(p.getString("web_user_agent", "0"));
         
         loadsPageInOverviewMode = p.getBoolean("load_page",
@@ -383,20 +382,11 @@ class BrowserSettings extends Observable {
         workersEnabled = p.getBoolean("enable_workers", workersEnabled);
 
         update();
-    }
+    }   
     
-    private void updateFullscreenStatus() {
-        if(fullScreen) {
-            mTabControl.getBrowserActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-            mTabControl.getBrowserActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-        }
-        else {
-            mTabControl.getBrowserActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-            mTabControl.getBrowserActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        }
-        //mTabControl.getBrowserActivity().requestLayout();
+    public boolean isFullScreen() {
+        return fullScreen;
     }
-
 
     public String getHomePage() {
         return homeUrl;
