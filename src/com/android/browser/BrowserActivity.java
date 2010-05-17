@@ -348,7 +348,6 @@ public class BrowserActivity extends Activity
         frameLayout.addView(mBrowserFrameLayout, COVER_SCREEN_PARAMS);
         
         mTitleBar = new TitleBar(this);
-        mTitleBar.setOnTouchListener(onTitleBarTouchListener);
 
         // Create the tab control and our initial tab
         mTabControl = new TabControl(this);
@@ -1044,7 +1043,6 @@ public class BrowserActivity extends Activity
             Shadow shadow = (Shadow) mFakeTitleBarHolder.findViewById(
                     R.id.shadow);
             shadow.setWebView(mainView);
-            mainView.setOnTouchListener(onBrowserTouchListener);
             mFakeTitleBarHolder.addView(mFakeTitleBar, 0, mFakeTitleBarParams);
             manager.addView(mFakeTitleBarHolder, params);
         }
@@ -4363,16 +4361,20 @@ public class BrowserActivity extends Activity
     };
     
     private class ToggleNotificationBarListener extends SimpleOnGestureListener {
-        private static final float MIN_VELOCITY_DIP = -100.0f;
-        private static final float MIN_VELOCITY_RISE = 100.0f;
+        private static final float MIN_VELOCITY_DIP = -50.0f;
+        private static final float MIN_VELOCITY_RISE = 50.0f;
         
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            mTitleBar.cancelLongPress();
             if (velocityY > MIN_VELOCITY_RISE) {
                 toggleNotificationBar(true);
             }
-                return super.onFling(e1, e2, velocityX, velocityY);
+            else if (velocityY < MIN_VELOCITY_DIP) {
+                toggleNotificationBar(false);
             }
+            return true;
+        }
     }
     
     private void toggleNotificationBar(boolean showBar) {
