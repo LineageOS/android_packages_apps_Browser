@@ -4340,6 +4340,7 @@ public class BrowserActivity extends Activity
       return 0;
     }
     
+    /*
     private final OnTouchListener onBrowserTouchListener = new OnTouchListener() {
         
         public boolean onTouch(View v, MotionEvent event) {
@@ -4376,6 +4377,7 @@ public class BrowserActivity extends Activity
             return true;
         }
     }
+    */
     
     private void toggleNotificationBar(boolean showBar) {
         if (showBar) {            
