@@ -292,9 +292,7 @@
     <string name="progress_dialog_setting_wallpaper" msgid="4871900779338536674">"壁紙を設定中..."</string>
 
     <!-- Extra settings -->
-    <!-- Wysie -->
     <string name="pref_show_zoom_controls">"ズームボタンの表示"</string>
-    <string name="pref_full_screen_mode">"フルスクリーンモード"</string>
     <string name="pref_user_agent_title">"User agent"</string>
     <string name="pref_user_agent_dialog">"User Agent文字列を選択してください"</string>
 

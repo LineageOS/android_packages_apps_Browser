@@ -41,9 +41,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Observable;
 
-//Wysie
-import android.view.WindowManager;
-
 /*
  * Package level class for storing various WebView and Browser settings. To use
  * this class:
@@ -79,7 +76,6 @@ class BrowserSettings extends Observable {
     private boolean loadsPageInOverviewMode;
     private boolean showDebugSettings;
     private boolean showZoomControls = true;
-    private boolean fullScreen = false;
     
     // HTML5 API flags
     private boolean appCacheEnabled;
@@ -315,10 +311,7 @@ class BrowserSettings extends Observable {
                 p.getString(PREF_DEFAULT_ZOOM, zoomDensity.name()));
         autoFitPage = p.getBoolean("autofit_pages", autoFitPage);
         
-        //Wysie
         showZoomControls = p.getBoolean("show_zoom_controls", showZoomControls);
-        fullScreen = p.getBoolean("full_screen_mode", fullScreen);
-        updateFullscreenStatus();
         userAgent = Integer.parseInt(p.getString("web_user_agent", "0"));
         
         loadsPageInOverviewMode = p.getBoolean("load_page",
@@ -384,19 +377,6 @@ class BrowserSettings extends Observable {
         update();
     }
     
-    private void updateFullscreenStatus() {
-        if(fullScreen) {
-            mTabControl.getBrowserActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-            mTabControl.getBrowserActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-        }
-        else {
-            mTabControl.getBrowserActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-            mTabControl.getBrowserActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        }
-        //mTabControl.getBrowserActivity().requestLayout();
-    }
-
-
     public String getHomePage() {
         return homeUrl;
     }
