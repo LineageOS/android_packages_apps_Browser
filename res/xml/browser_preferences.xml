@@ -41,6 +41,11 @@
                 android:defaultValue="true"
                 android:title="@string/pref_show_zoom_controls" />
                 
+        <CheckBoxPreference
+                android:key="full_screen_mode"
+                android:defaultValue="false"
+                android:title="@string/pref_full_screen_mode" />
+                
         <ListPreference
 				android:key="web_user_agent"
 				android:title="@string/pref_user_agent_title"

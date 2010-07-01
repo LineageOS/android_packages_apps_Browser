@@ -76,6 +76,7 @@ class BrowserSettings extends Observable {
     private boolean loadsPageInOverviewMode;
     private boolean showDebugSettings;
     private boolean showZoomControls = true;
+    private boolean fullScreen = false;
     
     // HTML5 API flags
     private boolean appCacheEnabled;
@@ -312,6 +313,7 @@ class BrowserSettings extends Observable {
         autoFitPage = p.getBoolean("autofit_pages", autoFitPage);
         
         showZoomControls = p.getBoolean("show_zoom_controls", showZoomControls);
+        fullScreen = p.getBoolean("full_screen_mode", fullScreen);
         userAgent = Integer.parseInt(p.getString("web_user_agent", "0"));
         
         loadsPageInOverviewMode = p.getBoolean("load_page",
@@ -375,6 +377,10 @@ class BrowserSettings extends Observable {
         workersEnabled = p.getBoolean("enable_workers", workersEnabled);
 
         update();
+    }
+    
+    public boolean isFullScreen() {
+        return fullScreen;
     }
     
     public String getHomePage() {
