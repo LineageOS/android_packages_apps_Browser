@@ -1766,10 +1766,12 @@ public class BrowserActivity extends Activity
             // animation behavior.
             mTabControl.setCurrentTab(tab);
             attachTabToContentView(tab);
+            resetTitleIconAndProgress();
             return tab;
         } else {
             // Get rid of the subwindow if it exists
             dismissSubWindow(currentTab);
+            resetTitleIconAndProgress();
             return currentTab;
         }
     }
@@ -1793,7 +1795,7 @@ public class BrowserActivity extends Activity
             Tab t = mTabControl.createNewIncognitoTab();
             if (t != null) {
                 WebView view = t.getWebView();
-                loadUrl(view, "about:incognito");
+
             }
             return t;
         } else {
