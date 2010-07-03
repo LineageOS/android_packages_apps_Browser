@@ -140,6 +140,10 @@ class Tab {
     // AsyncTask for downloading touch icons
     DownloadTouchIcon mTouchIconLoader;
 
+    public boolean isIncognito(){
+    	return this.INCOGNITO;
+    }
+    
     // Extra saved information for displaying the tab in the picker.
     private static class PickerData {
         String  mUrl;

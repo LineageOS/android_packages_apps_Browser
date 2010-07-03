@@ -672,13 +672,16 @@ public class BrowserActivity extends Activity
                     url = smartUrlFilter(url);
                     final ContentResolver cr = mResolver;
                     final String newUrl = url;
-                    new AsyncTask<Void, Void, Void>() {
-                        protected Void doInBackground(Void... unused) {
-                            Browser.updateVisitedHistory(cr, newUrl, false);
-                            Log.i("NIGGA", "HERE 3");
-                            return null;
-                        }
-                    }.execute();
+                    Tab tt = mTabControl.getCurrentTab();
+                    if (!tt.isIncognito()){
+	                    new AsyncTask<Void, Void, Void>() {
+	                        protected Void doInBackground(Void... unused) {
+	                            Browser.updateVisitedHistory(cr, newUrl, false);
+	                            Log.i("NIGGA", "HERE 3");
+	                            return null;
+	                        }
+	                    }.execute();
+                    }
                     String searchSource = "&source=android-" + GOOGLE_SEARCH_SOURCE_SUGGEST + "&";
                     if (url.contains(searchSource)) {
                         String source = null;
