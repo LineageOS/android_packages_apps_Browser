@@ -323,7 +323,7 @@ class TabControl {
                 } else {
                     // Create a new tab and don't restore the state yet, add it
                     // to the tab list
-                    Tab t = new Tab(mActivity, null, false, null, null);
+                    Tab t = new Tab(mActivity, null, false, null, null, false);
                     Bundle state = inState.getBundle(Tab.WEBVIEW + i);
                     if (state != null) {
                         t.setSavedState(state);
