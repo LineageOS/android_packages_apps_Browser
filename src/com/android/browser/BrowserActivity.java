@@ -1294,6 +1294,10 @@ public class BrowserActivity extends Activity
             case R.id.new_tab_menu_id:
                 openTabToHomePage();
                 break;
+            
+            case R.id.incog_tab_menu_id:
+            	openIncogTab();
+            	break;
 
             case R.id.goto_menu_id:
                 editUrl();
@@ -1743,6 +1747,36 @@ public class BrowserActivity extends Activity
         }
     }
 
+    /* package */Tab openIncogTabAndShow(UrlData urlData, String appId) {
+        final Tab currentTab = mTabControl.getCurrentTab();
+        if (mTabControl.canCreateNewTab()) {
+            final Tab tab = mTabControl.createNewIncognitoTab(appId, urlData.mUrl);
+            WebView webview = tab.getWebView();
+            // If the last tab was removed from the active tabs page, currentTab
+            // will be null.
+            if (currentTab != null) {
+                removeTabFromContentView(currentTab);
+            }
+            // We must set the new tab as the current tab to reflect the old
+            // animation behavior.
+            mTabControl.setCurrentTab(tab);
+            attachTabToContentView(tab);
+            if (!urlData.isEmpty()) {
+                loadUrlDataIn(tab, urlData);
+            }
+            return tab;
+        } else {
+            // Get rid of the subwindow if it exists
+            dismissSubWindow(currentTab);
+            if (!urlData.isEmpty()) {
+                // Load the given url.
+                loadUrlDataIn(currentTab, urlData);
+            }
+            return currentTab;
+        }
+    }
+
+    
     private Tab openTab(String url) {
         if (mSettings.openInBackground()) {
             Tab t = mTabControl.createNewTab();
@@ -1756,6 +1790,20 @@ public class BrowserActivity extends Activity
         }
     }
 
+    private Tab openIncogTab(String url) {
+        if (mSettings.openInBackground()) {
+            Tab t = mTabControl.createNewIncognitoTab();
+            if (t != null) {
+                WebView view = t.getWebView();
+                loadUrl(view, url);
+            }
+            return t;
+        } else {
+            return openTabAndShow(url, null);
+        }
+    }
+
+    
     private class Copy implements OnMenuItemClickListener {
         private CharSequence mText;
 

@@ -182,13 +182,13 @@ class TabControl {
     /**
      * Create a new incognito tab with default values for closeOnExit(true)
      */
-    Tab createNewIncognitoTab(){
+    Tab createNewIncognitoTab(String appId, String url){
         int size = mTabs.size();
         if (MAX_TABS == size) {
             return null;
         }
         final WebView w = createNewWebView();
-        Tab t = new Tab(mActivity, w, true, null, null, true);
+        Tab t = new Tab(mActivity, w, true, appId, url, true);
         mTabs.add(t);
         t.putInBackground();
         return t;
