@@ -182,7 +182,7 @@ class TabControl {
     /**
      * Create a new incognito tab with default values for closeOnExit(true)
      */
-    Tab createNewIncognitoTab(String appId, String url){
+    Tab createNewIncognitoTab(){
         int size = mTabs.size();
         if (MAX_TABS == size) {
             return null;

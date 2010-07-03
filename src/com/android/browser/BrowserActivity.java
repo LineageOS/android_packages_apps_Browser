@@ -1747,10 +1747,10 @@ public class BrowserActivity extends Activity
         }
     }
 
-    /* package */Tab openIncogTabAndShow(UrlData urlData, String appId) {
+    /* package */Tab openIncogTabAndShow() {
         final Tab currentTab = mTabControl.getCurrentTab();
         if (mTabControl.canCreateNewTab()) {
-            final Tab tab = mTabControl.createNewIncognitoTab(appId, urlData.mUrl);
+            final Tab tab = mTabControl.createNewIncognitoTab();
             WebView webview = tab.getWebView();
             // If the last tab was removed from the active tabs page, currentTab
             // will be null.
@@ -1761,9 +1761,6 @@ public class BrowserActivity extends Activity
             // animation behavior.
             mTabControl.setCurrentTab(tab);
             attachTabToContentView(tab);
-            if (!urlData.isEmpty()) {
-                loadUrlDataIn(tab, urlData);
-            }
             return tab;
         } else {
             // Get rid of the subwindow if it exists
@@ -1790,16 +1787,15 @@ public class BrowserActivity extends Activity
         }
     }
 
-    private Tab openIncogTab(String url) {
+    private Tab openIncogTab() {
         if (mSettings.openInBackground()) {
             Tab t = mTabControl.createNewIncognitoTab();
             if (t != null) {
                 WebView view = t.getWebView();
-                loadUrl(view, url);
             }
             return t;
         } else {
-            return openTabAndShow(url, null);
+            return openIncogTabAndShow();
         }
     }
 
