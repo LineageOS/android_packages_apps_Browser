@@ -1286,7 +1286,7 @@ class Tab {
 
     // Construct a new tab
     Tab(BrowserActivity activity, WebView w, boolean closeOnExit, String appId,
-            String url) {
+            String url, boolean incognito) {
         mActivity = activity;
         mCloseOnExit = closeOnExit;
         mAppId = appId;
@@ -1322,22 +1322,23 @@ class Tab {
                 }
             }
         };
-        mWebBackForwardListClient = new WebBackForwardListClient() {
-            @Override
-            public void onNewHistoryItem(WebHistoryItem item) {
-                if (isInVoiceSearchMode()) {
-                    item.setCustomData(mVoiceSearchData.mVoiceSearchIntent);
+        if(!incognito){
+            mWebBackForwardListClient = new WebBackForwardListClient() {
+                @Override
+                public void onNewHistoryItem(WebHistoryItem item) {
+                    if (isInVoiceSearchMode()) {
+                        item.setCustomData(mVoiceSearchData.mVoiceSearchIntent);
+                    }
                 }
-            }
-            @Override
-            public void onIndexChanged(WebHistoryItem item, int index) {
-                Object data = item.getCustomData();
-                if (data != null && data instanceof Intent) {
-                    activateVoiceSearchMode((Intent) data);
+                @Override
+                public void onIndexChanged(WebHistoryItem item, int index) {
+                    Object data = item.getCustomData();
+                    if (data != null && data instanceof Intent) {
+                        activateVoiceSearchMode((Intent) data);
+                    }
                 }
-            }
-        };
-
+            };
+        }
         setWebView(w);
     }
 
