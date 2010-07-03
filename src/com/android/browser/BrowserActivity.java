@@ -1793,6 +1793,7 @@ public class BrowserActivity extends Activity
             Tab t = mTabControl.createNewIncognitoTab();
             if (t != null) {
                 WebView view = t.getWebView();
+                loadUrl(view, "about:incognito");
             }
             return t;
         } else {
