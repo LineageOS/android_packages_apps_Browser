@@ -188,7 +188,7 @@ class TabControl {
             return null;
         }
         final WebView w = createNewWebView();
-        Tab t = new Tab(mActivity, w, true, appId, url, true);
+        Tab t = new Tab(mActivity, w, true, null, null, true);
         mTabs.add(t);
         t.putInBackground();
         return t;
