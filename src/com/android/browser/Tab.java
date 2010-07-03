@@ -666,9 +666,7 @@ class Tab {
             }
             final ContentResolver cr = mActivity.getContentResolver();
             final String newUrl = url;
-            Log.i("INCOGNEGRO", ""+INCOGNITO);
             if(!INCOGNITO){
-            	Log.i("NIGGA", "HERE 1");
             	new AsyncTask<Void, Void, Void>() {
             		protected Void doInBackground(Void... unused) {
             			Browser.updateVisitedHistory(cr, newUrl, true);
