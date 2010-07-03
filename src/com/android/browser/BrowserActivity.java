@@ -1767,11 +1767,13 @@ public class BrowserActivity extends Activity
             mTabControl.setCurrentTab(tab);
             attachTabToContentView(tab);
             resetTitleIconAndProgress();
+            setUrlTitle("Incognito", "Incognito");
             return tab;
         } else {
             // Get rid of the subwindow if it exists
             dismissSubWindow(currentTab);
             resetTitleIconAndProgress();
+            setUrlTitle("Incognito", "Incognito");
             return currentTab;
         }
     }
