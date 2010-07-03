@@ -662,7 +662,9 @@ class Tab {
             }
             final ContentResolver cr = mActivity.getContentResolver();
             final String newUrl = url;
+            Log.i("INCOGNEGRO", ""+INCOGNITO);
             if(!INCOGNITO){
+            	Log.i("NIGGA", "HERE 1");
             	new AsyncTask<Void, Void, Void>() {
             		protected Void doInBackground(Void... unused) {
             			Browser.updateVisitedHistory(cr, newUrl, true);
@@ -1291,7 +1293,7 @@ class Tab {
     // Construct a new tab
     Tab(BrowserActivity activity, WebView w, boolean closeOnExit, String appId,
             String url, boolean incognito) {
-    	INCOGNITO = incognito;
+    	this.INCOGNITO = incognito;
         mActivity = activity;
         mCloseOnExit = closeOnExit;
         mAppId = appId;

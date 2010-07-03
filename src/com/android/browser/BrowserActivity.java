@@ -611,15 +611,14 @@ public class BrowserActivity extends Activity
 
         final ContentResolver cr = mResolver;
         final String newUrl = url;
-        /*
         new AsyncTask<Void, Void, Void>() {
             protected Void doInBackground(Void... unused) {
                 Browser.updateVisitedHistory(cr, newUrl, false);
                 Browser.addSearchUrl(cr, newUrl);
+                Log.i("NIGGA", "HERE 2");
                 return null;
             }
         }.execute();
-		*/
         Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
         intent.addCategory(Intent.CATEGORY_DEFAULT);
         intent.putExtra(SearchManager.QUERY, url);
@@ -676,6 +675,7 @@ public class BrowserActivity extends Activity
                     new AsyncTask<Void, Void, Void>() {
                         protected Void doInBackground(Void... unused) {
                             Browser.updateVisitedHistory(cr, newUrl, false);
+                            Log.i("NIGGA", "HERE 3");
                             return null;
                         }
                     }.execute();
