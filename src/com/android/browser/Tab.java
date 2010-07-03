@@ -84,6 +84,8 @@ class Tab {
     // of the browser.
     private static final String CONSOLE_LOGTAG = "browser";
 
+    // Incognito Flag
+    private boolean INCOGNITO = false;
     // The Geolocation permissions prompt
     private GeolocationPermissionsPrompt mGeolocationPermissionsPrompt;
     // Main WebView wrapper
@@ -660,12 +662,14 @@ class Tab {
             }
             final ContentResolver cr = mActivity.getContentResolver();
             final String newUrl = url;
-            new AsyncTask<Void, Void, Void>() {
-                protected Void doInBackground(Void... unused) {
-                    Browser.updateVisitedHistory(cr, newUrl, true);
-                    return null;
-                }
-            }.execute();
+            if(!INCOGNITO){
+            	new AsyncTask<Void, Void, Void>() {
+            		protected Void doInBackground(Void... unused) {
+            			Browser.updateVisitedHistory(cr, newUrl, true);
+            			return null;
+            		}
+            	}.execute();
+            }
             WebIconDatabase.getInstance().retainIconForPageUrl(url);
         }
 
@@ -1287,6 +1291,7 @@ class Tab {
     // Construct a new tab
     Tab(BrowserActivity activity, WebView w, boolean closeOnExit, String appId,
             String url, boolean incognito) {
+    	INCOGNITO = incognito;
         mActivity = activity;
         mCloseOnExit = closeOnExit;
         mAppId = appId;
@@ -1322,23 +1327,21 @@ class Tab {
                 }
             }
         };
-        if(!incognito){
-            mWebBackForwardListClient = new WebBackForwardListClient() {
-                @Override
-                public void onNewHistoryItem(WebHistoryItem item) {
-                    if (isInVoiceSearchMode()) {
-                        item.setCustomData(mVoiceSearchData.mVoiceSearchIntent);
-                    }
+        mWebBackForwardListClient = new WebBackForwardListClient() {
+            @Override
+            public void onNewHistoryItem(WebHistoryItem item) {
+                if (isInVoiceSearchMode()) {
+                    item.setCustomData(mVoiceSearchData.mVoiceSearchIntent);
                 }
-                @Override
-                public void onIndexChanged(WebHistoryItem item, int index) {
-                    Object data = item.getCustomData();
-                    if (data != null && data instanceof Intent) {
-                        activateVoiceSearchMode((Intent) data);
-                    }
+            }
+            @Override
+            public void onIndexChanged(WebHistoryItem item, int index) {
+                Object data = item.getCustomData();
+                if (data != null && data instanceof Intent) {
+                    activateVoiceSearchMode((Intent) data);
                 }
-            };
-        }
+            }
+        };
         setWebView(w);
     }
 
