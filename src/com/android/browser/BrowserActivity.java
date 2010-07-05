@@ -611,14 +611,16 @@ public class BrowserActivity extends Activity
 
         final ContentResolver cr = mResolver;
         final String newUrl = url;
-        new AsyncTask<Void, Void, Void>() {
-            protected Void doInBackground(Void... unused) {
-                Browser.updateVisitedHistory(cr, newUrl, false);
-                Browser.addSearchUrl(cr, newUrl);
-                return null;
-            }
-        }.execute();
-
+        Tab tt = mTabControl.getCurrentTab();
+        if (!tt.isIncognito()){
+        	new AsyncTask<Void, Void, Void>() {
+        		protected Void doInBackground(Void... unused) {
+        			Browser.updateVisitedHistory(cr, newUrl, false);
+        			Browser.addSearchUrl(cr, newUrl);
+        			return null;
+        		}
+        	}.execute();
+        }
         Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
         intent.addCategory(Intent.CATEGORY_DEFAULT);
         intent.putExtra(SearchManager.QUERY, url);
@@ -672,12 +674,15 @@ public class BrowserActivity extends Activity
                     url = smartUrlFilter(url);
                     final ContentResolver cr = mResolver;
                     final String newUrl = url;
-                    new AsyncTask<Void, Void, Void>() {
-                        protected Void doInBackground(Void... unused) {
-                            Browser.updateVisitedHistory(cr, newUrl, false);
-                            return null;
-                        }
-                    }.execute();
+                    Tab tt = mTabControl.getCurrentTab();
+                    if (!tt.isIncognito()){
+	                    new AsyncTask<Void, Void, Void>() {
+	                        protected Void doInBackground(Void... unused) {
+	                            Browser.updateVisitedHistory(cr, newUrl, false);
+	                            return null;
+	                        }
+	                    }.execute();
+                    }
                     String searchSource = "&source=android-" + GOOGLE_SEARCH_SOURCE_SUGGEST + "&";
                     if (url.contains(searchSource)) {
                         String source = null;
@@ -1294,6 +1299,10 @@ public class BrowserActivity extends Activity
             case R.id.new_tab_menu_id:
                 openTabToHomePage();
                 break;
+            
+            case R.id.incog_tab_menu_id:
+            	openIncogTab();
+            	break;
 
             case R.id.goto_menu_id:
                 editUrl();
@@ -1743,6 +1752,33 @@ public class BrowserActivity extends Activity
         }
     }
 
+    /* package */Tab openIncogTabAndShow() {
+        final Tab currentTab = mTabControl.getCurrentTab();
+        if (mTabControl.canCreateNewTab()) {
+            final Tab tab = mTabControl.createNewIncognitoTab();
+            WebView webview = tab.getWebView();
+            // If the last tab was removed from the active tabs page, currentTab
+            // will be null.
+            if (currentTab != null) {
+                removeTabFromContentView(currentTab);
+            }
+            // We must set the new tab as the current tab to reflect the old
+            // animation behavior.
+            mTabControl.setCurrentTab(tab);
+            attachTabToContentView(tab);
+            resetTitleIconAndProgress();
+            setUrlTitle("Incognito", "Incognito");
+            return tab;
+        } else {
+            // Get rid of the subwindow if it exists
+            dismissSubWindow(currentTab);
+            resetTitleIconAndProgress();
+            setUrlTitle("Incognito", "Incognito");
+            return currentTab;
+        }
+    }
+
+    
     private Tab openTab(String url) {
         if (mSettings.openInBackground()) {
             Tab t = mTabControl.createNewTab();
@@ -1756,6 +1792,20 @@ public class BrowserActivity extends Activity
         }
     }
 
+    private Tab openIncogTab() {
+        if (mSettings.openInBackground()) {
+            Tab t = mTabControl.createNewIncognitoTab();
+            if (t != null) {
+                WebView view = t.getWebView();
+
+            }
+            return t;
+        } else {
+            return openIncogTabAndShow();
+        }
+    }
+
+    
     private class Copy implements OnMenuItemClickListener {
         private CharSequence mText;
 

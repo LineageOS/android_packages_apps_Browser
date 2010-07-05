@@ -84,6 +84,8 @@ class Tab {
     // of the browser.
     private static final String CONSOLE_LOGTAG = "browser";
 
+    // Incognito Flag
+    private boolean INCOGNITO = false;
     // The Geolocation permissions prompt
     private GeolocationPermissionsPrompt mGeolocationPermissionsPrompt;
     // Main WebView wrapper
@@ -138,6 +140,10 @@ class Tab {
     // AsyncTask for downloading touch icons
     DownloadTouchIcon mTouchIconLoader;
 
+    public boolean isIncognito(){
+    	return this.INCOGNITO;
+    }
+    
     // Extra saved information for displaying the tab in the picker.
     private static class PickerData {
         String  mUrl;
@@ -660,12 +666,14 @@ class Tab {
             }
             final ContentResolver cr = mActivity.getContentResolver();
             final String newUrl = url;
-            new AsyncTask<Void, Void, Void>() {
-                protected Void doInBackground(Void... unused) {
-                    Browser.updateVisitedHistory(cr, newUrl, true);
-                    return null;
-                }
-            }.execute();
+            if(!INCOGNITO){
+            	new AsyncTask<Void, Void, Void>() {
+            		protected Void doInBackground(Void... unused) {
+            			Browser.updateVisitedHistory(cr, newUrl, true);
+            			return null;
+            		}
+            	}.execute();
+            }
             WebIconDatabase.getInstance().retainIconForPageUrl(url);
         }
 
@@ -1286,7 +1294,8 @@ class Tab {
 
     // Construct a new tab
     Tab(BrowserActivity activity, WebView w, boolean closeOnExit, String appId,
-            String url) {
+            String url, boolean incognito) {
+    	this.INCOGNITO = incognito;
         mActivity = activity;
         mCloseOnExit = closeOnExit;
         mAppId = appId;
@@ -1337,7 +1346,6 @@ class Tab {
                 }
             }
         };
-
         setWebView(w);
     }
 

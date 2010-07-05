@@ -163,7 +163,7 @@ class TabControl {
         final WebView w = createNewWebView();
 
         // Create a new tab and add it to the tab list
-        Tab t = new Tab(mActivity, w, closeOnExit, appId, url);
+        Tab t = new Tab(mActivity, w, closeOnExit, appId, url, false);
         mTabs.add(t);
         // Initially put the tab in the background.
         t.putInBackground();
@@ -176,6 +176,22 @@ class TabControl {
      */
     Tab createNewTab() {
         return createNewTab(false, null, null);
+    }
+
+
+    /**
+     * Create a new incognito tab with default values for closeOnExit(true)
+     */
+    Tab createNewIncognitoTab(){
+        int size = mTabs.size();
+        if (MAX_TABS == size) {
+            return null;
+        }
+        final WebView w = createNewWebView();
+        Tab t = new Tab(mActivity, w, true, null, null, true);
+        mTabs.add(t);
+        t.putInBackground();
+        return t;
     }
 
     /**
@@ -307,7 +323,7 @@ class TabControl {
                 } else {
                     // Create a new tab and don't restore the state yet, add it
                     // to the tab list
-                    Tab t = new Tab(mActivity, null, false, null, null);
+                    Tab t = new Tab(mActivity, null, false, null, null, false);
                     Bundle state = inState.getBundle(Tab.WEBVIEW + i);
                     if (state != null) {
                         t.setSavedState(state);
