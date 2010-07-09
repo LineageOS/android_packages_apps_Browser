@@ -284,6 +284,13 @@ public class TitleBar extends LinearLayout {
     }
     
     /**
+     * Set title hint
+     */
+    /* package */ void setTitleHint(String hint){
+    	mTitle.setHint(hint);
+    }
+    
+    /**
      * Change the TitleBar to or from voice mode.  If there is no package to
      * handle voice search, the TitleBar cannot be set to voice mode.
      */

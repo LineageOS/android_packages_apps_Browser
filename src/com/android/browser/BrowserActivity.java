@@ -717,6 +717,13 @@ public class BrowserActivity extends Activity
     /* package */ void setIncognito(boolean isIncognito){
         mTitleBar.setIncognito(isIncognito);
         mFakeTitleBar.setIncognito(isIncognito);
+        if (isIncognito){
+            mTitleBar.setTitleHint("Private Browsing");
+        	mFakeTitleBar.setTitleHint("Private Browsing");
+        }else{
+            mTitleBar.setTitleHint("");
+        	mFakeTitleBar.setTitleHint("");
+        }
     }
     /* package */ static String fixUrl(String inUrl) {
         // FIXME: Converting the url to lower case
