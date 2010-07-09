@@ -2710,7 +2710,13 @@ public class BrowserActivity extends Activity
         }
 
         if (mMenuIsDown) {
-            openTab(url);
+        	Tab currentTab =
+                mTabControl.getCurrentTab();
+        	if (currentTab.isIncognito()){
+        		openIncogTab(url);	
+        	}else{
+        		openTab(url);
+        	}
             closeOptionsMenu();
             return true;
         }
