@@ -1722,7 +1722,7 @@ public class BrowserActivity extends Activity
         return openTabAndShow(new UrlData(url), closeOnExit, appId);
     }
     
-    private Tab openTabAndShow(String url){
+    private Tab openIncogTabAndShow(String url){
     	return openIncogTabAndShow(new UrlData(url));
     }
 
