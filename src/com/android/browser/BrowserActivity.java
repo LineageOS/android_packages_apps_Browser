@@ -202,7 +202,7 @@ public class BrowserActivity extends Activity
         mMixLockIcon = Resources.getSystem().getDrawable(
                 android.R.drawable.ic_partial_secure);
         mPvtIcon = Resources.getSystem().getDrawable(
-        		R.drawable.ic_tab_most_visited_unselected);
+        		android.R.drawable.ic_menu_view);
         
         FrameLayout frameLayout = (FrameLayout) getWindow().getDecorView()
                 .findViewById(com.android.internal.R.id.content);
