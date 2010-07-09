@@ -1801,7 +1801,7 @@ public class BrowserActivity extends Activity
             Tab t = mTabControl.createNewIncognitoTab();
             if (t != null) {
                 WebView view = t.getWebView();
-                Log.i(TAG, url);
+                Log.i(LOGTAG, url);
                 if (url != null){
                 	loadUrl(view, url);
                 }
