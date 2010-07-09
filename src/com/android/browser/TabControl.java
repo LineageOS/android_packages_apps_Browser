@@ -628,6 +628,12 @@ class TabControl {
 
         // Display the new current tab
         mCurrentTab = mTabs.indexOf(newTab);
+        // Toggle incognito indicator
+        if (newTab.isIncognito()){
+        	mActivity.setIncognito(true);
+        }else{
+        	mActivity.setIncognito(false);
+        }
         WebView mainView = newTab.getWebView();
         boolean needRestore = (mainView == null);
         if (needRestore) {

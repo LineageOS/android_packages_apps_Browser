@@ -716,6 +716,14 @@ public class BrowserActivity extends Activity
         mTitleBar.setDisplayTitle(mUrl);
         mFakeTitleBar.setDisplayTitle(mUrl);
     }
+    /* package */ void setIncognito(boolean isIncognito){
+        Drawable d = null;
+        if (isIncognito){
+        	d = mPvtIcon;
+        }
+        mTitleBar.setIncognito(d);
+        mFakeTitleBar.setIncognito(d);
+    }
     /* package */ static String fixUrl(String inUrl) {
         // FIXME: Converting the url to lower case
         // duplicates functionality in smartUrlFilter().
@@ -1756,8 +1764,6 @@ public class BrowserActivity extends Activity
 
     /* package */Tab openIncogTabAndShow() {
         final Tab currentTab = mTabControl.getCurrentTab();
-        Drawable d = null;
-        d = mPvtIcon;
         if (mTabControl.canCreateNewTab()) {
             final Tab tab = mTabControl.createNewIncognitoTab();
             WebView webview = tab.getWebView();
@@ -1772,16 +1778,12 @@ public class BrowserActivity extends Activity
             attachTabToContentView(tab);
             resetTitleIconAndProgress();
             setUrlTitle("", "");
-            mTitleBar.setIncognito(d);
-            mFakeTitleBar.setIncognito(d);
             return tab;
         } else {
             // Get rid of the subwindow if it exists
             dismissSubWindow(currentTab);
             resetTitleIconAndProgress();
             setUrlTitle("", "");
-            mTitleBar.setIncognito(d);
-            mFakeTitleBar.setIncognito(d);
             return currentTab;
         }
     }
