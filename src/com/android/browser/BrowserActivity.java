@@ -1721,6 +1721,10 @@ public class BrowserActivity extends Activity
     private Tab openTabAndShow(String url, boolean closeOnExit, String appId) {
         return openTabAndShow(new UrlData(url), closeOnExit, appId);
     }
+    
+    private Tab openTabAndShow(String url){
+    	return openIncogTabAndShow(new UrlData(url));
+    }
 
     // This method does a ton of stuff. It will attempt to create a new tab
     // if we haven't reached MAX_TABS. Otherwise it uses the current tab. If
@@ -1813,7 +1817,7 @@ public class BrowserActivity extends Activity
             }
             return t;
         } else {
-            return openIncogTabAndShow();
+            return openIncogTabAndShow(url);
         }
     }
 
