@@ -1801,6 +1801,11 @@ public class BrowserActivity extends Activity
 
     
     private Tab openTab(String url) {
+    	
+    	Tab cTab = mTabControl.getCurrentTab();
+    	if (cTab.isIncognito()){
+    		return openIncogTab(url);
+    	}
         if (mSettings.openInBackground()) {
             Tab t = mTabControl.createNewTab();
             if (t != null) {
