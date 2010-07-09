@@ -201,8 +201,6 @@ public class BrowserActivity extends Activity
                 android.R.drawable.ic_secure);
         mMixLockIcon = Resources.getSystem().getDrawable(
                 android.R.drawable.ic_partial_secure);
-        mPvtIcon = Resources.getSystem().getDrawable(
-        		android.R.drawable.ic_menu_view);
         
         FrameLayout frameLayout = (FrameLayout) getWindow().getDecorView()
                 .findViewById(com.android.internal.R.id.content);
@@ -3883,7 +3881,6 @@ public class BrowserActivity extends Activity
 
     private Drawable    mMixLockIcon;
     private Drawable    mSecLockIcon;
-    private Drawable	mPvtIcon;
 
     /* hold a ref so we can auto-cancel if necessary */
     private AlertDialog mAlertDialog;
