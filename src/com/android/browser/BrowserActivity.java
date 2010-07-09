@@ -2255,12 +2255,13 @@ public class BrowserActivity extends Activity
                             break;
                         case R.id.open_newtab_context_menu_id:
                             final Tab parent = mTabControl.getCurrentTab();
+                            Tab tNewTab = null;
                             if (parent.isIncognito()){
-                            	final Tab newTab = openIncogTab(url);
+                            	tNewTab = openIncogTab(url);
                             }else{
-                            	final Tab newTab = openTab(url);
+                            	tNewTab = openTab(url);
                             }
-                            
+                            final Tab newTab = tNewTab;
                             if (newTab != parent) {
                                 parent.addChildTab(newTab);
                             }
