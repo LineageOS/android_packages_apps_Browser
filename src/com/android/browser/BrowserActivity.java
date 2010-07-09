@@ -201,7 +201,9 @@ public class BrowserActivity extends Activity
                 android.R.drawable.ic_secure);
         mMixLockIcon = Resources.getSystem().getDrawable(
                 android.R.drawable.ic_partial_secure);
-
+        mPvtIcon = Resources.getSystem().getDrawable(
+        		R.drawable.ic_tab_most_visited_unselected);
+        
         FrameLayout frameLayout = (FrameLayout) getWindow().getDecorView()
                 .findViewById(com.android.internal.R.id.content);
         mBrowserFrameLayout = (FrameLayout) LayoutInflater.from(this)
@@ -1301,7 +1303,7 @@ public class BrowserActivity extends Activity
                 break;
             
             case R.id.incog_tab_menu_id:
-            	openIncogTab();
+            	openIncogTab(null);
             	break;
 
             case R.id.goto_menu_id:
@@ -1754,6 +1756,8 @@ public class BrowserActivity extends Activity
 
     /* package */Tab openIncogTabAndShow() {
         final Tab currentTab = mTabControl.getCurrentTab();
+        Drawable d = null;
+        d = mPvtIcon;
         if (mTabControl.canCreateNewTab()) {
             final Tab tab = mTabControl.createNewIncognitoTab();
             WebView webview = tab.getWebView();
@@ -1767,13 +1771,17 @@ public class BrowserActivity extends Activity
             mTabControl.setCurrentTab(tab);
             attachTabToContentView(tab);
             resetTitleIconAndProgress();
-            setUrlTitle("Incognito", "Incognito");
+            setUrlTitle("", "");
+            mTitleBar.setIncognito(d);
+            mFakeTitleBar.setIncognito(d);
             return tab;
         } else {
             // Get rid of the subwindow if it exists
             dismissSubWindow(currentTab);
             resetTitleIconAndProgress();
-            setUrlTitle("Incognito", "Incognito");
+            setUrlTitle("", "");
+            mTitleBar.setIncognito(d);
+            mFakeTitleBar.setIncognito(d);
             return currentTab;
         }
     }
@@ -1792,12 +1800,14 @@ public class BrowserActivity extends Activity
         }
     }
 
-    private Tab openIncogTab() {
+    private Tab openIncogTab(String url) {
         if (mSettings.openInBackground()) {
             Tab t = mTabControl.createNewIncognitoTab();
             if (t != null) {
                 WebView view = t.getWebView();
-
+                if (url != null){
+                	loadUrl(view, url);
+                }
             }
             return t;
         } else {
@@ -2245,7 +2255,12 @@ public class BrowserActivity extends Activity
                             break;
                         case R.id.open_newtab_context_menu_id:
                             final Tab parent = mTabControl.getCurrentTab();
-                            final Tab newTab = openTab(url);
+                            if (parent.isIncognito()){
+                            	final Tab newTab = openIncogTab(url);
+                            }else{
+                            	final Tab newTab = openTab(url);
+                            }
+                            
                             if (newTab != parent) {
                                 parent.addChildTab(newTab);
                             }
@@ -3869,6 +3884,7 @@ public class BrowserActivity extends Activity
 
     private Drawable    mMixLockIcon;
     private Drawable    mSecLockIcon;
+    private Drawable	mPvtIcon;
 
     /* hold a ref so we can auto-cancel if necessary */
     private AlertDialog mAlertDialog;
