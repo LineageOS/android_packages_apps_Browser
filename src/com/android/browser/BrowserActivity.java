@@ -717,12 +717,8 @@ public class BrowserActivity extends Activity
         mFakeTitleBar.setDisplayTitle(mUrl);
     }
     /* package */ void setIncognito(boolean isIncognito){
-        Drawable d = null;
-        if (isIncognito){
-        	d = mPvtIcon;
-        }
-        mTitleBar.setIncognito(d);
-        mFakeTitleBar.setIncognito(d);
+        mTitleBar.setIncognito(isIncognito);
+        mFakeTitleBar.setIncognito(isIncognito);
     }
     /* package */ static String fixUrl(String inUrl) {
         // FIXME: Converting the url to lower case

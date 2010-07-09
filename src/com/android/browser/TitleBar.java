@@ -273,12 +273,13 @@ public class TitleBar extends LinearLayout {
     /**
      * Set icon to indicate incognito mode. 
      */
-    /* package */ void setIncognito(Drawable d){
-        if (null == d) {
-            mPvtIcon.setVisibility(View.GONE);
+    /* package */ void setIncognito(boolean isIncognito){
+        if (isIncognito){
+            mPvtIcon.setImageResource(
+            						R.drawable.ic_tab_most_visited_unselected);
+        	mPvtIcon.setVisibility(View.VISIBLE);
         } else {
-            mPvtIcon.setImageDrawable(d);
-            mPvtIcon.setVisibility(View.VISIBLE);
+        	mPvtIcon.setVisibility(View.GONE);
         }
     }
     
