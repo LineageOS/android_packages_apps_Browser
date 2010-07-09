@@ -1756,7 +1756,7 @@ public class BrowserActivity extends Activity
         }
     }
 
-    /* package */Tab openIncogTabAndShow() {
+    /* package */Tab openIncogTabAndShow(UrlData urlData) {
         final Tab currentTab = mTabControl.getCurrentTab();
         if (mTabControl.canCreateNewTab()) {
             final Tab tab = mTabControl.createNewIncognitoTab();
@@ -1772,12 +1772,18 @@ public class BrowserActivity extends Activity
             attachTabToContentView(tab);
             resetTitleIconAndProgress();
             setUrlTitle("", "");
+            if (!urlData.isEmpty()) {
+                loadUrlDataIn(tab, urlData);
+            }
             return tab;
         } else {
             // Get rid of the subwindow if it exists
             dismissSubWindow(currentTab);
             resetTitleIconAndProgress();
             setUrlTitle("", "");
+            if (!urlData.isEmpty()) {
+                loadUrlDataIn(currentTab, urlData);
+            }
             return currentTab;
         }
     }
@@ -1801,7 +1807,6 @@ public class BrowserActivity extends Activity
             Tab t = mTabControl.createNewIncognitoTab();
             if (t != null) {
                 WebView view = t.getWebView();
-                Log.i(LOGTAG, url);
                 if (url != null){
                 	loadUrl(view, url);
                 }
