@@ -276,7 +276,7 @@ public class TitleBar extends LinearLayout {
     /* package */ void setIncognito(boolean isIncognito){
         if (isIncognito){
             mPvtIcon.setImageResource(
-            						R.drawable.ic_tab_most_visited_unselected);
+            						R.drawable.pvt_indicator);
         	mPvtIcon.setVisibility(View.VISIBLE);
         } else {
         	mPvtIcon.setVisibility(View.GONE);
