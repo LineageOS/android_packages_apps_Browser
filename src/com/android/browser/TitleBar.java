@@ -63,6 +63,7 @@ public class TitleBar extends LinearLayout {
     private ProgressBar     mHorizontalProgress;
     private ImageView       mFavicon;
     private ImageView       mLockIcon;
+    private ImageView		mPvtIcon;
     private ImageView       mStopButton;
     private Drawable        mBookmarkDrawable;
     private Drawable        mVoiceDrawable;
@@ -96,8 +97,10 @@ public class TitleBar extends LinearLayout {
         mTitleBg = findViewById(R.id.title_bg);
         mLockIcon = (ImageView) findViewById(R.id.lock);
         mFavicon = (ImageView) findViewById(R.id.favicon);
+        mPvtIcon = (ImageView) findViewById(R.id.pvt);
         mStopButton = (ImageView) findViewById(R.id.stop);
-
+        
+        
         mRtButton = (ImageView) findViewById(R.id.rt_btn);
         Resources resources = context.getResources();
         mCircularProgress = (Drawable) resources.getDrawable(
@@ -266,6 +269,27 @@ public class TitleBar extends LinearLayout {
         mFavicon.setImageDrawable(d);
     }
 
+    
+    /**
+     * Set icon to indicate incognito mode. 
+     */
+    /* package */ void setIncognito(boolean isIncognito){
+        if (isIncognito){
+            mPvtIcon.setImageResource(
+            						R.drawable.pvt_indicator);
+        	mPvtIcon.setVisibility(View.VISIBLE);
+        } else {
+        	mPvtIcon.setVisibility(View.GONE);
+        }
+    }
+    
+    /**
+     * Set title hint
+     */
+    /* package */ void setTitleHint(String hint){
+    	mTitle.setHint(hint);
+    }
+    
     /**
      * Change the TitleBar to or from voice mode.  If there is no package to
      * handle voice search, the TitleBar cannot be set to voice mode.

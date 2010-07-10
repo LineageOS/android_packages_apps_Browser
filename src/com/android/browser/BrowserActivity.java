@@ -201,7 +201,7 @@ public class BrowserActivity extends Activity
                 android.R.drawable.ic_secure);
         mMixLockIcon = Resources.getSystem().getDrawable(
                 android.R.drawable.ic_partial_secure);
-
+        
         FrameLayout frameLayout = (FrameLayout) getWindow().getDecorView()
                 .findViewById(com.android.internal.R.id.content);
         mBrowserFrameLayout = (FrameLayout) LayoutInflater.from(this)
@@ -713,6 +713,17 @@ public class BrowserActivity extends Activity
 
         mTitleBar.setDisplayTitle(mUrl);
         mFakeTitleBar.setDisplayTitle(mUrl);
+    }
+    /* package */ void setIncognito(boolean isIncognito){
+        mTitleBar.setIncognito(isIncognito);
+        mFakeTitleBar.setIncognito(isIncognito);
+        if (isIncognito){
+            mTitleBar.setTitleHint("Private Browsing");
+        	mFakeTitleBar.setTitleHint("Private Browsing");
+        }else{
+            mTitleBar.setTitleHint("");
+        	mFakeTitleBar.setTitleHint("");
+        }
     }
     /* package */ static String fixUrl(String inUrl) {
         // FIXME: Converting the url to lower case
@@ -1301,7 +1312,7 @@ public class BrowserActivity extends Activity
                 break;
             
             case R.id.incog_tab_menu_id:
-            	openIncogTab();
+            	openIncogTab(null);
             	break;
 
             case R.id.goto_menu_id:
@@ -1717,6 +1728,10 @@ public class BrowserActivity extends Activity
     private Tab openTabAndShow(String url, boolean closeOnExit, String appId) {
         return openTabAndShow(new UrlData(url), closeOnExit, appId);
     }
+    
+    private Tab openIncogTabAndShow(String url){
+    	return openIncogTabAndShow(new UrlData(url));
+    }
 
     // This method does a ton of stuff. It will attempt to create a new tab
     // if we haven't reached MAX_TABS. Otherwise it uses the current tab. If
@@ -1752,7 +1767,7 @@ public class BrowserActivity extends Activity
         }
     }
 
-    /* package */Tab openIncogTabAndShow() {
+    /* package */Tab openIncogTabAndShow(UrlData urlData) {
         final Tab currentTab = mTabControl.getCurrentTab();
         if (mTabControl.canCreateNewTab()) {
             final Tab tab = mTabControl.createNewIncognitoTab();
@@ -1767,19 +1782,30 @@ public class BrowserActivity extends Activity
             mTabControl.setCurrentTab(tab);
             attachTabToContentView(tab);
             resetTitleIconAndProgress();
-            setUrlTitle("Incognito", "Incognito");
+            setUrlTitle("", "");
+            if (!urlData.isEmpty()) {
+                loadUrlDataIn(tab, urlData);
+            }
             return tab;
         } else {
             // Get rid of the subwindow if it exists
             dismissSubWindow(currentTab);
             resetTitleIconAndProgress();
-            setUrlTitle("Incognito", "Incognito");
+            setUrlTitle("", "");
+            if (!urlData.isEmpty()) {
+                loadUrlDataIn(currentTab, urlData);
+            }
             return currentTab;
         }
     }
 
     
     private Tab openTab(String url) {
+    	
+    	Tab cTab = mTabControl.getCurrentTab();
+    	if (cTab.isIncognito()){
+    		return openIncogTab(url);
+    	}
         if (mSettings.openInBackground()) {
             Tab t = mTabControl.createNewTab();
             if (t != null) {
@@ -1792,16 +1818,18 @@ public class BrowserActivity extends Activity
         }
     }
 
-    private Tab openIncogTab() {
+    private Tab openIncogTab(String url) {
         if (mSettings.openInBackground()) {
             Tab t = mTabControl.createNewIncognitoTab();
             if (t != null) {
                 WebView view = t.getWebView();
-
+                if (url != null){
+                	loadUrl(view, url);
+                }
             }
             return t;
         } else {
-            return openIncogTabAndShow();
+            return openIncogTabAndShow(url);
         }
     }
 
@@ -2245,7 +2273,13 @@ public class BrowserActivity extends Activity
                             break;
                         case R.id.open_newtab_context_menu_id:
                             final Tab parent = mTabControl.getCurrentTab();
-                            final Tab newTab = openTab(url);
+                            Tab tNewTab = null;
+                            if (parent.isIncognito()){
+                            	tNewTab = openIncogTab(url);
+                            }else{
+                            	tNewTab = openTab(url);
+                            }
+                            final Tab newTab = tNewTab;
                             if (newTab != parent) {
                                 parent.addChildTab(newTab);
                             }
@@ -2681,7 +2715,13 @@ public class BrowserActivity extends Activity
         }
 
         if (mMenuIsDown) {
-            openTab(url);
+        	Tab currentTab =
+                mTabControl.getCurrentTab();
+        	if (currentTab.isIncognito()){
+        		openIncogTab(url);	
+        	}else{
+        		openTab(url);
+        	}
             closeOptionsMenu();
             return true;
         }

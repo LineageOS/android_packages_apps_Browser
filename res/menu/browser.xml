@@ -20,7 +20,7 @@
             android:title="@string/new_tab"
             android:icon="@drawable/ic_menu_new_window"
             android:alphabeticShortcut="n" />
-        <item android:title="@string/incog_tab" android:id="@+id/incog_tab_menu_id" android:icon="@drawable/ic_menu_new_window" android:alphabeticShortcut="i"></item><item android:id="@+id/bookmarks_menu_id"
+        <item android:id="@+id/bookmarks_menu_id"
             android:title="@string/bookmarks"
             android:alphabeticShortcut="b"
             android:icon="@drawable/ic_menu_bookmarks"
@@ -34,7 +34,7 @@
         <item android:id="@+id/forward_menu_id"
             android:title="@string/forward"
             android:alphabeticShortcut="k"
-            android:icon="@*android:drawable/ic_menu_forward" ></item>
+            android:icon="@*android:drawable/ic_menu_forward" ></item><item android:title="@string/incog_tab" android:id="@+id/incog_tab_menu_id" android:icon="@drawable/ic_menu_new_window" android:alphabeticShortcut="i"></item>
         <item android:id="@+id/add_bookmark_menu_id"
             android:title="@string/save_to_bookmarks"
             android:icon="@drawable/ic_menu_add_bookmark"
