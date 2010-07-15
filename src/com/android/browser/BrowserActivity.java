@@ -47,8 +47,10 @@ import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
+import java.net.InetAddress;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import java.net.UnknownHostException;
 import android.net.WebAddress;
 import android.net.http.SslCertificate;
 import android.net.http.SslError;
@@ -150,6 +152,9 @@ public class BrowserActivity extends Activity
     private static final int SHORTCUT_WIKIPEDIA_SEARCH = 2;
     private static final int SHORTCUT_DICTIONARY_SEARCH = 3;
     private static final int SHORTCUT_GOOGLE_MOBILE_LOCAL_SEARCH = 4;
+    final static int MAX_HISTORY_URLS_TO_BE_FETCHED = 10;
+    final static String DATABASE_HISTORY_PREFETCH_CLAUSE = "visits DESC";
+    final static int EXIT_CONFIRMATION_DIALOG = 1;
 
     private static class ClearThumbnails extends AsyncTask<File, Void, Void> {
         @Override
@@ -201,7 +206,7 @@ public class BrowserActivity extends Activity
                 android.R.drawable.ic_secure);
         mMixLockIcon = Resources.getSystem().getDrawable(
                 android.R.drawable.ic_partial_secure);
-        
+
         FrameLayout frameLayout = (FrameLayout) getWindow().getDecorView()
                 .findViewById(com.android.internal.R.id.content);
         mBrowserFrameLayout = (FrameLayout) LayoutInflater.from(this)
@@ -370,6 +375,32 @@ public class BrowserActivity extends Activity
         mSystemAllowGeolocationOrigins
                 = new SystemAllowGeolocationOrigins(getApplicationContext());
         mSystemAllowGeolocationOrigins.start();
+        prefetchDnsForHistoryUrls();
+    }
+
+    private void prefetchDnsForHistoryUrls() {
+        final Runnable getDnsResolution = new Runnable() {
+            public void run() {
+                Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
+                String[] urls = Browser.getVisitedHistoryByOrder(getContentResolver(), DATABASE_HISTORY_PREFETCH_CLAUSE, MAX_HISTORY_URLS_TO_BE_FETCHED);
+                for(int i=0; i< urls.length; i++) {
+                    try {
+                        if(urls[i] != null) {
+                            URL tmpUrl = new URL(urls[i]);
+                            if(tmpUrl.getProtocol().startsWith("http:") || tmpUrl.getProtocol().startsWith("https:") )
+                                java.net.InetAddress.getByName(tmpUrl.getHost());
+                            tmpUrl = null;
+                        }
+                    }catch(UnknownHostException e) {
+                    }catch(MalformedURLException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            }
+        };
+        Thread dnsPrefetch = new Thread(getDnsResolution);
+        dnsPrefetch.setName("History DNS resolver");
+        dnsPrefetch.start();
     }
 
     /**
@@ -1310,7 +1341,7 @@ public class BrowserActivity extends Activity
             case R.id.new_tab_menu_id:
                 openTabToHomePage();
                 break;
-            
+
             case R.id.incog_tab_menu_id:
             	openIncogTab(null);
             	break;
@@ -1728,7 +1759,7 @@ public class BrowserActivity extends Activity
     private Tab openTabAndShow(String url, boolean closeOnExit, String appId) {
         return openTabAndShow(new UrlData(url), closeOnExit, appId);
     }
-    
+
     private Tab openIncogTabAndShow(String url){
     	return openIncogTabAndShow(new UrlData(url));
     }
@@ -1807,9 +1838,9 @@ public class BrowserActivity extends Activity
         }
     }
 
-    
+
     private Tab openTab(String url) {
-    	
+
     	Tab cTab = mTabControl.getCurrentTab();
     	if (cTab.isIncognito()){
     		return openIncogTab(url);
@@ -1841,7 +1872,7 @@ public class BrowserActivity extends Activity
         }
     }
 
-    
+
     private class Copy implements OnMenuItemClickListener {
         private CharSequence mText;
 
@@ -2651,6 +2682,7 @@ public class BrowserActivity extends Activity
             mInTrace = false;
             Debug.stopMethodTracing();
         }
+        view.startDnsPrefetch();
     }
 
     boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -2726,7 +2758,7 @@ public class BrowserActivity extends Activity
         	Tab currentTab =
                 mTabControl.getCurrentTab();
         	if (currentTab.isIncognito()){
-        		openIncogTab(url);	
+        		openIncogTab(url);
         	}else{
         		openTab(url);
         	}
@@ -3688,9 +3720,9 @@ public class BrowserActivity extends Activity
         }
         return null;
     }
-    
+
     private void toggleNotificationBar(boolean showBar) {
-        if (showBar) {            
+        if (showBar) {
             mTabControl.getBrowserActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
             mTabControl.getBrowserActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
