@@ -48,8 +48,10 @@ import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
+import java.net.InetAddress;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import java.net.UnknownHostException;
 import android.net.WebAddress;
 import android.net.http.SslCertificate;
 import android.net.http.SslError;
@@ -145,6 +147,9 @@ public class BrowserActivity extends Activity
     private final static boolean DEBUG = com.android.browser.Browser.DEBUG;
     private final static boolean LOGV_ENABLED = com.android.browser.Browser.LOGV_ENABLED;
     private final static boolean LOGD_ENABLED = com.android.browser.Browser.LOGD_ENABLED;
+
+    final static int MAX_HISTORY_URLS_TO_BE_FETCHED = 10;
+    final static String DATABASE_HISTORY_PREFETCH_CLAUSE = "visits DESC";
 
     private static class ClearThumbnails extends AsyncTask<File, Void, Void> {
         @Override
@@ -375,6 +380,32 @@ public class BrowserActivity extends Activity
         mSystemAllowGeolocationOrigins
                 = new SystemAllowGeolocationOrigins(getApplicationContext());
         mSystemAllowGeolocationOrigins.start();
+        prefetchDnsForHistoryUrls();
+    }
+
+    private void prefetchDnsForHistoryUrls() {
+        final Runnable getDnsResolution = new Runnable() {
+            public void run() {
+                Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
+                String[] urls = Browser.getVisitedHistoryByOrder(getContentResolver(), DATABASE_HISTORY_PREFETCH_CLAUSE, MAX_HISTORY_URLS_TO_BE_FETCHED);
+                for(int i=0; i< urls.length; i++) {
+                    try {
+                        if(urls[i] != null) {
+                            URL tmpUrl = new URL(urls[i]);
+                            if(tmpUrl.getProtocol().startsWith("http:") || tmpUrl.getProtocol().startsWith("https:") )
+                                java.net.InetAddress.getByName(tmpUrl.getHost());
+                            tmpUrl = null;
+                        }
+                    }catch(UnknownHostException e) {
+                    }catch(MalformedURLException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            }
+        };
+        Thread dnsPrefetch = new Thread(getDnsResolution);
+        dnsPrefetch.setName("History DNS resolver");
+        dnsPrefetch.start();
     }
 
     /**
@@ -2621,6 +2652,7 @@ public class BrowserActivity extends Activity
             mInTrace = false;
             Debug.stopMethodTracing();
         }
+        view.startDnsPrefetch();
     }
 
     boolean shouldOverrideUrlLoading(WebView view, String url) {
