@@ -1740,8 +1740,16 @@ public class BrowserActivity extends Activity
             String appId) {
         final Tab currentTab = mTabControl.getCurrentTab();
         if (mTabControl.canCreateNewTab()) {
-            final Tab tab = mTabControl.createNewTab(closeOnExit, appId,
-                    urlData.mUrl);
+        	boolean incognito = false;
+        	Tab tempTab = null;
+            if(currentTab.isIncognito()){
+            	tempTab = mTabControl.createNewIncognitoTab();
+            }else{
+            	tempTab = mTabControl.createNewTab(closeOnExit, appId,
+                        urlData.mUrl);
+            }
+            final Tab tab = tempTab;
+
             WebView webview = tab.getWebView();
             // If the last tab was removed from the active tabs page, currentTab
             // will be null.

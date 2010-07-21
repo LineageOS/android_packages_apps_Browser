@@ -163,7 +163,7 @@ class TabControl {
         final WebView w = createNewWebView();
 
         // Create a new tab and add it to the tab list
-        Tab t = new Tab(mActivity, w, closeOnExit, appId, url, false);
+        Tab t = new Tab(mActivity, w, closeOnExit, appId, url, incognito);
         mTabs.add(t);
         // Initially put the tab in the background.
         t.putInBackground();
