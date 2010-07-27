@@ -1742,7 +1742,7 @@ public class BrowserActivity extends Activity
         if (mTabControl.canCreateNewTab()) {
         	boolean incognito = false;
         	Tab tempTab = null;
-            if(currentTab.isIncognito()){
+            if(currentTab != null && currentTab.isIncognito()){
             	tempTab = mTabControl.createNewIncognitoTab();
             }else{
             	tempTab = mTabControl.createNewTab(closeOnExit, appId,
