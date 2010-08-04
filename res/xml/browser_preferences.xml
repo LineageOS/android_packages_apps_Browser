@@ -108,6 +108,12 @@
                 android:hint="@string/http"
                 android:inputType="textUri|textMultiLine" />
 
+        <CheckBoxPreference
+                android:key="invert_color"
+                android:defaultValue="false"
+                android:title="@string/pref_content_invert_color"
+                android:summary="@string/pref_content_invert_color_summary" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
