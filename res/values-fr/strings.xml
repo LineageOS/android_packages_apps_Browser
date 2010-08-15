@@ -19,6 +19,7 @@
     <string name="application_name" msgid="1935869255545976415">"Navigateur"</string>
     <string name="choose_upload" msgid="3649366287575002063">"Choisir le fichier à importer"</string>
     <string name="new_tab" msgid="4505722538297295141">"Nouvelle fenêtre"</string>
+    <string name="incog_tab">Navigation privée</string>
     <string name="active_tabs" msgid="3050623868203544623">"Fenêtres"</string>
     <string name="tab_bookmarks" msgid="2305793036003473653">"Favoris"</string>
     <string name="tab_most_visited" msgid="1077402532455000703">"Les + visités"</string>
@@ -141,6 +142,8 @@
     <string name="pref_content_autofit_summary" msgid="4587831659894879986">"Configurer les pages Web pour qu\'elles s\'ajustent à l\'écran"</string>
     <string name="pref_content_landscape_only" msgid="2022546812766219672">"Mode Paysage"</string>
     <string name="pref_content_landscape_only_summary" msgid="1008238895535428855">"Toujours afficher les pages dans le sens de la largeur (orientation paysage)"</string>
+    <string name="pref_content_invert_color">Couleurs inversées</string>
+    <string name="pref_content_invert_color_summary">Afficher les pages en couleurs inverses</string>
     <string name="pref_privacy_title" msgid="1052470980370846151">"Paramètres de confidentialité"</string>
     <string name="pref_privacy_clear_cache" msgid="3380316479925886998">"Effacer le cache"</string>
     <string name="pref_privacy_clear_cache_summary" msgid="2216463577207991454">"Supprimer les bases de données et le contenu localement en cache"</string>
@@ -290,4 +293,8 @@
     <string name="website_settings_clear_all_dialog_ok_button" msgid="6401582240627669431">"Supprimer toutes les données"</string>
     <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"Annuler"</string>
     <string name="progress_dialog_setting_wallpaper" msgid="4871900779338536674">"Définition du fond d\'écran..."</string>
+    <string name="pref_show_zoom_controls">Afficher boutons de zoom</string>
+    <string name="pref_full_screen_mode">Plein écran</string>
+    <string name="pref_user_agent_title">User agent</string>
+    <string name="pref_user_agent_dialog">Choisir le user agent</string>
 </resources>
