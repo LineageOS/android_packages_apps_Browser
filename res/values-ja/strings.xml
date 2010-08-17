@@ -142,6 +142,9 @@
     <string name="pref_content_autofit_summary" msgid="4587831659894879986">"画面に合わせてウェブページをフォーマットする"</string>
     <string name="pref_content_landscape_only" msgid="2022546812766219672">"常に横向きに表示"</string>
     <string name="pref_content_landscape_only_summary" msgid="1008238895535428855">"ページを常に横向きに表示する"</string>
+    <string name="pref_content_invert_color">"色を反転"</string>
+    <string name="pref_content_invert_color_summary">"色を反転させてページを表示する"</string>
+
     <string name="pref_privacy_title" msgid="1052470980370846151">"プライバシー設定"</string>
     <string name="pref_privacy_clear_cache" msgid="3380316479925886998">"キャッシュを消去"</string>
     <string name="pref_privacy_clear_cache_summary" msgid="2216463577207991454">"ローカルにキャッシュしたコンテンツとデータベースを消去する"</string>
