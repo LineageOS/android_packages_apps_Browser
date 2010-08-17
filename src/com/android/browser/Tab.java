@@ -1031,7 +1031,7 @@ class Tab {
             }
             // Have only one async task at a time.
             if (mTouchIconLoader == null) {
-                mTouchIconLoader = new DownloadTouchIcon(Tab.this, mActivity, cr, view);
+                mTouchIconLoader = new DownloadTouchIcon(Tab.this, cr, view);
                 mTouchIconLoader.execute(url);
             }
         }
