@@ -1022,7 +1022,6 @@ class Tab {
         @Override
         public void onReceivedTouchIconUrl(WebView view, String url,
                 boolean precomposed) {
-            final ContentResolver cr = mActivity.getContentResolver();
             // Let precomposed icons take precedence over non-composed
             // icons.
             if (precomposed && mTouchIconLoader != null) {
@@ -1031,7 +1030,7 @@ class Tab {
             }
             // Have only one async task at a time.
             if (mTouchIconLoader == null) {
-                mTouchIconLoader = new DownloadTouchIcon(Tab.this, cr, view);
+                mTouchIconLoader = new DownloadTouchIcon(Tab.this, mActivity, view);
                 mTouchIconLoader.execute(url);
             }
         }

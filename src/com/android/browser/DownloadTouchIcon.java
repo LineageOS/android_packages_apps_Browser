@@ -19,44 +19,48 @@ package com.android.browser;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.http.AndroidHttpClient;
+import android.net.Proxy;
 import android.os.AsyncTask;
 import android.provider.Browser;
 import android.webkit.WebView;
 
 
 import org.apache.http.HttpEntity;
+import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.params.HttpClientParams;
+import org.apache.http.conn.params.ConnRouteParams;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
 class DownloadTouchIcon extends AsyncTask<String, Void, Void> {
-    private final ContentResolver mContentResolver;
+    private final Context mContext;
     private Cursor mCursor;
     private final String mOriginalUrl;
     private final String mUrl;
     private final String mUserAgent;
     /* package */ Tab mTab;
 
-    public DownloadTouchIcon(Tab tab, ContentResolver cr, WebView view) {
+    public DownloadTouchIcon(Tab tab, Context ctx, WebView view) {
         mTab = tab;
-        mContentResolver = cr;
+        mContext = ctx;
         // Store these in case they change.
         mOriginalUrl = view.getOriginalUrl();
         mUrl = view.getUrl();
         mUserAgent = view.getSettings().getUserAgentString();
     }
 
-    public DownloadTouchIcon(ContentResolver cr, String url) {
+    public DownloadTouchIcon(Context ctx, String url) {
         mTab = null;
-        mContentResolver = cr;
+        mContext = ctx;
         mOriginalUrl = null;
         mUrl = url;
         mUserAgent = null;
@@ -64,13 +68,18 @@ class DownloadTouchIcon extends AsyncTask<String, Void, Void> {
 
     @Override
     public Void doInBackground(String... values) {
-        mCursor = BrowserBookmarksAdapter.queryBookmarksForUrl(mContentResolver,
+        mCursor = BrowserBookmarksAdapter.queryBookmarksForUrl(mContext.getContentResolver(),
                 mOriginalUrl, mUrl, true);
         if (mCursor != null && mCursor.getCount() > 0) {
             String url = values[0];
 
             AndroidHttpClient client = AndroidHttpClient.newInstance(
                     mUserAgent);
+            HttpHost httpHost = Proxy.getPreferredHttpHost(mContext, url);
+            if (httpHost != null) {
+                ConnRouteParams.setDefaultProxy(client.getParams(), httpHost);
+            }
+
             HttpGet request = new HttpGet(url);
 
             // Follow redirects
@@ -130,7 +139,7 @@ class DownloadTouchIcon extends AsyncTask<String, Void, Void> {
 
         if (mCursor.moveToFirst()) {
             do {
-                mContentResolver.update(ContentUris.withAppendedId(
+                mContext.getContentResolver().update(ContentUris.withAppendedId(
                         Browser.BOOKMARKS_URI, mCursor.getInt(0)),
                         values, null, null);
             } while (mCursor.moveToNext());
