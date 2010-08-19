@@ -301,4 +301,12 @@
     <string name="pref_user_agent_title">"ユーザエージェント"</string>
     <string name="pref_user_agent_dialog">"ユーザエージェント文字列を選択してください"</string>
 
+    <string-array name="pref_user_agent">
+        <item>Android</item>
+        <item>デスクトップ</item>
+        <item>iPhone</item>
+        <item>Internet Explorer 6</item>
+        <item>カスタム...</item>
+    </string-array>
+
 </resources>

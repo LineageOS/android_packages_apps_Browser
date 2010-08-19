@@ -46,7 +46,7 @@
                 android:defaultValue="false"
                 android:title="@string/pref_full_screen_mode" />
                 
-        <ListPreference
+        <com.android.browser.UserAgentListPreference
 				android:key="web_user_agent"
 				android:title="@string/pref_user_agent_title"
 				android:defaultValue="0"
