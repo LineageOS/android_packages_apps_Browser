@@ -85,7 +85,7 @@ class BrowserSettings extends Observable {
     private boolean loadsPageInOverviewMode;
     private boolean invertColor = false;
     private boolean showDebugSettings;
-    private boolean showZoomControls = true;
+    private boolean showZoomControls = false;
     private boolean fullScreen = false;
     
     // HTML5 API flags
