@@ -21,7 +21,7 @@
     <!-- Name of menu item of a new tab.  Also used in the title bar when displaying a new tab -->
     <string name="new_tab">新建窗口</string>
     <!-- Name of menu item of a new tab.  Also used in the title bar when displaying a new tab -->
-    <string name="incog_tab">隐身模式窗口</string>
+    <string name="incog_tab">隐私窗口</string>
     <!-- Name of menu item which brings up a list of the currently active tabs -->
     <string name="active_tabs">窗口</string>
     <!-- Name of tab containing bookmarks -->
@@ -297,12 +297,7 @@
         <item>始终打开</item>
         <item>在需要时打开</item>
         <item>关</item>
-    </string-array>
-    <string-array name="pref_content_plugins_values" translatable="false">
-        <item>ON</item>
-        <item>ON_DEMAND</item>
-        <item>OFF</item>
-    </string-array>
+    </string-array>    
     <!-- Settings summary -->
     <string name="pref_content_open_in_background_summary">在当前窗口后方打开新窗口</string>
     <!-- Settings label -->
@@ -384,7 +379,7 @@
     <!-- Settings label -->
     <string name="pref_security_accept_cookies">接受 cookies</string>
     <!-- Settings summary -->
-    <string name="pref_security_accept_cookies_summary">允许网站保存并读取 Cookie 数据</string>
+    <string name="pref_security_accept_cookies_summary">允许网站保存并读取 cookie 数据</string>
     <!-- Settings label -->
     <string name="pref_text_size">文字大小</string>
     <!-- Settings text size options; appear in Text size dialog box -->
@@ -396,15 +391,7 @@
         <item>极大</item>
     </string-array>
     <!-- Title of dialog for setting the text size -->
-    <string name="pref_text_size_dialogtitle">文字大小</string>
-    <!-- Do not translate -->
-    <string-array name="pref_text_size_values" translatable="false">
-        <item><xliff:g>SMALLEST</xliff:g></item>
-        <item><xliff:g>SMALLER</xliff:g></item>
-        <item><xliff:g>NORMAL</xliff:g></item>
-        <item><xliff:g>LARGER</xliff:g></item>
-        <item><xliff:g>LARGEST</xliff:g></item>
-    </string-array>
+    <string name="pref_text_size_dialogtitle">文字大小</string>   
     <!-- Settings label -->
     <string name="pref_default_zoom">默认缩放设置</string>
     <!-- Settings default zoom options; appear in default zoom dialog box -->
@@ -414,13 +401,7 @@
         <item>大</item>
     </string-array>
     <!-- Title of dialog for setting the default zoom -->
-    <string name="pref_default_zoom_dialogtitle">默认缩放设置</string>
-    <!-- Do not translate -->
-    <string-array name="pref_default_zoom_values" translatable="false">
-        <item><xliff:g>FAR</xliff:g></item>
-        <item><xliff:g>MEDIUM</xliff:g></item>
-        <item><xliff:g>CLOSE</xliff:g></item>
-    </string-array>
+    <string name="pref_default_zoom_dialogtitle">默认缩放设置</string>    
     <!-- Settings label -->
     <string name="pref_content_load_page">以概览模式打开网页</string>
     <!-- Settings summary -->
@@ -440,34 +421,7 @@
     <!-- Confirmation dialog title -->
     <string name="pref_extras_reset_default_dlg_title">重置为默认设置</string>
     <!-- Title for a group of settings -->
-    <string name="pref_development_title">调试</string>
-    <!-- Do not tranlsate.  Development option -->
-    <string name="pref_development_viewport" translatable="false">Use wide viewport</string>
-    <!-- Do not tranlsate.  Development option -->
-    <string name="pref_development_single_column_rendering" translatable="false">Single column rendering</string>
-    <!-- Do not tranlsate.  Development option -->
-    <string name="pref_development_normal_rendering" translatable="false">Normal rendering</string>
-    <!-- Do not tranlsate.  Development option -->
-    <string name="pref_development_trace" translatable="false">Enable tracing</string>
-    <!-- Do not tranlsate.  Development option -->
-    <string name="pref_development_nav_dump" translatable="false">Enable nav cache dump</string>
-    <!-- Do not tranlsate.  Development option -->
-    <string name="js_engine_flags" translatable="false">Set JS flags</string>
-    <!-- Do not tranlsate.  Development option -->
-    <string name="pref_development_uastring" translatable="false">UAString</string>
-    <!-- Do not tranlsate.  Development option -->
-    <string-array name="pref_development_ua_choices" translatable="false">
-        <item>Android</item>
-        <item>Desktop</item>
-        <item>iPhone</item>
-    </string-array>
-    <!-- Do not tranlsate.  Development option -->
-    <string-array name="pref_development_ua_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-    <string name="pref_development_error_console" translatable="false">Show JavaScript Console</string>
+    <string name="pref_development_title">调试</string>    
     <!-- Settings screen, setting option name -->
     <string name="pref_default_text_encoding">文字编码</string>
     <!-- Options in the Default encoding dialog box -->
@@ -482,18 +436,7 @@
         <!-- TODO: We should add a lot more encodings.  -->
     </string-array>
     <!-- Dialog box title -->
-    <string name="pref_default_text_encoding_dialogtitle">文字编码</string>
-    <!-- Do not translate. Actual encoding values. Must be valid text encodings understandable from WebKit. -->
-    <string-array name="pref_default_text_encoding_values" translatable="false">
-        <item>Latin-1</item>
-        <item>UTF-8</item>
-        <item>GBK</item>
-        <item>Big5</item>
-        <item>ISO-2022-JP</item>
-        <item>SHIFT_JIS</item>
-        <item>EUC-JP</item>
-    </string-array>
-    <string name="pref_default_text_encoding_default" translatable="false">Latin-1</string>
+    <string name="pref_default_text_encoding_dialogtitle">文字编码</string>    
     <!-- Title for a dialog displayed when the browser has a data connectivity
             problem -->
     <string name="browserFrameNetworkErrorLabel">数据连接性问题</string>
@@ -519,10 +462,6 @@
     <!-- Verb placed in front of a screenshot of a web page that, when clicked,
             will add that page to bookmarks -->
     <string name="add_bookmark_short">添加</string>
-    
-    <!-- This string is for the browser "Go To" UI. -->
-    <!-- Do not translate.  This string is not displayed in UI (no badge is selected for go to). -->
-    <string name="search_label" translatable="false">Browser</string>
     <!-- This string is for the browser "Go To" UI. -->
     <!-- This is the hint text shown in the Go To widget, before text is entered. -->
     <string name="search_hint">搜索或键入网址</string>
@@ -639,53 +578,7 @@
     <!-- Message in the list of items which have received download requests
             telling their status.  This message states that the download was
             interrupted and cannot be resumed -->
-    <string name="download_precondition_failed">下载中断，无法重新开始。</string>
-
-    <!-- Do not translate.  Testing only -->
-    <string name="dump_nav" translatable="false">Dump navigation cache</string>
-    <!-- Do not translate.  Testing only -->
-    <string name="dump_counters" translatable="false">Dump V8 counters</string>
-
-    <!-- The default homepage. If it starts with "http://www.google" and the
-            user signs up the device with a Google sites account, the site's
-            domain will be appended. -->
-    <string name="homepage_base" translatable="false">
-        http://www.google.com/m?client=ms-{CID}&amp;source=android-home</string>
-
-    <!-- Bookmarks -->
-    <string-array name="bookmarks" translatable="false">
-        <item>Google</item>
-        <item>http://www.google.com/</item>
-        <item>Picasa</item>
-        <item>http://picasaweb.google.com/m/viewer?source=androidclient</item>
-        <item>Yahoo!</item>
-        <item>http://www.yahoo.com/</item>
-        <item>MSN</item>
-        <item>http://www.msn.com/</item>
-        <item>MySpace</item>
-        <item>http://www.myspace.com/</item>
-        <item>Facebook</item>
-        <item>http://www.facebook.com/</item>
-        <item>Wikipedia</item>
-        <item>http://www.wikipedia.org/</item>
-        <item>eBay</item>
-        <item>http://www.ebay.com/</item>
-        <item>CNN</item>
-        <item>http://www.cnn.com/</item>
-        <item>NY Times</item>
-        <item>http://www.nytimes.com/</item>
-        <item>ESPN</item>
-        <item>http://espn.com/</item>
-        <item>Amazon</item>
-        <item>http://www.amazon.com/</item>
-        <item>Weather Channel</item>
-        <item>http://www.weather.com/</item>
-        <item>BBC</item>
-        <item>http://www.bbc.co.uk/</item>
-    </string-array>
-
-    <!-- Bookmark name for Picasa website -->
-    <string name="picasa" translatable="false">Picasa</string>
+    <string name="download_precondition_failed">下载中断，无法重新开始。</string>    
 
     <!-- The description of the suggestion that lets the user search the web for the query currently
          in the text field. -->
@@ -735,16 +628,11 @@
 
     <!-- Text in the progress dialog when we are setting an image as the home screen wallpaper. -->
     <string name="progress_dialog_setting_wallpaper">正在设置壁纸...</string>
-
-    <string name="error_console_header_text_minimized" translatable="false">Show JavaScript console</string>
-    <string name="error_console_header_text_maximized" translatable="false">JavaScript console</string>
-    <string name="error_console_eval_text_hint" translatable="false">Evaluate JavaScript</string>
-    <string name="error_console_eval_button_text" translatable="false">Evaluate</string>
-    
+        
     <string name="pref_show_zoom_controls">显示缩放控制按钮</string>
     <string name="pref_full_screen_mode">全屏显示</string>
-    <string name="pref_user_agent_title">用户客户端(UA)</string>
-    <string name="pref_user_agent_dialog">选择用户客户端</string>
+    <string name="pref_user_agent_title">用户代理</string>
+    <string name="pref_user_agent_dialog">选择用户代理</string>
     
     <string-array name="pref_user_agent">
         <item>Android</item>
