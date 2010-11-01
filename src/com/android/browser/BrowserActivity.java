@@ -227,6 +227,7 @@ public class BrowserActivity extends Activity
         // Open the icon database and retain all the bookmark urls for favicons
         retainIconsOnStartup();
 
+        // Keep a settings instance handy.
         mSettings.setTabControl(mTabControl);
 
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
@@ -639,6 +640,7 @@ public class BrowserActivity extends Activity
             }
         }.execute();
 
+        if(mSettings == null) return false;
         SearchEngine searchEngine = mSettings.getSearchEngine();
         if (searchEngine == null) return false;
         searchEngine.startSearch(this, url, appData, extraData);
@@ -1213,6 +1215,7 @@ public class BrowserActivity extends Activity
             appSearchData = createGoogleSearchSourceBundle(GOOGLE_SEARCH_SOURCE_TYPE);
         }
 
+        if(mSettings == null) return;
         SearchEngine searchEngine = mSettings.getSearchEngine();
         if (searchEngine != null && !searchEngine.supportsVoiceSearch()) {
             appSearchData.putBoolean(SearchManager.DISABLE_VOICE_SEARCH, true);
