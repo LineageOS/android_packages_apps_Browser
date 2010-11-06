@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAABX///f0\u003d",
+        "filename": "res/values-zh-rCN/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 645,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2010-11-06T12:35:00Z",
+      "side": 1,
+      "message": "I haven\u0027t looked further, but entry values probably should be marked as \"do not translate\"",
+      "revId": "0ff2ce6518a543c97a438bbcf9169ef47b03c7fa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
