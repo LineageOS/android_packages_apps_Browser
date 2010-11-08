@@ -289,7 +289,7 @@
     <!-- Settings label -->
     <string name="pref_content_javascript">启用 JavaScript</string>
     <!-- Settings label -->
-    <string name="pref_content_open_in_background">在后泰打开</string>
+    <string name="pref_content_open_in_background">在后台打开</string>
     <!-- Settings label -->
     <string name="pref_content_plugins">启用插件</string>
     <!-- Plugin options -->
@@ -631,8 +631,8 @@
         
     <string name="pref_show_zoom_controls">显示缩放控制按钮</string>
     <string name="pref_full_screen_mode">全屏显示</string>
-    <string name="pref_user_agent_title">用户代理</string>
-    <string name="pref_user_agent_dialog">选择用户代理</string>
+    <string name="pref_user_agent_title">用户代理标识</string>
+    <string name="pref_user_agent_dialog">选择用户代理标识</string>
     
     <string-array name="pref_user_agent">
         <item>Android</item>
@@ -640,14 +640,6 @@
         <item>iPhone</item>
         <item>Internet Explorer 6</item>
         <item>自定义...</item>
-    </string-array>
-    
-    <string-array name="pref_user_agent_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
     </string-array>
 
 </resources>
