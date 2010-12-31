@@ -34,37 +34,38 @@
         <item android:id="@+id/forward_menu_id"
             android:title="@string/forward"
             android:alphabeticShortcut="k"
-            android:icon="@*android:drawable/ic_menu_forward" />
+            android:icon="@*android:drawable/ic_menu_forward" ></item><item android:id="@+id/incog_tab_menu_id" android:alphabeticShortcut="i" android:icon="@drawable/ic_menu_new_window" android:title="@string/incog_tab"></item>
         <item android:id="@+id/add_bookmark_menu_id"
             android:title="@string/save_to_bookmarks"
             android:icon="@drawable/ic_menu_add_bookmark"
-            android:alphabeticShortcut="a" />
+            android:alphabeticShortcut="a" ></item>
         <item android:id="@+id/find_menu_id"
             android:title="@string/find_dot"
-            android:alphabeticShortcut="f" />
+            android:alphabeticShortcut="f" ></item>
         <item android:id="@+id/select_text_id"
             android:title="@string/select_dot"
-            android:alphabeticShortcut="e" />
+            android:alphabeticShortcut="e" ></item>
         <item android:id="@+id/page_info_menu_id"
             android:title="@string/page_info"
-            android:alphabeticShortcut="g" />
+            android:alphabeticShortcut="g" ></item>
         <item android:id="@+id/share_page_menu_id"
             android:title="@string/share_page"
-            android:alphabeticShortcut="s" />
+            android:alphabeticShortcut="s" ></item>
         <item android:id="@+id/view_downloads_menu_id"
             android:title="@string/menu_view_download"
-            android:alphabeticShortcut="d" />
+            android:alphabeticShortcut="d" ></item>
         <item android:id="@+id/preferences_menu_id"
             android:title="@string/menu_preferences"
-            android:alphabeticShortcut="p" />
+            android:alphabeticShortcut="p" ></item>
         <!-- followings are debug only -->
         <item android:id="@+id/dump_nav_menu_id"
             android:title="@string/dump_nav"
-            android:visible="false" />
+            android:visible="false" ></item>
         <item android:id="@+id/dump_counters_menu_id"
             android:title="@string/dump_counters"
-            android:visible="false" />
-    </group>
+            android:visible="false" ></item>
+    
+</group>
     <group android:id="@+id/MAIN_SHORTCUT_MENU" android:visible="false">
         <item android:id="@+id/homepage_menu_id"
             android:alphabeticShortcut="&#32;" />

@@ -171,6 +171,39 @@ public class BrowserActivity extends Activity
      */
     private FrameLayout mBrowserFrameLayout;
 
+    private boolean isIncognito = false;
+    private long incognitoStartTime = 0;
+
+    public boolean getIncognito(){
+        return this.isIncognito;
+    }
+
+    public void setIncognito(boolean incognito){
+
+        /* Stop everything from loading */
+        mTabControl.stopAllLoading();
+
+        /* Set activity to incognito mode */
+        this.isIncognito = incognito;
+
+        /* Set title bar icon */
+        mTitleBar.setIncognito(incognito);
+        mFakeTitleBar.setIncognito(incognito);
+
+        if (incognito){
+            CookieSyncManager.getInstance().stopSync();
+            incognitoStartTime = System.currentTimeMillis();
+            mTitleBar.setTitleHint("Private Browsing");
+            mFakeTitleBar.setTitleHint("Private Browsing");
+        }else{
+            CookieSyncManager.getInstance().clearRamCache(incognitoStartTime);
+            CookieSyncManager.getInstance().startSync();
+            incognitoStartTime = 0;
+            mTitleBar.setTitleHint("Standard Browsing");
+            mFakeTitleBar.setTitleHint("Standard Browsing");
+        }
+    }
+
     @Override
     public void onCreate(Bundle icicle) {
         if (LOGV_ENABLED) {
@@ -1336,6 +1369,37 @@ public class BrowserActivity extends Activity
             // -- Main menu
             case R.id.new_tab_menu_id:
                 openTabToHomePage();
+                break;
+
+            case R.id.incog_tab_menu_id:
+                if(!getIncognito()){
+                    item.setTitle(R.string.dis_incog_tab);
+                    this.setIncognito(true);
+                    /* Need to open new tab before removing or you will
+                     * get an FC.
+                     */
+                    Tab t = openTab(mSettings.getHomePage());
+                    int i;
+                    for (i=0;i<mTabControl.getTabCount()-1;i++){
+                        /*
+                         * TODO: Store in stack/list to restore when switching
+                         * back to regular browser mode.
+                         */
+
+                        mTabControl.removeTab(mTabControl.getTab(i));
+                    }
+                }else{
+                    item.setTitle(R.string.incog_tab);
+                    this.setIncognito(false);
+                    /* Need to open new tab before removing or you will
+                     * get an FC.
+                     */
+                    Tab t = openTab(mSettings.getHomePage());
+                    int i;
+                    for (i=0;i<mTabControl.getTabCount()-1;i++){
+                        mTabControl.removeTab(mTabControl.getTab(i));
+                    }
+                }
                 break;
 
             case R.id.goto_menu_id:
