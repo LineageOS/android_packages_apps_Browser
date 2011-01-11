@@ -760,5 +760,21 @@
     <string name="pref_show_zoom_controls">Show visual zoom controls</string>
     <string name="pref_full_screen_mode">Full screen</string>
     
-<string name="incog_tab">Enable Incognito Mode</string><string name="dis_incog_tab">Disable Incognito Mode</string>
+    <string name="incog_tab">Enable Incognito Mode</string><string name="dis_incog_tab">Disable Incognito Mode</string>
+    <string name="pref_select_user_agent">Select User Agent</string>
+    <string-array name="pref_user_agent_choices">
+        <item>Gingerbread</item>
+        <item>Froyo</item>
+        <item>Desktop</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+    </string-array>
+    <string-array name="pref_user_agent_values">
+        <item>0</item>
+        <item>4</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+<string name="pref_user_agents">User Agent</string>
 </resources>
