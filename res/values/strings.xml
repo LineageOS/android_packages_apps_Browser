@@ -456,18 +456,22 @@
     <!-- Do not tranlsate.  Development option -->
     <string-array name="pref_development_ua_choices" translatable="false">
         <item>Android</item>
-        <item>Desktop</item>
+        <item>Froyo</item>
+        <item>Linux Desktop</item>
+        <item>Mac Desktop</item>
         <item>iPhone</item>
         <item>iPad</item>
-        <item>Froyo-N1</item>
+        <item>IE6</item>
     </string-array>
     <!-- Do not tranlsate.  Development option -->
     <string-array name="pref_development_ua_values" translatable="false">
         <item>0</item>
+        <item>4</item>
+        <item>5</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
-        <item>4</item>
+        <item>6</item>
     </string-array>
     <string name="pref_development_error_console" translatable="false">Show JavaScript Console</string>
     <!-- Settings screen, setting option name -->
@@ -759,6 +763,8 @@
     
     <string name="pref_show_zoom_controls">Show visual zoom controls</string>
     <string name="pref_full_screen_mode">Full screen</string>
-    
-<string name="incog_tab">Enable Incognito Mode</string><string name="dis_incog_tab">Disable Incognito Mode</string>
+
+    <string name="incog_tab">Enable Incognito Mode</string><string name="dis_incog_tab">Disable Incognito Mode</string>
+    <string name="pref_select_user_agent">Select User Agent</string>
+
 </resources>
