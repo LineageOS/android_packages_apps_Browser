@@ -28,6 +28,7 @@ import android.content.pm.ActivityInfo;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.database.ContentObserver;
+import android.os.Build;
 import android.os.Handler;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
@@ -154,6 +155,9 @@ class BrowserSettings extends Observable {
             "U; Intel Mac OS X 10_6_3; en-us) AppleWebKit/533.16 (KHTML, " +
             "like Gecko) Version/5.0 Safari/533.16";
 
+    private static final String LINUX_DESKTOP_USERAGENT = "Mozilla/5.0 (X11; U; " +
+            "Linux x86_64; en-US; rv:1.9.2.11) Gecko/20101019 Firefox/3.6.11";
+
     private static final String IPHONE_USERAGENT = "Mozilla/5.0 (iPhone; U; " +
             "CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 " +
             "(KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7";
@@ -163,8 +167,10 @@ class BrowserSettings extends Observable {
             "(KHTML, like Gecko) Version/4.0.4 Mobile/7B367 Safari/531.21.10";
 
     private static final String FROYO_USERAGENT = "Mozilla/5.0 (Linux; U; " +
-            "Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 " +
+            "Android 2.2; en-us; " + Build.MODEL + " Build/FRF91) AppleWebKit/533.1 " +
             "(KHTML, like Gecko) Version/4.0 Mobile Safari/533.1";
+
+    private static final String IE6_USERAGENT = "Mozilla/4.0 (compatible; MSIE 6.1; Windows XP)";
 
     // Value to truncate strings when adding them to a TextView within
     // a ListView
@@ -197,18 +203,34 @@ class BrowserSettings extends Observable {
             WebSettings s = mSettings;
 
             s.setLayoutAlgorithm(b.layoutAlgorithm);
-            if (b.userAgent == 0) {
-                // use the default ua string
-                s.setUserAgentString(null);
-            } else if (b.userAgent == 1) {
-                s.setUserAgentString(DESKTOP_USERAGENT);
-            } else if (b.userAgent == 2) {
-                s.setUserAgentString(IPHONE_USERAGENT);
-            } else if (b.userAgent == 3) {
-                s.setUserAgentString(IPAD_USERAGENT);
-            } else if (b.userAgent == 4) {
-                s.setUserAgentString(FROYO_USERAGENT);
+            
+            switch (b.userAgent){
+                case 0:
+                    s.setUserAgentString(null);
+                    break;
+                case 1:
+                    s.setUserAgentString(DESKTOP_USERAGENT);
+                    break;
+                case 2:
+                    s.setUserAgentString(IPHONE_USERAGENT);
+                    break;
+                case 3:
+                    s.setUserAgentString(IPAD_USERAGENT);
+                    break;
+                case 4:
+                    s.setUserAgentString(FROYO_USERAGENT);
+                    break;
+                case 5:
+                    s.setUserAgentString(LINUX_DESKTOP_USERAGENT);
+                    break;
+                case 6:
+                    s.setUserAgentString(IE6_USERAGENT);
+                    break;
+                default:
+                    s.setUserAgentString(null);
+                    break;
             }
+
             s.setUseWideViewPort(b.useWideViewPort);
             s.setLoadsImagesAutomatically(b.loadsImagesAutomatically);
             s.setJavaScriptEnabled(b.javaScriptEnabled);
@@ -368,7 +390,7 @@ class BrowserSettings extends Observable {
         defaultTextEncodingName =
                 p.getString(PREF_DEFAULT_TEXT_ENCODING,
                         defaultTextEncodingName);
-
+        userAgent = Integer.parseInt(p.getString("user_agent", "0"));
         showDebugSettings =
                 p.getBoolean(PREF_DEBUG_SETTINGS, showDebugSettings);
         // Debug menu items have precidence if the menu is visible
@@ -392,7 +414,6 @@ class BrowserSettings extends Observable {
             tracing = p.getBoolean("enable_tracing", tracing);
             lightTouch = p.getBoolean("enable_light_touch", lightTouch);
             navDump = p.getBoolean("enable_nav_dump", navDump);
-            userAgent = Integer.parseInt(p.getString("user_agent", "0"));
         }
         // JS flags is loaded from DB even if showDebugSettings is false,
         // so that it can be set once and be effective all the time.
