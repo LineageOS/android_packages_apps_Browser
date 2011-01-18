@@ -299,5 +299,10 @@
 
     <!-- Extra settings -->
     <string name="pref_show_zoom_controls">"ズームボタンの表示"</string>
+    <string name="pref_content_invert_color">色反転</string>
+    <string name="pref_content_invert_color_summary">色を反転させてページを表示</string>
+    <string name="pref_full_screen_mode">フルスクリーン</string>
+    <string name="incog_tab">シークレットモード有効</string>
+    <string name="dis_incog_tab">シークレットモード無効</string>
 
 </resources>
