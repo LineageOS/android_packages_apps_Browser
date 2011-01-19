@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAB3//+lQ\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 772,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2011-01-19T22:35:50Z",
+      "side": 1,
+      "message": "stick a translatable\u003d\"false\" here pl0x",
+      "revId": "53f3bd4c2ab8f35695ab27a69aaa30d962e7d6a3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAB3//+lM\u003d",
+        "filename": "src/com/android/browser/BrowserSettings.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2011-01-19T22:35:50Z",
+      "side": 1,
+      "message": "Shouldn\u0027t these be templated for the actual device?",
+      "revId": "53f3bd4c2ab8f35695ab27a69aaa30d962e7d6a3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
