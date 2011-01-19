@@ -298,4 +298,13 @@
 
     <string name="pref_show_zoom_controls">Zeige Zoomtasten</string>
 
+    <string-array name="pref_user_agent">
+      <item>Android</item>
+      <item>Desktop</item>
+      <item>iPhone</item>
+      <item>iPad</item>
+      <item>Froyo</item>
+      <item>Internet Explorer 6</item>
+      <item>Custom...</item>
+    </string-array>
 </resources>

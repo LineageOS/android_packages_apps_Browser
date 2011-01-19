@@ -46,6 +46,14 @@
                 android:defaultValue="false"
                 android:title="@string/pref_full_screen_mode" />
                 
+        <com.android.browser.UserAgentListPreference
+				android:key="web_user_agent"
+				android:title="@string/pref_user_agent_title"
+				android:defaultValue="0"
+				android:entries="@array/pref_user_agent"
+				android:entryValues="@array/pref_user_agent_values"
+				android:dialogTitle="@string/pref_user_agent_dialog" />
+
         <CheckBoxPreference
                 android:key="load_page"
                 android:defaultValue="true"

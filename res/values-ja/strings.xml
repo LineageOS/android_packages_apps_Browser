@@ -305,4 +305,14 @@
     <string name="incog_tab">シークレットモード有効</string>
     <string name="dis_incog_tab">シークレットモード無効</string>
 
+    <string-array name="pref_user_agent">
+        <item>Android</item>
+        <item>デスクトップ</item>
+        <item>iPhone</item>
+        <item>iPad</item>
+        <item>Froyo</item>
+        <item>Internet Explorer 6</item>
+        <item>カスタム...</item>
+    </string-array>
+
 </resources>
