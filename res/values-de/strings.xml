@@ -298,4 +298,7 @@
 
     <string name="pref_show_zoom_controls">Zeige Zoomtasten</string>
 
+    <string name="incog_tab">Anonymes Browsen ein</string>
+    <string name="dis_incog_tab">Anonymes Browsen aus</string>
+    <string name="pref_select_user_agent">User-Agent</string>
 </resources>

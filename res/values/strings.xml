@@ -760,11 +760,11 @@
     <string name="error_console_header_text_maximized" translatable="false">JavaScript console</string>
     <string name="error_console_eval_text_hint" translatable="false">Evaluate JavaScript</string>
     <string name="error_console_eval_button_text" translatable="false">Evaluate</string>
-    
+
     <string name="pref_show_zoom_controls">Show visual zoom controls</string>
     <string name="pref_full_screen_mode">Full screen</string>
 
-    <string name="incog_tab">Enable Incognito Mode</string><string name="dis_incog_tab">Disable Incognito Mode</string>
+    <string name="incog_tab">Enable Incognito Mode</string>
+    <string name="dis_incog_tab">Disable Incognito Mode</string>
     <string name="pref_select_user_agent">Select User Agent</string>
-
 </resources>
