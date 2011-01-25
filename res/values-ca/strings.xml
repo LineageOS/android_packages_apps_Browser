@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="application_name">Navegador</string>
+  <string name="choose_upload">Tria el fitxer que es pujarà</string>
+  <string name="new_tab">Finestra nova</string>
+  <string name="incog_tab">Finestra d\'incògnit</string>
+  <string name="active_tabs">Finestres</string>
+  <string name="tab_bookmarks">Adreces d\'interès</string>
+  <string name="tab_most_visited">El més visitat</string>
+  <string name="tab_history">Historial</string>
+  <string name="added_to_bookmarks">Afegit a les adreces d\'interès</string>
+  <string name="removed_from_bookmarks">Suprimit de les adreces d\'interès</string>
+  <string name="sign_in_to">Entra a <xliff:g id="hostname">%s1</xliff:g> \"<xliff:g id="realm">%s2</xliff:g>\"</string>
+  <string name="username">Nom</string>
+  <string name="password">Contrasenya</string>
+  <string name="action">Entra</string>
+  <string name="bookmarks_search">Navegador</string>
+  <string name="cancel">Cancel·la</string>
+  <string name="ok">D\'acord</string>
+    <plurals name="matches_found">
+        <item quantity="zero">Sense coincidències</item>
+        <item quantity="one">1 coincidència</item>
+        <item quantity="few"><xliff:g id="number" example="2">%d</xliff:g> coincidències</item>
+        <item quantity="other"><xliff:g id="number" example="137">%d</xliff:g> coincidències</item>
+    </plurals>
+  <string name="title_bar_loading">S\'està carregant…</string>
+  <string name="page_info">Informació del web</string>
+  <string name="page_info_view">Informació del web</string>
+  <string name="page_info_address">Adreça:</string>
+  <string name="ssl_warnings_header">Hi ha problemes amb el certificat de seguretat d\'aquest lloc.</string>
+  <string name="ssl_continue">Continua</string>
+  <string name="security_warning">Avís de seguretat</string>
+  <string name="view_certificate">Visualitza el certificat</string>
+  <string name="ssl_untrusted">Aquest certificat no és d\'una font de confiança.</string>
+  <string name="ssl_mismatch">El nom del lloc no coincideix amb el nom en el certificat.</string>
+  <string name="ssl_expired">Aquest certificat ha caducat.</string>
+  <string name="ssl_not_yet_valid">Aquest certificat encara no és vàlid.</string>
+  <string name="ssl_certificate">Certificat de seguretat</string>
+  <string name="ssl_certificate_is_valid">Aquest certificat és vàlid.</string>
+  <string name="issued_to">Emès per a:</string>
+  <string name="common_name">Nom de pila:</string>
+  <string name="org_name">Empresa:</string>
+  <string name="org_unit">Unitat organitzativa:</string>
+  <string name="issued_by">Emès per:</string>
+  <string name="validity_period">Validesa:</string>
+  <string name="issued_on">Emès el:</string>
+  <string name="expires_on">Caduca el:</string>
+  <string name="stopping">S\'està aturant…</string>
+  <string name="stop">Atura</string>
+  <string name="reload">Actualitza</string>
+  <string name="back">Enrere</string>
+  <string name="forward">Endavant</string>
+  <string name="save">D\'acord</string>
+  <string name="do_not_save">Cancel·la</string>
+  <string name="location">Ubicació</string>
+  <string name="name">Nom</string>
+  <string name="http">http://</string>
+  <string name="save_to_bookmarks">Afegeix marcador</string>
+  <string name="edit_bookmark">Edita l\'adreça d\'interès</string>
+  <string name="create_shortcut_bookmark">Afegeix un accés directe a l\'inici</string>
+  <string name="open_bookmark">Obre</string>
+  <string name="remove_bookmark">Elimina l\'adreça d\'interès</string>
+  <string name="remove_from_bookmarks">Suprimeix de les adreces d\'interès</string>
+  <string name="remove_history_item">Elimina de l\'historial</string>
+  <string name="set_as_homepage">Estableix com a pàgina d\'inici</string>
+  <string name="bookmark_saved">Desat a les adreces d\'interès.</string>
+  <string name="bookmark_not_saved">No es pot desar l\'adreça d\'interès.</string>
+  <string name="homepage_set">S\'ha establert la pàgina d\'inici.</string>
+  <string name="bookmark_needs_title">L\'adreça d\'interès ha de tenir un nom.</string>
+  <string name="bookmark_needs_url">L\'adreça d\'interès ha de tenir una ubicació.</string>
+  <string name="bookmark_url_not_valid">L\'URL no és vàlida.</string>
+  <string name="bookmark_cannot_save_url">No es pot afegir aquesta URL a les adreces d\'interès.</string>
+  <string name="delete_bookmark">Elimina</string>
+  <string name="bookmark_page">Afegeix a les adreces d\'interès l\'última pàgina visitada</string>
+  <string name="switch_to_thumbnails">Visualització de miniatures</string>
+  <string name="switch_to_list">Visualització de llista</string>
+  <string name="current_page">de\u0020</string>
+  <string name="delete_bookmark_warning">L\'adreça d\'interès \"<xliff:g id="bookmark">%s</xliff:g>\" serà eliminada.</string>
+  <string name="open_in_new_window">Obre-ho en una nova finestra</string>
+  <string name="goto_dot">Vés</string>
+  <string name="find_dot">Cerca a la pàgina</string>
+  <string name="select_dot">Selecciona text</string>
+  <string name="tab_picker_title">Finestres actuals</string>
+  <string name="tab_picker_remove_tab">Tanca</string>
+  <string name="bookmarks">Adreces d\'interès</string>
+  <string name="shortcut_bookmark">Adreça d\'interès</string>
+  <string name="history">Historial</string>
+  <string name="menu_view_download">Baixades</string>
+  <string name="copy_page_url">Copia l\'enllaç de la pàgina</string>
+  <string name="share_page">Comparteix web</string>
+  <string name="contextmenu_openlink">Obre</string>
+  <string name="contextmenu_openlink_newwindow">Obre-ho en una nova finestra</string>
+  <string name="contextmenu_bookmark_thislink">Afegeix a les adreces d\'interès</string>
+  <string name="contextmenu_savelink">Desa l\'enllaç</string>
+  <string name="contextmenu_sharelink">Comparteix enllaç</string>
+  <string name="contextmenu_copy">Copia</string>
+  <string name="contextmenu_copylink">Copia l\'enllaç</string>
+  <string name="contextmenu_download_image">Desa la imatge</string>
+  <string name="contextmenu_view_image">Visualitza la imatge</string>
+  <string name="contextmenu_set_wallpaper">Estableix com fons d\'escriptori</string>
+  <string name="contextmenu_dial_dot">Marca…</string>
+  <string name="contextmenu_add_contact">Afegeix un contacte</string>
+  <string name="contextmenu_send_mail">Envia un correu</string>
+  <string name="contextmenu_map">Mapa</string>
+  <string name="choosertitle_sharevia">Comparteix a través de</string>
+  <string name="clear">Neteja</string>
+  <string name="replace">Reemplaça</string>
+  <string name="browser_bookmarks_page_bookmarks_text">Adreces d\'interès</string>
+  <string name="menu_preferences">Paràmetres</string>
+  <string name="pref_content_title">Configuració del contingut de les pàgines</string>
+  <string name="pref_content_load_images">Carrega les imatges</string>
+  <string name="pref_content_load_images_summary">Mostra les imatges a les pàgines web</string>
+  <string name="pref_content_block_popups">Bloqueja les finestres emergents</string>
+  <string name="pref_content_javascript">Habilita el JavaScript</string>
+  <string name="pref_content_open_in_background">Obre en segon pla</string>
+  <string name="pref_content_plugins">Habilita els connectors</string>
+  <string name="pref_content_open_in_background_summary">Obre les finestres noves darrere de l\'actual</string>
+  <string name="pref_content_homepage">Estableix com a pàgina d\'inici</string>
+  <string name="pref_content_search_engine">Estableix el motor de cerca</string>
+  <string name="pref_content_search_engine_summary">Selecciona el motor de cerca</string>
+  <string name="pref_use_current">Utilitza la pàgina actual</string>
+  <string name="pref_content_autofit">Ajustament automàtic de les pàgines</string>
+  <string name="pref_content_autofit_summary">Formata les webs perquè càpiguen a la pantalla</string>
+  <string name="pref_content_landscape_only">Visualització només horitzontal</string>
+  <string name="pref_content_landscape_only_summary">Mostra les pàgines només en mode horitzontal</string>
+  <string name="pref_content_invert_color">Inverteix els colors</string>
+  <string name="pref_content_invert_color_summary">Mostra les pàgines amb els colors invertits</string>
+  <string name="pref_privacy_title">Configuració de la privacitat</string>
+  <string name="pref_privacy_clear_cache">Neteja la memòria cau</string>
+  <string name="pref_privacy_clear_cache_summary">Neteja tot el contingut emmagatzemat localment i totes les bases de dades</string>
+  <string name="pref_privacy_clear_cache_dlg">S\'eliminarà tot el contingut emmagatzemat localment i totes les bases de dades.</string>
+  <string name="pref_privacy_clear_cookies">Neteja totes les dades de galetes</string>
+  <string name="pref_privacy_clear_cookies_summary">Neteja totes les galetes del navegador</string>
+  <string name="pref_privacy_clear_cookies_dlg">S\'eliminaran totes les galetes.</string>
+  <string name="pref_privacy_clear_history">Neteja l\'historial</string>
+  <string name="pref_privacy_clear_history_summary">Neteja l\'historial de navegació</string>
+  <string name="pref_privacy_clear_history_dlg">S\'eliminarà l\'historial de navegació.</string>
+  <string name="pref_privacy_clear_form_data">Neteja les dades de formularis</string>
+  <string name="pref_privacy_clear_form_data_summary">Neteja totes les dades desades als formularis</string>
+  <string name="pref_privacy_clear_form_data_dlg">S\'eliminaran totes les dades desades als formularis.</string>
+  <string name="pref_privacy_clear_passwords">Neteja les contrasenyes</string>
+  <string name="pref_privacy_clear_passwords_summary">Neteja les contrasenyes desades</string>
+  <string name="pref_privacy_clear_passwords_dlg">S\'eliminaran totes les contrasenyes desades.</string>
+  <string name="pref_privacy_enable_geolocation">Habilita l\'ubicació</string>
+  <string name="pref_privacy_enable_geolocation_summary">Permet als webs accedir a la teva ubicació</string>
+  <string name="pref_privacy_clear_geolocation_access">Neteja l\'accés a l\'ubicació</string>
+  <string name="pref_privacy_clear_geolocation_access_summary">Neteja l\'accés a l\'ubicació de tots els llocs web</string>
+  <string name="pref_privacy_clear_geolocation_access_dlg">Neteja l\'accés a l\'ubicació de tots els llocs web</string>
+  <string name="pref_security_title">Paràmetres de seguretat</string>
+  <string name="pref_security_remember_passwords">Recorda les contrasenyes</string>
+  <string name="pref_security_remember_passwords_summary">Desa els noms d\'usuari i contrasenya per als llocs web</string>
+  <string name="pref_security_save_form_data">Recorda les dades del formulari</string>
+  <string name="pref_security_save_form_data_summary">Recorda les dades introduïdes als formularis per fer-les servir més tard</string>
+  <string name="pref_security_show_security_warning">Mostra els avisos de seguretat</string>
+  <string name="pref_security_show_security_warning_summary">Mostra un avís si existeix algun problema amb la seguretat del lloc</string>
+  <string name="pref_security_accept_cookies">Accepta les galetes</string>
+  <string name="pref_security_accept_cookies_summary">Permet als llocs desar i llegir les «galetes»</string>
+  <string name="pref_text_size">Mida del text</string>
+  <string name="pref_text_size_dialogtitle">Mida del text</string>
+  <string name="pref_default_zoom">Zoom per defecte</string>
+  <string name="pref_default_zoom_dialogtitle">Zoom per defecte</string>
+  <string name="pref_content_load_page">Obre les pàgines en vista resumida</string>
+  <string name="pref_content_load_page_summary">Mostra la vista resumida de les noves pàgines obertes</string>
+  <string name="pref_extras_title">Configuració avançada</string>
+  <string name="pref_extras_website_settings">Configuració del lloc web</string>
+  <string name="pref_extras_website_settings_summary">Configuració avançada per a webs individuals</string>
+  <string name="pref_extras_reset_default">Reinicia als predeterminats</string>
+  <string name="pref_extras_reset_default_summary">Restaura la configuració predeterminada</string>
+  <string name="pref_extras_reset_default_dlg">Es revertiran els paràmetres als valors predeterminats.</string>
+  <string name="pref_extras_reset_default_dlg_title">Reinicia als predeterminats</string>
+  <string name="pref_development_title">Depuració</string>
+  <string name="pref_default_text_encoding">Codificació del text</string>
+  <string name="pref_default_text_encoding_dialogtitle">Codificació del text</string>
+  <string name="browserFrameNetworkErrorLabel">Problema de connexió de dades</string>
+  <string name="browserFrameFileErrorLabel">Problema amb el fitxer</string>
+  <string name="browserFrameFormResubmitLabel">Confirma</string>
+  <string name="browserFrameFormResubmitMessage">La pàgina que estàs tractant de veure conté dades que ja s\'han enviat (\"POSTDATA\"). Si torneu a enviar aquestes dades es repetirà qualsevol acció que portés a terme el formulari.</string>
+  <string name="loadSuspendedTitle">No hi ha cap connexió de xarxa</string>
+  <string name="loadSuspended">El navegador no pot carregar aquesta pàgina perquè no hi ha connexió a Internet.</string>
+  <string name="clear_history">Neteja l\'historial</string>
+  <string name="browser_history">Visitades recentment</string>
+  <string name="empty_history">L\'historial del navegador és buit.</string>
+  <string name="add_new_bookmark">Afegeix a adreces d\'interès…</string>
+  <string name="add_bookmark_short">Afegeix</string>
+  <string name="search_hint">Cerca o escriu URL</string>
+  <string name="search_button_text">Vés</string>
+  <string name="search_settings_description">Adreces d\'interès i historial web</string>
+  <string name="attention">Atenció</string>
+  <string name="popup_window_attempt">Aquest lloc està intentant obrir una finestra emergent.</string>
+  <string name="allow">Permet</string>
+  <string name="block">Bloca</string>
+  <string name="too_many_windows_dialog_title">S\'ha arribat al límit de la finestra</string>
+  <string name="too_many_windows_dialog_message">No s\'ha pogut obrir una nova finestra perquè ja s\'han obert el nombre màxim de finestres permeses.</string>
+  <string name="too_many_subwindows_dialog_title">Ja s\'ha obert el desplegable</string>
+  <string name="too_many_subwindows_dialog_message">No s\'ha pogut obrir la finestra desplegable perquè no se\'n pot obrir més d\'una alhora.</string>
+  <string name="download_title">Historial de baixades</string>
+  <string name="download_unknown_filename">&lt;Desconegut&gt;</string>
+  <string name="download_menu_open">Obre</string>
+  <string name="download_menu_clear">Esborrar de la llista</string>
+  <string name="download_menu_delete">Elimina</string>
+  <string name="download_menu_cancel">Cancel·la la baixada</string>
+  <string name="download_menu_cancel_all">Cancel·la totes les baixades</string>
+  <string name="download_cancel_dlg_title">Cancel·la les baixades</string>
+  <string name="download_cancel_dlg_msg">Es cancel·laran totes les <xliff:g id="download_count">%d</xliff:g> baixades i es netejaran de l\'historial.</string>
+  <string name="download_delete_file">S\'eliminarà el fitxer</string>
+  <string name="download_file_error_dlg_title">Sense espai</string>
+  <string name="download_file_error_dlg_msg">No s\'ha pogut baixar <xliff:g id="filename">%s</xliff:g>.\nAllibera espai al telèfon i torna a provar-ho.</string>
+  <string name="download_failed_generic_dlg_title">No s\'ha completat la baixada</string>
+  <string name="download_no_sdcard_dlg_title">No hi ha targeta SD</string>
+  <string name="download_no_sdcard_dlg_msg">Es necessita una targeta SD per a la baixada de <xliff:g id="filename">%s</xliff:g>.</string>
+  <string name="download_sdcard_busy_dlg_title">La targeta SD no està disponible</string>
+  <string name="download_sdcard_busy_dlg_msg">La targeta SD està ocupada. Per permetre les baixades selecciona \"Desactiva l\'emmagatzematge USB\" a la notificació.</string>
+  <string name="download_no_application_title">No es pot obrir el fitxer</string>
+  <string name="retry">Reintenta</string>
+  <string name="no_downloads">L\'historial de baixades és buit.</string>
+  <string name="download_error">No s\'ha completat la baixada.</string>
+  <string name="download_success"><xliff:g id="file">%s</xliff:g> Baixada completa.</string>
+  <string name="download_running">S\'està baixant…</string>
+  <string name="download_pending">S\'està iniciant la baixada…</string>
+  <string name="download_pending_network">Esperant una connexió de dades…</string>
+  <string name="download_running_paused">Esperant una connexió de dades…</string>
+  <string name="download_canceled">S\'ha cancel·lat la baixada.</string>
+  <string name="download_not_acceptable">No es pot baixar. El contingut no és compatible amb aquest telèfon.</string>
+  <string name="download_file_error">No es pot acabar la baixada. No hi ha espai suficient.</string>
+  <string name="download_length_required">No es pot baixar. No es pot determinar la mida de l\'element.</string>
+  <string name="download_precondition_failed">S\'ha interromput la baixada. No es pot reprendre.</string>
+  <string name="search_the_web">Cerca al web</string>
+  <string name="webstorage_outofspace_notification_title">Emmagatzematge del navegador ple</string>
+  <string name="webstorage_outofspace_notification_text">Fes clic per a alliberar espai.</string>
+  <string name="webstorage_clear_data_title">Esborra les dades emmagatzemades</string>
+  <string name="webstorage_clear_data_dialog_title">Esborra les dades emmagatzemades</string>
+  <string name="webstorage_clear_data_dialog_message">S\'eliminaran totes les dades emmagatzemades d\'aquest web</string>
+  <string name="webstorage_clear_data_dialog_ok_button">Esborra-ho tot</string>
+  <string name="webstorage_clear_data_dialog_cancel_button">Cancel·la</string>
+  <string name="webstorage_origin_summary_mb_stored">MB emmagatzemats al telèfon</string>
+  <string name="loading_video">Càrrega de vídeo</string>
+  <string name="geolocation_permissions_prompt_message"><xliff:g id="website origin" example="maps.google.com">%s</xliff:g> vol saber la teva ubicació</string>
+  <string name="geolocation_permissions_prompt_share">Compartir ubicació</string>
+  <string name="geolocation_permissions_prompt_dont_share">Rebutja</string>
+  <string name="geolocation_permissions_prompt_remember">Recorda preferències</string>
+  <string name="geolocation_permissions_prompt_toast_allowed">Aquest web pot accedir a la teva ubicació. Pots canviar-ho a Paràmetres -&gt; Paràmetres web</string>
+  <string name="geolocation_permissions_prompt_toast_disallowed">Aquest web no pot accedir a la teva ubicació. Pots canviar-ho a Paràmetres -&gt; Paràmetres web</string>
+  <string name="geolocation_settings_page_title">Esborra accés a la ubicació</string>
+  <string name="geolocation_settings_page_summary_allowed">Aquest web pot accedir a la teva localització</string>
+  <string name="geolocation_settings_page_summary_not_allowed">Aquest web no pot accedir a la teva localització</string>
+  <string name="geolocation_settings_page_dialog_title">Esborra accés a la ubicació</string>
+  <string name="geolocation_settings_page_dialog_message">S\'esborrarà l\'accés a la ubicació que tenia aquest web</string>
+  <string name="geolocation_settings_page_dialog_ok_button">Esborra l\'accés</string>
+  <string name="geolocation_settings_page_dialog_cancel_button">Cancel·la</string>
+  <string name="website_settings_clear_all">Neteja-ho tot</string>
+  <string name="website_settings_clear_all_dialog_title">Vols netejar tots els paràmetres?</string>
+  <string name="website_settings_clear_all_dialog_message">S\'eliminaran totes les dades dels webs i els permisos d\'ubicació.</string>
+  <string name="website_settings_clear_all_dialog_ok_button">Elimina totes les dades</string>
+  <string name="website_settings_clear_all_dialog_cancel_button">Cancel·la</string>
+  <string name="progress_dialog_setting_wallpaper">S\'està establint el fons...</string>
+  <string name="pref_show_zoom_controls">Mostra controls de zoom visual</string>
+  <string name="pref_full_screen_mode">Pantalla completa</string>
+  <string name="pref_user_agent_title">Agent d\'usuari</string>
+  <string name="pref_user_agent_dialog">Seleccioneu l\'agent d\'usuari</string>
+  <string-array name="pref_content_plugins_choices">
+    <item>Sempre actiu</item>
+    <item>Sota demanda</item>
+    <item>Desactivat</item>
+  </string-array>
+  <string-array name="pref_text_size_choices">
+    <item>Minúscul</item>
+    <item>Petit</item>
+    <item>Normal</item>
+    <item>Gran</item>
+    <item>Enorme</item>
+  </string-array>
+  <string-array name="pref_default_zoom_choices">
+    <item>Lluny</item>
+    <item>Mitjà</item>
+    <item>A prop</item>
+  </string-array>
+  <string-array name="pref_default_text_encoding_choices">
+    <item>Latin-1 (ISO-8859-1)</item>
+    <item>Unicode (UTF-8)</item>
+    <item>Xinès (GBK)</item>
+    <item>Xinès (Big5)</item>
+    <item>Japonès (ISO-2022-JP)</item>
+    <item>Japonès (SHIFT_JIS)</item>
+    <item>Japonès (EUC-JP)</item>
+  </string-array>
+  <string-array name="pref_user_agent">
+    <item>Android</item>
+    <item>Escriptori</item>
+    <item>iPhone</item>
+    <item>Internet Explorer 6</item>
+    <item>Personalitzat...</item>
+  </string-array>
+</resources>
