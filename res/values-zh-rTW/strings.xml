@@ -201,10 +201,10 @@
     <string name="pref_development_title" msgid="3263854204533056480">"偵錯"</string>
     <string name="pref_default_text_encoding" msgid="5742965543955558478">"文字編碼"</string>
   <string-array name="pref_default_text_encoding_choices">
-    <item msgid="7275223955790513818">"Latin-1 (ISO-8859-1)"</item>
-    <item msgid="2456597866837587140">"Unicode (UTF-8)"</item>
-    <item msgid="6122474363777211732">"中文 (GBK)"</item>
-    <item msgid="373372275931607040">"中文 (Big5)"</item>
+    <item msgid="7275223955790513818">"英文／西歐語系 (ISO-8859-1)"</item>
+    <item msgid="2456597866837587140">"萬國碼 Unicode (UTF-8)"</item>
+    <item msgid="6122474363777211732">"簡體中文 (GBK)"</item>
+    <item msgid="373372275931607040">"繁體中文 (Big5)"</item>
     <item msgid="891615911084608570">"日文 (ISO-2022-JP)"</item>
     <item msgid="5589150448475151241">"日文 (SHIFT_JIS)"</item>
     <item msgid="7356792686950371843">"日文 (EUC-JP)"</item>
@@ -304,4 +304,10 @@
     <string name="incog_tab">使用匿名模式</string>
     <string name="dis_incog_tab">停用匿名模式</string>
     <string name="pref_select_user_agent">使用者代理程式</string>
+
+    <string name="pref_default_text_encoding_default">Big5</string>
+    <string name="error_console_header_text_minimized">顯示 JavaScript 主控台</string>
+    <string name="error_console_header_text_maximized">JavaScript 主控台</string>
+    <string name="error_console_eval_text_hint">執行 JavaScript</string>
+    <string name="error_console_eval_button_text">執行</string>
 </resources>
