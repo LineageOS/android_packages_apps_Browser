@@ -297,10 +297,10 @@
     <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"Anuluj"</string>
     <string name="progress_dialog_setting_wallpaper" msgid="4871900779338536674">"Trwa ustawianie tapety..."</string>
     
-    <string name="error_console_header_text_minimized" translatable="false">Pokaż konsolę JavaScript</string>
-    <string name="error_console_header_text_maximized" translatable="false">Konsola JavaScript</string>
-    <string name="error_console_eval_text_hint" translatable="false">Oceń JavaScript</string>
-    <string name="error_console_eval_button_text" translatable="false">Oceń</string>
+    <string name="error_console_header_text_minimized">Pokaż konsolę JavaScript</string>
+    <string name="error_console_header_text_maximized">Konsola JavaScript</string>
+    <string name="error_console_eval_text_hint">Oceń JavaScript</string>
+    <string name="error_console_eval_button_text">Oceń</string>
 
     <string name="pref_show_zoom_controls">Wyświetl przyciski powiększania</string>
     <string name="pref_full_screen_mode">Pełny ekran</string>

@@ -255,8 +255,6 @@
   <string name="progress_dialog_setting_wallpaper">S\'està establint el fons...</string>
   <string name="pref_show_zoom_controls">Mostra controls de zoom visual</string>
   <string name="pref_full_screen_mode">Pantalla completa</string>
-  <string name="pref_user_agent_title">Agent d\'usuari</string>
-  <string name="pref_user_agent_dialog">Seleccioneu l\'agent d\'usuari</string>
   <string-array name="pref_content_plugins_choices">
     <item>Sempre actiu</item>
     <item>Sota demanda</item>
