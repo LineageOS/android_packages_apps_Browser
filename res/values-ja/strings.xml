@@ -305,4 +305,10 @@
     <string name="incog_tab">シークレットモード有効</string>
     <string name="dis_incog_tab">シークレットモード無効</string>
     <string name="pref_select_user_agent">ユーザーエージェント</string>
+
+    <string name="error_console_header_text_minimized">JavaScriptコンソールを表示</string>
+    <string name="error_console_header_text_maximized">JavaScriptコンソール</string>
+    <string name="error_console_eval_text_hint">JavaScriptを評価</string>
+    <string name="error_console_eval_button_text">評価</string>
+
 </resources>
