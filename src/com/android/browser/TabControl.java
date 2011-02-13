@@ -35,7 +35,7 @@ class TabControl {
     // Log Tag
     private static final String LOGTAG = "TabControl";
     // Maximum number of tabs.
-    private static final int MAX_TABS = 8;
+    private static final int MAX_TABS = 32;
     // Private array of WebViews that are used as tabs.
     private ArrayList<Tab> mTabs = new ArrayList<Tab>(MAX_TABS);
     // Queue of most recently viewed tabs.
