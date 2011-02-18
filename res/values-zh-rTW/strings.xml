@@ -301,8 +301,8 @@
     <string name="pref_content_invert_color_summary">以反相的顏色顯示頁面</string>
     <string name="pref_show_zoom_controls">顯示縮放控制工具</string>
     <string name="pref_full_screen_mode">全螢幕模式</string>
-    <string name="incog_tab">使用匿名模式</string>
-    <string name="dis_incog_tab">停用匿名模式</string>
+    <string name="incog_tab">使用無痕瀏覽模式</string>
+    <string name="dis_incog_tab">停用無痕瀏覽模式</string>
     <string name="pref_select_user_agent">使用者代理程式</string>
 
     <string name="pref_default_text_encoding_default">Big5</string>
