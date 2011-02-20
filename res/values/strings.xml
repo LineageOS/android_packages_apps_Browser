@@ -457,6 +457,7 @@
     <string-array name="pref_development_ua_choices" translatable="false">
         <item>Android</item>
         <item>Froyo</item>
+	<item>Eclair</item>
         <item>Linux Desktop</item>
         <item>Mac Desktop</item>
         <item>iPhone</item>
@@ -467,6 +468,7 @@
     <string-array name="pref_development_ua_values" translatable="false">
         <item>0</item>
         <item>4</item>
+	<item>7</item>
         <item>5</item>
         <item>1</item>
         <item>2</item>

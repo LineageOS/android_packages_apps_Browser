@@ -170,6 +170,10 @@ class BrowserSettings extends Observable {
             "Android 2.2; en-us; " + Build.MODEL + " Build/FRF91) AppleWebKit/533.1 " +
             "(KHTML, like Gecko) Version/4.0 Mobile Safari/533.1";
 
+    private static final String ECLAIR_USERAGENT = "Mozilla/5.0 (Linux; U; " +
+            "Android 2.1; en-us; " + Build.MODEL + " Build/ERD62) AppleWebKit/530.17 " +
+            "(KHTML, like Gecko) Version/4.0 Mobile Safari/530.17"
+
     private static final String IE6_USERAGENT = "Mozilla/4.0 (compatible; MSIE 6.1; Windows XP)";
 
     // Value to truncate strings when adding them to a TextView within
@@ -225,6 +229,9 @@ class BrowserSettings extends Observable {
                     break;
                 case 6:
                     s.setUserAgentString(IE6_USERAGENT);
+                    break;
+                case 7:
+                    s.setUserAgentString(ECLAIR_USERAGENT);
                     break;
                 default:
                     s.setUserAgentString(null);
