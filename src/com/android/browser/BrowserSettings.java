@@ -172,7 +172,7 @@ class BrowserSettings extends Observable {
 
     private static final String ECLAIR_USERAGENT = "Mozilla/5.0 (Linux; U; " +
             "Android 2.1; en-us; " + Build.MODEL + " Build/ERD62) AppleWebKit/530.17 " +
-            "(KHTML, like Gecko) Version/4.0 Mobile Safari/530.17"
+            "(KHTML, like Gecko) Version/4.0 Mobile Safari/530.17";
 
     private static final String IE6_USERAGENT = "Mozilla/4.0 (compatible; MSIE 6.1; Windows XP)";
 
