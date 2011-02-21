@@ -141,7 +141,7 @@ import java.util.regex.Pattern;
 public class BrowserActivity extends Activity
     implements View.OnCreateContextMenuListener, DownloadListener {
 
-    /* Define some aliases to make these debugging flags easier to refer to.
+     /* Define some aliases to make these debugging flags easier to refer to.
      * This file imports android.provider.Browser, so we can't just refer to "Browser.DEBUG".
      */
     private final static boolean DEBUG = com.android.browser.Browser.DEBUG;
@@ -665,14 +665,16 @@ public class BrowserActivity extends Activity
 
         final ContentResolver cr = mResolver;
         final String newUrl = url;
-        new AsyncTask<Void, Void, Void>() {
-            protected Void doInBackground(Void... unused) {
-                Browser.updateVisitedHistory(cr, newUrl, false);
-                Browser.addSearchUrl(cr, newUrl);
-                return null;
-            }
-        }.execute();
-
+        // Do not add to visited site history if Incognito mode is enabled 
+        if (!getIncognito()){
+            new AsyncTask<Void, Void, Void>() {
+                protected Void doInBackground(Void... unused) {
+                    Browser.updateVisitedHistory(cr, newUrl, false);
+                    Browser.addSearchUrl(cr, newUrl);
+                    return null;
+                }
+            }.execute();
+        }
         if(mSettings == null) return false;
         SearchEngine searchEngine = mSettings.getSearchEngine();
         if (searchEngine == null) return false;
@@ -719,12 +721,15 @@ public class BrowserActivity extends Activity
                     url = smartUrlFilter(url);
                     final ContentResolver cr = mResolver;
                     final String newUrl = url;
-                    new AsyncTask<Void, Void, Void>() {
-                        protected Void doInBackground(Void... unused) {
-                            Browser.updateVisitedHistory(cr, newUrl, false);
-                            return null;
-                        }
-                    }.execute();
+                    // Do not add to visited site history if Incognito mode is enabled
+                    if (!getIncognito()){
+                        new AsyncTask<Void, Void, Void>() {
+                            protected Void doInBackground(Void... unused) {
+                                Browser.updateVisitedHistory(cr, newUrl, false);
+                                return null;
+                            }
+                        }.execute();
+                    }
                     String searchSource = "&source=android-" + GOOGLE_SEARCH_SOURCE_SUGGEST + "&";
                     if (url.contains(searchSource)) {
                         String source = null;
