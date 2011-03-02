@@ -296,4 +296,17 @@
     <string name="website_settings_clear_all_dialog_ok_button" msgid="6401582240627669431">"Minden adat törlése"</string>
     <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"Mégse"</string>
     <string name="progress_dialog_setting_wallpaper" msgid="4871900779338536674">"Háttérkép beállítása..."</string>
+
+    <string name="pref_content_invert_color">Színek invertálása</string>
+    <string name="pref_content_invert_color_summary">Oldalak megjelenítése invertált színekben</string>
+    <string name="pref_default_text_encoding_default">Latin-1</string>
+    <string name="error_console_header_text_minimized">JavaScript konzol megjelenítése</string>
+    <string name="error_console_header_text_maximized">JavaScript konzol</string>
+    <string name="error_console_eval_text_hint">JavaScript értékelés</string>
+    <string name="error_console_eval_button_text">Értékelés</string>
+    <string name="pref_show_zoom_controls">Vizuális nagyítási vezérlők megjelenítése</string>
+    <string name="pref_full_screen_mode">Teljes képernyő</string>
+    <string name="incog_tab">Inkognitó ablak</string>
+    <string name="dis_incog_tab">Inkognitó mód kikapcsolása</string>
+    <string name="pref_select_user_agent">Böngészőazonosító választása</string>
 </resources>
