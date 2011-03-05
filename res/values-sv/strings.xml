@@ -143,6 +143,8 @@
     <string name="pref_content_autofit_summary" msgid="4587831659894879986">"Anpassa webbsidor efter skärmen"</string>
     <string name="pref_content_landscape_only" msgid="2022546812766219672">"Endast liggande"</string>
     <string name="pref_content_landscape_only_summary" msgid="1008238895535428855">"Visa bara sidor i det bredare, liggande formatet"</string>
+    <string name="pref_content_invert_color">Invertera färger</string>
+    <string name="pref_content_invert_color_summary">Visa sidor med inverterade färger</string>
     <string name="pref_privacy_title" msgid="1052470980370846151">"Sekretessinställningar"</string>
     <string name="pref_privacy_clear_cache" msgid="3380316479925886998">"Rensa cacheminne"</string>
     <string name="pref_privacy_clear_cache_summary" msgid="2216463577207991454">"Ta bort innehåll och databaser som cachelagrats lokalt"</string>
@@ -296,4 +298,13 @@
     <string name="website_settings_clear_all_dialog_ok_button" msgid="6401582240627669431">"Ta bort alla data"</string>
     <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"Avbryt"</string>
     <string name="progress_dialog_setting_wallpaper" msgid="4871900779338536674">"Anger bakgrund..."</string>
+    <string name="error_console_header_text_minimized">Visa JavaScript-konsol</string>
+    <string name="error_console_header_text_maximized">JavaScript-konsol</string>
+    <string name="error_console_eval_text_hint">Evaluera JavaScript</string>
+    <string name="error_console_eval_button_text">Evaluera</string>
+    <string name="pref_show_zoom_controls">Visa visuella zoomkontroller</string>
+    <string name="pref_full_screen_mode">Helskärm</string>
+    <string name="incog_tab">Aktivera Incognito-läge</string>
+    <string name="dis_incog_tab">Inaktivera Incognito-läge</string>
+    <string name="pref_select_user_agent">Välj användaragent</string>
 </resources>
