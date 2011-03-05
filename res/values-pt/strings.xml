@@ -308,4 +308,17 @@
     <string name="incog_tab">Habilitar Modo Incógnito</string>
     <string name="dis_incog_tab">Disabilitar Modo Incógnito</string>
     <string name="pref_select_user_agent">Selecionar Agente Utilizador</string>
+    <string name="pref_content_invert_color">Inverter cor</string>
+    <string name="pref_content_invert_color_summary">Visualizar páginas com cores invertidas</string>
+    <string name="pref_development_error_console">Mostrar Console JavaScript</string>
+    <string name="pref_development_error_console">Mostrar Console JavaScript</string>
+    <string name="js_engine_flags">Definir sinalizadores de JS</string>
+    <string name="pref_development_trace">Habilitar rastreamento</string>
+    <string name="pref_development_nav_dump">Habilitar esvaziar cache de navegação</string>
+    <string name="pref_development_normal_rendering">Renderização normal</string>
+    <string name="pref_development_single_column_rendering">Renderização de uma única coluna</string>
+    <string name="pref_development_viewport">Use janela ampla</string>
+    <string name="search_label">Navegador</string>
+    <string name="dump_nav">Esvaziar cache de navegação</string>
+    <string name="dump_counters">Esvaziar contadores V8</string>
 </resources>
