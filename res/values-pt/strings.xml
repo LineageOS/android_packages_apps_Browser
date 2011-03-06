@@ -311,7 +311,6 @@
     <string name="pref_content_invert_color">Inverter cor</string>
     <string name="pref_content_invert_color_summary">Visualizar páginas com cores invertidas</string>
     <string name="pref_development_error_console">Mostrar Console JavaScript</string>
-    <string name="pref_development_error_console">Mostrar Console JavaScript</string>
     <string name="js_engine_flags">Definir sinalizadores de JS</string>
     <string name="pref_development_trace">Habilitar rastreamento</string>
     <string name="pref_development_nav_dump">Habilitar esvaziar cache de navegação</string>
