@@ -143,6 +143,8 @@
     <string name="pref_content_autofit_summary" msgid="4587831659894879986">"调整网页版面以适合屏幕大小"</string>
     <string name="pref_content_landscape_only" msgid="2022546812766219672">"仅以横向模式显示"</string>
     <string name="pref_content_landscape_only_summary" msgid="1008238895535428855">"仅以横向宽屏模式显示网页"</string>
+    <string name="pref_content_invert_color">反色</string>
+    <string name="pref_content_invert_color_summary">以反色显示页面</string>
     <string name="pref_privacy_title" msgid="1052470980370846151">"隐私权设置"</string>
     <string name="pref_privacy_clear_cache" msgid="3380316479925886998">"清除缓存"</string>
     <string name="pref_privacy_clear_cache_summary" msgid="2216463577207991454">"清除存储在本地缓存中的内容和数据库"</string>
@@ -296,4 +298,9 @@
     <string name="website_settings_clear_all_dialog_ok_button" msgid="6401582240627669431">"删除所有数据"</string>
     <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"取消"</string>
     <string name="progress_dialog_setting_wallpaper" msgid="4871900779338536674">"正在设置壁纸..."</string>
+    <string name="pref_show_zoom_controls">显示视觉缩放控制</string>
+    <string name="pref_full_screen_mode">全屏</string>
+    <string name="incog_tab">启用隐私模式</string>
+    <string name="dis_incog_tab">关闭隐私模式</string>
+    <string name="pref_select_user_agent">选择用户代理</string>
 </resources>
