@@ -143,6 +143,8 @@
     <string name="pref_content_autofit_summary" msgid="4587831659894879986">"עצב דפי אינטרנט כך שיתאימו למסך"</string>
     <string name="pref_content_landscape_only" msgid="2022546812766219672">"תצוגה לרוחב בלבד"</string>
     <string name="pref_content_landscape_only_summary" msgid="1008238895535428855">"הצג דפים רק בפריסת מסך הרחבה, לרוחב"</string>
+	<string name="pref_content_invert_color">הפוך צבעים</string>
+  <string name="pref_content_invert_color_summary">הצג דפים בצבע ההפוך</string>
     <string name="pref_privacy_title" msgid="1052470980370846151">"הגדרות פרטיות"</string>
     <string name="pref_privacy_clear_cache" msgid="3380316479925886998">"נקה קובץ שמור"</string>
     <string name="pref_privacy_clear_cache_summary" msgid="2216463577207991454">"נקה תוכן ומסדי נתונים בקובץ השמור המקומי"</string>
@@ -296,4 +298,58 @@
     <string name="website_settings_clear_all_dialog_ok_button" msgid="6401582240627669431">"מחק את כל הנתונים"</string>
     <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"ביטול"</string>
     <string name="progress_dialog_setting_wallpaper" msgid="4871900779338536674">"מגדיר טפט..."</string>
+	  <string name="error_console_header_text_minimized">הצג JavaScript Console</string>
+  <string name="error_console_header_text_maximized">מסוף JavaScript</string>
+  <string name="error_console_eval_text_hint">נסה JavaScript</string>
+  <string name="error_console_eval_button_text">נסה</string>
+  <string name="pref_show_zoom_controls">הצג בקרי שליטה בזום</string>
+  <string name="pref_full_screen_mode">מסך מלא</string>
+  <string name="incog_tab">הפעל מצב אנונימי </string>
+  <string name="dis_incog_tab">בטל מצב אנונימי</string>
+  <string name="pref_select_user_agent">בחר סוכן משתמש</string>
+  <string-array name="pref_text_size_values">
+    <item>גודל פונט מועדף</item>
+  </string-array>
+  <string-array name="pref_development_ua_choices">
+    <item>אנדרואיד</item>
+    <item>Froyo</item>
+    <item>מחשב לינוקס</item>
+    <item>מחשב מקינטוש</item>
+    <item>iPhone</item>
+    <item>iPad</item>
+    <item>IE6</item>
+    <item>IE6</item>
+  </string-array>
+  <string-array name="bookmarks">
+    <item>Google</item>
+    <item>http://www.google.com/</item>
+    <item>‏Picasa</item>
+    <item>http://picasaweb.google.com/m/viewer?source=androidclient</item>
+    <item>Yahoo!</item>
+    <item>http://www.yahoo.com/</item>
+    <item>מסנג\'ר</item>
+    <item>http://www.msn.com/</item>
+    <item>מייספייס</item>
+    <item>http://www.myspace.com/</item>
+    <item>פייסבוק</item>
+    <item>http://www.facebook.com/</item>
+    <item>ויקיפדיה</item>
+    <item>http://www.wikipedia.org/</item>
+    <item>eBay</item>
+    <item>http://www.ebay.com/</item>
+    <item>CNN</item>
+    <item>http://www.cnn.com/</item>
+    <item>ניו יורק טיימס</item>
+    <item>http://www.nytimes.com/</item>
+    <item>ESPN</item>
+    <item>http://espn.com/</item>
+    <item>Amazon</item>
+    <item>http://www.amazon.com/</item>
+    <item>ערוץ מזג האוויר</item>
+    <item>http://www.weather.com/</item>
+    <item>BBC</item>
+    <item>http://www.bbc.co.uk/</item>
+  </string-array>
+</resources>
+
 </resources>
