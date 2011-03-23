@@ -143,6 +143,8 @@
     <string name="pref_content_autofit_summary" msgid="4587831659894879986">"Configurar las páginas web para ajustarlas a la pantalla"</string>
     <string name="pref_content_landscape_only" msgid="2022546812766219672">"Vista solo horizontal"</string>
     <string name="pref_content_landscape_only_summary" msgid="1008238895535428855">"Mostrar solo las páginas con la orientación de pantalla horizontal"</string>
+    <string name="pref_content_invert_color">Invertir colores</string>
+    <string name="pref_content_invert_color_summary">Mostrar las páginas en color invertido</string>
     <string name="pref_privacy_title" msgid="1052470980370846151">"Ajustes de privacidad"</string>
     <string name="pref_privacy_clear_cache" msgid="3380316479925886998">"Borrar caché"</string>
     <string name="pref_privacy_clear_cache_summary" msgid="2216463577207991454">"Borrar bases de datos y contenido de la memoria caché local"</string>
@@ -296,4 +298,13 @@
     <string name="website_settings_clear_all_dialog_ok_button" msgid="6401582240627669431">"Eliminar todos los datos"</string>
     <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"Cancelar"</string>
     <string name="progress_dialog_setting_wallpaper" msgid="4871900779338536674">"Estableciendo fondo de pantalla..."</string>
+    <string name="error_console_header_text_minimized">Ver consola JavaScript</string>
+    <string name="error_console_header_text_maximized">Consola JavaScript</string>
+    <string name="error_console_eval_text_hint">Evaluar JavaScript</string>
+    <string name="error_console_eval_button_text">Evaluar</string>
+    <string name="pref_show_zoom_controls">Ver controles de zoom</string>
+    <string name="pref_full_screen_mode">Pantalla completa</string>
+    <string name="incog_tab">Activar el modo de Incognito</string>
+    <string name="dis_incog_tab">Desactivar el modo de Incognito</string>
+    <string name="pref_select_user_agent">Seleccione Agente de Usuario</string>
 </resources>
