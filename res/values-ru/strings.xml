@@ -143,6 +143,7 @@
     <string name="pref_content_autofit_summary" msgid="4587831659894879986">"Адаптировать контент к размеру экрана мобильного устройства"</string>
     <string name="pref_content_landscape_only" msgid="2022546812766219672">"Только горизонтально"</string>
     <string name="pref_content_landscape_only_summary" msgid="1008238895535428855">"Показывать страницы только в горизонтальной ориентации"</string>
+    <string name="pref_content_invert_color">Инвертировать цвет</string>
     <string name="pref_privacy_title" msgid="1052470980370846151">"Настройки конфиденциальности"</string>
     <string name="pref_privacy_clear_cache" msgid="3380316479925886998">"Очистить кэш"</string>
     <string name="pref_privacy_clear_cache_summary" msgid="2216463577207991454">"Удалить контент и данные, сохраненные браузером"</string>
