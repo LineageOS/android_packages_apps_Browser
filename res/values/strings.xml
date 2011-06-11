@@ -756,7 +756,7 @@
     <string name="website_settings_clear_all_dialog_cancel_button">Cancel</string>
 
     <!-- Text in the progress dialog when we are setting an image as the home screen wallpaper. -->
-    <string name="progress_dialog_setting_wallpaper">Setting wallpaper...</string>
+    <string name="progress_dialog_setting_wallpaper">Setting wallpaper/u2026</string>
 
     <string name="error_console_header_text_minimized">Show JavaScript console</string>
     <string name="error_console_header_text_maximized">JavaScript console</string>
