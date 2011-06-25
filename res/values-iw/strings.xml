@@ -21,7 +21,7 @@
     <string name="new_tab" msgid="4505722538297295141">"חלון חדש"</string>
     <string name="active_tabs" msgid="3050623868203544623">"חלונות"</string>
     <string name="tab_bookmarks" msgid="2305793036003473653">"סימניות"</string>
-    <string name="tab_most_visited" msgid="1077402532455000703">"אתרים שבהם אתה מבקר בתדירות הגבוהה ביותר"</string>
+    <string name="tab_most_visited" msgid="1077402532455000703">"אתרים נפוצים"</string>
     <string name="tab_history" msgid="1979267558744613746">"היסטוריה"</string>
     <string name="added_to_bookmarks" msgid="1020224130695956728">"נוסף לסימניות"</string>
     <string name="removed_from_bookmarks" msgid="6063705902028438800">"הוסר מסימניות"</string>
@@ -49,7 +49,7 @@
     <string name="ssl_untrusted" msgid="5369967226521102194">"אישור זה אינו מרשות אמינה."</string>
     <string name="ssl_mismatch" msgid="558688832420069896">"שם האתר לא תואם לשם באישור."</string>
     <string name="ssl_expired" msgid="5739349389499575559">"פג תוקפו של אישור זה."</string>
-    <string name="ssl_not_yet_valid" msgid="2893167846212645846">"אישור זה אינו חוקי עדיין."</string>
+    <string name="ssl_not_yet_valid" msgid="2893167846212645846">"אישור זה אינו בר תוקף עדיין."</string>
     <string name="ssl_certificate" msgid="5226747157992111668">"אישור אבטחה"</string>
     <string name="ssl_certificate_is_valid" msgid="7096160815933145579">"אישור זה תקף."</string>
     <string name="issued_to" msgid="9032338008819841339">"הופק עבור:"</string>
@@ -126,9 +126,9 @@
     <string name="pref_content_load_images" msgid="2125616852957377561">"טען תמונות"</string>
     <string name="pref_content_load_images_summary" msgid="5055874125248398584">"הצג תמונות בדפי אינטרנט"</string>
     <string name="pref_content_block_popups" msgid="7808433807197256726">"חסום חלונות קופצים"</string>
-    <string name="pref_content_javascript" msgid="4570972030299516843">"הפוך JavaScript לפעיל"</string>
-    <string name="pref_content_open_in_background" msgid="824123779725118663">"פתוח ברקע"</string>
-    <string name="pref_content_plugins" msgid="7231944644794301582">"הפוך רכיבי פלאג אין לפעילים"</string>
+    <string name="pref_content_javascript" msgid="4570972030299516843">"הפעל JavaScript"</string>
+    <string name="pref_content_open_in_background" msgid="824123779725118663">"פתח ברקע"</string>
+    <string name="pref_content_plugins" msgid="7231944644794301582">"הפעל רכיבי פלאג אין"</string>
   <string-array name="pref_content_plugins_choices">
     <item msgid="6745108155096660725">"פועל תמיד"</item>
     <item msgid="2484126708670016519">"לפי דרישה"</item>
@@ -146,10 +146,10 @@
 	<string name="pref_content_invert_color">הפוך צבעים</string>
   <string name="pref_content_invert_color_summary">הצג דפים בצבע ההפוך</string>
     <string name="pref_privacy_title" msgid="1052470980370846151">"הגדרות פרטיות"</string>
-    <string name="pref_privacy_clear_cache" msgid="3380316479925886998">"נקה קובץ שמור"</string>
-    <string name="pref_privacy_clear_cache_summary" msgid="2216463577207991454">"נקה תוכן ומסדי נתונים בקובץ השמור המקומי"</string>
-    <string name="pref_privacy_clear_cache_dlg" msgid="5541011591300753881">"תוכן ומסדי נתונים בקובץ השמור המקומי יימחקו."</string>
-    <string name="pref_privacy_clear_cookies" msgid="3095583579133780331">"נקה את כל הנתונים של קובצי cookie"</string>
+    <string name="pref_privacy_clear_cache" msgid="3380316479925886998">"נקה קובץ מטמון"</string>
+    <string name="pref_privacy_clear_cache_summary" msgid="2216463577207991454">"נקה תוכן ומסדי נתונים בקובץ המטמון המקומי"</string>
+    <string name="pref_privacy_clear_cache_dlg" msgid="5541011591300753881">"תוכן ומסדי נתונים בקובץ המטמון המקומי יימחקו."</string>
+    <string name="pref_privacy_clear_cookies" msgid="3095583579133780331">"נקה נתוני קבצי cookie"</string>
     <string name="pref_privacy_clear_cookies_summary" msgid="6962742063990677520">"נקה את כל קובצי ה-cookies של הדפדפן"</string>
     <string name="pref_privacy_clear_cookies_dlg" msgid="552855688091432682">"כל קובצי ה-cookies יימחקו."</string>
     <string name="pref_privacy_clear_history" msgid="8723795508825198477">"נקה היסטוריה"</string>
@@ -184,13 +184,13 @@
     <item msgid="7201512237890458902">"ענק"</item>
   </string-array>
     <string name="pref_text_size_dialogtitle" msgid="3625388833512647865">"גודל טקסט"</string>
-    <string name="pref_default_zoom" msgid="8076142259097187395">"ברירת מחדל של מרחק מתצוגה"</string>
+    <string name="pref_default_zoom" msgid="8076142259097187395">"ברירת מחדל מרחק תצוגה"</string>
   <string-array name="pref_default_zoom_choices">
     <item msgid="549583171195154919">"רחוק"</item>
     <item msgid="5619034257768161024">"בינוני"</item>
-    <item msgid="3840999588443167001">"סגור"</item>
+    <item msgid="3840999588443167001">"קרוב"</item>
   </string-array>
-    <string name="pref_default_zoom_dialogtitle" msgid="6095974367125109021">"ברירת מחדל של מרחק מתצוגה"</string>
+    <string name="pref_default_zoom_dialogtitle" msgid="6095974367125109021">"ברירת מחדל מרחק תצוגה"</string>
     <string name="pref_content_load_page" msgid="2219810141690955452">"פתח דפים בסקירה"</string>
     <string name="pref_content_load_page_summary" msgid="8792093504054149369">"הצג סקירה של דפים שנפתחו לאחרונה"</string>
     <string name="pref_extras_title" msgid="3091250467679722382">"הגדרות מתקדמות"</string>
@@ -327,7 +327,7 @@
     <item>http://picasaweb.google.com/m/viewer?source=androidclient</item>
     <item>Yahoo!</item>
     <item>http://www.yahoo.com/</item>
-    <item>מסנג\'ר</item>
+    <item>MSN</item>
     <item>http://www.msn.com/</item>
     <item>מייספייס</item>
     <item>http://www.myspace.com/</item>
