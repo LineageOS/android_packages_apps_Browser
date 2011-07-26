@@ -769,4 +769,7 @@
     <string name="incog_tab">Enable Incognito Mode</string>
     <string name="dis_incog_tab">Disable Incognito Mode</string>
     <string name="pref_select_user_agent">Select User Agent</string>
+
+    <!-- Access point for RLZ tracking. -->
+    <string name="rlz_access_point" translatable="false">Y1</string>
 </resources>

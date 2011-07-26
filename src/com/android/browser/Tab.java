@@ -43,6 +43,7 @@ import android.os.Message;
 import android.os.SystemClock;
 import android.provider.Browser;
 import android.speech.RecognizerResultsIntent;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -1866,8 +1867,8 @@ class Tab {
     // Populate the picker data using the given history item and the current top
     // WebView.
     private void populatePickerData(WebHistoryItem item) {
-        mPickerData = new PickerData();
-        if (item != null) {
+        if (item != null && !TextUtils.isEmpty(item.getUrl())) {
+            mPickerData = new PickerData();
             mPickerData.mUrl = item.getUrl();
             mPickerData.mTitle = item.getTitle();
             mPickerData.mFavicon = item.getFavicon();
@@ -1923,10 +1924,10 @@ class Tab {
         final WebHistoryItem item = list != null ? list.getCurrentItem() : null;
         populatePickerData(item);
 
-        if (mPickerData.mUrl != null) {
+        if (mPickerData != null && mPickerData.mUrl != null) {
             mSavedState.putString(CURRURL, mPickerData.mUrl);
         }
-        if (mPickerData.mTitle != null) {
+        if (mPickerData != null && mPickerData.mTitle != null) {
             mSavedState.putString(CURRTITLE, mPickerData.mTitle);
         }
         mSavedState.putBoolean(CLOSEONEXIT, mCloseOnExit);
@@ -1954,7 +1955,6 @@ class Tab {
         // Restore the internal state even if the WebView fails to restore.
         // This will maintain the app id, original url and close-on-exit values.
         mSavedState = null;
-        mPickerData = null;
         mCloseOnExit = b.getBoolean(CLOSEONEXIT);
         mAppId = b.getString(APPID);
         mOriginalUrl = b.getString(ORIGINALURL);
