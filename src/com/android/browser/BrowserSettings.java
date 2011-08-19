@@ -32,6 +32,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.database.ContentObserver;
 import android.os.Build;
+import android.os.SystemProperties;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -158,6 +159,10 @@ class BrowserSettings extends Observable {
     public final static String PREF_CLEAR_GEOLOCATION_ACCESS =
             "privacy_clear_geolocation_access";
 
+    private static final String CYANOGENMOD_USERAGENT = "Mozilla/5.0 (Linux; U; " +
+            "Android 2.3.5; en-us; " + Build.MODEL + " Build/" + Build.DISPLAY + "; " + SystemProperties.get("ro.modversion") + ") AppleWebKit/533.1 " +
+            "(KHTML, like Gecko) Version/4.0 Mobile Safari/533.1";
+
     private static final String DESKTOP_USERAGENT = "Mozilla/5.0 (Macintosh; " +
             "U; Intel Mac OS X 10_6_3; en-us) AppleWebKit/533.16 (KHTML, " +
             "like Gecko) Version/5.0 Safari/533.16";
@@ -222,7 +227,7 @@ class BrowserSettings extends Observable {
 
             switch (b.userAgent){
                 case 0:
-                    s.setUserAgentString(null);
+                    s.setUserAgentString(CYANOGENMOD_USERAGENT);
                     break;
                 case 1:
                     s.setUserAgentString(DESKTOP_USERAGENT);
@@ -246,7 +251,7 @@ class BrowserSettings extends Observable {
                     s.setUserAgentString(ECLAIR_USERAGENT);
                     break;
                 default:
-                    s.setUserAgentString(null);
+                    s.setUserAgentString(CYANOGENMOD_USERAGENT);
                     break;
             }
 
