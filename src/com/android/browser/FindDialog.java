@@ -236,8 +236,7 @@ import android.widget.TextView;
         // Note: updateMatchesString is only called by methods that have already
         // checked mWebView for null.
         String template = mBrowserActivity.getResources().
-                getQuantityString(R.plurals.matches_found, mNumberOfMatches,
-                mWebView.findIndex() + 1, mNumberOfMatches);
+                getQuantityString(R.plurals.matches_found, mNumberOfMatches, mNumberOfMatches);
 
         mMatches.setText(template);
     }
