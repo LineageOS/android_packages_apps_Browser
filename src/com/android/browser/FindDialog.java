@@ -237,7 +237,7 @@ import android.widget.TextView;
         // checked mWebView for null.
         String template = mBrowserActivity.getResources().
                 getQuantityString(R.plurals.matches_found, mNumberOfMatches,
-                mWebView.findIndex() + 1, mNumberOfMatches);
+                mNumberOfMatches, mWebView.findIndex() + 1);
 
         mMatches.setText(template);
     }
