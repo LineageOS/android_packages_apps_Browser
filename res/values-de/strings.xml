@@ -296,6 +296,13 @@
     <string name="website_settings_clear_all_dialog_ok_button" msgid="6401582240627669431">"Alle Daten löschen"</string>
     <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"Abbrechen"</string>
 
+    <string name="progress_dialog_setting_wallpaper">Hintergrund wird eingestellt, bitte wartenr\u2026</string>
+
+    <string name="error_console_header_text_minimized">Zeige JavaScript-Konsole</string>
+    <string name="error_console_header_text_maximized">JavaScript-Konsole</string>
+    <string name="error_console_eval_text_hint">JavaScript evaluieren</string>
+    <string name="error_console_eval_button_text">Evaluieren</string>
+
     <string name="pref_show_zoom_controls">Zeige Zoomtasten</string>
     <string name="pref_full_screen_mode">Vollbild</string>
     <string name="pref_content_invert_color">Invertierte Farben</string>
