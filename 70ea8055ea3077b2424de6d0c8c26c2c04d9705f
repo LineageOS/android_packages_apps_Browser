@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAK3///SQ\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2011-11-04T14:11:30Z",
+      "side": 1,
+      "message": "... JavaScript-Konsole (Bindestrich statt Leerzeichen)",
+      "revId": "70ea8055ea3077b2424de6d0c8c26c2c04d9705f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
