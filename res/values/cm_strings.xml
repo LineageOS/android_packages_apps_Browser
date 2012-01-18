@@ -17,4 +17,11 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
     <string name="accessibility_button_homescreen">Home screen</string>
+
+    <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
+    <string name="contextmenu_openlink_incognito_newwindow">Open in new incognito tab</string>
+    <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
+    <string name="contextmenu_openlink_incognito_newwindow_background">Open in new incognito background tab</string>
 </resources>
