@@ -108,6 +108,8 @@
     <string name="contextmenu_openlink" msgid="7237961252214188935">"打开"</string>
     <string name="contextmenu_openlink_newwindow" msgid="1205313604181761403">"在新标签页中打开"</string>
     <string name="contextmenu_openlink_newwindow_background" msgid="4690381019116746687">"在新的后台标签页中打开"</string>
+    <string name="contextmenu_openlink_incognito_newwindow">在新的匿名标签页中打开</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">在新的匿名的后台标签页中打开</string>
     <string name="contextmenu_savelink" msgid="5508554930832538184">"保存链接"</string>
     <string name="contextmenu_sharelink" msgid="5392275392280130331">"分享链接"</string>
     <string name="contextmenu_copy" msgid="398860586635404030">"复制"</string>
