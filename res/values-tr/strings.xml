@@ -143,6 +143,8 @@
     <string name="pref_content_autofit_summary" msgid="4587831659894879986">"Web sayfalarını ekrana sığacak şekilde biçimlendir"</string>
     <string name="pref_content_landscape_only" msgid="2022546812766219672">"Yalnızca yatay görüntü"</string>
     <string name="pref_content_landscape_only_summary" msgid="1008238895535428855">"Sayfaları yalnızca daha geniş, yatay ekran yönünde görüntüle"</string>
+    <string name="pref_content_invert_color">Zıt renkler</string>
+    <string name="pref_content_invert_color_summary">Sayfaları zıt renkte göster</string>
     <string name="pref_privacy_title" msgid="1052470980370846151">"Gizlilik ayarları"</string>
     <string name="pref_privacy_clear_cache" msgid="3380316479925886998">"Önbelleği temizle"</string>
     <string name="pref_privacy_clear_cache_summary" msgid="2216463577207991454">"Yerel olarak önbelleğe alınmış içeriği ve veritabanlarını temizle"</string>
@@ -160,7 +162,7 @@
     <string name="pref_privacy_clear_passwords_summary" msgid="8856782718942903335">"Kayıtlı tüm şifreleri temizle"</string>
     <string name="pref_privacy_clear_passwords_dlg" msgid="2083869328824248255">"Kayıtlı tüm şifreler silinecek."</string>
     <string name="pref_privacy_enable_geolocation" msgid="1395040170290765686">"Konumu etkinleştir"</string>
-    <string name="pref_privacy_enable_geolocation_summary" msgid="8437020934664306205">"Sitelerin konumunuza erişmek istemesine izin verin"</string>
+    <string name="pref_privacy_enable_geolocation_summary">"Sitelerin konumunuza erişmek istemesine izin verir"</string>
     <string name="pref_privacy_clear_geolocation_access" msgid="6649680770030042980">"Konum erişimini temizle"</string>
     <string name="pref_privacy_clear_geolocation_access_summary" msgid="7750143359497314679">"Tüm web siteleri için konum erişimini temizle"</string>
     <string name="pref_privacy_clear_geolocation_access_dlg" msgid="7327063124488827244">"Tüm web siteleri için konum erişimini temizle"</string>
@@ -182,13 +184,13 @@
     <item msgid="7201512237890458902">"Çok büyük"</item>
   </string-array>
     <string name="pref_text_size_dialogtitle" msgid="3625388833512647865">"Metin boyutu"</string>
-    <string name="pref_default_zoom" msgid="8076142259097187395">"Varsayılan zum"</string>
+    <string name="pref_default_zoom">"Varsayılan uzaklık"</string>
   <string-array name="pref_default_zoom_choices">
     <item msgid="549583171195154919">"Uzak"</item>
     <item msgid="5619034257768161024">"Orta"</item>
     <item msgid="3840999588443167001">"Kapat"</item>
   </string-array>
-    <string name="pref_default_zoom_dialogtitle" msgid="6095974367125109021">"Varsayılan zum"</string>
+    <string name="pref_default_zoom_dialogtitle">"Varsayılan uzaklık"</string>
     <string name="pref_content_load_page" msgid="2219810141690955452">"Sayfaları genel görünümde aç"</string>
     <string name="pref_content_load_page_summary" msgid="8792093504054149369">"Yeni açılan sayfaların genel görünümünü göster"</string>
     <string name="pref_extras_title" msgid="3091250467679722382">"Gelişmiş ayarlar"</string>
@@ -295,5 +297,14 @@
     <string name="website_settings_clear_all_dialog_message" msgid="6150502090601476333">"Web sitesi verilerinin ve konum izinlerinin tümü silinecek."</string>
     <string name="website_settings_clear_all_dialog_ok_button" msgid="6401582240627669431">"Tüm verileri sil"</string>
     <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"İptal"</string>
-    <string name="progress_dialog_setting_wallpaper" msgid="4871900779338536674">"Duvar kağıdı ayarlanıyor..."</string>
+    <string name="progress_dialog_setting_wallpaper">Duvar kağıdı ayarlanıyor\u2026</string>
+    <string name="error_console_header_text_minimized">JavaScript penceresini göster</string>
+    <string name="error_console_header_text_maximized">JavaScript penceresi</string>
+    <string name="error_console_eval_text_hint">JavaScript çalıştır</string>
+    <string name="error_console_eval_button_text">Çalıştır</string>
+    <string name="pref_show_zoom_controls">Sanal büyüteci göster</string>
+    <string name="pref_full_screen_mode">Tam ekran</string>
+    <string name="incog_tab">Gizli Modu Etkinleştir</string>
+    <string name="dis_incog_tab">Gizli Modu Kapat</string>
+    <string name="pref_select_user_agent">User-Agent seç</string>
 </resources>
