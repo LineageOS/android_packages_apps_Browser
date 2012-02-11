@@ -22,6 +22,13 @@
         android:entryValues="@array/pref_homepage_values"
         android:title="@string/pref_content_homepage" />
 
+    <ListPreference
+        android:key="user_agent"
+        android:title="@string/pref_development_uastring"
+        android:entries="@array/pref_development_ua_choices"
+        android:entryValues="@array/pref_development_ua_values"
+        android:defaultValue="0"/>
+
     <PreferenceCategory android:title="@string/pref_general_autofill_title">
         <CheckBoxPreference android:key="autofill_enabled"
             android:title="@string/pref_autofill_enabled"
