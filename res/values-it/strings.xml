@@ -108,6 +108,8 @@
     <string name="contextmenu_openlink" msgid="7237961252214188935">"Apri"</string>
     <string name="contextmenu_openlink_newwindow" msgid="1205313604181761403">"Apri in nuova scheda"</string>
     <string name="contextmenu_openlink_newwindow_background" msgid="4690381019116746687">"Apri in una nuova scheda in secondo piano"</string>
+    <string name="contextmenu_openlink_incognito_newwindow">"Apri in una nuova scheda in incognito"</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">"Apri in una nuova scheda in secondo piano in incognito"</string>
     <string name="contextmenu_savelink" msgid="5508554930832538184">"Salva link"</string>
     <string name="contextmenu_sharelink" msgid="5392275392280130331">"Condividi link"</string>
     <string name="contextmenu_copy" msgid="398860586635404030">"Copia"</string>
@@ -140,6 +142,8 @@
     <string name="pref_content_homepage" msgid="3324574611613105696">"Imposta pagina iniziale"</string>
     <string name="pref_content_search_engine" msgid="1620101310821644144">"Imposta motore di ricerca"</string>
     <string name="pref_content_search_engine_summary" msgid="304003941861818133">"Scegli un motore di ricerca"</string>
+    <string name="pref_content_uastring">"User Agent"</string>
+    <string name="pref_content_uastring_summary">"Scegli lo User Agent per la pagina richiesta"</string>
     <string name="pref_set_homepage_to" msgid="7838684355145561242">"Imposta su"</string>
   <string-array name="pref_homepage_choices">
     <item msgid="844041670142910837">"Pagina corrente"</item>
