@@ -212,8 +212,8 @@ public class PhoneUi extends BaseUi {
             newtab.setVisible(false);
         }
         MenuItem incognito = menu.findItem(R.id.incognito_menu_id);
-        if (incognito != null) {
-            incognito.setVisible(showingNavScreen() || mUseQuickControls);
+        if (incognito != null && !mUseQuickControls) {
+            incognito.setVisible(false);
         }
         if (showingNavScreen()) {
             menu.setGroupVisible(R.id.LIVE_MENU, false);
