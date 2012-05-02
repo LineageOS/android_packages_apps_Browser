@@ -385,4 +385,12 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Inkognitóoldal"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Mentett oldal"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Lapkezelés"</string>
+
+<!-- 20120502 -->
+
+    <string name="contextmenu_openlink_incognito_newwindow">Megnyitás új lapfülön, inkognitó módban</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Megnyitás új lapfülön, inkognitó módban (háttérben)</string>
+    <string name="pref_content_uastring">Böngészőazonosító</string>
+    <string name="pref_content_uastring_summary">Válasszon böngészőazonosítót az oldal lekéréséhez</string>
+
 </resources>
