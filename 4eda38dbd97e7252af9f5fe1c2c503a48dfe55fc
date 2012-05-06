@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASn//8Xw\u003d",
+        "filename": "res/layout-land/nav_screen.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1078
+      },
+      "writtenOn": "2012-05-06T19:29:06Z",
+      "side": 1,
+      "message": "Is this not in the more menu?",
+      "revId": "4eda38dbd97e7252af9f5fe1c2c503a48dfe55fc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAASn//8Xs\u003d",
+        "filename": "res/layout/nav_screen.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1078
+      },
+      "writtenOn": "2012-05-06T19:29:06Z",
+      "side": 1,
+      "message": "Is this not in the more menu?",
+      "revId": "4eda38dbd97e7252af9f5fe1c2c503a48dfe55fc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAASn//8Xo\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 979,
+      "author": {
+        "id": 1078
+      },
+      "writtenOn": "2012-05-06T19:29:06Z",
+      "side": 1,
+      "message": "Home page not home screen?",
+      "revId": "4eda38dbd97e7252af9f5fe1c2c503a48dfe55fc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
