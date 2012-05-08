@@ -385,4 +385,8 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Página anônima"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Página salva"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Gerenciamento de guias"</string>
+    <string name="contextmenu_openlink_incognito_newwindow">Abrir em nova aba anônima</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Abrir em nova aba anônima em segundo plano</string>
+    <string name="pref_content_uastring">Agente de Usuário</string>
+    <string name="pref_content_uastring_summary">Escolha seu Agente de Usuário para requisição da página</string>
 </resources>
