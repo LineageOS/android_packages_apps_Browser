@@ -385,4 +385,8 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"דף גלישה בסתר"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"דף שמור"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"ניהול כרטיסיות"</string>
+    <string name="pref_content_uastring">"סוכן משתמש"</string>
+    <string name="pref_content_uastring_summary">"בחר את סוכן המשתמש לבקשת העמוד"</string>
+    <string name="contextmenu_openlink_incognito_newwindow">"פתח בחלון חשאי חדש"</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">"פתח בחלון חשאי חדש ברקע"</string>
 </resources>
