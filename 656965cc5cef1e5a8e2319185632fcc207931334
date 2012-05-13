@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAS3//+bw\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 2967
+      },
+      "writtenOn": "2012-05-13T21:58:20Z",
+      "side": 1,
+      "message": "Would it be better to use \"Inkognitotab\" or rename \"Hintergrundtab\" to \"Hintergrund Tab\"?",
+      "revId": "656965cc5cef1e5a8e2319185632fcc207931334",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
