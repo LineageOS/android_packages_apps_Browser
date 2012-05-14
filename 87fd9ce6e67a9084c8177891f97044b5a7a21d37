@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAS3//+HE\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 2967
+      },
+      "writtenOn": "2012-05-14T22:53:21Z",
+      "side": 1,
+      "message": "Auch in \"Hindergrund-Tab\" umbenennen?",
+      "revId": "87fd9ce6e67a9084c8177891f97044b5a7a21d37",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
