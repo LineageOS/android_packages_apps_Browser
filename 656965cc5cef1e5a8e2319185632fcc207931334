@@ -34,6 +34,24 @@
       "revId": "656965cc5cef1e5a8e2319185632fcc207931334",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAS3//+S0\u003d",
+        "filename": "res/values-de/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2012-05-14T11:36:26Z",
+      "side": 1,
+      "message": "Dann aber auch \u0027Hintergrund-Tab\u0027 an Stelle von \u0027Hintergrundtab\u0027. Consistency rules ;)",
+      "parentUuid": "AAAAS3//+ZA\u003d",
+      "revId": "656965cc5cef1e5a8e2319185632fcc207931334",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
