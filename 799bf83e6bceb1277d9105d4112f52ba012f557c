@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAS3//+LM\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 270,
+      "author": {
+        "id": 3178
+      },
+      "writtenOn": "2012-05-14T19:40:43Z",
+      "side": 1,
+      "message": "inkább így, az els? és szerintem nem kell: , az alkalmazás- és URL",
+      "revId": "799bf83e6bceb1277d9105d4112f52ba012f557c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
