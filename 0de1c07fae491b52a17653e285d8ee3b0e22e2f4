@@ -1,0 +1,9 @@
+Change-Id: I0de1c07fae491b52a17653e285d8ee3b0e22e2f4
+Code-Review+2: Steve Kondik <shade@chemlab.org>
+Verified+1: Steve Kondik <shade@chemlab.org>
+Code-Review+1: Dmitriy Chermenev <chdiman86@gmail.com>
+Submitted-by: Steve Kondik <shade@chemlab.org>
+Submitted-at: Fri, 18 May 2012 09:08:04 +0400
+Reviewed-on: http://review.cyanogenmod.com/15978
+Project: CyanogenMod/android_packages_apps_Browser
+Branch: refs/heads/ics
