@@ -382,6 +382,7 @@
     <string name="accessibility_button_clear" msgid="6943152307986161598">"Beírt szöveg törlése"</string>
     <string name="accessibility_button_uaswitch" msgid="6286804719724282339">"Felhasználói ügynök váltása"</string>
     <string name="accessibility_button_go" msgid="1182818872083055958">"Mehet"</string>
+    <string name="accessibility_button_homepage">Kezdőlap</string>
     <string name="accessibility_button_navscreen" msgid="9142904748728713075">"Oldalkezelő"</string>
     <string name="accessibility_button_more" msgid="3054251446394224216">"További beállítások"</string>
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Inkognitóoldal"</string>
