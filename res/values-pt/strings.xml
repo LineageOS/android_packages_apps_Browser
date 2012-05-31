@@ -392,4 +392,5 @@
     <string name="pref_lab_quick_controls_ext">Controles rápidos extendidos</string>
     <string name="pref_lab_quick_controls_ext_summary">
         Usar mais controles rápidos em um telefone</string>
+    <string name="accessibility_button_homepage">Página Inicial</string>
 </resources>
