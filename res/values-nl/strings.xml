@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2012 The CyanogenMod Project
+<!--  Copyright (C) 2007 The Android Open Source Project
+      Copyright (C) 2012 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -267,6 +268,8 @@
     <string name="pref_lab_title" msgid="5571091610359629423">"Labs"</string>
     <string name="pref_lab_quick_controls" msgid="3267606522082281367">"Snelle bedieningselementen"</string>
     <string name="pref_lab_quick_controls_summary" msgid="3149664132600968775">"Duim schuiven vanaf zijkant: besturingselementen openen en balken verbergen."</string>
+    <string name="pref_lab_quick_controls_ext">"Uitgebreide snelle bedieningselementen"</string>
+    <string name="pref_lab_quick_controls_ext_summary">"Gebruik meer snelle bedieningselementen op een telefoon"</string>
     <string name="pref_use_instant_search" msgid="1119176077760723740">"Google Instant"</string>
     <string name="pref_use_instant_search_summary" msgid="839320474961917522">"Gebruik Google Instant bij Google Zoeken voor resultaten tijdens het typen (kan resulteren in meer gegevensverbruik)."</string>
     <string name="pref_lab_fullscreen" msgid="8173609016657987973">"Volledig scherm"</string>
@@ -311,6 +314,7 @@
     <string name="download_sdcard_busy_dlg_msg" product="nosdcard" msgid="8412543086906716875">"De USB-opslag is in gebruik. Als u downloads wilt toestaan, raakt u \'USB-opslag uitschakelen\' in de melding aan."</string>
     <string name="download_sdcard_busy_dlg_msg" product="default" msgid="2629425950473358591">"De SD-kaart is in gebruik. Als u downloads wilt toestaan, raakt u \'USB-opslag uitschakelen\' in de melding aan."</string>
     <string name="cannot_download" msgid="8150552478556798780">"Kan alleen URL\'s met \'http\' of \'https\' downloaden."</string>
+    <string name="download_pending">"Download starten\u2026"</string>
     <string name="search_the_web" msgid="6046130189241962337">"Zoeken op internet"</string>
     <string name="webstorage_outofspace_notification_title" msgid="1160474608059771788">"Browseropslag is vol"</string>
     <string name="webstorage_outofspace_notification_text" msgid="47273584426988640">"Tik om ruimte vrij te maken."</string>
@@ -378,6 +382,7 @@
     <string name="accessibility_button_clear" msgid="6943152307986161598">"Invoer wissen"</string>
     <string name="accessibility_button_uaswitch" msgid="6286804719724282339">"User-agent wijzigen"</string>
     <string name="accessibility_button_go" msgid="1182818872083055958">"Start"</string>
+    <string name="accessibility_button_homepage">"Startpagina"</string>
     <string name="accessibility_button_navscreen" msgid="9142904748728713075">"Paginabeheer"</string>
     <string name="accessibility_button_more" msgid="3054251446394224216">"Meer opties"</string>
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Incognitopagina"</string>
@@ -386,8 +391,8 @@
 
     <!-- CYANOGENMOD EDITS -->
 
-    <string name="contextmenu_openlink_incognito_newwindow">Openen in nieuw incognitotabblad</string>
-    <string name="contextmenu_openlink_incognito_newwindow_background">Openen in nieuw incognitotabblad op de achtergrond</string>
-    <string name="pref_content_uastring">Useragent</string>
-    <string name="pref_content_uastring_summary">Kies de door te sturen useragent</string>
+    <string name="contextmenu_openlink_incognito_newwindow">"Openen in nieuw incognitotabblad"</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">"Openen in nieuw incognitotabblad op de achtergrond"</string>
+    <string name="pref_content_uastring">"Useragent"</string>
+    <string name="pref_content_uastring_summary">De gebruikte useragent kiezen</string>
 </resources>
