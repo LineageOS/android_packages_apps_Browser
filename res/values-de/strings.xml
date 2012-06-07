@@ -269,6 +269,8 @@
     <string name="pref_lab_title" msgid="5571091610359629423">"Labs"</string>
     <string name="pref_lab_quick_controls" msgid="3267606522082281367">"Schnellsteuerung"</string>
     <string name="pref_lab_quick_controls_summary" msgid="3149664132600968775">"Daumen vom linken oder rechten Rand aus ziehen, um Schnellsteuerung zu öffnen und App- und URL-Leisten auszublenden"</string>
+    <string name="pref_lab_quick_controls_ext">"Erweiterte Schnellsteuerung"</string>
+    <string name="pref_lab_quick_controls_ext_summary">"Benutzen Sie eine erweiterte Schnellsteuerung auf einem Telefon"</string>
     <string name="pref_use_instant_search" msgid="1119176077760723740">"Google Instant"</string>
     <string name="pref_use_instant_search_summary" msgid="839320474961917522">"Nutzen Sie Google Instant bei der Google-Suche. Ergebnisse werden bei Eingabe angezeigt - ggf. mehr Speicher erforderlich."</string>
     <string name="pref_lab_fullscreen" msgid="8173609016657987973">"Vollbild"</string>
