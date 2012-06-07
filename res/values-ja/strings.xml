@@ -390,5 +390,7 @@
     <string name="contextmenu_openlink_incognito_newwindow_background">バックグラウンドの新しいシークレットタブで開く</string>
     <string name="pref_content_uastring">ユーザーエージェント</string>
     <string name="pref_content_uastring_summary">ページリクエストで使用するユーザーエージェントを選択</string>
-
+    <string name="pref_lab_quick_controls_ext">拡張クイックコントロール</string>
+    <string name="pref_lab_quick_controls_ext_summary">さらに拡張されたコントロールを使う</string>
+    <string name="accessibility_button_homepage">ホームページ</string>
 </resources>
