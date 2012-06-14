@@ -118,7 +118,11 @@ public class PieControlPhone extends PieControlBase implements OnClickListener,
         if (mUseExtControls) {
             setClickListener(this, mBack, mRefresh, mForward, mClose);
         }
-        mPopup = new PopupMenu(mActivity, mUi.getTitleBar());
+        View anchor = new View(mActivity.getApplicationContext());
+        int statusBarHeight = mActivity.getApplicationContext().getResources().
+                getDimensionPixelSize(com.android.internal.R.dimen.status_bar_height);
+        anchor.layout(0, 0, 1, statusBarHeight);
+        mPopup = new PopupMenu(mActivity, anchor);
         Menu menu = mPopup.getMenu();
         mPopup.getMenuInflater().inflate(R.menu.browser, menu);
         mPopup.setOnMenuItemClickListener(this);

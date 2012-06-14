@@ -196,8 +196,8 @@ public class PhoneUi extends BaseUi {
     @Override
     public void updateMenuState(Tab tab, Menu menu) {
         MenuItem bm = menu.findItem(R.id.bookmarks_menu_id);
-        if (bm != null) {
-            bm.setVisible(!showingNavScreen());
+        if (bm != null && (showingNavScreen() || mUseQuickControls)) {
+            bm.setVisible(false);
         }
         MenuItem abm = menu.findItem(R.id.add_bookmark_menu_id);
         if (abm != null) {
@@ -208,12 +208,16 @@ public class PhoneUi extends BaseUi {
             info.setVisible(false);
         }
         MenuItem newtab = menu.findItem(R.id.new_tab_menu_id);
-        if (newtab != null && !mUseQuickControls) {
+        if (newtab != null) {
             newtab.setVisible(false);
         }
         MenuItem incognito = menu.findItem(R.id.incognito_menu_id);
-        if (incognito != null && !mUseQuickControls) {
+        if (incognito != null && (showingNavScreen() || !mUseQuickControls)) {
             incognito.setVisible(false);
+        }
+        MenuItem forward = menu.findItem(R.id.forward_menu_id);
+        if (forward != null && mUseQuickControls && mUseQuickControlsExt) {
+            forward.setVisible(false);
         }
         if (showingNavScreen()) {
             menu.setGroupVisible(R.id.LIVE_MENU, false);
@@ -321,7 +325,7 @@ public class PhoneUi extends BaseUi {
             if (web != null) {
                 web.setEmbeddedTitleBar(null);
             }
-        } 
+        }
         updateUrlBarAutoShowManagerTarget();
     }
 
