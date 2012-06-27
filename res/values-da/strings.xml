@@ -140,6 +140,8 @@
     <string name="pref_content_homepage" msgid="3324574611613105696">"Indstil startside"</string>
     <string name="pref_content_search_engine" msgid="1620101310821644144">"Angiv søgemaskine"</string>
     <string name="pref_content_search_engine_summary" msgid="304003941861818133">"Vælg en søgemaskine"</string>
+    <string name="pref_content_uastring">User Agent</string>
+    <string name="pref_content_uastring_summary">Vælg din User Agent til sideforespørgslen</string>
     <string name="pref_set_homepage_to" msgid="7838684355145561242">"Indstil til"</string>
   <string-array name="pref_homepage_choices">
     <item msgid="844041670142910837">"Aktuel side"</item>
@@ -268,6 +270,10 @@
     <string name="pref_lab_title" msgid="5571091610359629423">"Labs"</string>
     <string name="pref_lab_quick_controls" msgid="3267606522082281367">"Hurtig betjening"</string>
     <string name="pref_lab_quick_controls_summary" msgid="3149664132600968775">"Lad tommelfingeren glide fra venstre eller højre kant for at åbne hurtig betjening og skjule app- og webadresse-bjælker"</string>
+    <!-- Title for lab quick controls size override feature [CHAR LIMIT=40] -->
+    <string name="pref_lab_quick_controls_ext">Udvidet hurtig betjening</string>
+    <!-- Summary for lab quick controls feature [CHAR LIMIT=120] -->
+    <string name="pref_lab_quick_controls_ext_summary">Brug mere hurtig betjening på telefonen</string>
     <string name="pref_use_instant_search" msgid="1119176077760723740">"Google Direkte"</string>
     <string name="pref_use_instant_search_summary" msgid="839320474961917522">"Brug Google Direkte, når du søger på Google for at få vist resultater ved indtastning (kan forøge dataforbruget)."</string>
     <string name="pref_lab_fullscreen" msgid="8173609016657987973">"Fuld skærm"</string>
