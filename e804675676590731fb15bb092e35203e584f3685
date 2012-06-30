@@ -72,6 +72,23 @@
     },
     {
       "key": {
+        "uuid": "AAAAUH//7Z4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 2049
+      },
+      "writtenOn": "2012-06-30T00:36:40Z",
+      "side": 1,
+      "message": "Deze weet echt niet. Mss de eval_ gewoon weglaten? Zunnen toch amper opduiken.",
+      "revId": "e804675676590731fb15bb092e35203e584f3685",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAUH//7hg\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -101,6 +118,24 @@
       "side": 1,
       "message": "- Visuele zoominstellingen tonen?",
       "parentUuid": "AAAAUH//7hg\u003d",
+      "revId": "e804675676590731fb15bb092e35203e584f3685",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUH//7Z8\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 2049
+      },
+      "writtenOn": "2012-06-30T00:36:40Z",
+      "side": 1,
+      "message": "Visuele zoomknoppen tonen",
+      "parentUuid": "AAAAUH//7bg\u003d",
       "revId": "e804675676590731fb15bb092e35203e584f3685",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
