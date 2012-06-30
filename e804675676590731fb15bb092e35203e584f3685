@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAUH//7bo\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-06-30T00:27:49Z",
+      "side": 1,
+      "message": "- Pagina\\\u0027s tonen in omgekeerde kleur",
+      "parentUuid": "AAAAUH//7ho\u003d",
+      "revId": "e804675676590731fb15bb092e35203e584f3685",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAUH//7hk\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAUH//7bk\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 303,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-06-30T00:27:49Z",
+      "side": 1,
+      "message": "- JavaScript-console tonen",
+      "parentUuid": "AAAAUH//7hk\u003d",
+      "revId": "e804675676590731fb15bb092e35203e584f3685",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAUH//7hg\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2012-06-29T22:40:26Z",
       "side": 1,
       "message": "nog Engels",
+      "revId": "e804675676590731fb15bb092e35203e584f3685",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAUH//7bg\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-06-30T00:27:49Z",
+      "side": 1,
+      "message": "- Visuele zoominstellingen tonen?",
+      "parentUuid": "AAAAUH//7hg\u003d",
       "revId": "e804675676590731fb15bb092e35203e584f3685",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
