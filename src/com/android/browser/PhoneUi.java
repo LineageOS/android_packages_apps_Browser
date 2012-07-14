@@ -51,7 +51,7 @@ public class PhoneUi extends BaseUi {
     private static final String LOGTAG = "PhoneUi";
     private static final int MSG_INIT_NAVSCREEN = 100;
 
-    private PieControlPhone mPieControl;
+    private PieControl mPieControl;
     private NavScreen mNavScreen;
     private AnimScreen mAnimScreen;
     private NavigationBarPhone mNavigationBar;
@@ -68,7 +68,6 @@ public class PhoneUi extends BaseUi {
     public PhoneUi(Activity browser, UiController controller) {
         super(browser, controller);
         setUseQuickControls(BrowserSettings.getInstance().useQuickControls());
-        setUseQuickControlsExt(BrowserSettings.getInstance().useQuickControlsExt());
         mNavigationBar = (NavigationBarPhone) mTitleBar.getNavigationBar();
         TypedValue heightValue = new TypedValue();
         browser.getTheme().resolveAttribute(
@@ -196,8 +195,8 @@ public class PhoneUi extends BaseUi {
     @Override
     public void updateMenuState(Tab tab, Menu menu) {
         MenuItem bm = menu.findItem(R.id.bookmarks_menu_id);
-        if (bm != null && (showingNavScreen() || mUseQuickControls)) {
-            bm.setVisible(false);
+        if (bm != null) {
+            bm.setVisible(!showingNavScreen());
         }
         MenuItem abm = menu.findItem(R.id.add_bookmark_menu_id);
         if (abm != null) {
@@ -208,16 +207,12 @@ public class PhoneUi extends BaseUi {
             info.setVisible(false);
         }
         MenuItem newtab = menu.findItem(R.id.new_tab_menu_id);
-        if (newtab != null) {
+        if (newtab != null && !mUseQuickControls) {
             newtab.setVisible(false);
         }
         MenuItem incognito = menu.findItem(R.id.incognito_menu_id);
-        if (incognito != null && (showingNavScreen() || !mUseQuickControls)) {
+        if (incognito != null && !mUseQuickControls) {
             incognito.setVisible(false);
-        }
-        MenuItem forward = menu.findItem(R.id.forward_menu_id);
-        if (forward != null && mUseQuickControls && mUseQuickControlsExt) {
-            forward.setVisible(false);
         }
         if (showingNavScreen()) {
             menu.setGroupVisible(R.id.LIVE_MENU, false);
@@ -288,7 +283,7 @@ public class PhoneUi extends BaseUi {
         mUseQuickControls = useQuickControls;
         mTitleBar.setUseQuickControls(mUseQuickControls);
         if (useQuickControls) {
-            mPieControl = new PieControlPhone(mActivity, mUiController, this, mUseQuickControlsExt);
+            mPieControl = new PieControl(mActivity, mUiController, this);
             mPieControl.attachToContainer(mContentView);
             WebView web = getWebView();
             if (web != null) {
@@ -307,24 +302,6 @@ public class PhoneUi extends BaseUi {
                 web.setEmbeddedTitleBar(mTitleBar);
             }
             setTitleGravity(Gravity.NO_GRAVITY);
-        }
-        updateUrlBarAutoShowManagerTarget();
-    }
-
-    @Override
-    public void setUseQuickControlsExt(boolean useQuickControlsExt) {
-        mUseQuickControlsExt = useQuickControlsExt;
-        if (mUseQuickControls) {
-            if (mPieControl != null) {
-                mPieControl.removeFromContainer(mContentView);
-            }
-            mPieControl = new PieControlPhone(mActivity, mUiController, this, mUseQuickControlsExt);
-            mPieControl.attachToContainer(mContentView);
-
-            WebView web = getWebView();
-            if (web != null) {
-                web.setEmbeddedTitleBar(null);
-            }
         }
         updateUrlBarAutoShowManagerTarget();
     }

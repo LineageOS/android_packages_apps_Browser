@@ -148,8 +148,6 @@ public interface UI {
 
     void setUseQuickControls(boolean enabled);
 
-    void setUseQuickControlsExt(boolean enabled);
-
     public boolean shouldCaptureThumbnails();
 
 }

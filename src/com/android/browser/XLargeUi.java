@@ -53,7 +53,7 @@ public class XLargeUi extends BaseUi {
 
     private NavigationBarTablet mNavBar;
 
-    private PieControlXLarge mPieControl;
+    private PieControl mPieControl;
     private Handler mHandler;
 
     /**
@@ -89,7 +89,7 @@ public class XLargeUi extends BaseUi {
         mTitleBar.setUseQuickControls(mUseQuickControls);
         if (useQuickControls) {
             checkTabCount();
-            mPieControl = new PieControlXLarge(mActivity, mUiController, this);
+            mPieControl = new PieControl(mActivity, mUiController, this);
             mPieControl.attachToContainer(mContentView);
             WebView web = getWebView();
             if (web != null) {
@@ -117,11 +117,6 @@ public class XLargeUi extends BaseUi {
             t.updateShouldCaptureThumbnails();
         }
         updateUrlBarAutoShowManagerTarget();
-    }
-
-    @Override
-    public void setUseQuickControlsExt(boolean useQuickControlsExt) {
-
     }
 
     private void checkTabCount() {
@@ -246,10 +241,6 @@ public class XLargeUi extends BaseUi {
             mTitleBar.setShowProgressOnly(false);
         }
         super.editUrl(clearInput);
-    }
-
-    void stopEditingUrl() {
-        mTitleBar.getNavigationBar().stopEditingUrl();
     }
 
     @Override

@@ -109,7 +109,6 @@ public abstract class BaseUi implements UI {
 
     private boolean mActivityPaused;
     protected boolean mUseQuickControls;
-    protected boolean mUseQuickControlsExt;
     protected TitleBar mTitleBar;
     private NavigationBarBase mNavigationBar;
 
@@ -467,6 +466,10 @@ public abstract class BaseUi implements UI {
 
     public boolean isEditingUrl() {
         return mTitleBar.isEditingUrl();
+    }
+
+    public void stopEditingUrl() {
+        mTitleBar.getNavigationBar().stopEditingUrl();
     }
 
     public TitleBar getTitleBar() {
