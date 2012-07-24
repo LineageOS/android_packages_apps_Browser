@@ -43,6 +43,12 @@ google_data = ["google", "Google", "google.com",
   "UTF-8",
   "http://www.google.com/complete/search?hl={language}&amp;client=android&amp;q={searchTerms}"]
 
+duckduckgo_data = ["duckduckgo", "Duck Duck Go", "duckduckgo.com",
+  "http://duckduckgo.com/favicon.ico",
+  "http://duckduckgo.com/?q={searchTerms}",
+  "UTF-8",
+  ""]
+
 class SearchEngineManager(object):
   """Manages list of search engines and creates locale specific lists.
 
@@ -100,6 +106,8 @@ class SearchEngineManager(object):
 
     if name == "google":
       return google_data
+    elif name == "duckduckgo":
+      return duckduckgo_data
 
     # Find the first occurance of this search engine name in the form
     # " <name> =" in the chrome data file.
@@ -168,6 +176,9 @@ class SearchEngineManager(object):
 
     # Split the array into it's elements
     engines = engines_str.split(',')
+
+    # Manually add duckduckgo to searchengines for every language
+    engines.append('duckduckgo')
 
     return engines
 

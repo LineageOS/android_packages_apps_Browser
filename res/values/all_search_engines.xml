@@ -612,6 +612,14 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
     <item>ISO-8859-7</item>
     <item></item>
   </string-array>
+  <string-array name="duckduckgo" translatable="false">
+    <item>Duck Duck Go</item>
+    <item>duckduckgo.com</item>
+    <item>http://duckduckgo.com/favicon.ico</item>
+    <item>http://duckduckgo.com/?q={searchTerms}</item>
+    <item>UTF-8</item>
+    <item></item>
+  </string-array>
   <string-array name="bing_nb_NO" translatable="false">
     <item>Bing</item>
     <item>bing.com</item>
