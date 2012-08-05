@@ -137,7 +137,7 @@
     <item msgid="6745108155096660725">"Sempre ativado"</item>
     <item msgid="2484126708670016519">"Sob demanda"</item>
     <item msgid="8547442717307793863">"Desativado"</item>
-  </string-array>
+</string-array>
     <string name="pref_content_open_in_background_summary" msgid="955411158407739504">"Abrir novas guias atrás da guia atual"</string>
     <string name="pref_content_homepage" msgid="3324574611613105696">"Definir página inicial"</string>
     <string name="pref_content_search_engine" msgid="1620101310821644144">"Definir mecanismo de pesquisa"</string>
@@ -149,7 +149,7 @@
     <item msgid="5747608191946904074">"Página padrão"</item>
     <item msgid="6092441301001006473">"Sites mais visitados"</item>
     <item msgid="6569304572171444894">"Outra"</item>
-  </string-array>
+</string-array>
     <string name="pref_content_autofit" msgid="8260474534053660809">"Ajustar automaticamente"</string>
     <string name="pref_content_autofit_summary" msgid="324810555822572112">"Formatar páginas da web para se ajustarem à tela"</string>
     <string name="pref_general_title" msgid="1946872771219249323">"Geral"</string>
@@ -225,7 +225,7 @@
     <item msgid="4338347520133294584">"Normal"</item>
     <item msgid="5043128215356351184">"Grande"</item>
     <item msgid="7201512237890458902">"Enorme"</item>
-  </string-array>
+</string-array>
     <string name="pref_min_font_size" msgid="8811125835817449131">"Tamanho mínimo da fonte"</string>
     <string name="pref_min_font_size_value" msgid="2924708480509060209">"<xliff:g id="FONT_SIZE">%d</xliff:g>pt"</string>
     <string name="pref_text_zoom" msgid="5171056101805125497">"Ajuste da escala do texto"</string>
@@ -241,7 +241,7 @@
     <item msgid="549583171195154919">"Longe"</item>
     <item msgid="5619034257768161024">"Médio"</item>
     <item msgid="3840999588443167001">"Perto"</item>
-  </string-array>
+</string-array>
     <string name="pref_default_zoom_dialogtitle" msgid="6095974367125109021">"Zoom padrão"</string>
     <string name="pref_content_load_page" msgid="2219810141690955452">"Abrir em visão geral"</string>
     <string name="pref_content_load_page_summary" msgid="9168803276420332955">"Exibir visão geral de páginas recentemente abertas"</string>
@@ -263,7 +263,7 @@
     <item msgid="5589150448475151241">"Japonês (SHIFT_JIS)"</item>
     <item msgid="7356792686950371843">"Japonês (EUC-JP)"</item>
     <item msgid="2193955365569270096">"Coreano (EUC-KR)"</item>
-  </string-array>
+</string-array>
     <string name="pref_default_text_encoding_dialogtitle" msgid="5508255018084978547">"Codificação de texto"</string>
     <string name="pref_accessibility_title" msgid="5127836981587423215">"Acessibilidade"</string>
     <string name="pref_font_size_category" msgid="6683754355084218254">"Tamanho do texto"</string>
@@ -280,7 +280,7 @@
     <item msgid="5180466923190095508">"Nunca"</item>
     <item msgid="1791664748778640002">"Apenas com Wi-Fi"</item>
     <item msgid="3944061253437827617">"Sempre"</item>
-  </string-array>
+</string-array>
     <string name="pref_data_preload_summary" msgid="3809168910751382727">"Permitir ao naveg. pré-carr. result. de busca de alta confiança em segundo plano"</string>
     <string name="pref_data_preload_dialogtitle" msgid="8421297746110796536">"Pré-carregando resultados de pesquisa"</string>
     <string name="pref_link_prefetch_title" msgid="4123685219009241072">"Pré-carregamento de página da web"</string>
@@ -288,7 +288,7 @@
     <item msgid="4889781230398008031">"Nunca"</item>
     <item msgid="1908465963242077428">"Apenas com Wi-Fi"</item>
     <item msgid="7647277566998527142">"Sempre"</item>
-  </string-array>
+</string-array>
     <string name="pref_link_prefetch_summary" msgid="6558181497993206817">"Permitir que o navegador pré-carregue páginas relacionadas em segundo plano"</string>
     <string name="pref_link_prefetch_dialogtitle" msgid="3804646141622839765">"Pré-carregamento de página da web"</string>
     <string name="browserFrameNetworkErrorLabel" msgid="8102515020625680714">"Problema na conexão"</string>
@@ -396,4 +396,8 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Página anônima"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Página salva"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Gerenciamento de guias"</string>
+    <string name="contextmenu_openlink_incognito_newwindow">Abrir em nova aba anônima</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Abrir em nova aba anônima em segundo plano</string>
+    <string name="close_other_tabs">Fechar outras guias</string>
+    <string name="accessibility_button_homescreen">Tela Inicial</string>
 </resources>
