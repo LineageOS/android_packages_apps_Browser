@@ -56,7 +56,7 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
     <item>Rambler</item>
     <item>rambler.ru</item>
     <item>http://www.rambler.ru/favicon.ico</item>
-    <item>http://www.rambler.ru/srch?words={searchTerms}</item>
+    <item>http://www.rambler.ru/search?words={searchTerms}</item>
     <item>windows-1251</item>
     <item></item>
   </string-array>
@@ -103,8 +103,8 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="nate" translatable="false">
     <item>&#xb124;&#xc774;&#xd2b8;&#xb2f7;&#xcef4;</item>
     <item>nate.com</item>
-    <item>http://nate.search.empas.com/favicon.ico</item>
-    <item>http://nate.search.empas.com/search/all.html?q={searchTerms}</item>
+    <item>http://img.nate.com/search/v2/ico/favicon.ico</item>
+    <item>http://search.nate.com/search/all.html?q={searchTerms}</item>
     <item>EUC-KR</item>
     <item></item>
   </string-array>
@@ -112,7 +112,7 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
     <item>UOL Busca</item>
     <item>busca.uol.com.br</item>
     <item>http://busca.uol.com.br/favicon.ico</item>
-    <item>http://busca.uol.com.br/www/index.html?q={searchTerms}</item>
+    <item>http://busca.uol.com.br/web/?q={searchTerms}</item>
     <item>ISO-8859-1</item>
     <item></item>
   </string-array>
