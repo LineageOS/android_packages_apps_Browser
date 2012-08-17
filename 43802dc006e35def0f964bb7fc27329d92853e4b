@@ -16,6 +16,24 @@
       "revId": "43802dc006e35def0f964bb7fc27329d92853e4b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAWH///Pg\u003d",
+        "filename": "res/values-it/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 3184
+      },
+      "writtenOn": "2012-08-17T00:25:38Z",
+      "side": 1,
+      "message": "I think it\u0027s the same \"\\u0020\" \u003d \" \"",
+      "parentUuid": "AAAAWH///Qg\u003d",
+      "revId": "43802dc006e35def0f964bb7fc27329d92853e4b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
