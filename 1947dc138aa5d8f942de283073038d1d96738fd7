@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAWX///zc\u003d",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 1690
+      },
+      "writtenOn": "2012-08-18T15:38:42Z",
+      "side": 1,
+      "message": "This should be \"Choose a user agent\"",
+      "revId": "1947dc138aa5d8f942de283073038d1d96738fd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAWX///zQ\u003d",
+        "filename": "res/xml/advanced_preferences.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1690
+      },
+      "writtenOn": "2012-08-18T15:38:42Z",
+      "side": 1,
+      "message": "This isn\u0027t aligned with the rest of the code",
+      "revId": "1947dc138aa5d8f942de283073038d1d96738fd7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
