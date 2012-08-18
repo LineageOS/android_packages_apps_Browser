@@ -94,6 +94,7 @@
     <string name="open_all_in_new_window" msgid="455786763426575293">"Összes megnyitása új lapon"</string>
     <string name="goto_dot" msgid="3895839050522602723">"Ugrás"</string>
     <string name="select_dot" msgid="6299170761900561967">"Szöveg kijelölése"</string>
+    <string name="close_other_tabs">Többi lap bezárása</string>
     <string name="bookmarks" msgid="1961279134885867815">"Könyvjelzők"</string>
     <string name="shortcut_bookmark" msgid="3974876480401135895">"Könyvjelző"</string>
     <string name="shortcut_bookmark_title" msgid="7570786275916681296">"Válasszon egy könyvjelzőt"</string>
@@ -109,6 +110,8 @@
     <string name="contextmenu_openlink" msgid="7237961252214188935">"Megnyitás"</string>
     <string name="contextmenu_openlink_newwindow" msgid="1205313604181761403">"Megnyitás új lapon"</string>
     <string name="contextmenu_openlink_newwindow_background" msgid="4690381019116746687">"Megnyitás új lapon a háttérben"</string>
+    <string name="contextmenu_openlink_incognito_newwindow">Megnyitás új lapfülön, inkognitó módban</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Megnyitás új lapfülön, inkognitó módban (háttérben)</string>
     <string name="contextmenu_savelink" msgid="5508554930832538184">"Link mentése"</string>
     <string name="contextmenu_sharelink" msgid="5392275392280130331">"Link megosztása"</string>
     <string name="contextmenu_copy" msgid="398860586635404030">"Másolás"</string>
@@ -391,6 +394,7 @@
     <string name="accessibility_button_clear" msgid="6943152307986161598">"Beírt szöveg törlése"</string>
     <string name="accessibility_button_uaswitch" msgid="6286804719724282339">"Felhasználói ügynök váltása"</string>
     <string name="accessibility_button_go" msgid="1182818872083055958">"Mehet"</string>
+    <string name="accessibility_button_homescreen">Kezdőlap</string>
     <string name="accessibility_button_navscreen" msgid="9142904748728713075">"Oldalkezelő"</string>
     <string name="accessibility_button_more" msgid="3054251446394224216">"További beállítások"</string>
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Inkognitóoldal"</string>
