@@ -42,7 +42,7 @@
     <string name="ssl_continue" msgid="8031515015829358457">"Doorgaan"</string>
     <string name="security_warning" msgid="6607795404322797541">"Beveiligingsmelding"</string>
     <string name="view_certificate" msgid="1472768887529093862">"Certificaat tonen"</string>
-    <string name="ssl_go_back" msgid="4598951822061593819">"Ga terug"</string>
+    <string name="ssl_go_back" msgid="4598951822061593819">"Terug"</string>
     <string name="ssl_untrusted" msgid="7754507359360636447">"Dit is geen certificaat van een vertrouwde autoriteit."</string>
     <string name="ssl_mismatch" msgid="3809794439740523641">"De naam van deze site komt niet overeen met de naam op het certificaat."</string>
     <string name="ssl_expired" msgid="5739349389499575559">"Dit certificaat is verlopen."</string>
@@ -352,4 +352,10 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Incognitopagina"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Opgeslagen pagina"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Tabbladbeheer"</string>
+
+    <!-- CYANOGENMOD EDITS -->
+    <string name="close_other_tabs">Andere tabbladen sluiten</string>
+    <string name="contextmenu_openlink_incognito_newwindow">Openen in nieuw incognitotabblad</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Openen in nieuw incognitotabblad op de achtergrond</string>
+    <string name="accessibility_button_homescreen">Thuisscherm</string>
 </resources>
