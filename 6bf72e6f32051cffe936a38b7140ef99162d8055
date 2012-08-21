@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAWX//+so\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 2248
+      },
+      "writtenOn": "2012-08-21T02:58:32Z",
+      "side": 1,
+      "message": "Andere of overige?",
+      "revId": "6bf72e6f32051cffe936a38b7140ef99162d8055",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
