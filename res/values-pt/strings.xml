@@ -400,4 +400,6 @@
     <string name="contextmenu_openlink_incognito_newwindow_background">Abrir em nova aba anônima em segundo plano</string>
     <string name="close_other_tabs">Fechar outras guias</string>
     <string name="accessibility_button_homescreen">Tela Inicial</string>
+    <string name="pref_content_ua">Agente de usuário</string>
+    <string name="pref_content_ua_summary">Escolha um agente de usuário</string>
 </resources>
