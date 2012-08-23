@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAWn///vo\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-08-23T19:07:34Z",
+      "side": 1,
+      "message": "Thuisscherm? Ik vind \"Startscherm\" veel beter.\n\nEr is al gemerged, maar misschien kan je dit nog aanpassen.",
+      "revId": "c43f52421e9a657842a8e1c0bb6e20bd1da3d24f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
