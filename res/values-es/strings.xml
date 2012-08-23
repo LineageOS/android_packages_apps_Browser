@@ -142,6 +142,8 @@
     <string name="pref_content_homepage" msgid="3324574611613105696">"Establecer página de inicio"</string>
     <string name="pref_content_search_engine" msgid="1620101310821644144">"Motor de búsqueda"</string>
     <string name="pref_content_search_engine_summary" msgid="304003941861818133">"Elige un motor de búsqueda."</string>
+    <string name="pref_content_ua">Agente de usuario</string>
+    <string name="pref_content_ua_summary">Elige un agente de usuario</string>
     <string name="pref_set_homepage_to" msgid="7838684355145561242">"Establecer en:"</string>
   <string-array name="pref_homepage_choices">
     <item msgid="844041670142910837">"Página actual"</item>
