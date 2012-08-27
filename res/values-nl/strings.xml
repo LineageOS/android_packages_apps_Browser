@@ -357,5 +357,5 @@
     <string name="close_other_tabs">Overige tabbladen sluiten</string>
     <string name="contextmenu_openlink_incognito_newwindow">Openen in nieuw incognitotabblad</string>
     <string name="contextmenu_openlink_incognito_newwindow_background">Openen in nieuw incognitotabblad op de achtergrond</string>
-    <string name="accessibility_button_homescreen">Thuisscherm</string>
+    <string name="accessibility_button_homescreen">Startscherm</string>
 </resources>
