@@ -16,6 +16,10 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- User agent label -->
+    <string name="pref_content_ua">User agent</string>
+    <!-- User agent summary -->
+    <string name="pref_content_ua_summary">Choisisser un user agent</string>
     <string name="application_name" msgid="1935869255545976415">"Navigateur"</string>
     <string name="choose_upload" msgid="3649366287575002063">"Choisir le fichier à importer"</string>
     <string name="uploads_disabled" msgid="463761197575372994">"Les transferts de fichiers sont désactivés."</string>
