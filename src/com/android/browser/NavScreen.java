@@ -168,6 +168,7 @@ public class NavScreen extends RelativeLayout
             } else {
                 mUiController.closeTab(tab);
             }
+            mTabViews.remove(tab);
         }
     }
 
@@ -281,6 +282,7 @@ public class NavScreen extends RelativeLayout
                 public void onClick(View v) {
                     if (tabview.isClose(v)) {
                         mScroller.animateOut(tabview);
+                        mTabViews.remove(tab);
                     } else if (tabview.isTitle(v)) {
                         switchToTab(tab);
                         mUi.getTitleBar().setSkipTitleBarAnimations(true);
