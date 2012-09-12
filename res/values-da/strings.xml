@@ -396,4 +396,23 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Inkognitoside"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Gemt side"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Administrering af faner"</string>
+
+    <!-- CM10 additions -->
+    <string name="close_other_tabs">Luk andre tabs</string>
+    <string name="contextmenu_openlink_incognito_newwindow">Åbn i ny inkognito-tab</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Åbn i ny inkognito-tab i baggrunden</string>
+    <string name="pref_content_ua">Brugeragent</string>
+    <string name="pref_content_ua_summary">Vælg en brugeragent</string>
+    <string name="pref_lab_webgl">WebGL</string>
+    <string name="pref_lab_webgl_summary">Slår WebGL til</string>
+    <string name="pref_video_preload_title">Forudindlæsning af video</string>
+    <string-array name="pref_video_preload_choices">
+        <item>Aldrig</item>
+        <item>Kun på Wi-Fi</item>
+        <item>Altid</item>
+    </string-array>
+    <string name="pref_video_preload_summary">Tillad, at browseren forudindlæser video, når serveren tillader det</string>
+    <string name="pref_video_preload_dialogtitle">Forudindlæsning af video</string>
+    <string name="accessibility_button_homescreen">Startskærm</string>
+    <!-- CM10 additions end -->
 </resources>
