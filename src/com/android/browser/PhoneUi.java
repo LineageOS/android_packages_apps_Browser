@@ -196,6 +196,10 @@ public class PhoneUi extends BaseUi {
             }
             closeOthers.setEnabled(!isLastTab);
         }
+        MenuItem fullscreen = menu.findItem(R.id.fullscreen_menu_id);
+        if (fullscreen != null) {
+            fullscreen.setVisible(!showingNavScreen());
+        }
         if (showingNavScreen()) {
             menu.setGroupVisible(R.id.LIVE_MENU, false);
             menu.setGroupVisible(R.id.SNAPSHOT_MENU, false);

@@ -138,7 +138,7 @@ public abstract class BaseUi implements UI {
                 R.id.fullscreen_custom_content);
         mErrorConsoleContainer = (LinearLayout) frameLayout
                 .findViewById(R.id.error_console);
-        setFullscreen(BrowserSettings.getInstance().useFullscreen());
+        setFullscreen(false);
         mGenericFavicon = res.getDrawable(
                 R.drawable.app_web_browser_sm);
         mTitleBar = new TitleBar(mActivity, mUiController, this,
@@ -788,6 +788,13 @@ public abstract class BaseUi implements UI {
             }
         }
         win.setAttributes(winParams);
+    }
+
+    public boolean isFullscreen() {
+        Window win = mActivity.getWindow();
+        WindowManager.LayoutParams winParams = win.getAttributes();
+        final int bits = WindowManager.LayoutParams.FLAG_FULLSCREEN;
+        return (winParams.flags & bits) == bits;
     }
 
     public Drawable getFaviconDrawable(Bitmap icon) {
