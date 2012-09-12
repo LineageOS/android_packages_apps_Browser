@@ -142,6 +142,8 @@ public interface UI {
 
     void setFullscreen(boolean enabled);
 
+    boolean isFullscreen();
+
     void setUseQuickControls(boolean enabled);
 
     public boolean shouldCaptureThumbnails();

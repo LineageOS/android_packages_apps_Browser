@@ -49,6 +49,10 @@
             android:icon="@drawable/ic_bookmark_on_holo_dark"
             android:alphabeticShortcut="d"
             android:visible="@bool/menu_show_bookmarks" />
+        <item
+            android:id="@+id/fullscreen_menu_id"
+            android:checkable="true"
+            android:title="@string/pref_lab_fullscreen" />
         <group
             android:id="@+id/LIVE_MENU">
             <item
