@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAYX///+Q\u003d",
+        "filename": "res/values-zh-rCN/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 3589
+      },
+      "writtenOn": "2012-09-13T18:38:13Z",
+      "side": 1,
+      "message": "Add a space before \"WebGL\" please.",
+      "revId": "c7326ff2c3c3b1f64b0c8f9e11a21772df878508",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///+A\u003d",
+        "filename": "res/values-zh-rCN/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 3589
+      },
+      "writtenOn": "2012-09-13T18:38:13Z",
+      "side": 1,
+      "message": "I think there should be a \"jiang\" between \"liu lan qi\" and \"zai hou tai\".",
+      "revId": "c7326ff2c3c3b1f64b0c8f9e11a21772df878508",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
