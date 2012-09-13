@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAYX////M\u003d",
+        "filename": "res/values-nl/arrays.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-13T18:26:49Z",
+      "side": 1,
+      "message": "Alleen via Wi-Fi?",
+      "revId": "d2871a3de0d72fe3c9cc330bb7840b9ac5bf70d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX////I\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-13T18:26:49Z",
+      "side": 1,
+      "message": "Trailing space",
+      "revId": "d2871a3de0d72fe3c9cc330bb7840b9ac5bf70d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX////E\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2012-09-13T18:26:49Z",
+      "side": 1,
+      "message": "Trailing space",
+      "revId": "d2871a3de0d72fe3c9cc330bb7840b9ac5bf70d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
