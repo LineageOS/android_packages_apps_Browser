@@ -274,6 +274,7 @@
     <string name="pref_use_instant_search_summary" msgid="839320474961917522">"В Живом поиске результаты появляются прямо при вводе текста (возможно увеличение объема передаваемых данных)."</string>
     <string name="pref_lab_fullscreen" msgid="8173609016657987973">"Во весь экран"</string>
     <string name="pref_lab_fullscreen_summary" msgid="7694738112219376740">"Чтобы скрыть строку состояния, используйте полноэкранный режим"</string>
+    <string name="pref_lab_webgl_summary">Включить WebGL</string>
     <string name="pref_data_title" msgid="7255058703417796578">"Настройки контента"</string>
     <string name="pref_data_preload_title" msgid="4479320472980292873">"Загрузка результатов поиска"</string>
   <string-array name="pref_data_preload_choices">
@@ -291,6 +292,14 @@
   </string-array>
     <string name="pref_link_prefetch_summary" msgid="6558181497993206817">"Предварительно загружать веб-страницы в фоновом режиме"</string>
     <string name="pref_link_prefetch_dialogtitle" msgid="3804646141622839765">"Предзагрузка веб-страниц"</string>
+    <string name="pref_video_preload_title">Предзагрузка видео</string>
+  <string-array name="pref_video_preload_choices">
+    <item>Никогда</item>
+    <item>Только через WiFi</item>
+    <item>Всегда</item>
+  </string-array>
+    <string name="pref_video_preload_summary">Позволить браузеру предзагрузку видео, если это позволяет сервер</string>
+    <string name="pref_video_preload_dialogtitle">Предзагрузка видео</string>
     <string name="browserFrameNetworkErrorLabel" msgid="8102515020625680714">"Ошибка подключения"</string>
     <string name="browserFrameFileErrorLabel" msgid="4703792279852977350">"Проблема с файлом"</string>
     <string name="browserFrameFormResubmitLabel" msgid="2385512101948178841"></string>
