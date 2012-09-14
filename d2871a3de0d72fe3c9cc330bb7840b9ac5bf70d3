@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAYX///kE\u003d",
+        "filename": "res/values-nl/arrays.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-09-14T10:47:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAYX////M\u003d",
+      "revId": "d2871a3de0d72fe3c9cc330bb7840b9ac5bf70d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAYH///9o\u003d",
         "filename": "res/values-nl/arrays.xml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2012-09-13T23:32:40Z",
       "side": 1,
       "message": "Alleen via Wi-Fi?",
+      "revId": "d2871a3de0d72fe3c9cc330bb7840b9ac5bf70d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///kA\u003d",
+        "filename": "res/values-nl/arrays.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-09-14T10:47:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAYH///9o\u003d",
       "revId": "d2871a3de0d72fe3c9cc330bb7840b9ac5bf70d3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAYX///j4\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-09-14T10:47:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAYX////I\u003d",
+      "revId": "d2871a3de0d72fe3c9cc330bb7840b9ac5bf70d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAYX////E\u003d",
         "filename": "res/values-nl/strings.xml",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2012-09-13T18:26:49Z",
       "side": 1,
       "message": "Trailing space",
+      "revId": "d2871a3de0d72fe3c9cc330bb7840b9ac5bf70d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///j8\u003d",
+        "filename": "res/values-nl/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2012-09-14T10:47:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAYX////E\u003d",
       "revId": "d2871a3de0d72fe3c9cc330bb7840b9ac5bf70d3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
