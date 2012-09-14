@@ -1,0 +1,9 @@
+Change-Id: Ide8b578701166c44cd50b65476faa70a270cd15c
+Code-Review+2: Steve Kondik <shade@chemlab.org>
+Verified+1: Steve Kondik <shade@chemlab.org>
+Code-Review+1: Alexey Alexeevich <madzerling@gmail.com>
+Submitted-by: Steve Kondik <shade@chemlab.org>
+Submitted-at: Fri, 14 Sep 2012 02:04:49 -0400
+Reviewed-on: http://review.cyanogenmod.com/23276
+Project: CyanogenMod/android_packages_apps_Browser
+Branch: refs/heads/jellybean
