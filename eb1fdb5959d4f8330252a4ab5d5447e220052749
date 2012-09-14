@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAYX///k4\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-09-14T09:48:19Z",
+      "side": 1,
+      "message": "Ne, de tehetsz egy CM 2012-s sort a Copyright alá, lásd egyéb CM-projektfájlok :)",
+      "parentUuid": "AAAAYX///qo\u003d",
+      "revId": "eb1fdb5959d4f8330252a4ab5d5447e220052749",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAYH////c\u003d",
         "filename": "res/values-hu/strings.xml",
         "patchSetId": 3
@@ -190,6 +208,24 @@
       "side": 1,
       "message": "Ide szintén ajánlom figyelmetekbe a következö sorokat: \n288, 296. Ezek gyári sammy részek. Az egységesség miatt írtam így.",
       "parentUuid": "AAAAYH///9g\u003d",
+      "revId": "eb1fdb5959d4f8330252a4ab5d5447e220052749",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///k0\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2012-09-14T09:48:19Z",
+      "side": 1,
+      "message": "Én a google play forditását néztem, ott Wi-Fivel van. De akkor mindegy",
+      "parentUuid": "AAAAYX///q4\u003d",
       "revId": "eb1fdb5959d4f8330252a4ab5d5447e220052749",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
