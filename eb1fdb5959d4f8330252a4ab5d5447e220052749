@@ -89,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAYX///qg\u003d",
+        "filename": "res/values-hu/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 3843
+      },
+      "writtenOn": "2012-09-14T05:38:00Z",
+      "side": 1,
+      "message": "Én az indentálásra gondolok. Erre is és a Wi-Fin-re is azt mondom hogy a gyári rész is hibás. :) (Bár a Wi-Fin lehet hogy helyes.)\n\nRészemr?l rendben, megy a +1.",
+      "parentUuid": "AAAAYX///q8\u003d",
+      "revId": "eb1fdb5959d4f8330252a4ab5d5447e220052749",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAYH///+Q\u003d",
         "filename": "res/values-hu/strings.xml",
         "patchSetId": 3
