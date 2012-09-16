@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAYX///AM\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2012-09-16T03:53:50Z",
+      "side": 1,
+      "message": "Same as default values/strings.xml",
+      "revId": "5433a913e1a6c3fe253e93b84e77b248742baf4a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAYX///AI\u003d",
+        "filename": "res/values-es/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2012-09-16T03:53:50Z",
+      "side": 1,
+      "message": "\"...en segundo plano...\" better, for similarity with the other translations.",
+      "revId": "5433a913e1a6c3fe253e93b84e77b248742baf4a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
