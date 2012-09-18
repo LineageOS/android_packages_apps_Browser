@@ -52,7 +52,7 @@
     </string-array>
     <string-array name="pref_data_preload_choices">
         <item msgid="5180466923190095508">"Nooit"</item>
-        <item msgid="1791664748778640002">"Alleen voor Wi-Fi"</item>
+        <item msgid="1791664748778640002">"Alleen via Wi-Fi"</item>
         <item msgid="3944061253437827617">"Altijd"</item>
     </string-array>
     <string-array name="pref_link_prefetch_choices">
@@ -60,4 +60,14 @@
         <item msgid="1908465963242077428">"Alleen via Wi-Fi"</item>
         <item msgid="7647277566998527142">"Altijd"</item>
     </string-array>
+
+    <!-- CYANOGENMOD EDITS -->
+
+    <!-- Video preloading options [CHAR LIMIT=20] -->
+    <string-array name="pref_video_preload_choices">
+        <item>Nooit</item>
+        <item>Alleen via Wi-Fi</item>
+        <item>Altijd</item>
+    </string-array>
+
 </resources>
