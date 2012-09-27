@@ -396,4 +396,17 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Anonimna stranica"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Spremljena stranica"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Upravljanje karticama"</string>
+
+<!-- Additional CM strings -->
+    <string name="close_other_tabs">Zatvori ostale kartice</string>
+    <string name="pref_content_ua">Korisnički posrednik</string>
+    <string name="pref_content_ua_summary">Odaberite korisnički posrednik. Web-stranice će se prikazivati u formatu prilagođenom za odabranog posrednika.</string>
+    <string name="pref_video_preload_dialogtitle">Predučitavanje videa</string>
+    <string name="pref_video_preload_title">Predučitavanje videa</string>
+    <string name="pref_video_preload_summary">Dopustite pregledniku predučitavanje video zapisa kad to server dopušta</string>
+    <string-array name="pref_video_preload_choices">
+        <item>Nikad</item>
+        <item>Samo na WiFi-ju</item>
+        <item>Uvijek</item>
+    </string-array>
 </resources>
