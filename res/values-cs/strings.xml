@@ -396,4 +396,22 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Anonymní stránka"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Uložená stránka"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Správa karet"</string>
+
+    <!-- Update for JB -->
+    <string name="close_other_tabs">Zavřít ostatní karty</string>
+    <string name="contextmenu_openlink_incognito_newwindow">Otevřít v nové inkonginto kartě</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Otevřít v nové inkonginto kartě na pozadí</string>
+    <string name="pref_content_ua">User agent</string>
+    <string name="pref_content_ua_summary">Zvolte user agenta</string>
+    <string name="pref_lab_webgl">WebGL</string>
+    <string name="pref_lab_webgl_summary">Povolit WebGL</string>
+    <string name="pref_video_preload_title">Přednačítání videa</string>
+    <string-array name="pref_video_preload_choices">
+        <item>Nikdy</item>
+        <item>Jenom na Wi-Fi</item>
+        <item>Vždy</item>
+    </string-array>
+    <string name="pref_video_preload_summary">Povolit prohlížeči přednačítat video, pokud to server umožňuje</string>
+    <string name="pref_video_preload_dialogtitle">Přednačítat video</string>
+    <string name="accessibility_button_homescreen">Domovská obrazovka</string>
 </resources>
