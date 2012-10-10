@@ -732,7 +732,7 @@
             error -->
     <string name="browserFrameFileErrorLabel">Tiedosto-ongelma</string>
     <!-- Dialog box title -->
-    <§string name="browserFrameFormResubmitLabel"></string>
+    <string name="browserFrameFormResubmitLabel"></string>
     <!-- Dialog box message -->
     <string name="browserFrameFormResubmitMessage">Sivu, jota yrität avata, sisältää jo lähetettyjä tietoja (POSTDATA). Jos lähetät tiedot uudelleen, sivulla olevan lomakkeen suorittama toimenpide (kuten haku tai verkko-ostos) toistetaan.</string>
     <!-- Dialog box title -->
