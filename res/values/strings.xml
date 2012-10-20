@@ -287,6 +287,8 @@
     <!-- Title displayed when the bookmarks page is shown -->
     <string name="browser_bookmarks_page_bookmarks_text">Bookmarks</string>
 
+    <!-- Menu item to close the browser -->
+    <string name="menu_exit">Exit</string>
 
     <!-- Settings screen strings -->
     <!-- Menu item to open the Settings screen -->

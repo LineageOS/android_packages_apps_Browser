@@ -98,6 +98,9 @@
             android:title="@string/menu_preferences"
             android:icon="@drawable/ic_settings_holo_dark"
             android:alphabeticShortcut="p" />
+        <item
+            android:id="@+id/exit_menu_id"
+            android:title="@string/menu_exit" />
         <!-- followings are debug only -->
         <item
             android:id="@+id/dump_nav_menu_id"

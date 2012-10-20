@@ -1684,6 +1684,10 @@ public class Controller
                 loadUrl(current, mSettings.getHomePage());
                 break;
 
+            case R.id.exit_menu_id:
+                mActivity.finish();
+                break;
+
             case R.id.preferences_menu_id:
                 openPreferences();
                 break;
