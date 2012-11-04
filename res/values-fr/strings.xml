@@ -271,7 +271,11 @@
     <string name="pref_default_text_encoding_dialogtitle" msgid="5508255018084978547">"Codage du texte"</string>
     <string name="pref_accessibility_title" msgid="5127836981587423215">"Accessibilité"</string>
     <string name="pref_font_size_category" msgid="6683754355084218254">"Taille de la police"</string>
-    <string name="pref_lab_title" msgid="5571091610359629423">"Labs"</string>
+    <string name="pref_lab_title" msgid="5571091610359629423">"Labo"</string>
+
+    <!-- Summary for the WebGL lab feature [CHAR LIMIT=120] -->
+    <string name="pref_lab_webgl_summary">Activer WebGL</string>
+
     <string name="pref_lab_quick_controls" msgid="3267606522082281367">"Commandes rapides"</string>
     <string name="pref_lab_quick_controls_summary" msgid="3149664132600968775">"Faites glisser votre pouce vers droite ou gauche pour ouvrir les commandes rapides et masquer les barres des applis/URL."</string>
     <string name="pref_use_instant_search" msgid="1119176077760723740">"Recherche instantanée Google"</string>
@@ -293,6 +297,20 @@
     <item msgid="1908465963242077428">"Wi-Fi uniquement"</item>
     <item msgid="7647277566998527142">"Toujours"</item>
   </string-array>
+
+    <!-- Title for video preloading [CHAR LIMIT=40] -->
+    <string name="pref_video_preload_title">Préchargement des vidéos</string>
+    <!-- Video preloading options [CHAR LIMIT=20] -->
+    <string-array name="pref_video_preload_choices">
+        <item>Jamais</item>
+        <item>Wi-Fi uniquement</item>
+        <item>Toujours</item>
+    </string-array>
+     <!-- Summary for video preloading [CHAR LIMIT=80] -->
+    <string name="pref_video_preload_summary">Autoriser le navigateur à précharger les vidéos en arrière-plan</string>
+    <!-- Title of dialog for video preloading [CHAR LIMIT=40] -->
+    <string name="pref_video_preload_dialogtitle">Préchargement des vidéos</string>
+
     <string name="pref_link_prefetch_summary" msgid="6558181497993206817">"Autoriser le navigateur à précharger en arrière-plan les pages Web associées"</string>
     <string name="pref_link_prefetch_dialogtitle" msgid="3804646141622839765">"Préchargement des pages Web"</string>
     <string name="browserFrameNetworkErrorLabel" msgid="8102515020625680714">"Problème de connexion"</string>
