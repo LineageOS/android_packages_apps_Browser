@@ -18,23 +18,23 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="application_name" msgid="1935869255545976415">"Prohlížeč"</string>
     <string name="choose_upload" msgid="3649366287575002063">"Zvolit soubor, který chcete nahrát."</string>
-    <string name="uploads_disabled" msgid="463761197575372994">"Nahrávání souborů je deaktivováno."</string>
-    <string name="new_tab" msgid="7971857320679510529">"Nová karta"</string>
-    <string name="new_incognito_tab" msgid="3606197964239039478">"Nová anonymní karta"</string>
+    <string name="uploads_disabled" msgid="463761197575372994">"Nahrávání souborů je vypnuté."</string>
+    <string name="new_tab" msgid="7971857320679510529">"Nový panel"</string>
+    <string name="new_incognito_tab" msgid="3606197964239039478">"Nový anonymní panel"</string>
     <string name="tab_bookmarks" msgid="2305793036003473653">"Záložky"</string>
     <string name="tab_most_visited" msgid="1077402532455000703">"Nejnavštěvovanější"</string>
     <string name="tab_history" msgid="1979267558744613746">"Historie"</string>
     <string name="tab_snapshots" msgid="1449241204980265186">"Uložené stránky"</string>
     <string name="added_to_bookmarks" msgid="4028710765672851635">"Přidáno k záložkám."</string>
     <string name="removed_from_bookmarks" msgid="546648923924996722">"Odebráno ze záložek."</string>
-    <string name="sign_in_to" msgid="5939425800148759165">"Přihlásit se: <xliff:g id="HOSTNAME">%s1</xliff:g> <xliff:g id="REALM">%s2</xliff:g>"</string>
+    <string name="sign_in_to" msgid="5939425800148759165">"Přihlásit se k <xliff:g id="HOSTNAME">%s1</xliff:g> \u201e<xliff:g id="REALM">%s2</xliff:g>\u201c"</string>
     <string name="username" msgid="5057566336518215922">"Jméno"</string>
     <string name="password" msgid="1177138552305184404">"Heslo"</string>
     <string name="action" msgid="183105774472071343">"Přihlásit se"</string>
     <string name="bookmarks_search" msgid="5229596268214362873">"Prohlížeč"</string>
     <string name="cancel" msgid="3017274947407233702">"Zrušit"</string>
     <string name="ok" msgid="1509280796718850364">"OK"</string>
-    <string name="title_bar_loading" msgid="7438217780834640678">"Načítání..."</string>
+    <string name="title_bar_loading" msgid="7438217780834640678">"Načítání\u2026"</string>
     <string name="page_info" msgid="4048529256302257195">"Informace o stránce"</string>
     <string name="page_info_view" msgid="5303490449842635158">"Zobrazit informace o stránce"</string>
     <string name="page_info_address" msgid="2222306609532903254">"Adresa:"</string>
@@ -42,7 +42,7 @@
     <string name="ssl_continue" msgid="8031515015829358457">"Pokračovat"</string>
     <string name="security_warning" msgid="6607795404322797541">"Upozornění zabezpečení"</string>
     <string name="view_certificate" msgid="1472768887529093862">"Zobrazit certifikát"</string>
-    <string name="ssl_go_back" msgid="4598951822061593819">"Přejít zpět"</string>
+    <string name="ssl_go_back" msgid="4598951822061593819">"Jít zpět"</string>
     <string name="ssl_untrusted" msgid="7754507359360636447">"Tento certifikát nepochází od důvěryhodné autority."</string>
     <string name="ssl_mismatch" msgid="3809794439740523641">"Název webu se neshoduje s názvem uvedeným v certifikátu."</string>
     <string name="ssl_expired" msgid="5739349389499575559">"Platnost certifikátu vypršela."</string>
@@ -50,9 +50,9 @@
     <string name="ssl_date_invalid" msgid="3705563379257285534">"Datum tohoto certifikátu není platné."</string>
     <string name="ssl_invalid" msgid="9041704741505449967">"Tento certifikát je neplatný."</string>
     <string name="ssl_unknown" msgid="5679243486524754571">"Neznámá chyba certifikátu."</string>
-    <string name="stopping" msgid="4839698519340302982">"Zastavuji..."</string>
+    <string name="stopping" msgid="4839698519340302982">"Zastavování\u2026"</string>
     <string name="stop" msgid="5687251076030630074">"Zastavit"</string>
-    <string name="reload" msgid="8585220783228408062">"Aktualizovat"</string>
+    <string name="reload" msgid="8585220783228408062">"Obnovit"</string>
     <string name="back" msgid="8414603107175713668">"Zpět"</string>
     <string name="forward" msgid="4288210890526641577">"Vpřed"</string>
     <string name="save" msgid="5922311934992468496">"OK"</string>
@@ -64,10 +64,10 @@
     <string name="edit_folder" msgid="621817453133656156">"Upravit složku"</string>
     <string name="delete_folder" msgid="2046483129024501116">"Smazat složku"</string>
     <string name="no_subfolders" msgid="3303645239686962674">"Žádné podsložky."</string>
-    <string name="add_to_bookmarks_menu_option" msgid="4449323955122214389">"Záložky"</string>
-    <string name="add_to_homescreen_menu_option" msgid="1461447829242963790">"Plocha"</string>
-    <string name="add_to_other_folder_menu_option" msgid="5947586525822134105">"Jiná složka"</string>
-    <string name="name" msgid="5462672162695365387">"Štítek"</string>
+    <string name="add_to_bookmarks_menu_option" msgid="4449323955122214389">"Záložek"</string>
+    <string name="add_to_homescreen_menu_option" msgid="1461447829242963790">"Na plochu"</string>
+    <string name="add_to_other_folder_menu_option" msgid="5947586525822134105">"Do jiné složky"</string>
+    <string name="name" msgid="5462672162695365387">"Název"</string>
     <string name="http" msgid="2163722670597250102">"http://"</string>
     <string name="save_to_bookmarks" msgid="1679286010089780932">"Uložit do záložek"</string>
     <string name="bookmark_this_page" msgid="7530739804320811054">"Přidat stránku do záložek"</string>
@@ -84,39 +84,42 @@
     <string name="homepage_set" msgid="8768087280310966395">"Domovská stránka byla nastavena."</string>
     <string name="bookmark_needs_title" msgid="6245900436119218187">"Záložka musí mít název."</string>
     <string name="bookmark_needs_url" msgid="7809876865972755158">"Záložka musí mít umístění."</string>
-    <string name="bookmark_url_not_valid" msgid="4917440933384496211">"Tato adresa URL je neplatná."</string>
-    <string name="bookmark_cannot_save_url" msgid="7836064647943671126">"Tuto adresu URL nelze přidat do záložek."</string>
+    <string name="bookmark_url_not_valid" msgid="4917440933384496211">"Tato URL adresa je neplatná."</string>
+    <string name="bookmark_cannot_save_url" msgid="7836064647943671126">"Tuto URL adresu nelze přidat do záložek."</string>
     <string name="bookmark_page" msgid="6845189305130307274">"Přidat poslední zobrazenou stránku do záložek"</string>
     <string name="bookmark_thumbnail_view" msgid="3164068314718522138">"Miniatury"</string>
     <string name="bookmark_list_view" msgid="7848510619500937839">"Seznam"</string>
-    <string name="current_page" msgid="7510129573681663135">"od "</string>
-    <string name="delete_bookmark_warning" msgid="7825328496411904321">"Smazat záložku <xliff:g id="BOOKMARK">%s</xliff:g>?"</string>
-    <string name="open_all_in_new_window" msgid="455786763426575293">"Otevřít vše na nových kartách"</string>
+    <string name="current_page" msgid="7510129573681663135">"od\u0020"</string>
+    <string name="delete_bookmark_warning" msgid="7825328496411904321">"Smazat záložku \u201e<xliff:g id="BOOKMARK">%s</xliff:g>\u201c?"</string>
+    <string name="open_all_in_new_window" msgid="455786763426575293">"Otevřít vše v nových panelech"</string>
     <string name="goto_dot" msgid="3895839050522602723">"Přejít"</string>
     <string name="select_dot" msgid="6299170761900561967">"Vybrat text"</string>
+    <string name="close_other_tabs">Zavřít ostatní panely</string>
     <string name="bookmarks" msgid="1961279134885867815">"Záložky"</string>
     <string name="shortcut_bookmark" msgid="3974876480401135895">"Záložka"</string>
     <string name="shortcut_bookmark_title" msgid="7570786275916681296">"Zvolte záložku"</string>
     <string name="history" msgid="2451240511251410032">"Historie"</string>
     <string name="menu_view_download" msgid="2124570321712995120">"Stažené"</string>
-    <string name="copy_page_url" msgid="1188679152608889555">"Kopírovat adresu URL stránky"</string>
+    <string name="copy_page_url" msgid="1188679152608889555">"Kopírovat URL adresu stránky"</string>
     <string name="share_page" msgid="593756995297268343">"Sdílet stránku"</string>
-    <string name="menu_save_snapshot" msgid="6935080344031126139">"Uložit ke čtení offline"</string>
-    <string name="saving_snapshot" msgid="1693789062351182809">"Ukládání…"</string>
-    <string name="snapshot_failed" msgid="4584580873565876033">"Uložení ke čtení offline se nezdařilo."</string>
-    <string name="contextheader_folder_bookmarkcount" msgid="353987136645619089">"Záložky: <xliff:g id="BOOKMARK_COUNT">%d</xliff:g>"</string>
+    <string name="menu_save_snapshot" msgid="6935080344031126139">"Uložit pro offline čtení"</string>
+    <string name="saving_snapshot" msgid="1693789062351182809">"Ukládání\u2026"</string>
+    <string name="snapshot_failed" msgid="4584580873565876033">"Uložení pro offline čtení se nezdařilo."</string>
+    <string name="contextheader_folder_bookmarkcount" msgid="353987136645619089">"Počet záložek: <xliff:g id="BOOKMARK_COUNT">%d</xliff:g>"</string>
     <string name="contextheader_folder_empty" msgid="974171637803391651">"Prázdná složka"</string>
     <string name="contextmenu_openlink" msgid="7237961252214188935">"Otevřít"</string>
-    <string name="contextmenu_openlink_newwindow" msgid="1205313604181761403">"Otevřít na nové kartě"</string>
-    <string name="contextmenu_openlink_newwindow_background" msgid="4690381019116746687">"Otevřít na nové kartě na pozadí"</string>
+    <string name="contextmenu_openlink_newwindow" msgid="1205313604181761403">"Otevřít v novém panelu"</string>
+    <string name="contextmenu_openlink_newwindow_background" msgid="4690381019116746687">"Otevřít v novém panelu na pozadí"</string>
+    <string name="contextmenu_openlink_incognito_newwindow">Otevřít v novém anonymním panelu</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Otevřít v novém anonymním panelu na pozadí</string>
     <string name="contextmenu_savelink" msgid="5508554930832538184">"Uložit odkaz"</string>
     <string name="contextmenu_sharelink" msgid="5392275392280130331">"Sdílet odkaz"</string>
     <string name="contextmenu_copy" msgid="398860586635404030">"Kopírovat"</string>
-    <string name="contextmenu_copylink" msgid="5153657160294534270">"Kopírovat adresu URL odkazu"</string>
+    <string name="contextmenu_copylink" msgid="5153657160294534270">"Kopírovat URL adresu odkazu"</string>
     <string name="contextmenu_download_image" msgid="4243829645180686912">"Uložit obrázek"</string>
     <string name="contextmenu_view_image" msgid="3870625602053600905">"Zobrazit obrázek"</string>
     <string name="contextmenu_set_wallpaper" msgid="3691902960115350686">"Nastavit jako tapetu"</string>
-    <string name="contextmenu_dial_dot" msgid="5856550683415933806">"Volat..."</string>
+    <string name="contextmenu_dial_dot" msgid="5856550683415933806">"Volat\u2026"</string>
     <string name="contextmenu_add_contact" msgid="3183511922223645716">"Přidat kontakt"</string>
     <string name="contextmenu_send_mail" msgid="1014513374828775660">"Odeslat e-mail"</string>
     <string name="contextmenu_map" msgid="7471390435434034912">"Mapa"</string>
@@ -138,10 +141,12 @@
     <item msgid="2484126708670016519">"Na požádání"</item>
     <item msgid="8547442717307793863">"Vypnuto"</item>
   </string-array>
-    <string name="pref_content_open_in_background_summary" msgid="955411158407739504">"Otevírat nové karty za aktuální kartou"</string>
+    <string name="pref_content_open_in_background_summary" msgid="955411158407739504">"Otevírat nové panely za aktuálním panelem"</string>
     <string name="pref_content_homepage" msgid="3324574611613105696">"Nastavit domovskou stránku"</string>
     <string name="pref_content_search_engine" msgid="1620101310821644144">"Nastavit vyhledávač"</string>
     <string name="pref_content_search_engine_summary" msgid="304003941861818133">"Zvolte vyhledávač"</string>
+    <string name="pref_content_ua">Vlastní nastavení identifkace</string>
+    <string name="pref_content_ua_summary">Zvolte vlastní nastavení identifikace</string>
     <string name="pref_set_homepage_to" msgid="7838684355145561242">"Nastavit na"</string>
   <string-array name="pref_homepage_choices">
     <item msgid="844041670142910837">"Aktuální stránka"</item>
@@ -214,7 +219,7 @@
     <string name="pref_security_remember_passwords" msgid="6492957683454529549">"Zapamatovat hesla"</string>
     <string name="pref_security_remember_passwords_summary" msgid="256388703356349137">"Ukládat uživatelská jména a hesla pro webové stránky"</string>
     <string name="pref_security_save_form_data" msgid="1213669802810198893">"Zapamatovat data formulářů"</string>
-    <string name="pref_security_save_form_data_summary" msgid="4994074685153708026">"Zapamatovat si data, která zadám do formulářů, pro další použití"</string>
+    <string name="pref_security_save_form_data_summary" msgid="4994074685153708026">"Zapamatovat si data, zadávaná do formulářů, pro další použití"</string>
     <string name="pref_security_show_security_warning" msgid="8901135676266754559">"Zobrazit upozornění zabezpečení"</string>
     <string name="pref_security_show_security_warning_summary" msgid="5260098316025397525">"Zobrazit upozornění, pokud dojde k problému se zabezpečením webu"</string>
     <string name="pref_security_accept_cookies" msgid="3201367661925047989">"Přijímat soubory cookie"</string>
@@ -231,7 +236,7 @@
     <string name="pref_text_zoom" msgid="5171056101805125497">"Zvětšení/zmenšení textu"</string>
     <string name="pref_zoom_on_double_tap" msgid="902786475250741795">"Přiblížení dvojitým klepnutím"</string>
     <string name="pref_force_userscalable" msgid="5641500562399892621">"Vynutit aktivaci přiblížení"</string>
-    <string name="pref_force_userscalable_summary" msgid="3613242300617172230">"Přepsat požadavek webu na řízení funkce přiblížení"</string>
+    <string name="pref_force_userscalable_summary" msgid="3613242300617172230">"Ignorovat požadavek webu na řízení funkce přiblížení"</string>
     <string name="pref_inverted_category" msgid="1280639705117152207">"Invertované vykreslování stránky"</string>
     <string name="pref_inverted" msgid="7613556986776824112">"Invertované vykreslování"</string>
     <string name="pref_inverted_summary" msgid="7357225897413923085">"Z černé se stane bílá a naopak"</string>
@@ -244,7 +249,7 @@
   </string-array>
     <string name="pref_default_zoom_dialogtitle" msgid="6095974367125109021">"Výchozí přiblížení"</string>
     <string name="pref_content_load_page" msgid="2219810141690955452">"Otevírat stránky v náhledu"</string>
-    <string name="pref_content_load_page_summary" msgid="9168803276420332955">"Zobrazit přehled nově otevřených stránek"</string>
+    <string name="pref_content_load_page_summary" msgid="9168803276420332955">"Zobrazit náhled nově otevřených stránek"</string>
     <string name="pref_extras_title" msgid="7075456173747370647">"Pokročilé"</string>
     <string name="pref_extras_website_settings" msgid="67866640052455549">"Nastavení webových stránek"</string>
     <string name="pref_extras_website_settings_summary" msgid="1656771443223494406">"Pokročilá nastavení pro jednotlivé webové stránky"</string>
@@ -255,7 +260,7 @@
     <string name="pref_development_title" msgid="3263854204533056480">"Ladit"</string>
     <string name="pref_default_text_encoding" msgid="5742965543955558478">"Kódování textu"</string>
   <string-array name="pref_default_text_encoding_choices">
-    <item msgid="7275223955790513818">"Latinka-1 (ISO-8859-1)"</item>
+    <item msgid="7275223955790513818">"Latin-1 (ISO-8859-1)"</item>
     <item msgid="2456597866837587140">"Unicode (UTF-8)"</item>
     <item msgid="6122474363777211732">"Čínština (GBK)"</item>
     <item msgid="373372275931607040">"Čínština (Big5)"</item>
@@ -269,11 +274,13 @@
     <string name="pref_font_size_category" msgid="6683754355084218254">"Velikost textu"</string>
     <string name="pref_lab_title" msgid="5571091610359629423">"Laboratoř Google"</string>
     <string name="pref_lab_quick_controls" msgid="3267606522082281367">"Rychlé ovládací prvky"</string>
-    <string name="pref_lab_quick_controls_summary" msgid="3149664132600968775">"Posunutím prstu od levého nebo pravého okraje zobrazíte rychlé ovládací prvky a skryjete panely aplikací a adresy URL"</string>
+    <string name="pref_lab_quick_controls_summary" msgid="3149664132600968775">"Posunutím prstu od levého nebo pravého okraje zobrazíte rychlé ovládací prvky a skryjete panely aplikací a URL adresy"</string>
     <string name="pref_use_instant_search" msgid="1119176077760723740">"Dynamické vyhledávání Google"</string>
-    <string name="pref_use_instant_search_summary" msgid="839320474961917522">"Dynamické vyhledávání ve Vyhledávání Google zobrazuje výsledky již při zadávání dotazu. (Může se zvýšit množství přenesených dat.)"</string>
+    <string name="pref_use_instant_search_summary" msgid="839320474961917522">"Dynamické vyhledávání ve Vyhledávání Google zobrazuje výsledky již při zadávání dotazu (může se zvýšit množství přenesených dat)."</string>
     <string name="pref_lab_fullscreen" msgid="8173609016657987973">"Celá obrazovka"</string>
-    <string name="pref_lab_fullscreen_summary" msgid="7694738112219376740">"Chcete-li skrýt stavový řádek, použijte režim zobrazení na celou obrazovku."</string>
+    <string name="pref_lab_fullscreen_summary" msgid="7694738112219376740">"Při použití režimu zobrazení na celou obrazovku je skryt stavový řádek."</string>
+    <string name="pref_lab_webgl">Technologie WebGL</string>
+    <string name="pref_lab_webgl_summary">Povolit technologii WebGL</string>
     <string name="pref_data_title" msgid="7255058703417796578">"Správa rychlosti připojení"</string>
     <string name="pref_data_preload_title" msgid="4479320472980292873">"Předběžné načítání výsledků vyhledávání"</string>
   <string-array name="pref_data_preload_choices">
@@ -281,7 +288,7 @@
     <item msgid="1791664748778640002">"Pouze v sítích Wi-Fi"</item>
     <item msgid="3944061253437827617">"Vždy"</item>
   </string-array>
-    <string name="pref_data_preload_summary" msgid="3809168910751382727">"Umožní prohlížeči předběžně načítat pravděpodobné výsledky vyhledávání na pozadí"</string>
+    <string name="pref_data_preload_summary" msgid="3809168910751382727">"Umožní prohlížeči předem načítat pravděpodobné výsledky vyhledávání na pozadí"</string>
     <string name="pref_data_preload_dialogtitle" msgid="8421297746110796536">"Předběžné načítání výsledků vyhledávání"</string>
     <string name="pref_link_prefetch_title" msgid="4123685219009241072">"Předběžné načítání webstránek"</string>
   <string-array name="pref_link_prefetch_choices">
@@ -289,40 +296,48 @@
     <item msgid="1908465963242077428">"Pouze v sítích Wi-Fi"</item>
     <item msgid="7647277566998527142">"Vždy"</item>
   </string-array>
-    <string name="pref_link_prefetch_summary" msgid="6558181497993206817">"Povolit prohlížeči předběžně na pozadí načítat webové stránky z odkazů"</string>
+    <string name="pref_link_prefetch_summary" msgid="6558181497993206817">"Povolit prohlížeči předem načítat webové stránky z odkazů na pozadí"</string>
     <string name="pref_link_prefetch_dialogtitle" msgid="3804646141622839765">"Předběžné načítání webstránek"</string>
-    <string name="browserFrameNetworkErrorLabel" msgid="8102515020625680714">"Problém s připojením"</string>
+    <string name="pref_video_preload_title">Předběžné načítání videa</string>
+    <string-array name="pref_video_preload_choices">
+        <item>Nikdy</item>
+        <item>Pouze v sítích Wi-Fi</item>
+        <item>Vždy</item>
+    </string-array>
+    <string name="pref_video_preload_summary">Umožní prohlížečí předem načítat video pokud to umožňuje server</string>
+    <string name="pref_video_preload_dialogtitle">Předběžné načítání videa</string>
+    <string name="browserFrameNetworkErrorLabel">Problém s připojením</string>
     <string name="browserFrameFileErrorLabel" msgid="4703792279852977350">"Problém se souborem"</string>
     <string name="browserFrameFormResubmitLabel" msgid="2385512101948178841"></string>
-    <string name="browserFrameFormResubmitMessage" msgid="5244059279866705254">"Stránka, kterou se pokoušíte zobrazit, obsahuje data, která již byla odeslána (POSTDATA). Pokud data odešlete znovu, jakákoli akce vykonaná pomocí formuláře na stránce se provede znovu (např. hledání či nákup online)."</string>
+    <string name="browserFrameFormResubmitMessage" msgid="5244059279866705254">"Stránka, kterou se pokoušíte zobrazit, obsahuje data, která již byla odeslána (\u201ePOST\u201c). Pokud data odešlete znovu, jakákoli akce vykonaná pomocí formuláře na stránce se provede znovu (např. hledání či nákup online)."</string>
     <string name="loadSuspendedTitle" msgid="6453376579109644551">"Žádné připojení"</string>
-    <string name="loadSuspended" msgid="3843343290039218668">"Prohlížeč nemůže tuto stránku načíst, protože není k dispozici připojení k internetu."</string>
+    <string name="loadSuspended" msgid="3843343290039218668">"Prohlížeč nemůže načíst tuto stránku, protože není k dispozici připojení k internetu."</string>
     <string name="clear_history" msgid="5998307092715979619">"Vymazat historii"</string>
     <string name="browser_history" msgid="2979476257919939232">"Nedávno navštívené stránky"</string>
     <string name="empty_history" msgid="7013369425484218985">"Žádná historie prohlížeče."</string>
     <string name="go_home" msgid="109129207276086793">"Domovská stránka"</string>
     <string name="add_new_bookmark" msgid="3158497555612337238">"Přidat záložku"</string>
     <string name="add_bookmark_short" msgid="3783984330998103735">"Přidat"</string>
-    <string name="search_hint" msgid="4647356319916631820">"Zadejte adresu URL"</string>
+    <string name="search_hint" msgid="4647356319916631820">"Vyhledávání nebo adresa URL"</string>
     <string name="search_button_text" msgid="5235226933877634410">"Přejít"</string>
     <string name="search_settings_description" msgid="1422401062529014107">"Záložky a webová historie"</string>
     <string name="popup_window_attempt" msgid="31565781154067629">"Umožnit tomuto webu otevřít vyskakovací okno?"</string>
     <string name="allow" msgid="1157313689171991335">"Povolit"</string>
     <string name="block" msgid="9172175889884707800">"Blokovat"</string>
-    <string name="too_many_windows_dialog_title" msgid="5709782301477380438">"Bylo dosaženo maximálního počtu karet"</string>
-    <string name="too_many_windows_dialog_message" msgid="3644234634638290304">"Novou kartu bude možné otevřít až poté, co některou stávající zavřete."</string>
+    <string name="too_many_windows_dialog_title" msgid="5709782301477380438">"Bylo dosaženo maximálního počtu panelů"</string>
+    <string name="too_many_windows_dialog_message" msgid="3644234634638290304">"Nový panelu bude možné otevřít až poté, co některý stávající zavřete."</string>
     <string name="too_many_subwindows_dialog_title" msgid="3805453941587725944">"Vyskakovací okno je již otevřené"</string>
-    <string name="too_many_subwindows_dialog_message" msgid="2164725447981195556">"Otevřené může být vždy pouze jedno vyskakovací okno."</string>
+    <string name="too_many_subwindows_dialog_message" msgid="2164725447981195556">"Může být otevřeno pouze jedno vyskakovací okno."</string>
     <string name="download_no_sdcard_dlg_title" product="nosdcard" msgid="56777245081568508">"Úložiště USB nedostupné"</string>
     <string name="download_no_sdcard_dlg_title" product="default" msgid="605904452159416792">"Žádná karta SD"</string>
     <string name="download_no_sdcard_dlg_msg" product="nosdcard" msgid="3144652102051031721">"Ke stažení souboru <xliff:g id="FILENAME">%s</xliff:g> je potřeba úložiště USB."</string>
-    <string name="download_no_sdcard_dlg_msg" product="default" msgid="2616399456116301518">"Na kartu SD je třeba stáhnout soubor <xliff:g id="FILENAME">%s</xliff:g>."</string>
+    <string name="download_no_sdcard_dlg_msg" product="default" msgid="2616399456116301518">"Ke stažení souboru <xliff:g id="FILENAME">%s</xliff:g> je potřeba karta SD."</string>
     <string name="download_sdcard_busy_dlg_title" product="nosdcard" msgid="8081445664689818973">"Úložiště USB nedostupné"</string>
     <string name="download_sdcard_busy_dlg_title" product="default" msgid="6877712666046917741">"Karta SD není dostupná"</string>
-    <string name="download_sdcard_busy_dlg_msg" product="nosdcard" msgid="8412543086906716875">"Úložiště USB je zaneprázdněno. Chcete-li povolit stahování, dotkněte se v oznámení možnosti Vypnout úložiště USB."</string>
-    <string name="download_sdcard_busy_dlg_msg" product="default" msgid="2629425950473358591">"Karta SD je zaneprázdněna. Chcete-li povolit stahování, dotkněte se v oznámení možnosti Vypnout úložiště USB."</string>
-    <string name="cannot_download" msgid="8150552478556798780">"Lze stahovat pouze adresy URL začínající jako http nebo https."</string>
-    <string name="download_pending" msgid="2599683668575349559">"Zahájení stahování..."</string>
+    <string name="download_sdcard_busy_dlg_msg" product="nosdcard" msgid="8412543086906716875">"Úložiště USB je zaneprázdněno. Chcete-li povolit stahování, dotkněte se v oznámení možnosti \u201eVypnout úložiště USB\u201c."</string>
+    <string name="download_sdcard_busy_dlg_msg" product="default" msgid="2629425950473358591">"Karta SD je zaneprázdněna. Chcete-li povolit stahování, dotkněte se v oznámení možnosti \u201eVypnout úložiště USB\u201c."</string>
+    <string name="cannot_download" msgid="8150552478556798780">"Lze stahovat pouze URL adresy začínající na \u201ehttp\u201c nebo \u201ehttps\u201c."</string>
+    <string name="download_pending" msgid="2599683668575349559">"Zahájení stahování\u2026"</string>
     <string name="search_the_web" msgid="6046130189241962337">"Vyhledat na webu"</string>
     <string name="webstorage_outofspace_notification_title" msgid="1160474608059771788">"Paměť prohlížeče je plná"</string>
     <string name="webstorage_outofspace_notification_text" msgid="47273584426988640">"Dotykem uvolníte místo."</string>
@@ -330,8 +345,8 @@
     <string name="webstorage_clear_data_dialog_message" msgid="6200681632891775881">"Smazat veškerá data uložená tímto webem?"</string>
     <string name="webstorage_clear_data_dialog_ok_button" msgid="6682570951259237542">"OK"</string>
     <string name="webstorage_clear_data_dialog_cancel_button" msgid="2028867751958942762">"Zrušit"</string>
-    <string name="webstorage_origin_summary_mb_stored" msgid="1985885826292236210">"MB uloženo ve vašem telefonu"</string>
-    <string name="loading_video" msgid="7886324933131962321">"Načítání videa..."</string>
+    <string name="webstorage_origin_summary_mb_stored" msgid="1985885826292236210">"Počet MB uložených v zařízení"</string>
+    <string name="loading_video" msgid="7886324933131962321">"Načítání videa\u2026"</string>
     <string name="geolocation_permissions_prompt_message" msgid="356796102004052471">"<xliff:g id="WEBSITE_ORIGIN">%s</xliff:g> žádá informace o vaší poloze"</string>
     <string name="geolocation_permissions_prompt_share" msgid="9084486342048347976">"Sdílet polohu"</string>
     <string name="geolocation_permissions_prompt_dont_share" msgid="6303025160237860300">"Odmítnout"</string>
@@ -348,9 +363,9 @@
     <string name="website_settings_clear_all_dialog_message" msgid="1551164275687475061">"Smazat všechna data webových stránek a oprávnění přistupovat k informacím o poloze?"</string>
     <string name="website_settings_clear_all_dialog_ok_button" msgid="7858504776529106243">"OK"</string>
     <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"Zrušit"</string>
-    <string name="progress_dialog_setting_wallpaper" msgid="2031391201442335889">"Nastavování tapety..."</string>
+    <string name="progress_dialog_setting_wallpaper" msgid="2031391201442335889">"Nastavování tapety\u2026"</string>
     <string name="defaultBookmarksUpButton" msgid="2303951020715704735">"Záložky"</string>
-    <string name="empty_bookmarks_folder" msgid="6239830231917618556">"Žádné záložky"</string>
+    <string name="empty_bookmarks_folder" msgid="6239830231917618556">"Žádné záložky."</string>
     <string name="other_bookmarks" msgid="8021889794475657319">"Jiné záložky"</string>
     <string name="rlz_access_point" msgid="7165847807377650632">"Y1"</string>
     <string name="account_chooser_dialog_title" msgid="3314204833188808194">"Vyberte účet"</string>
@@ -368,50 +383,33 @@
     <string name="import_bookmarks_dialog_add" msgid="1743359725294101189">"Přidat záložky do účtu Google"</string>
     <string name="import_bookmarks_dialog_import" msgid="6933613853573899218">"Přidat všechny záložky systému Android do záložek účtu <xliff:g id="GOOGLE_ACCOUNT">%s</xliff:g>"</string>
     <string name="menu_share_url" msgid="5851814357333739700">"Sdílet"</string>
-    <string name="max_tabs_warning" msgid="4122034303809457570">"Žádné další karty nejsou k dispozici"</string>
+    <string name="max_tabs_warning" msgid="4122034303809457570">"Další panel není k dispozici"</string>
     <string name="instant_search_label" msgid="8769284297650716935">"Google s dynamickým vyhledáváním (experimentální funkce)"</string>
     <string name="preview" msgid="6450823514561689038">"Náhled"</string>
     <string name="local_bookmarks" msgid="533816851415228520">"Lokální"</string>
-    <string name="ua_switcher_desktop" msgid="220097077327558435">"Verze webu pro PC"</string>
+    <string name="ua_switcher_desktop" msgid="220097077327558435">"Verze webu pro desktop"</string>
     <string name="permission_preload_label" msgid="4856971662337877316">"Předběžné načítání výsledků"</string>
     <string name="empty_snapshots_folder" msgid="7675378008107026013">"Žádné uložené stránky."</string>
     <string name="remove_snapshot" msgid="1624447424544976849">"Smazat uloženou stránku"</string>
     <string name="snapshot_go_live" msgid="1209542802541168497">"Přejít online"</string>
-    <string name="accessibility_button_back" msgid="6194680634245279407">"Předchozí"</string>
-    <string name="accessibility_button_forward" msgid="1236827218480658168">"Další"</string>
+    <string name="accessibility_button_back" msgid="6194680634245279407">"Vzad"</string>
+    <string name="accessibility_button_forward" msgid="1236827218480658168">"Vpřed"</string>
     <string name="accessibility_button_refresh" msgid="1023441396241841313">"Obnovit stránku"</string>
     <string name="accessibility_button_stop" msgid="6793644120043222148">"Přerušit načítání stránky"</string>
     <string name="accessibility_button_addbookmark" msgid="4787844912630006181">"Přidat stránku do záložek"</string>
     <string name="accessibility_button_search" msgid="5357014102136055376">"Vyhledat"</string>
     <string name="accessibility_button_voice" msgid="152016375096083337">"Spustit hlasové vyhledávání"</string>
     <string name="accessibility_button_bookmarks" msgid="7435055677299151649">"Záložky"</string>
-    <string name="accessibility_button_closetab" msgid="6954807842756927737">"Zavřít kartu"</string>
-    <string name="accessibility_button_newtab" msgid="4116986240706315748">"Otevřít novou kartu"</string>
-    <string name="accessibility_button_newincognitotab" msgid="5254901889040012964">"Otevřít novou anonymní kartu"</string>
+    <string name="accessibility_button_closetab" msgid="6954807842756927737">"Zavřít panel"</string>
+    <string name="accessibility_button_newtab" msgid="4116986240706315748">"Otevřít nový panel"</string>
+    <string name="accessibility_button_newincognitotab" msgid="5254901889040012964">"Otevřít nový anonymní panel"</string>
     <string name="accessibility_button_clear" msgid="6943152307986161598">"Vymazat vstup"</string>
-    <string name="accessibility_button_uaswitch" msgid="6286804719724282339">"Přepnout identifikátor robota"</string>
+    <string name="accessibility_button_uaswitch" msgid="6286804719724282339">"Přepnout vlastní identifikaci"</string>
     <string name="accessibility_button_go" msgid="1182818872083055958">"Spustit"</string>
+    <string name="accessibility_button_homescreen">Plocha</string>
     <string name="accessibility_button_navscreen" msgid="9142904748728713075">"Správce stránek"</string>
     <string name="accessibility_button_more" msgid="3054251446394224216">"Další možnosti"</string>
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Anonymní stránka"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Uložená stránka"</string>
-    <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Správa karet"</string>
-
-    <!-- Update for JB -->
-    <string name="close_other_tabs">Zavřít ostatní karty</string>
-    <string name="contextmenu_openlink_incognito_newwindow">Otevřít v nové inkonginto kartě</string>
-    <string name="contextmenu_openlink_incognito_newwindow_background">Otevřít v nové inkonginto kartě na pozadí</string>
-    <string name="pref_content_ua">User agent</string>
-    <string name="pref_content_ua_summary">Zvolte user agenta</string>
-    <string name="pref_lab_webgl">WebGL</string>
-    <string name="pref_lab_webgl_summary">Povolit WebGL</string>
-    <string name="pref_video_preload_title">Přednačítání videa</string>
-    <string-array name="pref_video_preload_choices">
-        <item>Nikdy</item>
-        <item>Jenom na Wi-Fi</item>
-        <item>Vždy</item>
-    </string-array>
-    <string name="pref_video_preload_summary">Povolit prohlížeči přednačítat video, pokud to server umožňuje</string>
-    <string name="pref_video_preload_dialogtitle">Přednačítat video</string>
-    <string name="accessibility_button_homescreen">Domovská obrazovka</string>
+    <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Správa panelů"</string>
 </resources>
