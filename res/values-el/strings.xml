@@ -396,4 +396,36 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Σελίδα για ανώνυμη περιήγηση"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Αποθηκευμένη σελίδα"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Διαχείριση καρτέλας"</string>
+
+    <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
+    <string name="accessibility_button_homescreen">Αρχική οθόνη</string>
+
+    <!-- Menu item to close all other tabs [CHAR LIMIT=40] -->
+    <string name="close_other_tabs">Κλείσιμο όλων των καρτελών</string>
+
+    <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
+    <string name="contextmenu_openlink_incognito_newwindow">Άνοιγμα σε νέα καρτέλα incognito</string>
+    <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
+    <string name="contextmenu_openlink_incognito_newwindow_background">Άνοιγμα σε νέα καρτέλα incognito στο παρασκήνιο</string>
+
+    <!-- User agent summary -->
+    <string name="pref_content_ua_summary">Επιλέξτε έναν user agent</string>
+
+    <!-- Title for video preloading [CHAR LIMIT=40] -->
+    <string name="pref_video_preload_title">Προφόρτωση βίντεο</string>
+    <!-- Video preloading options [CHAR LIMIT=20] -->
+    <string-array name="pref_video_preload_choices">
+        <item>Ποτέ</item>
+        <item>Μόνο στο WiFi</item>
+        <item>Πάντα</item>
+    </string-array>
+    <!-- Summary for video preloading [CHAR LIMIT=80] -->
+    <string name="pref_video_preload_summary">Να επιτρέπεται η προφόρτωση βίντεο στο παρασκήνιο από το πρόγραμμα περιήγησης</string>
+    <!-- Title of dialog for video preloading [CHAR LIMIT=40] -->
+    <string name="pref_video_preload_dialogtitle">Προφόρτωση βίντεο</string>
+
+    <!-- Summary for the WebGL lab feature [CHAR LIMIT=120] -->
+    <string name="pref_lab_webgl_summary">Ενεργοποίηση WebGL</string>
 </resources>
