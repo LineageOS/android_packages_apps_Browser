@@ -277,7 +277,7 @@
     <string name="pref_lab_webgl_summary">Activer WebGL</string>
 
     <string name="pref_lab_quick_controls" msgid="3267606522082281367">"Commandes rapides"</string>
-    <string name="pref_lab_quick_controls_summary" msgid="3149664132600968775">"Faites glisser votre pouce vers droite ou gauche pour ouvrir les commandes rapides et masquer les barres des applis/URL."</string>
+    <string name="pref_lab_quick_controls_summary" msgid="3149664132600968775">"Faites glisser votre pouce vers la droite ou la gauche pour ouvrir les commandes rapides et masquer les barres des applis/URL."</string>
     <string name="pref_use_instant_search" msgid="1119176077760723740">"Recherche instantanée Google"</string>
     <string name="pref_use_instant_search_summary" msgid="839320474961917522">"Affichez plus de résultats lors de la saisie avec la recherche instantanée Google. Peut utiliser plus de données."</string>
     <string name="pref_lab_fullscreen" msgid="8173609016657987973">"Plein écran"</string>
