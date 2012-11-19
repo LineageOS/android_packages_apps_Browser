@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAa3//7iY\u003d",
+        "filename": "res/values-el/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 408,
+      "author": {
+        "id": 4653
+      },
+      "writtenOn": "2012-11-19T21:30:13Z",
+      "side": 1,
+      "message": "Maybe \"incognito\" should stay in English, as it is not translated in Greek anyways :)",
+      "revId": "bd0866cb8508b63451b8d05388fbf4f7426e73d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAa3//7iU\u003d",
+        "filename": "res/values-el/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 411,
+      "author": {
+        "id": 4653
+      },
+      "writtenOn": "2012-11-19T21:30:13Z",
+      "side": 1,
+      "message": "Same as the previous comment regarding \"Incognito\" word",
+      "revId": "bd0866cb8508b63451b8d05388fbf4f7426e73d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
