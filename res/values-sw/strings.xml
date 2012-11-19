@@ -78,10 +78,10 @@
     <string name="remove_bookmark" msgid="8407495852801410891">"Futa  alamisho"</string>
     <string name="remove_from_bookmarks" msgid="4374080666576982775">"Ondoa kutoka kwa alamisho"</string>
     <string name="remove_history_item" msgid="5021424935726728618">"Ondoa kwenye historia"</string>
-    <string name="set_as_homepage" msgid="4752937379414905560">"Weka uwe ukurasa wa nyumbani"</string>
+    <string name="set_as_homepage" msgid="4752937379414905560">"Weka uwe ukurasa wa kwanza"</string>
     <string name="bookmark_saved" msgid="2766434679871317557">"Imehifadhiwa kwa alamisho"</string>
     <string name="bookmark_not_saved" msgid="1077732557310662080">"Haikuweza kuhifadhi alamamisho."</string>
-    <string name="homepage_set" msgid="8768087280310966395">"Ukurasa wa nyumbani umewekwa."</string>
+    <string name="homepage_set" msgid="8768087280310966395">"Ukurasa wa kwanza umewekwa."</string>
     <string name="bookmark_needs_title" msgid="6245900436119218187">"Alamisho lazima iwe na jina."</string>
     <string name="bookmark_needs_url" msgid="7809876865972755158">"Alamisho lazima iwe na mahali."</string>
     <string name="bookmark_url_not_valid" msgid="4917440933384496211">"URL hii si halali."</string>
@@ -94,6 +94,7 @@
     <string name="open_all_in_new_window" msgid="455786763426575293">"Fungua zote kwenye vichupo vipya"</string>
     <string name="goto_dot" msgid="3895839050522602723">"Nenda"</string>
     <string name="select_dot" msgid="6299170761900561967">"Chagua maandishi"</string>
+    <string name="close_other_tabs" msgid="7693157495148282778">"Funga vichupo vingine"</string>
     <string name="bookmarks" msgid="1961279134885867815">"Alamisho"</string>
     <string name="shortcut_bookmark" msgid="3974876480401135895">"Alamisho"</string>
     <string name="shortcut_bookmark_title" msgid="7570786275916681296">"Chagua alamisho"</string>
@@ -126,7 +127,7 @@
     <string name="browser_bookmarks_page_bookmarks_text" msgid="6787605028726162673">"Alamisho"</string>
     <string name="menu_preferences" msgid="6709237687234102240">"Mipangilio"</string>
     <string name="pref_content_title" msgid="3834107397725342174">"Maudhui ya ukurasa"</string>
-    <string name="pref_allow_apptabs" msgid="1325989799080202871">"Ruhusu vihupo vingi kwa programu moja"</string>
+    <string name="pref_allow_apptabs" msgid="1325989799080202871">"Ruhusu vichupo vingi kwa programu moja"</string>
     <string name="pref_content_load_images" msgid="2125616852957377561">"Pakia picha"</string>
     <string name="pref_content_load_images_summary" msgid="5055874125248398584">"Onyesha picha kwenye kurasa za wavuti"</string>
     <string name="pref_content_block_popups" msgid="4158524847764470895">"Zuia madirisha ibukizi"</string>
@@ -139,7 +140,7 @@
     <item msgid="8547442717307793863">"Zima"</item>
   </string-array>
     <string name="pref_content_open_in_background_summary" msgid="955411158407739504">"Fungua tabo vipya nyuma ya tabo ya sasa"</string>
-    <string name="pref_content_homepage" msgid="3324574611613105696">"Weka ukurasa wa nyumbani"</string>
+    <string name="pref_content_homepage" msgid="3324574611613105696">"Weka ukurasa wa kwanza"</string>
     <string name="pref_content_search_engine" msgid="1620101310821644144">"Weka injini tafuti"</string>
     <string name="pref_content_search_engine_summary" msgid="304003941861818133">"Chagua injini tafuti"</string>
     <string name="pref_set_homepage_to" msgid="7838684355145561242">"Weka kwa"</string>
@@ -269,7 +270,7 @@
     <string name="pref_font_size_category" msgid="6683754355084218254">"Ukubwa wa maandishi"</string>
     <string name="pref_lab_title" msgid="5571091610359629423">"Maabara"</string>
     <string name="pref_lab_quick_controls" msgid="3267606522082281367">"Vidhibiti vya Haraka"</string>
-    <string name="pref_lab_quick_controls_summary" msgid="3149664132600968775">"Telea gumba kutoka pambizo ya kushoto au kulia ili kufungua vidhibiti na kuficha prog na mwambaa za URL"</string>
+    <string name="pref_lab_quick_controls_summary" msgid="3149664132600968775">"Telea gumba kutoka pambizo ya kushoto au kulia ili kufungua vidhibiti na kuficha programu na mwambaa za URL"</string>
     <string name="pref_use_instant_search" msgid="1119176077760723740">"Google Instant"</string>
     <string name="pref_use_instant_search_summary" msgid="839320474961917522">"Tumia Google Instant unapotumia Utafutaji wa Google, ili kuonyesha matokeo unapoendelea kuchapa (hii inaweza kuongeza matumizi ya data)."</string>
     <string name="pref_lab_fullscreen" msgid="8173609016657987973">"Skrini nzima"</string>
@@ -296,11 +297,11 @@
     <string name="browserFrameFormResubmitLabel" msgid="2385512101948178841"></string>
     <string name="browserFrameFormResubmitMessage" msgid="5244059279866705254">"Ukurasa unaojaribu kuangalia ina data ambayo tayari imewasilishwa (\"POSTDATA\"). Ukituma data tena, kitendo chochote ambacho fomu kwenye ukurasa ilitekeleza (kama vile utafutaji au ununuzi kwenye wavuti) kitarudiwa."</string>
     <string name="loadSuspendedTitle" msgid="6453376579109644551">"Hakuna muunganisho"</string>
-    <string name="loadSuspended" msgid="3843343290039218668">"Kivinjari haiwezi kupakia ukurasa huu kwa sababu hakuna muunganisho wa Tovuti."</string>
+    <string name="loadSuspended" msgid="3843343290039218668">"Kivinjari haiwezi kupakia ukurasa huu kwa sababu hakuna muunganisho wa Intaneti."</string>
     <string name="clear_history" msgid="5998307092715979619">"Futa historia"</string>
     <string name="browser_history" msgid="2979476257919939232">"Kurasa zilizotembelewa hivi karibuni"</string>
     <string name="empty_history" msgid="7013369425484218985">"Hakuna historia ya kivinjari."</string>
-    <string name="go_home" msgid="109129207276086793">"Ukurasa wa nyumbani"</string>
+    <string name="go_home" msgid="109129207276086793">"Ukurasa wa kwanza"</string>
     <string name="add_new_bookmark" msgid="3158497555612337238">"Ongeza alamisho"</string>
     <string name="add_bookmark_short" msgid="3783984330998103735">"Ongeza"</string>
     <string name="search_hint" msgid="4647356319916631820">"Tafuta au chapisha URL"</string>
@@ -396,4 +397,5 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Ukurasa fiche"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Ukurasa uliohifadhiwa"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Usimamiaji kichupo"</string>
+    <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Folda ya awali"</string>
 </resources>

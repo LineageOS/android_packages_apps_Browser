@@ -376,8 +376,12 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         syncManagedSettings();
         if (PREF_SEARCH_ENGINE.equals(key)) {
             updateSearchEngine(false);
+        } else if (PREF_FULLSCREEN.equals(key)) {
+            if (mController != null && mController.getUi() != null) {
+                mController.getUi().setFullscreen(useFullscreen());
+            }
         } else if (PREF_ENABLE_QUICK_CONTROLS.equals(key)) {
-            if (mController.getUi() != null) {
+            if (mController != null && mController.getUi() != null) {
                 mController.getUi().setUseQuickControls(sharedPreferences.getBoolean(key, false));
             }
         } else if (PREF_LINK_PREFETCH.equals(key)) {
@@ -507,7 +511,12 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
                 .clear()
                 .putLong(GoogleAccountLogin.PREF_AUTOLOGIN_TIME, gal)
                 .apply();
+        resetCachedValues();
         syncManagedSettings();
+    }
+
+    private void resetCachedValues() {
+        updateSearchEngine(false);
     }
 
     public AutoFillProfile getAutoFillProfile() {
@@ -823,6 +832,10 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 
     public boolean useMostVisitedHomepage() {
         return HomeProvider.MOST_VISITED.equals(getHomePage());
+    }
+
+    public boolean useFullscreen() {
+        return mPrefs.getBoolean(PREF_FULLSCREEN, false);
     }
 
     public boolean useInvertedRendering() {

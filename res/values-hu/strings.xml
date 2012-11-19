@@ -94,7 +94,7 @@
     <string name="open_all_in_new_window" msgid="455786763426575293">"Összes megnyitása új lapon"</string>
     <string name="goto_dot" msgid="3895839050522602723">"Ugrás"</string>
     <string name="select_dot" msgid="6299170761900561967">"Szöveg kijelölése"</string>
-    <string name="close_other_tabs">Többi lap bezárása</string>
+    <string name="close_other_tabs" msgid="7693157495148282778">"Többi lap bezárása"</string>
     <string name="bookmarks" msgid="1961279134885867815">"Könyvjelzők"</string>
     <string name="shortcut_bookmark" msgid="3974876480401135895">"Könyvjelző"</string>
     <string name="shortcut_bookmark_title" msgid="7570786275916681296">"Válasszon egy könyvjelzőt"</string>
@@ -412,4 +412,5 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Inkognitóoldal"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Mentett oldal"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Lapkezelés"</string>
+    <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Előző mappa"</string>
 </resources>

@@ -21,7 +21,6 @@ import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -53,11 +52,12 @@ public class DownloadHandler {
      * @param userAgent User agent of the downloading application.
      * @param contentDisposition Content-disposition http header, if present.
      * @param mimetype The mimetype of the content reported by the server
+     * @param referer The referer associated with the downloaded url
      * @param privateBrowsing If the request is coming from a private browsing tab.
      */
     public static void onDownloadStart(Activity activity, String url,
             String userAgent, String contentDisposition, String mimetype,
-            boolean privateBrowsing) {
+            String referer, boolean privateBrowsing) {
         // if we're dealing wih A/V content that's not explicitly marked
         //     for download, check if it's streamable.
         if (contentDisposition == null
@@ -67,7 +67,6 @@ public class DownloadHandler {
             //     that matches.
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setDataAndType(Uri.parse(url), mimetype);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             ResolveInfo info = activity.getPackageManager().resolveActivity(intent,
                     PackageManager.MATCH_DEFAULT_ONLY);
             if (info != null) {
@@ -96,7 +95,7 @@ public class DownloadHandler {
             }
         }
         onDownloadStartNoStream(activity, url, userAgent, contentDisposition,
-                mimetype, privateBrowsing);
+                mimetype, referer, privateBrowsing);
     }
 
     // This is to work around the fact that java.net.URI throws Exceptions
@@ -137,11 +136,12 @@ public class DownloadHandler {
      * @param userAgent User agent of the downloading application.
      * @param contentDisposition Content-disposition http header, if present.
      * @param mimetype The mimetype of the content reported by the server
+     * @param referer The referer associated with the downloaded url
      * @param privateBrowsing If the request is coming from a private browsing tab.
      */
     /*package */ static void onDownloadStartNoStream(Activity activity,
             String url, String userAgent, String contentDisposition,
-            String mimetype, boolean privateBrowsing) {
+            String mimetype, String referer, boolean privateBrowsing) {
 
         String filename = URLUtil.guessFileName(url,
                 contentDisposition, mimetype);
@@ -204,6 +204,8 @@ public class DownloadHandler {
         // old percent-encoded url.
         String cookies = CookieManager.getInstance().getCookie(url, privateBrowsing);
         request.addRequestHeader("cookie", cookies);
+        request.addRequestHeader("User-Agent", userAgent);
+        request.addRequestHeader("Referer", referer);
         request.setNotificationVisibility(
                 DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
         if (mimetype == null) {

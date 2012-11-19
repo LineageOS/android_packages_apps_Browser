@@ -94,6 +94,7 @@
     <string name="open_all_in_new_window" msgid="455786763426575293">"Mở tất cả dấu trang trong tab mới"</string>
     <string name="goto_dot" msgid="3895839050522602723">"Đến"</string>
     <string name="select_dot" msgid="6299170761900561967">"Chọn văn bản"</string>
+    <string name="close_other_tabs" msgid="7693157495148282778">"Đóng các tab khác"</string>
     <string name="bookmarks" msgid="1961279134885867815">"Dấu trang"</string>
     <string name="shortcut_bookmark" msgid="3974876480401135895">"Dấu trang"</string>
     <string name="shortcut_bookmark_title" msgid="7570786275916681296">"Chọn dấu trang"</string>
@@ -396,4 +397,5 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Trang ẩn danh"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Trang đã lưu"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Quản lý tab"</string>
+    <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Thư mục trước"</string>
 </resources>

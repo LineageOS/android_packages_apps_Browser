@@ -13,882 +13,390 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- The name of the application. -->
-    <string name="application_name">Selain</string>
-    <!-- Displayed with a file picker to choose a file to upload -->
-    <string name="choose_upload">Valitse lähetettävä tiedosto</string>
-    <!-- Toast to show the user after they try to open the file picker but no apps on the
-         system can provide a file [CHAR-LIMIT=NONE]-->
-    <string name="uploads_disabled">Tiedostojen lähettäminen ei ole käytössä.</string>
-    <!-- Name of menu item of a new tab.  Also used in the title bar when displaying a new tab -->
-    <string name="new_tab">Uusi välilehti</string>
-    <!-- Name of menu item of a new incognito tab.  Also used in the
-         title bar when displaying a new tab [CHAR LIMIT=30] -->
-    <string name="new_incognito_tab">Uusi incognito-välilehti</string>
-    <!-- Name of tab containing bookmarks -->
-    <string name="tab_bookmarks">Kirjanmerkit</string>
-    <!-- Name of tab containing the user's most visited websites, organized by number of visits -->
-    <string name="tab_most_visited">Avatuimmat</string>
-    <!-- Name of tab containing the user's complete history, organized by time of last visit -->
-    <string name="tab_history">Historia</string>
-    <!-- Name of tab containing the user's saved pages, organized by time created [CHAR LIMIT=20] -->
-    <string name="tab_snapshots">Tallennetut sivut</string>
-    <!-- Toast shown when a history item's star is clicked, converting it to a bookmark -->
-    <string name="added_to_bookmarks">Lisätty kirjanmerkkeihin.</string>
-    <!-- Toast shown when a history item's star is clicked off, removing its bookmark -->
-    <string name="removed_from_bookmarks">Poistettu kirjanmerkeistä.</string>
-    <!-- Sign-in dialog -->
-    <!-- This is used as the title of a dialog which is used to sign in to a secure site.
-            "%s1"is replaced with the host and "%s2" with realm -->
-    <string name="sign_in_to">Kirjaudu sisään palvelimelle <xliff:g id="hostname">%s1</xliff:g> \"<xliff:g id="realm">%s2</xliff:g>\"</string>
-    <!-- Prompt for an input box that allows the user to enter their login name -->
-    <string name="username">Käyttäjätunnus</string>
-    <!-- Prompt for an input box that allows the user to enter their password -->
-    <string name="password">Salasana</string>
-    <!-- The label on the "sign in" button -->
-    <string name="action">Kirjaudu sisään</string>
-    <!-- The name of the bookmarks and history search suggestion source.  -->
-    <string name="bookmarks_search">Selain</string>
-    <!-- Label for a cancel button.  It is used for multiple cancel buttons in different contexts -->
-    <string name="cancel">Peruuta</string>
-    <!-- Label for a confirm button.  Used in multiple contexts. -->
-    <string name="ok">OK</string>
+ -->
 
-    <!-- Displayed on the title bar while the page is loading -->
-    <string name="title_bar_loading">Ladataan\u2026</string>
-
-    <!-- Menu item -->
-    <string name="page_info">Sivun tiedot</string>
-    <!-- Label for a button on an SSL error dialog that allows the user to see
-        Page info screen for the current page -->
-    <string name="page_info_view">Näytä sivun tiedot</string>
-    <!-- Page Info dialog strings -->
-    <!-- Noun.  The url for the current page. Displayed on the Page Info
-            screen. -->
-    <string name="page_info_address">Osoite:</string>
-
-    <!-- SSL Error dialogs -->
-    <string name="ssl_warnings_header">Sivuston suojausvarmenteessa on ongelmia.</string>
-    <!-- Label for a button on an SSL error dialog that lets the user continue
-            and view the page despite the error -->
-    <string name="ssl_continue">Jatka</string>
-    <!-- Title for an SSL error dialog  -->
-    <string name="security_warning">Suojausvaroitus</string>
-    <!-- Label for a button on an SSL error dialog that lets the user view the
-        certificate -->
-    <string name="view_certificate">Näytä varmenne</string>
-    <!-- Label for a button on an SSL error dialog that lets the user go back to
-         the last page they were on instead of continuing to the new page. [CHAR-LIMIT=20] -->
-    <string name="ssl_go_back">Takaisin</string>
-
-    <!-- Message in an SSL Error dialog -->
-    <string name="ssl_untrusted">Varmenne ei ole luotetun tahon myöntämä.</string>
-    <!-- Message in an SSL Error dialog -->
-    <string name="ssl_mismatch">Sivuston nimi ei vastaa varmenteessa olevaa nimeä.</string>
-    <!-- Message in an SSL Error dialog -->
-    <string name="ssl_expired">Varmenne ei ole enää voimassa.</string>
-    <!-- Message in an SSL Error dialog -->
-    <string name="ssl_not_yet_valid">Varmenne ei ole vielä voimassa.</string>
-    <!-- Message in an SSL Error dialog -->
-    <string name="ssl_date_invalid">Varmenteen päiväys ei kelpaa.</string>
-    <!-- Message in an SSL Error dialog -->
-    <string name="ssl_invalid">Varmenne on virheellinen.</string>
-    <!-- Message in an SSL Error dialog -->
-    <string name="ssl_unknown">Tuntematon varmennevirhe.</string>
-
-    <!-- Toast informing the user that loading has stopped for the current page. -->
-    <string name="stopping">Keskeytetään\u2026</string>
-    <!-- Menu item to stop the current page from loading. -->
-    <string name="stop">Keskeytä</string>
-    <!-- Menu item to reload or refresh the current page. -->
-    <string name="reload">Päivitä</string>
-    <!-- Menu item to go back to the previous page -->
-    <string name="back">Edellinen</string>
-    <!-- Menu item to go to the next page (only useful if the user has previously hit back.) -->
-    <string name="forward">Seuraava</string>
-    <!-- Button label to confirm saving a bookmark. -->
-    <string name="save">OK</string>
-    <!-- Button label to cancel saving a bookmark. -->
-    <string name="do_not_save">Peruuta</string>
-    <!-- Field label in Bookmark dialog box: refers to URL of the page to bookmark -->
-    <string name="location">Osoite</string>
-    <!-- Field label in Bookmark dialog box: refers to the account to save the bookmark to -->
-    <string name="account">Tili</string>
-    <!-- Field label in Bookmark dialog box: refers to the folder in which to save the bookmark -->
-    <string name="containing_folder">Lisää kansioon</string>
-    <!-- Default name for a new folder and label for a button that allows the user to create a new folder
-         in the add bookmark dialog -->
-    <string name="new_folder">Uusi kansio</string>
-    <!-- Context menu item to edit a folder [CHAR LIMIT=50] -->
-    <string name="edit_folder">Muokkaa kansiota</string>
-    <!-- Context menu item to delete a folder [CHAR LIMIT=50] -->
-    <string name="delete_folder">Poista kansio</string>
-    <!-- Label stating that the currently open folder has no subfolders
-         in the add bookmark dialog [CHAR-LIMIT=none]-->
-    <string name="no_subfolders">Ei alikansioita.</string>
-    <!-- Menu item to use the top level bookmarks folder to save a bookmark in. [CHAR-LIMIT=30]-->
-    <string name="add_to_bookmarks_menu_option">Kirjanmerkit</string>
-    <!-- Menu item to save the newly created bookmark to the home screen. [CHAR-LIMIT=30]-->
-    <string name="add_to_homescreen_menu_option">Kotinäytölle</string>
-    <!-- Menu item to open a picker to determine which folder to save a bookmark in. [CHAR-LIMIT=30]-->
-    <string name="add_to_other_folder_menu_option">Muu kansio</string>
-    <!-- Field label in Bookmark dialog box: title that the user wishes to use for the bookmark -->
-    <string name="name">Nimi</string>
-    <!-- Initial value in Location field in Bookmark dialog box -->
-    <string name="http">http://</string>
-    <!-- Menu item that opens a dialog to save a bookmark for the current page [CHAR LIMIT=30] -->
-    <string name="save_to_bookmarks">Tallenna kirjanmerkkeihin</string>
-    <!-- Title of the dialog to bookmark a page -->
-    <string name="bookmark_this_page">Lisää sivu kirjanmerkkeihin</string>
-    <!-- Option on bookmark dialog to remove the bookmark [CHAR LIMIT=30] -->
-    <string name="remove">Poista</string>
-    <!-- Menu item on the bookmarks page, to edit an existing bookmark -->
-    <string name="edit_bookmark">Muokkaa kirjanmerkkiä</string>
-    <!-- Context menu item to create a shortcut to the bookmark on the desktop [CHAR LIMIT=50] -->
-    <string name="create_shortcut_bookmark">Lisää pikakuvake kotinäytölle</string>
-    <!-- Context menu item to open the currently highlighted bookmark -->
-    <string name="open_bookmark">Avaa</string>
-    <!-- Menu item to remove the currently highlighted bookmark-->
-    <string name="remove_bookmark">Poista kirjanmerkki</string>
-    <!-- Context menu item to remove a history item from bookmarks -->
-    <string name="remove_from_bookmarks">Poista kirjanmerkeistä</string>
-    <!-- Menu item to remove the currently highlighted history entry from the list of previously visited sites -->
-    <string name="remove_history_item">Poista historiasta</string>
-    <!-- Context menu item for setting the bookmark/history item as the homepage -->
-    <string name="set_as_homepage">Aseta aloitussivuksi</string>
-    <!-- Toast informing the user that their action to save a bookmark has succeeded -->
-    <string name="bookmark_saved">Tallennettu kirjanmerkkeihin.</string>
-    <!-- Toast informing the user that their action to save a bookmark did not succeed -->
-    <string name="bookmark_not_saved">Kirjanmerkkiä ei voitu tallentAA.</string>
-    <!-- Toast confirming that the homepage has been set -->
-    <string name="homepage_set">Aloitussivu asetettu.</string>
-    <!-- Error that appears in the title of Bookmark dialog when user selects OK with empty Name field -->
-    <string name="bookmark_needs_title">"Kirjanmerkillä on oltava nimi."</string>
-        <!-- Error that appears in the title of Bookmark dialog when user selects OK with empty Location field -->
-    <string name="bookmark_needs_url">"Kirjanmerkillä on oltava sijainti."</string>
-        <!-- Error that appears in the title of Bookmark dialog when user selects OK with invalid URL -->
-    <string name="bookmark_url_not_valid">Tämä URL ei ole kelvollinen.</string>
-        <!-- Error that appears in the Bookmark dialog when user selects OK with a URL of a type we cannot bookmark -->
-    <string name="bookmark_cannot_save_url">Tätä URL-osoitetta ei voi lisätä kirjanmerkkeihin.</string>
-    <!-- Menu item in the page that displays all bookmarks. It brings up a
-            dialog that allows the user to bookmark the page that the browser is
-            currently on, but is not visible because the bookmarks page is
-            showing. -->
-    <string name="bookmark_page">Lisää viimeksi avattu sivu kirjanmerkkeihin</string>
-    <!-- Menu item in the page that displays all bookmarks.  Switches to
-            a grid view which shows thumbnails [CHAR LIMIT=20] -->
-    <string name="bookmark_thumbnail_view">Pikkukuvat</string>
-    <!-- Menu item in the page that displays all bookmarks.  Switches to a
-            list view which shows titles [CHAR LIMIT=20] -->
-    <string name="bookmark_list_view">Lista</string>
-    <!-- Summary text under the New Bookmark item on the Bookmarks screen.
-            Tells the user that if they select this item, it will bring up a
-            dialog to bookmark the page that the browser is currently viewing,
-            though it is not currently being displayed, since they are viewing
-            the bookmarks screen. -->
-    <string name="current_page">kohteesta\u0020</string>
-    <!-- Confirmation dialog message confirming that the user wishes to delete
-            the bookmark they selected for deletion -->
-    <string name="delete_bookmark_warning">Poistetaanko kirjanmerkki \"<xliff:g id="bookmark">%s</xliff:g>\"?</string>
-    <!-- Context menu item to open every bookmark in a folder in new tabs [CHAR LIMIT=50] -->
-    <string name="open_all_in_new_window">Avaa kaikki uusiin välilehtiin</string>
-    <!-- Menu item to open a dialog which allows the user to enter a url or do search-->
-    <string name="goto_dot">Siirry</string>
-    <!-- Menu item to switch to text selection mode for copy and paste. -->
-    <string name="select_dot">Tekstin valinta</string>
-    <!-- Menu item to close all other tabs [CHAR LIMIT=40] -->
-    <string name="close_other_tabs">Sulje muut välilehdet</string>
-    <!-- Menu item to open the bookmarks page. This is a shorter version that
-            is displayed with an icon -->
-    <string name="bookmarks">Kirjanmerkit</string>
-    <!-- Secondary name for the Activity "BrowserBookmarksPage" -->
-    <string name="shortcut_bookmark">Kirjanmerkki</string>
-    <!-- Title for the activity asking the user to select a bookmark [CHAR LIMIT=50] -->
-    <string name="shortcut_bookmark_title">Valitse kirjanmerkki</string>
-    <!-- Menu item to display the History of previously visited pages -->
-    <string name="history">Historia</string>
-    <!-- Menu item for viewing downloads from the browser -->
-    <string name="menu_view_download">Lataukset</string>
-    <!-- Context menu item for copying the url of the current page from the
-            title bar -->
-    <string name="copy_page_url">Kopioi sivun URL-osoite</string>
-    <!-- Menu item -->
-    <string name="share_page">Jaa sivu</string>
-    <!-- Menu item for saving a page for offline reading. This is a view-only snapshot of the page. [CHAR LIMIT=50] -->
-    <string name="menu_save_snapshot">Tallenna offline-tilassa luettavaksi</string>
-    <!-- Dialog message that is shown while saving a page for offline reading. [CHAR LIMIT=50] -->
-    <string name="saving_snapshot">Tallennetaan\u2026</string>
-    <!-- Toast informing the user that saving the page for offline reading has failed. [CHAR LIMIT=50] -->
-    <string name="snapshot_failed">Ei voitu tallentaa offline-käyttöä varten.</string>
-    <!-- The number of bookmarks in a folder [CHAR LIMT=50] -->
-    <string name="contextheader_folder_bookmarkcount"><xliff:g id="bookmark_count">%d</xliff:g> kirjanmerkkiä</string>
-    <!-- No bookmarks in the folder [CHAR LIMIT=50] -->
-    <string name="contextheader_folder_empty">Tyhjä kansio</string>
-    <!-- Context Menu item open the currently selected link in the current
-            window.-->
-    <string name="contextmenu_openlink">Avaa</string>
-    <!-- Context Menu item to open the currently selected link in a new
-            window. -->
-    <string name="contextmenu_openlink_newwindow">Avaa uudessa välilehdessä</string>
-    <!-- Context Menu item to open the currently selected link in a new
-         background window. [CHAR LIMIT=50] -->
-    <string name="contextmenu_openlink_newwindow_background">Avaa uudessa välilehdessä taustalla</string>
-    <!-- Context Menu item to open the currently selected link in a new
-            incognito window. -->
-    <string name="contextmenu_openlink_incognito_newwindow">Avaa uudessa incognito-välilehdessä</string>
-    <!-- Context Menu item to open the currently selected link in a new
-         background window. [CHAR LIMIT=50] -->
-    <string name="contextmenu_openlink_incognito_newwindow_background">Avaa uudessa incognito-välilehdessä taustalla</string>
-    <!-- Context Menu item to save the webpage referred to by this link to the
-            SD card (external storage) -->
-    <string name="contextmenu_savelink">Tallenna linkki</string>
-    <!-- Context Menu item to send the url of the selected link to someone else,
-            via Gmail or another app [CHAR LIMIT=50] -->
-    <string name="contextmenu_sharelink">Jaa linkki</string>
-    <!-- Context Menu item -->
-    <string name="contextmenu_copy">Kopioi</string>
-    <!-- Context Menu item to copy the url of the selected link to the
-            clipboard -->
-    <string name="contextmenu_copylink">Kopioi linkin URL-osoite</string>
-    <!-- Context Menu item to save the image to external storage -->
-    <string name="contextmenu_download_image">Tallenna kuva</string>
-    <!-- Context Menu item to view the image by itself in the browser -->
-    <string name="contextmenu_view_image">Näytä kuva</string>
-    <!-- Context Menu item to set the image as the home screen wallpaper -->
-    <string name="contextmenu_set_wallpaper">Aseta taustakuvaksi</string>
-
-    <!-- Context Menu item to open the dialer app with the selected phone number
-            -->
-    <string name="contextmenu_dial_dot">Soita\u2026</string>
-    <!-- Context Menu item to add the selected phone number to the address book.
-            -->
-    <string name="contextmenu_add_contact">Lisää yhteystieto</string>
-    <!-- Context Menu item to send an email using the selected email address.-->
-    <string name="contextmenu_send_mail">Lähetä sähköpostia</string>
-    <!-- Context Menu item to show the currently selected address in the Maps
-            application -->
-    <string name="contextmenu_map">Kartta</string>
-
-     <!-- Title of the dialog used for selecting the application that should be
-            used for sharing a link (e.g. Gmail or another app). See also
-            contextmenu_sharelink above -->
-    <string name="choosertitle_sharevia">Jaa sovelluksella</string>
-
-    <!-- Used as the title of dialogs in the Browser Settings confirming that
-            the user wants to clear (cache, history, or cookie data) -->
-    <string name="clear">Poista</string>
-
-    <!-- Part of a sentence that says "Replace <url of existing bookmark> with
-            <url of new bookmark>?" -->
-    <string name="replace">Korvaa</string>
-
-    <!-- Title displayed when the bookmarks page is shown -->
-    <string name="browser_bookmarks_page_bookmarks_text">Kirjanmerkit</string>
-
-
-    <!-- Settings screen strings -->
-    <!-- Menu item to open the Settings screen -->
-    <string name="menu_preferences">Asetukset</string>
-    <!-- Settings screen, section title -->
-    <string name="pref_content_title">Sivun sisältö</string>
-    <!-- Settings label [CHAR LIMIT=45]-->
-    <string name="pref_allow_apptabs">Salli sovelluksille useita välilehtiä</string>
-    <!-- Settings label -->
-    <string name="pref_content_load_images">Lataa kuvat</string>
-    <!-- Settings label -->
-    <string name="pref_content_load_images_summary">Näytä verkkosivujen kuvat</string>
-    <!-- Settings label [CHAR LIMIT=30] -->
-    <string name="pref_content_block_popups">Estä ponnahdusikkunat</string>
-    <!-- Settings label -->
-    <string name="pref_content_javascript">Ota JavaScript käyttöön</string>
-    <!-- Settings label -->
-    <string name="pref_content_open_in_background">Avaa taustalla</string>
-    <!-- Settings label -->
-    <string name="pref_content_plugins">Ota laajennukset käyttöön</string>
-    <!-- Plugin options -->
-    <string-array name="pref_content_plugins_choices">
-        <item>Aina käytössä</item>
-        <item>Tarvittaessa</item>
-        <item>Pois käytöstä</item>
-    </string-array>
-    <!-- Settings summary [CHAR LIMIT=50]-->
-    <string name="pref_content_open_in_background_summary">Avaa uudet välilehdet nykyisen taakse</string>
-    <!-- Settings label [CHAR LIMIT=50] -->
-    <string name="pref_content_homepage">Aseta aloitussivu</string>
-    <!-- Settings label -->
-    <string name="pref_content_search_engine">Aseta hakukone</string>
-    <!-- Settings summary -->
-    <string name="pref_content_search_engine_summary">Valitse hakukone</string>
-    <!-- User agent label -->
-    <string name="pref_content_ua">Käyttäjäagentti</string>
-    <!-- User agent summary -->
-    <string name="pref_content_ua_summary">Valitse käyttäjäagentti</string>
-    <!-- Settings button label that to pick what to set the homepage to [CHAR LIMIT=40] -->
-    <string name="pref_set_homepage_to">Aseta aloitussivuksi</string>
-    <string-array name="pref_homepage_choices">
-        <!-- Setting choice to set the homepage to the current page [CHAR LIMIT=40] -->
-        <item>Nykyinen sivu</item>
-        <!-- Setting choice to set the homepage to a blank page [CHAR LIMIT=40] -->
-        <item>Tyhjä sivu</item>
-        <!-- Setting choice to set the homepage to the default page [CHAR LIMIT=40] -->
-        <item>Oletussivu</item>
-        <!-- Setting choice to set the homepage to the "Most Visited" homepage feature, which is a list of most visited sites [CHAR LIMIT=40] -->
-        <item>Avatuimmat sivustot</item>
-        <!-- Setting choice to set the homepage to a user entered URL [CHAR LIMIT=40] -->
-        <item>Muu</item>
-    </string-array>
-    <!-- Settings label -->
-    <string name="pref_content_autofit">Automaattinen sovitus</string>
-    <!-- Settings summary -->
-    <string name="pref_content_autofit_summary">Muotoile verkkosivut sopimaan ruudulle</string>
-
-    <!-- Settings screen & section title for "General settings". These include things like
-         configuring bookmark syncing to Google servers and form auto fill settings. [CHAR-LIMIT=32] -->
-    <string name="pref_general_title">Yleiset</string>
-    <!-- Settings category for sync under general settings. This includes bookmark sync with Chrome [CHAR-LIMIT=50] -->
-    <string name="pref_general_sync_title">Synkronointi</string>
-    <!-- Settings category for autofill under general. [CHAR-LIMIT=50] -->
-    <string name="pref_general_autofill_title">Automaattinen täyttö</string>
-
-    <!-- Checkbox setting for enabling/disabling the form AutoFill feature [CHAR-LIMIT=32] -->
-    <string name="pref_autofill_enabled">Lomakkeiden automaattinen täyttö</string>
-    <!-- Settings summary for the form AutoFill feature. [CHAR-LIMIT=none] -->
-    <string name="pref_autofill_enabled_summary">Täytä verkkolomakkeita yhdellä kosketuksella</string>
-    <!-- Label for option that when clicked opens the AutoFill settings screen. Also used as the title of that AutoFill Settings screen. [CHAR-LIMIT=32] -->
-    <string name="pref_autofill_profile_editor">Automaattisen täytön teksti</string>
-    <!-- Summary for the AutoFill Settings preference [CHAR-LIMIT=none] -->
-    <string name="pref_autofill_profile_editor_summary">Määritä teksti, jonka haluat täyttää automaattisesti verkkolomakkeisiin</string>
-
-    <!-- Auto login preference title [CHAR-LIMIT=32] -->
-    <string name="pref_autologin_title">Automaattinen Google-kirj.</string>
-    <!-- Message shown during auto login [CHAR-LIMIT=none] -->
-    <string name="pref_autologin_progress">Kirjaudutaan Google-sivustoihin käyttäjänimellä <xliff:g>%s</xliff:g></string>
-    <!-- Auto-login bar description [CHAR-LIMIT=40] -->
-    <string name="autologin_bar_text">Kirjaudu nimellä</string>
-    <!-- Login button [CHAR-LIMIT=10] -->
-    <string name="autologin_bar_login_text">Kirjaudu</string>
-    <!-- Hide button [CHAR-LIMIT=10] -->
-    <string name="autologin_bar_hide_text">Piilota</string>
-    <!-- Login failure text [CHAR-LIMIT=25] -->
-    <string name="autologin_bar_error">Kirjautuminen ei onnistu.</string>
-
-    <!-- Heading for the AutoFill profile editor to tell the user what AutoFill does and why they should fill out the profile. [CHAR-LIMIT=None] -->
-    <string name="autofill_profile_editor_heading">Kirjoita teksti, jonka haluat täyttää automaattisesti verkkolomakkeisiin.</string>
-    <!-- String for the user's full name in the AutoFill profile editor. [CHAR-LIMIT=32] -->
-    <string name="autofill_profile_editor_name">Koko nimi:</string>
-    <!-- String for the user's e-mail address in the AutoFill profile editor. [CHAR-LIMIT=32] -->
-    <string name="autofill_profile_editor_email_address">Sähköposti:</string>
-    <!-- String for the user's company name in the AutoFill profile editor. [CHAR-LIMIT=32] -->
-    <string name="autofill_profile_editor_company_name">Yrityksen nimi:</string>
-    <!-- String for the first line of the user's address in the AutoFill profile editor. [CHAR-LIMIT=32] -->
-    <string name="autofill_profile_editor_address_line_1">Osoiterivi 1:</string>
-    <!-- String to suggest to the user the kind of data to be used for the first line of the address. CHAR-LIMIT=64] -->
-    <string name="autofill_profile_editor_address_line_1_hint">Katuosoite, postilokero</string>
-    <!-- String for the second line of the user's address in the AutoFill profile editor. [CHAR-LIMIT=32] -->
-    <string name="autofill_profile_editor_address_line_2">Osoiterivi 2:</string>
-    <!-- String to suggest to the user the kind of data to be used for the second line of the address. CHAR-LIMIT=64] -->
-    <string name="autofill_profile_editor_address_line_2_hint">Asunto, rakennus, kerros jne.</string>
-    <!-- String for the user's city or town in the AutoFill profile editor. [CHAR-LIMIT=32] -->
-    <string name="autofill_profile_editor_city">Kaupunki:</string>
-    <!-- String for the user's state or province or region in the AutoFill profile editor. [CHAR-LIMIT=32] -->
-    <string name="autofill_profile_editor_state">Maakunta/lääni:</string>
-    <!-- String for the user's zip code in the AutoFill profile editor. [CHAR-LIMIT=32] -->
-    <string name="autofill_profile_editor_zip_code">Postinumero:</string>
-    <!-- String for the user's country in the AutoFill profile editor. [CHAR-LIMIT=32] -->
-    <string name="autofill_profile_editor_country">Maa:</string>
-    <!-- String for the user's phone number in the AutoFill profile editor. [CHAR-LIMIT=32] -->
-    <string name="autofill_profile_editor_phone_number">Puhelin:</string>
-    <!-- String to display in an error tooltip to inform the user the phone number they provided is not valid. [CHAR-LIMIT=32] -->
-    <string name="autofill_profile_editor_phone_number_invalid">Virheellinen puhelinnumero.</string>
-
-    <!-- Button text to save the AutoFill profile [CHAR-LIMIT=20] -->
-    <string name="autofill_profile_editor_save_profile">Tallenna</string>
-    <!-- Toast message displayed when the profile has been successfully saved [CHAR-LIMIT=none] -->
-    <string name="autofill_profile_successful_save">Automaattisen täytön teksti tallennettu.</string>
-    <!-- Toast message displayed when the profile has been successfully deleted [CHAR-LIMIT=none] -->
-    <string name="autofill_profile_successful_delete">Automaattisen täytön teksti poistettu.</string>
-    <!-- Button text to delete all the AutoFill profile data [CHAR-LIMIT=20] -->
-    <string name="autofill_profile_editor_delete_profile">Poista</string>
-
-    <!-- Text on a dialog shown to the user when they are prompted to set up the autofill feature [CHAR-LIMIT=NONE] -->
-    <string name="autofill_setup_dialog_message">Selain voi täyttää automaattisesti tällaiset verkkolomakkeet. Haluatko määrittää automaattisen täytön tekstin?</string>
-    <!-- Toast message displayed when the user decides to not set up autofill at this time. We want to remind them that they can configure
-         it through the Browser Settings menu. [CHAR-LIMIT=NONE] -->
-    <string name="autofill_setup_dialog_negative_toast">Voit määrittää automaattisen täytön tekstin Selaimen Asetukset &gt; Yleiset -kohdasta.</string>
-    <!-- Text on a checkbox in the "setup autofill" dialog which is shown to the user when they are prompted to set up the autofill feature.
-         The checkbox allows them to specify they would like to disable the feature altogether [CHAR-LIMIT=NONE] -->
-    <string name="disable_autofill">Poista automaattinen täyttö käytöstä</string>
-
-    <!-- Settings screen, section title [CHAR-LIMIT=50] -->
-    <string name="pref_privacy_security_title">Tietosuoja ja turvallisuus</string>
-    <!-- Settings label -->
-    <string name="pref_privacy_clear_cache">Tyhjennä välimuisti</string>
-    <!-- Settings summary -->
-    <string name="pref_privacy_clear_cache_summary">Poista paikallisen välimuistin sisältö ja tietokannat</string>
-    <!-- Confirmation dialog message -->
-    <string name="pref_privacy_clear_cache_dlg">Poistetaanko  paikallinen välimuisti ja tietokannat?</string>
-    <!-- Cookie settings category [CHAR-LIMIT=50] -->
-    <string name="pref_privacy_cookies_title">Evästeet</string>
-    <!-- Settings label -->
-    <string name="pref_privacy_clear_cookies">Poista kaikki evästetiedot</string>
-    <!-- Settings summary -->
-    <string name="pref_privacy_clear_cookies_summary">Poista kaikki selaimen evästeet</string>
-    <!-- Confirmation dialog message -->
-    <string name="pref_privacy_clear_cookies_dlg">Poistetaanko kaikki evästeet?</string>
-    <!-- Settings label -->
-    <string name="pref_privacy_clear_history">Tyhjennä historia</string>
-    <!-- Settings summary -->
-    <string name="pref_privacy_clear_history_summary">Tyhjennä selaimen selaushistoria</string>
-    <!-- Confirmation dialog message -->
-    <string name="pref_privacy_clear_history_dlg">Poistetaanko selaimen selaushistoria?</string>
-    <!-- Formdata settings category [CHAR-LIMIT=50] -->
-    <string name="pref_privacy_formdata_title">Lomaketiedot</string>
-    <!-- Settings label -->
-    <string name="pref_privacy_clear_form_data">Poista lomaketiedot</string>
-    <!-- Settings summary -->
-    <string name="pref_privacy_clear_form_data_summary">Poista kaikki tallennetut lomaketiedot</string>
-    <!-- Confirmation dialog message -->
-    <string name="pref_privacy_clear_form_data_dlg">Poistetaanko kaikki tallennetut lomaketiedot?</string>
-    <!-- Settings label -->
-    <string name="pref_privacy_clear_passwords">Poista salasanat</string>
-    <!-- Settings summary -->
-    <string name="pref_privacy_clear_passwords_summary">Poista kaikki tallennetut salasanat</string>
-    <!-- Confirmation dialog message -->
-    <string name="pref_privacy_clear_passwords_dlg">Poistetaanko kaikki tallennetut salasanat?</string>
-    <!-- Location settings category [CHAR-LIMIT=50] -->
-    <string name="pref_privacy_location_title">Sijainti</string>
-    <!-- Settings label -->
-    <string name="pref_privacy_enable_geolocation">Ota sijaintitiedot käyttöön</string>
-    <!-- Settings summary -->
-    <string name="pref_privacy_enable_geolocation_summary">Salli sivustojen pyytää sijaintitietojesi käyttöoikeutta</string>
-    <!-- Settings label -->
-    <string name="pref_privacy_clear_geolocation_access">Poista sijaintitietojen käyttöoikeus</string>
-    <!-- Settings summary -->
-    <string name="pref_privacy_clear_geolocation_access_summary">Poista sijaintitietojen käyttöoikeus kaikilta sivustoilta</string>
-    <!-- Confirmation dialog message -->
-    <string name="pref_privacy_clear_geolocation_access_dlg">Poistetaanko sivustoilta sijaintitietojen käyttöoikeus?</string>
-    <!-- Passwords settings category [CHAR-LIMIT=50] -->
-    <string name="pref_security_passwords_title">Salasanat</string>
-    <!-- Settings label -->
-    <string name="pref_security_remember_passwords">Tallenna salasanat</string>
-    <!-- Settings summary -->
-    <string name="pref_security_remember_passwords_summary">Tallenna sivustojen käyttäjätunnukset ja salasanat</string>
-    <!-- Settings label -->
-    <string name="pref_security_save_form_data">Tallenna lomaketiedot</string>
-    <!-- Settings summary -->
-    <string name="pref_security_save_form_data_summary">Tallenna lomakkeisiin syötetyt tiedot</string>
-    <!-- Settings label -->
-    <string name="pref_security_show_security_warning">Näytä suojausvaroitukset</string>
-    <!-- Settings summmary -->
-    <string name="pref_security_show_security_warning_summary">Näytä varoitus, jos sivuston suojauksessa on ongelmia</string>
-    <!-- Settings label -->
-    <string name="pref_security_accept_cookies">Salli evästeet</string>
-    <!-- Settings summary -->
-    <string name="pref_security_accept_cookies_summary">Salli sivustojen tallentaa ja lukea evästetietoja</string>
-    <!-- Settings text size options; appear in Text size dialog box [CHAR LIMIT=30] -->
-    <string-array name="pref_text_size_choices">
-        <item>Hyvin pieni</item>
-        <item>Pieni</item>
-        <item>Normaali</item>
-        <item>Suuri</item>
-        <item>Hyvin suuri</item>
-    </string-array>
-    <!-- Label for minimum font size [CHAR LIMIT=30] -->
-    <string name="pref_min_font_size">Kirjasimen vähimmäiskoko</string>
-    <!-- Label for the current minimum font size value [CHAR LIMIT=6] -->
-    <string name="pref_min_font_size_value"><xliff:g id="font_size">%d</xliff:g> pt</string>
-    <!-- Label for text scaling (percent) [CHAR LIMIT=30] -->
-    <string name="pref_text_zoom">Tekstin skaalaus</string>
-    <!-- Label for zoom on double-tap (percent) [CHAR LIMIT=30] -->
-    <string name="pref_zoom_on_double_tap">Zoomaa kaksoisnapauttamalla</string>
-    <!-- Label for whether or not to force-enable user scalablity (aka, zoom) [CHAR LIMIT=30] -->
-    <string name="pref_force_userscalable">Ota zoomaus käyttöön</string>
-    <!-- Summary for whether or not to force-enable user scalablity (aka, zoom) [CHAR LIMIT=30] -->
-    <string name="pref_force_userscalable_summary">Ohita sivuston zoom.hal.pyyntö</string>
-    <!-- Inverted screen category under accessibility settings [CHAR LIMIT=50] -->
-    <string name="pref_inverted_category">Käänteinen ruudunhahmonnus</string>
-    <!-- Title for the inverted screen feature. This causes the screen to render with inverted colors (black becomes white and vice versa) [CHAR LIMIT=40] -->
-    <string name="pref_inverted">Käänteinen hahmonnus</string>
-    <!-- Summary for the inverted screen feature. [CHAR LIMIT=120] -->
-    <string name="pref_inverted_summary">Mustasta tulee valkoista ja päinvastoin</string>
-    <!-- Title for the inverted screen contrast. Change the contrast value from 1.0 to 3.0. [CHAR LIMIT=30] -->
-    <string name="pref_inverted_contrast">Kontrasti</string>
-    <!-- Settings label -->
-    <string name="pref_default_zoom">Oletuszoomaus</string>
-    <!-- Settings default zoom options; appear in default zoom dialog box -->
-    <string-array name="pref_default_zoom_choices">
-        <item>Kauas</item>
-        <item>Keskikokoinen</item>
-        <item>Lähelle</item>
-    </string-array>
-    <!-- Title of dialog for setting the default zoom -->
-    <string name="pref_default_zoom_dialogtitle">Oletuszoomaus</string>
-    <!-- Settings label -->
-    <string name="pref_content_load_page">Avaa sivut yleiskatsauksessa</string>
-    <!-- Settings summary -->
-    <string name="pref_content_load_page_summary">Näytä äskettäin avattujen sivujen yleiskatsaus</string>
-    <!-- Settings screen, section title [CHAR LIMIT=50] -->
-    <string name="pref_extras_title">Lisäasetukset</string>
-    <!-- Settings label -->
-    <string name="pref_extras_website_settings">Sivustot</string>
-    <!-- Settings summary -->
-    <string name="pref_extras_website_settings_summary">Yksittäisten sivustojen lisäasetukset</string>
-    <!-- Settings category label [CHAR-LIMIT=50] -->
-    <string name="pref_extras_reset_default_title">Palauta oletukset</string>
-    <!-- Settings label -->
-    <string name="pref_extras_reset_default">Palauta oletukseksi</string>
-    <!-- Settings summary -->
-    <string name="pref_extras_reset_default_summary">Palauta oletusasetukset</string>
-    <!-- Confirmation dialog message -->
-    <string name="pref_extras_reset_default_dlg">Palautetaanko asetusten oletusarvot?</string>
-    <!-- Title for a group of settings -->
-    <string name="pref_development_title">Virheenkorjaus</string>
-    <!-- Settings screen, setting option name -->
-    <string name="pref_default_text_encoding">Tekstin koodaus</string>
-    <!-- Options in the Default encoding dialog box -->
-    <string-array name="pref_default_text_encoding_choices">
-        <item>Latin-1 (ISO-8859-1)</item>
-        <item>Unicode (UTF-8)</item>
-        <item>Kiinalainen (GBK)</item>
-        <item>Kiinalainen (Big5)</item>
-        <item>Japanilainen (ISO-2022-JP)</item>
-        <item>Japanilainen (SHIFT_JIS)</item>
-        <item>Japanilainen (EUC-JP)</item>
-        <!-- No need to translate a EUC-KR part, and there is no string length limits. -->
-        <item>Korealainen (EUC-KR)</item>
-        <!-- TODO: We should add a lot more encodings.  -->
-    </string-array>
-    <!-- Dialog box title -->
-    <string name="pref_default_text_encoding_dialogtitle">Tekstin koodaus</string>
-    <!-- Title for accessibility settings [CHAR LIMIT=25] -->
-    <string name="pref_accessibility_title">Esteettömyys</string>
-    <!-- Font size settings category under accessibility settings [CHAR LIMIT=50] -->
-    <string name="pref_font_size_category">Tekstin koko</string>
-    <!-- Title for lab settings [CHAR LIMIT=25] -->
-    <string name="pref_lab_title">Labs</string>
-    <!-- Title for lab quick controls feature [CHAR LIMIT=40] -->
-    <string name="pref_lab_quick_controls">Pikasäätimet</string>
-    <!-- Summary for lab quick controls feature [CHAR LIMIT=120] -->
-    <string name="pref_lab_quick_controls_summary">
-        Avaa pikasäätimet ja piilota sov.- &amp; URL-palk. liu\'uttamalla peukaloa vas. tai oik.</string>
-    <!-- Title for the "Instant search" lab feature [CHAR LIMIT=40] -->
-    <string name="pref_use_instant_search">Google Instant</string>
-    <!-- Summary for the "Instant search" lab feature [CHAR LIMIT=120] -->
-    <string name="pref_use_instant_search_summary">
-      Käyttämällä hakiessasi Google Instantia näet tuloksia jo hakua kirjoittaessasi (tämä voi kasvattaa tiedonsiirron määrää).</string>
-    <!-- Title for the fullscreen lab feature [CHAR LIMIT=40] -->
-    <string name="pref_lab_fullscreen">Koko ruutu</string>
-    <!-- Summary for the fullscreen lab feature [CHAR LIMIT=120] -->
-    <string name="pref_lab_fullscreen_summary">
-      Piilota tilapalkki käyttämällä koko ruudun tilaa.</string>
-    <!-- Title for the WebGL feature [CHAR LIMIT=40] -->
-    <string name="pref_lab_webgl">WebGL</string>
-    <!-- Summary for the WebGL lab feature [CHAR LIMIT=120] -->
-    <string name="pref_lab_webgl_summary">Ottaa WebGL:n käyttöön</string>
-    <!-- Title for bandwidth management preference [CHAR LIMIT=25] -->
-    <string name="pref_data_title">Kaistanleveyden hallinta</string>
-    <!-- Title for search preloading [CHAR LIMIT=40] -->
-    <string name="pref_data_preload_title">Hakutulosten esilataus</string>
-    <!-- Search preloading options [CHAR LIMIT=20] -->
-    <string-array name="pref_data_preload_choices">
-        <item>Ei koskaan</item>
-        <item>Vain Wi-Fi-yhteydellä</item>
-        <item>Aina</item>
-    </string-array>
-    <!-- Summary for search preloading [CHAR LIMIT=80] -->
-    <string name="pref_data_preload_summary">Salli selaimen esiladata luotettavat hakutulokset taustalla</string>
-    <!-- Title of dialog for search preloading [CHAR LIMIT=40] -->
-    <string name="pref_data_preload_dialogtitle">Hakutulosten esilataus</string>
-    <!-- Title for link prefetching [CHAR LIMIT=40] -->
-    <string name="pref_link_prefetch_title">Verkkosivujen esilataus</string>
-    <!-- Link prefetching options [CHAR LIMIT=20] -->
-    <string-array name="pref_link_prefetch_choices">
-        <item>Ei koskaan</item>
-        <item>Vain Wi-Fi-yhteydellä</item>
-        <item>Aina</item>
-    </string-array>
-    <!-- Summary for link prefetching [CHAR LIMIT=80] -->
-    <string name="pref_link_prefetch_summary">Salli selaimen esiladata linkitetyt verkkosivut taustalla</string>
-    <!-- Title of dialog for link prefetching [CHAR LIMIT=40] -->
-    <string name="pref_link_prefetch_dialogtitle">Verkkosivujen esilataus</string>
-    <!-- Title for video preloading [CHAR LIMIT=40] -->
-    <string name="pref_video_preload_title">Videoiden esilataus</string>
-    <!-- Video preloading options [CHAR LIMIT=20] -->
-    <string-array name="pref_video_preload_choices">
-        <item>Ei koskaan</item>
-        <item>Vain WiFi-yhteydellä</item>
-        <item>Aina</item>
-    </string-array>
-    <!-- Summary for video preloading [CHAR LIMIT=80] -->
-    <string name="pref_video_preload_summary">Salli selaimen esiladata videota, kun palvelin mahdollistaa sen</string>
-    <!-- Title of dialog for video preloading [CHAR LIMIT=40] -->
-    <string name="pref_video_preload_dialogtitle">Videoiden esilataus</string>
-    <!-- Title for a dialog displayed when the browser has a data connectivity
-            problem -->
-    <string name="browserFrameNetworkErrorLabel">Yhteysongelma</string>
-    <!-- Title for a dialog displayed when the browser runs into a file label
-            error -->
-    <string name="browserFrameFileErrorLabel">Tiedosto-ongelma</string>
-    <!-- Dialog box title -->
-    <string name="browserFrameFormResubmitLabel"></string>
-    <!-- Dialog box message -->
-    <string name="browserFrameFormResubmitMessage">Sivu, jota yrität avata, sisältää jo lähetettyjä tietoja (POSTDATA). Jos lähetät tiedot uudelleen, sivulla olevan lomakkeen suorittama toimenpide (kuten haku tai verkko-ostos) toistetaan.</string>
-    <!-- Dialog box title -->
-    <string name="loadSuspendedTitle">Ei yhteyttä</string>
-    <!-- Dialog box message -->
-    <string name="loadSuspended">Selain ei voi ladata tätä sivua, koska internet-yhteyttä ei ole.</string>
-    <!-- Menu item -->
-    <string name="clear_history">Tyhjennä historia</string>
-    <!-- History screen title; appears in title bar -->
-    <string name="browser_history">Äskettäin avatut sivut</string>
-    <!-- Appears on History screen if no history is found -->
-    <string name="empty_history">Ei selaushistoriaa.</string>
-    <!-- Menu option to load the user's home page [CHAR LIMIT=30] -->
-    <string name="go_home">Aloitussivu</string>
-    <!-- Displayed at the top of the bookmarks page.  When clicked, it bookmarks the page the browser is currently showing -->
-    <string name="add_new_bookmark">Lisää kirjanmerkki</string>
-    <!-- Verb placed in front of a screenshot of a web page that, when clicked,
-            will add that page to bookmarks -->
-    <string name="add_bookmark_short">Lisää</string>
-
-    <!-- This string is for the browser "Go To" UI. -->
-    <!-- This is the hint text shown in the Go To widget, before text is entered. -->
-    <string name="search_hint">Kirjoita hakusana tai URL-osoite</string>
-    <!-- This string is for the browser "Go To" UI. -->
-    <!-- This is the button label in the "Go To" UI. -->
-    <string name="search_button_text">Siirry</string>
-    <!-- The string used to describe the browser as a searchable item within system search settings. -->
-    <string name="search_settings_description">Kirjanmerkit ja verkkohistoria</string>
-
-    <!-- Pop-up window dialog -->
-    <!-- Message for a dialog informing the user that the site is attempting to
-            display a popup window -->
-    <string name="popup_window_attempt">Sallitaanko tämän sivuston avata ponnahdusikkuna?</string>
-    <!-- Label for a button to allow a particular popup window to open -->
-    <string name="allow">Salli</string>
-    <!-- Label for a button to disallow a particular popup from opening -->
-    <string name="block">Estä</string>
-
-    <!-- Title for a dialog informing the user that they cannot open any more
-            windows because the limit has been reached. -->
-    <string name="too_many_windows_dialog_title">Enimmäismäärä välilehtiä avattu</string>
-    <!-- Message in a dialog telling the user that they cannot open any more
-            windows because the limit has been reached. -->
-    <string name="too_many_windows_dialog_message">Uutta välilehteä ei voi avata ennen kuin suljet yhden nykyisistä.</string>
-    <!-- Title for a dialog informing the user that they cannot open a subwindow
-            because only one can be open at a time. -->
-    <string name="too_many_subwindows_dialog_title">Ponnahdusikkuna on jo auki</string>
-    <!-- Message for a dialog informing the user that they cannot open a
-            subwindow because only one can be open at a time. -->
-    <string name="too_many_subwindows_dialog_message">Vain yksi ponnahdusikkuna voi olla auki kerrallaan.</string>
-
-    <!-- Download History UI strings -->
-    <!-- Dialog title [CHAR LIMIT=25] -->
-    <string name="download_no_sdcard_dlg_title" product="nosdcard">USB-tila ei käytettävissä</string>
-    <!-- Dialog title -->
-    <string name="download_no_sdcard_dlg_title" product="default">Ei SD-korttia</string>
-    <!-- Dialog message [CHAR LIMIT=NONE] -->
-    <string name="download_no_sdcard_dlg_msg" product="nosdcard">Tiedoston <xliff:g id="filename">%s</xliff:g> lataamiseen tarvitaan USB-muisti.</string>
-    <!-- Dialog message -->
-    <string name="download_no_sdcard_dlg_msg" product="default">Tiedoston <xliff:g id="filename">%s</xliff:g> lataamiseen tarvitaan SD-kortti.</string>
-    <!-- Title for a dialog informing the user that the SD card used for
-            external storage is busy so they cannot download anything [CHAR LIMIT=25] -->
-    <string name="download_sdcard_busy_dlg_title" product="nosdcard">USB-tila ei käytettävissä</string>
-    <!-- Title for a dialog informing the user that the SD card used for
-            external storage is busy so they cannot download anything -->
-    <string name="download_sdcard_busy_dlg_title" product="default">SD-kortti ei käytettävissä</string>
-    <!-- Message for a dialog informing the user that the SD card used for
-            external storage is busy so they cannot download anything.  Informs
-            the user how to enable SD card storage [CHAR LIMIT=NONE] -->
-    <string name="download_sdcard_busy_dlg_msg" product="nosdcard">USB-tallennustila on varattu. Voit sallia lataukset valitsemalla ilmoituksessa Poista USB-tallennustila käytöstä.</string>
-    <!-- Message for a dialog informing the user that the SD card used for
-            external storage is busy so they cannot download anything.  Informs
-            the user how to enable SD card storage -->
-    <string name="download_sdcard_busy_dlg_msg" product="default">SD-kortti on varattu. Voit sallia lataukset valitsemalla ilmoituksessa Poista USB-tallennustila käytöstä.</string>
-
-    <!-- Toast for a download which cannot begin because the URL is not http or https -->
-    <string name="cannot_download">Vain HTTP- tai HTTPS-URL-osoitteista voidaan ladata.</string>
-    <!-- Message in the list of items which have received download requests
-            telling their status.  This message states that the download has not
-            yet begun -->
-    <string name="download_pending">Aloitetaan latausta\u2026</string>
-
-    <!-- The description of the suggestion that lets the user search the web for the query currently
-         in the text field. -->
-    <string name="search_the_web">Hae verkosta</string>
-
-    <!-- HTML5 dialogs -->
-    <!-- Used as a status bar notification when the browser is running out of space trying to allocate or increase the database quota for an HTML5 databae or application cache. -->
-    <string name="webstorage_outofspace_notification_title">Selaimen tallennustila täynnä</string>
-    <string name="webstorage_outofspace_notification_text">Vapauta tilaa koskettamalla.</string>
-    <!-- Used in the Browser Settings -->
-    <string name="webstorage_clear_data_title">Poista tallennetut tiedot</string>
-
-    <!-- Confirmation dialog when the user ask to clear all data for an origin -->
-    <string name="webstorage_clear_data_dialog_message">Poistetaanko kaikki tämän verkkosivun tallentamat tiedot?</string>
-    <string name="webstorage_clear_data_dialog_ok_button">OK</string>
-    <string name="webstorage_clear_data_dialog_cancel_button">Peruuta</string>
-    <!-- Strings used in the summary of origins -->
-    <string name="webstorage_origin_summary_mb_stored">Mt tallennettu puhelimeen</string>
-        <!-- String shown in a progress view while a video is loading, before it starts playing -->
-    <string name="loading_video">Ladataan videota\u2026</string>
-
-    <!-- Geolocation -->
-    <!-- Permissions prompt -->
-    <string name="geolocation_permissions_prompt_message"><xliff:g id="website origin" example="maps.google.com">%s</xliff:g> haluaa käyttää sijaintitietojasi</string>
-    <string name="geolocation_permissions_prompt_share">Jaa sijaintitiedot</string>
-    <string name="geolocation_permissions_prompt_dont_share">Hylkää</string>
-    <string name="geolocation_permissions_prompt_remember">Muista valinta</string>
-    <!-- Permissions prompt toast -->
-    <string name="geolocation_permissions_prompt_toast_allowed">Tämä sivusto voi käyttää sijaintiasi. Vaihda asetus kohdassa Asetukset &gt; Lisäasetukset &gt; Sivustot.</string>
-    <string name="geolocation_permissions_prompt_toast_disallowed">Tämä sivusto ei voi käyttää sijaintiasi. Vaihda asetus kohdassa Asetukset &gt; Lisäasetukset &gt; Sivustot.</string>
-    <!-- Settings -> Advanced -> Website settings -> <origin> -->
-    <string name="geolocation_settings_page_title">Poista sijaintitietojen käyttöoikeus</string>
-    <string name="geolocation_settings_page_summary_allowed">Tämä sivusto voi käyttää sijaintitietojasi</string>
-    <string name="geolocation_settings_page_summary_not_allowed">Tämä sivusto ei voi käyttää sijaintitietojasi</string>
-    <!-- Settings page dialog -->
-    <string name="geolocation_settings_page_dialog_message">Poistetaanko sijaintitietojen käyttöoikeus tältä sivustolta?</string>
-    <string name="geolocation_settings_page_dialog_ok_button">OK</string>
-    <string name="geolocation_settings_page_dialog_cancel_button">Peruuta</string>
-    <!-- Label for the menu item in the website settings activity used to clear data stored by all websites -->
-    <string name="website_settings_clear_all">Poista kaikki</string>
-    <string name="website_settings_clear_all_dialog_message">Poistetaanko kaikki sivustojenn tiedot ja sijaintien käyttöoikeudet?</string>
-    <string name="website_settings_clear_all_dialog_ok_button">OK</string>
-    <string name="website_settings_clear_all_dialog_cancel_button">Peruuta</string>
-
-    <!-- Text in the progress dialog when we are setting an image as the home screen wallpaper. -->
-    <string name="progress_dialog_setting_wallpaper">Asetetaan taustakuvaa\u2026</string>
-
-    <!-- The default state to the "up to parent folder" button in the bookmarks UI. This
-         is displayed when the user is at the highest level and cannot go up [CHAR LIMIT=16] -->
-    <string name="defaultBookmarksUpButton">Kirjanmerkit</string>
-
-    <!-- The string that is displayed when there are no bookmarks to display.
-         This is centered in the middle of the screen [CHAR LIMIT=NONE] -->
-    <string name="empty_bookmarks_folder">Ei kirjanmerkkejä.</string>
-
-    <!-- The folder name for the special "Other Bookmarks" folder created by Chrome [CHAR LIMIT=24] -->
-    <string name="other_bookmarks">Muut kirjanmerkit</string>
-
-    <!-- Access point for RLZ tracking. -->
-    <string name="rlz_access_point">Y1</string>
-
-    <!-- Title for a dialog asking the user which account to sync their bookmarks to [CHAR LIMIT=32] -->
-    <string name="account_chooser_dialog_title" msgid="4833571985009544332">Valitse tili</string>
-
-    <!-- Title for a dialog asking the user what they want to do with their bookmarks when adding a sync account [CHAR-LIMIT=32] -->
-    <string name="import_bookmarks_dialog_title">Synkronoi Google-tilin kanssa</string>
-
-    <!-- Description for a dialog asking the user what they want to do with their bookmarks when adding a sync account [CHAR-LIMIT=none] -->
-    <string name="import_bookmarks_dialog_description">Tämän laitteen kirjanmerkkejä ei ole vielä yhdistetty Google-tiliin. Tallenna kirjanmerkit lisäämällä ne tiliin. Poista ne, jos et halua synkronoida niitä.</string>
-
-    <!-- Description for selecting the account to add bookmarks to and begin syncing with [CHAR-LIMIT=none] -->
-    <string name="import_bookmarks_dialog_select_add_account">Lisää tämän laitteen kirjanmerkit ja aloita synkronoiminen Google-tilin kanssa</string>
-
-    <!-- Description for selecting the account to sync with and delete local bookmarks [CHAR-LIMIT=none] -->
-    <string name="import_bookmarks_dialog_delete_select_account">Poista tämän laitteen kirjanmerkit ja aloita synkronoiminen Google-tilin kanssa</string>
-
-    <!-- Description confirming user's choice to delete bookmarks [CHAR-LIMIT=none] -->
-    <string name="import_bookmarks_dialog_confirm_delete">Poista tämän laitteen kirjanmerkit ja aloita niiden synkronointi tilin <xliff:g id="Google account" example="account@example.com">%s</xliff:g> kanssa?</string>
-
-    <!-- Description confirming user's choice to add bookmarks to an account [CHAR-LIMIT=none] -->
-    <string name="import_bookmarks_dialog_confirm_add">Lisää tämän laitteen kirjanmerkit ja aloita niiden synkronoiminen tilin <xliff:g id="Google account" example="account@example.com">%s</xliff:g> kanssa?</string>
-
-    <!-- Button allowing users to remove all of their existing bookmarks when setting up syncing with their bookmarks stored in Google Chrome [CHAR-LIMIT=64] -->
-    <string name="import_bookmarks_dialog_remove">Poista kirjanmerkit</string>
-
-    <!-- Sync bookmarks wizard option to go to the next screen [CHAR-LIMIT=30] -->
-    <string name="import_bookmarks_wizard_next">Seuraava</string>
-
-    <!-- Sync bookmarks wizard option to go to the previous screen [CHAR-LIMIT=30] -->
-    <string name="import_bookmarks_wizard_previous">Edellinen</string>
-
-    <!-- Sync bookmarks wizard option to cancel sync setup [CHAR-LIMIT=30] -->
-    <string name="import_bookmarks_wizard_cancel">Peruuta</string>
-
-    <!-- Sync bookmarks wizard option to finish sync setup [CHAR-LIMIT=30] -->
-    <string name="import_bookmarks_wizard_done">Valmis</string>
-
-    <!-- Button allowing users to import all of their existing bookmarks into an account when setting up syncing with their bookmarks stored in Google Chrome [CHAR-LIMIT=64] -->
-    <string name="import_bookmarks_dialog_add">Lisää kirjanmerkit Google-tiliin</string>
-
-    <!-- Button allowing users to import all of their existing bookmarks into an account when setting up syncing with their bookmarks stored in Google Chrome [CHAR-LIMIT=64] -->
-    <string name="import_bookmarks_dialog_import">Lisää Android-kirjanmerkit tilin <xliff:g id="Google account" example="account@example.com">%s</xliff:g> kirjanmerkkeihin</string>
-
-    <!-- Url Selection Action Mode -->
-
-    <!-- Menu item to share URL selection [CHAR LIMIT=30] -->
-    <string name="menu_share_url">Jaa</string>
-
-    <!-- Toast to inform the user that the maximum number of tabs has been
-         reached. [CHAR LIMIT=50] -->
-    <string name="max_tabs_warning">Välilehtiä ei ole enempää käytettävissä</string>
-
-    <!-- The label used by the instant search labs feature when shown in
-         the search engines list (Preferences->Advanced->Set search engine
-         [CHAR LIMIT=80] -->
-    <string name="instant_search_label">Google ja Instant (Labs)</string>
-    <!-- Font size preview label in settings [CHAR LIMIT=30] -->
-    <string name="preview">Esikatselu</string>
-    <!-- Name for the user's unsynced, local bookmarks [CHAR LIMIT=50] -->
-    <string name="local_bookmarks">Paikalliset</string>
-    <!-- Popup menu checkbox that allows the user to request the desktop version of a webpage [CHAR LIMIT=50] -->
-    <string name="ua_switcher_desktop">Käytä sivuston tietokoneversiota</string>
-    <!-- Preload permission label [CHAR LIMIT=40] -->
-    <string name="permission_preload_label">Esilataa tulokset</string>
-    <!-- Empty text for the "saved pages" tab that is shown when no saved pages exist. [CHAR LIMIT=None] -->
-    <string name="empty_snapshots_folder">Ei tallennettuja sivuja.</string>
-    <!-- Menu option to delete the currently selected saved page [CHAR LIMIT=50] -->
-    <string name="remove_snapshot">Poista tallennettu sivu</string>
-    <!-- Popup menu option to load the live version of a saved page [CHAR LIMIT=20] -->
-    <string name="snapshot_go_live">Lataa sivu</string>
-
-    <!--  Accessibility content descriptions -->
-
-    <!-- Content description for back button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_back">Palaa takaisin</string>
-    <!-- Content description for forward button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_forward">Siirry eteenpäin</string>
-    <!-- Content description for refresh button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_refresh">Päivitä sivu</string>
-    <!-- Content description for stop button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_stop">Keskeytä sivun lataus</string>
-    <!-- Content description for add bookmark button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_addbookmark">Lisää sivu kirjanmerkkeihin</string>
-    <!-- Content description for search button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_search">Haku</string>
-    <!-- Content description for voice search button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_voice">Aloita puhehaku</string>
-    <!-- Content description for bookmarks button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_bookmarks">Kirjanmerkit</string>
-    <!-- Content description for close tab button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_closetab">Sulje välilehti</string>
-    <!-- Content description for new tab button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_newtab">Avaa uusi välilehti</string>
-    <!-- Content description for new incognito tab button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_newincognitotab">Avaa uusi incognito-välilehti</string>
-    <!-- Content description for clear button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_clear">Tyhjennä teksti</string>
-    <!-- Content description for user agent switcher [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_uaswitch">Vaihda käyttäjäagenttia</string>
-    <!-- Content description for go button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_go">Siirry</string>
-    <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_homescreen">Kotinäyttö</string>
-
-    <!-- Content description for tab switcher button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_navscreen">Sivujen hallinta</string>
-    <!-- Content description for overflow menu button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_more">Lisää vaihtoehtoja</string>
-
-    <!-- Content description for incognito state [CHAR LIMIT=NONE] -->
-    <string name="accessibility_state_incognito">Incognito-sivu</string>
-    <!-- Content description for frozen state [CHAR LIMIT=NONE] -->
-    <string name="accessibility_state_frozen">Tallennettu sivu</string>
-
-    <!-- Content description for tab switcher transition [CHAR LIMIT=NONE] -->
-    <string name="accessibility_transition_navscreen">Välilehtien hallinta</string>
-
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="application_name" msgid="1935869255545976415">"Selain"</string>
+    <string name="choose_upload" msgid="3649366287575002063">"Valitse lähetettävä tiedosto"</string>
+    <string name="uploads_disabled" msgid="463761197575372994">"Tiedostojen lähettäminen ei ole käytössä."</string>
+    <string name="new_tab" msgid="7971857320679510529">"Uusi välilehti"</string>
+    <string name="new_incognito_tab" msgid="3606197964239039478">"Uusi incognito-välilehti"</string>
+    <string name="tab_bookmarks" msgid="2305793036003473653">"Kirjanmerkit"</string>
+    <string name="tab_most_visited" msgid="1077402532455000703">"Useimmin avatut"</string>
+    <string name="tab_history" msgid="1979267558744613746">"Historia"</string>
+    <string name="tab_snapshots" msgid="1449241204980265186">"Tallennetut sivut"</string>
+    <string name="added_to_bookmarks" msgid="4028710765672851635">"Lisätty kirjanmerkkeihin"</string>
+    <string name="removed_from_bookmarks" msgid="546648923924996722">"Poistettu kirjanmerkeistä"</string>
+    <string name="sign_in_to" msgid="5939425800148759165">"Kirjaudu sisään osoitteeseen <xliff:g id="HOSTNAME">%s1</xliff:g> \"<xliff:g id="REALM">%s2</xliff:g>\""</string>
+    <string name="username" msgid="5057566336518215922">"Nimi"</string>
+    <string name="password" msgid="1177138552305184404">"Salasana"</string>
+    <string name="action" msgid="183105774472071343">"Kirjaudu sisään"</string>
+    <string name="bookmarks_search" msgid="5229596268214362873">"Selain"</string>
+    <string name="cancel" msgid="3017274947407233702">"Peruuta"</string>
+    <string name="ok" msgid="1509280796718850364">"OK"</string>
+    <string name="title_bar_loading" msgid="7438217780834640678">"Ladataan…"</string>
+    <string name="page_info" msgid="4048529256302257195">"Sivun tiedot"</string>
+    <string name="page_info_view" msgid="5303490449842635158">"Näytä sivun tiedot"</string>
+    <string name="page_info_address" msgid="2222306609532903254">"Osoite:"</string>
+    <string name="ssl_warnings_header" msgid="79744901983636370">"Sivuston suojausvarmenteessa on ongelmia."</string>
+    <string name="ssl_continue" msgid="8031515015829358457">"Jatka"</string>
+    <string name="security_warning" msgid="6607795404322797541">"Suojausvaroitus"</string>
+    <string name="view_certificate" msgid="1472768887529093862">"Näytä varmenne"</string>
+    <string name="ssl_go_back" msgid="4598951822061593819">"Takaisin"</string>
+    <string name="ssl_untrusted" msgid="7754507359360636447">"Varmenteen myöntäjä ei ole luotettava taho."</string>
+    <string name="ssl_mismatch" msgid="3809794439740523641">"Sivuston nimi ei vastaa varmenteessa olevaa nimeä."</string>
+    <string name="ssl_expired" msgid="5739349389499575559">"Varmenne ei ole enää voimassa."</string>
+    <string name="ssl_not_yet_valid" msgid="8193083327719048247">"Varmenne ei ole vielä voimassa."</string>
+    <string name="ssl_date_invalid" msgid="3705563379257285534">"Varmenteen päiväys ei kelpaa."</string>
+    <string name="ssl_invalid" msgid="9041704741505449967">"Varmenne on virheellinen."</string>
+    <string name="ssl_unknown" msgid="5679243486524754571">"Tuntematon varmennevirhe."</string>
+    <string name="stopping" msgid="4839698519340302982">"Lopetetaan…"</string>
+    <string name="stop" msgid="5687251076030630074">"Lopeta"</string>
+    <string name="reload" msgid="8585220783228408062">"Päivitä"</string>
+    <string name="back" msgid="8414603107175713668">"Takaisin"</string>
+    <string name="forward" msgid="4288210890526641577">"Seuraava"</string>
+    <string name="save" msgid="5922311934992468496">"OK"</string>
+    <string name="do_not_save" msgid="6777633870113477714">"Peruuta"</string>
+    <string name="location" msgid="3411848697912600125">"Osoite"</string>
+    <string name="account" msgid="5179824606448077042">"Tili"</string>
+    <string name="containing_folder" msgid="6771180232953030479">"Lisää kansioon"</string>
+    <string name="new_folder" msgid="7743540149088867917">"Uusi kansio"</string>
+    <string name="edit_folder" msgid="621817453133656156">"Muokkaa kansiota"</string>
+    <string name="delete_folder" msgid="2046483129024501116">"Poista kansio"</string>
+    <string name="no_subfolders" msgid="3303645239686962674">"Ei alakansioita."</string>
+    <string name="add_to_bookmarks_menu_option" msgid="4449323955122214389">"Kirjanmerkit"</string>
+    <string name="add_to_homescreen_menu_option" msgid="1461447829242963790">"Etusivu"</string>
+    <string name="add_to_other_folder_menu_option" msgid="5947586525822134105">"Muu kansio"</string>
+    <string name="name" msgid="5462672162695365387">"Tunniste"</string>
+    <string name="http" msgid="2163722670597250102">"http://"</string>
+    <string name="save_to_bookmarks" msgid="1679286010089780932">"Tallenna kirjanmerkkeihin"</string>
+    <string name="bookmark_this_page" msgid="7530739804320811054">"Lisää sivu kirjanmerkkeihin"</string>
+    <string name="remove" msgid="7820112494467011374">"Poista"</string>
+    <string name="edit_bookmark" msgid="5024089053490231905">"Muokkaa kirjanmerkkiä"</string>
+    <string name="create_shortcut_bookmark" msgid="1995095662095484289">"Lisää pikakuvake etusivulle"</string>
+    <string name="open_bookmark" msgid="8473581305759935790">"Avaa"</string>
+    <string name="remove_bookmark" msgid="8407495852801410891">"Poista kirjanmerkki"</string>
+    <string name="remove_from_bookmarks" msgid="4374080666576982775">"Poista kirjanmerkeistä"</string>
+    <string name="remove_history_item" msgid="5021424935726728618">"Poista historiasta"</string>
+    <string name="set_as_homepage" msgid="4752937379414905560">"Aseta aloitussivuksi"</string>
+    <string name="bookmark_saved" msgid="2766434679871317557">"Tallennettu kirjanmerkkeihin."</string>
+    <string name="bookmark_not_saved" msgid="1077732557310662080">"Kirjanmerkkiä ei voitu tallentaa."</string>
+    <string name="homepage_set" msgid="8768087280310966395">"Aloitussivu asetettu."</string>
+    <string name="bookmark_needs_title" msgid="6245900436119218187">"Kirjanmerkillä on oltava nimi."</string>
+    <string name="bookmark_needs_url" msgid="7809876865972755158">"Kirjanmerkillä on oltava sijainti."</string>
+    <string name="bookmark_url_not_valid" msgid="4917440933384496211">"Tämä URL ei ole kelvollinen."</string>
+    <string name="bookmark_cannot_save_url" msgid="7836064647943671126">"Tätä URL-osoitetta ei voi lisätä kirjanmerkkeihin."</string>
+    <string name="bookmark_page" msgid="6845189305130307274">"Lisää viimeksi avattu sivu kirjanmerkkeihin"</string>
+    <string name="bookmark_thumbnail_view" msgid="3164068314718522138">"Pikkukuvat"</string>
+    <string name="bookmark_list_view" msgid="7848510619500937839">"Luettelo"</string>
+    <string name="current_page" msgid="7510129573681663135">"kohteesta "</string>
+    <string name="delete_bookmark_warning" msgid="7825328496411904321">"Poistetaanko kirjanmerkki <xliff:g id="BOOKMARK">%s</xliff:g>?"</string>
+    <string name="open_all_in_new_window" msgid="455786763426575293">"Avaa kaikki uusiin välilehtiin"</string>
+    <string name="goto_dot" msgid="3895839050522602723">"Siirry"</string>
+    <string name="select_dot" msgid="6299170761900561967">"Tekstin valinta"</string>
+    <string name="close_other_tabs" msgid="7693157495148282778">"Sulje muut välilehdet"</string>
+    <string name="bookmarks" msgid="1961279134885867815">"Kirjanmerkit"</string>
+    <string name="shortcut_bookmark" msgid="3974876480401135895">"Kirjanmerkki"</string>
+    <string name="shortcut_bookmark_title" msgid="7570786275916681296">"Valitse kirjanmerkki"</string>
+    <string name="history" msgid="2451240511251410032">"Historia"</string>
+    <string name="menu_view_download" msgid="2124570321712995120">"Lataukset"</string>
+    <string name="copy_page_url" msgid="1188679152608889555">"Kopioi sivun URL-osoite"</string>
+    <string name="share_page" msgid="593756995297268343">"Jaa sivu"</string>
+    <string name="menu_save_snapshot" msgid="6935080344031126139">"Tallenna offline-tilassa luettavaksi"</string>
+    <string name="saving_snapshot" msgid="1693789062351182809">"Tallennetaan..."</string>
+    <string name="snapshot_failed" msgid="4584580873565876033">"Ei voitu tallentaa offline-käyttöä varten."</string>
+    <string name="contextheader_folder_bookmarkcount" msgid="353987136645619089">"<xliff:g id="BOOKMARK_COUNT">%d</xliff:g> kirjanmerkkiä"</string>
+    <string name="contextheader_folder_empty" msgid="974171637803391651">"Tyhjä kansio"</string>
+    <string name="contextmenu_openlink" msgid="7237961252214188935">"Avaa"</string>
+    <string name="contextmenu_openlink_newwindow" msgid="1205313604181761403">"Avaa uudessa välilehdessä"</string>
+    <string name="contextmenu_openlink_newwindow_background" msgid="4690381019116746687">"Avaa uudessa välilehdessä taustalla"</string>
+    <string name="contextmenu_savelink" msgid="5508554930832538184">"Tallenna linkki"</string>
+    <string name="contextmenu_sharelink" msgid="5392275392280130331">"Jaa linkki"</string>
+    <string name="contextmenu_copy" msgid="398860586635404030">"Kopioi"</string>
+    <string name="contextmenu_copylink" msgid="5153657160294534270">"Kopioi linkin URL-osoite"</string>
+    <string name="contextmenu_download_image" msgid="4243829645180686912">"Tallenna kuva"</string>
+    <string name="contextmenu_view_image" msgid="3870625602053600905">"Näytä kuva"</string>
+    <string name="contextmenu_set_wallpaper" msgid="3691902960115350686">"Aseta taustakuvaksi"</string>
+    <string name="contextmenu_dial_dot" msgid="5856550683415933806">"Soita"</string>
+    <string name="contextmenu_add_contact" msgid="3183511922223645716">"Lisää yhteystieto"</string>
+    <string name="contextmenu_send_mail" msgid="1014513374828775660">"Lähetä sähköpostia"</string>
+    <string name="contextmenu_map" msgid="7471390435434034912">"Kartta"</string>
+    <string name="choosertitle_sharevia" msgid="4600490613341909086">"Jaa sovelluksessa"</string>
+    <string name="clear" msgid="7070043081700011461">"Poista"</string>
+    <string name="replace" msgid="4843033491070384047">"Korvaa"</string>
+    <string name="browser_bookmarks_page_bookmarks_text" msgid="6787605028726162673">"Kirjanmerkit"</string>
+    <string name="menu_preferences" msgid="6709237687234102240">"Asetukset"</string>
+    <string name="pref_content_title" msgid="3834107397725342174">"Sivun sisältö"</string>
+    <string name="pref_allow_apptabs" msgid="1325989799080202871">"Salli sovelluksille useita välilehtiä"</string>
+    <string name="pref_content_load_images" msgid="2125616852957377561">"Lataa kuvat"</string>
+    <string name="pref_content_load_images_summary" msgid="5055874125248398584">"Näytä verkkosivujen kuvat"</string>
+    <string name="pref_content_block_popups" msgid="4158524847764470895">"Estä ponnahdusikkunat"</string>
+    <string name="pref_content_javascript" msgid="4570972030299516843">"Ota JavaScript käyttöön"</string>
+    <string name="pref_content_open_in_background" msgid="824123779725118663">"Avaa taustalla"</string>
+    <string name="pref_content_plugins" msgid="7231944644794301582">"Ota laajennukset käyttöön"</string>
+  <string-array name="pref_content_plugins_choices">
+    <item msgid="6745108155096660725">"Aina käytössä"</item>
+    <item msgid="2484126708670016519">"Tarvittaessa"</item>
+    <item msgid="8547442717307793863">"Pois käytöstä"</item>
+  </string-array>
+    <string name="pref_content_open_in_background_summary" msgid="955411158407739504">"Avaa uudet välilehdet nykyisen taakse"</string>
+    <string name="pref_content_homepage" msgid="3324574611613105696">"Aseta etusivu"</string>
+    <string name="pref_content_search_engine" msgid="1620101310821644144">"Aseta hakukone"</string>
+    <string name="pref_content_search_engine_summary" msgid="304003941861818133">"Valitse hakukone"</string>
+    <string name="pref_set_homepage_to" msgid="7838684355145561242">"Aseta etusivuksi"</string>
+  <string-array name="pref_homepage_choices">
+    <item msgid="844041670142910837">"Nykyinen sivu"</item>
+    <item msgid="4430498748295169195">"Tyhjä sivu"</item>
+    <item msgid="5747608191946904074">"Oletussivu"</item>
+    <item msgid="6092441301001006473">"Avatuimmat sivustot"</item>
+    <item msgid="6569304572171444894">"Muu"</item>
+  </string-array>
+    <string name="pref_content_autofit" msgid="8260474534053660809">"Automaattinen sovitus"</string>
+    <string name="pref_content_autofit_summary" msgid="324810555822572112">"Muotoile verkkosivut sopimaan ruudulle"</string>
+    <string name="pref_general_title" msgid="1946872771219249323">"Yleinen"</string>
+    <string name="pref_general_sync_title" msgid="3138637035975860324">"Synkronointi"</string>
+    <string name="pref_general_autofill_title" msgid="547881256865816858">"Automaattinen täyttö"</string>
+    <string name="pref_autofill_enabled" msgid="1015751713312396713">"Lomakkeen automaattinen täyttö"</string>
+    <string name="pref_autofill_enabled_summary" msgid="7659954073892471496">"Täytä verkkolomakkeita yhdellä kosketuksella"</string>
+    <string name="pref_autofill_profile_editor" msgid="8934844472922113166">"Automaattisen täytön teksti"</string>
+    <string name="pref_autofill_profile_editor_summary" msgid="4864447251676856190">"Määritä teksti, jonka haluat täyttää automaattisesti verkkolomakkeisiin."</string>
+    <string name="pref_autologin_title" msgid="4421187193809267096">"Automaattinen Google-kirj."</string>
+    <string name="pref_autologin_progress" msgid="8333244467048833461">"Kirjaudutaan Google-sivustoihin käyttäjänimellä <xliff:g id="ID_1">%s</xliff:g>"</string>
+    <string name="autologin_bar_text" msgid="3684581827167173371">"Kirjautunut käyttäjänä"</string>
+    <string name="autologin_bar_login_text" msgid="3336615320510851879">"Kirjaudu"</string>
+    <string name="autologin_bar_hide_text" msgid="3629355974385859580">"Piilota"</string>
+    <string name="autologin_bar_error" msgid="7470001207395920811">"Kirjautuminen ei onnistu."</string>
+    <string name="autofill_profile_editor_heading" msgid="4798644544927738078">"Kirjoita teksti, jonka haluat täyttää automaattisesti verkkolomakkeisiin."</string>
+    <string name="autofill_profile_editor_name" msgid="8566130291459685955">"Koko nimi:"</string>
+    <string name="autofill_profile_editor_email_address" msgid="7967585896612797173">"Sähköposti:"</string>
+    <string name="autofill_profile_editor_company_name" msgid="2813443159949210417">"Yrityksen nimi:"</string>
+    <string name="autofill_profile_editor_address_line_1" msgid="836433242509243081">"Osoiterivi 1:"</string>
+    <string name="autofill_profile_editor_address_line_1_hint" msgid="5965659598509327172">"Katuosoite, postilokero"</string>
+    <string name="autofill_profile_editor_address_line_2" msgid="8194745202893822479">"Osoiterivi 2:"</string>
+    <string name="autofill_profile_editor_address_line_2_hint" msgid="8529642768127569254">"Asunto, rakennus, kerros jne."</string>
+    <string name="autofill_profile_editor_city" msgid="7306716145784997135">"Kaupunki:"</string>
+    <string name="autofill_profile_editor_state" msgid="2150403366835080407">"Maakunta/lääni:"</string>
+    <string name="autofill_profile_editor_zip_code" msgid="283668573295656671">"Postinumero:"</string>
+    <string name="autofill_profile_editor_country" msgid="7234470301239156656">"Maa:"</string>
+    <string name="autofill_profile_editor_phone_number" msgid="4938852821413729276">"Puhelin:"</string>
+    <string name="autofill_profile_editor_phone_number_invalid" msgid="6795411298467068957">"Virheellinen puhelinnumero."</string>
+    <string name="autofill_profile_editor_save_profile" msgid="3230301454458581157">"Tallenna"</string>
+    <string name="autofill_profile_successful_save" msgid="5691459703493331983">"Automaattisen täytön teksti tallennettu."</string>
+    <string name="autofill_profile_successful_delete" msgid="1790262652460723127">"Automaattisen täytön teksti poistettu."</string>
+    <string name="autofill_profile_editor_delete_profile" msgid="3098369314558164153">"Poista"</string>
+    <string name="autofill_setup_dialog_message" msgid="7123905786076456503">"Selain voi täyttää automaattisesti tällaiset verkkolomakkeet. Haluatko määrittää automaattisen täytön tekstin?"</string>
+    <string name="autofill_setup_dialog_negative_toast" msgid="3288881675232206984">"Voit määrittää automaattisen täytön tekstin kohdassa Selain &gt; Asetukset &gt; Yleisasetukset."</string>
+    <string name="disable_autofill" msgid="8305901059849400354">"Poista automaattinen täyttö käytöstä"</string>
+    <string name="pref_privacy_security_title" msgid="3480313968942160914">"Tietosuoja ja turvallisuus"</string>
+    <string name="pref_privacy_clear_cache" msgid="3380316479925886998">"Tyhjennä välimuisti"</string>
+    <string name="pref_privacy_clear_cache_summary" msgid="2216463577207991454">"Poista paikallisen välimuistin sisältö ja tietokannat"</string>
+    <string name="pref_privacy_clear_cache_dlg" msgid="4344512581716422465">"Poistetaanko paikallisen välimuistin sisältö ja tietokannat?"</string>
+    <string name="pref_privacy_cookies_title" msgid="6763274282214830526">"Evästeet"</string>
+    <string name="pref_privacy_clear_cookies" msgid="3095583579133780331">"Poista kaikki evästetiedot"</string>
+    <string name="pref_privacy_clear_cookies_summary" msgid="6962742063990677520">"Poista selaimen kaikki evästeet"</string>
+    <string name="pref_privacy_clear_cookies_dlg" msgid="1493252163164621278">"Poistetaanko kaikki evästeet?"</string>
+    <string name="pref_privacy_clear_history" msgid="8723795508825198477">"Tyhjennä historia"</string>
+    <string name="pref_privacy_clear_history_summary" msgid="6868501330708940734">"Tyhjennä selaimen selaushistoria"</string>
+    <string name="pref_privacy_clear_history_dlg" msgid="6934317391642846227">"Poistetaanko selaimen selaushistoria?"</string>
+    <string name="pref_privacy_formdata_title" msgid="6549813837982050424">"Lomakkeen tiedot"</string>
+    <string name="pref_privacy_clear_form_data" msgid="4232668196344383987">"Poista lomaketiedot"</string>
+    <string name="pref_privacy_clear_form_data_summary" msgid="7702091143640546200">"Poista kaikki tallennetut lomaketiedot"</string>
+    <string name="pref_privacy_clear_form_data_dlg" msgid="8205626042241338983">"Poistetaanko kaikki tallennetut lomaketiedot?"</string>
+    <string name="pref_privacy_clear_passwords" msgid="4750234112289277480">"Poista salasanat"</string>
+    <string name="pref_privacy_clear_passwords_summary" msgid="8856782718942903335">"Poista kaikki tallennetut salasanat"</string>
+    <string name="pref_privacy_clear_passwords_dlg" msgid="5836576259947160045">"Poistetaanko kaikki tallennetut salasanat?"</string>
+    <string name="pref_privacy_location_title" msgid="7458378016606081067">"Sijainti"</string>
+    <string name="pref_privacy_enable_geolocation" msgid="1395040170290765686">"Ota sijaintitiedot käyttöön"</string>
+    <string name="pref_privacy_enable_geolocation_summary" msgid="8437020934664306205">"Salli sivustojen pyytää sijaintitietojesi käyttöoikeutta"</string>
+    <string name="pref_privacy_clear_geolocation_access" msgid="6649680770030042980">"Poista sijaintitietojen käyttöoikeus"</string>
+    <string name="pref_privacy_clear_geolocation_access_summary" msgid="7750143359497314679">"Poista sijaintitietojen käyttöoikeus kaikilta sivustoilta"</string>
+    <string name="pref_privacy_clear_geolocation_access_dlg" msgid="3190928760598034346">"Poistetaanko sivuston sijaintitietojen käyttöoikeus?"</string>
+    <string name="pref_security_passwords_title" msgid="5734190542383756711">"Salasanat"</string>
+    <string name="pref_security_remember_passwords" msgid="6492957683454529549">"Tallenna salasanat"</string>
+    <string name="pref_security_remember_passwords_summary" msgid="256388703356349137">"Tallenna sivustojen käyttäjänimet ja salasanat"</string>
+    <string name="pref_security_save_form_data" msgid="1213669802810198893">"Tallenna lomaketiedot"</string>
+    <string name="pref_security_save_form_data_summary" msgid="4994074685153708026">"Tallenna lomakkeisiin syötetyt tiedot"</string>
+    <string name="pref_security_show_security_warning" msgid="8901135676266754559">"Näytä suojausvaroitukset"</string>
+    <string name="pref_security_show_security_warning_summary" msgid="5260098316025397525">"Näytä varoitus, jos sivun suojauksessa on ongelma"</string>
+    <string name="pref_security_accept_cookies" msgid="3201367661925047989">"Salli evästeet"</string>
+    <string name="pref_security_accept_cookies_summary" msgid="1907951236154433751">"Salli sivustojen tallentaa ja lukea evästetietoja"</string>
+  <string-array name="pref_text_size_choices">
+    <item msgid="4952686548944739548">"Hyvin pieni"</item>
+    <item msgid="1950030433642671460">"Pieni"</item>
+    <item msgid="4338347520133294584">"Normaali"</item>
+    <item msgid="5043128215356351184">"Suuri"</item>
+    <item msgid="7201512237890458902">"Hyvin suuri"</item>
+  </string-array>
+    <string name="pref_min_font_size" msgid="8811125835817449131">"Kirjasimen vähimmäiskoko"</string>
+    <string name="pref_min_font_size_value" msgid="2924708480509060209">"<xliff:g id="FONT_SIZE">%d</xliff:g> pt"</string>
+    <string name="pref_text_zoom" msgid="5171056101805125497">"Tekstin skaalaus"</string>
+    <string name="pref_zoom_on_double_tap" msgid="902786475250741795">"Zoomaa kaksoisnapauttamalla"</string>
+    <string name="pref_force_userscalable" msgid="5641500562399892621">"Ota skaalaus käyttöön"</string>
+    <string name="pref_force_userscalable_summary" msgid="3613242300617172230">"Ohita sivuston skaalauksenhallintapyyntö"</string>
+    <string name="pref_inverted_category" msgid="1280639705117152207">"Käänteinen hahmonnus"</string>
+    <string name="pref_inverted" msgid="7613556986776824112">"Käänteinen hahmonnus"</string>
+    <string name="pref_inverted_summary" msgid="7357225897413923085">"Mustasta tulee valkoista ja päinvastoin"</string>
+    <string name="pref_inverted_contrast" msgid="8527441236225288169">"Kontrasti"</string>
+    <string name="pref_default_zoom" msgid="8076142259097187395">"Oletuszoomaus"</string>
+  <string-array name="pref_default_zoom_choices">
+    <item msgid="549583171195154919">"Kauas"</item>
+    <item msgid="5619034257768161024">"Keskikokoinen"</item>
+    <item msgid="3840999588443167001">"Sulje"</item>
+  </string-array>
+    <string name="pref_default_zoom_dialogtitle" msgid="6095974367125109021">"Oletuszoomaus"</string>
+    <string name="pref_content_load_page" msgid="2219810141690955452">"Avaa sivut yleiskatsauksessa"</string>
+    <string name="pref_content_load_page_summary" msgid="9168803276420332955">"Näytä äskettäin avattujen sivujen yleiskatsaus"</string>
+    <string name="pref_extras_title" msgid="7075456173747370647">"Lisäasetukset"</string>
+    <string name="pref_extras_website_settings" msgid="67866640052455549">"Sivustoasetukset"</string>
+    <string name="pref_extras_website_settings_summary" msgid="1656771443223494406">"Yksittäisten sivustojen lisäasetukset"</string>
+    <string name="pref_extras_reset_default_title" msgid="3579760449455761762">"Palauta oletukset"</string>
+    <string name="pref_extras_reset_default" msgid="8904000515846202110">"Palauta oletukseksi"</string>
+    <string name="pref_extras_reset_default_summary" msgid="4247870778270414501">"Palauta oletusasetukset"</string>
+    <string name="pref_extras_reset_default_dlg" msgid="7922814420184322450">"Palautetaanko asetukset oletusarvoihin?"</string>
+    <string name="pref_development_title" msgid="3263854204533056480">"Virheenjäljitys"</string>
+    <string name="pref_default_text_encoding" msgid="5742965543955558478">"Tekstin koodaus"</string>
+  <string-array name="pref_default_text_encoding_choices">
+    <item msgid="7275223955790513818">"Latin-1 (ISO-8859-1)"</item>
+    <item msgid="2456597866837587140">"Unicode (UTF-8)"</item>
+    <item msgid="6122474363777211732">"kiina (GBK)"</item>
+    <item msgid="373372275931607040">"kiina (Big5)"</item>
+    <item msgid="891615911084608570">"japani (ISO-2022-JP)"</item>
+    <item msgid="5589150448475151241">"japani (SHIFT_JIS)"</item>
+    <item msgid="7356792686950371843">"japani (EUC-JP)"</item>
+    <item msgid="2193955365569270096">"korea (EUC-KR)"</item>
+  </string-array>
+    <string name="pref_default_text_encoding_dialogtitle" msgid="5508255018084978547">"Tekstin koodaus"</string>
+    <string name="pref_accessibility_title" msgid="5127836981587423215">"Esteettömyys"</string>
+    <string name="pref_font_size_category" msgid="6683754355084218254">"Tekstin koko"</string>
+    <string name="pref_lab_title" msgid="5571091610359629423">"Labs"</string>
+    <string name="pref_lab_quick_controls" msgid="3267606522082281367">"Pikasäätimet"</string>
+    <string name="pref_lab_quick_controls_summary" msgid="3149664132600968775">"Avaa pika-aset. ja piilota sov. &amp; URL-palk. liu\'uttamalla peukaloa vas. tai oik."</string>
+    <string name="pref_use_instant_search" msgid="1119176077760723740">"Google Instant"</string>
+    <string name="pref_use_instant_search_summary" msgid="839320474961917522">"Käyttämällä Google Instantia hakiessasi näet tuloksia jo hakua kirjoittaessasi (tämä voi kasvattaa tiedonsiirron määrää)."</string>
+    <string name="pref_lab_fullscreen" msgid="8173609016657987973">"Koko ruutu"</string>
+    <string name="pref_lab_fullscreen_summary" msgid="7694738112219376740">"Piilota tilapalkki käyttämällä koko ruudun tilaa."</string>
+    <string name="pref_data_title" msgid="7255058703417796578">"Kaistanleveyden hallinta"</string>
+    <string name="pref_data_preload_title" msgid="4479320472980292873">"Hakutulosta esiladataan"</string>
+  <string-array name="pref_data_preload_choices">
+    <item msgid="5180466923190095508">"Ei koskaan"</item>
+    <item msgid="1791664748778640002">"Vain wifi-yhteydellä"</item>
+    <item msgid="3944061253437827617">"Aina"</item>
+  </string-array>
+    <string name="pref_data_preload_summary" msgid="3809168910751382727">"Anna selaimen esiladata luotettavat hakutulokset taustalla"</string>
+    <string name="pref_data_preload_dialogtitle" msgid="8421297746110796536">"Hakutulosten esilataus"</string>
+    <string name="pref_link_prefetch_title" msgid="4123685219009241072">"Verkkosivun esilataus"</string>
+  <string-array name="pref_link_prefetch_choices">
+    <item msgid="4889781230398008031">"Ei koskaan"</item>
+    <item msgid="1908465963242077428">"Vain wifi-yhteydellä"</item>
+    <item msgid="7647277566998527142">"Aina"</item>
+  </string-array>
+    <string name="pref_link_prefetch_summary" msgid="6558181497993206817">"Salli selaimen esiladata linkitetyt verkkosivut taustalla"</string>
+    <string name="pref_link_prefetch_dialogtitle" msgid="3804646141622839765">"Verkkosivun esilataus"</string>
+    <string name="browserFrameNetworkErrorLabel" msgid="8102515020625680714">"Yhteysongelma"</string>
+    <string name="browserFrameFileErrorLabel" msgid="4703792279852977350">"Tiedosto-ongelma"</string>
+    <string name="browserFrameFormResubmitLabel" msgid="2385512101948178841"></string>
+    <string name="browserFrameFormResubmitMessage" msgid="5244059279866705254">"Sivu, jota yrität avata, sisältää jo lähetettyjä tietoja (POSTDATA). Jos lähetät tiedot uudelleen, sivulla olevan lomakkeen suorittama toimenpide (kuten haku tai verkko-ostos) toistetaan."</string>
+    <string name="loadSuspendedTitle" msgid="6453376579109644551">"Ei yhteyttä"</string>
+    <string name="loadSuspended" msgid="3843343290039218668">"Selain ei voi ladata tätä sivua, sillä internetyhteyttä ei ole."</string>
+    <string name="clear_history" msgid="5998307092715979619">"Tyhjennä historia"</string>
+    <string name="browser_history" msgid="2979476257919939232">"Viimeaikoina selatut sivut"</string>
+    <string name="empty_history" msgid="7013369425484218985">"Ei selaushistoriaa."</string>
+    <string name="go_home" msgid="109129207276086793">"Etusivu"</string>
+    <string name="add_new_bookmark" msgid="3158497555612337238">"Lisää kirjanmerkki"</string>
+    <string name="add_bookmark_short" msgid="3783984330998103735">"Lisää"</string>
+    <string name="search_hint" msgid="4647356319916631820">"Kirjoita hakusanoja tai URL-osoite"</string>
+    <string name="search_button_text" msgid="5235226933877634410">"Siirry"</string>
+    <string name="search_settings_description" msgid="1422401062529014107">"Kirjanmerkit ja verkkohistoria"</string>
+    <string name="popup_window_attempt" msgid="31565781154067629">"Sallitaanko tämän sivuston avata ponnahdusikkuna?"</string>
+    <string name="allow" msgid="1157313689171991335">"Salli"</string>
+    <string name="block" msgid="9172175889884707800">"Estä"</string>
+    <string name="too_many_windows_dialog_title" msgid="5709782301477380438">"Välilehtiä avattu enimmäismäärä"</string>
+    <string name="too_many_windows_dialog_message" msgid="3644234634638290304">"Sulje yksi välilehti ennen kuin avaat uuden."</string>
+    <string name="too_many_subwindows_dialog_title" msgid="3805453941587725944">"Ponnahdusikkuna on jo auki"</string>
+    <string name="too_many_subwindows_dialog_message" msgid="2164725447981195556">"Vain yksi ponnahdusikkuna voi olla auki kerrallaan."</string>
+    <string name="download_no_sdcard_dlg_title" product="nosdcard" msgid="56777245081568508">"USB-tila ei käytettävissä"</string>
+    <string name="download_no_sdcard_dlg_title" product="default" msgid="605904452159416792">"Ei SD-korttia"</string>
+    <string name="download_no_sdcard_dlg_msg" product="nosdcard" msgid="3144652102051031721">"Tarvitset USB-tallennustilan ladataksesi tiedoston <xliff:g id="FILENAME">%s</xliff:g>."</string>
+    <string name="download_no_sdcard_dlg_msg" product="default" msgid="2616399456116301518">"Tiedoston <xliff:g id="FILENAME">%s</xliff:g> lataamiseen tarvitaan SD-kortti."</string>
+    <string name="download_sdcard_busy_dlg_title" product="nosdcard" msgid="8081445664689818973">"USB-tila ei käytettävissä"</string>
+    <string name="download_sdcard_busy_dlg_title" product="default" msgid="6877712666046917741">"SD-kortti ei käytettävissä"</string>
+    <string name="download_sdcard_busy_dlg_msg" product="nosdcard" msgid="8412543086906716875">"USB-tallennustila on varattu. Voit sallia lataukset valitsemalla ilmoituksessa Poista USB-tallennustila käytöstä."</string>
+    <string name="download_sdcard_busy_dlg_msg" product="default" msgid="2629425950473358591">"SD-kortti on varattu. Voit sallia lataukset valitsemalla ilmoituksessa Poista USB-tallennustila käytöstä."</string>
+    <string name="cannot_download" msgid="8150552478556798780">"Vain http- tai https-URL-osoitteista voi ladata"</string>
+    <string name="download_pending" msgid="2599683668575349559">"Aloitetaan latausta…"</string>
+    <string name="search_the_web" msgid="6046130189241962337">"Verkkohaku"</string>
+    <string name="webstorage_outofspace_notification_title" msgid="1160474608059771788">"Selaimen tallennustila täynnä"</string>
+    <string name="webstorage_outofspace_notification_text" msgid="47273584426988640">"Vapauta tilaa koskettamalla."</string>
+    <string name="webstorage_clear_data_title" msgid="689484577124333977">"Poista tallennetut tiedot"</string>
+    <string name="webstorage_clear_data_dialog_message" msgid="6200681632891775881">"Poistetaanko kaikki tämän sivuston tallentamat tiedot?"</string>
+    <string name="webstorage_clear_data_dialog_ok_button" msgid="6682570951259237542">"OK"</string>
+    <string name="webstorage_clear_data_dialog_cancel_button" msgid="2028867751958942762">"Peruuta"</string>
+    <string name="webstorage_origin_summary_mb_stored" msgid="1985885826292236210">"Mt tallennettu puhelimeen"</string>
+    <string name="loading_video" msgid="7886324933131962321">"Ladataan videota…"</string>
+    <string name="geolocation_permissions_prompt_message" msgid="356796102004052471">"<xliff:g id="WEBSITE_ORIGIN">%s</xliff:g> haluaa käyttää sijaintitietojasi"</string>
+    <string name="geolocation_permissions_prompt_share" msgid="9084486342048347976">"Jaa sijaintitiedot"</string>
+    <string name="geolocation_permissions_prompt_dont_share" msgid="6303025160237860300">"Hylkää"</string>
+    <string name="geolocation_permissions_prompt_remember" msgid="3118526300707348308">"Muista valinta"</string>
+    <string name="geolocation_permissions_prompt_toast_allowed" msgid="7201417941112726112">"Tämä sivusto voi käyttää sijaintiasi. Vaihda asetus kohdassa Asetukset &gt; Lisäasetukset &gt; Verkkosivuston asetukset."</string>
+    <string name="geolocation_permissions_prompt_toast_disallowed" msgid="156443445797377409">"Tämä sivusto ei voi käyttää sijaintiasi. Vaihda asetus kohdassa Asetukset &gt; Lisäasetukset &gt; Verkkosivuston asetukset."</string>
+    <string name="geolocation_settings_page_title" msgid="1745477985097536528">"Poista sijaintitietojen käyttöoikeus"</string>
+    <string name="geolocation_settings_page_summary_allowed" msgid="9180251524290811398">"Tämä sivusto voi käyttää sijaintitietojasi tällä hetkellä"</string>
+    <string name="geolocation_settings_page_summary_not_allowed" msgid="7941769772784366199">"Tämä sivusto ei voi käyttää sijaintitietojasi tällä hetkellä"</string>
+    <string name="geolocation_settings_page_dialog_message" msgid="8772923416296868537">"Poistetaanko sijaintitietojen käyttöoikeus tältä sivustolta?"</string>
+    <string name="geolocation_settings_page_dialog_ok_button" msgid="2113465477131017852">"OK"</string>
+    <string name="geolocation_settings_page_dialog_cancel_button" msgid="7941036504673409747">"Peruuta"</string>
+    <string name="website_settings_clear_all" msgid="8739804325997655980">"Poista kaikki"</string>
+    <string name="website_settings_clear_all_dialog_message" msgid="1551164275687475061">"Poistetaanko kaikki sivuston tiedot ja sijaintien käyttöoikeudet?"</string>
+    <string name="website_settings_clear_all_dialog_ok_button" msgid="7858504776529106243">"OK"</string>
+    <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"Peruuta"</string>
+    <string name="progress_dialog_setting_wallpaper" msgid="2031391201442335889">"Asetetaan taustakuvaa..."</string>
+    <string name="defaultBookmarksUpButton" msgid="2303951020715704735">"Kirjanmerkit"</string>
+    <string name="empty_bookmarks_folder" msgid="6239830231917618556">"Ei kirjanmerkkejä"</string>
+    <string name="other_bookmarks" msgid="8021889794475657319">"Muut kirjanmerkit"</string>
+    <string name="rlz_access_point" msgid="7165847807377650632">"Y1"</string>
+    <string name="account_chooser_dialog_title" msgid="3314204833188808194">"Valitse tili"</string>
+    <string name="import_bookmarks_dialog_title" msgid="3325557652271172128">"Synkronoi Google-tilin kanssa"</string>
+    <string name="import_bookmarks_dialog_description" msgid="2362897194870789609">"Tämän laitteen kirjanmerkkejä ei ole vielä yhdistetty Google-tiliin. Tallenna kirjanmerkit lisäämällä ne tiliin. Poista kirjanmerkit, jos et halua synkronoida niitä."</string>
+    <string name="import_bookmarks_dialog_select_add_account" msgid="7643058662272484895">"Lisää tämän laitteen kirjanmerkit ja aloita synkronoiminen Google-tilin kanssa"</string>
+    <string name="import_bookmarks_dialog_delete_select_account" msgid="4333848003180415516">"Poista tämän laitteen kirjanmerkit ja aloita kirjanmerkkien synkronointi Google-tilin kanssa."</string>
+    <string name="import_bookmarks_dialog_confirm_delete" msgid="2204771572755630570">"Poista tämän laitteen kirjanmerkit ja aloita kirjanmerkkien synkronointi tilin <xliff:g id="GOOGLE_ACCOUNT">%s</xliff:g> kanssa."</string>
+    <string name="import_bookmarks_dialog_confirm_add" msgid="8942794112340838111">"Haluatko lisätä tämän laitteen kirjanmerkit ja aloittaa kirjanmerkkien synkronoinnin tilin <xliff:g id="GOOGLE_ACCOUNT">%s</xliff:g> kanssa?"</string>
+    <string name="import_bookmarks_dialog_remove" msgid="5984607822851800902">"Poista kirjanmerkit"</string>
+    <string name="import_bookmarks_wizard_next" msgid="7578143961884352676">"Seuraava"</string>
+    <string name="import_bookmarks_wizard_previous" msgid="8551440353688257031">"Edellinen"</string>
+    <string name="import_bookmarks_wizard_cancel" msgid="4936061122806506634">"Peruuta"</string>
+    <string name="import_bookmarks_wizard_done" msgid="1446247092194489191">"Valmis"</string>
+    <string name="import_bookmarks_dialog_add" msgid="1743359725294101189">"Lisää kirjanmerkit Google-tiliin"</string>
+    <string name="import_bookmarks_dialog_import" msgid="6933613853573899218">"Lisää Android-kirjanmerkit tilin <xliff:g id="GOOGLE_ACCOUNT">%s</xliff:g> kirjanmerkkeihin"</string>
+    <string name="menu_share_url" msgid="5851814357333739700">"Jaa"</string>
+    <string name="max_tabs_warning" msgid="4122034303809457570">"Välilehtiä ei ole enempää saatavilla"</string>
+    <string name="instant_search_label" msgid="8769284297650716935">"Google ja Instant (Labs)"</string>
+    <string name="preview" msgid="6450823514561689038">"Esikatselu"</string>
+    <string name="local_bookmarks" msgid="533816851415228520">"Paikalliset kirjanmerkit"</string>
+    <string name="ua_switcher_desktop" msgid="220097077327558435">"Käytä sivuston tietokoneversiota"</string>
+    <string name="permission_preload_label" msgid="4856971662337877316">"Esilatauksen tulokset"</string>
+    <string name="empty_snapshots_folder" msgid="7675378008107026013">"Ei tallennettuja sivuja."</string>
+    <string name="remove_snapshot" msgid="1624447424544976849">"Poista tallennettu sivu"</string>
+    <string name="snapshot_go_live" msgid="1209542802541168497">"Lataa sivu"</string>
+    <string name="accessibility_button_back" msgid="6194680634245279407">"Palaa takaisin"</string>
+    <string name="accessibility_button_forward" msgid="1236827218480658168">"Siirry eteenpäin"</string>
+    <string name="accessibility_button_refresh" msgid="1023441396241841313">"Päivitä sivu"</string>
+    <string name="accessibility_button_stop" msgid="6793644120043222148">"Keskeytä sivun lataus"</string>
+    <string name="accessibility_button_addbookmark" msgid="4787844912630006181">"Lisää sivu kirjanmerkkeihin"</string>
+    <string name="accessibility_button_search" msgid="5357014102136055376">"Haku"</string>
+    <string name="accessibility_button_voice" msgid="152016375096083337">"Aloita puhehaku"</string>
+    <string name="accessibility_button_bookmarks" msgid="7435055677299151649">"Kirjanmerkit"</string>
+    <string name="accessibility_button_closetab" msgid="6954807842756927737">"Sulje välilehti"</string>
+    <string name="accessibility_button_newtab" msgid="4116986240706315748">"Avaa uusi välilehti"</string>
+    <string name="accessibility_button_newincognitotab" msgid="5254901889040012964">"Avaa uusi incognito-välilehti"</string>
+    <string name="accessibility_button_clear" msgid="6943152307986161598">"Tyhjennä teksti"</string>
+    <string name="accessibility_button_uaswitch" msgid="6286804719724282339">"Vaihda user-agentia"</string>
+    <string name="accessibility_button_go" msgid="1182818872083055958">"Siirry"</string>
+    <string name="accessibility_button_navscreen" msgid="9142904748728713075">"Sivujen hallinta"</string>
+    <string name="accessibility_button_more" msgid="3054251446394224216">"Lisää vaihtoehtoja"</string>
+    <string name="accessibility_state_incognito" msgid="5786038488425202355">"Incognito-sivu"</string>
+    <string name="accessibility_state_frozen" msgid="8041539250447035570">"Tallennettu sivu"</string>
+    <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Välilehtien hallinta"</string>
+    <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Edellinen kansio"</string>
 </resources>

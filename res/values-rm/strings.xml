@@ -128,6 +128,8 @@
     <skip />
     <string name="goto_dot" msgid="3895839050522602723">"Dai"</string>
     <string name="select_dot" msgid="6299170761900561967">"Selecziunar text"</string>
+    <!-- no translation found for close_other_tabs (7693157495148282778) -->
+    <skip />
     <string name="bookmarks" msgid="1961279134885867815">"Segnapaginas"</string>
     <string name="shortcut_bookmark" msgid="3974876480401135895">"Segnapagina"</string>
     <!-- no translation found for shortcut_bookmark_title (7570786275916681296) -->
@@ -595,5 +597,7 @@
     <!-- no translation found for accessibility_state_frozen (8041539250447035570) -->
     <skip />
     <!-- no translation found for accessibility_transition_navscreen (2734915619351519547) -->
+    <skip />
+    <!-- no translation found for accessibility_button_bookmarks_folder_up (9179389954714270505) -->
     <skip />
 </resources>

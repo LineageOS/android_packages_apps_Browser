@@ -139,7 +139,7 @@ public abstract class BaseUi implements UI {
                 R.id.fullscreen_custom_content);
         mErrorConsoleContainer = (LinearLayout) frameLayout
                 .findViewById(R.id.error_console);
-        setFullscreen(false);
+        setFullscreen(BrowserSettings.getInstance().useFullscreen());
         mGenericFavicon = res.getDrawable(
                 R.drawable.app_web_browser_sm);
         mTitleBar = new TitleBar(mActivity, mUiController, this,
@@ -174,6 +174,7 @@ public abstract class BaseUi implements UI {
         if (ct != null) {
             setActiveTab(ct);
         }
+        mTitleBar.onResume();
     }
 
     protected boolean isActivityPaused() {

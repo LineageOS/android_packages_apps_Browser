@@ -94,6 +94,7 @@
     <string name="open_all_in_new_window" msgid="455786763426575293">"Open almal in nuwe oortjies"</string>
     <string name="goto_dot" msgid="3895839050522602723">"Gaan"</string>
     <string name="select_dot" msgid="6299170761900561967">"Kies teks"</string>
+    <string name="close_other_tabs" msgid="7693157495148282778">"Maak ander oortjies toe"</string>
     <string name="bookmarks" msgid="1961279134885867815">"Boekmerke"</string>
     <string name="shortcut_bookmark" msgid="3974876480401135895">"Boekmerk"</string>
     <string name="shortcut_bookmark_title" msgid="7570786275916681296">"Kies \'n boekmerk"</string>
@@ -396,4 +397,5 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Incognito-bladsy"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Gestoorde bladsy"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Oortjiebestuur"</string>
+    <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Vorige vouer"</string>
 </resources>

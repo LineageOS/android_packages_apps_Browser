@@ -94,6 +94,7 @@
     <string name="open_all_in_new_window" msgid="455786763426575293">"Alle in jeweils neuem Tab öffnen"</string>
     <string name="goto_dot" msgid="3895839050522602723">"Los"</string>
     <string name="select_dot" msgid="6299170761900561967">"Text auswählen"</string>
+    <string name="close_other_tabs" msgid="7693157495148282778">"Andere Tabs schließen"</string>
     <string name="bookmarks" msgid="1961279134885867815">"Lesezeichen"</string>
     <string name="shortcut_bookmark" msgid="3974876480401135895">"Lesezeichen"</string>
     <string name="shortcut_bookmark_title" msgid="7570786275916681296">"Lesezeichen auswählen"</string>
@@ -160,7 +161,7 @@
     <string name="pref_autofill_profile_editor" msgid="8934844472922113166">"AutoFill-Text"</string>
     <string name="pref_autofill_profile_editor_summary" msgid="4864447251676856190">"AutoFill-Text für Webformulare festlegen"</string>
     <string name="pref_autologin_title" msgid="4421187193809267096">"Automatische Google-Anmeldung"</string>
-    <string name="pref_autologin_progress" msgid="8333244467048833461">"Anmeldung in Google Sites mit <xliff:g id="ID_1">%s</xliff:g>..."</string>
+    <string name="pref_autologin_progress" msgid="8333244467048833461">"Anmeldung bei Google-Websites mit <xliff:g id="ID_1">%s</xliff:g>..."</string>
     <string name="autologin_bar_text" msgid="3684581827167173371">"Anmelden als"</string>
     <string name="autologin_bar_login_text" msgid="3336615320510851879">"Anmelden"</string>
     <string name="autologin_bar_hide_text" msgid="3629355974385859580">"Ausblenden"</string>
@@ -396,4 +397,5 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Inkognito-Seite"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Gespeicherte Seite"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Tab-Verwaltung"</string>
+    <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Vorheriger Ordner"</string>
 </resources>

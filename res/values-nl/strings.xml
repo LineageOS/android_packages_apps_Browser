@@ -94,6 +94,7 @@
     <string name="open_all_in_new_window" msgid="455786763426575293">"Alle bladwijzers openen op nieuwe tabbladen"</string>
     <string name="goto_dot" msgid="3895839050522602723">"Ga"</string>
     <string name="select_dot" msgid="6299170761900561967">"Tekst selecteren"</string>
+    <string name="close_other_tabs" msgid="7693157495148282778">"Andere tabbladen sluiten"</string>
     <string name="bookmarks" msgid="1961279134885867815">"Bladwijzers"</string>
     <string name="shortcut_bookmark" msgid="3974876480401135895">"Bladwijzer"</string>
     <string name="shortcut_bookmark_title" msgid="7570786275916681296">"Een bladwijzer kiezen"</string>
@@ -339,7 +340,7 @@
     <string name="accessibility_button_stop" msgid="6793644120043222148">"Stoppen met het laden van de pagina"</string>
     <string name="accessibility_button_addbookmark" msgid="4787844912630006181">"Bladwijzer voor pagina toevoegen"</string>
     <string name="accessibility_button_search" msgid="5357014102136055376">"Zoeken"</string>
-    <string name="accessibility_button_voice" msgid="152016375096083337">"Spraakgestuurde zoekopdracht starten"</string>
+    <string name="accessibility_button_voice" msgid="152016375096083337">"Zoeken met je stem"</string>
     <string name="accessibility_button_bookmarks" msgid="7435055677299151649">"Bladwijzers"</string>
     <string name="accessibility_button_closetab" msgid="6954807842756927737">"Tabblad sluiten"</string>
     <string name="accessibility_button_newtab" msgid="4116986240706315748">"Nieuw tabblad openen"</string>
@@ -352,9 +353,9 @@
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Incognitopagina"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Opgeslagen pagina"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Tabbladbeheer"</string>
+    <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Vorige map"</string>
 
     <!-- CYANOGENMOD EDITS -->
-    <string name="close_other_tabs">Overige tabbladen sluiten</string>
     <string name="contextmenu_openlink_incognito_newwindow">Openen in nieuw incognitotabblad</string>
     <string name="contextmenu_openlink_incognito_newwindow_background">Openen in nieuw incognitotabblad op de achtergrond</string>
     <string name="accessibility_button_homescreen">Startscherm</string>

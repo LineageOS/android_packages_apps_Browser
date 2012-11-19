@@ -36,6 +36,7 @@ import android.content.res.TypedArray;
 import android.database.ContentObserver;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.net.Uri;
@@ -514,8 +515,8 @@ public class Controller
                             case R.id.save_link_context_menu_id:
                             case R.id.download_context_menu_id:
                                 DownloadHandler.onDownloadStartNoStream(
-                                        mActivity, url, null, null, null,
-                                        view.isPrivateBrowsingEnabled());
+                                        mActivity, url, view.getSettings().getUserAgentString(),
+                                        null, null, null, view.isPrivateBrowsingEnabled());
                                 break;
                         }
                         break;
@@ -871,11 +872,6 @@ public class Controller
     public void onPageFinished(Tab tab) {
         mCrashRecoveryHandler.backupState();
         mUi.onTabDataChanged(tab);
-        // pause the WebView timer and release the wake lock if it is finished
-        // while BrowserActivity is in pause state.
-        if (mActivityPaused && pauseWebViewTimers(tab)) {
-            releaseWakeLock();
-        }
 
         // Performance probe
         if (false) {
@@ -900,6 +896,10 @@ public class Controller
             // onPageFinished has executed)
             if (tab.inPageLoad()) {
                 updateInLoadMenuItems(mCachedMenu, tab);
+            } else if (mActivityPaused && pauseWebViewTimers(tab)) {
+                // pause the WebView timer and release the wake lock if it is
+                // finished while BrowserActivity is in pause state.
+                releaseWakeLock();
             }
             if (!tab.isPrivateBrowsingEnabled()
                     && !TextUtils.isEmpty(tab.getUrl())
@@ -1043,10 +1043,11 @@ public class Controller
 
     @Override
     public void onDownloadStart(Tab tab, String url, String userAgent,
-            String contentDisposition, String mimetype, long contentLength) {
+            String contentDisposition, String mimetype, String referer,
+            long contentLength) {
         WebView w = tab.getWebView();
         DownloadHandler.onDownloadStart(mActivity, url, userAgent,
-                contentDisposition, mimetype, w.isPrivateBrowsingEnabled());
+                contentDisposition, mimetype, referer, w.isPrivateBrowsingEnabled());
         if (w.copyBackForwardList().getSize() == 0) {
             // This Tab was opened for the sole purpose of downloading a
             // file. Remove it.
@@ -1480,9 +1481,9 @@ public class Controller
                         return false;
                     }
                 });
-                menu.findItem(R.id.download_context_menu_id).
-                        setOnMenuItemClickListener(
-                                new Download(mActivity, extra, webview.isPrivateBrowsingEnabled()));
+                menu.findItem(R.id.download_context_menu_id).setOnMenuItemClickListener(
+                        new Download(mActivity, extra, webview.isPrivateBrowsingEnabled(),
+                                webview.getSettings().getUserAgentString()));
                 menu.findItem(R.id.set_wallpaper_context_menu_id).
                         setOnMenuItemClickListener(new WallpaperHandler(mActivity,
                                 extra));
@@ -2198,6 +2199,10 @@ public class Controller
                     }
                 } catch (IllegalStateException e) {
                     // Ignore
+                } catch (SQLiteException s) {
+                    // Added for possible error when user tries to remove the same bookmark
+                    // that is being updated with a screen shot
+                    Log.w(LOGTAG, "Error when running updateScreenshot ", s);
                 } finally {
                     if (cursor != null) cursor.close();
                 }
@@ -2224,6 +2229,7 @@ public class Controller
         private Activity mActivity;
         private String mText;
         private boolean mPrivateBrowsing;
+        private String mUserAgent;
         private static final String FALLBACK_EXTENSION = "dat";
         private static final String IMAGE_BASE_FORMAT = "yyyy-MM-dd-HH-mm-ss-";
 
@@ -2232,16 +2238,18 @@ public class Controller
             if (DataUri.isDataUri(mText)) {
                 saveDataUri();
             } else {
-                DownloadHandler.onDownloadStartNoStream(mActivity, mText, null,
-                        null, null, mPrivateBrowsing);
+                DownloadHandler.onDownloadStartNoStream(mActivity, mText, mUserAgent,
+                        null, null, null, mPrivateBrowsing);
             }
             return true;
         }
 
-        public Download(Activity activity, String toDownload, boolean privateBrowsing) {
+        public Download(Activity activity, String toDownload, boolean privateBrowsing,
+                String userAgent) {
             mActivity = activity;
             mText = toDownload;
             mPrivateBrowsing = privateBrowsing;
+            mUserAgent = userAgent;
         }
 
         /**
@@ -2633,6 +2641,9 @@ public class Controller
             if (data.isPreloaded()) {
                 // this isn't called for preloaded tabs
             } else {
+                if (t != null && data.mDisableUrlOverride) {
+                    t.disableUrlOverridingForLoad();
+                }
                 loadUrl(t, data.mUrl, data.mHeaders);
             }
         }
