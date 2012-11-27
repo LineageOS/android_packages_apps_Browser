@@ -1094,7 +1094,14 @@ public class Controller
                 mActivity.getComponentName().flattenToString());
         intent.putExtra(SEND_APP_ID_EXTRA, false);
         intent.putExtra(RecognizerIntent.EXTRA_WEB_SEARCH_ONLY, true);
-        mActivity.startActivity(intent);
+
+        try {
+            mActivity.startActivity(intent);
+        } catch (android.content.ActivityNotFoundException e) {
+            Log.e(LOGTAG, "VoiceSearch activity not available");
+            Toast.makeText(mActivity, R.string.voicesearch_not_available,
+                                        Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

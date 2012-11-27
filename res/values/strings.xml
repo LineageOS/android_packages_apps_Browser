@@ -996,4 +996,7 @@
     <!-- Content description for tab switcher transition [CHAR LIMIT=NONE] -->
     <string name="accessibility_transition_navscreen">Tab management</string>
 
+    <!-- Toast displayed when activity to handle VoiceSearch is not available -->
+    <string name="voicesearch_not_available">VoiceSearch application is not available</string>
+
 </resources>
