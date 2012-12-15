@@ -360,18 +360,6 @@
     <string name="contextmenu_openlink_incognito_newwindow_background">Openen in nieuw incognitotabblad op de achtergrond</string>
     <string name="accessibility_button_homescreen">Startscherm</string>
 
-    <!-- Title for the WebGL feature [CHAR LIMIT=40] -->
-    <string name="pref_lab_webgl">WebGL</string>
-    <!-- Summary for the WebGL lab feature [CHAR LIMIT=120] -->
-    <string name="pref_lab_webgl_summary">WebGL inschakelen</string>
-
-    <!-- Title for video preloading [CHAR LIMIT=40] -->
-    <string name="pref_video_preload_title">Video voorladen</string>
-    <!-- Summary for video preloading [CHAR LIMIT=80] -->
-    <string name="pref_video_preload_summary">Video voorladen indien de server het toestaat</string>
-    <!-- Title of dialog for video preloading [CHAR LIMIT=40] -->
-    <string name="pref_video_preload_dialogtitle">Video voorladen</string>
-
     <!-- User agent label -->
     <string name="pref_content_ua">Useragent</string>
     <!-- User agent summary -->

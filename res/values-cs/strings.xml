@@ -279,8 +279,6 @@
     <string name="pref_use_instant_search_summary" msgid="839320474961917522">"Dynamické vyhledávání ve Vyhledávání Google zobrazuje výsledky již při zadávání dotazu (může se zvýšit množství přenesených dat)."</string>
     <string name="pref_lab_fullscreen" msgid="8173609016657987973">"Celá obrazovka"</string>
     <string name="pref_lab_fullscreen_summary" msgid="7694738112219376740">"Při použití režimu zobrazení na celou obrazovku je skryt stavový řádek."</string>
-    <string name="pref_lab_webgl">Technologie WebGL</string>
-    <string name="pref_lab_webgl_summary">Povolit technologii WebGL</string>
     <string name="pref_data_title" msgid="7255058703417796578">"Správa rychlosti připojení"</string>
     <string name="pref_data_preload_title" msgid="4479320472980292873">"Předběžné načítání výsledků vyhledávání"</string>
   <string-array name="pref_data_preload_choices">
@@ -298,14 +296,11 @@
   </string-array>
     <string name="pref_link_prefetch_summary" msgid="6558181497993206817">"Povolit prohlížeči předem načítat webové stránky z odkazů na pozadí"</string>
     <string name="pref_link_prefetch_dialogtitle" msgid="3804646141622839765">"Předběžné načítání webstránek"</string>
-    <string name="pref_video_preload_title">Předběžné načítání videa</string>
     <string-array name="pref_video_preload_choices">
         <item>Nikdy</item>
         <item>Pouze v sítích Wi-Fi</item>
         <item>Vždy</item>
     </string-array>
-    <string name="pref_video_preload_summary">Umožní prohlížečí předem načítat video pokud to umožňuje server</string>
-    <string name="pref_video_preload_dialogtitle">Předběžné načítání videa</string>
     <string name="browserFrameNetworkErrorLabel">Problém s připojením</string>
     <string name="browserFrameFileErrorLabel" msgid="4703792279852977350">"Problém se souborem"</string>
     <string name="browserFrameFormResubmitLabel" msgid="2385512101948178841"></string>

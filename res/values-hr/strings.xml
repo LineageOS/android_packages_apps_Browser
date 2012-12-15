@@ -402,9 +402,6 @@
 <!-- Additional CM strings -->
     <string name="pref_content_ua">Korisnički posrednik</string>
     <string name="pref_content_ua_summary">Odaberite korisnički posrednik. Web-stranice će se prikazivati u formatu prilagođenom za odabranog posrednika.</string>
-    <string name="pref_video_preload_dialogtitle">Predučitavanje videa</string>
-    <string name="pref_video_preload_title">Predučitavanje videa</string>
-    <string name="pref_video_preload_summary">Dopustite pregledniku predučitavanje video zapisa kad to server dopušta</string>
     <string-array name="pref_video_preload_choices">
         <item>Nikad</item>
         <item>Samo na WiFi-ju</item>
