@@ -398,4 +398,17 @@
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Αποθηκευμένη σελίδα"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Διαχείριση καρτέλας"</string>
     <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Προηγούμενος φάκελος"</string>
+
+    <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
+    <string name="accessibility_button_homescreen">Αρχική οθόνη</string>
+
+    <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
+    <string name="contextmenu_openlink_incognito_newwindow">Άνοιγμα σε νέα καρτέλα incognito</string>
+    <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
+    <string name="contextmenu_openlink_incognito_newwindow_background">Άνοιγμα σε νέα καρτέλα incognito στο παρασκήνιο</string>
+
+    <!-- User agent summary -->
+    <string name="pref_content_ua_summary">Επιλέξτε έναν user agent</string>
 </resources>
