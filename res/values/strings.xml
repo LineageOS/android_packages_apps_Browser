@@ -501,7 +501,11 @@
         <item>SHIFT_JIS</item>
         <item>EUC-JP</item>
     </string-array>
-    <string name="pref_default_text_encoding_default" translatable="false">Latin-1</string>
+    <!-- Do not translate this string. Actual encoding value. Must be valid text encodings understandable from WebKit.
+            If you need to set a different default encoding in your locale, create a donottranslate-strings.xml in
+            your "values-<locale>" folder and use one of the "pref_default_text_encoding_values" string-array above.
+            Check "values-ja/donottranslate-strings.xml" for an example -->
+    <string name="pref_default_text_encoding_default">Latin-1</string>
     <!-- Title for a dialog displayed when the browser has a data connectivity
             problem -->
     <string name="browserFrameNetworkErrorLabel">Data connectivity problem</string>

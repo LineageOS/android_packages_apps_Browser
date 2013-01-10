@@ -299,7 +299,6 @@
 
     <string name="pref_content_invert_color">Színek invertálása</string>
     <string name="pref_content_invert_color_summary">Oldalak megjelenítése invertált színekben</string>
-    <string name="pref_default_text_encoding_default">Latin-1</string>
     <string name="error_console_header_text_minimized">JavaScript konzol megjelenítése</string>
     <string name="error_console_header_text_maximized">JavaScript konzol</string>
     <string name="error_console_eval_text_hint">JavaScript értékelés</string>
