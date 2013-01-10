@@ -38,7 +38,7 @@
     <item quantity="few" msgid="5544267486978946555">"<xliff:g id="NUMBER">%d</xliff:g> αποτελέσματα"</item>
     <item quantity="other" msgid="6616125067364315405">"<xliff:g id="NUMBER">%d</xliff:g> αποτελέσματα"</item>
   </plurals>
-    <string name="title_bar_loading" msgid="7438217780834640678">"Φόρτωση..."</string>
+    <string name="title_bar_loading" msgid="7438217780834640678">"Φόρτωση\u2026"</string>
     <string name="page_info" msgid="4048529256302257195">"Πληροφορίες σελίδας"</string>
     <string name="page_info_view" msgid="5303490449842635158">"Προβολή πληροφοριών σελίδας"</string>
     <string name="page_info_address" msgid="2222306609532903254">"Διεύθυνση:"</string>
@@ -60,7 +60,7 @@
     <string name="validity_period" msgid="57988851973181309">"Ισχύς:"</string>
     <string name="issued_on" msgid="2082890654801808368">"Εκδόθηκε στις:"</string>
     <string name="expires_on" msgid="8061200430557020704">"Λήγει:"</string>
-    <string name="stopping" msgid="4839698519340302982">"Διακοπή..."</string>
+    <string name="stopping" msgid="4839698519340302982">"Διακοπή\u2026"</string>
     <string name="stop" msgid="5687251076030630074">"Διακοπή"</string>
     <string name="reload" msgid="8585220783228408062">"Ανανέωση"</string>
     <string name="back" msgid="8414603107175713668">"Πίσω"</string>
@@ -113,7 +113,7 @@
     <string name="contextmenu_download_image" msgid="4243829645180686912">"Αποθήκευση εικόνας"</string>
     <string name="contextmenu_view_image" msgid="3870625602053600905">"Προβολή εικόνας"</string>
     <string name="contextmenu_set_wallpaper" msgid="3691902960115350686">"Ορισμός ως ταπετσαρία"</string>
-    <string name="contextmenu_dial_dot" msgid="5856550683415933806">"Κλήση..."</string>
+    <string name="contextmenu_dial_dot" msgid="5856550683415933806">"Κλήση\u2026"</string>
     <string name="contextmenu_add_contact" msgid="3183511922223645716">"Προσθήκη επαφής"</string>
     <string name="contextmenu_send_mail" msgid="1014513374828775660">"Αποστολή μηνύματος ηλεκτρονικού ταχυδρομείου"</string>
     <string name="contextmenu_map" msgid="7471390435434034912">"Χάρτης"</string>
@@ -143,6 +143,8 @@
     <string name="pref_content_autofit_summary" msgid="4587831659894879986">"Μορφοποίηση ιστοσελίδων για την προσαρμογή τους στο μέγεθος της οθόνης"</string>
     <string name="pref_content_landscape_only" msgid="2022546812766219672">"Προβολή μόνο σε τοπίο"</string>
     <string name="pref_content_landscape_only_summary" msgid="1008238895535428855">"Προβολή σελίδων μόνο στον ευρύτερο προσανατολισμό τοπίου στην οθόνη"</string>
+    <string name="pref_content_invert_color">Αντιστροφή χρωμάτων</string>
+    <string name="pref_content_invert_color_summary">Εμφάνιση σελίδων σε ανεστραμμένο χρώμα</string>
     <string name="pref_privacy_title" msgid="1052470980370846151">"Ρυθμίσεις απορρήτου"</string>
     <string name="pref_privacy_clear_cache" msgid="3380316479925886998">"Εκκαθάριση προσωρινής μνήμης"</string>
     <string name="pref_privacy_clear_cache_summary" msgid="2216463577207991454">"Εκκαθάριση τοπικά αποθηκευμένου στη μνήμη cache περιεχομένου και βάσεων δεδομένων"</string>
@@ -219,7 +221,7 @@
     <string name="clear_history" msgid="5998307092715979619">"Εκκαθάριση ιστορικού"</string>
     <string name="browser_history" msgid="1038987118290272525">"Σελίδες που επισκεφθήκατε πρόσφατα"</string>
     <string name="empty_history" msgid="8738772352308207274">"Το ιστορικό του προγράμματος περιήγησης είναι κενό."</string>
-    <string name="add_new_bookmark" msgid="8086367791400349049">"Προσθήκη σελιδοδείκτη..."</string>
+    <string name="add_new_bookmark" msgid="8086367791400349049">"Προσθήκη σελιδοδείκτη\u2026"</string>
     <string name="add_bookmark_short" msgid="3783984330998103735">"Προσθήκη"</string>
     <string name="search_hint" msgid="4647356319916631820">"Αναζήτηση ή πληκτρολόγηση διεύθυνσης URL"</string>
     <string name="search_button_text" msgid="5235226933877634410">"Μετάβαση"</string>
@@ -258,10 +260,10 @@
     <string name="no_downloads" msgid="3947445710685021498">"Το ιστορικό λήψεων του προγράμματος περιήγησης είναι κενό."</string>
     <string name="download_error" msgid="413496839831257187">"Ανεπιτυχής λήψη."</string>
     <string name="download_success" msgid="2279041638155595203">"<xliff:g id="FILE">%s</xliff:g> Ολοκλήρωση λήψης."</string>
-    <string name="download_running" msgid="2622942231322015059">"Λήψη..."</string>
-    <string name="download_pending" msgid="2599683668575349559">"Έναρξη λήψης..."</string>
-    <string name="download_pending_network" msgid="6548714525679461053">"Αναμονή για σύνδεση δεδομένων…"</string>
-    <string name="download_running_paused" msgid="6418029352085656495">"Αναμονή για σύνδεση δεδομένων…"</string>
+    <string name="download_running" msgid="2622942231322015059">"Λήψη\u2026"</string>
+    <string name="download_pending" msgid="2599683668575349559">"Έναρξη λήψης\u2026"</string>
+    <string name="download_pending_network" msgid="6548714525679461053">"Αναμονή για σύνδεση δεδομένων\u2026"</string>
+    <string name="download_running_paused" msgid="6418029352085656495">"Αναμονή για σύνδεση δεδομένων\u2026"</string>
     <string name="download_canceled" msgid="6057083743144492515">"Η λήψη ακυρώθηκε."</string>
     <string name="download_not_acceptable" msgid="313769696131563652">"Δεν είναι δυνατή η λήψη. Το περιεχόμενο δεν υποστηρίζεται από αυτό το τηλέφωνο."</string>
     <string name="download_file_error" msgid="1206648050615176113">"Δεν είναι δυνατή η ολοκλήρωση της λήψης. Δεν υπάρχει αρκετός διαθέσιμος χώρος."</string>
@@ -295,5 +297,13 @@
     <string name="website_settings_clear_all_dialog_message" msgid="6150502090601476333">"Θα γίνει διαγραφή όλων των δεδομένων ιστοτόπων και αδειών τοποθεσιών."</string>
     <string name="website_settings_clear_all_dialog_ok_button" msgid="6401582240627669431">"Διαγραφή όλων των δεδομένων"</string>
     <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"Ακύρωση"</string>
-    <string name="progress_dialog_setting_wallpaper" msgid="4871900779338536674">"Ρύθμιση ταπετσαρίας..."</string>
+    <string name="progress_dialog_setting_wallpaper" msgid="4871900779338536674">"Ρύθμιση ταπετσαρίας\u2026"</string>
+
+    <string name="pref_show_zoom_controls">Εμφάνιση πλήκτρων μεγέθυνσης</string>
+    <string name="pref_full_screen_mode">Πλήρης οθόνη</string>
+
+    <string name="incog_tab">Ενεργοποίηση Ανώνυμης περιήγησης</string>
+    <string name="dis_incog_tab">Απενεργοποίηση Ανώνυμης περιήγησης</string>
+
+    <string name="pref_select_user_agent">Επιλογή user agent</string>
 </resources>
