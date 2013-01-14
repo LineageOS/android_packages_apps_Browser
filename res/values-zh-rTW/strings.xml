@@ -305,7 +305,6 @@
     <string name="dis_incog_tab">停用無痕瀏覽模式</string>
     <string name="pref_select_user_agent">使用者代理程式</string>
 
-    <string name="pref_default_text_encoding_default">Big5</string>
     <string name="error_console_header_text_minimized">顯示 JavaScript 主控台</string>
     <string name="error_console_header_text_maximized">JavaScript 主控台</string>
     <string name="error_console_eval_text_hint">執行 JavaScript</string>
