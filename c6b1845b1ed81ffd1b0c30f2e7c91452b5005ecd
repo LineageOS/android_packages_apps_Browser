@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//9RM\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 5248
+      },
+      "writtenOn": "2013-01-14T23:17:15Z",
+      "side": 1,
+      "message": "Yeah, sounds good. I\u0027ll change it.",
+      "parentUuid": "AAAAcn//9So\u003d",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//9Sk\u003d",
         "filename": "res/values-iw/strings.xml",
         "patchSetId": 3
@@ -30,6 +48,23 @@
       "writtenOn": "2013-01-14T22:51:18Z",
       "side": 1,
       "message": "Good one, missed it..",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9Q8\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 5248
+      },
+      "writtenOn": "2013-01-14T23:17:15Z",
+      "side": 1,
+      "message": "I guess this one is alright?\r\nI don\u0027t know how to translate Force enable zoom without making it sound weird.\r\nI can write \"alez hafalat zoom\"",
       "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -70,6 +105,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//9Ro\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 5248
+      },
+      "writtenOn": "2013-01-14T23:17:15Z",
+      "side": 1,
+      "message": "I meant changing the whole system, but yeah you\u0027re right.",
+      "parentUuid": "AAAAcn//9SU\u003d",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//9SQ\u003d",
         "filename": "res/values-iw/strings.xml",
         "patchSetId": 3
@@ -104,6 +157,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//9RQ\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 5248
+      },
+      "writtenOn": "2013-01-14T23:17:15Z",
+      "side": 1,
+      "message": "\u003cstring name\u003d\"webstorage_clear_data_title\"\u003eClear stored data\u003c/string\u003e",
+      "parentUuid": "AAAAcn//9SM\u003d",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//9SI\u003d",
         "filename": "res/values-iw/strings.xml",
         "patchSetId": 3
@@ -115,6 +186,24 @@
       "writtenOn": "2013-01-14T22:51:18Z",
       "side": 1,
       "message": "What is this?",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9Rk\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 5248
+      },
+      "writtenOn": "2013-01-14T23:17:15Z",
+      "side": 1,
+      "message": "\u003c!-- Access point for RLZ tracking. --\u003e\r\nHebrew translation doesn\u0027t have these comments. Pretty Damn annoying.",
+      "parentUuid": "AAAAcn//9SI\u003d",
       "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
@@ -138,6 +227,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//9Rc\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 5248
+      },
+      "writtenOn": "2013-01-14T23:17:15Z",
+      "side": 1,
+      "message": "\u003cstring name\u003d\"accessibility_state_incognito\"\u003eIncognito page\u003c/string\u003e\r\n\r\nMaybe \"amud\" but \"daf\" is everywhere, so I don\u0027t know about this one.",
+      "parentUuid": "AAAAcn//9R4\u003d",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//9R8\u003d",
         "filename": "res/values-iw/strings.xml",
         "patchSetId": 3
@@ -149,6 +256,24 @@
       "writtenOn": "2013-01-14T22:51:18Z",
       "side": 1,
       "message": "\"Sochen mishtamesh\"",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9Rg\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 412,
+      "author": {
+        "id": 5248
+      },
+      "writtenOn": "2013-01-14T23:17:15Z",
+      "side": 1,
+      "message": "I know. But shouldn\u0027t we leave it as User Agent?\r\nI rarely see it translated.",
+      "parentUuid": "AAAAcn//9R8\u003d",
       "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
