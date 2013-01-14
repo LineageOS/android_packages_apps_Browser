@@ -71,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//9QI\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 2897
+      },
+      "writtenOn": "2013-01-14T23:33:09Z",
+      "side": 1,
+      "message": "Yes this one is alright, its clear and understandable.",
+      "parentUuid": "AAAAcn//9Q8\u003d",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//9SY\u003d",
         "filename": "res/values-iw/strings.xml",
         "patchSetId": 3
@@ -175,6 +193,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//9QA\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 2897
+      },
+      "writtenOn": "2013-01-14T23:33:09Z",
+      "side": 1,
+      "message": "I\u0027ve meant to change only the word \"stored\", but i think you\u0027re right, we dont need to rewrite everything:)",
+      "parentUuid": "AAAAcn//9RQ\u003d",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//9SI\u003d",
         "filename": "res/values-iw/strings.xml",
         "patchSetId": 3
@@ -245,6 +281,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAcn//9P0\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 2897
+      },
+      "writtenOn": "2013-01-14T23:33:09Z",
+      "side": 1,
+      "message": "Daf is good.",
+      "parentUuid": "AAAAcn//9Rc\u003d",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAcn//9R8\u003d",
         "filename": "res/values-iw/strings.xml",
         "patchSetId": 3
@@ -274,6 +328,24 @@
       "side": 1,
       "message": "I know. But shouldn\u0027t we leave it as User Agent?\r\nI rarely see it translated.",
       "parentUuid": "AAAAcn//9R8\u003d",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9Pg\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 412,
+      "author": {
+        "id": 2897
+      },
+      "writtenOn": "2013-01-14T23:33:09Z",
+      "side": 1,
+      "message": "If we leave this, there\u0027s another string up to change, so it\u0027s ok to leave it Uer Agent in my eyes, but dont forget the other string..",
+      "parentUuid": "AAAAcn//9Rg\u003d",
       "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
