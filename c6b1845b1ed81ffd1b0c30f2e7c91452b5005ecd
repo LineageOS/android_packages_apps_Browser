@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAcn//9So\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 2897
+      },
+      "writtenOn": "2013-01-14T22:51:18Z",
+      "side": 1,
+      "message": "Plug-in \u003d tosafim\n\"Afsher tosafim\"? Or shell we keep it as it is?",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9Sk\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 2897
+      },
+      "writtenOn": "2013-01-14T22:51:18Z",
+      "side": 1,
+      "message": "Good one, missed it..",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9SY\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 2897
+      },
+      "writtenOn": "2013-01-14T22:51:18Z",
+      "side": 1,
+      "message": "\"Skor dapim\" and leave the description as it is..",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9SU\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 256,
+      "author": {
+        "id": 2897
+      },
+      "writtenOn": "2013-01-14T22:51:18Z",
+      "side": 1,
+      "message": "Dont change, its like the rest of the system..keep it simple:)",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9SQ\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 2897
+      },
+      "writtenOn": "2013-01-14T22:51:18Z",
+      "side": 1,
+      "message": "\"Bechol paam\" \u003e \"berega natun\"",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9SM\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 2897
+      },
+      "writtenOn": "2013-01-14T22:51:18Z",
+      "side": 1,
+      "message": "\"Netunim shmurim\"",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9SI\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 2897
+      },
+      "writtenOn": "2013-01-14T22:51:18Z",
+      "side": 1,
+      "message": "What is this?",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9R4\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 397,
+      "author": {
+        "id": 2897
+      },
+      "writtenOn": "2013-01-14T22:51:18Z",
+      "side": 1,
+      "message": "Daf \u003e \"kartisia\"",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAcn//9R8\u003d",
+        "filename": "res/values-iw/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 412,
+      "author": {
+        "id": 2897
+      },
+      "writtenOn": "2013-01-14T22:51:18Z",
+      "side": 1,
+      "message": "\"Sochen mishtamesh\"",
+      "revId": "c6b1845b1ed81ffd1b0c30f2e7c91452b5005ecd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
