@@ -293,11 +293,6 @@
   </string-array>
     <string name="pref_link_prefetch_summary" msgid="6558181497993206817">"Предварительно загружать веб-страницы в фоновом режиме"</string>
     <string name="pref_link_prefetch_dialogtitle" msgid="3804646141622839765">"Предзагрузка веб-страниц"</string>
-  <string-array name="pref_video_preload_choices">
-    <item>Никогда</item>
-    <item>Только через WiFi</item>
-    <item>Всегда</item>
-  </string-array>
     <string name="browserFrameNetworkErrorLabel" msgid="8102515020625680714">"Ошибка подключения"</string>
     <string name="browserFrameFileErrorLabel" msgid="4703792279852977350">"Проблема с файлом"</string>
     <string name="browserFrameFormResubmitLabel" msgid="2385512101948178841"></string>

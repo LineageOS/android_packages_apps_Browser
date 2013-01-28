@@ -296,11 +296,6 @@
   </string-array>
     <string name="pref_link_prefetch_summary" msgid="6558181497993206817">"Consenti al browser di precaricare in background le pagine web con link"</string>
     <string name="pref_link_prefetch_dialogtitle" msgid="3804646141622839765">"Precaricamento pagina web"</string>
-  <string-array name="pref_video_preload_choices">
-    <item>"Mai"</item>
-    <item>"Solo su Wi-Fi"</item>
-    <item>"Sempre"</item>
-  </string-array>
     <string name="browserFrameNetworkErrorLabel" msgid="8102515020625680714">"Problema di connessione"</string>
     <string name="browserFrameFileErrorLabel" msgid="4703792279852977350">"Problema di file"</string>
     <string name="browserFrameFormResubmitLabel" msgid="2385512101948178841"></string>

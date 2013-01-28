@@ -404,11 +404,6 @@
     <string name="contextmenu_openlink_incognito_newwindow_background">Åbn i ny inkognito-tab i baggrunden</string>
     <string name="pref_content_ua">Brugeragent</string>
     <string name="pref_content_ua_summary">Vælg en brugeragent</string>
-    <string-array name="pref_video_preload_choices">
-        <item>Aldrig</item>
-        <item>Kun på Wi-Fi</item>
-        <item>Altid</item>
-    </string-array>
     <string name="accessibility_button_homescreen">Startskærm</string>
     <!-- CM10 additions end -->
 </resources>

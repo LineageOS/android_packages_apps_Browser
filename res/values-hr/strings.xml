@@ -402,9 +402,4 @@
 <!-- Additional CM strings -->
     <string name="pref_content_ua">Korisnički posrednik</string>
     <string name="pref_content_ua_summary">Odaberite korisnički posrednik. Web-stranice će se prikazivati u formatu prilagođenom za odabranog posrednika.</string>
-    <string-array name="pref_video_preload_choices">
-        <item>Nikad</item>
-        <item>Samo na WiFi-ju</item>
-        <item>Uvijek</item>
-    </string-array>
 </resources>

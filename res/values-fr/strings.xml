@@ -298,13 +298,6 @@
     <item msgid="7647277566998527142">"Toujours"</item>
   </string-array>
 
-    <!-- Video preloading options [CHAR LIMIT=20] -->
-    <string-array name="pref_video_preload_choices">
-        <item>Jamais</item>
-        <item>Wi-Fi uniquement</item>
-        <item>Toujours</item>
-    </string-array>
-
     <string name="pref_link_prefetch_summary" msgid="6558181497993206817">"Autoriser le navigateur à précharger en arrière-plan les pages Web associées"</string>
     <string name="pref_link_prefetch_dialogtitle" msgid="3804646141622839765">"Préchargement des pages Web"</string>
     <string name="browserFrameNetworkErrorLabel" msgid="8102515020625680714">"Problème de connexion"</string>

@@ -298,11 +298,6 @@
   </string-array>
     <string name="pref_link_prefetch_summary" msgid="6558181497993206817">"A böngésző előtöltheti a linkelt weboldalakat a háttérben"</string>
     <string name="pref_link_prefetch_dialogtitle" msgid="3804646141622839765">"Weboldal előtöltése"</string>
-  <string-array name="pref_video_preload_choices">
-    <item>Soha</item>
-    <item>Csak Wi-Fin</item>
-    <item>Mindig</item>
-  </string-array>
     <string name="browserFrameNetworkErrorLabel" msgid="8102515020625680714">"Csatlakozási probléma"</string>
     <string name="browserFrameFileErrorLabel" msgid="4703792279852977350">"Probléma a fájllal"</string>
     <string name="browserFrameFormResubmitLabel" msgid="2385512101948178841"></string>
