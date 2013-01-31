@@ -94,7 +94,7 @@
     <string name="open_all_in_new_window" msgid="455786763426575293">"Otevřít vše v nových panelech"</string>
     <string name="goto_dot" msgid="3895839050522602723">"Přejít"</string>
     <string name="select_dot" msgid="6299170761900561967">"Vybrat text"</string>
-    <string name="close_other_tabs" msgid="7693157495148282778">"Zavřít ostatní karty"</string>
+    <string name="close_other_tabs" msgid="7693157495148282778">"Zavřít ostatní panely"</string>
     <string name="bookmarks" msgid="1961279134885867815">"Záložky"</string>
     <string name="shortcut_bookmark" msgid="3974876480401135895">"Záložka"</string>
     <string name="shortcut_bookmark_title" msgid="7570786275916681296">"Zvolte záložku"</string>
@@ -279,6 +279,8 @@
     <string name="pref_use_instant_search_summary" msgid="839320474961917522">"Dynamické vyhledávání ve Vyhledávání Google zobrazuje výsledky již při zadávání dotazu (může se zvýšit množství přenesených dat)."</string>
     <string name="pref_lab_fullscreen" msgid="8173609016657987973">"Celá obrazovka"</string>
     <string name="pref_lab_fullscreen_summary" msgid="7694738112219376740">"Při použití režimu zobrazení na celou obrazovku je skryt stavový řádek."</string>
+    <string name="pref_lab_webgl">Technologie WebGL</string>
+    <string name="pref_lab_webgl_summary">Povolit technologii WebGL</string>
     <string name="pref_data_title" msgid="7255058703417796578">"Správa rychlosti připojení"</string>
     <string name="pref_data_preload_title" msgid="4479320472980292873">"Předběžné načítání výsledků vyhledávání"</string>
   <string-array name="pref_data_preload_choices">
@@ -401,6 +403,6 @@
     <string name="accessibility_button_more" msgid="3054251446394224216">"Další možnosti"</string>
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Anonymní stránka"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Uložená stránka"</string>
-    <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Správa karet"</string>
+    <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Správa panelů"</string>
     <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Předchozí složka"</string>
 </resources>
