@@ -279,6 +279,8 @@
     <string name="pref_use_instant_search_summary" msgid="839320474961917522">"Usa Google Instant con Ricerca Google per visualizzare i risultati mentre digiti (può aumentare l\'uso dei dati)."</string>
     <string name="pref_lab_fullscreen" msgid="8173609016657987973">"Schermo intero"</string>
     <string name="pref_lab_fullscreen_summary" msgid="7694738112219376740">"Usa la modalità a schermo intero per nascondere la barra di stato."</string>
+    <string name="pref_lab_webgl">WebGL</string>
+    <string name="pref_lab_webgl_summary">Abilita WebGL</string>
     <string name="pref_data_title" msgid="7255058703417796578">"Gestione larghezza di banda"</string>
     <string name="pref_data_preload_title" msgid="4479320472980292873">"Precaricamento risultati di ricerca"</string>
   <string-array name="pref_data_preload_choices">
