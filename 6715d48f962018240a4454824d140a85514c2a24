@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAdH///XY\u003d",
+        "filename": "res/values-it/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 283,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-02-07T01:33:02Z",
+      "side": 1,
+      "message": "Please use an infinitive here (I\u0027ll upload a change to change that in English)",
+      "revId": "6715d48f962018240a4454824d140a85514c2a24",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
