@@ -27,4 +27,9 @@
 
     <!-- User agent label -->
     <string name="pref_content_ua">User agent</string>
+
+    <!-- Title for the WebSockets feature [CHAR LIMIT=40] -->
+    <string name="pref_lab_websockets">WebSockets</string>
+    <!-- Summary for the WebGL lab feature [CHAR LIMIT=120] -->
+    <string name="pref_lab_websockets_summary">Enable WebSockets</string>
 </resources>
