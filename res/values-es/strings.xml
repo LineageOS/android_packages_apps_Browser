@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--  Copyright (C) 2007 The Android Open Source Project
-      Copyright (c) 2011, 2012, Code Aurora Forum. All rights reserved.
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -35,7 +34,7 @@
     <string name="bookmarks_search" msgid="5229596268214362873">"Navegador"</string>
     <string name="cancel" msgid="3017274947407233702">"Cancelar"</string>
     <string name="ok" msgid="1509280796718850364">"Aceptar"</string>
-    <string name="title_bar_loading" msgid="7438217780834640678">"Cargando\u2026"</string>
+    <string name="title_bar_loading" msgid="7438217780834640678">"Cargando..."</string>
     <string name="page_info" msgid="4048529256302257195">"Información de la página"</string>
     <string name="page_info_view" msgid="5303490449842635158">"Ver información de página"</string>
     <string name="page_info_address" msgid="2222306609532903254">"Dirección:"</string>
@@ -51,7 +50,7 @@
     <string name="ssl_date_invalid" msgid="3705563379257285534">"La fecha de este certificado no es válida."</string>
     <string name="ssl_invalid" msgid="9041704741505449967">"Este certificado no es válido."</string>
     <string name="ssl_unknown" msgid="5679243486524754571">"Error de certificado desconocido"</string>
-    <string name="stopping" msgid="4839698519340302982">"Deteniendo\u2026"</string>
+    <string name="stopping" msgid="4839698519340302982">"Deteniendo..."</string>
     <string name="stop" msgid="5687251076030630074">"Detener"</string>
     <string name="reload" msgid="8585220783228408062">"Actualizar"</string>
     <string name="back" msgid="8414603107175713668">"Atrás"</string>
@@ -104,15 +103,13 @@
     <string name="copy_page_url" msgid="1188679152608889555">"Copiar URL de página"</string>
     <string name="share_page" msgid="593756995297268343">"Compartir página"</string>
     <string name="menu_save_snapshot" msgid="6935080344031126139">"Disponible sin conexión"</string>
-    <string name="saving_snapshot" msgid="1693789062351182809">"Guardando\u2026"</string>
+    <string name="saving_snapshot" msgid="1693789062351182809">"Guardando…"</string>
     <string name="snapshot_failed" msgid="4584580873565876033">"No se ha podido guardar para leer sin conexión."</string>
     <string name="contextheader_folder_bookmarkcount" msgid="353987136645619089">"<xliff:g id="BOOKMARK_COUNT">%d</xliff:g> marcadores"</string>
     <string name="contextheader_folder_empty" msgid="974171637803391651">"Carpeta vacía"</string>
     <string name="contextmenu_openlink" msgid="7237961252214188935">"Abrir"</string>
     <string name="contextmenu_openlink_newwindow" msgid="1205313604181761403">"Abrir en una nueva pestaña"</string>
     <string name="contextmenu_openlink_newwindow_background" msgid="4690381019116746687">"Abrir en una nueva pestaña en segundo plano"</string>
-    <string name="contextmenu_openlink_incognito_newwindow">"Abrir en pestaña de incógnito"</string>
-    <string name="contextmenu_openlink_incognito_newwindow_background">"Abrir en pestaña de incógnito en segundo plano"</string>
     <string name="contextmenu_savelink" msgid="5508554930832538184">"Guardar enlace"</string>
     <string name="contextmenu_sharelink" msgid="5392275392280130331">"Compartir enlace"</string>
     <string name="contextmenu_copy" msgid="398860586635404030">"Copiar"</string>
@@ -120,7 +117,7 @@
     <string name="contextmenu_download_image" msgid="4243829645180686912">"Guardar imagen"</string>
     <string name="contextmenu_view_image" msgid="3870625602053600905">"Ver imagen"</string>
     <string name="contextmenu_set_wallpaper" msgid="3691902960115350686">"Establecer como fondo de pantalla"</string>
-    <string name="contextmenu_dial_dot" msgid="5856550683415933806">"Llamar\u2026"</string>
+    <string name="contextmenu_dial_dot" msgid="5856550683415933806">"Llamar…"</string>
     <string name="contextmenu_add_contact" msgid="3183511922223645716">"Añadir contacto"</string>
     <string name="contextmenu_send_mail" msgid="1014513374828775660">"Enviar correo"</string>
     <string name="contextmenu_map" msgid="7471390435434034912">"Mapa"</string>
@@ -146,8 +143,6 @@
     <string name="pref_content_homepage" msgid="3324574611613105696">"Establecer página de inicio"</string>
     <string name="pref_content_search_engine" msgid="1620101310821644144">"Motor de búsqueda"</string>
     <string name="pref_content_search_engine_summary" msgid="304003941861818133">"Elige un motor de búsqueda."</string>
-    <string name="pref_content_ua">Agente de usuario</string>
-    <string name="pref_content_ua_summary">Elige un agente de usuario</string>
     <string name="pref_set_homepage_to" msgid="7838684355145561242">"Establecer en:"</string>
   <string-array name="pref_homepage_choices">
     <item msgid="844041670142910837">"Página actual"</item>
@@ -328,7 +323,7 @@
     <string name="download_sdcard_busy_dlg_msg" product="nosdcard" msgid="8412543086906716875">"El almacenamiento USB está ocupado. Para permitir las descargas, toca Desactivar almacenamiento USB en la notificación."</string>
     <string name="download_sdcard_busy_dlg_msg" product="default" msgid="2629425950473358591">"La tarjeta SD está ocupada. Para permitir las descargas, toca Desactivar almacenamiento USB en la notificación."</string>
     <string name="cannot_download" msgid="8150552478556798780">"Solo se pueden descargar URL del tipo \"http\" o \"https\"."</string>
-    <string name="download_pending" msgid="2599683668575349559">"Iniciando descarga\u2026"</string>
+    <string name="download_pending" msgid="2599683668575349559">"Iniciando descarga…"</string>
     <string name="search_the_web" msgid="6046130189241962337">"Buscar en la Web"</string>
     <string name="webstorage_outofspace_notification_title" msgid="1160474608059771788">"Espacio de almacenamiento del navegador agotado"</string>
     <string name="webstorage_outofspace_notification_text" msgid="47273584426988640">"Toca para liberar espacio."</string>
@@ -337,7 +332,7 @@
     <string name="webstorage_clear_data_dialog_ok_button" msgid="6682570951259237542">"Aceptar"</string>
     <string name="webstorage_clear_data_dialog_cancel_button" msgid="2028867751958942762">"Cancelar"</string>
     <string name="webstorage_origin_summary_mb_stored" msgid="1985885826292236210">"MB almacenados en tu teléfono"</string>
-    <string name="loading_video" msgid="7886324933131962321">"Cargando vídeo\u2026"</string>
+    <string name="loading_video" msgid="7886324933131962321">"Cargando vídeo..."</string>
     <string name="geolocation_permissions_prompt_message" msgid="356796102004052471">"<xliff:g id="WEBSITE_ORIGIN">%s</xliff:g> quiere saber tu ubicación."</string>
     <string name="geolocation_permissions_prompt_share" msgid="9084486342048347976">"Aceptar"</string>
     <string name="geolocation_permissions_prompt_dont_share" msgid="6303025160237860300">"Rechazar"</string>
@@ -354,7 +349,7 @@
     <string name="website_settings_clear_all_dialog_message" msgid="1551164275687475061">"¿Eliminar todos los datos de sitios web y los permisos de ubicación?"</string>
     <string name="website_settings_clear_all_dialog_ok_button" msgid="7858504776529106243">"Aceptar"</string>
     <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"Cancelar"</string>
-    <string name="progress_dialog_setting_wallpaper" msgid="2031391201442335889">"Estableciendo fondo de pantalla\u2026"</string>
+    <string name="progress_dialog_setting_wallpaper" msgid="2031391201442335889">"Estableciendo fondo de pantalla..."</string>
     <string name="defaultBookmarksUpButton" msgid="2303951020715704735">"Marcadores"</string>
     <string name="empty_bookmarks_folder" msgid="6239830231917618556">"No hay marcadores."</string>
     <string name="other_bookmarks" msgid="8021889794475657319">"Otros marcadores"</string>
@@ -397,11 +392,20 @@
     <string name="accessibility_button_clear" msgid="6943152307986161598">"Borrar entrada"</string>
     <string name="accessibility_button_uaswitch" msgid="6286804719724282339">"Cambiar user-agent"</string>
     <string name="accessibility_button_go" msgid="1182818872083055958">"Ir"</string>
-    <string name="accessibility_button_homescreen">"Pantalla de inicio"</string>
     <string name="accessibility_button_navscreen" msgid="9142904748728713075">"Administrador de página"</string>
     <string name="accessibility_button_more" msgid="3054251446394224216">"Más opciones"</string>
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Página de incógnito"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Página guardada"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Administración de pestañas"</string>
     <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Carpeta anterior"</string>
+
+    <!-- CYANOGENMOD ADDITIONS START -->
+
+    <string name="contextmenu_openlink_incognito_newwindow">Abrir en pestaña de incógnito</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Abrir en pestaña de incógnito en segundo plano</string>
+    <string name="pref_content_ua">Agente de usuario</string>
+    <string name="pref_content_ua_summary">Elige un agente de usuario</string>
+    <string name="accessibility_button_homescreen">Pantalla de inicio</string>
+
+    <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
