@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--  Copyright (C) 2007 The Android Open Source Project
-      Copyright (c) 2011, 2012, Code Aurora Forum. All rights reserved.
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -28,7 +27,7 @@
     <string name="tab_snapshots" msgid="1449241204980265186">"Páginas guardadas"</string>
     <string name="added_to_bookmarks" msgid="4028710765672851635">"Añadido a marcadores"</string>
     <string name="removed_from_bookmarks" msgid="546648923924996722">"Eliminado de marcadores"</string>
-    <string name="sign_in_to" msgid="5939425800148759165">"Iniciar sesión en <xliff:g id="HOSTNAME">%s1</xliff:g> \"<xliff:g id="REALM">%s2</xliff:g>\""</string>
+    <string name="sign_in_to" msgid="5939425800148759165">"Iniciar sesión en <xliff:g id="HOSTNAME">%s1</xliff:g> \u00AB<xliff:g id="REALM">%s2</xliff:g>\u00BB"</string>
     <string name="username" msgid="5057566336518215922">"Nombre"</string>
     <string name="password" msgid="1177138552305184404">"Contraseña"</string>
     <string name="action" msgid="183105774472071343">"Iniciar sesión"</string>
@@ -91,7 +90,7 @@
     <string name="bookmark_thumbnail_view" msgid="3164068314718522138">"Miniaturas"</string>
     <string name="bookmark_list_view" msgid="7848510619500937839">"Lista"</string>
     <string name="current_page" msgid="7510129573681663135">"de "</string>
-    <string name="delete_bookmark_warning" msgid="7825328496411904321">"¿Eliminar marcador \"<xliff:g id="BOOKMARK">%s</xliff:g>\"?"</string>
+    <string name="delete_bookmark_warning" msgid="7825328496411904321">"¿Eliminar marcador \u00AB<xliff:g id="BOOKMARK">%s</xliff:g>\u00BB?"</string>
     <string name="open_all_in_new_window" msgid="455786763426575293">"Abrir todo en pestañas nuevas"</string>
     <string name="goto_dot" msgid="3895839050522602723">"Ir"</string>
     <string name="select_dot" msgid="6299170761900561967">"Seleccionar texto"</string>
@@ -111,8 +110,6 @@
     <string name="contextmenu_openlink" msgid="7237961252214188935">"Abrir"</string>
     <string name="contextmenu_openlink_newwindow" msgid="1205313604181761403">"Abrir en una nueva pestaña"</string>
     <string name="contextmenu_openlink_newwindow_background" msgid="4690381019116746687">"Abrir en una nueva pestaña en segundo plano"</string>
-    <string name="contextmenu_openlink_incognito_newwindow">"Abrir en pestaña de incógnito"</string>
-    <string name="contextmenu_openlink_incognito_newwindow_background">"Abrir en pestaña de incógnito en segundo plano"</string>
     <string name="contextmenu_savelink" msgid="5508554930832538184">"Guardar enlace"</string>
     <string name="contextmenu_sharelink" msgid="5392275392280130331">"Compartir enlace"</string>
     <string name="contextmenu_copy" msgid="398860586635404030">"Copiar"</string>
@@ -146,8 +143,6 @@
     <string name="pref_content_homepage" msgid="3324574611613105696">"Establecer página de inicio"</string>
     <string name="pref_content_search_engine" msgid="1620101310821644144">"Motor de búsqueda"</string>
     <string name="pref_content_search_engine_summary" msgid="304003941861818133">"Elige un motor de búsqueda."</string>
-    <string name="pref_content_ua">Agente de usuario</string>
-    <string name="pref_content_ua_summary">Elige un agente de usuario</string>
     <string name="pref_set_homepage_to" msgid="7838684355145561242">"Establecer en:"</string>
   <string-array name="pref_homepage_choices">
     <item msgid="844041670142910837">"Página actual"</item>
@@ -300,7 +295,7 @@
     <string name="browserFrameNetworkErrorLabel" msgid="8102515020625680714">"Error de conexión"</string>
     <string name="browserFrameFileErrorLabel" msgid="4703792279852977350">"Problema relacionado con el archivo"</string>
     <string name="browserFrameFormResubmitLabel" msgid="2385512101948178841"></string>
-    <string name="browserFrameFormResubmitMessage" msgid="5244059279866705254">"La página que intentas ver contiene datos que ya se han enviado (\"POSTDATA\"). Si vuelves a enviarlos, se repetirá cualquier acción que haya hecho el formulario en la página (por ejemplo, búsquedas o compras online)."</string>
+    <string name="browserFrameFormResubmitMessage" msgid="5244059279866705254">"La página que intentas ver contiene datos que ya se han enviado (\u00ABPOSTDATA\u00BB). Si vuelves a enviarlos, se repetirá cualquier acción que haya hecho el formulario en la página (por ejemplo, búsquedas o compras online)."</string>
     <string name="loadSuspendedTitle" msgid="6453376579109644551">"Sin conexión"</string>
     <string name="loadSuspended" msgid="3843343290039218668">"El navegador no puede cargar esta página porque no hay conexión a Internet."</string>
     <string name="clear_history" msgid="5998307092715979619">"Borrar historial"</string>
@@ -327,7 +322,7 @@
     <string name="download_sdcard_busy_dlg_title" product="default" msgid="6877712666046917741">"Tarjeta SD no disponible"</string>
     <string name="download_sdcard_busy_dlg_msg" product="nosdcard" msgid="8412543086906716875">"El almacenamiento USB está ocupado. Para permitir las descargas, toca Desactivar almacenamiento USB en la notificación."</string>
     <string name="download_sdcard_busy_dlg_msg" product="default" msgid="2629425950473358591">"La tarjeta SD está ocupada. Para permitir las descargas, toca Desactivar almacenamiento USB en la notificación."</string>
-    <string name="cannot_download" msgid="8150552478556798780">"Solo se pueden descargar URL del tipo \"http\" o \"https\"."</string>
+    <string name="cannot_download" msgid="8150552478556798780">"Solo se pueden descargar URL del tipo \u00ABhttp\u00BB o \u00ABhttps\u00BB."</string>
     <string name="download_pending" msgid="2599683668575349559">"Iniciando descarga\u2026"</string>
     <string name="search_the_web" msgid="6046130189241962337">"Buscar en la Web"</string>
     <string name="webstorage_outofspace_notification_title" msgid="1160474608059771788">"Espacio de almacenamiento del navegador agotado"</string>
@@ -397,11 +392,20 @@
     <string name="accessibility_button_clear" msgid="6943152307986161598">"Borrar entrada"</string>
     <string name="accessibility_button_uaswitch" msgid="6286804719724282339">"Cambiar user-agent"</string>
     <string name="accessibility_button_go" msgid="1182818872083055958">"Ir"</string>
-    <string name="accessibility_button_homescreen">"Pantalla de inicio"</string>
     <string name="accessibility_button_navscreen" msgid="9142904748728713075">"Administrador de página"</string>
     <string name="accessibility_button_more" msgid="3054251446394224216">"Más opciones"</string>
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Página de incógnito"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Página guardada"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Administración de pestañas"</string>
     <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Carpeta anterior"</string>
+
+    <!-- CYANOGENMOD ADDITIONS START -->
+
+    <string name="contextmenu_openlink_incognito_newwindow">Abrir en pestaña de incógnito</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Abrir en pestaña de incógnito en segundo plano</string>
+    <string name="pref_content_ua">Agente de usuario</string>
+    <string name="pref_content_ua_summary">Elige un agente de usuario</string>
+    <string name="accessibility_button_homescreen">Pantalla de inicio</string>
+
+    <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
