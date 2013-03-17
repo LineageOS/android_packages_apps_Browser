@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//7AQ\u003d",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-03-17T15:21:20Z",
+      "side": 1,
+      "message": "Please remove double quotes",
+      "revId": "f8e3482f42c9a4aa175693f7e37478478fb7cdfc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAeX//7AM\u003d",
+        "filename": "res/values-it/cm_strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-03-17T15:21:20Z",
+      "side": 1,
+      "message": "Please remove double quotes",
+      "revId": "f8e3482f42c9a4aa175693f7e37478478fb7cdfc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
