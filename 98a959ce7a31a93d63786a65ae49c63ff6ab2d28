@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAeX//5rQ\u003d",
+        "filename": "res/values-pl/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 407,
+      "author": {
+        "id": 5622
+      },
+      "writtenOn": "2013-03-20T17:53:47Z",
+      "side": 1,
+      "message": "\"Wybierz sposób identyfikacji przegl?darki\" imo better",
+      "revId": "98a959ce7a31a93d63786a65ae49c63ff6ab2d28",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
