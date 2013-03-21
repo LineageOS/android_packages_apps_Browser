@@ -110,6 +110,8 @@
     <string name="contextmenu_openlink" msgid="7237961252214188935">"Открыть"</string>
     <string name="contextmenu_openlink_newwindow" msgid="1205313604181761403">"Открыть в новой вкладке"</string>
     <string name="contextmenu_openlink_newwindow_background" msgid="4690381019116746687">"Открыть в фоновой вкладке"</string>
+    <string name="contextmenu_openlink_incognito_newwindow">"Открыть в новой вкладке (инкогнито)"</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">"Открыть в фоновой вкладке (инкогнито)"</string>
     <string name="contextmenu_savelink" msgid="5508554930832538184">"Сохранить ссылку"</string>
     <string name="contextmenu_sharelink" msgid="5392275392280130331">"Отправить ссылку"</string>
     <string name="contextmenu_copy" msgid="398860586635404030">"Копировать"</string>
@@ -276,6 +278,7 @@
     <string name="pref_use_instant_search_summary" msgid="839320474961917522">"В Живом поиске результаты появляются прямо при вводе текста (возможно увеличение объема передаваемых данных)."</string>
     <string name="pref_lab_fullscreen" msgid="8173609016657987973">"Во весь экран"</string>
     <string name="pref_lab_fullscreen_summary" msgid="7694738112219376740">"Чтобы скрыть строку состояния, используйте полноэкранный режим"</string>
+    <string name="pref_lab_webgl_summary">Включить WebGL</string>
     <string name="pref_data_title" msgid="7255058703417796578">"Настройки контента"</string>
     <string name="pref_data_preload_title" msgid="4479320472980292873">"Загрузка результатов поиска"</string>
   <string-array name="pref_data_preload_choices">
@@ -393,6 +396,7 @@
     <string name="accessibility_button_clear" msgid="6943152307986161598">"Очистить ввод"</string>
     <string name="accessibility_button_uaswitch" msgid="6286804719724282339">"Переключить клиентское приложение"</string>
     <string name="accessibility_button_go" msgid="1182818872083055958">"Перейти"</string>
+    <string name="accessibility_button_homescreen">Домашний экран</string>
     <string name="accessibility_button_navscreen" msgid="9142904748728713075">"Менеджер страниц"</string>
     <string name="accessibility_button_more" msgid="3054251446394224216">"Другие варианты"</string>
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Страница в режиме инкогнито"</string>
