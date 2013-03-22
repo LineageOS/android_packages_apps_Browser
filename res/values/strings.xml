@@ -328,7 +328,7 @@
     <!-- User agent label -->
     <string name="pref_content_ua">User agent</string>
     <!-- User agent summary -->
-    <string name="pref_content_ua_summary">Choose an user agent</string>
+    <string name="pref_content_ua_summary">Choose a user agent</string>
     <!-- User agent choices -->
     <string-array name="pref_content_ua_choices" translatable="false">
         <item>Android</item>
