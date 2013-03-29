@@ -19,6 +19,8 @@
     <string name="pref_content_ua">User agent</string>
     <string name="pref_content_ua_summary">Scegli lo user agent</string>
     <string name="pref_lab_webgl">WebGL</string>
-    <string name="pref_lab_webgl_summary">Abilita WebGL</string>
+    <string name="pref_lab_webgl_summary">Attiva WebGL</string>
     <string name="accessibility_button_homescreen">Pagina iniziale</string>
+    <string name="pref_lab_websockets">WebSocket</string>
+    <string name="pref_lab_websockets_summary">Attiva WebSocket</string>
 </resources>
