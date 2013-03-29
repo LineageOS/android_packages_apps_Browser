@@ -399,4 +399,11 @@
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Сохраненная страница"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Управление вкладками"</string>
     <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Предыдущая папка"</string>
+    <string name="accessibility_button_homescreen">Домашний экран</string>
+    <string name="contextmenu_openlink_incognito_newwindow">Открыть в новой вкладке (инкогнито)</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Открыть в фоновой вкладке (инкогнито)</string>
+    <string name="pref_lab_webgl">WebGL</string>
+    <string name="pref_lab_webgl_summary">Включить WebGL</string>
+    <string name="pref_lab_websockets">WebSocket</string>
+    <string name="pref_lab_websockets_summary">Включить WebSocket</string>
 </resources>
