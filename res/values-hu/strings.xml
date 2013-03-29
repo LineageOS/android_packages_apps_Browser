@@ -110,8 +110,6 @@
     <string name="contextmenu_openlink" msgid="7237961252214188935">"Megnyitás"</string>
     <string name="contextmenu_openlink_newwindow" msgid="1205313604181761403">"Megnyitás új lapon"</string>
     <string name="contextmenu_openlink_newwindow_background" msgid="4690381019116746687">"Megnyitás új lapon a háttérben"</string>
-    <string name="contextmenu_openlink_incognito_newwindow">Megnyitás új lapfülön, inkognitó módban</string>
-    <string name="contextmenu_openlink_incognito_newwindow_background">Megnyitás új lapfülön, inkognitó módban (háttérben)</string>
     <string name="contextmenu_savelink" msgid="5508554930832538184">"Link mentése"</string>
     <string name="contextmenu_sharelink" msgid="5392275392280130331">"Link megosztása"</string>
     <string name="contextmenu_copy" msgid="398860586635404030">"Másolás"</string>
@@ -145,8 +143,6 @@
     <string name="pref_content_homepage" msgid="3324574611613105696">"Kezdőlap beállítása"</string>
     <string name="pref_content_search_engine" msgid="1620101310821644144">"Keresőmotor beállítása"</string>
     <string name="pref_content_search_engine_summary" msgid="304003941861818133">"Válasszon egy keresőmotort"</string>
-    <string name="pref_content_ua">Böngészőazonosító</string>
-    <string name="pref_content_ua_summary">Válasszon böngészőazonosítót</string>
     <string name="pref_set_homepage_to" msgid="7838684355145561242">"Beállítás"</string>
   <string-array name="pref_homepage_choices">
     <item msgid="844041670142910837">"Jelenlegi oldal"</item>
@@ -279,8 +275,6 @@
     <string name="pref_use_instant_search_summary" msgid="839320474961917522">"A Google-keresésnél használja a Google Instantot, és a találatok gépelés közben megjelennek (az adatforgalom nőhet)."</string>
     <string name="pref_lab_fullscreen" msgid="8173609016657987973">"Teljes képernyő"</string>
     <string name="pref_lab_fullscreen_summary" msgid="7694738112219376740">"Használja a teljes képernyős módot az állapotsor elrejtéséhez."</string>
-    <string name="pref_lab_webgl">WebGL</string>
-    <string name="pref_lab_webgl_summary">WebGL engedélyezése</string>
     <string name="pref_data_title" msgid="7255058703417796578">"Sávszélesség kezelése"</string>
     <string name="pref_data_preload_title" msgid="4479320472980292873">"Keresési találatok előtöltése"</string>
   <string-array name="pref_data_preload_choices">
@@ -398,11 +392,25 @@
     <string name="accessibility_button_clear" msgid="6943152307986161598">"Beírt szöveg törlése"</string>
     <string name="accessibility_button_uaswitch" msgid="6286804719724282339">"Felhasználói ügynök váltása"</string>
     <string name="accessibility_button_go" msgid="1182818872083055958">"Mehet"</string>
-    <string name="accessibility_button_homescreen">Kezdőlap</string>
     <string name="accessibility_button_navscreen" msgid="9142904748728713075">"Oldalkezelő"</string>
     <string name="accessibility_button_more" msgid="3054251446394224216">"További beállítások"</string>
     <string name="accessibility_state_incognito" msgid="5786038488425202355">"Inkognitóoldal"</string>
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Mentett oldal"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Lapkezelés"</string>
     <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Előző mappa"</string>
+
+    <!-- CYANOGENMOD ADDITIONS START -->
+
+    <string name="contextmenu_openlink_incognito_newwindow">Megnyitás új lapfülön, inkognitó módban</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Megnyitás új lapfülön, inkognitó módban (háttérben)</string>
+    <string name="pref_content_ua">Böngészőazonosító</string>
+    <string name="pref_content_ua_summary">Válasszon böngészőazonosítót</string>
+    <string name="accessibility_button_homescreen">Kezdőlap</string>
+    <string name="pref_lab_webgl">WebGL</string>
+    <string name="pref_lab_webgl_summary">WebGL engedélyezése</string>
+    <string name="pref_lab_websockets">WebSocketek</string>
+    <string name="pref_lab_websockets_summary">WebSocketek engedélyezése</string>
+
+    <!-- CYANOGENMOD ADDITIONS END -->
+
 </resources>
