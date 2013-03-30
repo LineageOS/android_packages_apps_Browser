@@ -281,6 +281,8 @@
     <string name="pref_lab_fullscreen_summary" msgid="7694738112219376740">"Při použití režimu zobrazení na celou obrazovku je skryt stavový řádek."</string>
     <string name="pref_lab_webgl">Technologie WebGL</string>
     <string name="pref_lab_webgl_summary">Povolit technologii WebGL</string>
+    <string name="pref_lab_websockets">Technoloige WebSocket</string>
+    <string name="pref_lab_websockets_summary">Povolit technologii WebSocket</string>
     <string name="pref_data_title" msgid="7255058703417796578">"Správa rychlosti připojení"</string>
     <string name="pref_data_preload_title" msgid="4479320472980292873">"Předběžné načítání výsledků vyhledávání"</string>
   <string-array name="pref_data_preload_choices">
