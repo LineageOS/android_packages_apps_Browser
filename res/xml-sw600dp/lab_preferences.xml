@@ -27,7 +27,7 @@
         android:title="@string/pref_lab_webgl"
         android:summary="@string/pref_lab_webgl_summary" />
     <CheckBoxPreference
-        android:key="enable_websocket"
+        android:key="enable_websockets"
         android:defaultValue="false"
         android:title="@string/pref_lab_websockets"
         android:summary="@string/pref_lab_websockets_summary" />
