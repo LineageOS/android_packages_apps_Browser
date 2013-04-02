@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAen///lw\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 409,
+      "author": {
+        "id": 5596
+      },
+      "writtenOn": "2013-04-02T20:29:20Z",
+      "side": 1,
+      "message": "\"Choisissez\"\nI would even say \"Choisir\". It depends on the other menus, if it\u0027s infitive mode or not.",
+      "revId": "df68d9641d43c72805a56b36c43c0473a2fe1c4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
