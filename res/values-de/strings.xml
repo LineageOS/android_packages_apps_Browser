@@ -409,7 +409,10 @@
     <string name="pref_content_ua_summary">User-Agent auswählen</string>
 
     <string name="pref_lab_webgl">WebGL</string>
-    <string name="pref_lab_webgl_summary">WebGL aktivieren</string>
+    <string name="pref_lab_webgl_summary">WebGL-Unterstützung aktivieren</string>
+
+    <string name="pref_lab_websockets">WebSockets</string>
+    <string name="pref_lab_websockets_summary">WebSocket-Unterstützung aktivieren</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 </resources>
