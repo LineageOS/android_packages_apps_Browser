@@ -16,6 +16,24 @@
       "revId": "df68d9641d43c72805a56b36c43c0473a2fe1c4d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen///lY\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 409,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-04-03T00:22:27Z",
+      "side": 1,
+      "message": "Je viens de voir la ligne 397, donc je propose :\n\"Choisir l\\\u0027agent utilisateur\"\n\nPS: \"Choisisser\" \u003c\u003d la honte",
+      "parentUuid": "AAAAen///lw\u003d",
+      "revId": "df68d9641d43c72805a56b36c43c0473a2fe1c4d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
