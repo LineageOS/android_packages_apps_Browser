@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAen//+aQ\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 408,
+      "author": {
+        "id": 4617
+      },
+      "writtenOn": "2013-04-05T20:39:07Z",
+      "side": 1,
+      "message": "Pas certain que User-Agent se traduise. \u003d\u003e http://fr.wikipedia.org/wiki/User-Agent",
+      "revId": "54edd6667fedc008c215625c6b3910efe7799365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//+aM\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 4617
+      },
+      "writtenOn": "2013-04-05T20:39:07Z",
+      "side": 1,
+      "message": "onglet de navigation privée",
+      "revId": "54edd6667fedc008c215625c6b3910efe7799365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//+aI\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 411,
+      "author": {
+        "id": 4617
+      },
+      "writtenOn": "2013-04-05T20:39:07Z",
+      "side": 1,
+      "message": "onglet de navigation privée",
+      "revId": "54edd6667fedc008c215625c6b3910efe7799365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
