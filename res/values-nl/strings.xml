@@ -398,13 +398,4 @@
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Opgeslagen pagina"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Tabbladbeheer"</string>
     <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Vorige map"</string>
-
-    <!-- CYANOGENMOD ADDITIONS -->
-    <string name="contextmenu_openlink_incognito_newwindow">Openen in nieuw incognitotabblad</string>
-    <string name="contextmenu_openlink_incognito_newwindow_background">Openen in nieuw incognitotabblad op de achtergrond</string>
-    <string name="accessibility_button_homescreen">Startscherm</string>
-    <string name="pref_content_ua">Useragent</string>
-    <string name="pref_content_ua_summary">Useragent selecteren</string>
-    <string name="pref_lab_webgl">WebGL</string>
-    <string name="pref_lab_webgl_summary">WebGL inschakelen</string>
 </resources>
