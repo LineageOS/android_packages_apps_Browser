@@ -402,8 +402,6 @@
     <string name="accessibility_button_homescreen">Домашний экран</string>
     <string name="contextmenu_openlink_incognito_newwindow">Открыть в новой вкладке (инкогнито)</string>
     <string name="contextmenu_openlink_incognito_newwindow_background">Открыть в фоновой вкладке (инкогнито)</string>
-    <string name="pref_lab_webgl">WebGL</string>
     <string name="pref_lab_webgl_summary">Включить WebGL</string>
-    <string name="pref_lab_websockets">WebSocket</string>
-    <string name="pref_lab_websockets_summary">Включить WebSocket</string>
+    <string name="pref_lab_websockets_summary">Включить WebSockets</string>
 </resources>
