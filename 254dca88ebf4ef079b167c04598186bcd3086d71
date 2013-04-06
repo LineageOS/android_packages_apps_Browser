@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAen//988\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 4617
+      },
+      "writtenOn": "2013-04-06T20:04:31Z",
+      "side": 1,
+      "message": "Beaucoup mieux. Attention, \"privée\" prend un e.",
+      "revId": "254dca88ebf4ef079b167c04598186bcd3086d71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//984\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 411,
+      "author": {
+        "id": 4617
+      },
+      "writtenOn": "2013-04-06T20:04:31Z",
+      "side": 1,
+      "message": "idem",
+      "revId": "254dca88ebf4ef079b167c04598186bcd3086d71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
