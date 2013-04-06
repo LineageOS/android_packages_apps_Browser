@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAen//994\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-04-06T19:39:39Z",
+      "side": 1,
+      "message": "I\u0027m alright your opinion",
+      "parentUuid": "AAAAen//9+k\u003d",
+      "revId": "54edd6667fedc008c215625c6b3910efe7799365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAen//+aQ\u003d",
         "filename": "res/values-fr/strings.xml",
         "patchSetId": 3
@@ -142,6 +160,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAen//99w\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-04-06T19:39:39Z",
+      "side": 1,
+      "message": "C\u0027est plus sympa effectivement",
+      "parentUuid": "AAAAen//+AA\u003d",
+      "revId": "54edd6667fedc008c215625c6b3910efe7799365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAen//+aI\u003d",
         "filename": "res/values-fr/strings.xml",
         "patchSetId": 3
@@ -188,6 +224,24 @@
       "writtenOn": "2013-04-06T17:44:03Z",
       "side": 1,
       "message": "onglet de navigation privée en arrière-plan",
+      "parentUuid": "AAAAen//+VU\u003d",
+      "revId": "54edd6667fedc008c215625c6b3910efe7799365",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//99s\u003d",
+        "filename": "res/values-fr/strings.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 411,
+      "author": {
+        "id": 4808
+      },
+      "writtenOn": "2013-04-06T19:39:39Z",
+      "side": 1,
+      "message": "idem",
       "parentUuid": "AAAAen//+VU\u003d",
       "revId": "54edd6667fedc008c215625c6b3910efe7799365",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
