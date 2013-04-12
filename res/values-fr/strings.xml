@@ -16,10 +16,6 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- User agent label -->
-    <string name="pref_content_ua">User agent</string>
-    <!-- User agent summary -->
-    <string name="pref_content_ua_summary">Choisisser un user agent</string>
     <string name="application_name" msgid="1935869255545976415">"Navigateur"</string>
     <string name="choose_upload" msgid="3649366287575002063">"Choisir le fichier à importer"</string>
     <string name="uploads_disabled" msgid="463761197575372994">"Les transferts de fichiers sont désactivés."</string>
@@ -406,4 +402,16 @@
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Page enregistrée"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Gestion des onglets"</string>
     <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Dossier précédent"</string>
+
+    <!-- CYANOGENMOD ADDITIONS -->
+
+    <string name="pref_content_ua">Agent utilisateur</string>
+    <string name="pref_content_ua_summary">Choisir l\'agent utilisateur</string>
+    <string name="contextmenu_openlink_incognito_newwindow">Ouvrir dans un nouvel onglet de navigation privée</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Ouvrir dans un nouvel onglet de navigation privée en arrière-plan</string>
+    <string name="pref_lab_webgl">WebGL</string>
+    <string name="pref_lab_webgl_summary">Activer WebGL</string>
+    <string name="pref_lab_websockets">WebSockets</string>
+    <string name="pref_lab_websockets_summary">Activer WebSockets</string>
+    <string name="accessibility_button_homescreen">Écran d\'accueil</string>
 </resources>
