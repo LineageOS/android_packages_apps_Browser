@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAen//63k\u003d",
+        "filename": "res/values-af/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-14T17:34:47Z",
+      "side": 1,
+      "message": "Whitespace error",
+      "revId": "ebff3916eb10e76cf737bbf645c67661ce77777d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//63g\u003d",
+        "filename": "res/values-af/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-14T17:34:47Z",
+      "side": 1,
+      "message": "Whitespace error",
+      "revId": "ebff3916eb10e76cf737bbf645c67661ce77777d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//63c\u003d",
+        "filename": "res/values-af/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-14T17:34:47Z",
+      "side": 1,
+      "message": "Tuisskerm\n\nhttps://github.com/CyanogenMod/android_packages_apps_Trebuchet/blob/cm-10.1/res/values-af/strings.xml#L32",
+      "revId": "ebff3916eb10e76cf737bbf645c67661ce77777d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//63U\u003d",
+        "filename": "res/values-af/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-14T17:34:47Z",
+      "side": 1,
+      "message": "Gebruikeragent\n\nhttps://github.com/CyanogenMod/android_packages_apps_Browser/blob/cm-10.1/res/values-af/strings.xml#L393",
+      "revId": "ebff3916eb10e76cf737bbf645c67661ce77777d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAen//63Y\u003d",
+        "filename": "res/values-af/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-14T17:34:47Z",
+      "side": 1,
+      "message": "gebruikeragent\n\nhttps://github.com/CyanogenMod/android_packages_apps_Browser/blob/cm-10.1/res/values-af/strings.xml#L393",
+      "revId": "ebff3916eb10e76cf737bbf645c67661ce77777d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
