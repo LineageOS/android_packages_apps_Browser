@@ -365,7 +365,7 @@
     <string name="import_bookmarks_wizard_next" msgid="7578143961884352676">"Siguiente"</string>
     <string name="import_bookmarks_wizard_previous" msgid="8551440353688257031">"Anterior"</string>
     <string name="import_bookmarks_wizard_cancel" msgid="4936061122806506634">"Cancelar"</string>
-    <string name="import_bookmarks_wizard_done" msgid="1446247092194489191">"Aceptar"</string>
+    <string name="import_bookmarks_wizard_done" msgid="1446247092194489191">"Ok"</string>
     <string name="import_bookmarks_dialog_add" msgid="1743359725294101189">"Añadir marcadores a la cuenta de Google"</string>
     <string name="import_bookmarks_dialog_import" msgid="6933613853573899218">"Añadir tus marcadores de Android a marcadores de <xliff:g id="GOOGLE_ACCOUNT">%s</xliff:g>"</string>
     <string name="menu_share_url" msgid="5851814357333739700">"Compartir"</string>
@@ -398,18 +398,4 @@
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Página guardada"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Administración de pestañas"</string>
     <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Carpeta anterior"</string>
-
-    <!-- CYANOGENMOD ADDITIONS START -->
-
-    <string name="contextmenu_openlink_incognito_newwindow">Abrir en pestaña de incógnito</string>
-    <string name="contextmenu_openlink_incognito_newwindow_background">Abrir en pestaña de incógnito en segundo plano</string>
-    <string name="pref_content_ua">Agente de usuario</string>
-    <string name="pref_content_ua_summary">Elige un agente de usuario</string>
-    <string name="pref_lab_webgl">WebGL</string>
-    <string name="pref_lab_webgl_summary">Habilitar WebGL</string>
-    <string name="pref_lab_websockets">WebSockets</string>
-    <string name="pref_lab_websockets_summary">Habilitar WebSockets</string>
-    <string name="accessibility_button_homescreen">Pantalla de inicio</string>
-
-    <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
