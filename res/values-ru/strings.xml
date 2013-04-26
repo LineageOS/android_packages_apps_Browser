@@ -143,7 +143,6 @@
     <string name="pref_content_homepage" msgid="3324574611613105696">"Стартовая страница"</string>
     <string name="pref_content_search_engine" msgid="1620101310821644144">"Поисковая система"</string>
     <string name="pref_content_search_engine_summary" msgid="304003941861818133">"Выберите поисковую систему"</string>
-    <string name="pref_content_ua_summary">Выбор User Agent</string>
     <string name="pref_set_homepage_to" msgid="7838684355145561242">"Сохранить"</string>
   <string-array name="pref_homepage_choices">
     <item msgid="844041670142910837">"Текущая страница"</item>
@@ -399,9 +398,4 @@
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Сохраненная страница"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Управление вкладками"</string>
     <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Предыдущая папка"</string>
-    <string name="accessibility_button_homescreen">Домашний экран</string>
-    <string name="contextmenu_openlink_incognito_newwindow">Открыть в новой вкладке (инкогнито)</string>
-    <string name="contextmenu_openlink_incognito_newwindow_background">Открыть в фоновой вкладке (инкогнито)</string>
-    <string name="pref_lab_webgl_summary">Включить WebGL</string>
-    <string name="pref_lab_websockets_summary">Включить WebSockets</string>
 </resources>
