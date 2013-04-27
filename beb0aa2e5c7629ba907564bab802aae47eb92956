@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAfH///lI\u003d",
+        "filename": "res/values-ru/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-04-27T02:56:39Z",
+      "side": 1,
+      "message": "Tak vygljadit logichnee, snachala idjot stroka \"Otkryt\u0027 v novoj vkladke\", a nizhe \"Otkryt\u0027 v novoj vkladke (inkognito)\".",
+      "parentUuid": "AAAAfH///mk\u003d",
+      "revId": "beb0aa2e5c7629ba907564bab802aae47eb92956",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAfH///mg\u003d",
         "filename": "res/values-ru/cm_strings.xml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-04-27T00:04:50Z",
       "side": 1,
       "message": "A takoy puktn menu mne, kstati, nikogda ne popadalsya. Eta stroka voobsche ispol\u0027zuetsya?",
+      "revId": "beb0aa2e5c7629ba907564bab802aae47eb92956",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH///lM\u003d",
+        "filename": "res/values-ru/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 5896
+      },
+      "writtenOn": "2013-04-27T02:56:39Z",
+      "side": 1,
+      "message": "Nuzhno vkljuchit\u0027 Nastrojki-Rasshirennye-Fonovye vkladki.",
+      "parentUuid": "AAAAfH///mg\u003d",
       "revId": "beb0aa2e5c7629ba907564bab802aae47eb92956",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
