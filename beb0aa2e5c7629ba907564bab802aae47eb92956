@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAfH///mk\u003d",
+        "filename": "res/values-ru/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-04-27T00:04:50Z",
+      "side": 1,
+      "message": "Mozhet, sokratit\u0027 do \"Otkrit\u0027 v rezhime inkognito\"?",
+      "revId": "beb0aa2e5c7629ba907564bab802aae47eb92956",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH///mg\u003d",
+        "filename": "res/values-ru/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2013-04-27T00:04:50Z",
+      "side": 1,
+      "message": "A takoy puktn menu mne, kstati, nikogda ne popadalsya. Eta stroka voobsche ispol\u0027zuetsya?",
+      "revId": "beb0aa2e5c7629ba907564bab802aae47eb92956",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
