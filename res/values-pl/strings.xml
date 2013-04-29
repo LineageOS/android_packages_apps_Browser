@@ -398,26 +398,4 @@
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Zapisana strona"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Zarządzanie kartami"</string>
     <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Poprzedni folder"</string>
-
-    <!-- CYANOGENMOD ADDITIONS -->
-
-    <!-- User agent label -->
-    <string name="pref_content_ua">User agent</string>
-    <!-- User agent summary -->
-    <string name="pref_content_ua_summary">Wybierz sposób identyfikacji przeglądarki</string>
-
-    <!-- Title for the WebGL feature [CHAR LIMIT=40] -->
-    <string name="pref_lab_webgl">WebGL</string>
-    <!-- Summary for the WebGL lab feature [CHAR LIMIT=120] -->
-    <string name="pref_lab_webgl_summary">Aktywuj WebGL</string>
-
-    <!-- Context Menu item to open the currently selected link in a new
-         background window. [CHAR LIMIT=50] -->
-    <string name="contextmenu_openlink_incognito_newwindow_background">Otwórz w nowej karcie incognito w tle</string>
-
-    <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
-    <string name="accessibility_button_homescreen">Ekran główny</string>
-
-    <string name="pref_lab_websockets">WebSocket</string>
-    <string name="pref_lab_websockets_summary">Aktywuj WebSocket</string>
 </resources>

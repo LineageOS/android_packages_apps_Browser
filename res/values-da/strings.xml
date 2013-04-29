@@ -398,16 +398,4 @@
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Gemt side"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Administrering af faner"</string>
     <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Forrige mappe"</string>
-
-    <!-- CYANOGENMOD ADDITIONS -->
-    <string name="contextmenu_openlink_incognito_newwindow">Åbn i ny inkognito-tab</string>
-    <string name="contextmenu_openlink_incognito_newwindow_background">Åbn i ny inkognito-tab i baggrunden</string>
-    <string name="pref_content_ua">Brugeragent</string>
-    <string name="pref_content_ua_summary">Vælg en brugeragent</string>
-    <string name="accessibility_button_homescreen">Startskærm</string>
-    <string name="pref_lab_webgl">WebGL</string>
-    <string name="pref_lab_webgl_summary">Slå WebGL til</string>
-    <string name="pref_lab_websockets">WebSockets</string>
-    <string name="pref_lab_websockets_summary">Slå WebSockets til</string>
-    <!-- CYANOGENMOD ADDITIONS END -->
 </resources>

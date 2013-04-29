@@ -17,7 +17,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="application_name" msgid="1935869255545976415">"Browser"</string>
-    <string name="choose_upload" msgid="3649366287575002063">"Pilih berkas untuk diunggah"</string>
+    <string name="choose_upload" msgid="3649366287575002063">"Pilih file untuk diunggah"</string>
     <string name="uploads_disabled" msgid="463761197575372994">"Pengunggahan file dinonaktifkan."</string>
     <string name="new_tab" msgid="7971857320679510529">"Tab baru"</string>
     <string name="new_incognito_tab" msgid="3606197964239039478">"Tab penyamaran baru"</string>
@@ -26,7 +26,7 @@
     <string name="tab_history" msgid="1979267558744613746">"Riwayat"</string>
     <string name="tab_snapshots" msgid="1449241204980265186">"Laman tersimpan"</string>
     <string name="added_to_bookmarks" msgid="4028710765672851635">"Ditambahkan ke bookmark."</string>
-    <string name="removed_from_bookmarks" msgid="546648923924996722">"Dihapuskan dari bookmark."</string>
+    <string name="removed_from_bookmarks" msgid="546648923924996722">"Dihapus dari bookmark."</string>
     <string name="sign_in_to" msgid="5939425800148759165">"Masuk ke <xliff:g id="HOSTNAME">%s1</xliff:g> \"<xliff:g id="REALM">%s2</xliff:g>\""</string>
     <string name="username" msgid="5057566336518215922">"Nama"</string>
     <string name="password" msgid="1177138552305184404">"Sandi"</string>
@@ -34,7 +34,7 @@
     <string name="bookmarks_search" msgid="5229596268214362873">"Browser"</string>
     <string name="cancel" msgid="3017274947407233702">"Batal"</string>
     <string name="ok" msgid="1509280796718850364">"Oke"</string>
-    <string name="title_bar_loading" msgid="7438217780834640678">"Memuat\u2026"</string>
+    <string name="title_bar_loading" msgid="7438217780834640678">"Memuat…"</string>
     <string name="page_info" msgid="4048529256302257195">"Info laman"</string>
     <string name="page_info_view" msgid="5303490449842635158">"Lihat info laman"</string>
     <string name="page_info_address" msgid="2222306609532903254">"Alamat:"</string>
@@ -103,7 +103,7 @@
     <string name="copy_page_url" msgid="1188679152608889555">"Salin URL laman"</string>
     <string name="share_page" msgid="593756995297268343">"Bagikan lama"</string>
     <string name="menu_save_snapshot" msgid="6935080344031126139">"Simpan untuk dibaca secara offline"</string>
-    <string name="saving_snapshot" msgid="1693789062351182809">"Menyimpan\u2026"</string>
+    <string name="saving_snapshot" msgid="1693789062351182809">"Menyimpan..."</string>
     <string name="snapshot_failed" msgid="4584580873565876033">"Tidak dapat menyimpan untuk dibaca secara offline."</string>
     <string name="contextheader_folder_bookmarkcount" msgid="353987136645619089">"<xliff:g id="BOOKMARK_COUNT">%d</xliff:g> bookmark"</string>
     <string name="contextheader_folder_empty" msgid="974171637803391651">"Folder kosong"</string>
@@ -117,12 +117,12 @@
     <string name="contextmenu_download_image" msgid="4243829645180686912">"Simpan gambar"</string>
     <string name="contextmenu_view_image" msgid="3870625602053600905">"Lihat gambar"</string>
     <string name="contextmenu_set_wallpaper" msgid="3691902960115350686">"Setel sebagai wallpaper"</string>
-    <string name="contextmenu_dial_dot" msgid="5856550683415933806">"Panggil\u2026"</string>
+    <string name="contextmenu_dial_dot" msgid="5856550683415933806">"Panggil..."</string>
     <string name="contextmenu_add_contact" msgid="3183511922223645716">"Tambahkan kontak"</string>
     <string name="contextmenu_send_mail" msgid="1014513374828775660">"Kirim email"</string>
     <string name="contextmenu_map" msgid="7471390435434034912">"Peta"</string>
     <string name="choosertitle_sharevia" msgid="4600490613341909086">"Bagikan melalui"</string>
-    <string name="clear" msgid="7070043081700011461">"Hapuskanlah"</string>
+    <string name="clear" msgid="7070043081700011461">"Bersihkan"</string>
     <string name="replace" msgid="4843033491070384047">"Ganti"</string>
     <string name="browser_bookmarks_page_bookmarks_text" msgid="6787605028726162673">"Bookmark"</string>
     <string name="menu_preferences" msgid="6709237687234102240">"Setelan"</string>
@@ -156,7 +156,7 @@
     <string name="pref_general_title" msgid="1946872771219249323">"Umum"</string>
     <string name="pref_general_sync_title" msgid="3138637035975860324">"Sinkronisasi"</string>
     <string name="pref_general_autofill_title" msgid="547881256865816858">"Isi-otomatis"</string>
-    <string name="pref_autofill_enabled" msgid="1015751713312396713">"Isi formulir otomatis"</string>
+    <string name="pref_autofill_enabled" msgid="1015751713312396713">"Isi-otomatis formulir"</string>
     <string name="pref_autofill_enabled_summary" msgid="7659954073892471496">"Mengisi formulir web dengan satu sentuhan"</string>
     <string name="pref_autofill_profile_editor" msgid="8934844472922113166">"Teks isi-otomatis"</string>
     <string name="pref_autofill_profile_editor_summary" msgid="4864447251676856190">"Menyiapkan teks untuk mengisi otomatis di formulir web"</string>
@@ -221,7 +221,7 @@
     <string name="pref_security_accept_cookies" msgid="3201367661925047989">"Terima cookie"</string>
     <string name="pref_security_accept_cookies_summary" msgid="1907951236154433751">"Izinkan situs menyimpan dan membaca data cookie"</string>
   <string-array name="pref_text_size_choices">
-    <item msgid="4952686548944739548">"Sangat kecil"</item>
+    <item msgid="4952686548944739548">"Kecil"</item>
     <item msgid="1950030433642671460">"Kecil"</item>
     <item msgid="4338347520133294584">"Normal"</item>
     <item msgid="5043128215356351184">"Besar"</item>
@@ -258,8 +258,8 @@
   <string-array name="pref_default_text_encoding_choices">
     <item msgid="7275223955790513818">"Latin-1 (ISO-8859-1)"</item>
     <item msgid="2456597866837587140">"Unicode (UTF-8)"</item>
-    <item msgid="6122474363777211732">"Cina (GBK)"</item>
-    <item msgid="373372275931607040">"Cina (Big5)"</item>
+    <item msgid="6122474363777211732">"China (GBK)"</item>
+    <item msgid="373372275931607040">"China (Big5)"</item>
     <item msgid="891615911084608570">"Jepang (ISO-2022-JP)"</item>
     <item msgid="5589150448475151241">"Jepang (SHIFT_JIS)"</item>
     <item msgid="7356792686950371843">"Jepang (EUC-JP)"</item>
@@ -323,7 +323,7 @@
     <string name="download_sdcard_busy_dlg_msg" product="nosdcard" msgid="8412543086906716875">"Penyimpanan USB sibuk. Untuk mengizinkan pengunduhan, sentuh Matikan penyimpanan USB pada pemberitahuan."</string>
     <string name="download_sdcard_busy_dlg_msg" product="default" msgid="2629425950473358591">"Kartu SD sibuk. Untuk mengizinkan unduhan, sentuh Matikan penyimpanan USB pada pemberitahuan."</string>
     <string name="cannot_download" msgid="8150552478556798780">"Hanya dapat mengunduh URL \"http\" atau \"https\"."</string>
-    <string name="download_pending" msgid="2599683668575349559">"Memulai unduhan\u2026"</string>
+    <string name="download_pending" msgid="2599683668575349559">"Memulai unduhan..."</string>
     <string name="search_the_web" msgid="6046130189241962337">"Telusuri web"</string>
     <string name="webstorage_outofspace_notification_title" msgid="1160474608059771788">"Penyimpanan browser penuh"</string>
     <string name="webstorage_outofspace_notification_text" msgid="47273584426988640">"Sentuh untuk mengosongkan ruang."</string>
@@ -332,7 +332,7 @@
     <string name="webstorage_clear_data_dialog_ok_button" msgid="6682570951259237542">"Oke"</string>
     <string name="webstorage_clear_data_dialog_cancel_button" msgid="2028867751958942762">"Batal"</string>
     <string name="webstorage_origin_summary_mb_stored" msgid="1985885826292236210">"MB yang disimpan pada ponsel Anda"</string>
-    <string name="loading_video" msgid="7886324933131962321">"Memuat video\u2026"</string>
+    <string name="loading_video" msgid="7886324933131962321">"Memuat video..."</string>
     <string name="geolocation_permissions_prompt_message" msgid="356796102004052471">"<xliff:g id="WEBSITE_ORIGIN">%s</xliff:g> ingin tahu lokasi Anda"</string>
     <string name="geolocation_permissions_prompt_share" msgid="9084486342048347976">"Bagikan lokasi"</string>
     <string name="geolocation_permissions_prompt_dont_share" msgid="6303025160237860300">"Tolak"</string>
@@ -349,7 +349,7 @@
     <string name="website_settings_clear_all_dialog_message" msgid="1551164275687475061">"Hapus semua data situs web dan izin lokasi?"</string>
     <string name="website_settings_clear_all_dialog_ok_button" msgid="7858504776529106243">"Oke"</string>
     <string name="website_settings_clear_all_dialog_cancel_button" msgid="1896757051856611674">"Batal"</string>
-    <string name="progress_dialog_setting_wallpaper" msgid="2031391201442335889">"Menyetel wallpaper\u2026"</string>
+    <string name="progress_dialog_setting_wallpaper" msgid="2031391201442335889">"Menyetel wallpaper..."</string>
     <string name="defaultBookmarksUpButton" msgid="2303951020715704735">"Bookmark"</string>
     <string name="empty_bookmarks_folder" msgid="6239830231917618556">"Tidak ada bookmark."</string>
     <string name="other_bookmarks" msgid="8021889794475657319">"Bookmark Lainnya"</string>
@@ -398,9 +398,4 @@
     <string name="accessibility_state_frozen" msgid="8041539250447035570">"Laman tersimpan"</string>
     <string name="accessibility_transition_navscreen" msgid="2734915619351519547">"Pengelolaan tab"</string>
     <string name="accessibility_button_bookmarks_folder_up" msgid="9179389954714270505">"Folder sebelumnya"</string>
-
-    <!-- CYANOGENMOD EDITS -->
-    <string name="contextmenu_openlink_incognito_newwindow">Buka di tab penyamaran baru</string>
-    <string name="contextmenu_openlink_incognito_newwindow_background">Buka di tab penyamaran baru yang latar belakang</string>
-    <string name="accessibility_button_homescreen">Layar Utama</string>
 </resources>
