@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAfH//+jc\u003d",
+        "filename": "res/values-hu/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-29T15:57:03Z",
+      "side": 1,
+      "message": "Please remove newline",
+      "revId": "6ab99793ad2a424bf84b61a3746a2ae6d1e8b25a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAfH//+jY\u003d",
+        "filename": "res/values-hu/cm_strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-04-29T15:57:03Z",
+      "side": 1,
+      "message": "\u003cresources xmlns:xliff\u003d\"urn:oasis:names:tc:xliff:document:1.2\"\u003e\n\nis enough.",
+      "revId": "6ab99793ad2a424bf84b61a3746a2ae6d1e8b25a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
