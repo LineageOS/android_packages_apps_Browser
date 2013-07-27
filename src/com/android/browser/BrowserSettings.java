@@ -129,8 +129,6 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 
     private static String sFactoryResetUrl;
 
-    private static boolean sWebGLAvailable;
-
     public static void initialize(final Context context) {
         sInstance = new BrowserSettings(context);
     }
@@ -289,8 +287,6 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         settingsClassic.setDoubleTapZoom(getDoubleTapZoom());
         settingsClassic.setAutoFillEnabled(isAutofillEnabled());
         settingsClassic.setAutoFillProfile(getAutoFillProfile());
-        setIsWebGLAvailable(settingsClassic.isWebGLAvailable());
-        settingsClassic.setWebGLEnabled(isWebGLAvailable() && isWebGLEnabled());
         settingsClassic.setWebSocketsEnabled(isWebSocketsEnabled());
 
         boolean useInverted = useInvertedRendering();
@@ -855,10 +851,6 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         return 1 + (mPrefs.getInt(PREF_INVERTED_CONTRAST, 0) / 10f);
     }
 
-    public boolean isWebGLEnabled() {
-        return mPrefs.getBoolean(PREF_ENABLE_WEBGL, true);
-    }
-
     public boolean isWebSocketsEnabled() {
         return mPrefs.getBoolean(PREF_ENABLE_WEBSOCKETS, false);
     }
@@ -938,14 +930,6 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 
     public String getLinkPrefetchEnabled() {
         return mPrefs.getString(PREF_LINK_PREFETCH, getDefaultLinkPrefetchSetting());
-    }
-
-    private static void setIsWebGLAvailable(boolean available) {
-        sWebGLAvailable = available;
-    }
-
-    public static boolean isWebGLAvailable() {
-        return sWebGLAvailable;
     }
 
     // -----------------------------
