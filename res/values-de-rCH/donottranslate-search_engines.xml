@@ -21,7 +21,7 @@
 Each value in the string-array is the name of a value in all_search_engines.xml
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string-array name="search_engines" translatable="false">
+  <string-array name="search_engines">
     <item>google</item>
     <item>yahoo_ch</item>
     <item>bing_de_CH</item>
