@@ -228,7 +228,7 @@ class SearchEngineManager(object):
     # than 7 search engines for this country, the remaining items are marked as
     # enabled=false.
     text = []
-    text.append('  <string-array name="search_engines" translatable="false">\n');
+    text.append('  <string-array name="search_engines">\n');
     for engine in engines:
       engine_data = self.getEngineData(engine)
       name = engine_data[0]
