@@ -15,9 +15,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Context Menu item to open the currently selected link in a new incognito window. -->
-    <string name="contextmenu_openlink_incognito_newwindow">Open in new incognito tab</string>
+    <string name="contextmenu_openlink_incognito_newwindow">Öppna i ny inkognitoflik</string>
     <!-- Context Menu item to open the currently selected link in a new background window. [CHAR LIMIT=50] -->
-    <string name="contextmenu_openlink_incognito_newwindow_background">Open in new incognito background tab</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Öppna i ny inkognitoflik i bakgrunden</string>
 
     <!-- User agent label -->
     <string name="pref_content_ua">Användaragent</string>
