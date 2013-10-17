@@ -57,6 +57,7 @@ public class AdvancedPreferencesFragment extends PreferenceFragment
 
         e = findPreference(PreferenceKeys.PREF_DEFAULT_TEXT_ENCODING);
         e.setOnPreferenceChangeListener(this);
+        updateListPreferenceSummary((ListPreference) e);
 
         e = findPreference(PreferenceKeys.PREF_RESET_DEFAULT_PREFERENCES);
         e.setOnPreferenceChangeListener(this);
