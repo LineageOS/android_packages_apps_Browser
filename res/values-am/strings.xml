@@ -42,7 +42,7 @@
     <string name="ssl_warnings_header" msgid="79744901983636370">"ለእዚህ ድረ ገፅ የደህንነት ምስክሩ ላይ ችግሮች አሉ።"</string>
     <string name="ssl_continue" msgid="8031515015829358457">"ቀጥል"</string>
     <string name="security_warning" msgid="6607795404322797541">"የደህንነት ቅንብሮች"</string>
-    <string name="view_certificate" msgid="1472768887529093862">"ምስክሮች ዕይ"</string>
+    <string name="view_certificate" msgid="1472768887529093862">"ምስክሮች ይመልከቱ"</string>
     <string name="ssl_go_back" msgid="4598951822061593819">"ወደ ኋላተመለስ"</string>
     <string name="ssl_untrusted" msgid="7754507359360636447">"ይህ ምስክር ከታማኝ ቦታ አይደለም።"</string>
     <string name="ssl_mismatch" msgid="3809794439740523641">"የጣቢያው ስም ከምስክር ወረቀቱ ስም ጋር አይዛመድም።"</string>
@@ -253,7 +253,7 @@
     <string name="pref_extras_reset_default_title" msgid="3579760449455761762">"ነባሪዎችን ዳግም አስጀምር"</string>
     <string name="pref_extras_reset_default" msgid="8904000515846202110">"ወደ ነባሪ ዳግም አስጀምር"</string>
     <string name="pref_extras_reset_default_summary" msgid="4247870778270414501">"ነባሪ ቅንብሮችን እነበረበት መልስ"</string>
-    <string name="pref_extras_reset_default_dlg" msgid="7922814420184322450">"ቅንጅቶችን ወደ ነባሪ ዋጋዎች ይገልበጥ?"</string>
+    <string name="pref_extras_reset_default_dlg" msgid="7922814420184322450">"ቅንብሮችን ወደ ነባሪ ዋጋዎች ይገልበጥ?"</string>
     <string name="pref_development_title" msgid="3263854204533056480">"አርም"</string>
     <string name="pref_default_text_encoding" msgid="5742965543955558478">"ፅሁፍ በኮድ መክተት"</string>
   <string-array name="pref_default_text_encoding_choices">
@@ -280,7 +280,7 @@
     <string name="pref_data_preload_title" msgid="4479320472980292873">"የቀድሞ ስቀል ውጤት ይፈልጉ"</string>
   <string-array name="pref_data_preload_choices">
     <item msgid="5180466923190095508">"ፈፅሞ"</item>
-    <item msgid="1791664748778640002">"በWi-ፍ ላይ ብቻ"</item>
+    <item msgid="1791664748778640002">"በWi-Fi ላይ ብቻ"</item>
     <item msgid="3944061253437827617">"ሁልጊዜ"</item>
   </string-array>
     <string name="pref_data_preload_summary" msgid="3809168910751382727">"አሳሹ አስተማማኝ የፍለጋ ውጤቶችን በዳራ ውስጥ ቀድሞ እንዲሰቅል ይፈቅዳል።"</string>
@@ -288,7 +288,7 @@
     <string name="pref_link_prefetch_title" msgid="4123685219009241072">"የድረ-ገጽ ቅድመ-መጫን"</string>
   <string-array name="pref_link_prefetch_choices">
     <item msgid="4889781230398008031">"በፍጹም"</item>
-    <item msgid="1908465963242077428">"በገመድ አልባ ላይ ብቻ"</item>
+    <item msgid="1908465963242077428">"በWi-Fi ላይ ብቻ"</item>
     <item msgid="7647277566998527142">"ዘወትር"</item>
   </string-array>
     <string name="pref_link_prefetch_summary" msgid="6558181497993206817">"አሳሽ የተገናኙ ድረ-ገጾች በጀርባ ውስጥ ቅድሚያ እንዲጭን ይፍቀዱለት"</string>
