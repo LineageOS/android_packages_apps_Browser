@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa1b9901_c893ada2",
+        "filename": "res/values-lt/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 308
+      },
+      "writtenOn": "2013-11-12T22:53:38Z",
+      "side": 1,
+      "message": "Needs consistency. Atidaryti naujame inkognito fono skirtuke",
+      "revId": "319deb46f211a34d5bb688b8923a0531b798b86a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa1b9901_68906196",
+        "filename": "res/values-lt/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 308
+      },
+      "writtenOn": "2013-11-12T22:53:38Z",
+      "side": 1,
+      "message": "agent?",
+      "revId": "319deb46f211a34d5bb688b8923a0531b798b86a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa1b9901_888db57d",
+        "filename": "res/values-lt/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 308
+      },
+      "writtenOn": "2013-11-12T22:53:38Z",
+      "side": 1,
+      "message": "Is it really simply \"homescreen\"? I see \"accessibility\" and \"button\" in string definition too.",
+      "revId": "319deb46f211a34d5bb688b8923a0531b798b86a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
