@@ -508,9 +508,9 @@ public class Controller
                                 break;
                             case R.id.save_link_context_menu_id:
                             case R.id.download_context_menu_id:
-                                DownloadHandler.onDownloadStartNoStream(
+                                MyDownloadHandler.onDownloadStartNoStream(
                                         mActivity, url, view.getSettings().getUserAgentString(),
-                                        null, null, null, view.isPrivateBrowsingEnabled());
+                                        null, null, null, view.isPrivateBrowsingEnabled(), 0);
                                 break;
                         }
                         break;
@@ -1031,8 +1031,8 @@ public class Controller
             String contentDisposition, String mimetype, String referer,
             long contentLength) {
         WebView w = tab.getWebView();
-        DownloadHandler.onDownloadStart(mActivity, url, userAgent,
-                contentDisposition, mimetype, referer, w.isPrivateBrowsingEnabled());
+        MyDownloadHandler.onDownloadStart(mActivity, url, userAgent,
+                contentDisposition, mimetype, referer, w.isPrivateBrowsingEnabled(), contentLength);
         if (w.copyBackForwardList().getSize() == 0) {
             // This Tab was opened for the sole purpose of downloading a
             // file. Remove it.
@@ -2137,8 +2137,8 @@ public class Controller
             if (DataUri.isDataUri(mText)) {
                 saveDataUri();
             } else {
-                DownloadHandler.onDownloadStartNoStream(mActivity, mText, mUserAgent,
-                        null, null, null, mPrivateBrowsing);
+                MyDownloadHandler.onDownloadStartNoStream(mActivity, mText, mUserAgent,
+                        null, null, null, mPrivateBrowsing, 0);
             }
             return true;
         }

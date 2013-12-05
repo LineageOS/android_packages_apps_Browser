@@ -1015,4 +1015,29 @@
     <!-- Content description for navigating up in the bookmark folder hierarchy [CHAR LIMIT=NONE] -->
     <string name="accessibility_button_bookmarks_folder_up">Previous folder</string>
 
+
+    <!-- Add for download save path setting Feature -->
+    <string name="invalid_path">"Path is invalid!"</string>
+    <string name="path_wrong">"Wrong Path"</string>
+    <string name="pref_download_title">Download Path Settings</string>
+    <string name="pref_download_path_setting_screen_title">Custom Download Path</string>
+    <string name="download_start">OK</string>
+    <string name="download_cancel">Cancel</string>
+    <string name="download_filesize">Size</string>
+    <string name="download_filepath_label">Path</string>
+    <string name="download_edit_filename_label">Name</string>
+    <string name="download_default_path">/Download</string>
+    <string name="download_no_enough_memory">Download no enough memory</string>
+    <string name="download_settings_title">Download Settings</string>
+    <string name="save_page_needs_title">Download File\'s Name Can not be Empty!</string>
+    <string name="filename_empty_title">Download File\'s Name is Empty</string>
+    <string name="filename_empty_msg">Download File\'s Name Can not be Empty! Please Input a Valid File\'s Name!</string>
+    <string name="unknow_length">Unknown</string>
+    <string name="download_file_exist_msg">This File has Already Existed,Please Input a New File\'s Name!</string>
+    <string name="download_file_exist">File Exist</string>
+    <string name="download_path_phone_storage_label">/Phone Storage</string>
+    <string name="download_path_sd_card_label">/SD card</string>
+    <string name="download_path_unavailable_dlg_title">Download Directory is Unavailable</string>
+    <string name="download_path_unavailable_dlg_msg">Please modify the Download Directory of Browser</string>
+    <string name="activity_not_found">Can\'t Find the Activity to Handle this Intent <xliff:g id="NOACTIVITY">%s</xliff:g>.</string>
 </resources>

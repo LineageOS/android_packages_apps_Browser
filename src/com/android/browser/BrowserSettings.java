@@ -634,6 +634,11 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         }
     }
 
+    public String getDownloadPath() {
+        return mPrefs.getString(PREF_DOWNLOAD_PATH,
+                MyDownloadHandler.getDefaultDownloadPath(mContext));
+    }
+
     // -----------------------------
     // getter/setters for accessibility_preferences.xml
     // -----------------------------
