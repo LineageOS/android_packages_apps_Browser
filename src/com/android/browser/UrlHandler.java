@@ -47,6 +47,8 @@ public class UrlHandler {
     /* package */ final static String SCHEME_WTAI_SD = "wtai://wp/sd;";
     /* package */ final static String SCHEME_WTAI_AP = "wtai://wp/ap;";
 
+    /* package */ final static String SCHEME_EMAIL_TO = "mailto:";
+
     Controller mController;
     Activity mActivity;
 
@@ -115,6 +117,13 @@ public class UrlHandler {
             }
         }
 
+        // add for carrier feature - recognize additional website format
+        // here add to support "mailto:" scheme
+        if (url.startsWith(SCHEME_EMAIL_TO)) {
+            handleEmailTypeUrl(url);
+            return true;
+        }
+
         if (startActivityForUrl(tab, url)) {
             return true;
         }
@@ -124,6 +133,23 @@ public class UrlHandler {
         }
 
         return false;
+    }
+
+    void handleEmailTypeUrl(String url) {
+        Intent intent;
+        // perform generic parsing of the URI to turn it into an Intent.
+        try {
+            intent = Intent.parseUri(url, Intent.URI_INTENT_SCHEME);
+        } catch (URISyntaxException ex) {
+            Log.w("Browser", "Bad URI " + url + ": " + ex.getMessage());
+            return;
+        }
+
+        try {
+            mActivity.startActivity(intent);
+        } catch (ActivityNotFoundException ex) {
+            Log.w("Browser", "No Activity Found for " + url);
+        }
     }
 
     boolean startActivityForUrl(Tab tab, String url) {

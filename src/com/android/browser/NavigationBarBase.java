@@ -16,6 +16,7 @@
 package com.android.browser;
 
 import android.app.SearchManager;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -24,6 +25,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -33,6 +35,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.android.browser.UrlInputView.UrlInputListener;
+
+import java.net.URISyntaxException;
 
 public class NavigationBarBase extends LinearLayout implements
         OnClickListener, UrlInputListener, OnFocusChangeListener,
@@ -158,7 +162,13 @@ public class NavigationBarBase extends LinearLayout implements
     public void onAction(String text, String extra, String source) {
         stopEditingUrl();
         if (UrlInputView.TYPED.equals(source)) {
-            String url = UrlUtils.smartUrlFilter(text, false);
+            String url = null;
+            if (isRtspTypeUrl(text)) {
+                url = text;
+            } else {
+                url = UrlUtils.smartUrlFilter(text, false);
+            }
+
             Tab t = mBaseUi.getActiveTab();
             // Only shortcut javascript URIs for now, as there is special
             // logic in UrlHandler for other schemas
@@ -166,6 +176,14 @@ public class NavigationBarBase extends LinearLayout implements
                 mUiController.loadUrl(t, url);
                 setDisplayTitle(text);
                 return;
+            }
+
+            // add for carrier feature - recognize additional website format
+            // here add to support inputing url started with "rtsp://"
+            if (url != null && t != null && isRtspTypeUrl(url)) {
+                if (handleRtspTypeUrl(url)) {
+                    return;
+                }
             }
         }
         Intent i = new Intent();
@@ -182,6 +200,33 @@ public class NavigationBarBase extends LinearLayout implements
         }
         mUiController.handleNewIntent(i);
         setDisplayTitle(text);
+    }
+
+    private boolean isRtspTypeUrl(String url) {
+        if (url != null && url.startsWith("rtsp://")) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean handleRtspTypeUrl(String url) {
+        Intent intent;
+        // perform generic parsing of the URI to turn it into an Intent.
+        try {
+            intent = Intent.parseUri(url, Intent.URI_INTENT_SCHEME);
+        } catch (URISyntaxException ex) {
+            Log.w("Browser", "Bad URI " + url + ": " + ex.getMessage());
+            return false;
+        }
+
+        try {
+            mContext.startActivity(intent);
+        } catch (ActivityNotFoundException ex) {
+            Log.w("Browser", "No Activity Found for " + url);
+            return false;
+        }
+
+        return true;
     }
 
     @Override
