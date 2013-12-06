@@ -56,6 +56,9 @@
                    android:taskAffinity="android.task.browser"
                    android:supportsRtl="true" >
 
+        <uses-library android:name="com.qrd.useragent"
+                      android:required="false" />
+
         <provider android:name=".provider.BrowserProvider2"
                   android:authorities="com.android.browser;browser"
                   android:multiprocess="false"
