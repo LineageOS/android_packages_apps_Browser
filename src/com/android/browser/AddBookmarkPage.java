@@ -194,8 +194,9 @@ public class AddBookmarkPage extends Activity
                     }
                 }
             }
-            // Steal the key press; otherwise a newline will be added
-            return true;
+
+           // No need to steal the key press, newline is disabled in IME
+           // return true;
         }
         return false;
     }
