@@ -429,4 +429,10 @@
     <string name="video_save">保存</string>
     <string name="video_play">播放</string>
     <string name="play_err">无法播放</string>
+
+    <!-- Add for new bookmark/folder Feature -->
+    <string name="save_bookmark_folder">新建书签文件夹</string>
+    <string name="save_to_bookmarks_title">保存书签</string>
+    <string name="duplicated_folder_warning">该文件夹已经存在</string>
+    <string name="overwrite_bookmark_msg">该书签的标签或者地址已经存在，是否覆盖？</string>
 </resources>

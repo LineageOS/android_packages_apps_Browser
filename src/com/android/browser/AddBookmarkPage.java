@@ -16,10 +16,8 @@
 
 package com.android.browser;
 
-import com.android.browser.addbookmark.FolderSpinner;
-import com.android.browser.addbookmark.FolderSpinnerAdapter;
-
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.LoaderManager;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.AsyncTaskLoader;
@@ -28,6 +26,7 @@ import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.CursorLoader;
+import android.content.DialogInterface;
 import android.content.Loader;
 import android.content.res.Resources;
 import android.database.Cursor;
@@ -40,6 +39,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.Browser;
 import android.provider.BrowserContract;
 import android.provider.BrowserContract.Accounts;
 import android.text.TextUtils;
@@ -61,6 +61,9 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.android.browser.addbookmark.FolderSpinner;
+import com.android.browser.addbookmark.FolderSpinnerAdapter;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -256,8 +259,13 @@ public class AddBookmarkPage extends Activity
                     mSaveToHomeScreen = false;
                     switchToDefaultView(true);
                 }
-            } else if (save()) {
-                finish();
+            } else {
+                // add for carrier feature - check duplicate bookmark
+                if (mSaveToHomeScreen) {
+                    save();
+                } else {
+                    checkDupeAndSave();
+                }
             }
         } else if (v == mCancelButton) {
             if (mIsFolderNamerShowing) {
@@ -659,6 +667,7 @@ public class AddBookmarkPage extends Activity
         mFolderNamerHolder = getLayoutInflater().inflate(R.layout.new_folder_layout, null);
         mFolderNamer = (EditText) mFolderNamerHolder.findViewById(R.id.folder_namer);
         mFolderNamer.setOnEditorActionListener(this);
+
         mFolderCancel = mFolderNamerHolder.findViewById(R.id.close);
         mFolderCancel.setOnClickListener(this);
 
@@ -835,10 +844,75 @@ public class AddBookmarkPage extends Activity
         }
     }
 
+    private void deleteDuplicateBookmark(long id) {
+        Uri uri = ContentUris.withAppendedId(BrowserContract.Bookmarks.CONTENT_URI, id);
+        getContentResolver().delete(uri, null, null);
+    }
+
+    private void checkDupeAndSave() {
+        String title = mTitle.getText().toString().trim();
+        String unfilteredUrl = UrlUtils.fixUrl(mAddress.getText().toString());
+        String url = unfilteredUrl.trim();
+        Long id = mMap.getLong(BrowserContract.Bookmarks._ID);
+
+        final ContentResolver cr = getContentResolver();
+        Cursor cursor = cr.query(BrowserContract.Bookmarks.CONTENT_URI,
+                BookmarksLoader.PROJECTION,
+                "( title = ? OR url = ? ) AND parent = ?",
+                new String[] {
+                        title, url, Long.toString(mCurrentFolder)
+                },
+                null);
+
+        if (cursor == null) {
+            save();
+            return;
+        }
+
+        int duplicateCount = cursor.getCount();
+        long duplicateId = -1;
+        if (duplicateCount <= 0) {
+            cursor.close();
+            save();
+            return;
+        } else {
+            try {
+                while (cursor.moveToNext()) {
+                    duplicateId = cursor.getLong(BookmarksLoader.COLUMN_INDEX_ID);
+                    break;
+                }
+            } catch (IllegalStateException e) {
+                e.printStackTrace();
+            } finally {
+                if (cursor != null)
+                    cursor.close();
+            }
+        }
+
+        if (duplicateId == -1 || (mEditingExisting && duplicateCount == 1
+                && duplicateId == id)) {
+            save();
+            return;
+        }
+
+        final long deleteId = duplicateId;
+        new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.save_to_bookmarks_title))
+                .setMessage(getString(R.string.overwrite_bookmark_msg))
+                .setNegativeButton(android.R.string.cancel, null)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        deleteDuplicateBookmark(deleteId);
+                        save();
+                    }
+                })
+                .show();
+    }
+
     /**
      * Parse the data entered in the dialog and post a message to update the bookmarks database.
      */
-    boolean save() {
+    private void save() {
         createHandler();
 
         String title = mTitle.getText().toString().trim();
@@ -855,7 +929,7 @@ public class AddBookmarkPage extends Activity
             if (emptyUrl) {
                 mAddress.setError(r.getText(R.string.bookmark_needs_url));
             }
-            return false;
+            return;
 
         }
         String url = unfilteredUrl.trim();
@@ -873,7 +947,7 @@ public class AddBookmarkPage extends Activity
                         // they meant http when we parse it in the WebAddress class.
                         if (scheme != null) {
                             mAddress.setError(r.getText(R.string.bookmark_cannot_save_url));
-                            return false;
+                            return;
                         }
                         WebAddress address;
                         try {
@@ -889,7 +963,7 @@ public class AddBookmarkPage extends Activity
                 }
             } catch (URISyntaxException e) {
                 mAddress.setError(r.getText(R.string.bookmark_url_not_valid));
-                return false;
+                return;
             }
         }
 
@@ -958,7 +1032,8 @@ public class AddBookmarkPage extends Activity
             setResult(RESULT_OK);
             LogTag.logBookmarkAdded(url, "bookmarkview");
         }
-        return true;
+
+        finish();
     }
 
     @Override

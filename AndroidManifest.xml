@@ -214,6 +214,12 @@
         <activity android:name="ComboViewActivity">
         </activity>
 
+        <!-- For creating new folder in bookmarks page -->
+        <activity android:name="AddBookmarkFolder" android:label="@string/save_bookmark_folder"
+                  android:theme="@style/DialogWhenLarge"
+                  android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
         <!-- Bookmark thumbnail homescreen widget -->
         <receiver
             android:name=".widget.BookmarkThumbnailWidgetProvider"

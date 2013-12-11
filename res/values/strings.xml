@@ -1015,7 +1015,6 @@
     <!-- Content description for navigating up in the bookmark folder hierarchy [CHAR LIMIT=NONE] -->
     <string name="accessibility_button_bookmarks_folder_up">Previous folder</string>
 
-
     <!-- Add for download save path setting Feature -->
     <string name="invalid_path">"Path is invalid!"</string>
     <string name="path_wrong">"Wrong Path"</string>
@@ -1046,4 +1045,10 @@
     <string name="video_save">Save</string>
     <string name="video_play">Play</string>
     <string name="play_err">Play Failed!</string>
+
+    <!-- Add for new bookmark/folder Feature -->
+    <string name="save_bookmark_folder">New folder</string>
+    <string name="save_to_bookmarks_title">Save to Bookmarks</string>
+    <string name="duplicated_folder_warning">The folder has already exists</string>
+    <string name="overwrite_bookmark_msg">This bookmark\'s name or address already exists, overwrite it?</string>
 </resources>
