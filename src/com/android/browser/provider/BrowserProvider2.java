@@ -52,6 +52,7 @@ import android.provider.BrowserContract.SyncState;
 import android.provider.ContactsContract.RawContacts;
 import android.provider.SyncStateContract;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.android.browser.R;
 import com.android.browser.UrlUtils;
@@ -69,6 +70,8 @@ import java.util.HashMap;
 import java.util.List;
 
 public class BrowserProvider2 extends SQLiteContentProvider {
+
+    private static final String TAG = "BrowserProvider2";
 
     public static final String PARAM_GROUP_BY = "groupBy";
     public static final String PARAM_ALLOW_EMPTY_ACCOUNTS = "allowEmptyAccounts";
@@ -652,7 +655,17 @@ public class BrowserProvider2 extends SQLiteContentProvider {
             values.put(Bookmarks.DIRTY, true);
             db.insertOrThrow(TABLE_BOOKMARKS, null, values);
 
-            addDefaultBookmarks(db, FIXED_ID_ROOT);
+            // add for carrier bookmark feature
+            String browserRes = getContext().getResources().getString(
+                    R.string.config_carrier_resource);
+
+            //don't add default bookmarks for cmcc
+            if (!"cmcc".equals(browserRes)) {
+                addDefaultBookmarks(db, FIXED_ID_ROOT);
+            }
+            if ("ct".equals(browserRes) || "cmcc".equals(browserRes)) {
+                addDefaultCarrierBookmarks(db, FIXED_ID_ROOT);
+            }
         }
 
         private void addDefaultBookmarks(SQLiteDatabase db, long parentId) {
@@ -680,6 +693,91 @@ public class BrowserProvider2 extends SQLiteContentProvider {
                             "0," +
                             parent + "," +
                             Integer.toString(i) + "," +
+                            now +
+                            ");");
+
+                    int faviconId = preloads.getResourceId(i, 0);
+                    int thumbId = preloads.getResourceId(i + 1, 0);
+                    byte[] thumb = null, favicon = null;
+                    try {
+                        thumb = readRaw(res, thumbId);
+                    } catch (IOException e) {
+                    }
+                    try {
+                        favicon = readRaw(res, faviconId);
+                    } catch (IOException e) {
+                    }
+                    if (thumb != null || favicon != null) {
+                        ContentValues imageValues = new ContentValues();
+                        imageValues.put(Images.URL, bookmarkDestination.toString());
+                        if (favicon != null) {
+                            imageValues.put(Images.FAVICON, favicon);
+                        }
+                        if (thumb != null) {
+                            imageValues.put(Images.THUMBNAIL, thumb);
+                        }
+                        db.insert(TABLE_IMAGES, Images.FAVICON, imageValues);
+                    }
+                }
+            } catch (ArrayIndexOutOfBoundsException e) {
+            } finally {
+                preloads.recycle();
+            }
+        }
+
+        // add for carrier bookmark feature
+        private void addDefaultCarrierBookmarks(SQLiteDatabase db, long parentId) {
+            Context mResPackageCtx = null;
+            try {
+                mResPackageCtx = getContext().createPackageContext(
+                    "com.android.browser.res",
+                    Context.CONTEXT_IGNORE_SECURITY);
+            } catch (Exception e) {
+                Log.e(TAG, "Create Res Apk Failed");
+            }
+            if (mResPackageCtx == null)
+                return;
+
+            CharSequence[] bookmarks = null;
+            TypedArray preloads = null;
+            Resources res = mResPackageCtx.getResources();
+            int resBookmarksID = res.getIdentifier("bookmarks", "array", "com.android.browser.res");
+            int resPreloadsID = res.getIdentifier("bookmark_preloads", "array",
+                    "com.android.browser.res");
+            if (resBookmarksID != 0 && resPreloadsID != 0) {
+                bookmarks = res.getTextArray(resBookmarksID);
+                preloads = res.obtainTypedArray(resPreloadsID);
+            } else {
+                return;
+            }
+
+            // The Default Carrier bookmarks size
+            int size = bookmarks.length;
+
+            // googleSize the Default Google bookmarks size.
+            // The Default Carrier Bookmarks original position need move to googleSize index.
+            final CharSequence[] googleBookmarks = getContext().getResources().getTextArray(
+                    R.array.bookmarks);
+            int googleSize = googleBookmarks.length;
+            try {
+                String parent = Long.toString(parentId);
+                String now = Long.toString(System.currentTimeMillis());
+                for (int i = 0; i < size; i = i + 2) {
+                    CharSequence bookmarkDestination = replaceSystemPropertyInString(getContext(),
+                            bookmarks[i + 1]);
+                    db.execSQL("INSERT INTO bookmarks (" +
+                            Bookmarks.TITLE + ", " +
+                            Bookmarks.URL + ", " +
+                            Bookmarks.IS_FOLDER + "," +
+                            Bookmarks.PARENT + "," +
+                            Bookmarks.POSITION + "," +
+                            Bookmarks.DATE_CREATED +
+                        ") VALUES (" +
+                            "'" + bookmarks[i] + "', " +
+                            "'" + bookmarkDestination + "', " +
+                            "0," +
+                            parent + "," +
+                            Integer.toString(googleSize + i) + "," +
                             now +
                             ");");
 
