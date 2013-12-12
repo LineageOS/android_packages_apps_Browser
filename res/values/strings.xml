@@ -1040,4 +1040,10 @@
     <string name="download_path_unavailable_dlg_title">Download Directory is Unavailable</string>
     <string name="download_path_unavailable_dlg_msg">Please modify the Download Directory of Browser</string>
     <string name="activity_not_found">Can\'t Find the Activity to Handle this Intent <xliff:g id="NOACTIVITY">%s</xliff:g>.</string>
+
+    <!-- Add for download prompt Feature -->
+    <string name="http_video_msg">Please choose a following operation</string>
+    <string name="video_save">Save</string>
+    <string name="video_play">Play</string>
+    <string name="play_err">Play Failed!</string>
 </resources>

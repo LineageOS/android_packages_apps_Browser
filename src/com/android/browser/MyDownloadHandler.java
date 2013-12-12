@@ -23,6 +23,7 @@ import android.app.DownloadManager.Request;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -127,14 +128,57 @@ public class MyDownloadHandler {
      * @param referer The referer associated with the downloaded url
      * @param privateBrowsing If the request is coming from a private browsing tab.
      */
-    public static void onDownloadStart(Activity activity, String url,
-            String userAgent, String contentDisposition, String mimetype,
-            String referer, boolean privateBrowsing, long contentLength) {
+    public static void onDownloadStart(final Activity activity, final String url,
+            final String userAgent, final String contentDisposition, final String mimetype,
+            final String referer, final boolean privateBrowsing, final long contentLength) {
+
         // if we're dealing wih A/V content that's not explicitly marked
         //     for download, check if it's streamable.
         if (contentDisposition == null
                 || !contentDisposition.regionMatches(
                         true, 0, "attachment", 0, 10)) {
+
+            // add for carrier feature - download prompt
+            Uri uri = Uri.parse(url);
+            String scheme = uri.getScheme();
+            Log.d(LOGTAG, "scheme:" + scheme + ", mimetype:" + mimetype);
+            // Some mimetype for audio/video files is not started with "audio" or "video",
+            // such as ogg audio file with mimetype "application/ogg". So we also check
+            // filetype by mimetype and then check it's audio or video by filetype.
+            int fileType = MediaFile.getFileTypeForMimeType(mimetype);
+            if ("http".equalsIgnoreCase(scheme) &&
+                    (mimetype.startsWith("audio/") || mimetype.startsWith("video/") ||
+                    MediaFile.isAudioFileType(fileType) || MediaFile.isVideoFileType(fileType))) {
+                new AlertDialog.Builder(activity)
+                .setTitle(R.string.application_name)
+                .setIcon(R.drawable.default_video_poster)
+                .setMessage(R.string.http_video_msg)
+                .setPositiveButton(R.string.video_save, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        onDownloadStartNoStream(activity, url, userAgent, contentDisposition,
+                                mimetype, referer, privateBrowsing, contentLength);
+                    }
+                 })
+                .setNegativeButton(R.string.video_play, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setDataAndType(Uri.parse(url), mimetype);
+                        try {
+                            String title = URLUtil.guessFileName(url, contentDisposition, mimetype);
+                            intent.putExtra(Intent.EXTRA_TITLE, title);
+                            activity.startActivity(intent);
+                        } catch (ActivityNotFoundException ex) {
+                            Toast.makeText(activity, R.string.play_err, Toast.LENGTH_SHORT).show();
+                            Log.w(LOGTAG, "When http stream play, activity not found for "
+                                    + mimetype + " over " + Uri.parse(url).getScheme(),
+                                    ex);
+                        }
+                    }
+                }).show();
+
+                return;
+            }
+
             // query the package manager to see if there's a registered handler
             //     that matches.
             Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -166,6 +210,7 @@ public class MyDownloadHandler {
                 }
             }
         }
+
         onDownloadStartNoStream(activity, url, userAgent, contentDisposition,
                 mimetype, referer, privateBrowsing, contentLength);
     }
