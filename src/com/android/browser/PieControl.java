@@ -180,6 +180,7 @@ public class PieControl implements PieMenu.PieController, OnClickListener {
         mUrl.addItem(makeFiller());
         mUrl.addItem(makeFiller());
         mPie.addItem(mShowTabs);
+        mShowTabs.addItem(makeFiller());
         mShowTabs.addItem(mClose);
         mShowTabs.addItem(mNewTab);
         mShowTabs.addItem(makeFiller());
