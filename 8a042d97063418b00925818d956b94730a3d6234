@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a740942_3562cfd9",
+        "filename": "res/values-lt/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-12-16T05:25:06Z",
+      "side": 1,
+      "message": "Please use new copyright notice",
+      "revId": "8a042d97063418b00925818d956b94730a3d6234",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a740942_9565c3e2",
+        "filename": "res/values-lt/cm_strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2597
+      },
+      "writtenOn": "2013-12-16T05:25:06Z",
+      "side": 1,
+      "message": "This whiteline can go away",
+      "revId": "8a042d97063418b00925818d956b94730a3d6234",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
