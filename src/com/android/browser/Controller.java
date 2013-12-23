@@ -17,6 +17,7 @@
 package com.android.browser;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DownloadManager;
 import android.app.ProgressDialog;
@@ -1520,21 +1521,16 @@ public class Controller
     public void updateMenuState(Tab tab, Menu menu) {
         boolean canGoBack = false;
         boolean canGoForward = false;
-        boolean isHome = false;
         boolean isDesktopUa = false;
         boolean isLive = false;
         if (tab != null) {
             canGoBack = tab.canGoBack();
             canGoForward = tab.canGoForward();
-            isHome = mSettings.getHomePage().equals(tab.getUrl());
             isDesktopUa = mSettings.hasDesktopUseragent(tab.getWebView());
             isLive = !tab.isSnapshot();
         }
         final MenuItem back = menu.findItem(R.id.back_menu_id);
         back.setEnabled(canGoBack);
-
-        final MenuItem home = menu.findItem(R.id.homepage_menu_id);
-        home.setEnabled(!isHome);
 
         final MenuItem forward = menu.findItem(R.id.forward_menu_id);
         forward.setEnabled(canGoForward);
@@ -1659,6 +1655,14 @@ public class Controller
                 openPreferences();
                 break;
 
+            case R.id.exit_menu_id:
+                showExitChoiceDialog();
+                break;
+
+            case R.id.about_menu_id:
+                showUserAgentDialog();
+                break;
+
             case R.id.find_menu_id:
                 findOnPage();
                 break;
@@ -1754,6 +1758,49 @@ public class Controller
         intent.putExtra(BrowserPreferencesPage.CURRENT_PAGE,
                 getCurrentTopWebView().getUrl());
         mActivity.startActivityForResult(intent, PREFERENCES_PAGE);
+    }
+
+    private void showExitChoiceDialog() {
+        new AlertDialog.Builder(mActivity)
+                .setTitle(R.string.exit_browser_title)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setMessage(R.string.exit_browser_msg)
+                .setNegativeButton(R.string.exit_minimize, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        mActivity.moveTaskToBack(true);
+                    }
+                })
+                .setPositiveButton(R.string.exit_quit, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        mActivity.finish();
+                        mHandler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                mCrashRecoveryHandler.clearState(true);
+                                int pid = android.os.Process.myPid();
+                                android.os.Process.killProcess(pid);
+                            }
+                        }, 300);
+                    }
+                })
+                .show();
+    }
+
+    private void showUserAgentDialog() {
+        String ua = "";
+        WebView current = getCurrentWebView();
+        if (current != null) {
+            WebSettings s = current.getSettings();
+            if (s != null) {
+                ua = s.getUserAgentString();
+            }
+        }
+
+        new AlertDialog.Builder(mActivity)
+            .setTitle(R.string.about)
+            .setMessage("UserAgent: " + ua)
+            .setPositiveButton(R.string.ok, null)
+            .show();
     }
 
     @Override
@@ -2538,7 +2585,7 @@ public class Controller
              * root of the task. So we can use either true or false for
              * moveTaskToBack().
              */
-            mActivity.moveTaskToBack(true);
+            showExitChoiceDialog();
             return;
         }
         if (current.canGoBack()) {
@@ -2552,9 +2599,6 @@ public class Controller
                 // Now we close the other tab
                 closeTab(current);
             } else {
-                if ((current.getAppId() != null) || current.closeOnBack()) {
-                    closeCurrentTab(true);
-                }
                 /*
                  * Instead of finishing the activity, simply push this to the back
                  * of the stack and let ActivityManager to choose the foreground
@@ -2562,7 +2606,7 @@ public class Controller
                  * root of the task. So we can use either true or false for
                  * moveTaskToBack().
                  */
-                mActivity.moveTaskToBack(true);
+                showExitChoiceDialog();
             }
         }
     }

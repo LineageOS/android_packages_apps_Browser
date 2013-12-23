@@ -27,6 +27,9 @@
                 android:id="@+id/forward_menu_id"
                 android:title="@string/forward"
                 android:icon="@*android:drawable/ic_menu_forward" />
+            <item
+                android:id="@+id/back_menu_id"
+                android:title="@string/back" />
         </group>
         <item
             android:id="@+id/new_tab_menu_id"
@@ -56,6 +59,13 @@
         <group
             android:id="@+id/LIVE_MENU">
             <item
+                android:id="@+id/history_menu_id"
+                android:title="@string/tab_history"
+                android:alphabeticShortcut="h" />
+            <item
+                android:id="@+id/homepage_menu_id"
+                android:title="@string/go_home" />
+            <item
                 android:id="@+id/share_page_menu_id"
                 android:title="@string/share_page"
                 android:icon="@drawable/ic_share_holo_dark"
@@ -67,6 +77,12 @@
                 android:id="@+id/ua_desktop_menu_id"
                 android:checkable="true"
                 android:title="@string/ua_switcher_desktop" />
+            <item
+                android:id="@+id/exit_menu_id"
+                android:title="@string/exit" />
+            <item
+                android:id="@+id/about_menu_id"
+                android:title="@string/about" />
         </group>
         <group
             android:id="@+id/SNAPSHOT_MENU">
@@ -79,10 +95,6 @@
             <item
                 android:id="@+id/close_other_tabs_id"
                 android:title="@string/close_other_tabs" />
-            <item
-                android:id="@+id/history_menu_id"
-                android:title="@string/tab_history"
-                android:alphabeticShortcut="h" />
             <item
                 android:id="@+id/snapshots_menu_id"
                 android:title="@string/tab_snapshots" />
