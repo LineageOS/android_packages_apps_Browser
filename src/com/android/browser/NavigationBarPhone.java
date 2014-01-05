@@ -91,7 +91,8 @@ public class NavigationBarPhone extends NavigationBarBase implements
         mTextfieldBgDrawable = res.getDrawable(R.drawable.textfield_active_holo_dark);
         mUrlInput.setContainer(this);
         mUrlInput.setStateListener(this);
-        mNeedsMenu = !ViewConfiguration.get(getContext()).hasPermanentMenuKey();
+        // Why the hell would you do this Google?
+        // mNeedsMenu = !ViewConfiguration.get(getContext()).hasPermanentMenuKey();
         mIncognitoIcon = findViewById(R.id.incognito_icon);
     }
 
