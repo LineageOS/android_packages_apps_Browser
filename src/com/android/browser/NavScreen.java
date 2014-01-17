@@ -71,7 +71,6 @@ public class NavScreen extends RelativeLayout
     TabAdapter mAdapter;
     int mOrientation;
     Point mSize;
-    boolean mNeedsMenu;
     HashMap<Tab, View> mTabViews;
 
     public NavScreen(Activity activity, UiController ctl, PhoneUi ui) {
@@ -148,10 +147,6 @@ public class NavScreen extends RelativeLayout
                 onCloseTab(tab);
             }
         });
-        mNeedsMenu = !ViewConfiguration.get(getContext()).hasPermanentMenuKey();
-        if (!mNeedsMenu) {
-            mMore.setVisibility(View.GONE);
-        }
     }
 
     @Override
