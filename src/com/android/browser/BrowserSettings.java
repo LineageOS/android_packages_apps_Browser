@@ -358,7 +358,7 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
     public LayoutAlgorithm getLayoutAlgorithm() {
         LayoutAlgorithm layoutAlgorithm = LayoutAlgorithm.NORMAL;
         if (autofitPages()) {
-            layoutAlgorithm = LayoutAlgorithm.NARROW_COLUMNS;
+            layoutAlgorithm = LayoutAlgorithm.TEXT_AUTOSIZING;
         }
         if (isDebugEnabled()) {
             if (isSmallScreen()) {
@@ -367,7 +367,7 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
                 if (isNormalLayout()) {
                     layoutAlgorithm = LayoutAlgorithm.NORMAL;
                 } else {
-                    layoutAlgorithm = LayoutAlgorithm.NARROW_COLUMNS;
+                    layoutAlgorithm = LayoutAlgorithm.TEXT_AUTOSIZING;
                 }
             }
         }
