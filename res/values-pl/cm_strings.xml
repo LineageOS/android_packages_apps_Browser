@@ -16,8 +16,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="pref_content_ua">User agent</string>
     <string name="pref_content_ua_summary">Wybierz sposób identyfikacji przeglądarki</string>
-    <string name="pref_lab_webgl">WebGL</string>
-    <string name="pref_lab_webgl_summary">Aktywuj WebGL</string>
     <string name="contextmenu_openlink_incognito_newwindow">Otwórz w nowej karcie incognito</string>
     <string name="contextmenu_openlink_incognito_newwindow_background">Otwórz w nowej karcie incognito w tle</string>
     <string name="accessibility_button_homescreen">Ekran główny</string>

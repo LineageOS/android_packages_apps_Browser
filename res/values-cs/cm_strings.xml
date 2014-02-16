@@ -21,8 +21,6 @@
     <string name="pref_content_ua">Vlastní nastavení identifkace</string>
     <string name="pref_content_ua_summary">Zvolte vlastní nastavení identifikace</string>
 
-    <string name="pref_lab_webgl">Technologie WebGL</string>
-    <string name="pref_lab_webgl_summary">Povolit technologii WebGL</string>
     <string name="pref_lab_websockets">Technologie WebSocket</string>
     <string name="pref_lab_websockets_summary">Povolit technologii WebSocket</string>
 

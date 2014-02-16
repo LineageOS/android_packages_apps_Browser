@@ -21,8 +21,6 @@
     <string name="contextmenu_openlink_incognito_newwindow_background">Open nuwe incognito-oortjie in die agtergrond</string>
     <string name="pref_content_ua">Gebruikeragent</string>
     <string name="pref_content_ua_summary">Kies \'n gebruikersagent</string>
-    <string name="pref_lab_webgl">WebGL</string>
-    <string name="pref_lab_webgl_summary">Aktiveer WebGL</string>
     <string name="pref_lab_websockets">WebSockets</string>
     <string name="pref_lab_websockets_summary">Aktiveer WebSockets</string>
 </resources>

@@ -401,8 +401,6 @@
   <string name="contextmenu_openlink_incognito_newwindow_background">يېڭى يوشۇرۇن ئارقىدىكى بەتكۈچتە ئاچ</string>
   <string name="pref_content_ua">ئىشلەتكۈچى ۋاكالەتچىسى</string>
   <string name="pref_content_ua_summary">ئىشلەتكۈچى ۋاكالەتچىسىدىن بىرنى تاللاڭ</string>
-  <string name="pref_lab_webgl">WebGL</string>
-  <string name="pref_lab_webgl_summary">WebGL  نى قوزغات</string>
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">WebSockets نى قوزغات</string>
   <string name="accessibility_button_homescreen">باش ئېكران</string>
