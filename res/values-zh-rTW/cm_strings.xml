@@ -18,8 +18,6 @@
     <string name="contextmenu_openlink_incognito_newwindow_background">在新無痕式背景分頁中開啟</string>
     <string name="pref_content_ua">使用者代理</string>
     <string name="pref_content_ua_summary">選擇使用者代理</string>
-    <string name="pref_lab_webgl">WebGL</string>
-    <string name="pref_lab_webgl_summary">啟用 WebGL</string>
     <string name="pref_lab_websockets">WebSockets</string>
     <string name="pref_lab_websockets_summary">啟用 WebSockets</string>
     <string name="accessibility_button_homescreen">主螢幕</string>

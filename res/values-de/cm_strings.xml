@@ -19,8 +19,6 @@
     <string name="contextmenu_openlink_incognito_newwindow_background">In neuem Inkognito-Hintergrundtab öffnen</string>
     <string name="pref_content_ua">User-Agent</string>
     <string name="pref_content_ua_summary">User-Agent auswählen</string>
-    <string name="pref_lab_webgl">WebGL</string>
-    <string name="pref_lab_webgl_summary">WebGL-Unterstützung aktivieren</string>
     <string name="pref_lab_websockets">WebSockets</string>
     <string name="pref_lab_websockets_summary">WebSocket-Unterstützung aktivieren</string>
 </resources>
