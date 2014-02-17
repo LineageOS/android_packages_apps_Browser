@@ -56,6 +56,7 @@ public class TitleBar extends RelativeLayout {
 
     //state
     private boolean mShowing;
+    private boolean mHideLoad;
     private boolean mInLoad;
     private boolean mSkipTitleBarAnimations;
     private Animator mTitleBarAnimator;
@@ -108,10 +109,13 @@ public class TitleBar extends RelativeLayout {
     }
 
     private void setFixedTitleBar() {
+        boolean isFixed = !mUseQuickControls
+                && !mContext.getResources().getBoolean(R.bool.hide_title);
+        isFixed |= mAccessibilityManager.isEnabled();
         // If getParent() returns null, we are initializing
         ViewGroup parent = (ViewGroup)getParent();
-        if (mIsFixedTitleBar && parent != null) return;
-        mIsFixedTitleBar = true;
+        if (mIsFixedTitleBar == isFixed && parent != null) return;
+        mIsFixedTitleBar = isFixed;
         setSkipTitleBarAnimations(true);
         show();
         setSkipTitleBarAnimations(false);
@@ -254,13 +258,12 @@ public class TitleBar extends RelativeLayout {
             mProgress.setProgress(PageProgressView.MAX_PROGRESS);
             mProgress.setVisibility(View.GONE);
             mInLoad = false;
+            mHideLoad=false;
             mNavBar.onProgressStopped();
             // check if needs to be hidden
             if (!isEditingUrl() && !wantsToBeVisible()) {
                 if (mUseQuickControls) {
                     hide();
-                } else {
-                    mBaseUi.showTitleBarForDuration();
                 }
             }
         } else {
@@ -271,11 +274,12 @@ public class TitleBar extends RelativeLayout {
             }
             mProgress.setProgress(newProgress * PageProgressView.MAX_PROGRESS
                     / PROGRESS_MAX);
+            if (!isHideLoad() && !mUseQuickControls) {
+                hide();
+                mHideLoad=true;
+            }
             if (mUseQuickControls && !isEditingUrl()) {
                 setShowProgressOnly(true);
-            }
-            if (!mShowing) {
-                show();
             }
         }
     }
@@ -380,6 +384,10 @@ public class TitleBar extends RelativeLayout {
 
     public boolean useQuickControls() {
         return mUseQuickControls;
+    }
+
+    public boolean isHideLoad() {
+        return mHideLoad;
     }
 
     public boolean isInLoad() {
