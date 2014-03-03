@@ -131,26 +131,7 @@ public class CrashRecoveryHandler {
     };
 
     public void clearState() {
-        clearState(false);
-    }
-
-    /**
-     * Clear cached state files.
-     *
-     * @param block If true, clear state files in the caller thread, otherwise
-     * do it in a background thread.
-     */
-    void clearState(boolean block) {
-        if (block) {
-            if (mContext != null) {
-                File state = new File(mContext.getCacheDir(), STATE_FILE);
-                if (state.exists()) {
-                    state.delete();
-                }
-            }
-        } else {
-            mBackgroundHandler.sendEmptyMessage(MSG_CLEAR_STATE);
-        }
+        mBackgroundHandler.sendEmptyMessage(MSG_CLEAR_STATE);
         updateLastRecovered(0);
     }
 

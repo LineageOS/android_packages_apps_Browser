@@ -1015,14 +1015,6 @@
     <!-- Content description for navigating up in the bookmark folder hierarchy [CHAR LIMIT=NONE] -->
     <string name="accessibility_button_bookmarks_folder_up">Previous folder</string>
 
-    <!-- Add for menu adding Feature -->
-    <string name="exit">Exit</string>
-    <string name="about">About</string>
-    <string name="exit_browser_title">Exit Browser</string>
-    <string name="exit_browser_msg">Please Select How to Exit Browser?</string>
-    <string name="exit_minimize">Minimize</string>
-    <string name="exit_quit">Quit</string>
-
     <!-- Add for download save path setting Feature -->
     <string name="invalid_path">"Path is invalid!"</string>
     <string name="path_wrong">"Wrong Path"</string>
