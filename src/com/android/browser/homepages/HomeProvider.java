@@ -88,17 +88,24 @@ public class HomeProvider extends ContentProvider {
         }
     }
 
+    public static boolean isMostVisitedPage(String url) {
+        boolean useMostVisited = BrowserSettings.getInstance().useMostVisitedHomepage();
+        if (useMostVisited && url.startsWith("content://")) {
+            Uri uri = Uri.parse(url);
+            if (AUTHORITY.equals(uri.getAuthority())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static WebResourceResponse shouldInterceptRequest(Context context,
             String url) {
         try {
-            boolean useMostVisited = BrowserSettings.getInstance().useMostVisitedHomepage();
-            if (useMostVisited && url.startsWith("content://")) {
-                Uri uri = Uri.parse(url);
-                if (AUTHORITY.equals(uri.getAuthority())) {
-                    InputStream ins = context.getContentResolver()
-                            .openInputStream(uri);
-                    return new WebResourceResponse("text/html", "utf-8", ins);
-                }
+            if (isMostVisitedPage(url)) {
+                InputStream ins = context.getContentResolver()
+                        .openInputStream(Uri.parse(url + "/home"));
+                return new WebResourceResponse("text/html", "utf-8", ins);
             }
             boolean listFiles = BrowserSettings.getInstance().isDebugEnabled();
             if (listFiles && interceptFile(url)) {
