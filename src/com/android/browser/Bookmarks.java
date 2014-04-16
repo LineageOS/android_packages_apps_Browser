@@ -202,6 +202,12 @@ public class Bookmarks {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... unused) {
+                if (favicon.isRecycled()) {
+                    Log.w(LOGTAG, "Cannot update favicon when Bitmap is already recycled");
+                    // just return and update it next time
+                    return null;
+                }
+
                 final ByteArrayOutputStream os = new ByteArrayOutputStream();
                 favicon.compress(Bitmap.CompressFormat.PNG, 100, os);
 
