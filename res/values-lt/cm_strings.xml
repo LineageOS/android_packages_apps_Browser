@@ -16,11 +16,11 @@
      limitations under the License.
 -->
 <resources>
-  <string name="contextmenu_openlink_incognito_newwindow">פתח כרטיסיית גלישה בסתר חדשה</string>
-  <string name="contextmenu_openlink_incognito_newwindow_background">פתח ברקע כרטיסיית גלישה בסתר</string>
-  <string name="pref_content_ua">התאמת דפדפן</string>
-  <string name="pref_content_ua_summary">בחר סוג דפדפן</string>
+  <string name="contextmenu_openlink_incognito_newwindow">Atidaryti naujame inkognito skirtuke</string>
+  <string name="contextmenu_openlink_incognito_newwindow_background">Atidaryti naujame, foniniame, inkognito skirtuke</string>
+  <string name="pref_content_ua">Naršyti kaip\u2026</string>
+  <string name="pref_content_ua_summary">Pasirinkite kaip jus atpažins svetainės</string>
   <string name="pref_lab_websockets">WebSockets</string>
-  <string name="pref_lab_websockets_summary">אפשר WebSockets</string>
-  <string name="accessibility_button_homescreen">דף הבית</string>
+  <string name="pref_lab_websockets_summary">Įjungti „WebSockets“</string>
+  <string name="accessibility_button_homescreen">Pagrindinis ekranas</string>
 </resources>
