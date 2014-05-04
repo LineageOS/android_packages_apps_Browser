@@ -32,4 +32,20 @@
 
     <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
     <string name="accessibility_button_homescreen">Home screen</string>
+
+    <!-- Browser security/privacy anti-tracking label -->
+    <string name="pref_security_site_whitelist_cookies">Reduce tracking. Frequently delete cookies</string>
+    <!-- Browser security/privacy anti-tracking options -->
+    <string name="pref_security_site_whitelist_cookies_never">Never delete</string>
+    <string name="pref_security_site_whitelist_cookies_only">Delete from  all sites that aren\'t in my whitelist</string>
+    <string name="pref_security_site_whitelist_cookies_and_data">Also delete all localstorage databases</string>
+    <!-- Browser security/privacy anti-tracking verbose checkbox label -->
+    <string name="pref_security_site_whitelist_cookies_verbose">Cookie count</string>
+    <!-- Browser security/privacy anti-tracking verbose checkbox summary -->
+    <string name="pref_security_site_whitelist_cookies_verbose_summary">Show the number of deleted and remaining cookies</string>
+    <!-- Browser popup menu checkbox that allows the user to whitelist cookies from this site [CHAR LIMIT=50] -->
+    <string name="site_cookies_whitelisted">Keep site\'s cookies</string>
+    <!-- Toast to inform the user of the number of cookies deleted and remaining [CHAR LIMIT=50] -->
+    <string name="cookies_deleted_info">cookies deleted</string>
+    <string name="cookies_remain_info">cookies remain</string>
 </resources>

@@ -67,6 +67,11 @@
                 android:id="@+id/ua_desktop_menu_id"
                 android:checkable="true"
                 android:title="@string/ua_switcher_desktop" />
+            <item
+                android:id="@+id/cookies_whitelisted_menu_id"
+                android:checkable="true"
+                android:title="@string/site_cookies_whitelisted"
+                android:visible="false" />
         </group>
         <group
             android:id="@+id/SNAPSHOT_MENU">
