@@ -105,6 +105,8 @@ public interface UiController {
 
     void toggleUserAgent();
 
+    void toggleCookiesWhitelisted();
+
     void toggleFullscreen();
 
     BrowserSettings getSettings();

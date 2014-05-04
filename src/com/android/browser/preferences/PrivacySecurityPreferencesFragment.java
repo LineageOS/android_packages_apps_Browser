@@ -23,6 +23,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.preference.Preference;
+import android.preference.ListPreference;
 import android.preference.PreferenceFragment;
 
 public class PrivacySecurityPreferencesFragment extends PreferenceFragment
@@ -37,6 +38,24 @@ public class PrivacySecurityPreferencesFragment extends PreferenceFragment
 
         Preference e = findPreference(PreferenceKeys.PREF_PRIVACY_CLEAR_HISTORY);
         e.setOnPreferenceChangeListener(this);
+
+        ListPreference lp = (ListPreference) findPreference(PreferenceKeys.PREF_SITE_WHITELIST_COOKIES);
+        lp.setOnPreferenceChangeListener(this);
+        updateListPreferenceSummary(lp);
+        cookiesVerboseEnable(lp.getValue());
+    }
+
+    private void cookiesVerboseEnable(String str) {
+        // if never, disable verbose option
+        int value = Integer.valueOf(str);
+        Preference pref = findPreference(PreferenceKeys.PREF_SITE_WHITELIST_COOKIES_VERBOSE);
+        if (pref != null) {
+            pref.setEnabled(value != 0);
+        }
+    }
+
+    void updateListPreferenceSummary(ListPreference e) {
+        e.setSummary(e.getEntry());
     }
 
     @Override
@@ -53,6 +72,13 @@ public class PrivacySecurityPreferencesFragment extends PreferenceFragment
             getActivity().setResult(Activity.RESULT_OK, (new Intent()).putExtra(Intent.EXTRA_TEXT,
                     pref.getKey()));
             return true;
+        }
+        else if (pref.getKey().equals(PreferenceKeys.PREF_SITE_WHITELIST_COOKIES)) {
+            ListPreference lp = (ListPreference) pref;
+            lp.setValue((String) objValue);
+            updateListPreferenceSummary(lp);
+            cookiesVerboseEnable((String) objValue);
+            return false;
         }
 
         return false;

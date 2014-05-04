@@ -51,12 +51,22 @@ import java.lang.ref.WeakReference;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.WeakHashMap;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Arrays;
+
+import android.util.Log;
+import android.net.WebAddress;
+import android.widget.Toast;
 
 /**
  * Class for managing settings
  */
 public class BrowserSettings implements OnSharedPreferenceChangeListener,
         PreferenceKeys {
+
+    private final static String TAG = "BrowserSettings";
 
     // TODO: Do something with this UserAgent stuff
     private static final String DESKTOP_USERAGENT = "Mozilla/5.0 (X11; " +
@@ -502,6 +512,151 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         }
     }
 
+    private Set<String> getCookieWhitelist() {
+        requireInitialization();
+        return mPrefs.getStringSet("cookies_whitelist", new HashSet<String>());
+    }
+
+    private void setCookieWhitelist(Set<String> wl) {
+        mPrefs.edit().putStringSet("cookies_whitelist", wl).apply();
+    }
+
+    private boolean addToCookieWhitelist(String s) {
+        Set<String> wl = getCookieWhitelist();
+        boolean ok = wl.add(s);
+        setCookieWhitelist(wl);
+        return ok;
+    }
+
+    private boolean removeFromCookieWhitelist(String s) {
+        Set<String> wl = getCookieWhitelist();
+        boolean ok = wl.remove(s);
+        setCookieWhitelist(wl);
+        return ok;
+    }
+
+    public boolean hasCookiesWhitelisted(WebView view) {
+        if (view == null) {
+            return false;
+        }
+        String url = view.getUrl();
+        if (url == null) { // page hasn't finished loading yet
+            return false;
+        }
+        String host = new WebAddress(url).getHost();
+        Set<String> wl = getCookieWhitelist();
+        return wl.contains(host);
+    }
+
+    public void toggleCookiesWhitelisted(WebView view) {
+        if (view == null) {
+            return;
+        }
+        if (!enableDeleteCookies()) {
+            return;
+        }
+
+        String url = view.getUrl();
+        if (url == null) { // page hasn't finished loading yet
+            return;
+        }
+        String host = new WebAddress(url).getHost();
+        if (hasCookiesWhitelisted(view)) {
+            removeFromCookieWhitelist(host);
+            clearCookiesExceptWhitelist();
+        }
+        else {
+            addToCookieWhitelist(host);
+        }
+    }
+
+    public void clearCookiesExceptWhitelist() {
+        if (!enableDeleteCookies()) {
+            return;
+        }
+
+        Set<String> domains = getCookieWhitelist();
+        HashMap cookies = new HashMap();
+
+        // look for both domain and host cookies (domain cookies have a '.' prefix).
+        // query by https as this returns both http and https cookies.
+        String[] prefixes = { "https://.", "https://" };
+
+        // find all cookies in the whitelist
+        int savedCookies = 0;
+        for (String domain : domains) {
+            for (int p = 0; p < 2; p++) {
+                String url = prefixes[p] + domain;
+                String c = CookieManager.getInstance().getCookie(url);
+                if (c != null && !(c.equals("") || c.equals(null))) {
+                    String[] cc = c.split(";"); // split into individual cookies
+                    for (int i = 0; i < cc.length; i++) // get rid of leading blanks
+                        cc[i] = cc[i].trim();
+                    Set<String> ccUniq = new HashSet<String>(Arrays.asList(cc));
+                    if (p == 1) { // remove domain cookies duplicated to the host
+                        String urlDom = prefixes[0] + domain;
+                        if (cookies.containsKey(urlDom)) {
+                            Set<String> ccDom = (HashSet<String>)cookies.get(urlDom);
+                            ccUniq.removeAll(ccDom);
+                        }
+                    }
+                    savedCookies += ccUniq.size();
+                    cookies.put(url, ccUniq);
+                }
+            }
+        }
+
+        int cookiesBefore = CookieManager.getInstance().countCookies();
+        if (savedCookies == cookiesBefore) {
+            // all cookies are whitelisted cookies. our job is done.
+            return;
+        }
+
+        // delete all cookies
+        CookieManager.getInstance().removeAllCookie();
+
+        // re-add all the whitelisted cookies
+        for (String domain : domains) {
+            for (String prefix : prefixes) {
+                String url = prefix + domain;
+                if (cookies.containsKey(url)) {
+                    Set<String> cc = (HashSet<String>)cookies.get(url);
+                    for (String i : cc) {
+                        CookieManager.getInstance().setCookie(url, i + ";");
+                    }
+                }
+            }
+        }
+
+        int cookiesAfter = CookieManager.getInstance().countCookies();
+        int cookiesDeleted = cookiesBefore - cookiesAfter;
+        boolean munched = cookiesDeleted > 0;
+
+        if (!munched) { // no cookies were deleted
+            return;
+        }
+
+        // optionally clear all localstorage too
+        if (enableDeleteLocaldata()) {
+            clearDatabases();
+        }
+
+        Log.d(TAG, "clearCookiesExceptWhitelist: "
+             + cookiesDeleted + " cookies deleted, "
+             + cookiesAfter + " cookies remain");
+
+        // toast if we have munched cookies
+        if (munchToast()) {
+            String deleted_str = mContext.getResources()
+                 .getString(R.string.cookies_deleted_info);
+            String remain_str = mContext.getResources()
+                 .getString(R.string.cookies_remain_info);
+            CharSequence text = "" + cookiesDeleted + " " + deleted_str
+                            + "\n" + cookiesAfter + " " + remain_str;
+            Toast.makeText(mContext, text, Toast.LENGTH_SHORT).show();
+        }
+    }
+
     public static int getAdjustedMinimumFontSize(int rawValue) {
         rawValue++; // Preference starts at 0, min font at 1
         if (rawValue > 1) {
@@ -809,6 +964,20 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 
     public boolean acceptCookies() {
         return mPrefs.getBoolean(PREF_ACCEPT_COOKIES, true);
+    }
+
+    public boolean enableDeleteCookies() {
+        int value = Integer.valueOf(mPrefs.getString(PREF_SITE_WHITELIST_COOKIES, "0"));
+        return value != 0;
+    }
+
+    public boolean enableDeleteLocaldata() {
+        int value = Integer.valueOf(mPrefs.getString(PREF_SITE_WHITELIST_COOKIES, "0"));
+        return value == 2;
+    }
+
+    public boolean munchToast() {
+        return mPrefs.getBoolean(PREF_SITE_WHITELIST_COOKIES_VERBOSE, false);
     }
 
     public boolean saveFormdata() {
