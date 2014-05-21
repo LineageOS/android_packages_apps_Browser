@@ -16,11 +16,11 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="contextmenu_openlink_incognito_newwindow">Öppna i ny inkognitoflik</string>
-  <string name="contextmenu_openlink_incognito_newwindow_background">Öppna i ny inkognitoflik i bakgrunden</string>
-  <string name="pref_content_ua">Användaragent</string>
-  <string name="pref_content_ua_summary">Välj en användaragent</string>
-  <string name="pref_lab_websockets">WebSockets</string>
-  <string name="pref_lab_websockets_summary">Aktivera WebSockets</string>
-  <string name="accessibility_button_homescreen">Hemskärm</string>
+  <string name="contextmenu_openlink_incognito_newwindow">Buka di tab penyamaran baru</string>
+  <string name="contextmenu_openlink_incognito_newwindow_background">Buka di tab penyamaran baru pada latar belakang</string>
+  <string name="pref_content_ua">Agen pengguna</string>
+  <string name="pref_content_ua_summary">Pilih agen pengguna</string>
+  <string name="pref_lab_websockets">WebSocket</string>
+  <string name="pref_lab_websockets_summary">Aktifkan WebSocket</string>
+  <string name="accessibility_button_homescreen">Layar home</string>
 </resources>

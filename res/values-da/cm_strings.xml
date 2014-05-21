@@ -15,7 +15,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="contextmenu_openlink_incognito_newwindow">Åbn i ny inkognito-tab</string>
   <string name="contextmenu_openlink_incognito_newwindow_background">Åbn i ny inkognito-tab i baggrunden</string>
   <string name="pref_content_ua">Brugeragent</string>

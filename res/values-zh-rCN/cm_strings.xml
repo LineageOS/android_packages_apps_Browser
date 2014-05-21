@@ -15,7 +15,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="contextmenu_openlink_incognito_newwindow">在新隐身标签页中打开</string>
   <string name="contextmenu_openlink_incognito_newwindow_background">在后台新隐身标签页中打开</string>
   <string name="pref_content_ua">用户代理</string>
