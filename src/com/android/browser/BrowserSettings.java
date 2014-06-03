@@ -61,7 +61,7 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
     // TODO: Do something with this UserAgent stuff
     private static final String DESKTOP_USERAGENT = "Mozilla/5.0 (X11; " +
         "Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) " +
-        "Chrome/30.0.1599.101 Safari/537.36";
+        "Chrome/33.0.1750.152 Safari/537.36";
 
     private static final String IPHONE_USERAGENT = "Mozilla/5.0 (iPhone; U; " +
         "CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 " +
