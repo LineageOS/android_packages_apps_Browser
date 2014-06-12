@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">Activa WebSockets</string>
   <string name="accessibility_button_homescreen">Pantalla d\'inici</string>
+  <string name="pref_security_site_whitelist_cookies">Reduir el seguiment. Esborra les galetes freqüentment</string>
+  <string name="pref_security_site_whitelist_cookies_never">Mai eliminar-les</string>
+  <string name="pref_security_site_whitelist_cookies_only">Elimina de tots els llocs que no siguin a la meva llista blanca</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Elimina també totes les bases de dades locals</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Comte de galetes</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Mostra el nombre de galetes esborrades i restants</string>
+  <string name="site_cookies_whitelisted">Mantingues les galetes del lloc</string>
+  <string name="cookies_deleted_info">galetes eliminades</string>
+  <string name="cookies_remain_info">galetes mantingudes</string>
 </resources>

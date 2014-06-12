@@ -23,4 +23,11 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">WebSocket-Unterstützung aktivieren</string>
   <string name="accessibility_button_homescreen">Startbildschirm</string>
+  <string name="pref_security_site_whitelist_cookies">Tracking durch regelmäßiges Löschen der Cookies reduzieren</string>
+  <string name="pref_security_site_whitelist_cookies_never">Nie löschen</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Cookie-Zähler</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Die Anzahl der gelöschten und verbleibenden Cookies anzeigen</string>
+  <string name="site_cookies_whitelisted">Cookies dieser Seite beibehalten</string>
+  <string name="cookies_deleted_info">Cookies gelöscht</string>
+  <string name="cookies_remain_info">Cookies verbleibend</string>
 </resources>

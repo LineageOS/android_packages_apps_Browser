@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">Ativar WebSockets</string>
   <string name="accessibility_button_homescreen">Página inicial</string>
+  <string name="pref_security_site_whitelist_cookies">Reduzir o rastreamento. Eliminar os cookies frequentemente</string>
+  <string name="pref_security_site_whitelist_cookies_never">Nunca eliminar</string>
+  <string name="pref_security_site_whitelist_cookies_only">Eliminar de todos os sites que não estejam na minha lista branca</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Eliminar também todas as bases de dados locais</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Contagem de cookies</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Mostrar o número de cookies eliminados e restantes</string>
+  <string name="site_cookies_whitelisted">Manter os cookies do site</string>
+  <string name="cookies_deleted_info">cookies eliminados</string>
+  <string name="cookies_remain_info">cookies restantes</string>
 </resources>

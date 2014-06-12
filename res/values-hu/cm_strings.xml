@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSocketek</string>
   <string name="pref_lab_websockets_summary">WebSocketek engedélyezése</string>
   <string name="accessibility_button_homescreen">Kezdőlap</string>
+  <string name="pref_security_site_whitelist_cookies">Követés csökkentése. Rendszeresen törli a cookie-kat</string>
+  <string name="pref_security_site_whitelist_cookies_never">Soha ne törölje</string>
+  <string name="pref_security_site_whitelist_cookies_only">Törölje az összes oldalét, amelyek nem szerepelnek a fehérlistán</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Törli a helyi tárolón levő adatbázisokat is</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Cookie számláló</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Megjeleníti a törölt és a megmaradt cookie-k számát</string>
+  <string name="site_cookies_whitelisted">Tartsa meg a webhelyek cookie-jait</string>
+  <string name="cookies_deleted_info">cookie-k törölve</string>
+  <string name="cookies_remain_info">megmaradt cookie-k</string>
 </resources>

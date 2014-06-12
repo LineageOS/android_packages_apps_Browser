@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">Įjungti „WebSockets“</string>
   <string name="accessibility_button_homescreen">Pagrindinis ekranas</string>
+  <string name="pref_security_site_whitelist_cookies">Sumažinti stebėjimą. Dažnai ištrinti slapukus</string>
+  <string name="pref_security_site_whitelist_cookies_never">Neištrinti</string>
+  <string name="pref_security_site_whitelist_cookies_only">Ištrinti iš visų svetainių, kurių nėra mano baltajame sąraše</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Taip pat ištrinti visas vietinės saugyklos duomenų bazes</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Slapukų skaičius</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Rodyti ištrintų ir likusių slapukų skaičių</string>
+  <string name="site_cookies_whitelisted">Išsaugoti svetainės slapukus</string>
+  <string name="cookies_deleted_info">Slapukai ištrinti</string>
+  <string name="cookies_remain_info">Likę slapukai</string>
 </resources>

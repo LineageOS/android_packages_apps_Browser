@@ -16,11 +16,20 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="contextmenu_openlink_incognito_newwindow">Отворите у новој картици без архивирања</string>
-  <string name="contextmenu_openlink_incognito_newwindow_background">Отворите у новој картици у позадини без архивирања</string>
+  <string name="contextmenu_openlink_incognito_newwindow">Отвори у новој картици без архивирања</string>
+  <string name="contextmenu_openlink_incognito_newwindow_background">Отвори у новој картици у позадини без архивирања</string>
   <string name="pref_content_ua">Кориснички агент</string>
-  <string name="pref_content_ua_summary">Изаберите корисничког агента</string>
+  <string name="pref_content_ua_summary">Изабери корисничког агента</string>
   <string name="pref_lab_websockets">WebSockets</string>
-  <string name="pref_lab_websockets_summary">Омогућите WebSockets</string>
+  <string name="pref_lab_websockets_summary">Омогући WebSockets</string>
   <string name="accessibility_button_homescreen">Почетни екран</string>
+  <string name="pref_security_site_whitelist_cookies">Смањи праћење. Често бриши колачиће</string>
+  <string name="pref_security_site_whitelist_cookies_never">Никад не бриши</string>
+  <string name="pref_security_site_whitelist_cookies_only">Избриши са свих сајтова који нису у мојој белој листи</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Такође избриши све датабазе локалног складишта</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Број колачића</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Прикажи број избрисаних и преосталих колачића</string>
+  <string name="site_cookies_whitelisted">Задржи колачиће сајтова</string>
+  <string name="cookies_deleted_info">избрисани колачићи</string>
+  <string name="cookies_remain_info">преостали колачићи</string>
 </resources>

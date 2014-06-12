@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">Ενεργοποίηση WebSockets</string>
   <string name="accessibility_button_homescreen">Αρχική οθόνη</string>
+  <string name="pref_security_site_whitelist_cookies">Μείωση παρακολούθησης. Συχνή διαγραφή cookie</string>
+  <string name="pref_security_site_whitelist_cookies_never">Ποτέ διαγραφή</string>
+  <string name="pref_security_site_whitelist_cookies_only">Διαγραφή από όλες τις σελίδες που δεν είναι στην whitelist μου</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Επίσης διαγραφή όλων των τοπικών αποθηκευμένων βάσεων δεδομένων</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Μετρητής cookie</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Εμφάνιση του αριθμού των διαγραμμένων και των υπόλοιπων cookie</string>
+  <string name="site_cookies_whitelisted">Διατήρηση των cookie αυτής της σελίδας</string>
+  <string name="cookies_deleted_info">διαγραμμένα cookie</string>
+  <string name="cookies_remain_info">εναπομείναντα cookie</string>
 </resources>

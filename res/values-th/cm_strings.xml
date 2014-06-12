@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">เปิดใช้งาน WebSockets</string>
   <string name="accessibility_button_homescreen">หน้าจอหลัก</string>
+  <string name="pref_security_site_whitelist_cookies">ลดการติดตาม ลบคุกกี้บ่อยๆ</string>
+  <string name="pref_security_site_whitelist_cookies_never">ไม่เคยลบ</string>
+  <string name="pref_security_site_whitelist_cookies_only">ลบจากทุกเว็บไซต์ที่ไม่ได้อยู่ในรายชื่อเว็บบัญชีขาว</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">ลบฐานข้อมูล localstorage ทั้งหมด</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">นับคุกกี้</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">แสดงตัวเลขของคุกกี้ที่ลบแล้วและคุกกี้คงเหลือ</string>
+  <string name="site_cookies_whitelisted">เก็บคุกกี้ของเว็บไซต์นี้</string>
+  <string name="cookies_deleted_info">ลบคุกกี้แล้ว</string>
+  <string name="cookies_remain_info">เหลือคุกกี้</string>
 </resources>

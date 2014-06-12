@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">Technologie WebSocket</string>
   <string name="pref_lab_websockets_summary">Povolit technologii WebSocket</string>
   <string name="accessibility_button_homescreen">Plocha</string>
+  <string name="pref_security_site_whitelist_cookies">Omezit sledování. Častěji odstraňovat cookie</string>
+  <string name="pref_security_site_whitelist_cookies_never">Nikdy nemazat</string>
+  <string name="pref_security_site_whitelist_cookies_only">Smazat ze všech stránek, které nejsou uloženy v bílé listině</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Také odstranit všechny místní databázové úložiště</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Počet cookie</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Zobrazit počet smazaných a zbývajících cookie</string>
+  <string name="site_cookies_whitelisted">Ponechat kookie stránek</string>
+  <string name="cookies_deleted_info">cookie smzáno</string>
+  <string name="cookies_remain_info">cookie zanecháno</string>
 </resources>

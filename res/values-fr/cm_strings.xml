@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">Activer WebSockets</string>
   <string name="accessibility_button_homescreen">Écran d\'accueil</string>
+  <string name="pref_security_site_whitelist_cookies">Réduire le suivi. Supprime souvent les cookies</string>
+  <string name="pref_security_site_whitelist_cookies_never">Ne jamais supprimer</string>
+  <string name="pref_security_site_whitelist_cookies_only">Supprimer de tous les sites qui ne sont pas dans ma liste blanche</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Supprimer aussi les bases de données stockées localement</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Compteur de cookie</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Afficher le nombre de cookies supprimés et restants</string>
+  <string name="site_cookies_whitelisted">Conserver les cookies du site</string>
+  <string name="cookies_deleted_info">cookies supprimés</string>
+  <string name="cookies_remain_info">cookies restants</string>
 </resources>

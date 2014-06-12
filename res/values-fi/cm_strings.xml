@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">Ota WebSockets käyttöön</string>
   <string name="accessibility_button_homescreen">Kotinäyttö</string>
+  <string name="pref_security_site_whitelist_cookies">Vähennä seurantaa. Poista evästeet säännöllisesti</string>
+  <string name="pref_security_site_whitelist_cookies_never">Älä poista koskaan</string>
+  <string name="pref_security_site_whitelist_cookies_only">Poista kaikilta sivuilta jotka eivät ole valkoisella listalla</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Poista myös kaikki paikallisen tallennustilan tietokannat</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Evästeiden määrä</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Näytä poistettujen ja jäljellä olevien evästeiden määrä</string>
+  <string name="site_cookies_whitelisted">Pidä sivuston evästeet</string>
+  <string name="cookies_deleted_info">evästettä poistettu</string>
+  <string name="cookies_remain_info">evästettä jäljellä</string>
 </resources>
