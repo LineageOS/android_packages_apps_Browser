@@ -23,5 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">启用 WebSockets</string>
   <string name="accessibility_button_homescreen">主屏幕</string>
+  <string name="pref_security_site_whitelist_cookies">减少跟踪。频繁地删除 cookies</string>
   <string name="pref_security_site_whitelist_cookies_never">从不删除</string>
+  <string name="pref_security_site_whitelist_cookies_only">删除所有不在我的白名单的网站</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">同时删除所有本地存储数据库</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Cookie 计数</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">显示已删除和剩余的 cookie 数量</string>
+  <string name="site_cookies_whitelisted">保持网站的 cookies</string>
+  <string name="cookies_deleted_info">cookies 已删除</string>
+  <string name="cookies_remain_info">剩余 cookies</string>
 </resources>

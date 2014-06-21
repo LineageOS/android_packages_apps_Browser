@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">වෙබ්කෙවෙනි</string>
   <string name="pref_lab_websockets_summary">වෙබ්කෙවෙනි සබල කරන්න</string>
   <string name="accessibility_button_homescreen">මුල් තිරය</string>
+  <string name="pref_security_site_whitelist_cookies">ඉලියීම පහත හෙළන්න. නිතර කුකි මකා දමන්න</string>
+  <string name="pref_security_site_whitelist_cookies_never">කවදාවත් මකන්න එපා</string>
+  <string name="pref_security_site_whitelist_cookies_only">මගේ සුදු ලැයිස්තුව තුල නොමැති සියලුම අඩවීන්ගෙන් මකාදමන්න</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">ස්ථානික ආචයිත දත්ත ගබඩා සියල්ලත් මකා දමන්න</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">කුකි ගණන</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">මකා දැමුණු සහ ඉතිරි කුකි ගණන පෙන්වන්න</string>
+  <string name="site_cookies_whitelisted">අඩවියේ කුකි තබාගන්න</string>
+  <string name="cookies_deleted_info">කුකි මකා දැමුණි</string>
+  <string name="cookies_remain_info">ඉතිරි කුකි</string>
 </resources>

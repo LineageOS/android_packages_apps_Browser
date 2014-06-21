@@ -25,7 +25,7 @@
   <string name="accessibility_button_homescreen">Startscherm</string>
   <string name="pref_security_site_whitelist_cookies">Volgen verminderen. Vaak cookies verwijderen</string>
   <string name="pref_security_site_whitelist_cookies_never">Nooit verwijderen</string>
-  <string name="pref_security_site_whitelist_cookies_only">Verwijderen van alle sites die niet in mijn whitelist staan</string>
+  <string name="pref_security_site_whitelist_cookies_only">Verwijderen van alle sites die niet in de whitelist staan</string>
   <string name="pref_security_site_whitelist_cookies_and_data">Ook alle \"localstorage\"-databases verwijderen</string>
   <string name="pref_security_site_whitelist_cookies_verbose">Aantal cookies</string>
   <string name="pref_security_site_whitelist_cookies_verbose_summary">Het aantal verwijderde en overgebleven cookies weergeven</string>
