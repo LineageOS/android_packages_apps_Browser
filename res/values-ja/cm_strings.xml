@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">WebSocketsを有効にする</string>
   <string name="accessibility_button_homescreen">ホーム画面</string>
+  <string name="pref_security_site_whitelist_cookies">追跡を減少させる。Cookieを頻繁に削除する</string>
+  <string name="pref_security_site_whitelist_cookies_never">削除しない</string>
+  <string name="pref_security_site_whitelist_cookies_only">ホワイトリストに無いすべてのサイトから削除する</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">ローカルストレージのすべてのデータベースも削除する</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Cookieのカウント</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">削除や維持されたCookieの数を表示する</string>
+  <string name="site_cookies_whitelisted">サイトのCookieを維持</string>
+  <string name="cookies_deleted_info">Cookieを削除しました</string>
+  <string name="cookies_remain_info">Cookieを維持しました</string>
 </resources>

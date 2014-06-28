@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">Aktiveer WebSockets</string>
   <string name="accessibility_button_homescreen">Tuisskerm</string>
+  <string name="pref_security_site_whitelist_cookies">Verminder dophou. Verwyder gereelde \'cookies\'</string>
+  <string name="pref_security_site_whitelist_cookies_never">Verwyder nooit</string>
+  <string name="pref_security_site_whitelist_cookies_only">Verwyder uit alle werwe wat nie in my witlys is nie</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Verwyder al die lokale gestoorde databasisse</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">\'Cookie\' telling</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Wys die aantal geskrapte en oorblywende \'cookies\'</string>
+  <string name="site_cookies_whitelisted">Hou werf se \'cookies\'</string>
+  <string name="cookies_deleted_info">\'cookies\' verwyderd</string>
+  <string name="cookies_remain_info">\'cookies\' bly oor</string>
 </resources>
