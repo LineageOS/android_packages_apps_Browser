@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">Luba WebSockets</string>
   <string name="accessibility_button_homescreen">Koduekraan</string>
+  <string name="pref_security_site_whitelist_cookies">Vähenda jälitamist. Kustuta küpsiseid sageli</string>
+  <string name="pref_security_site_whitelist_cookies_never">Ära kunagi kustuta</string>
+  <string name="pref_security_site_whitelist_cookies_only">Kustuta kõik lehed, mis pole lubatute loendis</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Samuti kustuta kõik kohalikud andmed</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Küpsiste arvestus</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Näita kustutatud ja allesolevate küpsiste hulka</string>
+  <string name="site_cookies_whitelisted">Säilita lehekülgede küpsised</string>
+  <string name="cookies_deleted_info">küpsised kustutatud</string>
+  <string name="cookies_remain_info">Küpsiseid jäänud</string>
 </resources>

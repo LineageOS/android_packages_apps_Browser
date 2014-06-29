@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">وێب سۆکێت</string>
   <string name="pref_lab_websockets_summary">کاراکردنی وێب سۆکێت</string>
   <string name="accessibility_button_homescreen">شاشەی سەرەکی</string>
+  <string name="pref_security_site_whitelist_cookies">کەمکردنەوەی شوێنکەوتن. فریکوێنسی شەکرۆکە ئەسڕێتەوە</string>
+  <string name="pref_security_site_whitelist_cookies_never">هەرگیز ڕەشی مەکەوە</string>
+  <string name="pref_security_site_whitelist_cookies_only">سڕینەوەی هەموو وێبگەرەکان کە لە پێڕستی سمی من نین</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">هەروەها سڕینەوەی هەموو بیرگە ناوخۆیەکانی بنكه‌دراوه‌</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">ژماردنی شەکرۆکە</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">پیشاندانی ژمارە سڕاوەکان و مانەوەکانی شەکرۆکە</string>
+  <string name="site_cookies_whitelisted">ماڵپەڕەکان بپارێزە لە شەکرۆکە</string>
+  <string name="cookies_deleted_info">شەکرۆکە سڕایەوە</string>
+  <string name="cookies_remain_info">ناونانەوەی شەکرۆکە</string>
 </resources>
