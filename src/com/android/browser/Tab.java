@@ -395,7 +395,7 @@ class Tab implements PictureListener {
             syncCurrentState(view, url);
             mWebViewController.onPageFinished(Tab.this);
 
-            if (view.getUrl().equals("about:most_visited")) {
+            if (mCurrentState.mUrl.equals("about:most_visited")) {
                 if (!mInMostVisitedPage) {
                     loadUrl(HomeProvider.MOST_VISITED, null);
                     mInMostVisitedPage = true;
