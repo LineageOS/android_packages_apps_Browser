@@ -44,6 +44,22 @@
                 android:title="@string/pref_security_accept_cookies"
                 android:summary="@string/pref_security_accept_cookies_summary" />
 
+        <ListPreference
+                android:key="site_whitelist_cookies"
+                android:dependency="accept_cookies"
+                android:dialogTitle="@string/pref_security_site_whitelist_cookies"
+                android:title="@string/pref_security_site_whitelist_cookies"
+                android:entries="@array/pref_security_site_whitelist_entries"
+                android:entryValues="@array/pref_security_site_whitelist_values"
+                android:defaultValue="0" />
+
+        <CheckBoxPreference
+                android:key="site_whitelist_cookies_verbose"
+                android:defaultValue="false"
+                android:dependency="accept_cookies"
+                android:title="@string/pref_security_site_whitelist_cookies_verbose"
+                android:summary="@string/pref_security_site_whitelist_cookies_verbose_summary" />
+
         <com.android.browser.BrowserYesNoPreference
                 android:key="privacy_clear_cookies"
                 android:title="@string/pref_privacy_clear_cookies"

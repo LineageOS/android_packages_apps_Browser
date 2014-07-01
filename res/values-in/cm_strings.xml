@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSocket</string>
   <string name="pref_lab_websockets_summary">Aktifkan WebSocket</string>
   <string name="accessibility_button_homescreen">Layar home</string>
+  <string name="pref_security_site_whitelist_cookies">Mengurangi pelacakan. Sering hapus cookie</string>
+  <string name="pref_security_site_whitelist_cookies_never">Jangan pernah hapus</string>
+  <string name="pref_security_site_whitelist_cookies_only">Hapus dari semua situs yang tidak ada dalam whitelist saya</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Juga menghapus semua database localstorage</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Jumlah cookie</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Tunjukkan jumlah cookie yang dihapus dan sisa</string>
+  <string name="site_cookies_whitelisted">Menjaga situs cookie</string>
+  <string name="cookies_deleted_info">cookie dihapus</string>
+  <string name="cookies_remain_info">cookie tersisa</string>
 </resources>

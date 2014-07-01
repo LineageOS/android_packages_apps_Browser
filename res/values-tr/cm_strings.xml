@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">WebSockets\'i etkinleştir</string>
   <string name="accessibility_button_homescreen">Ana ekran</string>
+  <string name="pref_security_site_whitelist_cookies">İzlemeyi azalt. Çerezleri sık sık sil</string>
+  <string name="pref_security_site_whitelist_cookies_never">Asla silme</string>
+  <string name="pref_security_site_whitelist_cookies_only">Beyaz listemde olmayan bütün sitelerden sil</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Tüm yerel depolamadaki veritabanlarını da sil</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Çerez sayısı</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Silinen ve kalan çerezlerin sayılarını göster</string>
+  <string name="site_cookies_whitelisted">Bu sitenin çerezlerini sakla</string>
+  <string name="cookies_deleted_info">çerezler silindi</string>
+  <string name="cookies_remain_info">çerezler silinmedi</string>
 </resources>

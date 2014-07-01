@@ -689,6 +689,11 @@ public class Controller
             return;
         }
         mSettings.setLastRunPaused(false);
+
+        // delete cookies (and localstorage) early in the resume to
+        // avoid potential races with regular cookie reads and writes.
+        mSettings.clearCookiesExceptWhitelist();
+
         mActivityPaused = false;
         Tab current = mTabControl.getCurrentTab();
         if (current != null) {
@@ -1520,12 +1525,14 @@ public class Controller
         boolean canGoForward = false;
         boolean isHome = false;
         boolean isDesktopUa = false;
+        boolean hasCookiesWhitelisted = false;
         boolean isLive = false;
         if (tab != null) {
             canGoBack = tab.canGoBack();
             canGoForward = tab.canGoForward();
             isHome = mSettings.getHomePage().equals(tab.getUrl());
             isDesktopUa = mSettings.hasDesktopUseragent(tab.getWebView());
+            hasCookiesWhitelisted = mSettings.hasCookiesWhitelisted(tab.getWebView());
             isLive = !tab.isSnapshot();
         }
         final MenuItem back = menu.findItem(R.id.back_menu_id);
@@ -1569,6 +1576,11 @@ public class Controller
         menu.setGroupVisible(R.id.LIVE_MENU, isLive);
         menu.setGroupVisible(R.id.SNAPSHOT_MENU, !isLive);
         menu.setGroupVisible(R.id.COMBO_MENU, false);
+
+        // individual Visible needs to be after the group setting
+        final MenuItem cwSwitcher = menu.findItem(R.id.cookies_whitelisted_menu_id);
+        cwSwitcher.setChecked(hasCookiesWhitelisted);
+        cwSwitcher.setVisible(isLive && mSettings.enableDeleteCookies());
 
         mUi.updateMenuState(tab, menu);
     }
@@ -1697,6 +1709,10 @@ public class Controller
                 toggleUserAgent();
                 break;
 
+            case R.id.cookies_whitelisted_menu_id:
+                toggleCookiesWhitelisted();
+                break;
+
             case R.id.fullscreen_menu_id:
                 toggleFullscreen();
 
@@ -1734,6 +1750,12 @@ public class Controller
         WebView web = getCurrentWebView();
         mSettings.toggleDesktopUseragent(web);
         web.loadUrl(web.getOriginalUrl());
+    }
+
+    @Override
+    public void toggleCookiesWhitelisted() {
+        WebView web = getCurrentWebView();
+        mSettings.toggleCookiesWhitelisted(web);
     }
 
     @Override

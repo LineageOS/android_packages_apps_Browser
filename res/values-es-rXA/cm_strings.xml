@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">Habilitar WebSockets</string>
   <string name="accessibility_button_homescreen">Pantalla d\'aniciu</string>
+  <string name="pref_security_site_whitelist_cookies">Amenorgar el siguimientu. Desaniciar cookies regularmente</string>
+  <string name="pref_security_site_whitelist_cookies_never">Enxamás desaniciar</string>
+  <string name="pref_security_site_whitelist_cookies_only">Desaniciar de tolos sitios que nun tean na llista blanca</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Desaniciar tamién de toles bases de datos llocales</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Cuntador de cookies</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Amosar el númberu de cookies guardaes y desaniciaes</string>
+  <string name="site_cookies_whitelisted">Caltener les cookies del sitiu</string>
+  <string name="cookies_deleted_info">cookies desaniciaes</string>
+  <string name="cookies_remain_info">cookies calteníes</string>
 </resources>

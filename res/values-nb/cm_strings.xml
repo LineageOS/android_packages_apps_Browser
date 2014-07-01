@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">Aktiver WebSockets</string>
   <string name="accessibility_button_homescreen">Hjemmeskjerm</string>
+  <string name="pref_security_site_whitelist_cookies">Redusere sporing. Slett informasjonskapsler ofte</string>
+  <string name="pref_security_site_whitelist_cookies_never">Aldri slette</string>
+  <string name="pref_security_site_whitelist_cookies_only">Slette fra alle områder som ikke er i min hviteliste</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Også slette alle lokale databaser</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Cookie teller</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Vis antall slettede og gjenstående cookies</string>
+  <string name="site_cookies_whitelisted">Beholde nettstedets cookies</string>
+  <string name="cookies_deleted_info">informasjonskapslene slettet</string>
+  <string name="cookies_remain_info">informasjonskapsler forblir</string>
 </resources>

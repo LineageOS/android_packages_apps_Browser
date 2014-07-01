@@ -17,10 +17,19 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="contextmenu_openlink_incognito_newwindow">Åbn i ny inkognito-tab</string>
-  <string name="contextmenu_openlink_incognito_newwindow_background">Åbn i ny inkognito-tab i baggrunden</string>
+  <string name="contextmenu_openlink_incognito_newwindow_background">Åbn i ny inkognito-fane i baggrunden</string>
   <string name="pref_content_ua">Brugeragent</string>
   <string name="pref_content_ua_summary">Vælg en brugeragent</string>
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">Slå WebSockets til</string>
   <string name="accessibility_button_homescreen">Startskærm</string>
+  <string name="pref_security_site_whitelist_cookies">Reducér tracking. Slet jævnligt cookies</string>
+  <string name="pref_security_site_whitelist_cookies_never">Slet aldrig</string>
+  <string name="pref_security_site_whitelist_cookies_only">Slet fra alle websteder, der ikke er på min positivliste</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Slet også alle lokale databaser</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Cookie tæller</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Vis antallet af slettede og resterende cookies</string>
+  <string name="site_cookies_whitelisted">Behold websteders cookies</string>
+  <string name="cookies_deleted_info">cookies slettet</string>
+  <string name="cookies_remain_info">cookies resterer</string>
 </resources>

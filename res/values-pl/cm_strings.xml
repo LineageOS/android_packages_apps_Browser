@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSocket</string>
   <string name="pref_lab_websockets_summary">Aktywuj WebSocket</string>
   <string name="accessibility_button_homescreen">Ekran główny</string>
+  <string name="pref_security_site_whitelist_cookies">Zmniejsz prawdopodobieństwo śledzenia. Często usuwaj pliki cookies</string>
+  <string name="pref_security_site_whitelist_cookies_never">Nigdy nie usuwaj</string>
+  <string name="pref_security_site_whitelist_cookies_only">Usuń z wszystkich witryn, które nie znajdują się na białej liście</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Usuń również wszystkie pliki bazy danych w pamięci lokalnej</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Liczba plików cookie</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Pokaż liczbę usuniętych i pozostałych plików cookie</string>
+  <string name="site_cookies_whitelisted">Zachowaj pliki cookie witryny</string>
+  <string name="cookies_deleted_info">Pliki cookie usunięte</string>
+  <string name="cookies_remain_info">pozostałe pliki cookie</string>
 </resources>

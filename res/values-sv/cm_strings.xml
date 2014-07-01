@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">Aktivera WebSockets</string>
   <string name="accessibility_button_homescreen">Hemskärm</string>
+  <string name="pref_security_site_whitelist_cookies">Minska spårning. Ta ofta bort cookies</string>
+  <string name="pref_security_site_whitelist_cookies_never">Ta aldrig bort</string>
+  <string name="pref_security_site_whitelist_cookies_only">Ta bort från alla webbplatser som inte finns i min vitlista</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Ta även bort alla localstorage-databaser</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Cookieräknare</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Visa antalet borttagna och kvarvarande cookies</string>
+  <string name="site_cookies_whitelisted">Behåll webbplatsens cookies</string>
+  <string name="cookies_deleted_info">borttagna cookies</string>
+  <string name="cookies_remain_info">kvarvarande cookies</string>
 </resources>
