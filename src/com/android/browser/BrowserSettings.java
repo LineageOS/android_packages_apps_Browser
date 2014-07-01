@@ -368,7 +368,8 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
     public LayoutAlgorithm getLayoutAlgorithm() {
         LayoutAlgorithm layoutAlgorithm = LayoutAlgorithm.NORMAL;
         if (autofitPages()) {
-            layoutAlgorithm = LayoutAlgorithm.TEXT_AUTOSIZING;
+            layoutAlgorithm = getAutosizeText() ?
+                    LayoutAlgorithm.TEXT_AUTOSIZING : LayoutAlgorithm.NARROW_COLUMNS;
         }
         if (isDebugEnabled()) {
             if (isSmallScreen()) {
@@ -377,7 +378,8 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
                 if (isNormalLayout()) {
                     layoutAlgorithm = LayoutAlgorithm.NORMAL;
                 } else {
-                    layoutAlgorithm = LayoutAlgorithm.TEXT_AUTOSIZING;
+                    layoutAlgorithm = getAutosizeText() ?
+                            LayoutAlgorithm.TEXT_AUTOSIZING : LayoutAlgorithm.NARROW_COLUMNS;
                 }
             }
         }
@@ -755,6 +757,11 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 
     public void setDoubleTapZoom(int percent) {
         mPrefs.edit().putInt(PREF_DOUBLE_TAP_ZOOM, getRawDoubleTapZoom(percent)).apply();
+    }
+
+    public boolean getAutosizeText() {
+        requireInitialization();
+        return mPrefs.getBoolean(PREF_AUTOSIZE_TEXT, true);
     }
 
     // -----------------------------

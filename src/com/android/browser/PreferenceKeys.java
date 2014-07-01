@@ -26,6 +26,8 @@ public interface PreferenceKeys {
     // ----------------------
     static final String PREF_MIN_FONT_SIZE = "min_font_size";
     static final String PREF_TEXT_SIZE = "text_size";
+    static final String PREF_PREVIEW = "text_zoom_preview";
+    static final String PREF_AUTOSIZE_TEXT = "autosize_text";
     static final String PREF_TEXT_ZOOM = "text_zoom";
     static final String PREF_DOUBLE_TAP_ZOOM = "double_tap_zoom";
     static final String PREF_FORCE_USERSCALABLE = "force_userscalable";
