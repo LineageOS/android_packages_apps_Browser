@@ -23,7 +23,19 @@
         android:defaultValue="false" />
 
     <PreferenceCategory android:title="@string/pref_font_size_category">
+        <com.android.browser.preferences.SeekBarSummaryPreference
+            android:key="double_tap_zoom"
+            android:title="@string/pref_zoom_on_double_tap"
+            android:defaultValue="5"
+            android:max="10" />
+
+        <CheckBoxPreference android:key="autosize_text"
+            android:title="@string/pref_autosize_text"
+            android:summary="@string/pref_autosize_text_summary"
+            android:defaultValue="true" />
+
         <com.android.browser.preferences.FontSizePreview
+            android:key="text_zoom_preview"
             android:title="@string/preview" />
 
         <com.android.browser.preferences.SeekBarSummaryPreference
@@ -31,12 +43,6 @@
             android:title="@string/pref_text_zoom"
             android:defaultValue="10"
             android:max="30" />
-
-        <com.android.browser.preferences.SeekBarSummaryPreference
-            android:key="double_tap_zoom"
-            android:title="@string/pref_zoom_on_double_tap"
-            android:defaultValue="5"
-            android:max="10" />
 
         <com.android.browser.preferences.SeekBarSummaryPreference
             android:key="min_font_size"

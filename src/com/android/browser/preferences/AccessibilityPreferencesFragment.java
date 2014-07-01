@@ -35,6 +35,10 @@ public class AccessibilityPreferencesFragment extends PreferenceFragment
     // Used to pause/resume timers, which are required for WebViewPreview
     WebView mControlWebView;
 
+    private Preference mMinFontSizePref;
+    private Preference mTextZoomPref;
+    private Preference mZoomPreview;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,18 +47,26 @@ public class AccessibilityPreferencesFragment extends PreferenceFragment
         BrowserSettings settings = BrowserSettings.getInstance();
         mFormat = NumberFormat.getPercentInstance();
 
-        Preference e = findPreference(PreferenceKeys.PREF_MIN_FONT_SIZE);
+        Preference e = findPreference(PreferenceKeys.PREF_AUTOSIZE_TEXT);
         e.setOnPreferenceChangeListener(this);
-        updateMinFontSummary(e, settings.getMinimumFontSize());
-        e = findPreference(PreferenceKeys.PREF_TEXT_ZOOM);
-        e.setOnPreferenceChangeListener(this);
-        updateTextZoomSummary(e, settings.getTextZoom());
         e = findPreference(PreferenceKeys.PREF_DOUBLE_TAP_ZOOM);
         e.setOnPreferenceChangeListener(this);
         updateDoubleTapZoomSummary(e, settings.getDoubleTapZoom());
         e = findPreference(PreferenceKeys.PREF_INVERTED_CONTRAST);
         e.setOnPreferenceChangeListener(this);
         updateInvertedContrastSummary(e, (int) (settings.getInvertedContrast() * 100));
+
+        mMinFontSizePref= findPreference(PreferenceKeys.PREF_MIN_FONT_SIZE);
+        mMinFontSizePref.setOnPreferenceChangeListener(this);
+        updateMinFontSummary(mMinFontSizePref, settings.getMinimumFontSize());
+        mTextZoomPref = findPreference(PreferenceKeys.PREF_TEXT_ZOOM);
+        mTextZoomPref.setOnPreferenceChangeListener(this);
+        updateTextZoomSummary(mTextZoomPref, settings.getTextZoom());
+        mZoomPreview = findPreference(PreferenceKeys.PREF_PREVIEW);
+
+        boolean autoscaleText = getPreferenceManager().getSharedPreferences().getBoolean(
+                PreferenceKeys.PREF_AUTOSIZE_TEXT, true);
+        updateAutoscaleTextDependencies(autoscaleText);
     }
 
     @Override
@@ -104,22 +116,26 @@ public class AccessibilityPreferencesFragment extends PreferenceFragment
         if (PreferenceKeys.PREF_MIN_FONT_SIZE.equals(pref.getKey())) {
             updateMinFontSummary(pref, BrowserSettings
                     .getAdjustedMinimumFontSize((Integer) objValue));
-        }
-        if (PreferenceKeys.PREF_TEXT_ZOOM.equals(pref.getKey())) {
+        } else if (PreferenceKeys.PREF_TEXT_ZOOM.equals(pref.getKey())) {
             BrowserSettings settings = BrowserSettings.getInstance();
             updateTextZoomSummary(pref, settings
                     .getAdjustedTextZoom((Integer) objValue));
-        }
-        if (PreferenceKeys.PREF_DOUBLE_TAP_ZOOM.equals(pref.getKey())) {
+        } else if (PreferenceKeys.PREF_DOUBLE_TAP_ZOOM.equals(pref.getKey())) {
             BrowserSettings settings = BrowserSettings.getInstance();
             updateDoubleTapZoomSummary(pref, settings
                     .getAdjustedDoubleTapZoom((Integer) objValue));
-        }
-        if (PreferenceKeys.PREF_INVERTED_CONTRAST.equals(pref.getKey())) {
+        } else if (PreferenceKeys.PREF_INVERTED_CONTRAST.equals(pref.getKey())) {
             updateInvertedContrastSummary(pref,
                     (int) ((10 + (Integer) objValue) * 10));
+        } else if (PreferenceKeys.PREF_AUTOSIZE_TEXT.equals(pref.getKey())) {
+            updateAutoscaleTextDependencies((Boolean)objValue);
         }
         return true;
     }
 
+    private void updateAutoscaleTextDependencies(boolean autoscaleText) {
+        mMinFontSizePref.setEnabled(!autoscaleText);
+        mTextZoomPref.setEnabled(!autoscaleText);
+        mZoomPreview.setEnabled(!autoscaleText);
+    }
 }
