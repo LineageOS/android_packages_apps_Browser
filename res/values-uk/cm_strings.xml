@@ -23,4 +23,13 @@
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">Увімкнути WebSockets</string>
   <string name="accessibility_button_homescreen">Домашній екран</string>
+  <string name="pref_security_site_whitelist_cookies">Автовидалення файлів cookie</string>
+  <string name="pref_security_site_whitelist_cookies_never">Ніколи не вилучати</string>
+  <string name="pref_security_site_whitelist_cookies_only">Вилучати від усіх сайтів, що не входять в білий список</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Також видаляти всі бази даних localstorage</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Лічильник файлів cookie</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Показувати число видалених і залишених файлів cookie</string>
+  <string name="site_cookies_whitelisted">Зберігати файли cookie</string>
+  <string name="cookies_deleted_info">файли cookie вилучено</string>
+  <string name="cookies_remain_info">cookies залишилось</string>
 </resources>
