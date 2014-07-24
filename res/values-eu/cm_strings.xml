@@ -17,4 +17,19 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="contextmenu_openlink_incognito_newwindow">Ezkutuko fiitxa batean ireki</string>
+  <string name="contextmenu_openlink_incognito_newwindow_background">Bigarren planoko ezkutuko fitxa batean ireki</string>
+  <string name="pref_content_ua">Erabiltzaile agentea</string>
+  <string name="pref_content_ua_summary">Erabiltzaile agente bat aukeratu</string>
+  <string name="pref_lab_websockets">WebSockets</string>
+  <string name="pref_lab_websockets_summary">WebSockets-ak gaitu</string>
+  <string name="accessibility_button_homescreen">Hasiera orria</string>
+  <string name="pref_security_site_whitelist_cookies">Cookie-ak maiz ezabatu</string>
+  <string name="pref_security_site_whitelist_cookies_never">Ez ezabatu inoiz</string>
+  <string name="pref_security_site_whitelist_cookies_only">Zerrenda zurian ez dauden leku guztienak ezabatu</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Tokiko datu base guztietatik ere ezabatu</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Cookie zenbatzailea</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Gordetako eta ezabaturiko Cookie kantitatea erakutsi</string>
+  <string name="site_cookies_whitelisted">Lekuaren Cookie-ak mantendu</string>
+  <string name="cookies_deleted_info">Ezabaturiko Cookie-ak</string>
+  <string name="cookies_remain_info">Gordetako Cookie-ak</string>
 </resources>

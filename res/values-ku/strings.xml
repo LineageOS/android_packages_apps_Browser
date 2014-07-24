@@ -91,7 +91,7 @@
   <string name="bookmark_list_view">خشتە</string>
   <string name="current_page">لە\u0020</string>
   <string name="delete_bookmark_warning">سڕینەوەی په‌ڕتووکنیشانه‌که‌ر  \"<xliff:g id="bookmark">%s</xliff:g>\"?</string>
-  <string name="open_all_in_new_window">کردنەوەی هەمووی لە پەڕەی تازە</string>
+  <string name="open_all_in_new_window">چالاکردنی هەمووی لە پەڕەی تازە</string>
   <string name="goto_dot">بڕۆ</string>
   <string name="select_dot">هەڵبژاردنی دەق</string>
   <string name="close_other_tabs">داخستنی پەڕەکانی تر</string>
@@ -109,7 +109,7 @@
   <string name="contextheader_folder_empty">بوخچەی بەتاڵ</string>
   <string name="contextmenu_openlink">کردنه‌وه‌</string>
   <string name="contextmenu_openlink_newwindow">پەڕەی تازە بکەرەوە</string>
-  <string name="contextmenu_openlink_newwindow_background">کردنەوەی لە پەشتەگەڵاڵەی تازە</string>
+  <string name="contextmenu_openlink_newwindow_background">چالاکردنی لە پەشتەگەڵاڵەی تازە</string>
   <string name="contextmenu_savelink">پاشەکەوتکردنی بەستەرە</string>
   <string name="contextmenu_sharelink">بەشدارکردن بەستەرە</string>
   <string name="contextmenu_copy">لەبەرگرتنەوە</string>
@@ -132,14 +132,14 @@
   <string name="pref_content_load_images_summary">پیساندانی وێنە لە وێبگەڕ</string>
   <string name="pref_content_block_popups">بەربەستکردنی تێبینی</string>
   <string name="pref_content_javascript">توانپێدانی JavaScript</string>
-  <string name="pref_content_open_in_background">کردنەوە لە پشتەوە</string>
+  <string name="pref_content_open_in_background">چالاکردن لە پشتەوە</string>
   <string name="pref_content_plugins">ڕێگەدان بە زیادکراوەکان</string>
   <string-array name="pref_content_plugins_choices">
     <item>هه‌میشه‌ کراوه‌</item>
     <item>له‌سه‌ر داواکردن</item>
     <item>کوژانه‌وه‌</item>
   </string-array>
-  <string name="pref_content_open_in_background_summary">کردنەوەی تاقی نوێ لە پشتی ئەوەی ئێستا</string>
+  <string name="pref_content_open_in_background_summary">چالاکردنی تاقی نوێ لە پشتی ئەوەی ئێستا</string>
   <string name="pref_content_homepage">دانانی ماڵپەڕ</string>
   <string name="pref_content_search_engine">دانانی بزوێنەری گەڕان</string>
   <string name="pref_content_search_engine_summary">بزوێنەرێکی گەڕان هەڵبژێرە</string>
@@ -171,9 +171,9 @@
   <string name="autofill_profile_editor_name">ناوی تەواو:</string>
   <string name="autofill_profile_editor_email_address">ئیمەیڵ:</string>
   <string name="autofill_profile_editor_company_name">ناوی کۆمپانیا:</string>
-  <string name="autofill_profile_editor_address_line_1">ناونیشانی ١:</string>
+  <string name="autofill_profile_editor_address_line_1">ناونیشانی 1:</string>
   <string name="autofill_profile_editor_address_line_1_hint">ناونیشانی شەقام, P.O. box, c/o</string>
-  <string name="autofill_profile_editor_address_line_2">ناونیشانی ١:</string>
+  <string name="autofill_profile_editor_address_line_2">ناونیشانی 1:</string>
   <string name="autofill_profile_editor_address_line_2_hint">تەلار،گونجاو.تاوەکو،بینایە،قات،هتد.</string>
   <string name="autofill_profile_editor_city">شار/شارۆچکە:</string>
   <string name="autofill_profile_editor_state">ولایەت/پارێزگا/هەرێم:</string>
@@ -201,7 +201,7 @@
   <string name="pref_privacy_clear_history_dlg">سڕینەوەی مێژوی ڕێدۆزەری وێبگەر?</string>
   <string name="pref_privacy_formdata_title">لە داتا</string>
   <string name="pref_privacy_clear_form_data">سڕینەوە لە داتا</string>
-  <string name="pref_privacy_clear_form_data_summary">پاکردنەوەی هەموو پاشەکەوتکراوەکان لە داتا</string>
+  <string name="pref_privacy_clear_form_data_summary">پاچالاکردنی هەموو پاشەکەوتکراوەکان لە داتا</string>
   <string name="pref_privacy_clear_form_data_dlg">پاکردنەوەی هەموو پاشەکەوتەکان لە داتا?</string>
   <string name="pref_privacy_clear_passwords">پاکردنەوەی تێپەڕەوشە?</string>
   <string name="pref_privacy_clear_passwords_summary">پاکردنەوەی هەموو تێپەڕەوشەکانی پاشەکەوتکراو</string>
@@ -318,7 +318,7 @@
   <string name="too_many_subwindows_dialog_message">ته‌نها ده‌رچوون کردنه‌وه‌
 له‌کاتیێک</string>
   <string name="download_no_sdcard_dlg_title" product="nosdcard">یادگەی ناوەکی USB ئامادە نیە</string>
-  <string name="download_no_sdcard_dlg_title" product="default">میمۆری ده‌ره‌کی نییه‌</string>
+  <string name="download_no_sdcard_dlg_title" product="default">بیرگەی ده‌ره‌کی نییه‌</string>
   <string name="download_no_sdcard_dlg_msg" product="nosdcard">USB بیرگه‌ داواکراوه‌ بۆ دابه‌زین<xliff:g id="filename">%s</xliff:g>.</string>
   <string name="download_no_sdcard_dlg_msg" product="default">بیرگه‌ی ده‌ره‌کی داواکراوه‌ بۆ دابه‌زین<xliff:g id="filename">%s</xliff:g>.</string>
   <string name="download_sdcard_busy_dlg_title" product="nosdcard">یادگەی ناوەکی USB ئامادە نیە</string>

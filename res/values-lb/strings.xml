@@ -17,6 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="application_name">Browser</string>
   <string name="choose_upload">Fichier fir eropzelueden auswielen</string>
+  <string name="uploads_disabled">D\'Eropluede vu Fichieren ass deaktivéiert.</string>
   <string name="new_tab">Neien Tab</string>
   <string name="tab_bookmarks">Lieszeechen</string>
   <string name="tab_most_visited">Meeschtbesicht</string>
@@ -58,6 +59,7 @@
   <string name="close_other_tabs">All déi aner Tabs zoumaachen</string>
   <string name="bookmarks">Favoritten</string>
   <string name="history">Historique</string>
+  <string name="menu_view_download">Downloads</string>
   <string name="share_page">Säit deelen</string>
   <string name="contextmenu_openlink">Opmaachen</string>
   <string name="contextmenu_sharelink">Link deelen</string>
@@ -78,6 +80,7 @@
   <string name="pref_general_sync_title">Sync</string>
   <string name="autologin_bar_login_text">Aloggen</string>
   <string name="autofill_profile_editor_save_profile">Späicheren</string>
+  <string name="autofill_profile_editor_delete_profile">Läschen</string>
   <string name="pref_privacy_location_title">Lokaliséierung</string>
   <string-array name="pref_data_preload_choices">
     <item>Ni</item>
