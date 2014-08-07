@@ -77,11 +77,18 @@
     <item>Most visited sites</item>
     <item>Aner</item>
   </string-array>
+  <string name="pref_general_title">Allgemeng</string>
   <string name="pref_general_sync_title">Sync</string>
   <string name="autologin_bar_login_text">Aloggen</string>
+  <string name="autologin_bar_hide_text">Verstoppen</string>
   <string name="autofill_profile_editor_save_profile">Späicheren</string>
   <string name="autofill_profile_editor_delete_profile">Läschen</string>
   <string name="pref_privacy_location_title">Lokaliséierung</string>
+  <string-array name="pref_default_zoom_choices">
+    <item>Far</item>
+    <item>Medium</item>
+    <item>Zoumaachen</item>
+  </string-array>
   <string-array name="pref_data_preload_choices">
     <item>Ni</item>
     <item>Only on Wi-Fi</item>
@@ -105,6 +112,7 @@
   <string name="import_bookmarks_wizard_next">Weider</string>
   <string name="import_bookmarks_wizard_cancel">Ofbriechen</string>
   <string name="import_bookmarks_wizard_done">Fäerdeg</string>
+  <string name="menu_share_url">Deelen</string>
   <string name="accessibility_button_back">Zréck</string>
   <string name="accessibility_button_search">Sichen</string>
   <string name="accessibility_button_bookmarks">Lieszeechen</string>
