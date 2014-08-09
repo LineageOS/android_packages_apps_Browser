@@ -38,9 +38,9 @@
   <string name="page_info">زانیاری لاپەرەکە</string>
   <string name="page_info_view">پیشاندانی زانیاری لاپەرەکە</string>
   <string name="page_info_address">ناونیشان</string>
-  <string name="ssl_warnings_header">بروانامەی ئاسایشی ئەم سایتە کێشەی هەیە</string>
+  <string name="ssl_warnings_header">بروانامەی ئاساییشی ئەم سایتە کێشەی هەیە</string>
   <string name="ssl_continue">بەردەوام بە</string>
-  <string name="security_warning">ئاگەدارکردنەوەی ئاسایش</string>
+  <string name="security_warning">ئاگەدارکردنەوەی ئاساییش</string>
   <string name="view_certificate">پیشاندانی بروانامە</string>
   <string name="ssl_go_back">بۆ دواوە</string>
   <string name="ssl_untrusted">بروانامەکە لە سەرچاوەیەکی باوەڕپێکراوەوە نیە.</string>
@@ -146,8 +146,8 @@
   <string name="pref_set_homepage_to">کردن بە</string>
   <string-array name="pref_homepage_choices">
     <item>په‌ڕه‌ی ئێستا</item>
-    <item>په‌ڕه‌ی بۆشآی</item>
-    <item>په‌ڕه‌ی بنه‌ڕه‌ت</item>
+    <item>په‌ڕه‌ی بۆشایی</item>
+    <item>په‌ڕه‌ی بنێڕه‌ت</item>
     <item>وێبگه‌ره‌ زۆر سه‌ردانکراوه‌کان</item>
     <item>دیکە</item>
   </string-array>
@@ -188,7 +188,7 @@
   <string name="autofill_setup_dialog_message">وێبگەر بەشێوەيەكى ئۆتۆماتيكى دەتوانێت وێبى تەواو ئەمە حەز بكات. بۆ نووسينى خۆکارانە-پڕكردن دانراوت؟</string>
   <string name="autofill_setup_dialog_negative_toast">هەمیشە ئەتوانی دەقی خۆکارانە دانێیت لە وێبگەر&gt; ڕێکخستن&gt; شاشەی گشتی.</string>
   <string name="disable_autofill">لەکارخستنی -پڕکردنەوەی-خۆکارانە</string>
-  <string name="pref_privacy_security_title">تایبەتی&amp; ئاسایش</string>
+  <string name="pref_privacy_security_title">تایبەتی&amp; ئاساییش</string>
   <string name="pref_privacy_clear_cache">پاکردنەوەی کاچی</string>
   <string name="pref_privacy_clear_cache_summary">پاکردنەوەی ناوەڕۆکی کاچی و داتابەیز</string>
   <string name="pref_privacy_clear_cache_dlg">پاکردنەوەی ناوەڕۆکی کاچی و داتابەیز?</string>
@@ -217,14 +217,14 @@
   <string name="pref_security_remember_passwords_summary">پاشەکەوتکردنی تێپەڕەوشەو ناو لە ماڵپەڕەکان</string>
   <string name="pref_security_save_form_data">بەبیرهێنانەوەی زانیاری</string>
   <string name="pref_security_save_form_data_summary">بەبیرهێنانەوەی زانیاری کە من ئەینوسم یان دواتر بەکاری هێنمەوە</string>
-  <string name="pref_security_show_security_warning">پیشاندانی مەترسی ئاسایش</string>
+  <string name="pref_security_show_security_warning">پیشاندانی مەترسی ئاساییش</string>
   <string name="pref_security_show_security_warning_summary">ئاگەدارکردنەوە نیشان بدە کاتێک سایتەکە خراپ بوو</string>
   <string name="pref_security_accept_cookies">قبوڵکردنی شەکرۆکە</string>
   <string name="pref_security_accept_cookies_summary">ڕێگەدان بە ماڵپەڕەکان بۆپاشەکەوتکردن یان خوێندنەوەی زانیاری شەکرۆکە</string>
   <string-array name="pref_text_size_choices">
     <item>بچکۆلە</item>
     <item>بچوک</item>
-    <item>ئاسای</item>
+    <item>ئاسایی</item>
     <item>گه‌وره‌</item>
     <item>زه‌به‌لاح</item>
   </string-array>
@@ -251,7 +251,7 @@
   <string name="pref_extras_website_settings">ڕێکخستنی سایتەکان</string>
   <string name="pref_extras_website_settings_summary">دانانەوەى پێشكەوتوو بۆ ماڵپەڕی تاكە كەس</string>
   <string name="pref_extras_reset_default_title">ڕێکخستنەوە بۆ بنەڕەتی</string>
-  <string name="pref_extras_reset_default">ڕێکخستنه‌وه‌ بۆ بنه‌ڕه‌ت</string>
+  <string name="pref_extras_reset_default">ڕێکخستنه‌وه‌ بۆ بنێڕه‌ت</string>
   <string name="pref_extras_reset_default_summary">ڕێکخستنەوە بۆ باری بنەڕەتی</string>
   <string name="pref_extras_reset_default_dlg">پاشگەزبوونەوە بۆ باری بنەڕەتی?</string>
   <string name="pref_development_title">هەڵدۆز</string>
@@ -293,7 +293,7 @@
     <item>هەمیشە لەسەر Wi-Fi</item>
     <item>هەمیشە</item>
   </string-array>
-  <string name="pref_link_prefetch_summary">ڕێگه‌دان به‌ وێبگه‌ر بۆ دابه‌زاندنه‌وه‌ی به‌سته‌ره‌که‌ له‌ پشته‌گه‌ڵاڵه‌</string>
+  <string name="pref_link_prefetch_summary">ڕێگه‌دان به‌ وێبگه‌ر بۆ داگرتنه‌وه‌ی به‌سته‌ره‌که‌ له‌ پشته‌گه‌ڵاڵه‌</string>
   <string name="pref_link_prefetch_dialogtitle">پەڕەی ماڵپەڕ دابەزین</string>
   <string name="browserFrameNetworkErrorLabel">کێشه‌ی په‌یوه‌ندی</string>
   <string name="browserFrameFileErrorLabel">کێشه‌ی فایل</string>
@@ -329,13 +329,13 @@
   <string name="download_pending">ده‌ستکردن به‌ دابه‌زین\u2026</string>
   <string name="search_the_web">گه‌ڕان به‌ پێگه‌</string>
   <string name="webstorage_outofspace_notification_title">بیرگه‌ی وێبگه‌ر پڕه‌</string>
-  <string name="webstorage_outofspace_notification_text">ده‌ستلێدان بۆ به‌تاڵکردنه‌وه‌ی بۆشای.</string>
+  <string name="webstorage_outofspace_notification_text">ده‌ستلێدان بۆ به‌تاڵکردنه‌وه‌ی بۆشایی.</string>
   <string name="webstorage_clear_data_title">پاکردنه‌وه‌ی زانیاری پاشه‌که‌وتکراو</string>
   <string name="webstorage_clear_data_dialog_message">سڕینه‌وه‌ی هه‌موو زانیاریه‌کان له‌ وێبگه‌ پاشه‌که‌وتکراوه‌?</string>
   <string name="webstorage_clear_data_dialog_ok_button">باشه‌</string>
   <string name="webstorage_clear_data_dialog_cancel_button">هەڵوەشاندنەوە</string>
   <string name="webstorage_origin_summary_mb_stored">مێگا بایت پاشه‌که‌وتکراوه‌ له‌سه‌ر ته‌له‌فۆنه‌که‌ت</string>
-  <string name="loading_video">دابه‌زاندنی ڤیدیۆ\u2026</string>
+  <string name="loading_video">داگرتنی ڤیدیۆ\u2026</string>
   <string name="geolocation_permissions_prompt_message"><xliff:g id="website origin" example="maps.google.com">%s</xliff:g> ناوچه‌که‌تی ئه‌وێت</string>
   <string name="geolocation_permissions_prompt_share">به‌شدارکردنی ناوچه‌</string>
   <string name="geolocation_permissions_prompt_dont_share">ڕەتکردنەوە</string>
