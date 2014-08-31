@@ -56,7 +56,7 @@
   <string name="back">بۆ دواوە</string>
   <string name="forward">پۆ پێش</string>
   <string name="save">باش</string>
-  <string name="do_not_save">هه‌ڵوه‌شاندنه‌وه</string>
+  <string name="do_not_save">لابردن</string>
   <string name="location">ناونیشان</string>
   <string name="account">هەژمار</string>
   <string name="containing_folder">زیادکردن بۆ</string>
@@ -154,7 +154,7 @@
   <string name="pref_content_autofit">خۆ ڕێکخستنی پەڕە</string>
   <string name="pref_content_autofit_summary">فۆرماتکردنی په‌یج وێبگه‌ر بۆ پڕکردنه‌وه‌ی ڕوونما</string>
   <string name="pref_general_title">گشتی</string>
-  <string name="pref_general_sync_title">ناردنی</string>
+  <string name="pref_general_sync_title">Sync</string>
   <string name="pref_general_autofill_title">پر-خۆکارانه‌</string>
   <string name="pref_autofill_enabled">شێوه‌ی پڕ-خۆکارانه‌</string>
   <string name="pref_autofill_enabled_summary">پڕکردنه‌وه‌ی شێوه‌ی ماڵپه‌ڕ به‌ یه‌ک ده‌ستلێدان</string>
@@ -181,7 +181,7 @@
   <string name="autofill_profile_editor_country">وڵات:</string>
   <string name="autofill_profile_editor_phone_number">تەلەفۆن:</string>
   <string name="autofill_profile_editor_phone_number_invalid">ژمارەی تەلەفۆن لەکارە نیە:</string>
-  <string name="autofill_profile_editor_save_profile">پاشەکەوتکردن</string>
+  <string name="autofill_profile_editor_save_profile">پاشەکەوت</string>
   <string name="autofill_profile_successful_save">خۆکارانە-دەق پاشەکەوت بکە.</string>
   <string name="autofill_profile_successful_delete">خۆکارانە-دەقی پڕ سڕایەوە.</string>
   <string name="autofill_profile_editor_delete_profile">سڕینه‌وه‌</string>
@@ -368,7 +368,7 @@
   <string name="import_bookmarks_wizard_next">دواتر</string>
   <string name="import_bookmarks_wizard_previous">پێشتر</string>
   <string name="import_bookmarks_wizard_cancel">هەڵوەشاندنەوە</string>
-  <string name="import_bookmarks_wizard_done">ئه‌نجامدرا</string>
+  <string name="import_bookmarks_wizard_done">ئه‌نجام درا</string>
   <string name="import_bookmarks_dialog_add">زیادکردنی په‌رتوکنیشانکه‌ر بۆ هه‌ژماری Google</string>
   <string name="import_bookmarks_dialog_import">زیادکردنی په‌رتوکنیشانکه‌ری ئه‌ندرۆیده‌که‌ت  په‌رتوکنیشانکه‌ری بۆ <xliff:g id="Google account" example="account@example.com">%s</xliff:g></string>
   <string name="menu_share_url">به‌شداری پێکردن</string>
