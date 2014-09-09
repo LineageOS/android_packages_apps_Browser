@@ -27,6 +27,9 @@
   <string name="pref_security_site_whitelist_cookies_never">從不刪除</string>
   <string name="pref_security_site_whitelist_cookies_only">刪除白名單外所有網站</string>
   <string name="pref_security_site_whitelist_cookies_and_data">同時刪除所有本機存放的數據庫</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Cookie 計數</string>
   <string name="pref_security_site_whitelist_cookies_verbose_summary">顯示已刪除和剩餘的 cookie 的數量</string>
   <string name="site_cookies_whitelisted">保持網站的 cookie</string>
+  <string name="cookies_deleted_info">刪除 cookies</string>
+  <string name="cookies_remain_info">保留 cookies</string>
 </resources>
