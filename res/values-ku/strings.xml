@@ -17,7 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="application_name">وێبگەر</string>
   <string name="choose_upload">فایلێک هەڵبژێرە بۆ بەرزکردنەوە</string>
-  <string name="uploads_disabled">بەرزکردنەوەی فایل لەکارخراوە</string>
+  <string name="uploads_disabled">بەرزکردنەوەی پەڕگە لەکارخراوە</string>
   <string name="new_tab">تاقێکی نوێ</string>
   <string name="new_incognito_tab">تاقێکی شاراوەی نوێ</string>
   <string name="tab_bookmarks">دیاریکراوەکان</string>
@@ -154,7 +154,7 @@
   <string name="pref_content_autofit">خۆ ڕێکخستنی پەڕە</string>
   <string name="pref_content_autofit_summary">فۆرماتکردنی په‌یج وێبگه‌ر بۆ پڕکردنه‌وه‌ی ڕوونما</string>
   <string name="pref_general_title">گشتی</string>
-  <string name="pref_general_sync_title">Sync</string>
+  <string name="pref_general_sync_title">هاوکاتگەری</string>
   <string name="pref_general_autofill_title">پر-خۆکارانه‌</string>
   <string name="pref_autofill_enabled">شێوه‌ی پڕ-خۆکارانه‌</string>
   <string name="pref_autofill_enabled_summary">پڕکردنه‌وه‌ی شێوه‌ی ماڵپه‌ڕ به‌ یه‌ک ده‌ستلێدان</string>
@@ -296,7 +296,7 @@
   <string name="pref_link_prefetch_summary">ڕێگه‌دان به‌ وێبگه‌ر بۆ داگرتنه‌وه‌ی به‌سته‌ره‌که‌ له‌ پشته‌گه‌ڵاڵه‌</string>
   <string name="pref_link_prefetch_dialogtitle">پەڕەی ماڵپەڕ دابەزین</string>
   <string name="browserFrameNetworkErrorLabel">کێشه‌ی په‌یوه‌ندی</string>
-  <string name="browserFrameFileErrorLabel">کێشه‌ی فایل</string>
+  <string name="browserFrameFileErrorLabel">کێشه‌ی پەڕگە</string>
   <string name="browserFrameFormResubmitMessage">ئه‌و په‌ڕه‌یه‌ی که‌ تۆ هه‌وڵه‌ده‌ی بیکه‌یته‌وه‌ پێشتر زانیاریه‌کانی تیادا نێردراوه‌ (\"POSTDATA\"). ئه‌گه‌ر تۆ فایله‌که‌ بنێریت هه‌ر چالاکیه‌ک له‌ په‌ڕه‌که‌ هه‌ڵیده‌گرێت (وه‌کو گه‌ڕان یان کڕینی له‌ ئه‌نته‌رنێت) دوباره‌ ئه‌کرێته‌وه‌.</string>
   <string name="loadSuspendedTitle">په‌یوه‌ندی نیه‌</string>
   <string name="loadSuspended">وێبگه‌ره‌که‌ ناتوانێت په‌ڕه‌که‌ بکاته‌وه‌ له‌به‌ر ئه‌وه‌ په‌یوه‌ندی ئه‌نته‌رنێت نیه‌.</string>
