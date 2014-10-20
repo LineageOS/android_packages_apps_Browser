@@ -17,7 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="application_name">Browser</string>
   <string name="choose_upload">Fichier fir eropzelueden auswielen</string>
-  <string name="uploads_disabled">D\'Eropluede vu Fichieren ass deaktivéiert.</string>
+  <string name="uploads_disabled">D\'Eropluede vu Fichieren ass desaktivéiert.</string>
   <string name="new_tab">Neien Tab</string>
   <string name="new_incognito_tab">Neie privaten Tab</string>
   <string name="tab_bookmarks">Lieszeechen</string>
@@ -186,7 +186,7 @@
   <string name="autofill_profile_editor_delete_profile">Läschen</string>
   <string name="autofill_setup_dialog_message">De Browser kann automatesch Formulairë wéi dësen ausfëllen. Wëlls du astelle wéi een Text automatesch soll ausgefëllt ginn?</string>
   <string name="autofill_setup_dialog_negative_toast">Du kanns zu all Moment d\'automatescht Ausfëllen ënner Browser &gt; Astellungen &gt; Allgemeng änneren.</string>
-  <string name="disable_autofill">Automatescht Ausfëllen deaktivéieren</string>
+  <string name="disable_autofill">Automatescht Ausfëllen desaktivéieren</string>
   <string name="pref_privacy_security_title">Privatsphär &amp; Sécherheet</string>
   <string name="pref_privacy_clear_cache">Cache eidel maachen</string>
   <string name="pref_privacy_clear_cache_summary">Lokal gespäichert Inhalter an Datebanke läschen</string>
