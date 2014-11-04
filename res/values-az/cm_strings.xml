@@ -22,6 +22,7 @@
   <string name="pref_security_site_whitelist_cookies">İzlәmәni azaldın. Coockielәri tez-tez silin</string>
   <string name="pref_security_site_whitelist_cookies_never">Heçvaxt silmә</string>
   <string name="pref_security_site_whitelist_cookies_only">Ağ siyahımdaki olmayan sәhifәlәrdәn silmәk</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Bütün yerli saxlama yerlərindəki verilənlər bazasını da sil</string>
   <string name="pref_security_site_whitelist_cookies_verbose">Cookie sayı</string>
   <string name="site_cookies_whitelisted">Saytın cookielәrini saxla</string>
   <string name="cookies_deleted_info">cookielәr silindi</string>

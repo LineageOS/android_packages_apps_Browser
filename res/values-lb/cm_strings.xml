@@ -16,13 +16,9 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="contextmenu_openlink_incognito_newwindow">Abrir nunha nova lapela de incógnito</string>
-  <string name="contextmenu_openlink_incognito_newwindow_background">Abrir nunca nova lapela de incógnito en segundo plano</string>
-  <string name="pref_content_ua">Axente de usuario</string>
-  <string name="pref_content_ua_summary">Escoller un axente de usuario</string>
-  <string name="pref_lab_websockets">WebSockets</string>
-  <string name="pref_lab_websockets_summary">Activar WebSockets</string>
-  <string name="accessibility_button_homescreen">Páxina inicial</string>
-  <string name="pref_security_site_whitelist_cookies_never">Non eliminar nunca</string>
-  <string name="pref_security_site_whitelist_cookies_verbose">Número de cookies</string>
+  <string name="contextmenu_openlink_incognito_newwindow">An engem Incognito-Tab opmaachen</string>
+  <string name="contextmenu_openlink_incognito_newwindow_background">An engem Incognito-Tab am Hannergrond opmaachen</string>
+  <string name="pref_security_site_whitelist_cookies_never">Ni läschen</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Och all déi lokal Datebanke läschen</string>
+  <string name="pref_security_site_whitelist_cookies_verbose">Cookie-Zieler</string>
 </resources>
