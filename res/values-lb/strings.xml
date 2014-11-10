@@ -297,7 +297,7 @@
   <string name="pref_link_prefetch_dialogtitle">Websäiten am Viraus lueden</string>
   <string name="browserFrameNetworkErrorLabel">Connectiounsproblem</string>
   <string name="browserFrameFileErrorLabel">Fichiersproblem</string>
-  <string name="browserFrameFormResubmitMessage">D\'Säit déi s du versichs ze kucken enthält Daten déi schonn iwwermëttelt goufen (\"POST-Daten\"). Wann s du d\'Daten nach eemol schécks gëtt d\'Aktioun déi vun der Säit ausgefouert gouf (z. B. Sichresultater lueden oder eng Online-Bestellung) nach eemol widderholl.</string>
+  <string name="browserFrameFormResubmitMessage">D\'Säit déi s du versichs ze kucken enthält Daten déi schonn iwwermëttelt goufen (\"POST-Daten\"). Wann s du d\'Daten nees schécks gëtt d\'Aktioun déi vun der Säit ausgefouert gouf (z. B. Sichresultater lueden oder eng Online-Bestellung) nees widderholl.</string>
   <string name="loadSuspendedTitle">Keng Connectioun</string>
   <string name="loadSuspended">De Browser kann dës Säit net luede well keng Internetconnectioun besteet.</string>
   <string name="clear_history">Historique läschen</string>
@@ -306,7 +306,7 @@
   <string name="go_home">Startsäit</string>
   <string name="add_new_bookmark">Lieszeechen dobäisetzen</string>
   <string name="add_bookmark_short">Dobäisetzen</string>
-  <string name="search_hint">Sichen oder URL antippen</string>
+  <string name="search_hint">Sichen oder URL aginn</string>
   <string name="search_button_text">Lass</string>
   <string name="search_settings_description">Lieszeechen an Historique</string>
   <string name="popup_window_attempt">Der Säit erlaben eng Pop-Up-Fënster opzemaachen?</string>
