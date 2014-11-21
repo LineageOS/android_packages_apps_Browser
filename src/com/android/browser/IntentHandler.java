@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package com.android.browser;
 
 import android.app.Activity;
@@ -49,7 +48,7 @@ public class IntentHandler {
     // "source" parameter for Google search from unknown source
     final static String GOOGLE_SEARCH_SOURCE_UNKNOWN = "unknown";
 
-    /* package */ static final UrlData EMPTY_URL_DATA = new UrlData(null);
+    /* package */static final UrlData EMPTY_URL_DATA = new UrlData(null);
 
     private Activity mActivity;
     private Controller mController;
@@ -96,7 +95,8 @@ public class IntentHandler {
                 || Intent.ACTION_SEARCH.equals(action)
                 || MediaStore.INTENT_ACTION_MEDIA_SEARCH.equals(action)
                 || Intent.ACTION_WEB_SEARCH.equals(action)) {
-            // If this was a search request (e.g. search query directly typed into the address bar),
+            // If this was a search request (e.g. search query directly typed
+            // into the address bar),
             // pass it on to the default web search provider.
             if (handleWebSearchIntent(mActivity, mController, intent)) {
                 return;
@@ -107,24 +107,31 @@ public class IntentHandler {
                 urlData = new UrlData(mSettings.getHomePage());
             }
 
+            /*
+             * According to this whitepaper
+             * "http://www.mbsd.jp/Whitepaper/IntentScheme.pdf" at pg 5-7, don't
+             * allow explicit call and selectors
+             */
+            intent.setComponent(null);
+            intent.setSelector(null);
+
             // If url is to view private data files, don't allow.
             Uri uri = intent.getData();
             if (uri != null && uri.getScheme().toLowerCase().startsWith("file") &&
-                uri.getPath().startsWith(mActivity.getDatabasePath("foo").getParent())) {
+                    uri.getPath().startsWith(mActivity.getDatabasePath("foo").getParent())) {
                 return;
             }
 
             if (intent.getBooleanExtra(Browser.EXTRA_CREATE_NEW_TAB, false)
-                  || urlData.isPreloaded()) {
+                    || urlData.isPreloaded()) {
                 Tab t = mController.openTab(urlData);
                 return;
             }
             /*
-             * TODO: Don't allow javascript URIs
-             * 0) If this is a javascript: URI, *always* open a new tab
-             * 1) If the URL is already opened, switch to that tab
-             * 2-phone) Reuse tab with same appId
-             * 2-tablet) Open new tab
+             * TODO: Don't allow javascript URIs 0) If this is a javascript:
+             * URI, *always* open a new tab 1) If the URL is already opened,
+             * switch to that tab 2-phone) Reuse tab with same appId 2-tablet)
+             * Open new tab
              */
             final String appId = intent
                     .getStringExtra(Browser.EXTRA_APPLICATION_ID);
@@ -145,7 +152,7 @@ public class IntentHandler {
                 }
             }
             if (Intent.ACTION_VIEW.equals(action)
-                     && !mActivity.getPackageName().equals(appId)) {
+                    && !mActivity.getPackageName().equals(appId)) {
                 if (!BrowserActivity.isTablet(mActivity)
                         && !mSettings.allowAppTabs()) {
                     Tab appTab = mTabControl.getTabFromAppId(appId);
@@ -225,7 +232,8 @@ public class IntentHandler {
                 url = intent.getStringExtra(SearchManager.QUERY);
                 if (url != null) {
                     // In general, we shouldn't modify URL from Intent.
-                    // But currently, we get the user-typed URL from search box as well.
+                    // But currently, we get the user-typed URL from search box
+                    // as well.
                     url = UrlUtils.fixUrl(url);
                     url = UrlUtils.smartUrlFilter(url);
                     String searchSource = "&source=android-" + GOOGLE_SEARCH_SOURCE_SUGGEST + "&";
@@ -238,7 +246,7 @@ public class IntentHandler {
                         if (TextUtils.isEmpty(source)) {
                             source = GOOGLE_SEARCH_SOURCE_UNKNOWN;
                         }
-                        url = url.replace(searchSource, "&source=android-"+source+"&");
+                        url = url.replace(searchSource, "&source=android-" + source + "&");
                     }
                 }
             }
@@ -247,19 +255,24 @@ public class IntentHandler {
     }
 
     /**
-     * Launches the default web search activity with the query parameters if the given intent's data
-     * are identified as plain search terms and not URLs/shortcuts.
-     * @return true if the intent was handled and web search activity was launched, false if not.
+     * Launches the default web search activity with the query parameters if the
+     * given intent's data are identified as plain search terms and not
+     * URLs/shortcuts.
+     * 
+     * @return true if the intent was handled and web search activity was
+     *         launched, false if not.
      */
     static boolean handleWebSearchIntent(Activity activity,
             Controller controller, Intent intent) {
-        if (intent == null) return false;
+        if (intent == null)
+            return false;
 
         String url = null;
         final String action = intent.getAction();
         if (Intent.ACTION_VIEW.equals(action)) {
             Uri data = intent.getData();
-            if (data != null) url = data.toString();
+            if (data != null)
+                url = data.toString();
         } else if (Intent.ACTION_SEARCH.equals(action)
                 || MediaStore.INTENT_ACTION_MEDIA_SEARCH.equals(action)
                 || Intent.ACTION_WEB_SEARCH.equals(action)) {
@@ -271,19 +284,24 @@ public class IntentHandler {
     }
 
     /**
-     * Launches the default web search activity with the query parameters if the given url string
-     * was identified as plain search terms and not URL/shortcut.
-     * @return true if the request was handled and web search activity was launched, false if not.
+     * Launches the default web search activity with the query parameters if the
+     * given url string was identified as plain search terms and not
+     * URL/shortcut.
+     * 
+     * @return true if the request was handled and web search activity was
+     *         launched, false if not.
      */
     private static boolean handleWebSearchRequest(Activity activity,
             Controller controller, String inUrl, Bundle appData,
             String extraData) {
-        if (inUrl == null) return false;
+        if (inUrl == null)
+            return false;
 
         // In general, we shouldn't modify URL from Intent.
         // But currently, we get the user-typed URL from search box as well.
         String url = UrlUtils.fixUrl(inUrl).trim();
-        if (TextUtils.isEmpty(url)) return false;
+        if (TextUtils.isEmpty(url))
+            return false;
 
         // URLs are handled by the regular flow of control, so
         // return early.
@@ -297,26 +315,27 @@ public class IntentHandler {
         if (controller == null || controller.getTabControl() == null
                 || controller.getTabControl().getCurrentWebView() == null
                 || !controller.getTabControl().getCurrentWebView()
-                .isPrivateBrowsingEnabled()) {
+                        .isPrivateBrowsingEnabled()) {
             new AsyncTask<Void, Void, Void>() {
                 @Override
                 protected Void doInBackground(Void... unused) {
-                        Browser.addSearchUrl(cr, newUrl);
+                    Browser.addSearchUrl(cr, newUrl);
                     return null;
                 }
             }.execute();
         }
 
         SearchEngine searchEngine = BrowserSettings.getInstance().getSearchEngine();
-        if (searchEngine == null) return false;
+        if (searchEngine == null)
+            return false;
         searchEngine.startSearch(activity, url, appData, extraData);
 
         return true;
     }
 
     /**
-     * A UrlData class to abstract how the content will be set to WebView.
-     * This base class uses loadUrl to show the content.
+     * A UrlData class to abstract how the content will be set to WebView. This
+     * base class uses loadUrl to show the content.
      */
     static class UrlData {
         final String mUrl;
