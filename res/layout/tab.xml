@@ -24,7 +24,6 @@
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <!-- Wrapper layout for the WebView, which must be in a FrameLayout. -->
     <FrameLayout android:id="@+id/webview_wrapper"
         android:layout_width="match_parent"
