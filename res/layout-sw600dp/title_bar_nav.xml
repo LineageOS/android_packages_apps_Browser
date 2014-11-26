@@ -17,7 +17,8 @@
 <com.android.browser.NavigationBarTablet
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
-    android:background="@drawable/bg_urlbar">
+    android:elevation="5dp"
+    android:background="@color/primary">
     <LinearLayout
         android:id="@+id/navbuttons"
         android:layout_width="wrap_content"
@@ -25,14 +26,14 @@
         android:orientation="horizontal">
         <ImageButton
             android:id="@+id/back"
-            android:src="@drawable/ic_back_holo_dark"
+            android:src="@drawable/ic_back_dark"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/accessibility_button_back"
             style="@style/HoloButton" />
         <ImageButton
             android:id="@+id/forward"
-            android:src="@drawable/ic_forward_holo_dark"
+            android:src="@drawable/ic_forward_dark"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/accessibility_button_forward"
@@ -44,7 +45,7 @@
             style="@style/HoloButton"
             android:gravity="center_vertical"
             android:contentDescription="@string/accessibility_button_stop"
-            android:src="@drawable/ic_stop_holo_dark" />
+            android:src="@drawable/ic_stop_dark" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/urlbar_focused"
@@ -57,7 +58,7 @@
             android:id="@+id/url_icon"
             android:layout_width="32dip"
             android:layout_height="20dip"
-            android:src="@drawable/ic_web_holo_dark"
+            android:src="@drawable/ic_web_dark"
             android:layout_gravity="center" />
         <ImageView
             android:id="@+id/lock"
@@ -83,6 +84,7 @@
             android:scrollHorizontally="true"
             android:inputType="textUri"
             android:imeOptions="actionGo|flagNoExtractUi|flagNoFullscreen"
+            android:theme="@style/Widget.UrlInputView"
             style="@style/Suggestions" />
         <ImageButton
             android:id="@+id/star"
@@ -93,14 +95,14 @@
             style="@style/HoloButton" />
         <ImageButton
             android:id="@+id/clear"
-            android:src="@drawable/ic_stop_holo_dark"
+            android:src="@drawable/ic_stop_dark"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/accessibility_button_clear"
             style="@style/HoloButton" />
         <ImageButton
             android:id="@+id/voice"
-            android:src="@drawable/ic_voice_search_holo_dark"
+            android:src="@drawable/ic_voice_search_dark"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/accessibility_button_voice"
@@ -108,7 +110,7 @@
         </LinearLayout>
     <ImageButton
         android:id="@+id/search"
-        android:src="@drawable/ic_search_holo_dark"
+        android:src="@drawable/ic_search_dark"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
@@ -121,5 +123,5 @@
         android:scaleType="center"
         style="@style/HoloButton"
         android:contentDescription="@string/accessibility_button_bookmarks"
-        android:src="@drawable/ic_bookmarks_history_holo_dark" />
+        android:src="@drawable/ic_bookmarks_history_dark" />
 </com.android.browser.NavigationBarTablet>

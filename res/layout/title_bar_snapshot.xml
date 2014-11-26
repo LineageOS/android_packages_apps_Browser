@@ -19,7 +19,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="@drawable/bg_urlbar">
+    android:background="@color/primary"
+    android:elevation="8dp">
     <ImageView
         android:src="@drawable/ic_search_category_history"
         android:layout_width="wrap_content"
@@ -56,7 +57,7 @@
         android:id="@+id/tab_switcher"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_windows_holo_dark"
+        android:src="@drawable/ic_windows_dark"
         android:contentDescription="@string/accessibility_button_navscreen"
         style="@style/HoloButton" />
     <ImageButton

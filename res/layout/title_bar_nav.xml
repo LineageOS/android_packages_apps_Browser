@@ -17,7 +17,8 @@
 <com.android.browser.NavigationBarPhone
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
-    android:background="@drawable/bg_urlbar">
+    android:background="@color/primary"
+    android:elevation="8dp">
     <LinearLayout
         android:id="@+id/title_bg"
         android:layout_width="0dip"
@@ -34,14 +35,14 @@
             android:paddingLeft="4dip"
             android:paddingRight="8dip"
             android:visibility="gone"
-            android:src="@drawable/ic_search_category_suggest" />
+            android:src="@drawable/ic_search_dark" />
         <ImageView
             android:id="@+id/incognito_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="4dip"
             android:visibility="gone"
-            android:src="@drawable/ic_incognito_holo_dark" />
+            android:src="@drawable/ic_incognito_dark" />
         <FrameLayout
             android:id="@+id/iconcombo"
             android:layout_width="44dip"
@@ -69,7 +70,7 @@
             android:layout_gravity="center_vertical"
             android:paddingLeft="4dip"
             android:contentDescription="@string/accessibility_button_stop"
-            android:src="@drawable/ic_stop_holo_dark"
+            android:src="@drawable/ic_stop_dark"
             style="@style/HoloButton" />
         <com.android.browser.UrlInputView
             android:id="@+id/url"
@@ -88,6 +89,7 @@
             android:inputType="textUri"
             android:imeOptions="actionGo|flagNoExtractUi|flagNoFullscreen"
             style="@style/Suggestions"
+            android:theme="@style/Widget.UrlInputView"
             android:background="@null" />
         <ImageView
             android:id="@+id/voice"
@@ -95,7 +97,7 @@
             android:layout_height="match_parent"
             android:paddingRight="4dip"
             android:contentDescription="@string/accessibility_button_voice"
-            android:src="@drawable/ic_voice_search_holo_dark"
+            android:src="@drawable/ic_voice_search_dark"
             style="@style/HoloButton"
             android:visibility="gone" />
         <ImageView
@@ -104,7 +106,7 @@
             android:layout_height="match_parent"
             android:paddingRight="4dip"
             android:contentDescription="@string/accessibility_button_clear"
-            android:src="@drawable/ic_close_window_holo_dark"
+            android:src="@drawable/ic_close_window_dark"
             style="@style/HoloButton"
             android:visibility="gone" />
     </LinearLayout>
@@ -113,7 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
             android:contentDescription="@string/accessibility_button_navscreen"
-        android:src="@drawable/ic_windows_holo_dark"
+        android:src="@drawable/ic_windows_dark"
         style="@style/HoloButton" />
     <ImageButton
         android:id="@+id/more"

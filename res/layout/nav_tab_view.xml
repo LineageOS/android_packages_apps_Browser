@@ -21,7 +21,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/nav_tab_bg"
-    android:focusable="false">
+    android:focusable="false"
+    android:elevation="6dp">
     <LinearLayout
         android:id="@+id/titlebar"
         android:orientation="horizontal"
@@ -38,7 +39,7 @@
             android:singleLine="true"
             android:ellipsize="end"
             android:lines="1"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textAppearance="?android:attr/textAppearanceSmallInverse"
             android:scrollHorizontally="true"
             android:drawablePadding="8dip" />
         <ImageView
@@ -53,7 +54,7 @@
     </LinearLayout>
     <ImageView
         android:id="@+id/tab_view"
-        android:src="@drawable/ic_stop_holo_dark"
+        android:src="@drawable/ic_stop_dark"
         android:layout_width="@dimen/nav_tab_width"
         android:layout_height="@dimen/nav_tab_height"
         android:paddingLeft="2dip"

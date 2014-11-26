@@ -246,7 +246,7 @@ public class BookmarkThumbnailWidgetService extends RemoteViewsService {
                 } else {
                     views.setImageViewResource(R.id.thumb, R.drawable.thumb_bookmark_widget_folder_holo);
                 }
-                views.setImageViewResource(R.id.favicon, R.drawable.ic_bookmark_widget_bookmark_holo_dark);
+                views.setImageViewResource(R.id.favicon, R.drawable.ic_bookmark_widget_bookmark_dark);
                 views.setDrawableParameters(R.id.thumb, true, 0, -1, null, -1);
             } else {
                 // RemoteViews require a valid bitmap config

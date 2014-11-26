@@ -20,6 +20,7 @@
     android:orientation="vertical"
     android:padding="@dimen/combo_horizontalSpacing"
     android:background="@drawable/bookmark_thumb_selector"
+    android:elevation="3dp"
     >
 
     <ImageView

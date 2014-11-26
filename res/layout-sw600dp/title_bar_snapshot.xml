@@ -19,7 +19,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="@drawable/bg_urlbar">
+    android:background="@color/primary_dark">
     <ImageView
         android:id="@+id/date_icon"
         android:src="@drawable/ic_search_category_history"
@@ -50,6 +50,6 @@
         android:scaleType="center"
         android:paddingRight="16dip"
         style="@style/HoloButton"
-        android:src="@drawable/ic_bookmarks_history_holo_dark" 
+        android:src="@drawable/ic_bookmarks_history_dark"
         android:contentDescription="@string/accessibility_button_bookmarks" />
 </com.android.browser.SnapshotBar>

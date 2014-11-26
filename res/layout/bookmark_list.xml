@@ -21,6 +21,7 @@
     android:layout_height="match_parent"
     android:minHeight="@dimen/widgetItemMinHeight"
     android:paddingLeft="16dip"
+    android:theme="@style/PreferencesTheme"
     android:background="@drawable/bookmark_thumb_selector">
     <ImageView
         android:id="@+id/favicon"

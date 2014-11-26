@@ -121,8 +121,8 @@ public abstract class BaseUi implements UI {
         Resources res = mActivity.getResources();
         mInputManager = (InputMethodManager)
                 browser.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        mLockIconSecure = res.getDrawable(R.drawable.ic_secure_holo_dark);
-        mLockIconMixed = res.getDrawable(R.drawable.ic_secure_partial_holo_dark);
+        mLockIconSecure = res.getDrawable(R.drawable.ic_secure_dark);
+        mLockIconMixed = res.getDrawable(R.drawable.ic_secure_partial_dark);
         FrameLayout frameLayout = (FrameLayout) mActivity.getWindow()
                 .getDecorView().findViewById(android.R.id.content);
         LayoutInflater.from(mActivity)

@@ -169,7 +169,7 @@ public class BreadCrumbView extends LinearLayout implements OnClickListener {
 
     private void addBackButton() {
         mBackButton = new ImageButton(mContext);
-        mBackButton.setImageResource(R.drawable.ic_back_hierarchy_holo_dark);
+        mBackButton.setImageResource(R.drawable.ic_back_hierarchy_dark);
         TypedValue outValue = new TypedValue();
         getContext().getTheme().resolveAttribute(
                 android.R.attr.selectableItemBackground, outValue, true);
