@@ -20,6 +20,7 @@
     android:orientation="vertical"
     android:background="@color/black"
     android:padding="0dip"
+    android:elevation="8dp"
     >
     <TextView android:id="@+id/title1"
         android:layout_width="match_parent"
@@ -57,5 +58,6 @@
         android:typeface="sans"
         android:textSize="12sp"
         android:textColor="#DDDDDD"
+        android:elevation="5dp"
         />
 </LinearLayout>
