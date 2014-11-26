@@ -32,21 +32,23 @@
         android:layout_height="@dimen/toolbar_height"
         android:layout_gravity="top"
         android:gravity="right"
-        android:background="#CC0d0d0d">
+        android:background="#4caf50"
+        android:elevation="8dp">
         <ImageButton
-            android:id="@+id/newtab"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            style="@style/HoloButton"
-            android:gravity="center_vertical"
-            android:contentDescription="@string/accessibility_button_newtab"
-            android:src="@drawable/ic_new_window_holo_dark" />
+          android:id="@+id/newtab"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          style="@style/HoloButton"
+          android:gravity="center_vertical"
+          android:contentDescription="@string/accessibility_button_newtab"
+          android:visibility="gone"
+          android:src="@drawable/ic_new_window_dark" />
         <ImageButton
             android:id="@+id/bookmarks"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/accessibility_button_bookmarks"
-            android:src="@drawable/ic_bookmarks_history_holo_dark"
+            android:src="@drawable/ic_bookmarks_history_dark"
             style="@style/HoloButton" />
         <ImageButton
             android:id="@+id/more"
@@ -59,4 +61,20 @@
             android:contentDescription="@string/accessibility_button_more"
             android:src="@drawable/ic_menu_overflow" />
     </LinearLayout>
+    <FrameLayout
+      android:id="@+id/floating_action_button_container"
+      android:background="@drawable/fab_accent"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentBottom="true"
+      android:layout_margin="16dp"
+      android:elevation="4dp"
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content">
+      <ImageButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/floating_action_button"
+        android:src="@drawable/ic_new_window_dark"/>
+      </FrameLayout>
 </RelativeLayout>
