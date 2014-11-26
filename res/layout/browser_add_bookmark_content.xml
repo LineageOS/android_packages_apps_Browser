@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical"
-            android:drawableLeft="@drawable/ic_bookmark_on_holo_dark"
+            android:drawableLeft="@drawable/ic_bookmark_black"
             android:text="@string/bookmark_this_page"
             android:textAppearance="?android:attr/textAppearanceMedium" />
         <View android:id="@+id/remove_divider"
@@ -76,7 +76,7 @@
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical"
             android:text="@string/remove"
-            android:drawableLeft="@drawable/trashcan"
+            android:drawableLeft="@drawable/ic_delete_black"
             android:visibility="gone"
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </LinearLayout>
