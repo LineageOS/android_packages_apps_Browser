@@ -50,6 +50,6 @@
         android:scaleType="center"
         android:paddingRight="16dip"
         style="@style/HoloButton"
-        android:src="@drawable/ic_bookmarks_history_holo_dark" 
+        android:src="@drawable/ic_bookmarks_history_dark" 
         android:contentDescription="@string/accessibility_button_bookmarks" />
 </com.android.browser.SnapshotBar>
