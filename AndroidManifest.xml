@@ -20,6 +20,8 @@
 
     <original-package android:name="com.android.browser" />
 
+    <uses-sdk android:minSdkVersion="21"/>
+
     <permission android:name="com.android.browser.permission.PRELOAD"
         android:label="@string/permission_preload_label"
         android:protectionLevel="signatureOrSystem" />
@@ -61,6 +63,7 @@
                   android:authorities="com.android.browser;browser"
                   android:multiprocess="false"
                   android:exported="true"
+                  android:theme="@style/PreferencesTheme"
                   android:readPermission="com.android.browser.permission.READ_HISTORY_BOOKMARKS"
                   android:writePermission="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS">
             <path-permission android:path="/bookmarks/search_suggest_query"
@@ -156,10 +159,9 @@
         </activity>
 
         <activity android:name="ShortcutActivity"
-            android:theme="@style/ShortcutTheme"
+          android:theme="@style/PreferencesTheme"
             android:label="@string/shortcut_bookmark"
             android:icon="@mipmap/ic_launcher_shortcut_browser_bookmark">
-
             <intent-filter>
                 <action android:name="android.intent.action.CREATE_SHORTCUT" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -167,7 +169,7 @@
 
         </activity>
 
-        <activity android:name="BrowserPreferencesPage" android:label="@string/menu_preferences">
+        <activity android:name="BrowserPreferencesPage" android:label="@string/menu_preferences" android:theme="@style/PreferencesTheme">
             <intent-filter>
                <action android:name="android.intent.action.MANAGE_NETWORK_USAGE" />
                <category android:name="android.intent.category.DEFAULT" />
@@ -177,7 +179,7 @@
         <activity android:name="BookmarkSearch"
                   android:label="@string/bookmarks_search"
                   android:stateNotNeeded="true"
-                  android:theme="@android:style/Theme.NoDisplay"
+                  android:theme="@style/PreferencesTheme"
                   android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -188,17 +190,18 @@
         </activity>
 
         <activity android:name="AddBookmarkPage" android:label="@string/bookmarks_add_page"
-                  android:theme="@style/DialogWhenLarge"
+                  android:theme="@style/PreferencesTheme"
                   android:configChanges="orientation|keyboardHidden|screenSize"
                   android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.INSERT" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="vnd.android.cursor.dir/bookmark"/>
-            </intent-filter>
+                android:theme="@style/PreferencesTheme"  </intent-filter>
         </activity>
 
-        <activity android:name="ComboViewActivity">
+        <activity android:name="ComboViewActivity"
+        android:theme="@style/PreferencesTheme">
         </activity>
 
         <!-- Bookmark thumbnail homescreen widget -->
@@ -223,7 +226,7 @@
             android:name=".widget.BookmarkWidgetProxy"
             android:exported="false" />
         <activity android:name=".widget.BookmarkWidgetConfigure"
-            android:theme="@android:style/Theme.Holo.DialogWhenLarge">
+            android:theme="@android:style/Theme.Material.DialogWhenLarge">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
             </intent-filter>
@@ -282,4 +285,3 @@
     </application>
 
 </manifest>
-
