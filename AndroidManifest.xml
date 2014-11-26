@@ -20,6 +20,8 @@
 
     <original-package android:name="com.android.browser" />
 
+    <uses-sdk android:minSdkVersion="21"/>
+
     <permission android:name="com.android.browser.permission.PRELOAD"
         android:label="@string/permission_preload_label"
         android:protectionLevel="signatureOrSystem" />
@@ -282,4 +284,3 @@
     </application>
 
 </manifest>
-
