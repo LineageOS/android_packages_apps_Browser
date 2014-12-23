@@ -18,7 +18,18 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="contextmenu_openlink_incognito_newwindow">An engem Incognito-Tab opmaachen</string>
   <string name="contextmenu_openlink_incognito_newwindow_background">An engem Incognito-Tab am Hannergrond opmaachen</string>
+  <string name="pref_content_ua">User-Agent</string>
+  <string name="pref_content_ua_summary">User-Agent wielen</string>
+  <string name="pref_lab_websockets">WebSockets</string>
+  <string name="pref_lab_websockets_summary">WebSockets aktivéieren</string>
+  <string name="accessibility_button_homescreen">Heemschierm</string>
+  <string name="pref_security_site_whitelist_cookies">D\'Verfollegung reduzéieren andeem s d\'Cookien dacks geläscht ginn</string>
   <string name="pref_security_site_whitelist_cookies_never">Ni läschen</string>
+  <string name="pref_security_site_whitelist_cookies_only">Vun alle Sitte läschen déi net op menger wäisser Lëscht stinn</string>
   <string name="pref_security_site_whitelist_cookies_and_data">Och all déi lokal Datebanke läschen</string>
   <string name="pref_security_site_whitelist_cookies_verbose">Cookie-Zieler</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">D\'Unzuel vun de geläschten an den iwwrege Cookien uweisen</string>
+  <string name="site_cookies_whitelisted">Cookië vun dësem Site späicheren</string>
+  <string name="cookies_deleted_info">Cookië geläscht</string>
+  <string name="cookies_remain_info">Cookien iwwreg</string>
 </resources>
