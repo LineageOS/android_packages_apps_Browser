@@ -52,7 +52,7 @@
   <string name="ssl_unknown">Onbekannten Zertifikatsfeeler.</string>
   <string name="stopping">Gëtt gestoppt\u2026</string>
   <string name="stop">Stopp</string>
-  <string name="reload">Nei lueden</string>
+  <string name="reload">Opfrëschen</string>
   <string name="back">Zréck</string>
   <string name="forward">Weider</string>
   <string name="save">OK</string>
@@ -166,7 +166,7 @@
   <string name="autologin_bar_login_text">Aloggen</string>
   <string name="autologin_bar_hide_text">Verstoppen</string>
   <string name="autologin_bar_error">Alogge war net méiglech.</string>
-  <string name="autofill_profile_editor_heading">Gëff den Text an deen automatesch a Formulairë soll ausgefëllt ginn.</string>
+  <string name="autofill_profile_editor_heading">Gëff den Text an, deen automatesch a Formulairë soll ausgefëllt ginn.</string>
   <string name="autofill_profile_editor_name">Ganzen Numm:</string>
   <string name="autofill_profile_editor_email_address">E-Mail:</string>
   <string name="autofill_profile_editor_company_name">Firmennumm:</string>
@@ -176,7 +176,7 @@
   <string name="autofill_profile_editor_address_line_2_hint">Appartement, Unitéit, Gebai, Stack, etc.</string>
   <string name="autofill_profile_editor_city">Stad/Uertschaft:</string>
   <string name="autofill_profile_editor_state">Staat/Provënz/Regioun:</string>
-  <string name="autofill_profile_editor_zip_code">Postleitzuel:</string>
+  <string name="autofill_profile_editor_zip_code">Postleetzuel:</string>
   <string name="autofill_profile_editor_country">Land:</string>
   <string name="autofill_profile_editor_phone_number">Telefon:</string>
   <string name="autofill_profile_editor_phone_number_invalid">Ongëlteg Telefonsnummer.</string>
@@ -188,7 +188,7 @@
   <string name="autofill_setup_dialog_negative_toast">Du kanns zu all Moment d\'automatescht Ausfëllen ënner Browser &gt; Astellungen &gt; Allgemeng änneren.</string>
   <string name="disable_autofill">Automatescht Ausfëllen desaktivéieren</string>
   <string name="pref_privacy_security_title">Privatsphär &amp; Sécherheet</string>
-  <string name="pref_privacy_clear_cache">Cache eidel maachen</string>
+  <string name="pref_privacy_clear_cache">Tëschespäicher eidel maachen</string>
   <string name="pref_privacy_clear_cache_summary">Lokal gespäichert Inhalter an Datebanke läschen</string>
   <string name="pref_privacy_clear_cache_dlg">Lokal gespäichert Inhalter an Datebanke läschen?</string>
   <string name="pref_privacy_cookies_title">Cookien</string>
@@ -215,7 +215,7 @@
   <string name="pref_security_remember_passwords">Passwierder verhalen</string>
   <string name="pref_security_remember_passwords_summary">Benotzernimm a Passwierder fir Internetsäite späicheren</string>
   <string name="pref_security_save_form_data">Formulairedate verhalen</string>
-  <string name="pref_security_save_form_data_summary">Date déi ech a Formulairen agi fir spéider verhalen</string>
+  <string name="pref_security_save_form_data_summary">Daten, déi ech a Formulairen aginn, fir spéider verhalen</string>
   <string name="pref_security_show_security_warning">Sécherheetswarnungen uweisen</string>
   <string name="pref_security_show_security_warning_summary">Warnung uweise wann et e Problem mat der Sécherheet vun engem Site gëtt</string>
   <string name="pref_security_accept_cookies">Cookien acceptéieren</string>
@@ -273,28 +273,27 @@
   <string name="pref_lab_quick_controls_summary">
         Den Daum vum lénksen op de rietse Bord wësche fir déi séier Steierung opzeruffen an d\'App- an Adresszeile verstoppen</string>
   <string name="pref_use_instant_search">Google Instant</string>
-  <string name="pref_use_instant_search_summary">
-      Google Instant benotze fir bei der Google-Sich Resultater scho beim Tippen ze lueden (den Dateverbrauch gëtt doduerch erhéicht).</string>
+  <string name="pref_use_instant_search_summary">Google Instant benotze fir bei der Google-Sich Resultater scho beim Aginn ze lueden (den Dateverbrauch gëtt doduerch erhéicht).</string>
   <string name="pref_lab_fullscreen">Vollschierm</string>
   <string name="pref_lab_fullscreen_summary">
-      Vollschierm-Modus benotze fir d\'Statusleescht ze verstoppen</string>
+      Vollschierm-Modus benotze fir d\'Statusläischt ze verstoppen</string>
   <string name="pref_data_title">Gestioun vun der Bandbreet</string>
   <string name="pref_data_preload_title">Sichresultater virlueden</string>
   <string-array name="pref_data_preload_choices">
     <item>Ni</item>
-    <item>Just mat WLAN</item>
+    <item>Just iwwer WLAN</item>
     <item>Ëmmer</item>
   </string-array>
   <string name="pref_data_preload_summary">De Browser ka vertrauenswierdeg Sichresultater am Hannergrond virlueden</string>
   <string name="pref_data_preload_dialogtitle">Sichresultater virlueden</string>
-  <string name="pref_link_prefetch_title">Websäiten am Viraus lueden</string>
+  <string name="pref_link_prefetch_title">Websäite virlueden</string>
   <string-array name="pref_link_prefetch_choices">
     <item>Ni</item>
-    <item>Just mat WLAN</item>
+    <item>Just iwwer WLAN</item>
     <item>Ëmmer</item>
   </string-array>
-  <string name="pref_link_prefetch_summary">Dem Browser erlabe verlinkt Säiten am Hannergrond am Viraus ze lueden</string>
-  <string name="pref_link_prefetch_dialogtitle">Websäiten am Viraus lueden</string>
+  <string name="pref_link_prefetch_summary">Dem Browser erlaben, verlinkt Säiten am Hannergrond virzelueden</string>
+  <string name="pref_link_prefetch_dialogtitle">Websäite virlueden</string>
   <string name="browserFrameNetworkErrorLabel">Connectiounsproblem</string>
   <string name="browserFrameFileErrorLabel">Fichiersproblem</string>
   <string name="browserFrameFormResubmitMessage">D\'Säit déi s du versichs ze kucken enthält Daten déi schonn iwwermëttelt goufen (\"POST-Daten\"). Wann s du d\'Daten nees schécks gëtt d\'Aktioun déi vun der Säit ausgefouert gouf (z. B. Sichresultater lueden oder eng Online-Bestellung) nees widderholl.</string>
@@ -306,7 +305,7 @@
   <string name="go_home">Startsäit</string>
   <string name="add_new_bookmark">Lieszeechen dobäisetzen</string>
   <string name="add_bookmark_short">Dobäisetzen</string>
-  <string name="search_hint">Sichen oder URL aginn</string>
+  <string name="search_hint">URL aginn oder sichen</string>
   <string name="search_button_text">Lass</string>
   <string name="search_settings_description">Lieszeechen an Historique</string>
   <string name="popup_window_attempt">Der Säit erlaben eng Pop-Up-Fënster opzemaachen?</string>
