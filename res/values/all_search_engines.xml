@@ -212,7 +212,15 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
     <item>UTF-8</item>
     <item>https://www.google.com/complete/search?client=android&amp;q={searchTerms}</item>
   </string-array>
-  <string-array name="bing_en_NZ" translatable="false">
+  <string-array name="duckduckgo" translatable="false">
+    <item>DuckDuckGo</item>
+    <item>duckduckgo.com</item>
+    <item>https://www.duckduckgo.com/favicon.ico</item>
+    <item>https://www.duckduckgo.com/?q={searchTerms}</item>
+    <item>UTF-8</item>
+    <item></item>
+  </string-array>
+  <string-array name="dg_en_NZ" translatable="false">
     <item>Bing</item>
     <item>bing.com</item>
     <item>http://www.bing.com/s/wlflag.ico</item>
