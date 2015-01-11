@@ -296,7 +296,7 @@
   <string name="pref_link_prefetch_dialogtitle">Websäite virlueden</string>
   <string name="browserFrameNetworkErrorLabel">Connectiounsproblem</string>
   <string name="browserFrameFileErrorLabel">Fichiersproblem</string>
-  <string name="browserFrameFormResubmitMessage">D\'Säit déi s du versichs ze kucken enthält Daten déi schonn iwwermëttelt goufen (\"POST-Daten\"). Wann s du d\'Daten nees schécks gëtt d\'Aktioun déi vun der Säit ausgefouert gouf (z. B. Sichresultater lueden oder eng Online-Bestellung) nees widderholl.</string>
+  <string name="browserFrameFormResubmitMessage">D\'Säit déi s du versichs unzekucken huet Daten déi schonn iwwermëttelt goufen (\"POST-Daten\"). Wann s du d\'Daten nees schécks gëtt d\'Aktioun déi vun der Säit ausgefouert gouf (z. B. Sichresultater lueden oder eng Online-Bestellung) nees widderholl.</string>
   <string name="loadSuspendedTitle">Keng Connectioun</string>
   <string name="loadSuspended">De Browser kann dës Säit net luede well keng Internetconnectioun besteet.</string>
   <string name="clear_history">Historique läschen</string>
