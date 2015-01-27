@@ -36,7 +36,7 @@
     </style>
     <style name="DialogWhenLarge" parent="@android:style/Theme.Material.DialogWhenLarge" >
         <item name="android:windowActionBar">false</item>
-        <item name="android:popupBackground">#fafafa</item>
+        <item name="android:popupBackground">@color/white</item>
     </style>
     <style name="BookmarkTheme" parent="@android:Theme.Material">
         <item name="android:colorPrimary">@color/primary</item>
@@ -56,7 +56,7 @@
         <item name="android:displayOptions"></item>
     </style>
     <style name="Suggestions" parent="@android:style/Widget.Material.AutoCompleteTextView">
-        <item name="android:popupBackground">#fafafa</item>
+        <item name="android:popupBackground">@color/white</item>
         <item name="android:dropDownVerticalOffset">0dip</item>
         <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
         <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
