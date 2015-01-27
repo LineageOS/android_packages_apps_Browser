@@ -31,7 +31,7 @@
         android:layout_height="@dimen/toolbar_height"
         android:layout_gravity="top"
         android:gravity="right"
-        android:background="#4caf50"
+        android:background="@color/primary"
         android:elevation="8dp">
         <ImageButton
             android:id="@+id/newtab"

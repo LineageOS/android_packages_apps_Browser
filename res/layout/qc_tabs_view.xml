@@ -34,7 +34,7 @@
         android:typeface="sans"
         android:textSize="12sp"
         android:textStyle="bold"
-        android:textColor="#4caF50"
+        android:textColor="@color/primary"
         android:background="@drawable/tab_nr"
         />
 </RelativeLayout>
