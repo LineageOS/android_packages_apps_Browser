@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fad55976_6c3f0126",
+        "filename": "res/values/colors.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-01-29T08:20:32Z",
+      "side": 1,
+      "message": "none of these changes are necessary.  Themes can already change these color values so there is no added value with this change.",
+      "revId": "82cacff11c72eb0b6dab36cb00a3a4cac9f0702c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad55976_2c350946",
+        "filename": "res/values/styles.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-01-29T08:20:32Z",
+      "side": 1,
+      "message": "this is not necessary since themes can theme styles.  A theme designer can easily theme this style and change the color there.",
+      "revId": "82cacff11c72eb0b6dab36cb00a3a4cac9f0702c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad55976_0c3ac536",
+        "filename": "res/values/styles.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 9199
+      },
+      "writtenOn": "2015-01-29T08:20:32Z",
+      "side": 1,
+      "message": "same applies to this",
+      "revId": "82cacff11c72eb0b6dab36cb00a3a4cac9f0702c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
