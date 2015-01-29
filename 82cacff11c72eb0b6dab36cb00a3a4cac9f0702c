@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "fad55976_ac2f39a0",
+        "filename": "res/values/colors.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1391
+      },
+      "writtenOn": "2015-01-29T09:45:34Z",
+      "side": 1,
+      "message": "IMO there\u0027s added value in doing this. E.g. theme I made to test this only overlays four lines to change all the primary colors instead overlaying the whole/most of the file.",
+      "parentUuid": "fad55976_6c3f0126",
+      "revId": "82cacff11c72eb0b6dab36cb00a3a4cac9f0702c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fad55976_2c350946",
         "filename": "res/values/styles.xml",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-01-29T08:20:32Z",
       "side": 1,
       "message": "this is not necessary since themes can theme styles.  A theme designer can easily theme this style and change the color there.",
+      "revId": "82cacff11c72eb0b6dab36cb00a3a4cac9f0702c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fad55976_8c2cf5ac",
+        "filename": "res/values/styles.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1391
+      },
+      "writtenOn": "2015-01-29T09:45:34Z",
+      "side": 1,
+      "message": "It\u0027s not a matter of what\u0027s possible with theme engine. This should have never been hardcoded in the first place. This is going to stay.",
+      "parentUuid": "fad55976_2c350946",
       "revId": "82cacff11c72eb0b6dab36cb00a3a4cac9f0702c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
