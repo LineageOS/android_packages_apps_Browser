@@ -63,6 +63,7 @@ public class NavScreen extends RelativeLayout
     ImageView mFavicon;
     ImageButton mCloseTab;
     ImageView mNewTabFab;
+    ImageView mBookFab;
 
     NavTabScroller mScroller;
     TabAdapter mAdapter;
@@ -144,6 +145,14 @@ public class NavScreen extends RelativeLayout
         @Override
         public void onClick(View v) {
           openNewTab();
+        }
+      });
+      mBookFab = (ImageView) findViewById(R.id.floating_action_book_button);
+      mBookFab.setOnClickListener(
+      new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          mUiController.bookmarksOrHistoryPicker(ComboViews.Bookmarks);
         }
       });
     }
