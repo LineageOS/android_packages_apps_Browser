@@ -46,6 +46,7 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/accessibility_button_bookmarks"
             android:src="@drawable/ic_bookmarks_history_dark"
+            android:visibility="gone"
             style="@style/HoloButton" />
         <ImageButton
             android:id="@+id/more"
