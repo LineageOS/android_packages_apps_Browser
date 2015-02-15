@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="contextmenu_openlink_incognito_newwindow">Abrir num novo separador anónimo</string>
-  <string name="contextmenu_openlink_incognito_newwindow_background">Abrir num novo separador anónimo em segundo plano</string>
+  <string name="contextmenu_openlink_incognito_newwindow_background">Abrir num novo separador incógnito em segundo plano</string>
   <string name="pref_content_ua">Modo de navegação</string>
   <string name="pref_content_ua_summary">Escolher um modo de navegação</string>
   <string name="pref_lab_websockets">WebSockets</string>
