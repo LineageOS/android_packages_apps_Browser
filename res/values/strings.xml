@@ -800,37 +800,12 @@
     <!-- Bookmarks -->
     <string-array name="bookmarks" translatable="false">
         <item>Google</item>
-        <item>http://www.google.com/</item>
-        <item>Picasa</item>
-        <item>http://picasaweb.google.com/</item>
-        <item>Yahoo!</item>
-        <item>http://www.yahoo.com/</item>
-        <item>MSN</item>
-        <item>http://www.msn.com/</item>
-        <item>Twitter</item>
-        <item>http://twitter.com/</item>
-        <item>Facebook</item>
-        <item>http://www.facebook.com/</item>
-        <item>Wikipedia</item>
-        <item>http://www.wikipedia.org/</item>
-        <item>eBay</item>
-        <item>http://www.ebay.com/</item>
-        <item>CNN</item>
-        <item>http://www.cnn.com/</item>
-        <item>NY Times</item>
-        <item>http://www.nytimes.com/</item>
-        <item>ESPN</item>
-        <item>http://espn.com/</item>
-        <item>Amazon</item>
-        <item>http://www.amazon.com/</item>
-        <item>Weather Channel</item>
-        <item>http://www.weather.com/</item>
-        <item>BBC</item>
-        <item>http://www.bbc.co.uk/</item>
+        <item>https://www.google.com</item>
+        <item>CyanogenMod</item>
+        <item>http://www.cyanogenmod.org</item>
+        <item>CyanogenMod Wiki</item>
+        <item>http://wiki.cyanogenmod.org/w/Main_Page</item>
     </string-array>
-
-    <!-- Bookmark name for Picasa website -->
-    <string name="picasa" translatable="false">Picasa</string>
 
     <!-- The description of the suggestion that lets the user search the web for the query currently
          in the text field. -->
