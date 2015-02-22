@@ -159,7 +159,7 @@
         </activity>
 
         <activity android:name="ShortcutActivity"
-          android:theme="@style/PreferencesTheme"
+            android:theme="@style/PreferencesTheme"
             android:label="@string/shortcut_bookmark"
             android:icon="@mipmap/ic_launcher_shortcut_browser_bookmark">
             <intent-filter>
@@ -169,7 +169,9 @@
 
         </activity>
 
-        <activity android:name="BrowserPreferencesPage" android:label="@string/menu_preferences" android:theme="@style/PreferencesTheme">
+        <activity android:name="BrowserPreferencesPage"
+                  android:label="@string/menu_preferences"
+                  android:theme="@style/PreferencesTheme">
             <intent-filter>
                <action android:name="android.intent.action.MANAGE_NETWORK_USAGE" />
                <category android:name="android.intent.category.DEFAULT" />
@@ -189,7 +191,8 @@
                     android:resource="@xml/bookmarks_searchable" />
         </activity>
 
-        <activity android:name="AddBookmarkPage" android:label="@string/bookmarks_add_page"
+        <activity android:name="AddBookmarkPage"
+                  android:label="@string/bookmarks_add_page"
                   android:theme="@style/PreferencesTheme"
                   android:configChanges="orientation|keyboardHidden|screenSize"
                   android:windowSoftInputMode="adjustResize">
@@ -197,11 +200,11 @@
                 <action android:name="android.intent.action.INSERT" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="vnd.android.cursor.dir/bookmark"/>
-                android:theme="@style/PreferencesTheme"  </intent-filter>
+            </intent-filter>
         </activity>
 
         <activity android:name="ComboViewActivity"
-        android:theme="@style/PreferencesTheme">
+                  android:theme="@style/PreferencesTheme">
         </activity>
 
         <!-- Bookmark thumbnail homescreen widget -->
