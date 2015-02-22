@@ -114,38 +114,38 @@ public class NavScreen extends RelativeLayout
     }
 
     private void init() {
-      LayoutInflater.from(mContext).inflate(R.layout.nav_screen, this);
-      setContentDescription(mContext.getResources().getString(
-      R.string.accessibility_transition_navscreen));
-      mBookmarks = (ImageButton) findViewById(R.id.bookmarks);
-      mNewTab = (ImageButton) findViewById(R.id.newtab);
-      mMore = (ImageButton) findViewById(R.id.more);
-      mBookmarks.setOnClickListener(this);
-      mNewTab.setOnClickListener(this);
-      mMore.setOnClickListener(this);
-      mScroller = (NavTabScroller) findViewById(R.id.scroller);
-      TabControl tc = mUiController.getTabControl();
-      mTabViews = new HashMap<Tab, View>(tc.getTabCount());
-      mAdapter = new TabAdapter(mContext, tc);
-      mScroller.setOrientation(mOrientation == Configuration.ORIENTATION_LANDSCAPE
-      ? LinearLayout.HORIZONTAL : LinearLayout.VERTICAL);
-      // update state for active tab
-      mScroller.setAdapter(mAdapter,
-      mUiController.getTabControl().getTabPosition(mUi.getActiveTab()));
-      mScroller.setOnRemoveListener(new OnRemoveListener() {
-        public void onRemovePosition(int pos) {
-          Tab tab = mAdapter.getItem(pos);
-          onCloseTab(tab);
-        }
-      });
-      mNewTabFab = (ImageView) findViewById(R.id.floating_action_button);
-      mNewTabFab.setOnClickListener(
-      new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-          openNewTab();
-        }
-      });
+        LayoutInflater.from(mContext).inflate(R.layout.nav_screen, this);
+        setContentDescription(mContext.getResources().getString(
+                R.string.accessibility_transition_navscreen));
+        mBookmarks = (ImageButton) findViewById(R.id.bookmarks);
+        mNewTab = (ImageButton) findViewById(R.id.newtab);
+        mMore = (ImageButton) findViewById(R.id.more);
+        mBookmarks.setOnClickListener(this);
+        mNewTab.setOnClickListener(this);
+        mMore.setOnClickListener(this);
+        mScroller = (NavTabScroller) findViewById(R.id.scroller);
+        TabControl tc = mUiController.getTabControl();
+        mTabViews = new HashMap<Tab, View>(tc.getTabCount());
+        mAdapter = new TabAdapter(mContext, tc);
+        mScroller.setOrientation(mOrientation == Configuration.ORIENTATION_LANDSCAPE
+                ? LinearLayout.HORIZONTAL : LinearLayout.VERTICAL);
+        // update state for active tab
+        mScroller.setAdapter(mAdapter,
+                mUiController.getTabControl().getTabPosition(mUi.getActiveTab()));
+        mScroller.setOnRemoveListener(new OnRemoveListener() {
+            public void onRemovePosition(int pos) {
+                Tab tab = mAdapter.getItem(pos);
+                onCloseTab(tab);
+            }
+        });
+        mNewTabFab = (ImageView) findViewById(R.id.floating_action_button);
+        mNewTabFab.setOnClickListener(
+        new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNewTab();
+            }
+        });
     }
 
     @Override

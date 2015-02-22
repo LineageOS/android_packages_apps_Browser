@@ -28,11 +28,11 @@
         <item name="android:actionBarSize">64dip</item>
     </style>
     <style name="Suggestions" parent="@android:style/Widget.Material.Light.AutoCompleteTextView">
-      <item name="android:textColor">@color/white</item>
-      <item name="android:textColorHint">@color/white</item>
-      <item name="android:dropDownVerticalOffset">0dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:dropDownVerticalOffset">0dip</item>
     </style>
     <style name="ActionBarStyle" parent="@android:style/ThemeOverlay.Material.Dark.ActionBar">
         <item name="android:background">@color/primary</item>
-      </style>
+    </style>
 </resources>
