@@ -719,6 +719,17 @@ public class Controller
     }
 
     @Override
+    public void pauseVideo() {
+        if (mActivityPaused) {
+            return;
+        }
+        Tab tab = mTabControl.getCurrentTab();
+        if (tab != null) {
+            tab.pauseVideo();
+        }
+    }
+
+    @Override
     public void onPause() {
         if (mUi.isCustomViewShowing()) {
             hideCustomView();

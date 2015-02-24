@@ -1598,6 +1598,15 @@ class Tab implements PictureListener {
         }
     }
 
+    void pauseVideo() {
+        if (mMainView != null) {
+            mMainView.pauseVideo();
+            if (mSubView != null) {
+                mSubView.pauseVideo();
+            }
+        }
+    }
+
     void pause() {
         if (mMainView != null) {
             mMainView.onPause();

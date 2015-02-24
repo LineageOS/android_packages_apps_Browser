@@ -280,7 +280,7 @@ public class BrowserActivity extends Activity implements ViewTreeObserver.OnPreD
     }
 
     protected void handleOnPause() {
-        // Note: Intentionally left blank
+        mController.pauseVideo();
     }
 
     protected void handleOnStop() {

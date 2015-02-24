@@ -55,6 +55,10 @@ public class NullController implements ActivityController {
     }
 
     @Override
+    public void pauseVideo() {
+    }
+
+    @Override
     public void onDestroy() {
     }
 

@@ -31,6 +31,8 @@ public interface ActivityController {
 
     void onPause();
 
+    void pauseVideo();
+
     void onDestroy();
 
     void onConfgurationChanged(Configuration newConfig);
