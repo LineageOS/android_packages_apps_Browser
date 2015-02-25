@@ -196,7 +196,7 @@
   <string name="pref_privacy_clear_cookies_summary">All d\'Browsercookië läschen</string>
   <string name="pref_privacy_clear_cookies_dlg">All d\'Cookië läschen?</string>
   <string name="pref_privacy_clear_history">Historique läschen</string>
-  <string name="pref_privacy_clear_history_summary">Den Historique vum Browser läschen</string>
+  <string name="pref_privacy_clear_history_summary">Historique vum Browser läschen</string>
   <string name="pref_privacy_clear_history_dlg">Den Historique vum Browser läschen?</string>
   <string name="pref_privacy_formdata_title">Formulardaten</string>
   <string name="pref_privacy_clear_form_data">Formulardate läschen</string>
