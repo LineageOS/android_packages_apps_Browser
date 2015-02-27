@@ -24,4 +24,7 @@
     <!-- Context Menu item to open the currently selected link in a new
          background window. [CHAR LIMIT=50] -->
     <string name="contextmenu_openlink_incognito_newwindow_background">Open in new incognito background tab</string>
+
+    <!-- User agent label -->
+    <string name="pref_content_ua">User agent</string>
 </resources>
