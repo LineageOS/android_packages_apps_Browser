@@ -610,26 +610,10 @@ class Tab implements PictureListener {
          */
         @Override
         public void onReceivedClientCertRequest(final WebView view,
-                final ClientCertRequestHandler handler, final String host_and_port) {
+                final ClientCertRequestHandler handler) {
             if (!mInForeground) {
                 handler.ignore();
                 return;
-            }
-            int colon = host_and_port.lastIndexOf(':');
-            String host;
-            int port;
-            if (colon == -1) {
-                host = host_and_port;
-                port = -1;
-            } else {
-                String portString = host_and_port.substring(colon + 1);
-                try {
-                    port = Integer.parseInt(portString);
-                    host = host_and_port.substring(0, colon);
-                } catch  (NumberFormatException e) {
-                    host = host_and_port;
-                    port = -1;
-                }
             }
             KeyChain.choosePrivateKeyAlias(
                     mWebViewController.getActivity(), new KeyChainAliasCallback() {
@@ -640,7 +624,8 @@ class Tab implements PictureListener {
                     }
                     new KeyChainLookup(mContext, handler, alias).execute();
                 }
-            }, null, null, host, port, null);
+            },handler.getKeyTypes(), handler.getPrincipals(), handler.getHost(),
+                    handler.getPort(), null);
         }
 
         @Override
@@ -1194,8 +1179,8 @@ class Tab implements PictureListener {
         }
         @Override
         public void onReceivedClientCertRequest(WebView view,
-                ClientCertRequestHandler handler, String host_and_port) {
-            mClient.onReceivedClientCertRequest(view, handler, host_and_port);
+                ClientCertRequestHandler handler) {
+            mClient.onReceivedClientCertRequest(view, handler);
         }
         @Override
         public void onReceivedHttpAuthRequest(WebView view,
