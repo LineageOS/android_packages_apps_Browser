@@ -98,8 +98,4 @@ public class BrowserPreferencesPage extends PreferenceActivity {
         return intent;
     }
 
-    @Override
-    protected boolean isValidFragment(String fragmentName) {
-        return true;
-    }
 }
