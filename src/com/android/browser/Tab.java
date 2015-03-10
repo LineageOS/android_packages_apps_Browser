@@ -574,6 +574,7 @@ class Tab implements PictureListener {
                     .show();
             } else {
                 handler.proceed();
+                handleProceededAfterSslError(error);
             }
         }
 
