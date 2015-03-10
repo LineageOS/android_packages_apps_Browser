@@ -756,7 +756,8 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
     }
 
     public boolean autofitPages() {
-        return mPrefs.getBoolean(PREF_AUTOFIT_PAGES, true);
+        return mPrefs.getBoolean(PREF_AUTOFIT_PAGES,
+                mContext.getResources().getBoolean(R.bool.feature_text_autosizing));
     }
 
     public boolean blockPopupWindows() {

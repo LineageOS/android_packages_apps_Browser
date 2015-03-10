@@ -27,7 +27,8 @@
 
 
     <!-- Switches for carrier specific features -->
-
+    <!-- Text Autosizing -->
+    <bool name="feature_text_autosizing">true</bool>
     <!-- Launch custom app when URL scheme is 'estore:' -->
     <bool name="feature_wap2estore">false</bool>
     <!-- Prevent uploading files with DRM filename extensions -->
