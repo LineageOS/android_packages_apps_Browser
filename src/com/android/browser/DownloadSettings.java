@@ -50,6 +50,7 @@ import android.widget.TextView;
 import android.view.Window;
 import android.widget.Toast;
 import android.text.TextUtils;
+import android.webkit.MimeTypeMap;
 
 import com.android.browser.reflect.ReflectHelper;
 
@@ -141,6 +142,10 @@ public class DownloadSettings extends Activity {
         if (filenameExtension.equals(APK_TYPE) && mimetype != null && mimetype.equals(OCTET_STREAM)) {
             mimetype =  "application/vnd.android.package-archive";
         }
+
+        // last way to fetch for mimetype if its still null
+        if (mimetype  == null  || mimetype.isEmpty())
+            mimetype = MimeTypeMap.getSingleton().getMimeTypeFromExtension(filenameExtension);
 
         downloadPath = chooseFolderFromMimeType(BrowserSettings.getInstance().getDownloadPath(),
                 mimetype);
