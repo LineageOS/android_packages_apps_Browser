@@ -32,7 +32,7 @@ public class UrlUtils {
             "(?i)" + // switch on case insensitive matching
             "(" +    // begin group for schema
             "(?:http|https|file):\\/\\/" +
-            "|(?:data|about|javascript):" +
+            "|(?:inline|data|about|javascript):" +
             "|(?:.*:.*@)" +
             ")" +
             "(.*)" );
