@@ -183,7 +183,7 @@ public class AppMenu implements OnItemClickListener, OnKeyListener {
                 }
             });
         }
-        Engine.warmUpChildProcessAsync(context);
+        // Engine.warmUpChildProcessAsync(context);
     }
 
     public void invalidate(Context context, Menu menu) {

@@ -155,7 +155,7 @@ public class NavigationBarBase extends LinearLayout implements
             setFocusState(hasFocus);
         }
         if (hasFocus) {
-            Engine.warmUpChildProcessAsync(mUiController.getActivity().getApplicationContext());
+            // Engine.warmUpChildProcessAsync(mUiController.getActivity().getApplicationContext());
             mBaseUi.showTitleBar();
         } else if (!mUrlInput.needsUpdate()) {
             mUrlInput.dismissDropDown();
