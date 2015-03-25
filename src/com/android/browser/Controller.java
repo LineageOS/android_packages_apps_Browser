@@ -254,6 +254,7 @@ public class Controller
     private String mUpdateMyNavThumbnailUrl;
     private float mLevel = 0.0f;
     private WebView.HitTestResult mResult;
+    private static Bitmap mBookmarkBitmap;
 
     public Controller(Activity browser) {
         mActivity = browser;
@@ -2319,6 +2320,16 @@ public class Controller
         BrowserPreferencesPage.startPreferencesForResult(mActivity, getCurrentTopWebView().getUrl(), PREFERENCES_PAGE);
     }
 
+    // This function is specifically used from AddBookmark Activity.
+    // The bookmark activity clears the bitmap after retrieving it.
+    // The function usage elsewhere will result in breaking bookmark
+    // functionality.
+    public static Bitmap getAndReleaseLastBookmarkBitmapFromIntent() {
+        Bitmap bitmap = mBookmarkBitmap;
+        mBookmarkBitmap = null;
+        return bitmap;
+    }
+
     @Override
     public void bookmarkCurrentPage() {
         WebView w = getCurrentTopWebView();
@@ -2331,7 +2342,7 @@ public class Controller
             new ValueCallback<Bitmap>() {
                 @Override
                     public void onReceiveValue(Bitmap bitmap) {
-                    i.putExtra(BrowserContract.Bookmarks.THUMBNAIL, bitmap);
+                    mBookmarkBitmap = bitmap;
                     mActivity.startActivity(i);
                 }
             });
@@ -2630,7 +2641,6 @@ public class Controller
         if (view == null || width == 0 || height == 0) {
             return;
         }
-
         view.getContentBitmapAsync(
             (float) width / view.getWidth(),
             new Rect(),
