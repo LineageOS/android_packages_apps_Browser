@@ -364,7 +364,7 @@
   <string name="rlz_access_point">Y1</string>
   <string name="account_chooser_dialog_title" msgid="4833571985009544332">Kont auswielen</string>
   <string name="import_bookmarks_dialog_title">Mam Google-Kont synchroniséieren</string>
-  <string name="import_bookmarks_dialog_description">Lieszeechen op dësem Apparat sinn nach net mat engem Google-Kont verbonnen. Sécher den Lieszeechen andeem s de se bei e Kont setz. Läsch d\'Lieszeeche wann s de se net synchroniséiere wëlls.</string>
+  <string name="import_bookmarks_dialog_description">Lieszeechen op dësem Apparat sinn nach net mat engem Google-Kont verbonnen. Sécher d\'Lieszeechen andeem s de se bei e Kont setz. Läsch d\'Lieszeeche wann s de se net synchroniséiere wëlls.</string>
   <string name="import_bookmarks_dialog_select_add_account">Lieszeechen op dësem Apparat dobäisetzen a mam Google-Kont synchroniséieren</string>
   <string name="import_bookmarks_dialog_delete_select_account">Lieszeechen op dësem Apparat läschen an d\'Synchroniséierung mam Google-Kont starten</string>
   <string name="import_bookmarks_dialog_confirm_delete">Lieszeechen op dësem Apparat läschen a Synchroniséierung mam Kont <xliff:g id="Google account" example="account@example.com">%s</xliff:g> starten?</string>
