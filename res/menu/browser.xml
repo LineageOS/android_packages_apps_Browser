@@ -35,6 +35,11 @@
             android:showAsAction="never"
             android:alphabeticShortcut="n" />
         <item
+             android:id="@+id/newincognitotab"
+             android:title="@string/contextmenu_openlink_incognito_newwindow"
+             android:icon="@drawable/ic_new_window_dark"
+             android:showAsAction="never" />
+        <item
             android:id="@+id/bookmarks_menu_id"
             android:title="@string/bookmarks"
             android:icon="@drawable/ic_bookmarks_dark"
