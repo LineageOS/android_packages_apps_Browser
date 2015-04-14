@@ -112,6 +112,7 @@ public abstract class BaseUi implements UI {
     protected TitleBar mTitleBar;
     private NavigationBarBase mNavigationBar;
     private boolean mBlockFocusAnimations;
+    private boolean mFullscreenModeLocked;
 
     public BaseUi(Activity browser, UiController controller) {
         mActivity = browser;
@@ -139,6 +140,7 @@ public abstract class BaseUi implements UI {
         // install system ui visibility listeners
         mDecorView = mActivity.getWindow().getDecorView();
         mDecorView.setOnSystemUiVisibilityChangeListener(mSystemUiVisibilityChangeListener);
+        mFullscreenModeLocked = false;
     }
 
     private View.OnSystemUiVisibilityChangeListener mSystemUiVisibilityChangeListener =
@@ -786,7 +788,16 @@ public abstract class BaseUi implements UI {
         }
     }
 
+    public void forceDisableFullscreenMode(boolean disabled) {
+        mFullscreenModeLocked = false;
+        setFullscreen(!disabled);
+        mFullscreenModeLocked = disabled;
+    }
+
     public void setFullscreen(boolean enabled) {
+        if (mFullscreenModeLocked)
+            return;
+
         Window win = mActivity.getWindow();
         WindowManager.LayoutParams winParams = win.getAttributes();
         final int bits = WindowManager.LayoutParams.FLAG_FULLSCREEN;
