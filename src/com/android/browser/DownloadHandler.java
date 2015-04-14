@@ -214,7 +214,9 @@ public class DownloadHandler {
         String cookies = CookieManager.getInstance().getCookie(url, privateBrowsing);
         request.addRequestHeader("cookie", cookies);
         request.addRequestHeader("User-Agent", userAgent);
-        request.addRequestHeader("Referer", referer);
+        if (!TextUtils.isEmpty(referer)) {
+            request.addRequestHeader("Referer", referer);
+        }
         request.setNotificationVisibility(
                 DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
         if (mimetype == null) {
