@@ -16,6 +16,24 @@
       "revId": "4456300c4a2fedfaec051fff60e6876c9e962472",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_6b58b157",
+        "filename": "src/com/android/browser/DownloadHandler.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-18T00:01:23Z",
+      "side": 1,
+      "message": "Danny, i think that it depends on the remote server, specially for the referer header. I didn\u0027t test but since the header is present (but empty), Baidu can\u0027t reject the request because it doesn\u0027t come from a valid referer (just because they only check the header presence instead of referer emptiness).",
+      "parentUuid": "fa7ab95a_6b76f13f",
+      "revId": "4456300c4a2fedfaec051fff60e6876c9e962472",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
