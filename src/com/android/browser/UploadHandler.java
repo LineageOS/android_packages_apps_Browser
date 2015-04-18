@@ -41,6 +41,10 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.net.URLEncoder;
+import android.net.Uri;
+
+import org.codeaurora.swe.Engine;
 
 /**
  * Handle the file upload callbacks from WebView here
@@ -119,13 +123,11 @@ public class UploadHandler {
                 filePath = result.getPath();
                 hasGoodFilePath = filePath != null && !filePath.isEmpty();
             } else if ("content".equals(scheme)) {
-                filePath = getFilePath(mController.getContext(), result);
+                // simplified logic since engine already has helper method
+                // to fetch content URI file name
+                filePath = Engine.getContentUriDisplayName(result.toString());;
                 hasGoodFilePath = filePath != null && !filePath.isEmpty();
             }
-
-            // The native layer only accepts path based on file scheme
-            // and skips anything else passed to it
-            filePath = "file://"+filePath;
         }
 
         // Add for carrier feature - prevent uploading DRM type files based on file extension. This
@@ -154,132 +156,15 @@ public class UploadHandler {
         if (mUploadFilePaths != null) {
             if (hasGoodFilePath && !isDRMFileType) {
                 Log.d(TAG, "upload file path:" + filePath);
-                mUploadFilePaths.onReceiveValue(new String[]{filePath});
+                mUploadFilePaths.onReceiveValue( new String[]{result.toString()});
             } else {
                 mUploadFilePaths.onReceiveValue(null);
             }
         }
 
+        //reset everything
         setHandled(true);
     }
-
-
-    public String getDocumentId(final Uri uri) {
-        String id = null;
-        try {
-            Object[] params  = {(android.net.Uri)uri};
-            Class[] type = new Class[] {Class.forName("android.net.Uri") };
-            id = (String) ReflectHelper.invokeMethod(
-                "android.provider.DocumentsContract","getDocumentId",
-                type, params);
-
-        } catch(java.lang.ClassNotFoundException e) {
-
-        }
-        return id;
-    }
-
-
-    public String getFilePath(final Context context, final Uri uri) {
-       String id =  getDocumentId(uri);
-
-        // DocumentProvider is new API exposed in Kitkat
-        // Its a way of exposing unified file explorer
-        if (id != null) {
-            // ExternalStorageProvider
-            if (isExternalStorageDocument(uri)) {
-                final String docId = id;
-                final String[] split = docId.split(":");
-                final String type = split[0];
-
-                if ("primary".equalsIgnoreCase(type)) {
-                    return Environment.getExternalStorageDirectory() + "/" + split[1];
-                }
-            }
-            // DownloadsProvider
-            else if (isDownloadsDocument(uri)) {
-                final Uri contentUri = ContentUris.withAppendedId(
-                        Uri.parse("content://downloads/public_downloads"), Long.valueOf(id));
-                return getDataColumn(context, contentUri, null, null);
-            }
-            // MediaProvider
-            else if (isMediaDocument(uri)) {
-                final String docId = id;
-                final String[] split = docId.split(":");
-                final String type = split[0];
-
-                Uri contentUri = null;
-                if ("image".equals(type)) {
-                    contentUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
-                } else if ("video".equals(type)) {
-                    contentUri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
-                } else if ("audio".equals(type)) {
-                    contentUri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
-                }
-
-                final String selection = "_id=?";
-                final String[] selectionArgs = new String[] {
-                        split[1]
-                };
-
-                return getDataColumn(context, contentUri, selection, selectionArgs);
-            }
-        }
-        // MediaStore (and general)
-        else if ("content".equalsIgnoreCase(uri.getScheme())) {
-            return getDataColumn(context, uri, null, null);
-        }
-
-        return null;
-    }
-
-    /**
-    * Get the value of the data column for this Uri. This is useful for
-    * MediaStore Uris, and other file-based ContentProviders.
-    * @return The value of the _data column, which is typically a file path.
-    */
-    private String getDataColumn(Context context, Uri uri, String selection,
-        String[] selectionArgs) {
-
-        Cursor cursor = null;
-        final String column = "_data";
-        final String[] projection = { column };
-
-        try {
-            cursor = context.getContentResolver().query(uri, projection, selection, selectionArgs,
-                    null);
-            if (cursor != null && cursor.moveToFirst()) {
-                final int column_index = cursor.getColumnIndexOrThrow(column);
-                return cursor.getString(column_index);
-            }
-        } finally {
-            if (cursor != null)
-                cursor.close();
-        }
-        return null;
-    }
-
-    /**
-    * @return Whether the Uri authority is ExternalStorageProvider.
-    */
-    private boolean isExternalStorageDocument(Uri uri) {
-        return "com.android.externalstorage.documents".equals(uri.getAuthority());
-    }
-
-    /**
-    * @return Whether the Uri authority is DownloadsProvider.
-    */
-    private boolean isDownloadsDocument(Uri uri) {
-        return "com.android.providers.downloads.documents".equals(uri.getAuthority());
-    }
-
-    /**
-    * @return Whether the Uri authority is MediaProvider.
-    */
-    public static boolean isMediaDocument(Uri uri) {
-        return "com.android.providers.media.documents".equals(uri.getAuthority());
-    }
-
 
     void openFileChooser(ValueCallback<Uri> uploadMsg, String acceptType, String capture) {
 
@@ -388,7 +273,6 @@ public class UploadHandler {
         final String imageMimeType = "image/*";
         final String videoMimeType = "video/*";
         final String audioMimeType = "audio/*";
-
         if (mUploadFilePaths != null) {
             // Already a file picker operation in progress.
             return;
