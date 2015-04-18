@@ -29,6 +29,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.PaintDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -78,7 +79,7 @@ public abstract class BaseUi implements UI {
     private static final int MSG_HIDE_TITLEBAR = 1;
     private static final int MSG_HIDE_CUSTOM_VIEW = 2;
     public static final int HIDE_TITLEBAR_DELAY = 1500; // in ms
-    public static final int HIDE_CUSTOM_VIEW_DELAY = 750; // in ms
+    public static final int HIDE_CUSTOM_VIEW_DELAY = 200; // in ms
 
     Activity mActivity;
     UiController mUiController;
@@ -536,7 +537,7 @@ public abstract class BaseUi implements UI {
         mFullscreenContainer.addView(view, COVER_SCREEN_PARAMS);
         decor.addView(mFullscreenContainer, COVER_SCREEN_PARAMS);
         mCustomView = view;
-        setFullscreen(true);
+        setImmersiveFullscreen(true);
         ((BrowserWebView) getWebView()).setVisibility(View.INVISIBLE);
         mCustomViewCallback = callback;
         mActivity.setRequestedOrientation(requestedOrientation);
@@ -548,7 +549,6 @@ public abstract class BaseUi implements UI {
     }
 
     private void hideCustomView() {
-        setFullscreen(false);
         FrameLayout decor = (FrameLayout) mActivity.getWindow().getDecorView();
         decor.removeView(mFullscreenContainer);
         mFullscreenContainer = null;
@@ -559,6 +559,7 @@ public abstract class BaseUi implements UI {
 
     @Override
     public void onHideCustomView() {
+        setImmersiveFullscreen(false);
         ((BrowserWebView) getWebView()).setVisibility(View.VISIBLE);
         if (mCustomView == null)
             return;
@@ -795,6 +796,22 @@ public abstract class BaseUi implements UI {
         WindowManager.LayoutParams winParams = win.getAttributes();
         final int bits = WindowManager.LayoutParams.FLAG_FULLSCREEN;
         return (winParams.flags & bits) == bits;
+    }
+
+    protected void setImmersiveFullscreen (boolean enabled) {
+        FrameLayout decor = (FrameLayout) mActivity.getWindow().getDecorView();
+        int systemUiVisibility = decor.getSystemUiVisibility();
+        final int bits = View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+            | View.SYSTEM_UI_FLAG_FULLSCREEN
+            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+        if (enabled) {
+            systemUiVisibility |= bits;
+        } else {
+            systemUiVisibility &= ~bits;
+        }
+        decor.setSystemUiVisibility(systemUiVisibility);
     }
 
     public Drawable getFaviconDrawable(Bitmap icon) {
