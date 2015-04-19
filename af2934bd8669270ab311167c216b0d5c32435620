@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa7ab95a_ac7e4cac",
+        "filename": "src/com/android/browser/BaseUi.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 540,
+      "author": {
+        "id": 8461
+      },
+      "writtenOn": "2015-04-19T00:55:05Z",
+      "side": 1,
+      "message": "spaces not tab",
+      "revId": "af2934bd8669270ab311167c216b0d5c32435620",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_cc49d090",
+        "filename": "src/com/android/browser/BaseUi.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 8461
+      },
+      "writtenOn": "2015-04-19T00:55:05Z",
+      "side": 1,
+      "message": "same",
+      "revId": "af2934bd8669270ab311167c216b0d5c32435620",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa7ab95a_ec4e9495",
+        "filename": "src/com/android/browser/BaseUi.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 802,
+      "author": {
+        "id": 8461
+      },
+      "writtenOn": "2015-04-19T00:55:05Z",
+      "side": 1,
+      "message": "same",
+      "revId": "af2934bd8669270ab311167c216b0d5c32435620",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
