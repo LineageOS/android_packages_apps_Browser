@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa7ab95a_e23bfb9a",
+        "filename": "src/com/android/browser/BaseUi.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 802,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-04-19T21:42:47Z",
+      "side": 1,
+      "message": "This isn\u0027t really necessary because cm-12.1 is target to Lollipop. Otherwise, you should annotate this method with a TargetApi",
+      "revId": "927c85174ef46c25c6de1f5226b26737c7c34e9c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
