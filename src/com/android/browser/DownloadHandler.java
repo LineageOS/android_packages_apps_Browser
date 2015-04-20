@@ -16,6 +16,9 @@
 
 package com.android.browser;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
@@ -31,6 +34,7 @@ import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
 import android.webkit.CookieManager;
+import android.webkit.MimeTypeMap;
 import android.webkit.URLUtil;
 import android.widget.Toast;
 
@@ -192,6 +196,8 @@ public class DownloadHandler {
             Toast.makeText(activity, R.string.cannot_download, Toast.LENGTH_SHORT).show();
             return;
         }
+        // Make sure the mimtType is not the "generic" types
+        mimetype = remapGenericMimeType(mimetype, url, contentDisposition);
         request.setMimeType(mimetype);
         // set downloaded file destination to /sdcard/Download.
         // or, should it be set to one of several Environment.DIRECTORY* dirs depending on mimetype?
@@ -238,6 +244,76 @@ public class DownloadHandler {
         }
         Toast.makeText(activity, R.string.download_pending, Toast.LENGTH_SHORT)
                 .show();
+    }
+
+    /**
+     * If the given MIME type is null, or one of the "generic" types (text/plain
+     * or application/octet-stream) map it to a type that Android can deal with.
+     * If the given type is not generic, return it unchanged.
+     *
+     * @param mimeType MIME type provided by the server.
+     * @param url URL of the data being loaded.
+     * @param contentDisposition Content-disposition header given by the server.
+     * @return The MIME type that should be used for this data.
+     */
+    /* package */static String remapGenericMimeType(String mimeType, String url,
+            String contentDisposition) {
+        // If we have one of "generic" MIME types, try to deduce
+        // the right MIME type from the file extension (if any):
+        if ("text/plain".equals(mimeType) ||
+                "application/octet-stream".equals(mimeType)) {
+
+            // for attachment, use the filename in the Content-Disposition
+            // to guess the mimetype
+            String filename = null;
+            if (contentDisposition != null) {
+                filename = parseContentDisposition(contentDisposition);
+            }
+            if (filename != null) {
+                url = filename;
+            }
+            String extension = MimeTypeMap.getFileExtensionFromUrl(url);
+            String newMimeType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
+            if (newMimeType != null) {
+                mimeType = newMimeType;
+            }
+        } else if ("text/vnd.wap.wml".equals(mimeType)) {
+            // As we don't support wml, render it as plain text
+            mimeType = "text/plain";
+        } else {
+            // It seems that xhtml+xml and vnd.wap.xhtml+xml mime
+            // subtypes are used interchangeably. So treat them the same.
+            if ("application/vnd.wap.xhtml+xml".equals(mimeType)) {
+                mimeType = "application/xhtml+xml";
+            }
+        }
+        return mimeType;
+    }
+
+    /** Regex used to parse content-disposition headers */
+    private static final Pattern CONTENT_DISPOSITION_PATTERN =
+            Pattern.compile("attachment;\\s*filename\\s*=\\s*(\"?)([^\"]*)\\1\\s*$",
+            Pattern.CASE_INSENSITIVE);
+
+    /*
+     * Parse the Content-Disposition HTTP Header. The format of the header
+     * is defined here: http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html
+     * This header provides a filename for content that is going to be
+     * downloaded to the file system. We only support the attachment type.
+     * Note that RFC 2616 specifies the filename value must be double-quoted.
+     * Unfortunately some servers do not quote the value so to maintain
+     * consistent behaviour with other browsers, we allow unquoted values too.
+     */
+    static String parseContentDisposition(String contentDisposition) {
+        try {
+            Matcher m = CONTENT_DISPOSITION_PATTERN.matcher(contentDisposition);
+            if (m.find()) {
+                return m.group(2);
+            }
+        } catch (IllegalStateException ex) {
+             // This function is defined as returning null when it can't parse the header
+        }
+        return null;
     }
 
 }
