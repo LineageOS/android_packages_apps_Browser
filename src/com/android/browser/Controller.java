@@ -163,6 +163,8 @@ public class Controller
 
     private final static int WAKELOCK_TIMEOUT = 5 * 60 * 1000; // 5 minutes
 
+    static final String BLANK_URL = "about:blank";
+
     // As the ids are dynamically created, we can't guarantee that they will
     // be in sequence, so this static array maps ids to a window number.
     final static private int[] WINDOW_SHORTCUT_ID_ARRAY =
@@ -532,7 +534,7 @@ public class Controller
                             result.setExtra(unknown_type_src);
                         } else {
                             result.setType(WebView.HitTestResult.SRC_ANCHOR_TYPE);
-                            result.setExtra("about:blank");
+                            result.setExtra(BLANK_URL);
                         }
 
                         mResult = result;
@@ -3218,11 +3220,11 @@ public class Controller
 
     @Override
     public void onUserCanceledSsl(Tab tab) {
-        // TODO: Figure out the "right" behavior
-        //In case of tab can go back (aka tab has navigation entry) do nothing
-        //else just load homepage in current tab.
-        if (!tab.canGoBack()) {
-            tab.loadUrl(mSettings.getHomePage(), null);
+        // If tab cannot go back then load 'about:blank'.
+        if (tab.canGoBack()) {
+            tab.goBack();
+        } else {
+            tab.loadUrl(BLANK_URL, null);
         }
     }
 
