@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="contextmenu_openlink_incognito_newwindow_background">Bigarren planoko ezkutuko fitxa batean ireki</string>
   <string name="pref_content_ua">Erabiltzaile agentea</string>
   <string name="pref_content_ua_summary">Erabiltzaile agente bat aukeratu</string>
   <string name="pref_lab_websockets">WebSockets</string>
