@@ -96,7 +96,11 @@ public class HomeProvider extends ContentProvider {
                 Uri uri = Uri.parse(url);
                 if (AUTHORITY.equals(uri.getAuthority())) {
                     InputStream ins = context.getContentResolver()
+<<<<<<< HEAD
                             .openInputStream(Uri.parse(url + "/home"));
+=======
+                            .openInputStream(uri);
+>>>>>>> parent of 3174b65... browser: allow to load browser internal assets
                     return new WebResourceResponse("text/html", "utf-8", ins);
                 }
             }
