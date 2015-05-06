@@ -28,6 +28,6 @@
         android:src="@drawable/ic_menu_new_window"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        style="@style/HoloButton"
+        style="@style/BrowserButton"
         android:background="@drawable/add_tab_selector" />
 </merge>

@@ -128,7 +128,6 @@ public class NavScreen extends RelativeLayout
         mNewTab = (ImageButton) findViewById(R.id.newtab);
         mMore = (ImageButton) findViewById(R.id.more);
         mBookmarks.setOnClickListener(this);
-        mHomeTab.setOnClickListener(this);
         mNewIncognitoTab.setOnClickListener(this);
         mNewTab.setOnClickListener(this);
         mMore.setOnClickListener(this);
@@ -153,6 +152,13 @@ public class NavScreen extends RelativeLayout
             @Override
             public void onClick(View v) {
                 openNewTab(false);
+            }
+        });
+        mNewTabFab.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                openNewTab(true);
+                return true;
             }
         });
     }
