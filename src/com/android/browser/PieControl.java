@@ -183,14 +183,11 @@ public class PieControl implements PieMenu.PieController, OnClickListener {
         mUrl.addItem(makeFiller());
         mUrl.addItem(makeFiller());
         mPie.addItem(mShowTabs);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
             mShowTabs.addItem(makeFiller());
-            mShowTabs.addItem(mClose);
-        } else {
-            mShowTabs.addItem(mClose);
-            mShowTabs.addItem(mIncognito);
-        }
+        mShowTabs.addItem(mClose);
         mShowTabs.addItem(mNewTab);
+        mShowTabs.addItem(mIncognito);
         mShowTabs.addItem(makeFiller());
         mPie.addItem(mBookmarks);
         mBookmarks.addItem(makeFiller());
