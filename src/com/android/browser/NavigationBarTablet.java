@@ -45,7 +45,6 @@ public class NavigationBarTablet extends NavigationBarBase implements StateListe
     private ImageButton mBackButton;
     private ImageButton mForwardButton;
     private ImageView mStar;
-    private ImageView mUrlIcon;
     private ImageView mSearchButton;
     private ImageView mStopButton;
     private View mAllButton;
@@ -55,7 +54,6 @@ public class NavigationBarTablet extends NavigationBarBase implements StateListe
     private Drawable mFocusDrawable;
     private Drawable mUnfocusDrawable;
     private boolean mHideNavButtons;
-    private Drawable mFaviconDrawable;
 
     public NavigationBarTablet(Context context) {
         super(context);
@@ -74,8 +72,8 @@ public class NavigationBarTablet extends NavigationBarBase implements StateListe
 
     private void init(Context context) {
         Resources resources = context.getResources();
-        mStopDrawable = resources.getDrawable(R.drawable.ic_stop_dark);
-        mReloadDrawable = resources.getDrawable(R.drawable.ic_refresh_dark);
+        mStopDrawable = resources.getDrawable(R.drawable.ic_stop);
+        mReloadDrawable = resources.getDrawable(R.drawable.ic_refresh);
         mStopDescription = resources.getString(R.string.accessibility_button_stop);
         mRefreshDescription = resources.getString(R.string.accessibility_button_refresh);
         mFocusDrawable = resources.getDrawable(
@@ -94,7 +92,6 @@ public class NavigationBarTablet extends NavigationBarBase implements StateListe
         mNavButtons = findViewById(R.id.navbuttons);
         mBackButton = (ImageButton) findViewById(R.id.back);
         mForwardButton = (ImageButton) findViewById(R.id.forward);
-        mUrlIcon = (ImageView) findViewById(R.id.url_icon);
         mStar = (ImageView) findViewById(R.id.star);
         mStopButton = (ImageView) findViewById(R.id.stop);
         mSearchButton = (ImageView) findViewById(R.id.search);
@@ -140,13 +137,12 @@ public class NavigationBarTablet extends NavigationBarBase implements StateListe
     void updateNavigationState(Tab tab) {
         if (tab != null) {
             mBackButton.setImageResource(tab.canGoBack()
-                    ? R.drawable.ic_back_dark
-                    : R.drawable.ic_back_disabled_dark);
+                    ? R.drawable.ic_back
+                    : R.drawable.ic_back_disabled);
             mForwardButton.setImageResource(tab.canGoForward()
-                    ? R.drawable.ic_forward_dark
-                    : R.drawable.ic_forward_disabled_dark);
+                    ? R.drawable.ic_forward
+                    : R.drawable.ic_forward_disabled);
         }
-        updateUrlIcon();
     }
 
     @Override
@@ -197,23 +193,6 @@ public class NavigationBarTablet extends NavigationBarBase implements StateListe
     }
 
     @Override
-    public void setFavicon(Bitmap icon) {
-        mFaviconDrawable = mBaseUi.getFaviconDrawable(icon);
-        updateUrlIcon();
-    }
-
-    void updateUrlIcon() {
-        if (mUrlInput.hasFocus()) {
-            mUrlIcon.setImageResource(R.drawable.ic_search_dark);
-        } else {
-            if (mFaviconDrawable == null) {
-                mFaviconDrawable = mBaseUi.getFaviconDrawable(null);
-            }
-            mUrlIcon.setImageDrawable(mFaviconDrawable);
-        }
-    }
-
-    @Override
     protected void setFocusState(boolean focus) {
         super.setFocusState(focus);
         if (focus) {
@@ -222,7 +201,6 @@ public class NavigationBarTablet extends NavigationBarBase implements StateListe
             }
             mSearchButton.setVisibility(View.GONE);
             mStar.setVisibility(View.GONE);
-            mUrlIcon.setImageResource(R.drawable.ic_search_dark);
         } else {
             if (mHideNavButtons) {
                 showNavButtons();
@@ -233,7 +211,6 @@ public class NavigationBarTablet extends NavigationBarBase implements StateListe
             } else {
                 mSearchButton.setVisibility(View.VISIBLE);
             }
-            updateUrlIcon();
         }
         mUrlContainer.setBackgroundDrawable(focus
                 ? mFocusDrawable : mUnfocusDrawable);
