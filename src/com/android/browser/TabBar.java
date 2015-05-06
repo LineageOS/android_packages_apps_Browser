@@ -274,7 +274,6 @@ public class TabBar extends LinearLayout implements OnClickListener {
             mLock = (ImageView) mTabContent.findViewById(R.id.lock);
             mClose = (ImageView) mTabContent.findViewById(R.id.close);
             mClose.setOnClickListener(this);
-            mIncognito = mTabContent.findViewById(R.id.incognito);
             mSnapshot = mTabContent.findViewById(R.id.snapshot);
             mSelected = false;
             // update the status

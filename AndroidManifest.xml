@@ -60,6 +60,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.PUBLISH_CUSTOM_TILE" />
 
     <application   android:name="Browser"
                    android:label="@string/application_name"
@@ -284,6 +285,12 @@
                  <data android:scheme="http" />
              </intent-filter>
          </receiver>
+
+         <receiver android:name="TileReceiver" >
+            <intent-filter>
+                <action android:name="org.cyanogenmod.samples.customtiles.ACTION_TOGGLE_STATE"/>
+            </intent-filter>
+        </receiver>
 
         <provider android:name=".provider.SnapshotProvider"
                   android:authorities="com.android.browser.snapshots"

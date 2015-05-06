@@ -14,8 +14,10 @@
      limitations under the License.
 -->
 
-<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- General -->
     <header android:fragment="com.android.browser.preferences.GeneralPreferencesFragment"
         android:title="@string/pref_general_title"
     />
@@ -28,16 +30,19 @@
         android:title="@string/pref_accessibility_title"
     />
 
-    <header android:fragment="com.android.browser.preferences.AdvancedPreferencesFragment"
-        android:title="@string/pref_extras_title"
+    <SwitchPreference
+        android:key="data_saver"
+        android:title="@string/data_saver_title"
+        android:summary="@string/data_saver_summary"
+        android:persistent="true"
+        android:defaultValue="false"
     />
 
-    <header android:fragment="com.android.browser.preferences.BandwidthPreferencesFragment"
-        android:title="@string/pref_data_title"
+    <SwitchPreference
+        android:key="full_screen"
+        android:title="@string/full_screen_title"
+        android:summary="@string/full_screen_summary"
+        android:persistent="true"
+        android:defaultValue="false"
     />
-
-    <header android:fragment="com.android.browser.preferences.LabPreferencesFragment"
-        android:title="@string/pref_lab_title"
-    />
-
-</preference-headers>
+</PreferenceScreen>
