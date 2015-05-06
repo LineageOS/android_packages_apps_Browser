@@ -12,52 +12,46 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
+     android:background="@drawable/card"
 -->
 
-<LinearLayout
+<android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@drawable/nav_tab_bg"
     android:focusable="false"
-    android:elevation="6dp">
+    android:elevation="6dp"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="4dp"
+    card_view:cardBackgroundColor="@color/primary"
+    card_view:contentPaddingLeft="8dp"
+    card_view:contentPaddingRight="8dp"
+    card_view:contentPaddingTop="8dp"
+    card_view:contentPaddingBottom="4dp"
+    card_view:cardUseCompatPadding="true">
     <LinearLayout
         android:id="@+id/titlebar"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/nav_tab_titleheight"
-        android:layout_gravity="center_horizontal"
-        android:paddingLeft="8dip" >
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <ImageView
+            android:id="@+id/tab_view"
+            android:src="@drawable/ic_stop"
+            android:layout_width="@dimen/nav_tab_width"
+            android:layout_height="@dimen/nav_tab_height"
+            android:focusable="false" />
         <TextView
             android:id="@+id/title"
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_tab_titleheight"
+            android:layout_marginTop="4dp"
             android:gravity="center_vertical"
             android:singleLine="true"
             android:ellipsize="end"
-            android:lines="1"
-            android:textAppearance="?android:attr/textAppearanceSmallInverse"
-            android:scrollHorizontally="true"
-            android:drawablePadding="8dip" />
-        <ImageView
-            android:id="@+id/closetab"
-            android:src="@drawable/ic_tab_close"
-            android:layout_gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:paddingRight="16dip"
-            android:contentDescription="@string/accessibility_button_closetab"
-            style="@style/HoloButton" />
+            android:textAppearance="?android:attr/textAppearanceSmallInverse" />
     </LinearLayout>
-    <ImageView
-        android:id="@+id/tab_view"
-        android:src="@drawable/ic_stop_dark"
-        android:layout_width="@dimen/nav_tab_width"
-        android:layout_height="@dimen/nav_tab_height"
-        android:paddingLeft="2dip"
-        android:paddingRight="2dip"
-        android:focusable="false" />
-</LinearLayout>
+</android.support.v7.widget.CardView>

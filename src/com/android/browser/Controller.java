@@ -79,6 +79,8 @@ import android.webkit.WebChromeClient.FileChooserParams;
 import android.webkit.WebIconDatabase;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.browser.IntentHandler.UrlData;
@@ -365,6 +367,7 @@ public class Controller
                 && BrowserActivity.ACTION_SHOW_BOOKMARKS.equals(intent.getAction())) {
             bookmarksOrHistoryPicker(ComboViews.Bookmarks);
         }
+
     }
 
     private static class PruneThumbnails implements Runnable {
@@ -396,7 +399,6 @@ public class Controller
                 cr.delete(Thumbnails.CONTENT_URI, where.toString(), null);
             }
         }
-
     }
 
     @Override
@@ -1586,9 +1588,6 @@ public class Controller
         final MenuItem uaSwitcher = menu.findItem(R.id.ua_desktop_menu_id);
         uaSwitcher.setChecked(isDesktopUa);
 
-        final MenuItem fullscreen = menu.findItem(R.id.fullscreen_menu_id);
-        fullscreen.setChecked(mUi.isFullscreen());
-
         menu.setGroupVisible(R.id.LIVE_MENU, isLive);
         menu.setGroupVisible(R.id.SNAPSHOT_MENU, !isLive);
         menu.setGroupVisible(R.id.COMBO_MENU, false);
@@ -1652,7 +1651,7 @@ public class Controller
 
             case R.id.back_menu_id:
                 getCurrentTab().goBack();
-                break;
+                 break;
 
             case R.id.forward_menu_id:
                 getCurrentTab().goForward();
@@ -1716,9 +1715,6 @@ public class Controller
                 toggleUserAgent();
                 break;
 
-            case R.id.fullscreen_menu_id:
-                toggleFullscreen();
-
             case R.id.window_one_menu_id:
             case R.id.window_two_menu_id:
             case R.id.window_three_menu_id:
@@ -1753,11 +1749,6 @@ public class Controller
         WebView web = getCurrentWebView();
         mSettings.toggleDesktopUseragent(web);
         web.loadUrl(web.getOriginalUrl());
-    }
-
-    @Override
-    public void toggleFullscreen() {
-        mUi.setFullscreen(!mUi.isFullscreen());
     }
 
     @Override
