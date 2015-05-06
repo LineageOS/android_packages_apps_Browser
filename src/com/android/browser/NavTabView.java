@@ -31,7 +31,6 @@ public class NavTabView extends LinearLayout {
 
     private ViewGroup mContent;
     private Tab mTab;
-    private ImageView mClose;
     private TextView mTitle;
     private View mTitleBar;
     ImageView mImage;
@@ -56,14 +55,8 @@ public class NavTabView extends LinearLayout {
     private void init() {
         LayoutInflater.from(mContext).inflate(R.layout.nav_tab_view, this);
         mContent = (ViewGroup) findViewById(R.id.main);
-        mClose = (ImageView) findViewById(R.id.closetab);
-        mTitle = (TextView) findViewById(R.id.title);
         mTitleBar = findViewById(R.id.titlebar);
         mImage = (ImageView) findViewById(R.id.tab_view);
-    }
-
-    protected boolean isClose(View v) {
-        return v == mClose;
     }
 
     protected boolean isTitle(View v) {
@@ -76,31 +69,11 @@ public class NavTabView extends LinearLayout {
 
     private void setTitle() {
         if (mTab == null) return;
-        if (mHighlighted) {
-            mTitle.setText(mTab.getUrl());
-        } else {
+        if (!mHighlighted) {
             String txt = mTab.getTitle();
-            if (txt == null) {
+            if (txt == null)
                 txt = mTab.getUrl();
-            }
-            mTitle.setText(txt);
         }
-        if (mTab.isSnapshot()) {
-            setTitleIcon(R.drawable.ic_history_dark);
-        } else if (mTab.isPrivateBrowsingEnabled()) {
-            setTitleIcon(R.drawable.ic_incognito_dark);
-        } else {
-            setTitleIcon(0);
-        }
-    }
-
-    private void setTitleIcon(int id) {
-        if (id == 0) {
-            mTitle.setPadding(mTitle.getCompoundDrawablePadding(), 0, 0, 0);
-        } else {
-            mTitle.setPadding(0, 0, 0, 0);
-        }
-        mTitle.setCompoundDrawablesWithIntrinsicBounds(id, 0, 0, 0);
     }
 
     protected boolean isHighlighted() {
@@ -127,8 +100,6 @@ public class NavTabView extends LinearLayout {
     @Override
     public void setOnClickListener(OnClickListener listener) {
         mClickListener = listener;
-        mTitleBar.setOnClickListener(mClickListener);
-        mClose.setOnClickListener(mClickListener);
         if (mImage != null) {
             mImage.setOnClickListener(mClickListener);
         }
