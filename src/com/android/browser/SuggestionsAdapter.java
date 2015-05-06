@@ -161,7 +161,6 @@ public class SuggestionsAdapter extends BaseAdapter implements Filterable,
         TextView tv2 = (TextView) view.findViewById(android.R.id.text2);
         ImageView ic1 = (ImageView) view.findViewById(R.id.icon1);
         View ic2 = view.findViewById(R.id.icon2);
-        View div = view.findViewById(R.id.divider);
         tv1.setText(Html.fromHtml(item.title));
         if (TextUtils.isEmpty(item.url)) {
             tv2.setVisibility(View.GONE);
@@ -195,7 +194,6 @@ public class SuggestionsAdapter extends BaseAdapter implements Filterable,
         ic2.setVisibility(((TYPE_SUGGEST == item.type)
                 || (TYPE_SEARCH == item.type))
                 ? View.VISIBLE : View.GONE);
-        div.setVisibility(ic2.getVisibility());
         ic2.setOnClickListener(this);
         view.findViewById(R.id.suggestion).setOnClickListener(this);
     }

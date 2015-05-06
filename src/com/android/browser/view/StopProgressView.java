@@ -58,7 +58,7 @@ public class StopProgressView extends ProgressBar {
     private void init(AttributeSet attrs) {
         mProgressDrawable = getIndeterminateDrawable();
         setImageDrawable(mContext.getResources()
-                .getDrawable(R.drawable.ic_stop_dark));
+                .getDrawable(R.drawable.ic_stop));
     }
 
     public void hideProgress() {

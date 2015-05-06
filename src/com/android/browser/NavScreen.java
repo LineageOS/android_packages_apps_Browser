@@ -65,7 +65,6 @@ public class NavScreen extends RelativeLayout
     FrameLayout mHolder;
 
     TextView mTitle;
-    ImageView mFavicon;
     ImageButton mCloseTab;
     ImageView mNewTabFab;
 
@@ -128,7 +127,6 @@ public class NavScreen extends RelativeLayout
         mNewTab = (ImageButton) findViewById(R.id.newtab);
         mMore = (ImageButton) findViewById(R.id.more);
         mBookmarks.setOnClickListener(this);
-        mHomeTab.setOnClickListener(this);
         mNewIncognitoTab.setOnClickListener(this);
         mNewTab.setOnClickListener(this);
         mMore.setOnClickListener(this);
@@ -148,11 +146,17 @@ public class NavScreen extends RelativeLayout
             }
         });
         mNewTabFab = (ImageView) findViewById(R.id.floating_action_button);
-        mNewTabFab.setOnClickListener(
-        new View.OnClickListener() {
+        mNewTabFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openNewTab(false);
+            }
+        });
+        mNewTabFab.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                openNewTab(true);
+                return true;
             }
         });
     }
@@ -223,14 +227,14 @@ public class NavScreen extends RelativeLayout
         }
     }
 
-    private Tab findCenteredTab(){
+    private Tab findCenteredTab() {
         View v = mScroller.findViewAt(mScroller.getWidth() / 2, mScroller.getHeight() / 2);
-        if( v != null && v instanceof NavTabView ){
-            Long tabId = ((NavTabView)v).getWebViewId();
-            if( tabId != null ){
+        if (v != null && v instanceof NavTabView) {
+            long tabId = ((NavTabView)v).getWebViewId();
+            if (tabId != -1) {
                 List<Tab> tabs = mUiController.getTabs();
-                for( int i=0; i<tabs.size(); i++ ){
-                    if( tabs.get(i).getId() == tabId.longValue() ) {
+                for (int i = 0; i < tabs.size(); i++) {
+                    if (tabs.get(i).getId() == tabId) {
                         return tabs.get(i);
                     }
                 }
@@ -290,10 +294,7 @@ public class NavScreen extends RelativeLayout
             tabview.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (tabview.isClose(v)) {
-                        mScroller.animateOut(tabview);
-                        mTabViews.remove(tab);
-                    } else if (tabview.isTitle(v)) {
+                    if (tabview.isTitle(v)) {
                         switchToTab(tab);
                         mUi.getTitleBar().setSkipTitleBarAnimations(true);
                         close(position, false);

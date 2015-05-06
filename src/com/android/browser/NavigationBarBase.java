@@ -87,11 +87,6 @@ public class NavigationBarBase extends LinearLayout implements
         }
     }
 
-    public void setFavicon(Bitmap icon) {
-        if (mFavicon == null) return;
-        mFavicon.setImageDrawable(mBaseUi.getFaviconDrawable(icon));
-    }
-
     @Override
     public void onClick(View v) {
     }
