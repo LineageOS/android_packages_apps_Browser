@@ -34,6 +34,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
+import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -80,6 +81,7 @@ public abstract class BaseUi implements UI {
     private static final int MSG_HIDE_CUSTOM_VIEW = 2;
     public static final int HIDE_TITLEBAR_DELAY = 1500; // in ms
     public static final int HIDE_CUSTOM_VIEW_DELAY = 200; // in ms
+    public boolean CUSTOM_TITLE_ENABLED = true;
 
     Activity mActivity;
     UiController mUiController;
@@ -97,6 +99,7 @@ public abstract class BaseUi implements UI {
     private FrameLayout mFixedTitlebarContainer;
 
     private View mCustomView;
+    private View mDecorView;
     private WebChromeClient.CustomViewCallback mCustomViewCallback;
     private int mOriginalOrientation;
 
@@ -125,8 +128,8 @@ public abstract class BaseUi implements UI {
         Resources res = mActivity.getResources();
         mInputManager = (InputMethodManager)
                 browser.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        mLockIconSecure = res.getDrawable(R.drawable.ic_secure_dark);
-        mLockIconMixed = res.getDrawable(R.drawable.ic_secure_partial_dark);
+        mLockIconSecure = res.getDrawable(R.drawable.ic_secure);
+        mLockIconMixed = res.getDrawable(R.drawable.ic_secure_partial);
         FrameLayout frameLayout = (FrameLayout) mActivity.getWindow()
                 .getDecorView().findViewById(android.R.id.content);
         LayoutInflater.from(mActivity)
@@ -148,6 +151,8 @@ public abstract class BaseUi implements UI {
         mNavigationBar = mTitleBar.getNavigationBar();
         mUrlBarAutoShowManager = new UrlBarAutoShowManager(this);
     }
+
+
 
     private void cancelStopToast() {
         if (mStopToast != null) {
@@ -211,9 +216,13 @@ public abstract class BaseUi implements UI {
         if (useQuickControls) {
             mPieControl = new PieControl(mActivity, mUiController, this);
             mPieControl.attachToContainer(mContentView);
+            // enable immersive
+            immerse(true);
         } else {
             if (mPieControl != null) {
                 mPieControl.removeFromContainer(mContentView);
+                // disable immersive
+                immerse(false);
             }
         }
         updateUrlBarAutoShowManagerTarget();
@@ -592,6 +601,25 @@ public abstract class BaseUi implements UI {
     @Override
     public void hideAutoLogin(Tab tab) {
         updateAutoLogin(tab, true);
+    }
+
+    public void immerse(boolean enable){
+        if (enable){
+            // enable immersive mode
+            mDecorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_IMMERSIVE);
+        } else {
+            // disable immersive mode
+            mDecorView.setSystemUiVisibility(
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        }
     }
 
     // -------------------------------------------------------------------------

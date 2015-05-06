@@ -27,4 +27,13 @@
 
     <!-- User agent label -->
     <string name="pref_content_ua">User agent</string>
+
+    <!-- FullScreen -->
+    <string name="full_screen_title">Fullscreen</string>
+    <string name="full_screen_summary">Enable immersive navigation</string>
+
+    <!-- Data saver -->
+    <string name="data_saver_title">Data saver</string>
+    <string name="data_saver_summary">Reduce data usage on mobile connections</string>
+
 </resources>
