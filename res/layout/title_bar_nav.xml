@@ -28,6 +28,13 @@
         android:layout_marginLeft="8dip"
         android:layout_marginRight="8dip"
         android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/back"
+            android:src="@drawable/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/accessibility_button_back"
+            style="@style/BrowserButton" />
         <ImageView
             android:id="@+id/magnify"
             android:layout_width="wrap_content"
@@ -35,34 +42,14 @@
             android:paddingLeft="4dip"
             android:paddingRight="8dip"
             android:visibility="gone"
-            android:src="@drawable/ic_search_dark" />
+            android:src="@drawable/ic_search" />
         <ImageView
             android:id="@+id/incognito_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="4dip"
             android:visibility="gone"
-            android:src="@drawable/ic_incognito_dark" />
-        <FrameLayout
-            android:id="@+id/iconcombo"
-            android:layout_width="44dip"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/page_info"
-            style="@style/HoloButton">
-            <ImageView
-                android:id="@+id/favicon"
-                android:layout_width="32dip"
-                android:layout_height="32dip"
-                android:paddingLeft="4dip"
-                android:paddingRight="8dip"
-                android:layout_gravity="center" />
-            <ImageView
-                android:id="@+id/lock"
-                android:layout_width="32dip"
-                android:layout_height="32dip"
-                android:layout_gravity="center"
-                android:visibility="gone" />
-        </FrameLayout>
+            android:src="@drawable/ic_incognito" />
         <ImageView
             android:id="@+id/stop"
             android:layout_width="wrap_content"
@@ -70,8 +57,8 @@
             android:layout_gravity="center_vertical"
             android:paddingLeft="4dip"
             android:contentDescription="@string/accessibility_button_stop"
-            android:src="@drawable/ic_stop_dark"
-            style="@style/HoloButton" />
+            android:src="@drawable/ic_stop"
+            style="@style/BrowserButton" />
         <com.android.browser.UrlInputView
             android:id="@+id/url"
             android:focusable="true"
@@ -97,8 +84,8 @@
             android:layout_height="match_parent"
             android:paddingRight="4dip"
             android:contentDescription="@string/accessibility_button_voice"
-            android:src="@drawable/ic_voice_search_dark"
-            style="@style/HoloButton"
+            android:src="@drawable/ic_voice_search"
+            style="@style/BrowserButton"
             android:visibility="gone" />
         <ImageView
             android:id="@+id/clear"
@@ -106,8 +93,8 @@
             android:layout_height="match_parent"
             android:paddingRight="4dip"
             android:contentDescription="@string/accessibility_button_clear"
-            android:src="@drawable/ic_close_window_dark"
-            style="@style/HoloButton"
+            android:src="@drawable/ic_close_window"
+            style="@style/BrowserButton"
             android:visibility="gone" />
     </LinearLayout>
     <ImageButton
@@ -115,13 +102,13 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
             android:contentDescription="@string/accessibility_button_navscreen"
-        android:src="@drawable/ic_windows_dark"
-        style="@style/HoloButton" />
+        android:src="@drawable/ic_windows"
+        style="@style/BrowserButton" />
     <ImageButton
         android:id="@+id/more"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        style="@style/HoloButton"
+        style="@style/BrowserButton"
         android:gravity="center_vertical"
         android:contentDescription="@string/accessibility_button_more"
         android:src="@drawable/ic_menu_overflow" />
