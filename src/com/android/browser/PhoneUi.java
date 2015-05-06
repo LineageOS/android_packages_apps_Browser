@@ -25,6 +25,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Message;
 import android.util.Log;
@@ -124,8 +125,8 @@ public class PhoneUi extends BaseUi {
             }
             if (mAnimScreen == null) {
                 mAnimScreen = new AnimScreen(mActivity);
-                // initialize bitmaps
-                mAnimScreen.set(getTitleBar(), getWebView());
+                // initialize bitmap
+                mAnimScreen.set(getWebView());
             }
         }
     }
@@ -158,7 +159,6 @@ public class PhoneUi extends BaseUi {
         }
         // update nav bar state
         mNavigationBar.onStateChanged(StateListener.STATE_NORMAL);
-        updateLockIconToLatest(tab);
         mTitleBar.setSkipTitleBarAnimations(false);
     }
 
@@ -184,10 +184,10 @@ public class PhoneUi extends BaseUi {
         if (info != null) {
             info.setVisible(false);
         }
-        MenuItem newtab = menu.findItem(R.id.new_tab_menu_id);
+         MenuItem newtab = menu.findItem(R.id.new_tab_menu_id);
         if (newtab != null && !mUseQuickControls) {
             newtab.setVisible(false);
-        }
+         }
         MenuItem closeOthers = menu.findItem(R.id.close_other_tabs_id);
         if (closeOthers != null) {
             boolean isLastTab = true;
@@ -195,10 +195,6 @@ public class PhoneUi extends BaseUi {
                 isLastTab = (mTabControl.getTabCount() <= 1);
             }
             closeOthers.setEnabled(!isLastTab);
-        }
-        MenuItem fullscreen = menu.findItem(R.id.fullscreen_menu_id);
-        if (fullscreen != null) {
-            fullscreen.setVisible(!showingNavScreen());
         }
         if (showingNavScreen()) {
             menu.setGroupVisible(R.id.LIVE_MENU, false);
@@ -279,10 +275,9 @@ public class PhoneUi extends BaseUi {
             mAnimScreen = new AnimScreen(mActivity);
         } else {
             mAnimScreen.mMain.setAlpha(1f);
-            mAnimScreen.mTitle.setAlpha(1f);
             mAnimScreen.setScaleFactor(1f);
         }
-        mAnimScreen.set(getTitleBar(), getWebView());
+        mAnimScreen.set(getWebView());
         if (mAnimScreen.mMain.getParent() == null) {
             mCustomViewContainer.addView(mAnimScreen.mMain, COVER_SCREEN_PARAMS);
         }
@@ -291,14 +286,14 @@ public class PhoneUi extends BaseUi {
         mAnimScreen.mMain.layout(0, 0, mContentView.getWidth(),
                 mContentView.getHeight());
         int fromLeft = 0;
-        int fromTop = getTitleBar().getHeight();
+        int fromTop = 0;
         int fromRight = mContentView.getWidth();
         int fromBottom = mContentView.getHeight();
         int width = mActivity.getResources().getDimensionPixelSize(R.dimen.nav_tab_width);
         int height = mActivity.getResources().getDimensionPixelSize(R.dimen.nav_tab_height);
         int ntth = mActivity.getResources().getDimensionPixelSize(R.dimen.nav_tab_titleheight);
         int toLeft = (mContentView.getWidth() - width) / 2;
-        int toTop = ((fromBottom - (ntth + height)) / 2 + ntth);
+        int toTop = ((fromBottom - (ntth + height)) / 2);
         int toRight = toLeft + width;
         int toBottom = toTop + height;
         float scaleFactor = width / (float) mContentView.getWidth();
@@ -314,15 +309,13 @@ public class PhoneUi extends BaseUi {
                 fromRight, toRight);
         ObjectAnimator tb = ObjectAnimator.ofInt(mAnimScreen.mContent, "bottom",
                 fromBottom, toBottom);
-        ObjectAnimator title = ObjectAnimator.ofFloat(mAnimScreen.mTitle, "alpha",
-                1f, 0f);
         ObjectAnimator sx = ObjectAnimator.ofFloat(mAnimScreen, "scaleFactor",
                 1f, scaleFactor);
         ObjectAnimator blend1 = ObjectAnimator.ofFloat(mAnimScreen.mMain,
                 "alpha", 1f, 0f);
         blend1.setDuration(100);
 
-        inanim.playTogether(tx, ty, tr, tb, sx, title);
+        inanim.playTogether(tx, ty, tr, tb, sx);
         inanim.setDuration(200);
         set1.addListener(new AnimatorListenerAdapter() {
             @Override
@@ -382,14 +375,14 @@ public class PhoneUi extends BaseUi {
         mAnimScreen.mMain.layout(0, 0, mContentView.getWidth(),
                 mContentView.getHeight());
         mNavScreen.mScroller.finishScroller();
-        ImageView target = tabview.mImage;
+        Drawable contentDrawable = tabview.mImage.getDrawable();
         int toLeft = 0;
         int toTop = (tab.getWebView() != null) ? tab.getWebView().getVisibleTitleHeight() : 0;
         int toRight = mContentView.getWidth();
-        int width = target.getDrawable().getIntrinsicWidth();
-        int height = target.getDrawable().getIntrinsicHeight();
-        int fromLeft = tabview.getLeft() + target.getLeft() - mNavScreen.mScroller.getScrollX();
-        int fromTop = tabview.getTop() + target.getTop() - mNavScreen.mScroller.getScrollY();
+        int width = contentDrawable.getIntrinsicWidth();
+        int height = contentDrawable.getIntrinsicHeight();
+        int fromLeft = tabview.getContentLeft() - mNavScreen.mScroller.getScrollX();
+        int fromTop = tabview.getContentTop() - mNavScreen.mScroller.getScrollY();
         int fromRight = fromLeft + width;
         int fromBottom = fromTop + height;
         float scaleFactor = mContentView.getWidth() / (float) width;
@@ -460,16 +453,13 @@ public class PhoneUi extends BaseUi {
     static class AnimScreen {
 
         private View mMain;
-        private ImageView mTitle;
         private ImageView mContent;
         private float mScale;
-        private Bitmap mTitleBarBitmap;
         private Bitmap mContentBitmap;
 
         public AnimScreen(Context ctx) {
             mMain = LayoutInflater.from(ctx).inflate(R.layout.anim_screen,
                     null);
-            mTitle = (ImageView) mMain.findViewById(R.id.title);
             mContent = (ImageView) mMain.findViewById(R.id.content);
             mContent.setScaleType(ImageView.ScaleType.MATRIX);
             mContent.setImageMatrix(new Matrix());
@@ -477,28 +467,11 @@ public class PhoneUi extends BaseUi {
             setScaleFactor(getScaleFactor());
         }
 
-        public void set(TitleBar tbar, WebView web) {
-            if (tbar == null || web == null) {
+        public void set(WebView web) {
+            if (web == null) {
                 return;
             }
-            if (tbar.getWidth() > 0 && tbar.getEmbeddedHeight() > 0) {
-                if (mTitleBarBitmap == null
-                        || mTitleBarBitmap.getWidth() != tbar.getWidth()
-                        || mTitleBarBitmap.getHeight() != tbar.getEmbeddedHeight()) {
-                    mTitleBarBitmap = safeCreateBitmap(tbar.getWidth(),
-                            tbar.getEmbeddedHeight());
-                }
-                if (mTitleBarBitmap != null) {
-                    Canvas c = new Canvas(mTitleBarBitmap);
-                    tbar.draw(c);
-                    c.setBitmap(null);
-                }
-            } else {
-                mTitleBarBitmap = null;
-            }
-            mTitle.setImageBitmap(mTitleBarBitmap);
-            mTitle.setVisibility(View.VISIBLE);
-            int h = web.getHeight() - tbar.getEmbeddedHeight();
+            int h = web.getHeight();
             if (mContentBitmap == null
                     || mContentBitmap.getWidth() != web.getWidth()
                     || mContentBitmap.getHeight() != h) {
@@ -506,9 +479,7 @@ public class PhoneUi extends BaseUi {
             }
             if (mContentBitmap != null) {
                 Canvas c = new Canvas(mContentBitmap);
-                int tx = web.getScrollX();
-                int ty = web.getScrollY();
-                c.translate(-tx, -ty - tbar.getEmbeddedHeight());
+                c.translate(-web.getScrollX(), -web.getScrollY());
                 web.draw(c);
                 c.setBitmap(null);
             }
@@ -525,7 +496,6 @@ public class PhoneUi extends BaseUi {
         }
 
         public void set(Bitmap image) {
-            mTitle.setVisibility(View.GONE);
             mContent.setImageBitmap(image);
         }
 
