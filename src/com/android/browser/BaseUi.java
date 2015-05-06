@@ -34,6 +34,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
+import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -97,6 +98,7 @@ public abstract class BaseUi implements UI {
     private FrameLayout mFixedTitlebarContainer;
 
     private View mCustomView;
+    private View mDecorView;
     private WebChromeClient.CustomViewCallback mCustomViewCallback;
     private int mOriginalOrientation;
 
@@ -125,8 +127,8 @@ public abstract class BaseUi implements UI {
         Resources res = mActivity.getResources();
         mInputManager = (InputMethodManager)
                 browser.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        mLockIconSecure = res.getDrawable(R.drawable.ic_secure_dark);
-        mLockIconMixed = res.getDrawable(R.drawable.ic_secure_partial_dark);
+        mLockIconSecure = res.getDrawable(R.drawable.ic_secure);
+        mLockIconMixed = res.getDrawable(R.drawable.ic_secure_partial);
         FrameLayout frameLayout = (FrameLayout) mActivity.getWindow()
                 .getDecorView().findViewById(android.R.id.content);
         LayoutInflater.from(mActivity)
@@ -139,7 +141,7 @@ public abstract class BaseUi implements UI {
                 R.id.fullscreen_custom_content);
         mErrorConsoleContainer = (LinearLayout) frameLayout
                 .findViewById(R.id.error_console);
-        setFullscreen(false);
+        setImmersiveFullscreen(BrowserSettings.getInstance().useFullscreen());
         mGenericFavicon = res.getDrawable(
                 R.drawable.app_web_browser_sm);
         mTitleBar = new TitleBar(mActivity, mUiController, this,
@@ -148,6 +150,8 @@ public abstract class BaseUi implements UI {
         mNavigationBar = mTitleBar.getNavigationBar();
         mUrlBarAutoShowManager = new UrlBarAutoShowManager(this);
     }
+
+
 
     private void cancelStopToast() {
         if (mStopToast != null) {
@@ -223,8 +227,6 @@ public abstract class BaseUi implements UI {
     @Override
     public void onTabDataChanged(Tab tab) {
         setUrlTitle(tab);
-        setFavicon(tab);
-        updateLockIconToLatest(tab);
         updateNavigationState(tab);
         mTitleBar.onTabDataChanged(tab);
         mNavigationBar.onTabDataChanged(tab);
@@ -603,31 +605,6 @@ public abstract class BaseUi implements UI {
         mTitleBar.updateAutoLogin(tab, animate);
     }
 
-    /**
-     * Update the lock icon to correspond to our latest state.
-     */
-    protected void updateLockIconToLatest(Tab t) {
-        if (t != null && t.inForeground()) {
-            updateLockIconImage(t.getSecurityState());
-        }
-    }
-
-    /**
-     * Updates the lock-icon image in the title-bar.
-     */
-    private void updateLockIconImage(SecurityState securityState) {
-        Drawable d = null;
-        if (securityState == SecurityState.SECURITY_STATE_SECURE) {
-            d = mLockIconSecure;
-        } else if (securityState == SecurityState.SECURITY_STATE_MIXED
-                || securityState == SecurityState.SECURITY_STATE_BAD_CERTIFICATE) {
-            // TODO: It would be good to have different icons for insecure vs mixed content.
-            // See http://b/5403800
-            d = mLockIconMixed;
-        }
-        mNavigationBar.setLock(d);
-    }
-
     protected void setUrlTitle(Tab tab) {
         String url = tab.getUrl();
         String title = tab.getTitle();
@@ -636,14 +613,6 @@ public abstract class BaseUi implements UI {
         }
         if (tab.inForeground()) {
             mNavigationBar.setDisplayTitle(url);
-        }
-    }
-
-    // Set the favicon in the title bar.
-    protected void setFavicon(Tab tab) {
-        if (tab.inForeground()) {
-            Bitmap icon = tab.getFavicon();
-            mNavigationBar.setFavicon(icon);
         }
     }
 
@@ -775,27 +744,19 @@ public abstract class BaseUi implements UI {
     }
 
     public void setFullscreen(boolean enabled) {
-        Window win = mActivity.getWindow();
-        WindowManager.LayoutParams winParams = win.getAttributes();
-        final int bits = WindowManager.LayoutParams.FLAG_FULLSCREEN;
+        FrameLayout decor = (FrameLayout) mActivity.getWindow().getDecorView();
+        int systemUiVisibility = decor.getSystemUiVisibility();
+        final int bits = View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+            | View.SYSTEM_UI_FLAG_FULLSCREEN
+            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         if (enabled) {
-            winParams.flags |=  bits;
+            systemUiVisibility |= bits;
         } else {
-            winParams.flags &= ~bits;
-            if (mCustomView != null) {
-                mCustomView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
-            } else {
-                mContentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
-            }
+            systemUiVisibility &= ~bits;
         }
-        win.setAttributes(winParams);
-    }
-
-    public boolean isFullscreen() {
-        Window win = mActivity.getWindow();
-        WindowManager.LayoutParams winParams = win.getAttributes();
-        final int bits = WindowManager.LayoutParams.FLAG_FULLSCREEN;
-        return (winParams.flags & bits) == bits;
+        decor.setSystemUiVisibility(systemUiVisibility);
     }
 
     protected void setImmersiveFullscreen (boolean enabled) {

@@ -152,7 +152,6 @@ public class XLargeUi extends BaseUi {
             return;
         }
         mTabBar.onSetActiveTab(tab);
-        updateLockIconToLatest(tab);
         mTitleBar.setSkipTitleBarAnimations(false);
     }
 
@@ -222,13 +221,6 @@ public class XLargeUi extends BaseUi {
     public void setUrlTitle(Tab tab) {
         super.setUrlTitle(tab);
         mTabBar.onUrlAndTitle(tab, tab.getUrl(), tab.getTitle());
-    }
-
-    // Set the favicon in the title bar.
-    @Override
-    public void setFavicon(Tab tab) {
-        super.setFavicon(tab);
-        mTabBar.onFavicon(tab, tab.getFavicon());
     }
 
     @Override

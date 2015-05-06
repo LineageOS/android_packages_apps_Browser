@@ -105,8 +105,6 @@ public interface UiController {
 
     void toggleUserAgent();
 
-    void toggleFullscreen();
-
     BrowserSettings getSettings();
 
     boolean supportsVoice();
