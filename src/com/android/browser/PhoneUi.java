@@ -158,7 +158,6 @@ public class PhoneUi extends BaseUi {
         }
         // update nav bar state
         mNavigationBar.onStateChanged(StateListener.STATE_NORMAL);
-        updateLockIconToLatest(tab);
         mTitleBar.setSkipTitleBarAnimations(false);
     }
 
@@ -170,23 +169,23 @@ public class PhoneUi extends BaseUi {
         return true;
     }
 
+    private void setMenuItemVisibility(Menu menu, int id,
+                                       boolean visibility) {
+        MenuItem item = menu.findItem(id);
+        if (item != null) {
+            item.setVisible(visibility);
+        }
+    }
+
     @Override
     public void updateMenuState(Tab tab, Menu menu) {
         MenuItem bm = menu.findItem(R.id.bookmarks_menu_id);
         if (bm != null) {
             bm.setVisible(!showingNavScreen());
         }
-        MenuItem abm = menu.findItem(R.id.add_bookmark_menu_id);
-        if (abm != null) {
-            abm.setVisible((tab != null) && !tab.isSnapshot() && !showingNavScreen());
-        }
         MenuItem info = menu.findItem(R.id.page_info_menu_id);
         if (info != null) {
             info.setVisible(false);
-        }
-        MenuItem newtab = menu.findItem(R.id.new_tab_menu_id);
-        if (newtab != null && !mUseQuickControls) {
-            newtab.setVisible(false);
         }
         MenuItem closeOthers = menu.findItem(R.id.close_other_tabs_id);
         if (closeOthers != null) {
@@ -196,15 +195,13 @@ public class PhoneUi extends BaseUi {
             }
             closeOthers.setEnabled(!isLastTab);
         }
-        MenuItem fullscreen = menu.findItem(R.id.fullscreen_menu_id);
-        if (fullscreen != null) {
-            fullscreen.setVisible(!showingNavScreen());
-        }
         if (showingNavScreen()) {
+            setMenuItemVisibility(menu, R.id.history_menu_id, false);
+            setMenuItemVisibility(menu, R.id.find_menu_id, false);
+            setMenuItemVisibility(menu, R.id.save_snapshot_menu_id, false);
             menu.setGroupVisible(R.id.LIVE_MENU, false);
             menu.setGroupVisible(R.id.SNAPSHOT_MENU, false);
             menu.setGroupVisible(R.id.NAV_MENU, false);
-            menu.setGroupVisible(R.id.COMBO_MENU, true);
         }
     }
 

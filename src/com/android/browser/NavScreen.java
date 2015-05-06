@@ -65,7 +65,6 @@ public class NavScreen extends RelativeLayout
     FrameLayout mHolder;
 
     TextView mTitle;
-    ImageView mFavicon;
     ImageButton mCloseTab;
     ImageView mNewTabFab;
 
@@ -84,12 +83,13 @@ public class NavScreen extends RelativeLayout
     }
 
     protected void showMenu() {
-        PopupMenu popup = new PopupMenu(mContext, mMore);
-        Menu menu = popup.getMenu();
-        popup.getMenuInflater().inflate(R.menu.browser, menu);
-        mUiController.updateMenuState(mUiController.getCurrentTab(), menu);
-        popup.setOnMenuItemClickListener(this);
-        popup.show();
+        if (mUiController instanceof Controller) {
+            PopupMenu popup = new PopupMenu(getContext(), mMore);
+            Menu menu = popup.getMenu();
+
+            Controller controller = (Controller) mUiController;
+            controller.onPrepareOptionsMenu(menu);
+        }
     }
 
     @Override
@@ -128,7 +128,6 @@ public class NavScreen extends RelativeLayout
         mNewTab = (ImageButton) findViewById(R.id.newtab);
         mMore = (ImageButton) findViewById(R.id.more);
         mBookmarks.setOnClickListener(this);
-        mHomeTab.setOnClickListener(this);
         mNewIncognitoTab.setOnClickListener(this);
         mNewTab.setOnClickListener(this);
         mMore.setOnClickListener(this);
@@ -153,6 +152,13 @@ public class NavScreen extends RelativeLayout
             @Override
             public void onClick(View v) {
                 openNewTab(false);
+            }
+        });
+        mNewTabFab.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                openNewTab(true);
+                return true;
             }
         });
     }
@@ -290,10 +296,7 @@ public class NavScreen extends RelativeLayout
             tabview.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (tabview.isClose(v)) {
-                        mScroller.animateOut(tabview);
-                        mTabViews.remove(tab);
-                    } else if (tabview.isTitle(v)) {
+                    if (tabview.isTitle(v)) {
                         switchToTab(tab);
                         mUi.getTitleBar().setSkipTitleBarAnimations(true);
                         close(position, false);

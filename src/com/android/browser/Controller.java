@@ -1,6 +1,8 @@
 /*
  * Copyright (C) 2010 The Android Open Source Project
  *
+ * Copyright (C) 2015 The Linux Foundation
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -28,6 +30,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
@@ -79,12 +82,16 @@ import android.webkit.WebChromeClient.FileChooserParams;
 import android.webkit.WebIconDatabase;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.browser.IntentHandler.UrlData;
 import com.android.browser.UI.ComboViews;
 import com.android.browser.provider.BrowserProvider2.Thumbnails;
 import com.android.browser.provider.SnapshotProvider.Snapshots;
+import com.android.browser.appmenu.AppMenuHandler;
+import com.android.browser.appmenu.AppMenuPropertiesDelegate;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -105,7 +112,8 @@ import java.util.Map;
  * Controller for browser
  */
 public class Controller
-        implements WebViewController, UiController, ActivityController {
+        implements WebViewController, UiController, ActivityController,
+            AppMenuPropertiesDelegate {
 
     private static final String LOGTAG = "Controller";
     private static final String SEND_APP_ID_EXTRA =
@@ -183,6 +191,9 @@ public class Controller
 
     private boolean mMenuIsDown;
 
+    private boolean mWasInPageLoad = false;
+    private AppMenuHandler mAppMenuHandler;
+
     // For select and find, we keep track of the ActionMode so that
     // finish() can be called as desired.
     private ActionMode mActionMode;
@@ -221,6 +232,9 @@ public class Controller
 
     private String mVoiceResult;
 
+    private PowerConnectionReceiver mLowPowerReceiver;
+    private PowerConnectionReceiver mPowerChangeReceiver;
+
     public Controller(Activity browser) {
         mActivity = browser;
         mSettings = BrowserSettings.getInstance();
@@ -249,6 +263,7 @@ public class Controller
                 BrowserContract.Bookmarks.CONTENT_URI, true, mBookmarksObserver);
 
         mNetworkHandler = new NetworkStateHandler(mActivity, this);
+        mAppMenuHandler = new AppMenuHandler(browser, this, R.menu.browser);
         // Start watching the default geolocation permissions
         mSystemAllowGeolocationOrigins =
                 new SystemAllowGeolocationOrigins(mActivity.getApplicationContext());
@@ -358,6 +373,15 @@ public class Controller
                 && BrowserActivity.ACTION_SHOW_BOOKMARKS.equals(intent.getAction())) {
             bookmarksOrHistoryPicker(ComboViews.Bookmarks);
         }
+
+        mLowPowerReceiver = new PowerConnectionReceiver();
+        mPowerChangeReceiver = new PowerConnectionReceiver();
+
+        //always track the android framework's power save mode
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("android.os.action.POWER_SAVE_MODE_CHANGED");
+        filter.addAction(Intent.ACTION_BATTERY_OKAY);
+        mActivity.registerReceiver(mPowerChangeReceiver, filter);
     }
 
     private static class PruneThumbnails implements Runnable {
@@ -389,7 +413,6 @@ public class Controller
                 cr.delete(Thumbnails.CONTENT_URI, where.toString(), null);
             }
         }
-
     }
 
     @Override
@@ -609,6 +632,7 @@ public class Controller
         mConfigChanged = true;
         // update the menu in case of a locale change
         mActivity.invalidateOptionsMenu();
+        mAppMenuHandler.hideAppMenu();
         if (mPageDialogsHandler != null) {
             mPageDialogsHandler.onConfigurationChanged(config);
         }
@@ -652,6 +676,7 @@ public class Controller
 
         WebView.disablePlatformNotifications();
         NfcHandler.unregister(mActivity);
+        mActivity.unregisterReceiver(mLowPowerReceiver);
         if (sThumbnailBitmap != null) {
             sThumbnailBitmap.recycle();
             sThumbnailBitmap = null;
@@ -706,6 +731,7 @@ public class Controller
             mUi.onVoiceResult(mVoiceResult);
             mVoiceResult = null;
         }
+        mActivity.registerReceiver(mLowPowerReceiver, new IntentFilter(Intent.ACTION_BATTERY_LOW));
     }
 
     private void releaseWakeLock() {
@@ -762,6 +788,7 @@ public class Controller
         // Destroy all the tabs
         mTabControl.destroy();
         WebIconDatabase.getInstance().close();
+        mActivity.unregisterReceiver(mPowerChangeReceiver);
         // Stop watching the default geolocation permissions
         mSystemAllowGeolocationOrigins.stop();
         mSystemAllowGeolocationOrigins = null;
@@ -881,8 +908,13 @@ public class Controller
             // any sub frames so calls to onProgressChanges may continue after
             // onPageFinished has executed)
             if (tab.inPageLoad()) {
+                mWasInPageLoad = true;
                 updateInLoadMenuItems(mCachedMenu, tab);
-            } else if (mActivityPaused && pauseWebViewTimers(tab)) {
+            } else if (mWasInPageLoad) {
+                mWasInPageLoad = false;
+                updateInLoadMenuItems(mCachedMenu, tab);
+            }
+            if (mActivityPaused && pauseWebViewTimers(tab)) {
                 // pause the WebView timer and release the wake lock if it is
                 // finished while BrowserActivity is in pause state.
                 releaseWakeLock();
@@ -909,7 +941,10 @@ public class Controller
                 // still loading
                 // updating the progress and
                 // update the menu items.
+                mWasInPageLoad = false;
                 updateInLoadMenuItems(mCachedMenu, tab);
+            } else {
+                mWasInPageLoad = true;
             }
         }
         mUi.onProgressChanged(tab);
@@ -1483,10 +1518,22 @@ public class Controller
             dest.setIcon(src.getIcon());
             dest.setTitle(src.getTitle());
         }
+        mActivity.invalidateOptionsMenu();
+    }
+
+    public void invalidateOptionsMenu(){
+        mAppMenuHandler.invalidateAppMenu();
     }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
+        // Software menu key (toolbar key)
+        mAppMenuHandler.showAppMenu(mActivity.findViewById(R.id.more_browser_settings), false, false);
+        return true;
+    }
+
+    @Override
+    public void prepareMenu(Menu menu) {
         updateInLoadMenuItems(menu, getCurrentTab());
         // hold on to the menu reference here; it is used by the page callbacks
         // to update the menu based on loading state
@@ -1512,40 +1559,66 @@ public class Controller
                 break;
         }
         mCurrentMenuState = mMenuState;
-        return mUi.onPrepareOptionsMenu(menu);
+        mUi.onPrepareOptionsMenu(menu);
     }
+
+    private void setMenuItemVisibility(Menu menu, int id,
+                                       boolean visibility) {
+        MenuItem item = menu.findItem(id);
+        if (item != null) {
+            item.setVisible(visibility);
+        }
+    }
+
+    private int lookupBookmark(String title, String url) {
+        final ContentResolver cr = getActivity().getContentResolver();
+
+        Cursor cursor = cr.query(BrowserContract.Bookmarks.CONTENT_URI,
+                BookmarksLoader.PROJECTION,
+                "title = ? OR url = ?",
+                new String[] {
+                        title, url
+                },
+                null);
+
+        if (cursor == null) {
+            return 0;
+        }
+
+        return cursor.getCount();
+    }
+
+    private void resetMenuItems(Menu menu) {
+        setMenuItemVisibility(menu, R.id.history_menu_id, true);
+        setMenuItemVisibility(menu, R.id.find_menu_id, true);
+        WebView w = getCurrentTopWebView();
+        MenuItem bookmark_icon = menu.findItem(R.id.bookmark_this_page_id);
+
+        String title = w.getTitle();
+        String url = w.getUrl();
+        if (title != null && url != null && lookupBookmark(title, url) > 0) {
+            bookmark_icon.setChecked(true);
+        } else {
+            bookmark_icon.setChecked(false);
+        }
+     }
 
     @Override
     public void updateMenuState(Tab tab, Menu menu) {
-        boolean canGoBack = false;
         boolean canGoForward = false;
         boolean isHome = false;
         boolean isDesktopUa = false;
         boolean isLive = false;
+        resetMenuItems(menu);
         if (tab != null) {
-            canGoBack = tab.canGoBack();
             canGoForward = tab.canGoForward();
             isHome = mSettings.getHomePage().equals(tab.getUrl());
             isDesktopUa = mSettings.hasDesktopUseragent(tab.getWebView());
             isLive = !tab.isSnapshot();
         }
-        final MenuItem back = menu.findItem(R.id.back_menu_id);
-        back.setEnabled(canGoBack);
-
-        final MenuItem home = menu.findItem(R.id.homepage_menu_id);
-        home.setEnabled(!isHome);
 
         final MenuItem forward = menu.findItem(R.id.forward_menu_id);
         forward.setEnabled(canGoForward);
-
-        final MenuItem source = menu.findItem(isInLoad() ? R.id.stop_menu_id
-                : R.id.reload_menu_id);
-        final MenuItem dest = menu.findItem(R.id.stop_reload_menu_id);
-        if (source != null && dest != null) {
-            dest.setTitle(source.getTitle());
-            dest.setIcon(source.getIcon());
-        }
-        menu.setGroupVisible(R.id.NAV_MENU, isLive);
 
         // decide whether to show the share link option
         PackageManager pm = mActivity.getPackageManager();
@@ -1563,9 +1636,8 @@ public class Controller
         boolean showDebugSettings = mSettings.isDebugEnabled();
         final MenuItem uaSwitcher = menu.findItem(R.id.ua_desktop_menu_id);
         uaSwitcher.setChecked(isDesktopUa);
-
-        final MenuItem fullscreen = menu.findItem(R.id.fullscreen_menu_id);
-        fullscreen.setChecked(mUi.isFullscreen());
+        menu.setGroupVisible(R.id.NAV_MENU, isLive && isLiveScheme);
+        setMenuItemVisibility(menu, R.id.find_menu_id, isLive && isLiveScheme);
 
         menu.setGroupVisible(R.id.LIVE_MENU, isLive);
         menu.setGroupVisible(R.id.SNAPSHOT_MENU, !isLive);
@@ -1616,7 +1688,7 @@ public class Controller
                 bookmarksOrHistoryPicker(ComboViews.Snapshots);
                 break;
 
-            case R.id.add_bookmark_menu_id:
+            case R.id.bookmark_this_page_id:
                 bookmarkCurrentPage();
                 break;
 
@@ -1626,10 +1698,6 @@ public class Controller
                 } else {
                     getCurrentTopWebView().reload();
                 }
-                break;
-
-            case R.id.back_menu_id:
-                getCurrentTab().goBack();
                 break;
 
             case R.id.forward_menu_id:
@@ -1694,9 +1762,6 @@ public class Controller
                 toggleUserAgent();
                 break;
 
-            case R.id.fullscreen_menu_id:
-                toggleFullscreen();
-
             case R.id.window_one_menu_id:
             case R.id.window_two_menu_id:
             case R.id.window_three_menu_id:
@@ -1731,11 +1796,6 @@ public class Controller
         WebView web = getCurrentWebView();
         mSettings.toggleDesktopUseragent(web);
         web.loadUrl(web.getOriginalUrl());
-    }
-
-    @Override
-    public void toggleFullscreen() {
-        mUi.setFullscreen(!mUi.isFullscreen());
     }
 
     @Override
@@ -2601,6 +2661,14 @@ public class Controller
      */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
+        public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_MENU && event.getRepeatCount() == 0) {
+            // Hardware menu key
+            mAppMenuHandler.showAppMenu(mActivity.findViewById(R.id.more_browser_settings),
+                    true, false);
+            return true;
+        }
+
         boolean noModifiers = event.hasNoModifiers();
         // Even if MENU is already held down, we need to call to super to open
         // the IME on long press.
@@ -2797,6 +2865,16 @@ public class Controller
     @Override
     public boolean dispatchGenericMotionEvent(MotionEvent ev) {
         return mBlockEvents;
+    }
+
+    @Override
+    public boolean shouldShowAppMenu() {
+        return true;
+    }
+
+    @Override
+    public int getMenuThemeResourceId() {
+        return R.style.OverflowMenuTheme;
     }
 
 }

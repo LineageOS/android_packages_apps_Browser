@@ -30,4 +30,5 @@
     <integer name="max_bookmark_columns">5</integer>
     <!-- The duration of the titlebar animation in millisecs -->
     <integer name="titlebar_animation_duration">300</integer>
+    <item type="fraction" format="fraction" name="menu_animation_pivot_x">95%</item>
 </resources>

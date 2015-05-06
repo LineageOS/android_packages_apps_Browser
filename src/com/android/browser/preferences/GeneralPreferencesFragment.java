@@ -76,6 +76,11 @@ public class GeneralPreferencesFragment extends PreferenceFragment
         pref.setPersistent(false);
         pref.setValue(getHomepageValue());
         pref.setOnPreferenceChangeListener(this);
+        final Bundle arguments = getArguments();
+        if (arguments != null && arguments.getBoolean("LowPower")) {
+            LowPowerDialogFragment fragment = LowPowerDialogFragment.newInstance();
+            fragment.show(getActivity().getFragmentManager(), "setPowersave dialog");
+        }
     }
 
     @Override
@@ -197,5 +202,39 @@ public class GeneralPreferencesFragment extends PreferenceFragment
             }
         }
         return null;
+    }
+
+    public static class LowPowerDialogFragment extends DialogFragment {
+        public static LowPowerDialogFragment newInstance() {
+            LowPowerDialogFragment frag = new LowPowerDialogFragment();
+            return frag;
+        }
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            final BrowserSettings settings = BrowserSettings.getInstance();
+            final AlertDialog dialog = new AlertDialog.Builder(getActivity())
+                    .setPositiveButton(android.R.string.ok, new OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            settings.setPowerSaveModeEnabled(true);
+                            getActivity().finish();
+                        }
+                    })
+                    .setNegativeButton(android.R.string.cancel, new OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                            getActivity().finish();
+                        }
+                    })
+                    .setTitle(R.string.powersave_title)
+                    .create();
+
+            dialog.getWindow().setSoftInputMode(
+                    WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+
+            return dialog;
+        }
     }
 }

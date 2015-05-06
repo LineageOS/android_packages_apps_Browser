@@ -203,9 +203,9 @@ public class BrowserActivity extends Activity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        return mController.onCreateOptionsMenu(menu);
+    public void onCreateOptionsMenu(menu) {
+        super.onCreateOptionsMenu();
+        return mController.onCreateOptionsMenu();
     }
 
     @Override

@@ -340,7 +340,11 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         syncManagedSettings();
         if (PREF_SEARCH_ENGINE.equals(key)) {
             updateSearchEngine(false);
-        } else if (PREF_ENABLE_QUICK_CONTROLS.equals(key)) {
+        } else if (PREF_FULLSCREEN.equals(key)) {
+            if (mController != null && mController.getUi() != null) {
+                mController.getUi().setFullscreen(useFullscreen());
+            }
+        } else if (PREF_FULLSCREEN.equals(key)) {
             if (mController != null && mController.getUi() != null) {
                 mController.getUi().setUseQuickControls(sharedPreferences.getBoolean(key, false));
             }
@@ -676,6 +680,14 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         mPrefs.edit().putBoolean(PREF_AUTOFILL_ENABLED, value).apply();
     }
 
+    public boolean isPowerSaveModeEnabled() {
+        return mPrefs.getBoolean(PREF_POWERSAVE_ENABLED, false);
+    }
+
+    public void setPowerSaveModeEnabled(boolean value) {
+        mPrefs.edit().putBoolean(PREF_POWERSAVE_ENABLED, value).apply();
+    }
+
     // -----------------------------
     // getter/setters for debug_preferences.xml
     // -----------------------------
@@ -766,11 +778,15 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
     // -----------------------------
 
     public boolean useQuickControls() {
-        return mPrefs.getBoolean(PREF_ENABLE_QUICK_CONTROLS, false);
+        return mPrefs.getBoolean(PREF_FULLSCREEN, false);
     }
 
     public boolean useMostVisitedHomepage() {
         return HomeProvider.MOST_VISITED.equals(getHomePage());
+    }
+
+    public boolean useFullscreen() {
+        return mPrefs.getBoolean(PREF_FULLSCREEN, false);
     }
 
     public boolean useInvertedRendering() {
