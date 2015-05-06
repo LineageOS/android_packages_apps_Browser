@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2010 The Android Open Source Project
+ * Copyright (C) 2015 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,12 +25,12 @@ import com.android.browser.PreferenceKeys;
 import com.android.browser.R;
 import com.android.browser.search.SearchEngine;
 
-public class LabPreferencesFragment extends PreferenceFragment {
+public class InterfacePreferencesFragment extends PreferenceFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Load the XML preferences file
-        addPreferencesFromResource(R.xml.lab_preferences);
+        addPreferencesFromResource(R.xml.interface_preferences);
     }
 }
