@@ -31,7 +31,6 @@ public class NavTabView extends LinearLayout {
 
     private ViewGroup mContent;
     private Tab mTab;
-    private ImageView mClose;
     private TextView mTitle;
     private View mTitleBar;
     ImageView mImage;
@@ -56,14 +55,9 @@ public class NavTabView extends LinearLayout {
     private void init() {
         LayoutInflater.from(mContext).inflate(R.layout.nav_tab_view, this);
         mContent = (ViewGroup) findViewById(R.id.main);
-        mClose = (ImageView) findViewById(R.id.closetab);
-        mTitle = (TextView) findViewById(R.id.title);
         mTitleBar = findViewById(R.id.titlebar);
+        mTitle = (TextView) findViewById(R.id.title);
         mImage = (ImageView) findViewById(R.id.tab_view);
-    }
-
-    protected boolean isClose(View v) {
-        return v == mClose;
     }
 
     protected boolean isTitle(View v) {
@@ -85,31 +79,30 @@ public class NavTabView extends LinearLayout {
             }
             mTitle.setText(txt);
         }
-        if (mTab.isSnapshot()) {
-            setTitleIcon(R.drawable.ic_history_dark);
-        } else if (mTab.isPrivateBrowsingEnabled()) {
-            setTitleIcon(R.drawable.ic_incognito_dark);
-        } else {
-            setTitleIcon(0);
+        if (!mTab.isSnapshot()) {
+            setTitleIcon();
         }
     }
 
-    private void setTitleIcon(int id) {
-        if (id == 0) {
-            mTitle.setPadding(mTitle.getCompoundDrawablePadding(), 0, 0, 0);
-        } else {
-            mTitle.setPadding(0, 0, 0, 0);
-        }
-        mTitle.setCompoundDrawablesWithIntrinsicBounds(id, 0, 0, 0);
-    }
+    private void setTitleIcon() {
+        mTitle.setPadding(mTitle.getCompoundDrawablePadding(), 0, 0, 0);
+        mTitle.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+     }
 
     protected boolean isHighlighted() {
         return mHighlighted;
     }
 
-    protected Long getWebViewId(){
-        if(mTab == null) return null;
-        return new Long(mTab.getId());
+    protected long getWebViewId() {
+        return mTab != null ? mTab.getId() : -1;
+    }
+
+    protected int getContentLeft() {
+        return getLeft() + mTitleBar.getLeft() + mImage.getLeft();
+    }
+
+    protected int getContentTop() {
+        return getTop() + mTitleBar.getTop() + mImage.getTop();
     }
 
     protected void setWebView(Tab tab) {
@@ -128,7 +121,6 @@ public class NavTabView extends LinearLayout {
     public void setOnClickListener(OnClickListener listener) {
         mClickListener = listener;
         mTitleBar.setOnClickListener(mClickListener);
-        mClose.setOnClickListener(mClickListener);
         if (mImage != null) {
             mImage.setOnClickListener(mClickListener);
         }

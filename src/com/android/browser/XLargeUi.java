@@ -152,7 +152,6 @@ public class XLargeUi extends BaseUi {
             return;
         }
         mTabBar.onSetActiveTab(tab);
-        updateLockIconToLatest(tab);
         mTitleBar.setSkipTitleBarAnimations(false);
     }
 
@@ -224,13 +223,6 @@ public class XLargeUi extends BaseUi {
         mTabBar.onUrlAndTitle(tab, tab.getUrl(), tab.getTitle());
     }
 
-    // Set the favicon in the title bar.
-    @Override
-    public void setFavicon(Tab tab) {
-        super.setFavicon(tab);
-        mTabBar.onFavicon(tab, tab.getFavicon());
-    }
-
     @Override
     public void onHideCustomView() {
         super.onHideCustomView();
@@ -272,32 +264,6 @@ public class XLargeUi extends BaseUi {
     @Override
     public boolean shouldCaptureThumbnails() {
         return mUseQuickControls;
-    }
-
-    private Drawable getFaviconBackground() {
-        if (mFaviconBackground == null) {
-            mFaviconBackground = new PaintDrawable();
-            Resources res = mActivity.getResources();
-            mFaviconBackground.getPaint().setColor(
-                    res.getColor(R.color.tabFaviconBackground));
-            mFaviconBackground.setCornerRadius(
-                    res.getDimension(R.dimen.tab_favicon_corner_radius));
-        }
-        return mFaviconBackground;
-    }
-
-    @Override
-    public Drawable getFaviconDrawable(Bitmap icon) {
-        Drawable[] array = new Drawable[2];
-        array[0] = getFaviconBackground();
-        if (icon == null) {
-            array[1] = mGenericFavicon;
-        } else {
-            array[1] = new BitmapDrawable(mActivity.getResources(), icon);
-        }
-        LayerDrawable d = new LayerDrawable(array);
-        d.setLayerInset(1, 2, 2, 2, 2);
-        return d;
     }
 
 }

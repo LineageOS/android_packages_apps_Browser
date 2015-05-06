@@ -26,26 +26,26 @@
         android:orientation="horizontal">
         <ImageButton
             android:id="@+id/back"
-            android:src="@drawable/ic_back_dark"
+            android:src="@drawable/ic_back"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/accessibility_button_back"
-            style="@style/HoloButton" />
+            style="@style/BrowserButton" />
         <ImageButton
             android:id="@+id/forward"
-            android:src="@drawable/ic_forward_dark"
+            android:src="@drawable/ic_forward"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/accessibility_button_forward"
-            style="@style/HoloButton" />
+            style="@style/BrowserButton" />
         <ImageButton
             android:id="@+id/stop"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            style="@style/HoloButton"
+            style="@style/BrowserButton"
             android:gravity="center_vertical"
             android:contentDescription="@string/accessibility_button_stop"
-            android:src="@drawable/ic_stop_dark" />
+            android:src="@drawable/ic_stop" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/urlbar_focused"
@@ -53,21 +53,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1.0"
         android:orientation="horizontal"
-        android:background="@drawable/url_background">
-        <ImageView
-            android:id="@+id/url_icon"
-            android:layout_width="32dip"
-            android:layout_height="20dip"
-            android:src="@drawable/ic_web_dark"
-            android:layout_gravity="center" />
-        <ImageView
-            android:id="@+id/lock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="0dip"
-            style="@style/HoloIcon"
-            android:visibility="gone" />
+        android:background="@color/primary">
         <com.android.browser.UrlInputView
             android:id="@+id/url"
             android:layout_width="0dip"
@@ -92,36 +78,36 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/accessibility_button_addbookmark"
-            style="@style/HoloButton" />
+            style="@style/BrowserButton" />
         <ImageButton
             android:id="@+id/clear"
-            android:src="@drawable/ic_stop_dark"
+            android:src="@drawable/ic_stop"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/accessibility_button_clear"
-            style="@style/HoloButton" />
+            style="@style/BrowserButton" />
         <ImageButton
             android:id="@+id/voice"
-            android:src="@drawable/ic_voice_search_dark"
+            android:src="@drawable/ic_voice_search"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:contentDescription="@string/accessibility_button_voice"
-            style="@style/HoloButton" />
+            style="@style/BrowserButton" />
         </LinearLayout>
     <ImageButton
         android:id="@+id/search"
-        android:src="@drawable/ic_search_dark"
+        android:src="@drawable/ic_search"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
             android:contentDescription="@string/accessibility_button_search"
-        style="@style/HoloButton" />
+        style="@style/BrowserButton" />
     <ImageButton
         android:id="@+id/all_btn"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:scaleType="center"
-        style="@style/HoloButton"
+        style="@style/BrowserButton"
         android:contentDescription="@string/accessibility_button_bookmarks"
-        android:src="@drawable/ic_bookmarks_history_dark" />
+        android:src="@drawable/ic_bookmarks_history" />
 </com.android.browser.NavigationBarTablet>
