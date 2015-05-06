@@ -155,6 +155,12 @@ public class NavScreen extends RelativeLayout
                 openNewTab(false);
             }
         });
+        mNewTabFab.setOnLongClickListener(){
+            @Override
+            public boolean onLongClick(View v){
+                openNewTab(true);
+            }
+        }
     }
 
     @Override

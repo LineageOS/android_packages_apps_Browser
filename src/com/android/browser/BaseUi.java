@@ -56,6 +56,12 @@ import android.widget.Toast;
 import com.android.browser.Tab.SecurityState;
 import com.android.internal.view.menu.MenuBuilder;
 
+
+import cyanogenmod.app.CMStatusBarManager;
+import cyanogenmod.app.CustomTile;
+
+import com.android.browser.R;
+
 import java.util.List;
 
 /**
@@ -80,6 +86,7 @@ public abstract class BaseUi implements UI {
     private static final int MSG_HIDE_CUSTOM_VIEW = 2;
     public static final int HIDE_TITLEBAR_DELAY = 1500; // in ms
     public static final int HIDE_CUSTOM_VIEW_DELAY = 200; // in ms
+    public boolean CUSTOM_TITLE_ENABLED = true;
 
     Activity mActivity;
     UiController mUiController;
@@ -117,6 +124,7 @@ public abstract class BaseUi implements UI {
     private NavigationBarBase mNavigationBar;
     protected PieControl mPieControl;
     private boolean mBlockFocusAnimations;
+    private CustomTile mCustomTile;
 
     public BaseUi(Activity browser, UiController controller) {
         mActivity = browser;
@@ -147,7 +155,33 @@ public abstract class BaseUi implements UI {
         mTitleBar.setProgress(100);
         mNavigationBar = mTitleBar.getNavigationBar();
         mUrlBarAutoShowManager = new UrlBarAutoShowManager(this);
+
+        mCustomTile = new CustomTile.Builder(this)
+                .setOnClickIntent(pendingIntent)
+                .setContentDescription("FullScreen navigation")
+                .setLabel(getString(R.string.custom_toggle_title))
+                .setIcon(R.drawable.ic_fullscreen)
+                .build();
+
+        mCustomTile.setOnClickListener(
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    immerse(CUSTOM_TITLE_ENABLED);
+                    // change the enabled status for future clicks
+                    if (CUSTOM_TITLE_ENABLED)
+                        CUSTOM_TITLE_ENABLED = false;
+                    else
+                        CUSTOM_TITLE_ENABLED = true;
+                }
+            });
+
+
+        CMStatusBarManager.getInstance(this)
+                .publishTile(FULLSCR_TITLE, mCustomTile);
     }
+
+
 
     private void cancelStopToast() {
         if (mStopToast != null) {
@@ -592,6 +626,25 @@ public abstract class BaseUi implements UI {
     @Override
     public void hideAutoLogin(Tab tab) {
         updateAutoLogin(tab, true);
+    }
+
+    public void immerse(boolean enable){
+        if (enable){
+            // enable immersive mode
+            mDecorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_IMMERSIVE);
+        } else {
+            // disable immersive mode
+            mDecorView.setSystemUiVisibility(
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        }
     }
 
     // -------------------------------------------------------------------------

@@ -27,4 +27,8 @@
 
     <!-- User agent label -->
     <string name="pref_content_ua">User agent</string>
+
+    <!-- FullScreen Toggle -->
+    <string name="custom_toggle_title">FullScreen</string>
+
 </resources>
