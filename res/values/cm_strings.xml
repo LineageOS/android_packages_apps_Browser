@@ -27,4 +27,16 @@
 
     <!-- User agent label -->
     <string name="pref_content_ua">User agent</string>
+
+    <!-- Interface preferences -->
+    <string name="pref_interface_title">Interface</string>
+
+    <!-- FullScreen -->
+    <string name="full_screen_title">Fullscreen</string>
+    <string name="full_screen_summary">Enable immersive navigation</string>
+
+    <!-- OneHand -->
+    <string name="onehand_title">OneHand Navigation</string>
+    <string name="onehand_summary">Easier web navigation with swipes and quick actions</string>
+
 </resources>

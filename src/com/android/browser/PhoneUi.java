@@ -158,7 +158,6 @@ public class PhoneUi extends BaseUi {
         }
         // update nav bar state
         mNavigationBar.onStateChanged(StateListener.STATE_NORMAL);
-        updateLockIconToLatest(tab);
         mTitleBar.setSkipTitleBarAnimations(false);
     }
 
@@ -184,10 +183,10 @@ public class PhoneUi extends BaseUi {
         if (info != null) {
             info.setVisible(false);
         }
-        MenuItem newtab = menu.findItem(R.id.new_tab_menu_id);
+         MenuItem newtab = menu.findItem(R.id.new_tab_menu_id);
         if (newtab != null && !mUseQuickControls) {
             newtab.setVisible(false);
-        }
+         }
         MenuItem closeOthers = menu.findItem(R.id.close_other_tabs_id);
         if (closeOthers != null) {
             boolean isLastTab = true;
@@ -195,10 +194,6 @@ public class PhoneUi extends BaseUi {
                 isLastTab = (mTabControl.getTabCount() <= 1);
             }
             closeOthers.setEnabled(!isLastTab);
-        }
-        MenuItem fullscreen = menu.findItem(R.id.fullscreen_menu_id);
-        if (fullscreen != null) {
-            fullscreen.setVisible(!showingNavScreen());
         }
         if (showingNavScreen()) {
             menu.setGroupVisible(R.id.LIVE_MENU, false);

@@ -45,7 +45,7 @@ import java.util.List;
 public class PieMenu extends FrameLayout {
 
     private static final int MAX_LEVELS = 5;
-    private static final long ANIMATION = 80;
+    private static final long ANIMATION = 40;
 
     public interface PieController {
         /**
