@@ -95,7 +95,7 @@ public class TabBar extends LinearLayout implements OnClickListener {
         Resources res = activity.getResources();
         mTabWidth = (int) res.getDimension(R.dimen.tab_width);
         mActiveDrawable = res.getDrawable(R.drawable.bg_urlbar);
-        mInactiveDrawable = res.getDrawable(R.drawable.browsertab_inactive);
+        mInactiveDrawable = res.getDrawable(R.color.primary);
 
         mTabMap = new HashMap<Tab, TabView>();
         LayoutInflater factory = LayoutInflater.from(activity);
@@ -244,7 +244,6 @@ public class TabBar extends LinearLayout implements OnClickListener {
         Tab mTab;
         View mTabContent;
         TextView mTitle;
-        View mIncognito;
         View mSnapshot;
         ImageView mIconView;
         ImageView mLock;
@@ -274,7 +273,6 @@ public class TabBar extends LinearLayout implements OnClickListener {
             mLock = (ImageView) mTabContent.findViewById(R.id.lock);
             mClose = (ImageView) mTabContent.findViewById(R.id.close);
             mClose.setOnClickListener(this);
-            mIncognito = mTabContent.findViewById(R.id.incognito);
             mSnapshot = mTabContent.findViewById(R.id.snapshot);
             mSelected = false;
             // update the status
@@ -294,16 +292,10 @@ public class TabBar extends LinearLayout implements OnClickListener {
                 displayTitle = mTab.getUrl();
             }
             setDisplayTitle(displayTitle);
-            if (mTab.getFavicon() != null) {
-                setFavicon(mUi.getFaviconDrawable(mTab.getFavicon()));
-            }
             updateTabIcons();
         }
 
         private void updateTabIcons() {
-            mIncognito.setVisibility(
-                    mTab.isPrivateBrowsingEnabled() ?
-                    View.VISIBLE : View.GONE);
             mSnapshot.setVisibility(mTab.isSnapshot()
                     ? View.VISIBLE : View.GONE);
         }
@@ -331,10 +323,6 @@ public class TabBar extends LinearLayout implements OnClickListener {
 
         void setDisplayTitle(String title) {
             mTitle.setText(title);
-        }
-
-        void setFavicon(Drawable d) {
-            mIconView.setImageDrawable(d);
         }
 
         void setLock(Drawable d) {
@@ -489,13 +477,6 @@ public class TabBar extends LinearLayout implements OnClickListener {
 
     public void onSetActiveTab(Tab tab) {
         mTabs.setSelectedTab(mTabControl.getTabPosition(tab));
-    }
-
-    public void onFavicon(Tab tab, Bitmap favicon) {
-        TabView tv = mTabMap.get(tab);
-        if (tv != null) {
-            tv.setFavicon(mUi.getFaviconDrawable(favicon));
-        }
     }
 
     public void onNewTab(Tab tab) {
