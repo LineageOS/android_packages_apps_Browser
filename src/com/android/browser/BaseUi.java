@@ -56,6 +56,12 @@ import android.widget.Toast;
 import com.android.browser.Tab.SecurityState;
 import com.android.internal.view.menu.MenuBuilder;
 
+
+import cyanogenmod.app.CMStatusBarManager;
+import cyanogenmod.app.CustomTile;
+
+import com.android.browser.R;
+
 import java.util.List;
 
 /**
@@ -117,6 +123,7 @@ public abstract class BaseUi implements UI {
     private NavigationBarBase mNavigationBar;
     protected PieControl mPieControl;
     private boolean mBlockFocusAnimations;
+    private CustomTile mCustomTile;
 
     public BaseUi(Activity browser, UiController controller) {
         mActivity = browser;
@@ -147,6 +154,17 @@ public abstract class BaseUi implements UI {
         mTitleBar.setProgress(100);
         mNavigationBar = mTitleBar.getNavigationBar();
         mUrlBarAutoShowManager = new UrlBarAutoShowManager(this);
+
+        mCustomTile = new CustomTile.Builder(this)
+                .setOnClickIntent(pendingIntent)
+                .setContentDescription("FullScreen navigation")
+                .setLabel(getString(R.string.custom_toggle_title))
+                .setIcon(R.drawable.ic_fullscreen)
+                .setOnClickUri(Uri.parse("custom uri"))
+                .build();
+
+        CMStatusBarManager.getInstance(this)
+                .publishTile(FULLSCR_TITLE, mCustomTile);
     }
 
     private void cancelStopToast() {
