@@ -1,6 +1,8 @@
 /*
  * Copyright (C) 2010 The Android Open Source Project
  *
+ * Copyright (C) 2015 The Linux Foundation
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -28,6 +30,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
@@ -79,6 +82,8 @@ import android.webkit.WebChromeClient.FileChooserParams;
 import android.webkit.WebIconDatabase;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.browser.IntentHandler.UrlData;
@@ -221,6 +226,9 @@ public class Controller
 
     private String mVoiceResult;
 
+    private PowerConnectionReceiver mLowPowerReceiver;
+    private PowerConnectionReceiver mPowerChangeReceiver;
+
     public Controller(Activity browser) {
         mActivity = browser;
         mSettings = BrowserSettings.getInstance();
@@ -358,6 +366,15 @@ public class Controller
                 && BrowserActivity.ACTION_SHOW_BOOKMARKS.equals(intent.getAction())) {
             bookmarksOrHistoryPicker(ComboViews.Bookmarks);
         }
+
+        mLowPowerReceiver = new PowerConnectionReceiver();
+        mPowerChangeReceiver = new PowerConnectionReceiver();
+
+        //always track the android framework's power save mode
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("android.os.action.POWER_SAVE_MODE_CHANGED");
+        filter.addAction(Intent.ACTION_BATTERY_OKAY);
+        mActivity.registerReceiver(mPowerChangeReceiver, filter);
     }
 
     private static class PruneThumbnails implements Runnable {
@@ -389,7 +406,6 @@ public class Controller
                 cr.delete(Thumbnails.CONTENT_URI, where.toString(), null);
             }
         }
-
     }
 
     @Override
@@ -652,6 +668,7 @@ public class Controller
 
         WebView.disablePlatformNotifications();
         NfcHandler.unregister(mActivity);
+        mActivity.unregisterReceiver(mLowPowerReceiver);
         if (sThumbnailBitmap != null) {
             sThumbnailBitmap.recycle();
             sThumbnailBitmap = null;
@@ -706,6 +723,7 @@ public class Controller
             mUi.onVoiceResult(mVoiceResult);
             mVoiceResult = null;
         }
+        mActivity.registerReceiver(mLowPowerReceiver, new IntentFilter(Intent.ACTION_BATTERY_LOW));
     }
 
     private void releaseWakeLock() {
@@ -762,6 +780,7 @@ public class Controller
         // Destroy all the tabs
         mTabControl.destroy();
         WebIconDatabase.getInstance().close();
+        mActivity.unregisterReceiver(mPowerChangeReceiver);
         // Stop watching the default geolocation permissions
         mSystemAllowGeolocationOrigins.stop();
         mSystemAllowGeolocationOrigins = null;
@@ -1564,9 +1583,6 @@ public class Controller
         final MenuItem uaSwitcher = menu.findItem(R.id.ua_desktop_menu_id);
         uaSwitcher.setChecked(isDesktopUa);
 
-        final MenuItem fullscreen = menu.findItem(R.id.fullscreen_menu_id);
-        fullscreen.setChecked(mUi.isFullscreen());
-
         menu.setGroupVisible(R.id.LIVE_MENU, isLive);
         menu.setGroupVisible(R.id.SNAPSHOT_MENU, !isLive);
         menu.setGroupVisible(R.id.COMBO_MENU, false);
@@ -1630,7 +1646,7 @@ public class Controller
 
             case R.id.back_menu_id:
                 getCurrentTab().goBack();
-                break;
+                 break;
 
             case R.id.forward_menu_id:
                 getCurrentTab().goForward();
@@ -1694,9 +1710,6 @@ public class Controller
                 toggleUserAgent();
                 break;
 
-            case R.id.fullscreen_menu_id:
-                toggleFullscreen();
-
             case R.id.window_one_menu_id:
             case R.id.window_two_menu_id:
             case R.id.window_three_menu_id:
@@ -1731,11 +1744,6 @@ public class Controller
         WebView web = getCurrentWebView();
         mSettings.toggleDesktopUseragent(web);
         web.loadUrl(web.getOriginalUrl());
-    }
-
-    @Override
-    public void toggleFullscreen() {
-        mUi.setFullscreen(!mUi.isFullscreen());
     }
 
     @Override

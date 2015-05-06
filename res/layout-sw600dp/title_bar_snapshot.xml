@@ -49,7 +49,7 @@
         android:layout_height="match_parent"
         android:scaleType="center"
         android:paddingRight="16dip"
-        style="@style/HoloButton"
-        android:src="@drawable/ic_bookmarks_history_dark"
+        style="@style/BrowserButton"
+        android:src="@drawable/ic_bookmarks_history"
         android:contentDescription="@string/accessibility_button_bookmarks" />
 </com.android.browser.SnapshotBar>

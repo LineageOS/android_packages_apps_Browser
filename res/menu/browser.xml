@@ -31,38 +31,34 @@
         <item
             android:id="@+id/new_tab_menu_id"
             android:title="@string/new_tab"
-            android:icon="@drawable/ic_new_window_dark"
+            android:icon="@drawable/ic_new_window"
             android:showAsAction="never"
             android:alphabeticShortcut="n" />
         <item
-            android:id="@+id/bookmarks_menu_id"
-            android:title="@string/bookmarks"
-            android:icon="@drawable/ic_bookmarks_dark"
-            android:showAsAction="never" />
-        <item
             android:id="@+id/add_bookmark_menu_id"
             android:title="@string/save_to_bookmarks"
-            android:icon="@drawable/ic_bookmark_on_dark"
+            android:icon="@drawable/ic_bookmark_on"
             android:alphabeticShortcut="d"
             android:visible="@bool/menu_show_bookmarks" />
         <item
+            android:id="@+id/history_menu_id"
+            android:title="@string/tab_history" />
+        <!--item
             android:id="@+id/fullscreen_menu_id"
             android:checkable="true"
-            android:title="@string/pref_lab_fullscreen" />
+            android:title="@string/pref_lab_fullscreen" /-->
         <group
             android:id="@+id/LIVE_MENU">
-            <item
-                android:id="@+id/share_page_menu_id"
-                android:title="@string/share_page"
-                android:icon="@drawable/ic_share_dark"
-                android:alphabeticShortcut="s" />
-            <item
-                android:id="@+id/find_menu_id"
-                android:title="@*android:string/find_on_page"/>
             <item
                 android:id="@+id/ua_desktop_menu_id"
                 android:checkable="true"
                 android:title="@string/ua_switcher_desktop" />
+            <item
+                android:id="@+id/share_page_menu_id"
+                android:title="@string/share_page" />
+            <item
+                android:id="@+id/find_menu_id"
+                android:title="@*android:string/find_on_page"/>
         </group>
         <group
             android:id="@+id/SNAPSHOT_MENU">
@@ -76,10 +72,6 @@
                 android:id="@+id/close_other_tabs_id"
                 android:title="@string/close_other_tabs" />
             <item
-                android:id="@+id/history_menu_id"
-                android:title="@string/tab_history"
-                android:alphabeticShortcut="h" />
-            <item
                 android:id="@+id/snapshots_menu_id"
                 android:title="@string/tab_snapshots" />
         </group>
@@ -89,7 +81,7 @@
         <item
             android:id="@+id/preferences_menu_id"
             android:title="@string/menu_preferences"
-            android:icon="@drawable/ic_settings_dark"
+            android:icon="@drawable/ic_settings"
             android:alphabeticShortcut="p" />
         <!-- followings are debug only -->
         <item
