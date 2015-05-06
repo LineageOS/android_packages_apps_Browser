@@ -80,6 +80,7 @@ public abstract class BaseUi implements UI {
     private static final int MSG_HIDE_CUSTOM_VIEW = 2;
     public static final int HIDE_TITLEBAR_DELAY = 1500; // in ms
     public static final int HIDE_CUSTOM_VIEW_DELAY = 200; // in ms
+    public boolean CUSTOM_TITLE_ENABLED = true;
 
     Activity mActivity;
     UiController mUiController;
@@ -117,6 +118,7 @@ public abstract class BaseUi implements UI {
     private NavigationBarBase mNavigationBar;
     protected PieControl mPieControl;
     private boolean mBlockFocusAnimations;
+    private CustomTile mCustomTile;
 
     public BaseUi(Activity browser, UiController controller) {
         mActivity = browser;
@@ -148,6 +150,8 @@ public abstract class BaseUi implements UI {
         mNavigationBar = mTitleBar.getNavigationBar();
         mUrlBarAutoShowManager = new UrlBarAutoShowManager(this);
     }
+
+
 
     private void cancelStopToast() {
         if (mStopToast != null) {
@@ -592,6 +596,25 @@ public abstract class BaseUi implements UI {
     @Override
     public void hideAutoLogin(Tab tab) {
         updateAutoLogin(tab, true);
+    }
+
+    public void immerse(boolean enable){
+        if (enable){
+            // enable immersive mode
+            mDecorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_IMMERSIVE);
+        } else {
+            // disable immersive mode
+            mDecorView.setSystemUiVisibility(
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        }
     }
 
     // -------------------------------------------------------------------------
