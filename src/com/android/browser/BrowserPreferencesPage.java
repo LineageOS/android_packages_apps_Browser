@@ -27,7 +27,7 @@ import com.android.browser.preferences.AdvancedPreferencesFragment;
 import com.android.browser.preferences.BandwidthPreferencesFragment;
 import com.android.browser.preferences.DebugPreferencesFragment;
 import com.android.browser.preferences.GeneralPreferencesFragment;
-import com.android.browser.preferences.LabPreferencesFragment;
+import com.android.browser.preferences.InterfacePreferencesFragment;
 import com.android.browser.preferences.PrivacySecurityPreferencesFragment;
 import com.android.browser.preferences.WebsiteSettingsFragment;
 
@@ -111,7 +111,7 @@ public class BrowserPreferencesPage extends PreferenceActivity {
                 BandwidthPreferencesFragment.class.getName().equals(fragmentName) ||
                 DebugPreferencesFragment.class.getName().equals(fragmentName) ||
                 GeneralPreferencesFragment.class.getName().equals(fragmentName) ||
-                LabPreferencesFragment.class.getName().equals(fragmentName) ||
+                InterfacePreferencesFragment.class.getName().equals(fragmentName) ||
                 PrivacySecurityPreferencesFragment.class.getName().equals(fragmentName) ||
                 WebsiteSettingsFragment.class.getName().equals(fragmentName);
 
