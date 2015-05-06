@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2008 The Android Open Source Project
+<!-- Copyright (C) 2015 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -19,6 +19,6 @@
     <CheckBoxPreference
         android:key="enable_quick_controls"
         android:defaultValue="false"
-        android:title="@string/pref_lab_quick_controls"
-        android:summary="@string/pref_lab_quick_controls_summary" />
+        android:title="@string/onehand_title"
+        android:summary="@string/onehand_summary" />
 </PreferenceScreen>

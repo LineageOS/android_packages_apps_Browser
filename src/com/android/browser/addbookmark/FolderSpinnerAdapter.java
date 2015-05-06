@@ -69,17 +69,17 @@ public class FolderSpinnerAdapter extends BaseAdapter {
         switch (position) {
             case HOME_SCREEN:
                 labelResource = R.string.add_to_homescreen_menu_option;
-                drawableResource = R.drawable.ic_home_dark;
+                drawableResource = R.drawable.ic_home;
                 break;
             case ROOT_FOLDER:
                 labelResource = R.string.add_to_bookmarks_menu_option;
-                drawableResource = R.drawable.ic_bookmarks_dark;
+                drawableResource = R.drawable.ic_bookmarks;
                 break;
             case RECENT_FOLDER:
                 // Fall through and use the same icon resource
             case OTHER_FOLDER:
                 labelResource = R.string.add_to_other_folder_menu_option;
-                drawableResource = R.drawable.ic_folder_dark;
+                drawableResource = R.drawable.ic_folder;
                 break;
             default:
                 labelResource = 0;

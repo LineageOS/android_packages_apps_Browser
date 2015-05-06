@@ -74,8 +74,8 @@ public class NavigationBarTablet extends NavigationBarBase implements StateListe
 
     private void init(Context context) {
         Resources resources = context.getResources();
-        mStopDrawable = resources.getDrawable(R.drawable.ic_stop_dark);
-        mReloadDrawable = resources.getDrawable(R.drawable.ic_refresh_dark);
+        mStopDrawable = resources.getDrawable(R.drawable.ic_stop);
+        mReloadDrawable = resources.getDrawable(R.drawable.ic_refresh);
         mStopDescription = resources.getString(R.string.accessibility_button_stop);
         mRefreshDescription = resources.getString(R.string.accessibility_button_refresh);
         mFocusDrawable = resources.getDrawable(
@@ -140,11 +140,11 @@ public class NavigationBarTablet extends NavigationBarBase implements StateListe
     void updateNavigationState(Tab tab) {
         if (tab != null) {
             mBackButton.setImageResource(tab.canGoBack()
-                    ? R.drawable.ic_back_dark
-                    : R.drawable.ic_back_disabled_dark);
+                    ? R.drawable.ic_back
+                    : R.drawable.ic_back_disabled);
             mForwardButton.setImageResource(tab.canGoForward()
-                    ? R.drawable.ic_forward_dark
-                    : R.drawable.ic_forward_disabled_dark);
+                    ? R.drawable.ic_forward
+                    : R.drawable.ic_forward_disabled);
         }
         updateUrlIcon();
     }
@@ -204,7 +204,7 @@ public class NavigationBarTablet extends NavigationBarBase implements StateListe
 
     void updateUrlIcon() {
         if (mUrlInput.hasFocus()) {
-            mUrlIcon.setImageResource(R.drawable.ic_search_dark);
+            mUrlIcon.setImageResource(R.drawable.ic_search);
         } else {
             if (mFaviconDrawable == null) {
                 mFaviconDrawable = mBaseUi.getFaviconDrawable(null);
@@ -222,7 +222,7 @@ public class NavigationBarTablet extends NavigationBarBase implements StateListe
             }
             mSearchButton.setVisibility(View.GONE);
             mStar.setVisibility(View.GONE);
-            mUrlIcon.setImageResource(R.drawable.ic_search_dark);
+            mUrlIcon.setImageResource(R.drawable.ic_search);
         } else {
             if (mHideNavButtons) {
                 showNavButtons();
