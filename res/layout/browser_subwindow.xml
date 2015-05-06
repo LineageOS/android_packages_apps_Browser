@@ -27,11 +27,11 @@
         android:layout_gravity="right"
         android:gravity="right" >
         <ImageButton android:id="@+id/subwindow_close"
-            style="@style/HoloButton"
+            style="@style/BrowserButton"
             android:focusable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_close_window_dark" />
+            android:src="@drawable/ic_close_window" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/inner_container"
