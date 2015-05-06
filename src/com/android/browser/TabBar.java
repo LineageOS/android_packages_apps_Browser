@@ -274,7 +274,6 @@ public class TabBar extends LinearLayout implements OnClickListener {
             mLock = (ImageView) mTabContent.findViewById(R.id.lock);
             mClose = (ImageView) mTabContent.findViewById(R.id.close);
             mClose.setOnClickListener(this);
-            mIncognito = mTabContent.findViewById(R.id.incognito);
             mSnapshot = mTabContent.findViewById(R.id.snapshot);
             mSelected = false;
             // update the status
@@ -294,9 +293,6 @@ public class TabBar extends LinearLayout implements OnClickListener {
                 displayTitle = mTab.getUrl();
             }
             setDisplayTitle(displayTitle);
-            if (mTab.getFavicon() != null) {
-                setFavicon(mUi.getFaviconDrawable(mTab.getFavicon()));
-            }
             updateTabIcons();
         }
 
@@ -331,10 +327,6 @@ public class TabBar extends LinearLayout implements OnClickListener {
 
         void setDisplayTitle(String title) {
             mTitle.setText(title);
-        }
-
-        void setFavicon(Drawable d) {
-            mIconView.setImageDrawable(d);
         }
 
         void setLock(Drawable d) {
@@ -489,13 +481,6 @@ public class TabBar extends LinearLayout implements OnClickListener {
 
     public void onSetActiveTab(Tab tab) {
         mTabs.setSelectedTab(mTabControl.getTabPosition(tab));
-    }
-
-    public void onFavicon(Tab tab, Bitmap favicon) {
-        TabView tv = mTabMap.get(tab);
-        if (tv != null) {
-            tv.setFavicon(mUi.getFaviconDrawable(favicon));
-        }
     }
 
     public void onNewTab(Tab tab) {
