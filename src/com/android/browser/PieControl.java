@@ -125,30 +125,30 @@ public class PieControl implements PieMenu.PieController, OnClickListener {
             if (mUiController.getSettings().hasDesktopUseragent(view)) {
                 icon.setImageResource(R.drawable.ic_mobile);
             } else {
-                icon.setImageResource(R.drawable.ic_desktop_dark);
+                icon.setImageResource(R.drawable.ic_desktop);
             }
         }
         return true;
     }
 
     protected void populateMenu() {
-        mBack = makeItem(R.drawable.ic_back_dark, 1);
-        mUrl = makeItem(R.drawable.ic_web_dark, 1);
-        mBookmarks = makeItem(R.drawable.ic_bookmarks_dark, 1);
-        mHistory = makeItem(R.drawable.ic_history_dark, 1);
-        mAddBookmark = makeItem(R.drawable.ic_bookmark_on_dark, 1);
-        mRefresh = makeItem(R.drawable.ic_refresh_dark, 1);
-        mForward = makeItem(R.drawable.ic_forward_dark, 1);
-        mNewTab = makeItem(R.drawable.ic_new_window_dark, 1);
-        mIncognito = makeItem(R.drawable.ic_new_incognito_dark, 1);
-        mClose = makeItem(R.drawable.ic_close_window_dark, 1);
+        mBack = makeItem(R.drawable.ic_back, 1);
+        mUrl = makeItem(R.drawable.ic_web, 1);
+        mBookmarks = makeItem(R.drawable.ic_bookmarks, 1);
+        mHistory = makeItem(R.drawable.ic_history, 1);
+        mAddBookmark = makeItem(R.drawable.ic_bookmark_on, 1);
+        mRefresh = makeItem(R.drawable.ic_refresh, 1);
+        mForward = makeItem(R.drawable.ic_forward, 1);
+        mNewTab = makeItem(R.drawable.ic_new_window, 1);
+        mIncognito = makeItem(R.drawable.ic_incognito, 1);
+        mClose = makeItem(R.drawable.ic_close_window, 1);
         mInfo = makeItem(android.R.drawable.ic_menu_info_details, 1);
-        mFind = makeItem(R.drawable.ic_search_dark, 1);
-        mShare = makeItem(R.drawable.ic_share_dark, 1);
+        mFind = makeItem(R.drawable.ic_search, 1);
+        mShare = makeItem(R.drawable.ic_share, 1);
         View tabs = makeTabsView();
         mShowTabs = new PieItem(tabs, 1);
-        mOptions = makeItem(R.drawable.ic_settings_dark, 1);
-        mRDS = makeItem(R.drawable.ic_desktop_dark, 1);
+        mOptions = makeItem(R.drawable.ic_settings, 1);
+        mRDS = makeItem(R.drawable.ic_desktop, 1);
         mTabAdapter = new TabAdapter(mActivity, mUiController);
         PieStackView stack = new PieStackView(mActivity);
         stack.setLayoutListener(new OnLayoutListener() {
@@ -183,14 +183,11 @@ public class PieControl implements PieMenu.PieController, OnClickListener {
         mUrl.addItem(makeFiller());
         mUrl.addItem(makeFiller());
         mPie.addItem(mShowTabs);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
             mShowTabs.addItem(makeFiller());
-            mShowTabs.addItem(mClose);
-        } else {
-            mShowTabs.addItem(mClose);
-            mShowTabs.addItem(mIncognito);
-        }
+        mShowTabs.addItem(mClose);
         mShowTabs.addItem(mNewTab);
+        mShowTabs.addItem(mIncognito);
         mShowTabs.addItem(makeFiller());
         mPie.addItem(mBookmarks);
         mBookmarks.addItem(makeFiller());
@@ -272,7 +269,7 @@ public class PieControl implements PieMenu.PieController, OnClickListener {
         mTabsCount = (TextView) v.findViewById(R.id.label);
         mTabsCount.setText("1");
         ImageView image = (ImageView) v.findViewById(R.id.icon);
-        image.setImageResource(R.drawable.ic_windows_dark);
+        image.setImageResource(R.drawable.ic_windows);
         image.setScaleType(ScaleType.CENTER);
         LayoutParams lp = new LayoutParams(mItemSize, mItemSize);
         v.setLayoutParams(lp);
