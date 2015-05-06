@@ -20,12 +20,6 @@
 <!-- FIXME: Change the name of this file!  It is now being used generically
     for the browser -->
 <resources>
-    <color name="white">#fafafa</color>
-    <color name="black">#212121</color>
-    <color name="primary">#4caf50</color>
-    <color name="primary_dark">#388e3c</color>
-    <color name="accent">#1b5e20</color>
-    <color name="floating_action_button_touch_tint">#388e3c</color>
     <color name="bookmarkWidgetHeader">#383847</color>
     <color name="bookmarkWidgetDivider">#383847</color>
     <color name="bookmarkWidgetItemBackground">#2b2b3c</color>
