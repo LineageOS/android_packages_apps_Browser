@@ -1765,21 +1765,6 @@ class Tab implements PictureListener {
         }
     }
 
-    private StringBuilder readWebResource(WebResourceResponse response) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        InputStream is = response.getData();
-        try {
-            byte[] data = new byte[512];
-            int read = 0;
-            while ((read = is.read(data, 0, 512)) != -1) {
-                sb.append(new String(data, 0, read));
-            }
-        } finally {
-            is.close();
-        }
-        return sb;
-    }
-
     public void disableUrlOverridingForLoad() {
         mDisableOverrideUrlLoading = true;
     }
