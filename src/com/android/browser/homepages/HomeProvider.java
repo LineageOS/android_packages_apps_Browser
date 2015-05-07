@@ -41,6 +41,7 @@ public class HomeProvider extends ContentProvider {
     private static final String TAG = "HomeProvider";
     public static final String AUTHORITY = "com.android.browser.home";
     public static final String MOST_VISITED = "content://" + AUTHORITY + "/";
+    public static final String MOST_VISITED_URL = "about:most_visited";
 
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
@@ -93,7 +94,7 @@ public class HomeProvider extends ContentProvider {
         try {
             boolean useMostVisited = BrowserSettings.getInstance().useMostVisitedHomepage();
             if (useMostVisited && url.startsWith("content://")) {
-                Uri uri = Uri.parse(url);
+                Uri uri = Uri.parse(url + "/home");
                 if (AUTHORITY.equals(uri.getAuthority())) {
                     InputStream ins = context.getContentResolver()
                             .openInputStream(uri);
