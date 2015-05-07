@@ -72,6 +72,7 @@ import com.android.browser.provider.SnapshotProvider.Snapshots;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.util.LinkedList;
