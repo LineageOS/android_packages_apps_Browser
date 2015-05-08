@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_2e8957cb",
+        "filename": "src/com/android/browser/Tab.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 1767,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2015-05-08T03:55:08Z",
+      "side": 0,
+      "message": "Remove this method instead the import",
+      "revId": "d6cb94dd79ec2da578577f88f1fef5ffdac79e82",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
