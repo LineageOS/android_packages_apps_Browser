@@ -18,6 +18,7 @@ package com.android.browser.search;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.Resources.NotFoundException;
+import android.os.SystemProperties;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -33,6 +34,8 @@ import java.util.Locale;
 public class SearchEngineInfo {
 
     private static String TAG = "SearchEngineInfo";
+    private static final String PARTNER_CODE_SYSTEM_PROP =
+                        "ro.browser.search_partner_code";
 
     // The fields of a search engine data array, defined in the same order as they appear in the
     // all_search_engines.xml file.
@@ -47,10 +50,12 @@ public class SearchEngineInfo {
 
     // The OpenSearch URI template parameters that we support.
     private static final String PARAMETER_LANGUAGE = "{language}";
+    private static final String PARAMETER_PARTNER_CODE = "{partnerCode}";
     private static final String PARAMETER_SEARCH_TERMS = "{searchTerms}";
     private static final String PARAMETER_INPUT_ENCODING = "{inputEncoding}";
 
     private final String mName;
+    private final String mPartnerCode;
 
     // The array of strings defining this search engine. The array values are in the same order as
     // the above enumeration definition.
@@ -83,6 +88,8 @@ public class SearchEngineInfo {
         if (TextUtils.isEmpty(mSearchEngineData[FIELD_SEARCH_URI])) {
             throw new IllegalArgumentException(name + " has an empty search URI");
         }
+
+        mPartnerCode = SystemProperties.getString(PARTNER_CODE_SYSTEM_PROP, "");
 
         // Add the current language/country information to the URIs.
         Locale locale = context.getResources().getConfiguration().locale;
@@ -167,6 +174,15 @@ public class SearchEngineInfo {
             return templateUri.replace(PARAMETER_SEARCH_TERMS, URLEncoder.encode(query, enc));
         } catch (java.io.UnsupportedEncodingException e) {
             Log.e(TAG, "Exception occured when encoding query " + query + " to " + enc);
+            return null;
+        }
+
+        // Encode the partner code in the requested encoding (and fallback to UTF-8 if not).
+        String enc = mSearchEngineData[FIELD_ENCODING];
+        try {
+            return templateUri.replace(PARAMETER_PARTNER_CODE, URLEncoder.encode(mPartnerCode, enc));
+        } catch (java.io.UnsupportedEncodingException e) {
+            Log.e(TAG, "Exception occured when encoding partner code " + mPartnerCode + " to " + enc);
             return null;
         }
     }
