@@ -23,6 +23,11 @@ import android.util.Log;
 
 import com.android.browser.R;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.lang.StringBuilder;
+import java.lang.Process;
 import java.net.URLEncoder;
 import java.util.Arrays;
 import java.util.Locale;
@@ -33,6 +38,8 @@ import java.util.Locale;
 public class SearchEngineInfo {
 
     private static String TAG = "SearchEngineInfo";
+    private static final String PARTNER_CODE_SYSTEM_PROP =
+                        "ro.browser.search_partner_code";
 
     // The fields of a search engine data array, defined in the same order as they appear in the
     // all_search_engines.xml file.
@@ -47,10 +54,12 @@ public class SearchEngineInfo {
 
     // The OpenSearch URI template parameters that we support.
     private static final String PARAMETER_LANGUAGE = "{language}";
+    private static final String PARAMETER_PARTNER_CODE = "{partnerCode}";
     private static final String PARAMETER_SEARCH_TERMS = "{searchTerms}";
     private static final String PARAMETER_INPUT_ENCODING = "{inputEncoding}";
 
     private final String mName;
+    private String mPartnerCode;
 
     // The array of strings defining this search engine. The array values are in the same order as
     // the above enumeration definition.
@@ -84,6 +93,11 @@ public class SearchEngineInfo {
             throw new IllegalArgumentException(name + " has an empty search URI");
         }
 
+        mPartnerCode = getSystemProperty(PARTNER_CODE_SYSTEM_PROP);
+        if (TextUtils.isEmpty(mPartnerCode)) {
+            throw new RuntimeException("Fatal: No value set for " + PARTNER_CODE_SYSTEM_PROP);
+        }
+
         // Add the current language/country information to the URIs.
         Locale locale = context.getResources().getConfiguration().locale;
         StringBuilder language = new StringBuilder(locale.getLanguage());
@@ -110,6 +124,23 @@ public class SearchEngineInfo {
                 mSearchEngineData[FIELD_SEARCH_URI].replace(PARAMETER_INPUT_ENCODING, enc);
         mSearchEngineData[FIELD_SUGGEST_URI] =
                 mSearchEngineData[FIELD_SUGGEST_URI].replace(PARAMETER_INPUT_ENCODING, enc);
+    }
+
+    private String getSystemProperty(String key) {
+        try {
+            Process process = Runtime.getRuntime().exec("getprop " + key);
+            BufferedReader bufferedReader = new BufferedReader(
+                new InputStreamReader(process.getInputStream()));
+            StringBuilder outputBuilder = new StringBuilder();
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                outputBuilder.append(line + "\n");
+            }
+            return outputBuilder.toString().trim();
+        } catch (IOException e) {
+            Log.w(TAG, "Error reading system property: " + key);
+        }
+        return null;
     }
 
     public String getName() {
@@ -164,9 +195,17 @@ public class SearchEngineInfo {
         // Encode the query terms in the requested encoding (and fallback to UTF-8 if not).
         String enc = mSearchEngineData[FIELD_ENCODING];
         try {
-            return templateUri.replace(PARAMETER_SEARCH_TERMS, URLEncoder.encode(query, enc));
+            templateUri = templateUri.replace(PARAMETER_SEARCH_TERMS, URLEncoder.encode(query, enc));
         } catch (java.io.UnsupportedEncodingException e) {
             Log.e(TAG, "Exception occured when encoding query " + query + " to " + enc);
+            return null;
+        }
+
+        // Encode the partner code in the requested encoding (and fallback to UTF-8 if not).
+        try {
+            return templateUri.replace(PARAMETER_PARTNER_CODE, URLEncoder.encode(mPartnerCode, enc));
+        } catch (java.io.UnsupportedEncodingException e) {
+            Log.e(TAG, "Exception occured when encoding partner code " + mPartnerCode + " to " + enc);
             return null;
         }
     }
