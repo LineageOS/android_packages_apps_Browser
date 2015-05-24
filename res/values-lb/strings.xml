@@ -65,7 +65,7 @@
   <string name="delete_folder">Dossier läschen</string>
   <string name="no_subfolders">Keng Ënnerdossieren.</string>
   <string name="add_to_bookmarks_menu_option">Lieszeechen</string>
-  <string name="add_to_homescreen_menu_option">Heemschierm</string>
+  <string name="add_to_homescreen_menu_option">Startschierm</string>
   <string name="add_to_other_folder_menu_option">Aneren Dossier</string>
   <string name="name">Beschreiwung</string>
   <string name="http">http://</string>
