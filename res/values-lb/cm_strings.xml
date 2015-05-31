@@ -22,7 +22,7 @@
   <string name="pref_content_ua_summary">User-Agent wielen</string>
   <string name="pref_lab_websockets">WebSockets</string>
   <string name="pref_lab_websockets_summary">WebSockets aktivéieren</string>
-  <string name="accessibility_button_homescreen">Heemschierm</string>
+  <string name="accessibility_button_homescreen">Startschierm</string>
   <string name="pref_security_site_whitelist_cookies">D\'Verfollegung reduzéieren andeem s d\'Cookien dacks geläscht ginn</string>
   <string name="pref_security_site_whitelist_cookies_never">Ni läschen</string>
   <string name="pref_security_site_whitelist_cookies_only">Vun alle Sitte läschen déi net op menger wäisser Lëscht stinn</string>
