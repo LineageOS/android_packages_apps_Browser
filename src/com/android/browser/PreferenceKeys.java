@@ -63,6 +63,7 @@ public interface PreferenceKeys {
     static final String PREF_HOMEPAGE = "homepage";
     static final String PREF_SYNC_WITH_CHROME = "sync_with_chrome";
     static final String PREF_FULL_SCREEN = "full_screen";
+    static final String PREF_POWERSAVE_ENABLED = "powersave_enabled";
 
     // ----------------------
     // Keys for hidden_debug_preferences.xml
