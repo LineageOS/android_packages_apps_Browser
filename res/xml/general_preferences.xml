@@ -31,7 +31,7 @@
     <CheckBoxPreference
             android:defaultValue="false"
             android:key="powersave_enabled"
-            android:summary="@string/pref_powersave_enabled_summary"
-            android:title="@string/pref_powersave_enabled" />
+            android:title="@string/pref_powersave_enabled"
+            android:summary="@string/pref_powersave_enabled_summary"/>
 
 </PreferenceScreen>

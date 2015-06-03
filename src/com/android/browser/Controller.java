@@ -1,8 +1,6 @@
 /*
  * Copyright (C) 2010 The Android Open Source Project
  *
- * Copyright (C) 2015 The Linux Foundation
- *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -225,7 +223,6 @@ public class Controller
     private boolean mBlockEvents;
 
     private String mVoiceResult;
-
     private PowerConnectionReceiver mLowPowerReceiver;
     private PowerConnectionReceiver mPowerChangeReceiver;
 
@@ -368,13 +365,13 @@ public class Controller
         }
 
         mLowPowerReceiver = new PowerConnectionReceiver();
-        mPowerChangeReceiver = new PowerConnectionReceiver();
+            mPowerChangeReceiver = new PowerConnectionReceiver();
 
-        //always track the android framework's power save mode
-        IntentFilter filter = new IntentFilter();
-        filter.addAction("android.os.action.POWER_SAVE_MODE_CHANGED");
-        filter.addAction(Intent.ACTION_BATTERY_OKAY);
-        mActivity.registerReceiver(mPowerChangeReceiver, filter);
+            //always track the android framework's power save mode
+            IntentFilter filter = new IntentFilter();
+            filter.addAction("android.os.action.POWER_SAVE_MODE_CHANGED");
+            filter.addAction(Intent.ACTION_BATTERY_OKAY);
+            mActivity.registerReceiver(mPowerChangeReceiver, filter);
     }
 
     private static class PruneThumbnails implements Runnable {
@@ -668,11 +665,11 @@ public class Controller
 
         WebView.disablePlatformNotifications();
         NfcHandler.unregister(mActivity);
-        mActivity.unregisterReceiver(mLowPowerReceiver);
         if (sThumbnailBitmap != null) {
             sThumbnailBitmap.recycle();
             sThumbnailBitmap = null;
         }
+        mActivity.unregisterReceiver(mLowPowerReceiver);
     }
 
     @Override
@@ -779,8 +776,9 @@ public class Controller
         mActivity.getContentResolver().unregisterContentObserver(mBookmarksObserver);
         // Destroy all the tabs
         mTabControl.destroy();
-        WebIconDatabase.getInstance().close();
+        // Unregister receiver
         mActivity.unregisterReceiver(mPowerChangeReceiver);
+        WebIconDatabase.getInstance().close();
         // Stop watching the default geolocation permissions
         mSystemAllowGeolocationOrigins.stop();
         mSystemAllowGeolocationOrigins = null;

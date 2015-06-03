@@ -58,6 +58,8 @@ public class GeneralPreferencesFragment extends PreferenceFragment
 
     static final String PREF_HOMEPAGE_PICKER = "homepage_picker";
 
+    final Bundle arguments = getArguments();
+
     String[] mChoices, mValues;
     String mCurrentPage;
 
@@ -78,7 +80,10 @@ public class GeneralPreferencesFragment extends PreferenceFragment
         pref.setPersistent(false);
         pref.setValue(getHomepageValue());
         pref.setOnPreferenceChangeListener(this);
-        final Bundle arguments = getArguments();
+        if (arguments != null && arguments.getBoolean("LowPower")) {
+            LowPowerDialogFragment fragment = LowPowerDialogFragment.newInstance();
+                    fragment.show(getActivity().getFragmentManager(), "setPowersave dialog");
+        }
     }
 
     @Override
@@ -109,7 +114,6 @@ public class GeneralPreferencesFragment extends PreferenceFragment
                 promptForHomepage((ListPreference) pref);
                 return false;
             }
-            if ()
             pref.setSummary(getHomepageSummary());
             ((ListPreference)pref).setValue(getHomepageValue());
             return false;
