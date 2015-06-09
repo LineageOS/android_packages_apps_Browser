@@ -38,8 +38,12 @@ import java.util.Locale;
 public class SearchEngineInfo {
 
     private static String TAG = "SearchEngineInfo";
-    private static final String PARTNER_CODE_SYSTEM_PROP =
-                        "ro.browser.search_partner_code";
+    private static final String YAHOO_DOMAIN = "search.yahoo.com";
+    private static final String BING_DOMAIN = "bing.com";
+    private static final String PARTNER_CODE_SYSTEM_PROP_BING =
+                        "ro.browser.search_partner_code_bing";
+    private static final String PARTNER_CODE_SYSTEM_PROP_YAHOO =
+                        "ro.browser.search_partner_code_yahoo";
 
     // The fields of a search engine data array, defined in the same order as they appear in the
     // all_search_engines.xml file.
@@ -93,9 +97,16 @@ public class SearchEngineInfo {
             throw new IllegalArgumentException(name + " has an empty search URI");
         }
 
-        mPartnerCode = getSystemProperty(PARTNER_CODE_SYSTEM_PROP);
+        String partnerCodeKey = null;
+        if (mSearchEngineData[FIELD_SEARCH_URI].contains(YAHOO_DOMAIN)) {
+            partnerCodeKey = PARTNER_CODE_SYSTEM_PROP_YAHOO;
+        } else if (mSearchEngineData[FIELD_SEARCH_URI].contains(BING_DOMAIN)) {
+            partnerCodeKey = PARTNER_CODE_SYSTEM_PROP_BING; 
+        }
+
+        mPartnerCode = getSystemProperty(partnerCodeKey);
         if (TextUtils.isEmpty(mPartnerCode)) {
-            throw new RuntimeException("Fatal: No value set for " + PARTNER_CODE_SYSTEM_PROP);
+            throw new RuntimeException("Fatal: No value set for " + partnerCodeKey);
         }
 
         // Add the current language/country information to the URIs.
@@ -191,7 +202,7 @@ public class SearchEngineInfo {
         if (TextUtils.isEmpty(templateUri)) {
             return null;
         }
-
+        
         // Encode the query terms in the requested encoding (and fallback to UTF-8 if not).
         String enc = mSearchEngineData[FIELD_ENCODING];
         try {
