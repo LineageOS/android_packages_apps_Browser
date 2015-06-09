@@ -285,7 +285,7 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         // WebView inside Browser doesn't want initial focus to be set.
         settings.setNeedInitialFocus(false);
         // Browser supports multiple windows
-        settings.setSupportMultipleWindows(true);
+        settings.setSupportMultipleWindows(false);
         // enable smooth transition for better performance during panning or
         // zooming
         settings.setEnableSmoothTransition(true);
