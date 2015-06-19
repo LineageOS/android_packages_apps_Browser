@@ -40,6 +40,8 @@ public class SearchEngineInfo {
     private static String TAG = "SearchEngineInfo";
     private static final String YAHOO_DOMAIN = "search.yahoo.com";
     private static final String BING_DOMAIN = "bing.com";
+    private static final String PARTNER_CODE_DEFAULT_BING = "CY01";
+    private static final String PARTNER_CODE_DEFAULT_YAHOO = "cya_oem";
     private static final String PARTNER_CODE_SYSTEM_PROP_BING =
                         "ro.browser.search_code_bing";
     private static final String PARTNER_CODE_SYSTEM_PROP_YAHOO =
@@ -98,16 +100,19 @@ public class SearchEngineInfo {
         }
 
         String partnerCodeKey = null;
+        String partnerCodeDefault = "";
         if (mSearchEngineData[FIELD_SEARCH_URI].contains(YAHOO_DOMAIN)) {
             partnerCodeKey = PARTNER_CODE_SYSTEM_PROP_YAHOO;
+            partnerCodeDefault = PARTNER_CODE_DEFAULT_YAHOO;
         } else if (mSearchEngineData[FIELD_SEARCH_URI].contains(BING_DOMAIN)) {
             partnerCodeKey = PARTNER_CODE_SYSTEM_PROP_BING;
+            partnerCodeDefault = PARTNER_CODE_DEFAULT_BING;
         }
 
         if (partnerCodeKey != null) {
             mPartnerCode = getSystemProperty(partnerCodeKey);
             if (TextUtils.isEmpty(mPartnerCode)) {
-                throw new RuntimeException("Fatal: No value set for " + partnerCodeKey);
+                mPartnerCode = partnerCodeDefault;
             }
         }
 
