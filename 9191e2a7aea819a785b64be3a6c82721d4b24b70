@@ -16,6 +16,24 @@
       "revId": "9191e2a7aea819a785b64be3a6c82721d4b24b70",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba2be162_8b17b153",
+        "filename": "src/com/android/browser/search/SearchEngineInfo.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-06-20T11:25:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ba2be162_2b2245ba",
+      "revId": "9191e2a7aea819a785b64be3a6c82721d4b24b70",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
