@@ -55,6 +55,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
+import com.android.browser.util.DefaultHomePageAndSearchMatcher;
 import org.codeaurora.swe.AutoFillProfile;
 import org.codeaurora.swe.CookieManager;
 import org.codeaurora.swe.GeolocationPermissions;
@@ -280,7 +281,7 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
             }
 
             // add for carrier homepage feature
-            sFactoryResetUrl = mContext.getResources().getString(R.string.homepage_base);
+            sFactoryResetUrl = DefaultHomePageAndSearchMatcher.getHomePageUri(mContext).toString();
 
             if (!mPrefs.contains(PREF_DEFAULT_TEXT_ENCODING)) {
                 mPrefs.edit().putString(PREF_DEFAULT_TEXT_ENCODING, "auto").apply();
@@ -801,7 +802,21 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 
         String defaultSearchEngineValue = getUserSearchEngine();
         if (defaultSearchEngineValue == null) {
-            defaultSearchEngineValue = SearchEngine.GOOGLE;
+
+            if (DefaultHomePageAndSearchMatcher.BING_SEARCH_KEY.equals(
+                DefaultHomePageAndSearchMatcher.getSearchProvider(mContext))) {
+                defaultSearchEngineValue = SearchEngine.BING;
+            } else {
+                defaultSearchEngineValue = SearchEngine.YAHOO;
+            }
+//=======
+//        String defaultSearchEngineValue =
+//                DefaultHomePageAndSearchMatcher.getSearchProvider(mContext);
+//        if (DefaultHomePageAndSearchMatcher.BING_SEARCH_KEY.equals(defaultSearchEngineValue)) {
+//            defaultSearchEngineValue = SearchEngine.BING;
+//        } else {
+//            defaultSearchEngineValue = SearchEngine.YAHOO;
+//>>>>>>> theirs
         }
         return defaultSearchEngineValue;
     }
