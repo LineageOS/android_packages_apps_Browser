@@ -26,6 +26,7 @@ import android.content.res.Resources;
 import android.preference.ListPreference;
 import android.util.AttributeSet;
 import android.util.Log;
+import com.android.browser.util.DefaultHomePageAndSearchMatcher;
 
 import java.util.ArrayList;
 
@@ -54,8 +55,11 @@ class SearchEnginePreference extends ListPreference {
                 entries.add(searchEngineInfo.getLabel());
             }
         }
-
         setEntryValues(entryValues.toArray(new CharSequence[entryValues.size()]));
         setEntries(entries.toArray(new CharSequence[entries.size()]));
+        String defaultValue = DefaultHomePageAndSearchMatcher.BING_SEARCH_KEY.equals(
+                DefaultHomePageAndSearchMatcher.getSearchProvider(context))
+                ? SearchEngine.BING : SearchEngine.YAHOO;
+        setDefaultValue(defaultValue);
     }
 }
