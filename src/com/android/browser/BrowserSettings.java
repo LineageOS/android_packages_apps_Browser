@@ -53,6 +53,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Set;
 
+import com.android.browser.util.DefaultHomePageAndSearchMatcher;
 import org.codeaurora.swe.AutoFillProfile;
 import org.codeaurora.swe.CookieManager;
 import org.codeaurora.swe.GeolocationPermissions;
@@ -272,7 +273,7 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
             }
 
             // add for carrier homepage feature
-            sFactoryResetUrl = mContext.getResources().getString(R.string.homepage_base);
+            sFactoryResetUrl = DefaultHomePageAndSearchMatcher.getHomePageUri(mContext).toString();
 
             if (!mPrefs.contains(PREF_DEFAULT_TEXT_ENCODING)) {
                 mPrefs.edit().putString(PREF_DEFAULT_TEXT_ENCODING, "auto").apply();
@@ -775,10 +776,12 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         // The following is a NOP if the SEARCH_ENGINE restriction has already been created. Otherwise,
         // it creates the restriction and if enabled it sets the <default_search_engine_value>.
         SearchEngineRestriction.getInstance();
-
-        String defaultSearchEngineValue = mContext.getString(R.string.default_search_engine_value);
-        if (defaultSearchEngineValue == null) {
-            defaultSearchEngineValue = SearchEngine.GOOGLE;
+        String defaultSearchEngineValue =
+                DefaultHomePageAndSearchMatcher.getSearchProvider(mContext);
+        if (DefaultHomePageAndSearchMatcher.BING_SEARCH_KEY.equals(defaultSearchEngineValue)) {
+            defaultSearchEngineValue = SearchEngine.BING;
+        } else {
+            defaultSearchEngineValue = SearchEngine.YAHOO;
         }
         return mPrefs.getString(PREF_SEARCH_ENGINE, defaultSearchEngineValue);
     }

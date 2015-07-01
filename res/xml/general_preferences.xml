@@ -30,7 +30,6 @@
         <com.android.browser.search.SearchEnginePreference
             android:layout="@layout/swe_preference"
             android:widgetLayout="@layout/swe_preference_list_widget"
-            android:defaultValue="@string/default_search_engine_value"
             android:dialogTitle="@string/pref_content_search_engine"
             android:key="search_engine"
             android:summary="@string/pref_content_search_engine_summary"
