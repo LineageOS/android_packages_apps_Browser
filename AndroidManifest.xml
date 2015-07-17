@@ -16,7 +16,9 @@
  */
 -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.android.browser">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.browser"
+    android:installLocation="internalOnly">
 
     <permission android:name="{{ package_name }}.permission.PRELOAD"
         android:label="@string/permission_preload_label"
