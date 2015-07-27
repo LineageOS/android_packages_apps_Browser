@@ -57,13 +57,13 @@ public class EngineInitializerTest extends InstrumentationTestCase {
 
     public void test01() throws Throwable {
         Intent localIntent = new Intent();
-        localIntent.setClassName("com.android.swe.browser", BrowserActivity.class.getName());
+        localIntent.setClassName("com.cyngn.browser", BrowserActivity.class.getName());
         localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
 
         final Activity activity = mInstrumentation.startActivitySync(localIntent);
 
         Intent restart = new Intent(BrowserActivity.ACTION_RESTART, null);
-        restart.setClassName("com.android.swe.browser", BrowserActivity.class.getName());
+        restart.setClassName("com.cyngn.browser", BrowserActivity.class.getName());
         restart.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
 
         mInstrumentation.callActivityOnNewIntent(activity, restart);
@@ -82,13 +82,13 @@ public class EngineInitializerTest extends InstrumentationTestCase {
         EngineInitializer.setDelayForTesting(1000);
 
         Intent localIntent = new Intent();
-        localIntent.setClassName("com.android.swe.browser", BrowserActivity.class.getName());
+        localIntent.setClassName("com.cyngn.browser", BrowserActivity.class.getName());
         localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
 
         final Activity browserActivity = mInstrumentation.startActivitySync(localIntent);
 
         Intent pref = new Intent();
-        pref.setClassName("com.android.swe.browser", BrowserPreferencesPage.class.getName());
+        pref.setClassName("com.cyngn.browser", BrowserPreferencesPage.class.getName());
         pref.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
 
         final Activity preferencesActivity = mInstrumentation.startActivitySync(pref);
@@ -106,7 +106,7 @@ public class EngineInitializerTest extends InstrumentationTestCase {
         EngineInitializer.setDelayForTesting(2000);
 
         Intent pref = new Intent();
-        pref.setClassName("com.android.swe.browser", BrowserPreferencesPage.class.getName());
+        pref.setClassName("com.cyngn.browser", BrowserPreferencesPage.class.getName());
         pref.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
 
         final Activity preferencesActivity = mInstrumentation.startActivitySync(pref);
@@ -114,7 +114,7 @@ public class EngineInitializerTest extends InstrumentationTestCase {
         assertEquals(EngineInitializer.getInstance().isInitialized(), true);
 
         Intent localIntent = new Intent();
-        localIntent.setClassName("com.android.swe.browser", BrowserActivity.class.getName());
+        localIntent.setClassName("com.cyngn.browser", BrowserActivity.class.getName());
         localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
 
         final Activity browserActivity = mInstrumentation.startActivitySync(localIntent);
@@ -132,13 +132,13 @@ public class EngineInitializerTest extends InstrumentationTestCase {
 
 
         Intent localIntent = new Intent();
-        localIntent.setClassName("com.android.swe.browser", BrowserActivity.class.getName());
+        localIntent.setClassName("com.cyngn.browser", BrowserActivity.class.getName());
         localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
 
         final Activity browserActivity = mInstrumentation.startActivitySync(localIntent);
 
         final Intent restart = new Intent(BrowserActivity.ACTION_RESTART, null);
-        restart.setClassName("com.android.swe.browser", BrowserActivity.class.getName());
+        restart.setClassName("com.cyngn.browser", BrowserActivity.class.getName());
         restart.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
 
         runTestOnUiThread(new Runnable () {
@@ -149,7 +149,7 @@ public class EngineInitializerTest extends InstrumentationTestCase {
         });
 
         Intent pref = new Intent();
-        pref.setClassName("com.android.swe.browser", BrowserPreferencesPage.class.getName());
+        pref.setClassName("com.cyngn.browser", BrowserPreferencesPage.class.getName());
         pref.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
         final Activity preferencesActivity = mInstrumentation.startActivitySync(pref);
 
@@ -167,7 +167,7 @@ public class EngineInitializerTest extends InstrumentationTestCase {
 
 
         Intent localIntent = new Intent();
-        localIntent.setClassName("com.android.swe.browser", BrowserActivity.class.getName());
+        localIntent.setClassName("com.cyngn.browser", BrowserActivity.class.getName());
         localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
 
         final Activity browserActivity = mInstrumentation.startActivitySync(localIntent);
@@ -195,7 +195,7 @@ public class EngineInitializerTest extends InstrumentationTestCase {
 
 
         Intent localIntent = new Intent();
-        localIntent.setClassName("com.android.swe.browser", BrowserActivity.class.getName());
+        localIntent.setClassName("com.cyngn.browser", BrowserActivity.class.getName());
         localIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
 
         final Activity browserActivity = mInstrumentation.startActivitySync(localIntent);

@@ -33,7 +33,7 @@
             ],
           }],
         ],
-        'override_package_name': 'com.android.swe.browser',
+        'override_package_name': 'com.cyngn.browser',
         'android_manifest_path': '../../swe/browser/AndroidManifest.xml',
         'additional_src_dirs': ['<(DEPTH)/swe/browser/src_standalone/com/android/browser'],
 
