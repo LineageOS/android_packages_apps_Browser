@@ -47,16 +47,16 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="yahoo_uk" translatable="false">
     <item>Yahoo! UK &amp; Ireland</item>
     <item>uk.yahoo.com</item>
-    <item>http://uk.search.yahoo.com/favicon.ico</item>
-    <item>http://uk.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item>http://uk-sayt.ff.search.yahoo.com/gossip-uk-sayt?output=fxjson&amp;command={searchTerms}&amp;.tsrc={partnerCode}</item>
   </string-array>
   <string-array name="yahoo_jp" translatable="false">
     <item>Yahoo! JAPAN</item>
     <item>yahoo.co.jp</item>
-    <item>http://search.yahoo.co.jp/favicon.ico</item>
-    <item>http://search.yahoo.co.jp/search?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}</item>
+    <item>http://search.yahoo.com/favicon.ico</item>
+    <item>http://search.yahoo.com/search?p={searchTerms}</item>
     <item>UTF-8</item>
     <item></item>
   </string-array>
@@ -71,8 +71,8 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="yahoo_br" translatable="false">
     <item>Yahoo! Brasil</item>
     <item>br.yahoo.com</item>
-    <item>http://br.search.yahoo.com/favicon.ico</item>
-    <item>http://br.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item>http://br-sayt.ff.search.yahoo.com/gossip-br-sayt?output=fxjson&amp;command={searchTerms}&amp;.tsrc={partnerCode}</item>
   </string-array>
@@ -143,8 +143,8 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="yahoo_ch" translatable="false">
     <item>Yahoo! Suche</item>
     <item>ch.yahoo.com</item>
-    <item>http://ch.search.yahoo.com/favicon.ico</item>
-    <item>http://ch.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item></item>
   </string-array>
@@ -159,8 +159,8 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="yahoo_cn" translatable="false">
     <item>&#x4e2d;&#x56fd;&#x96c5;&#x864e;</item>
     <item>cn.yahoo.com</item>
-    <item>http://sg.search.yahoo.com/favicon.ico</item>
-    <item>http://sg.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item></item>
   </string-array>
@@ -295,16 +295,16 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="yahoo_dk" translatable="false">
     <item>Yahoo! Danmark</item>
     <item>dk.yahoo.com</item>
-    <item>http://dk.search.yahoo.com/favicon.ico</item>
-    <item>http://dk.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item></item>
   </string-array>
   <string-array name="yahoo_de" translatable="false">
     <item>Yahoo! Deutschland</item>
     <item>de.yahoo.com</item>
-    <item>http://de.search.yahoo.com/favicon.ico</item>
-    <item>http://de.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item>http://de-sayt.ff.search.yahoo.com/gossip-de-sayt?output=fxjson&amp;command={searchTerms}&amp;.tsrc={partnerCode}</item>
   </string-array>
@@ -351,8 +351,8 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="yahoo_tw" translatable="false">
     <item>Yahoo!&#x5947;&#x6469;</item>
     <item>tw.yahoo.com</item>
-    <item>http://tw.search.yahoo.com/favicon.ico</item>
-    <item>http://tw.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item></item>
   </string-array>
@@ -375,8 +375,8 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="yahoo_es" translatable="false">
     <item>Yahoo! Espa&#x00f1;a</item>
     <item>es.yahoo.com</item>
-    <item>http://es.search.yahoo.com/favicon.ico</item>
-    <item>http://es.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item>http://es-sayt.ff.search.yahoo.com/gossip-es-sayt?output=fxjson&amp;command={searchTerms}&amp;.tsrc={partnerCode}</item>
   </string-array>
@@ -399,8 +399,8 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="yahoo_nz" translatable="false">
     <item>Yahoo!Xtra</item>
     <item>nz.yahoo.com</item>
-    <item>http://nz.search.yahoo.com/favicon.ico</item>
-    <item>http://nz.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item>http://aue-sayt.ff.search.yahoo.com/gossip-nz-sayt?output=fxjson&amp;command={searchTerms}&amp;.tsrc={partnerCode}</item>
   </string-array>
@@ -415,16 +415,16 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="yahoo_nl" translatable="false">
     <item>Yahoo! Nederland</item>
     <item>nl.yahoo.com</item>
-    <item>http://nl.search.yahoo.com/favicon.ico</item>
-    <item>http://nl.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item></item>
   </string-array>
   <string-array name="yahoo_no" translatable="false">
     <item>Yahoo! Norge</item>
     <item>no.yahoo.com</item>
-    <item>http://no.search.yahoo.com/favicon.ico</item>
-    <item>http://no.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item></item>
   </string-array>
@@ -439,8 +439,8 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="yahoo_fr" translatable="false">
     <item>Yahoo! France</item>
     <item>fr.yahoo.com</item>
-    <item>http://fr.search.yahoo.com/favicon.ico</item>
-    <item>http://fr.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item>http://fr-sayt.ff.search.yahoo.com/gossip-fr-sayt?output=fxjson&amp;command={searchTerms}&amp;.tsrc={partnerCode}</item>
   </string-array>
@@ -488,9 +488,9 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
     <item>Yahoo!</item>
     <item>yahoo.com</item>
     <item>http://search.yahoo.com/favicon.ico</item>
-    <item>http://search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>http://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
-    <item>http://ff.search.yahoo.com/gossip?output=fxjson&amp;command={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/gossip?output=fxjson&amp;command={searchTerms}&amp;.tsrc={partnerCode}</item>
   </string-array>
   <string-array name="bing_en_IE" translatable="false">
     <item>Bing</item>
@@ -591,8 +591,8 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="yahoo_kr" translatable="false">
     <item>&#xc57c;&#xd6c4;! &#xcf54;&#xb9ac;&#xc544;</item>
     <item>kr.yahoo.com</item>
-    <item>http://kr.search.yahoo.com/favicon.ico</item>
-    <item>http://kr.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item>http://kr.atc.search.yahoo.com/atcx.php?property=main&amp;ot=fxjson&amp;ei=utf8&amp;eo=utf8&amp;command={searchTerms}&amp;.tsrc={partnerCode}</item>
   </string-array>
@@ -607,8 +607,8 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="yahoo_hk" translatable="false">
     <item>Yahoo! Hong Kong</item>
     <item>hk.yahoo.com</item>
-    <item>http://hk.search.yahoo.com/favicon.ico</item>
-    <item>http://hk.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item></item>
   </string-array>
@@ -639,16 +639,16 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="yahoo_sg" translatable="false">
     <item>Yahoo! Singapore</item>
     <item>sg.yahoo.com</item>
-    <item>http://sg.search.yahoo.com/favicon.ico</item>
-    <item>http://sg.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item>http://sg-sayt.ff.search.yahoo.com/gossip-sg-sayt?output=fxjson&amp;command={searchTerms}&amp;.tsrc={partnerCode}</item>
   </string-array>
   <string-array name="yahoo_se" translatable="false">
     <item>Yahoo! Sverige</item>
     <item>se.yahoo.com</item>
-    <item>http://se.search.yahoo.com/favicon.ico</item>
-    <item>http://se.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item></item>
   </string-array>
@@ -703,24 +703,24 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
   <string-array name="yahoo_it" translatable="false">
     <item>Yahoo! Italia</item>
     <item>it.yahoo.com</item>
-    <item>http://it.search.yahoo.com/favicon.ico</item>
-    <item>http://it.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item>http://it-sayt.ff.search.yahoo.com/gossip-it-sayt?output=fxjson&amp;command={searchTerms}&amp;.tsrc={partnerCode}</item>
   </string-array>
   <string-array name="yahoo_at" translatable="false">
     <item>Yahoo! Suche</item>
     <item>at.yahoo.com</item>
-    <item>http://at.search.yahoo.com/favicon.ico</item>
-    <item>http://at.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item></item>
   </string-array>
   <string-array name="yahoo_au" translatable="false">
     <item>Yahoo!7</item>
     <item>au.yahoo.com</item>
-    <item>http://au.search.yahoo.com/favicon.ico</item>
-    <item>http://au.search.yahoo.com/mobile/s?ei={inputEncoding}&amp;fr=crmas&amp;p={searchTerms}&amp;.tsrc={partnerCode}</item>
+    <item>https://search.yahoo.com/favicon.ico</item>
+    <item>https://search.yahoo.com/mobile/s?p={searchTerms}&amp;.tsrc={partnerCode}</item>
     <item>UTF-8</item>
     <item>http://aue-sayt.ff.search.yahoo.com/gossip-au-sayt?output=fxjson&amp;command={searchTerms}&amp;.tsrc={partnerCode}</item>
   </string-array>
