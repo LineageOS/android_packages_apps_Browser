@@ -25,11 +25,11 @@
   <string name="accessibility_button_homescreen">Hasiera-pantaila</string>
   <string name="pref_security_site_whitelist_cookies">Murriztu jarraipena. Ezabatu cookieak maiz</string>
   <string name="pref_security_site_whitelist_cookies_never">Ez ezabatu inoiz</string>
-  <string name="pref_security_site_whitelist_cookies_only">Zerrenda zurian ez dauden leku guztienak ezabatu</string>
-  <string name="pref_security_site_whitelist_cookies_and_data">Tokiko datu-base guztiak ezabatu ere</string>
+  <string name="pref_security_site_whitelist_cookies_only">Ezabatu zerrenda zurian ez dauden leku guztienak</string>
+  <string name="pref_security_site_whitelist_cookies_and_data">Ezabatu tokiko datu-base guztiak ere</string>
   <string name="pref_security_site_whitelist_cookies_verbose">Cookie zenbatzailea</string>
-  <string name="pref_security_site_whitelist_cookies_verbose_summary">Erakutsi ezabatutako eta dauden Cookie kopurua</string>
-  <string name="site_cookies_whitelisted">Lekuaren Cookie-ak mantendu</string>
-  <string name="cookies_deleted_info">Ezabaturiko Cookie-ak</string>
-  <string name="cookies_remain_info">Gordetako Cookie-ak</string>
+  <string name="pref_security_site_whitelist_cookies_verbose_summary">Erakutsi ezabatutako eta gordetako cookie kopurua</string>
+  <string name="site_cookies_whitelisted">Gorde gunearen cookieak</string>
+  <string name="cookies_deleted_info">cookieak ezabatu dira</string>
+  <string name="cookies_remain_info">gordetako cookieak</string>
 </resources>

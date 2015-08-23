@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="contextmenu_openlink_incognito_newwindow">باز کردن در زبانه جدید ناشناس</string>
+  <string name="contextmenu_openlink_incognito_newwindow">باز کردن در زبانه ناشناس جدید</string>
+  <string name="contextmenu_openlink_incognito_newwindow_background">باز کردن در زبانه پس‌زمینه ناشناس جدید</string>
   <string name="accessibility_button_homescreen">صفحه اصلی</string>
 </resources>
