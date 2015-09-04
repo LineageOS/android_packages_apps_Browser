@@ -711,6 +711,8 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
                 DefaultHomePageAndSearchMatcher.getSearchProvider(mContext);
         if (DefaultHomePageAndSearchMatcher.BING_SEARCH_KEY.equals(defaultSearchEngineValue)) {
             defaultSearchEngineValue = SearchEngine.BING;
+        } else if (DefaultHomePageAndSearchMatcher.GOOGLE_SEARCH_KEY.equals(defaultSearchEngineValue)) {
+            defaultSearchEngineValue = SearchEngine.GOOGLE;
         } else {
             defaultSearchEngineValue = SearchEngine.YAHOO;
         }
