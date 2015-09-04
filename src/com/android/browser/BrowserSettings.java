@@ -802,13 +802,16 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 
         String defaultSearchEngineValue = getUserSearchEngine();
         if (defaultSearchEngineValue == null) {
+            String tmp = DefaultHomePageAndSearchMatcher.getSearchProvider(mContext);
 
-            if (DefaultHomePageAndSearchMatcher.BING_SEARCH_KEY.equals(
-                DefaultHomePageAndSearchMatcher.getSearchProvider(mContext))) {
+            if (DefaultHomePageAndSearchMatcher.BING_SEARCH_KEY.equals(tmp)) {
                 defaultSearchEngineValue = SearchEngine.BING;
+            } else if (DefaultHomePageAndSearchMatcher.GOOGLE_SEARCH_KEY.equals(tmp)) {
+                defaultSearchEngineValue = SearchEngine.GOOGLE;
             } else {
                 defaultSearchEngineValue = SearchEngine.YAHOO;
             }
+        }
 //=======
 //        String defaultSearchEngineValue =
 //                DefaultHomePageAndSearchMatcher.getSearchProvider(mContext);
@@ -817,7 +820,16 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 //        } else {
 //            defaultSearchEngineValue = SearchEngine.YAHOO;
 //>>>>>>> theirs
-        }
+//=======
+//        String defaultSearchEngineValue =
+//                DefaultHomePageAndSearchMatcher.getSearchProvider(mContext);
+//        if (DefaultHomePageAndSearchMatcher.BING_SEARCH_KEY.equals(defaultSearchEngineValue)) {
+//            defaultSearchEngineValue = SearchEngine.BING;
+//        } else if (DefaultHomePageAndSearchMatcher.GOOGLE_SEARCH_KEY.equals(defaultSearchEngineValue)) {
+//            defaultSearchEngineValue = SearchEngine.GOOGLE;
+//        } else {
+//            defaultSearchEngineValue = SearchEngine.YAHOO;
+//>>>>>>> 4e12c6c... Allow override of search and home page with system prop.
         return defaultSearchEngineValue;
     }
 
