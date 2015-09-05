@@ -99,6 +99,12 @@ public class DefaultHomePageAndSearchMatcher {
                 mLocaleToHomePage.containsKey(locale.getCountry())) {
             homePage = mLocaleToHomePage.get(locale.getCountry());
         }
+
+        String overrideString = getSearchOverride();
+        if (sOverrideToHomePage.containsKey(overrideString)) {
+            homePage = sOverrideToHomePage.get(overrideString);
+        }
+
         if (homePage == sBingHomePage) {
             return BING_SEARCH_KEY;
         } else if (homePage == sGoogleHomePage){
