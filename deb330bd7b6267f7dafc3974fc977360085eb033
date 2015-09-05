@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3f1d235d_46f5e9ca",
+        "filename": "src/com/android/browser/BrowserSettings.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 716,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-09-05T02:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3f1d235d_8645411a",
+      "revId": "deb330bd7b6267f7dafc3974fc977360085eb033",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3f1d235d_a6403d09",
         "filename": "src/com/android/browser/util/DefaultHomePageAndSearchMatcher.java",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2015-09-05T02:38:59Z",
       "side": 1,
       "message": "sorry i meant switch yahoo with google here",
+      "revId": "deb330bd7b6267f7dafc3974fc977360085eb033",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f1d235d_2602edb5",
+        "filename": "src/com/android/browser/util/DefaultHomePageAndSearchMatcher.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-09-05T02:50:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3f1d235d_a6403d09",
       "revId": "deb330bd7b6267f7dafc3974fc977360085eb033",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
