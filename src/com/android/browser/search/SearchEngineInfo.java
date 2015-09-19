@@ -211,22 +211,29 @@ public class SearchEngineInfo {
             return null;
         }
 
-        // Encode the query terms in the requested encoding (and fallback to UTF-8 if not).
         String enc = mSearchEngineData[FIELD_ENCODING];
-        try {
-            templateUri = templateUri.replace(PARAMETER_SEARCH_TERMS, URLEncoder.encode(query, enc));
-        } catch (java.io.UnsupportedEncodingException e) {
-            Log.e(TAG, "Exception occured when encoding query " + query + " to " + enc);
-            return null;
+
+        if (templateUri.contains(PARAMETER_SEARCH_TERMS)) {
+            // Encode the query terms in the requested encoding (and fallback to UTF-8 if not).
+            try {
+                templateUri = templateUri.replace(PARAMETER_SEARCH_TERMS, URLEncoder.encode(query, enc));
+            } catch (java.io.UnsupportedEncodingException e) {
+                Log.e(TAG, "Exception occured when encoding query " + query + " to " + enc);
+                return null;
+            }
         }
 
-        // Encode the partner code in the requested encoding (and fallback to UTF-8 if not).
-        try {
-            return templateUri.replace(PARAMETER_PARTNER_CODE, URLEncoder.encode(mPartnerCode, enc));
-        } catch (java.io.UnsupportedEncodingException e) {
-            Log.e(TAG, "Exception occured when encoding partner code " + mPartnerCode + " to " + enc);
-            return null;
+        if (templateUri.contains(PARAMETER_PARTNER_CODE)) {
+            // Encode the partner code in the requested encoding (and fallback to UTF-8 if not).
+            try {
+                templateUri = templateUri.replace(PARAMETER_PARTNER_CODE, URLEncoder.encode(mPartnerCode, enc));
+            } catch (java.io.UnsupportedEncodingException e) {
+                Log.e(TAG, "Exception occured when encoding partner code " + mPartnerCode + " to " + enc);
+                return null;
+            }
         }
+
+        return templateUri;
     }
 
     @Override
