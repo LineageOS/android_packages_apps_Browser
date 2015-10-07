@@ -16,6 +16,24 @@
       "revId": "e2b2e43e0b67c9753374dbea16f69dcca90b9616",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f287b81_e2c74e45",
+        "filename": "src/com/android/browser/provider/BrowserProvider2.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 666,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-10-07T06:06:14Z",
+      "side": 1,
+      "message": "Maybe we can change this to reference the static method to keep it consistent with the other patch. Thoughts from anybody else?",
+      "parentUuid": "7f287b81_42b182e1",
+      "revId": "e2b2e43e0b67c9753374dbea16f69dcca90b9616",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
