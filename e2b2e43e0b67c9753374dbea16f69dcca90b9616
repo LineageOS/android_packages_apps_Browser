@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f287b81_42b182e1",
+        "filename": "src/com/android/browser/provider/BrowserProvider2.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 666,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2015-10-07T05:35:53Z",
+      "side": 1,
+      "message": "If you want, you can retrieve system properties with the static method I have already committed: HomeAndSearchUtils.getSystemProperty(key, default) that doesn\u0027t use reflection. I\u0027m not sure which is a better solution though. Technically the class name could change which would break this but that seems very unlikely on Android.",
+      "revId": "e2b2e43e0b67c9753374dbea16f69dcca90b9616",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
