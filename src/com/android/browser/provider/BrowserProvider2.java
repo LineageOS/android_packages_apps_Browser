@@ -25,6 +25,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.UriMatcher;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.database.AbstractCursor;
 import android.database.ContentObserver;
@@ -39,6 +40,7 @@ import android.provider.BaseColumns;
 import android.provider.ContactsContract.RawContacts;
 import android.provider.SyncStateContract;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.util.Log;
 
 import com.android.browser.BrowserSettings;
@@ -57,6 +59,7 @@ import com.android.browser.platformsupport.BrowserContract.Searches;
 import com.android.browser.platformsupport.BrowserContract.Settings;
 import com.android.browser.platformsupport.BrowserContract.SyncState;
 import com.android.browser.platformsupport.SyncStateContentProviderHelper;
+import com.android.browser.reflect.ReflectHelper;
 import com.android.browser.widget.BookmarkThumbnailWidgetProvider;
 import com.google.common.annotations.VisibleForTesting;
 
@@ -660,7 +663,20 @@ public class BrowserProvider2 extends SQLiteContentProvider {
         }
 
         private void addDefaultBookmarks(SQLiteDatabase db, long parentId) {
-            Resources res = getContext().getResources();
+            final Object systemProperties = ReflectHelper.newObject("android.os.SystemProperties",
+                    null, null);
+            Object mcc = ReflectHelper.invokeMethod(systemProperties, "get",
+                    new Class[]{ String.class }, new Object[]{ "ro.prebundled.mcc" });
+
+            Configuration tempConfiguration = new Configuration();
+            Resources customResources = null;
+            if (mcc != null && !TextUtils.isEmpty(mcc.toString())) {
+                tempConfiguration.mcc = Integer.parseInt(mcc.toString());
+                customResources = new Resources(getContext().getAssets(), new DisplayMetrics(),
+                        tempConfiguration);
+            }
+
+            Resources res = customResources == null ? getContext().getResources() : customResources;
             final CharSequence[] bookmarks = res.getTextArray(R.array.bookmarks);
             int size = bookmarks.length;
             String[] preloads = res.getStringArray(R.array.bookmark_preloads);
