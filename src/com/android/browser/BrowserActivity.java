@@ -16,11 +16,15 @@
 
 package com.android.browser;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.KeyguardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.content.pm.PackageManager;
+import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.util.Log;
@@ -51,6 +55,8 @@ public class BrowserActivity extends Activity {
 
     private ActivityController mController = NullController.INSTANCE;
 
+    private boolean mHasCriticalPermissions;
+
     @Override
     public void onCreate(Bundle icicle) {
         if (LOGV_ENABLED) {
@@ -74,6 +80,8 @@ public class BrowserActivity extends Activity {
 
         Intent intent = (icicle == null) ? getIntent() : null;
         mController.start(intent);
+
+        checkPermissions();
     }
 
     public static boolean isTablet(Context context) {
@@ -139,7 +147,42 @@ public class BrowserActivity extends Activity {
         if (LOGV_ENABLED) {
             Log.v(LOGTAG, "BrowserActivity.onResume: this=" + this);
         }
+
+        // checkPermissions();
+
+        if (!mHasCriticalPermissions) {
+            Log.v(LOGTAG, "onResume: Missing critical permissions.");
+            finish();
+            return;
+        }
+
         mController.onResume();
+    }
+
+    /**
+     * Checks if any of the needed Android runtime permissions are missing.
+     * If they are, then launch the permissions activity under one of the following conditions:
+     * a) The permissions dialogs have not run yet. We will ask for permission only once.
+     * b) If the missing permissions are critical to the app running, we will display a fatal error dialog.
+     * Critical permissions are: storage. The app cannot run without them.
+     */
+    private void checkPermissions() {
+        if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            mHasCriticalPermissions = true;
+        } else {
+            mHasCriticalPermissions = false;
+        }
+
+        SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String PREF_HAS_SEEN_PERMISSIONS_DIALOGS = "pref_has_seen_permissions_dialogs";
+
+        if (!mPrefs.getBoolean(PREF_HAS_SEEN_PERMISSIONS_DIALOGS, false) ||
+                !mHasCriticalPermissions) {
+            Intent intent = new Intent(this, PermissionsActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
     }
 
     @Override
