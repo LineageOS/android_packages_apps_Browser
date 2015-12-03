@@ -25,7 +25,7 @@ public class Browser extends Application {
     private final static String LOGTAG = "browser";
     
     // Set to true to enable verbose logging.
-    final static boolean LOGV_ENABLED = false;
+    final static boolean LOGV_ENABLED = true;
 
     // Set to true to enable extra debug logging.
     final static boolean LOGD_ENABLED = true;
