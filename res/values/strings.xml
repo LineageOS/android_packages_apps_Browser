@@ -995,4 +995,13 @@
     <!-- Content description for navigating up in the bookmark folder hierarchy [CHAR LIMIT=NONE] -->
     <string name="accessibility_button_bookmarks_folder_up">Previous folder</string>
 
+    <!-- title for the dialog showing the error of browser -->
+    <string name="browser_error_title">Browser error</string>
+
+    <!-- Dialog "Dismiss" button. Closes the dialog [CHAR LIMIT=12]-->
+    <string name="dialog_dismiss">Dismiss</string>
+
+    <!-- message for the dialog showing that the app does not have sufficient permissions [CHAR LIMIT=NONE] -->
+    <string name="error_permissions">The app does not have critical permissions needed to run. Please check your permissions settings.</string>
+
 </resources>
