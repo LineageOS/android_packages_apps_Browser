@@ -59,8 +59,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.browser.BrowserUtils;
-import com.android.browser.R;
 import com.android.browser.addbookmark.FolderSpinner;
 import com.android.browser.addbookmark.FolderSpinnerAdapter;
 import com.android.browser.platformsupport.BrowserContract;
@@ -68,12 +66,8 @@ import com.android.browser.platformsupport.WebAddress;
 import com.android.browser.platformsupport.BrowserContract.Accounts;
 import com.android.browser.reflect.ReflectHelper;
 
-import org.codeaurora.swe.util.SWEUrlUtils;
-
 import java.net.URI;
-import java.net.URLEncoder;
 import java.net.URISyntaxException;
-import java.io.UnsupportedEncodingException;
 
 public class AddBookmarkPage extends Activity
         implements View.OnClickListener, TextView.OnEditorActionListener,
@@ -931,9 +925,8 @@ public class AddBookmarkPage extends Activity
     }
 
     private void onDeleteWithConfirm() {
-        final String title = mTitle.getText().toString().trim();
-        final String unfilteredUrl = UrlUtils.fixUpUrl(mAddress.getText().toString());
-        final String url = unfilteredUrl.trim();
+        final String title = mMap.getString(BrowserContract.Bookmarks.TITLE);
+        final String unfilteredUrl = mUrl;
         final boolean folder = mEditingFolder;
         new AlertDialog.Builder(this)
                 .setIconAttribute(android.R.attr.alertDialogIcon)
@@ -948,7 +941,7 @@ public class AddBookmarkPage extends Activity
                                     BookmarksLoader.PROJECTION,
                                     "url = ?",
                                     new String[]{
-                                            url
+                                            unfilteredUrl.trim()
                                     },
                                     null);
                         } else {
@@ -1023,6 +1016,15 @@ public class AddBookmarkPage extends Activity
 
     private void onSaveWithConfirm() {
         String unfilteredUrl = UrlUtils.fixUpUrl(mAddress.getText().toString());
+        if (TextUtils.isEmpty(unfilteredUrl)) {
+            mAddress.setError(getResources().getText(R.string.bookmark_url_not_valid));
+            return;
+        }
+        if (TextUtils.isEmpty(mTitle.getText().toString())) {
+            mTitle.setError(getResources().getText(R.string.bookmark_needs_title));
+            return;
+        }
+
         String url = unfilteredUrl.trim();
         Long id = (mMap == null) ?
                 -1 :
@@ -1089,22 +1091,23 @@ public class AddBookmarkPage extends Activity
     boolean save() {
         createHandler();
 
-        String title = mTitle.getText().toString().trim();
+        String title = mTitle.getText().toString();
         String unfilteredUrl = UrlUtils.fixUpUrl(mAddress.getText().toString());
 
-        boolean emptyTitle = title.length() == 0;
-        boolean emptyUrl = unfilteredUrl.trim().length() == 0;
+        boolean emptyTitle = TextUtils.isEmpty(title);
+        boolean emptyUrl = TextUtils.isEmpty(unfilteredUrl);
         Resources r = getResources();
         if (emptyTitle || (emptyUrl && !mEditingFolder)) {
             if (emptyTitle) {
                 mTitle.setError(r.getText(R.string.bookmark_needs_title));
             }
             if (emptyUrl) {
-                mAddress.setError(r.getText(R.string.bookmark_needs_url));
+                mAddress.setError(r.getText(R.string.bookmark_url_not_valid));
             }
             return false;
         }
         String url = unfilteredUrl.trim();
+        title = title.trim();
         if (!mEditingFolder) {
             try {
                 // We allow bookmarks with a javascript: scheme, but these will in most cases
