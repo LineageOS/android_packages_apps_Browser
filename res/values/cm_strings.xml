@@ -39,4 +39,10 @@
     <string name="onehand_title">OneHand Navigation</string>
     <string name="onehand_summary">Easier web navigation with swipes and quick actions</string>
 
+    <!-- Permission check -->
+    <string name="permission_not_granted_dialog_title">Permission not granted</string>
+    <string name="permission_not_granted_dialog_message">The permission to write to external storage was not granted. Cannot download.</string>
+    <string name="browser_error_title">Browser error</string>
+    <string name="dialog_dismiss">Dismiss</string>
+    <string name="error_permissions">The app does not have critical permissions needed to run. Please check your permissions settings.</string>
 </resources>
