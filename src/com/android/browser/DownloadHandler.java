@@ -28,6 +28,8 @@ import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.net.WebAddress;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.webkit.CookieManager;
@@ -43,6 +45,46 @@ public class DownloadHandler {
             com.android.browser.Browser.LOGD_ENABLED;
 
     private static final String LOGTAG = "DLHandler";
+
+    //Singleton to hold the information about any pending downloads
+    private static PendingDownloadBundle pendingDownloadBundle;
+
+    private static class PendingDownloadBundle {
+        String url;
+        String userAgent;
+        String contentDisposition;
+        String mimetype;
+        String referer;
+        boolean privateBrowsing;
+
+        public static PendingDownloadBundle create(String url, String userAgent,
+                String contentDisposition, String mimetype, String referer,
+                boolean privateBrowsing) {
+            PendingDownloadBundle pdb = new PendingDownloadBundle();
+            pdb.url = url;
+            pdb.userAgent = userAgent;
+            pdb.contentDisposition = contentDisposition;
+            pdb.mimetype = mimetype;
+            pdb.referer = referer;
+            pdb.privateBrowsing = privateBrowsing;
+            return pdb;
+        }
+    }
+
+    /**
+     * Check if there is any pending download and start the download automatically in case
+     * there is one.
+     * @param activity Activity requesting the download.
+     */
+    public static void checkPendingDownloads(Activity activity) {
+        if (pendingDownloadBundle != null) {
+            onDownloadStartNoStream(activity,  pendingDownloadBundle.url,
+                    pendingDownloadBundle.userAgent, pendingDownloadBundle.contentDisposition,
+                    pendingDownloadBundle.mimetype, pendingDownloadBundle.referer,
+                    pendingDownloadBundle.privateBrowsing);
+            pendingDownloadBundle = null;
+        }
+    }
 
     /**
      * Notify the host application a download should be done, or that
@@ -130,7 +172,7 @@ public class DownloadHandler {
 
     /**
      * Notify the host application a download should be done, even if there
-     * is a streaming viewer available for thise type.
+     * is a streaming viewer available for this type.
      * @param activity Activity requesting the download.
      * @param url The full url to the content that should be downloaded
      * @param userAgent User agent of the downloading application.
@@ -140,6 +182,26 @@ public class DownloadHandler {
      * @param privateBrowsing If the request is coming from a private browsing tab.
      */
     /*package */ static void onDownloadStartNoStream(Activity activity,
+            String url, String userAgent, String contentDisposition,
+            String mimetype, String referer, boolean privateBrowsing) {
+
+        // Check permissions first when download will be start.
+        int permissionCheck = ContextCompat.checkSelfPermission(activity,
+                android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
+            onDownloadNoStreamImpl(activity, url, userAgent, contentDisposition,
+                    mimetype, referer, privateBrowsing);
+        } else {
+            pendingDownloadBundle = PendingDownloadBundle.create(url, userAgent,
+                    contentDisposition, mimetype, referer, privateBrowsing);
+            // Permission not granted, request it from the user
+            ActivityCompat.requestPermissions(activity,
+                    new String[] {android.Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    BrowserActivity.PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
+        }
+    }
+
+    private static void onDownloadNoStreamImpl(Activity activity,
             String url, String userAgent, String contentDisposition,
             String mimetype, String referer, boolean privateBrowsing) {
 
