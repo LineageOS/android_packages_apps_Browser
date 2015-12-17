@@ -23,6 +23,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.BitmapFactory;
@@ -40,6 +41,8 @@ import android.os.Message;
 import android.os.SystemClock;
 import android.security.KeyChain;
 import android.security.KeyChainAliasCallback;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -1168,8 +1171,18 @@ class Tab implements PictureListener {
             public void onDownloadStart(String url, String userAgent,
                     String contentDisposition, String mimetype, String referer,
                     long contentLength) {
-                mWebViewController.onDownloadStart(Tab.this, url, userAgent, contentDisposition,
-                        mimetype, referer, contentLength);
+                // Check permissions first when download will be start.
+                int permissionCheck = ContextCompat.checkSelfPermission(mContext,
+                        android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
+                    mWebViewController.onDownloadStart(Tab.this, url, userAgent, contentDisposition,
+                            mimetype, referer, contentLength);
+                } else {
+                    // Permission not granted, request it from the user
+                    ActivityCompat.requestPermissions(mWebViewController.getActivity(),
+                            new String[] {android.Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                            BrowserActivity.PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
+                }
             }
         };
         mWebBackForwardListClient = new WebBackForwardListClient() {

@@ -16,7 +16,11 @@
 
 package com.android.browser;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.view.Gravity;
@@ -29,7 +33,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.List;
 import java.util.Vector;
 
 public class PermissionsPrompt extends RelativeLayout {
@@ -37,14 +43,17 @@ public class PermissionsPrompt extends RelativeLayout {
     private Button mAllowButton;
     private Button mDenyButton;
     private CheckBox mRemember;
+    private Context mContext;
     private PermissionRequest mRequest;
 
     public PermissionsPrompt(Context context) {
         this(context, null);
+        mContext = context;
     }
 
     public PermissionsPrompt(Context context, AttributeSet attrs) {
         super(context, attrs);
+        mContext = context;
     }
 
     @Override
@@ -117,9 +126,33 @@ public class PermissionsPrompt extends RelativeLayout {
      */
     private void handleButtonClick(boolean allow) {
         hide();
-        if (allow)
-            mRequest.grant(mRequest.getResources());
-        else
+        if (allow) {
+            String[] resources = mRequest.getResources();
+            List<String> permissionsToRequest = new ArrayList<String>();
+
+            for (String resource : resources) {
+                if (resource.equals(PermissionRequest.RESOURCE_VIDEO_CAPTURE) &&
+                        mContext.checkSelfPermission(Manifest.permission.CAMERA) !=
+                        PackageManager.PERMISSION_GRANTED) {
+                    permissionsToRequest.add(Manifest.permission.CAMERA);
+                } else if (resource.equals(PermissionRequest.RESOURCE_AUDIO_CAPTURE) &&
+                        mContext.checkSelfPermission(Manifest.permission.RECORD_AUDIO) !=
+                        PackageManager.PERMISSION_GRANTED) {
+                    permissionsToRequest.add(Manifest.permission.RECORD_AUDIO);
+                }
+            }
+
+            if (permissionsToRequest.size() > 0) {
+                String[] permissions = permissionsToRequest.toArray(
+                        new String[permissionsToRequest.size()]);
+                ((Activity) mContext).requestPermissions(permissions, 1);
+                Intent intent = new Intent(mContext, PermissionsActivity.class);
+                mContext.startActivity(intent);
+            } else {
+                mRequest.grant(mRequest.getResources());
+            }
+        } else {
             mRequest.deny();
+        }
     }
 }
