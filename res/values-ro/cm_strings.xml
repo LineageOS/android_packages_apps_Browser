@@ -16,8 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="accessibility_button_homescreen">Ekran główny</string>
-  <string name="contextmenu_openlink_incognito_newwindow">Otwórz w nowej karcie incognito</string>
-  <string name="contextmenu_openlink_incognito_newwindow_background">Otwórz w nowej karcie incognito w tle</string>
-  <string name="pref_content_ua">User agent</string>
+  <string name="pref_content_ua">Agent utilizator</string>
 </resources>
