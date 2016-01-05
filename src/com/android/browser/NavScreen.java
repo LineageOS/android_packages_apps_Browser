@@ -127,6 +127,7 @@ public class NavScreen extends RelativeLayout
         mNewTab = (ImageButton) findViewById(R.id.newtab);
         mMore = (ImageButton) findViewById(R.id.more);
         mBookmarks.setOnClickListener(this);
+        mHomeTab.setOnClickListener(this);
         mNewIncognitoTab.setOnClickListener(this);
         mNewTab.setOnClickListener(this);
         mMore.setOnClickListener(this);
