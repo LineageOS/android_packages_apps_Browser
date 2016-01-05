@@ -49,7 +49,6 @@
             style="@style/BrowserButton"
             android:gravity="center_vertical"
             android:contentDescription="@string/accessibility_button_newincognitotab"
-            android:visibility="gone"
             android:src="@drawable/ic_incognito" />
         <ImageButton
             android:id="@+id/newtab"
