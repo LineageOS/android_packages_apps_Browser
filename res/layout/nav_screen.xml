@@ -35,13 +35,20 @@
         android:background="@color/primary"
         android:elevation="8dp">
         <ImageButton
+            android:id="@+id/gotohome"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/BrowserButton"
+            android:gravity="center_vertical"
+            android:contentDescription="@string/accessibility_button_homescreen"
+            android:src="@drawable/ic_home" />
+        <ImageButton
             android:id="@+id/newincognitotab"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             style="@style/BrowserButton"
             android:gravity="center_vertical"
             android:contentDescription="@string/accessibility_button_newincognitotab"
-            android:visibility="gone"
             android:src="@drawable/ic_incognito" />
         <ImageButton
             android:id="@+id/newtab"
