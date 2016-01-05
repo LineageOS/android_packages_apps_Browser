@@ -58,6 +58,24 @@
       "revId": "87ccff512f69cd034762daaf6e0d814483f22209",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fce034c_84450c1a",
+        "filename": "src/com/android/browser/PhoneUi.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2016-01-05T21:07:04Z",
+      "side": 1,
+      "message": "Given that this browser is deprecated in AOSP, we should fix any code style issues IMHO",
+      "parentUuid": "3fce034c_61e9f27e",
+      "revId": "87ccff512f69cd034762daaf6e0d814483f22209",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
