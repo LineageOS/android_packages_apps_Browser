@@ -184,10 +184,14 @@ public class PhoneUi extends BaseUi {
         if (info != null) {
             info.setVisible(false);
         }
-         MenuItem newtab = menu.findItem(R.id.new_tab_menu_id);
-        if (newtab != null && !mUseQuickControls) {
-            newtab.setVisible(false);
-         }
+        MenuItem newTab = menu.findItem(R.id.new_tab_menu_id);
+        if (newTab != null && !mUseQuickControls) {
+            newTab.setVisible(false);
+        }
+        MenuItem newIncognitoTab = menu.findItem(R.id.new_incognito_tab_menu_id);
+        if (newIncognitoTab != null && !mUseQuickControls) {
+            newIncognitoTab.setVisible(false);
+        }
         MenuItem closeOthers = menu.findItem(R.id.close_other_tabs_id);
         if (closeOthers != null) {
             boolean isLastTab = true;
