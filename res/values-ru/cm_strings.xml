@@ -22,5 +22,7 @@
   <string name="pref_content_ua">User Agent</string>
   <string name="pref_interface_title">Интерфейс</string>
   <string name="full_screen_title">Полноэкранный режим</string>
+  <string name="full_screen_summary">Скрывать строку состояния и панель навигации</string>
   <string name="onehand_title">Управление одной рукой</string>
+  <string name="onehand_summary">Упрощённая веб-навигация с помощью жестов и быстрых действий</string>
 </resources>

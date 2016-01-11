@@ -16,13 +16,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="accessibility_button_homescreen">Ekran główny</string>
-  <string name="contextmenu_openlink_incognito_newwindow">Otwórz w nowej karcie incognito</string>
-  <string name="contextmenu_openlink_incognito_newwindow_background">Otwórz w nowej karcie incognito w tle</string>
-  <string name="pref_content_ua">User agent</string>
-  <string name="pref_interface_title">Interfejs</string>
-  <string name="full_screen_title">Pełny ekran</string>
-  <string name="full_screen_summary">Włącz nawigację pełnoekranową</string>
-  <string name="onehand_title">Nawigacja OneHand</string>
-  <string name="onehand_summary">Łatwiejsza nawigacja w sieci z przesunięciami i szybkimi akcjami</string>
+  <string name="accessibility_button_homescreen">Hemskärm</string>
+  <string name="contextmenu_openlink_incognito_newwindow">Öppna i ny inkognitoflik</string>
+  <string name="pref_interface_title">Gränssnitt</string>
+  <string name="full_screen_title">Fullskärm</string>
 </resources>

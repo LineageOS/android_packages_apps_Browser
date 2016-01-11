@@ -19,8 +19,10 @@
   <string name="accessibility_button_homescreen">Pantalla Inicial</string>
   <string name="contextmenu_openlink_incognito_newwindow">Abrir nueva ventana en modo incógnito</string>
   <string name="contextmenu_openlink_incognito_newwindow_background">Abrir en nueva pestaña de incognito</string>
+  <string name="pref_content_ua">Agente del usuario</string>
   <string name="pref_interface_title">Interfaz</string>
   <string name="full_screen_title">Pantalla completa</string>
   <string name="full_screen_summary">Activar navegacion inmersiva</string>
+  <string name="onehand_title">Navegacion con una mano</string>
   <string name="onehand_summary">Navegación web más fácil con desplazamientos y acciones rápidas</string>
 </resources>

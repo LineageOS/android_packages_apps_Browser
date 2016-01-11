@@ -22,5 +22,9 @@
   <string name="pref_content_ua">User-Agent</string>
   <string name="pref_interface_title">Oberfläche</string>
   <string name="full_screen_title">Vollbild</string>
+  <string name="onehand_title">Einhand-Navigation</string>
   <string name="onehand_summary">Einfachere Web-Navigation mit Wischen und Verknüpfungen</string>
+  <string name="permission_not_granted_dialog_title">Berechtigung nicht erteilt</string>
+  <string name="permission_not_granted_dialog_message">Die Berechtigung, den externen Speicher zu beschreiben, wurde nicht erteilt. Download nicht möglich.</string>
+  <string name="browser_error_title">Browser-Fehler</string>
 </resources>
