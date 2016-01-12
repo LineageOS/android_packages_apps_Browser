@@ -16,8 +16,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="accessibility_button_homescreen">主屏幕</string>
-  <string name="contextmenu_openlink_incognito_newwindow">在新的隐身标签页中打开</string>
-  <string name="contextmenu_openlink_incognito_newwindow_background">在新的后台隐身标签页中打开</string>
-  <string name="pref_content_ua">用户代理 (User agent)</string>
+  <string name="accessibility_button_homescreen">Početni zaslon</string>
+  <string name="contextmenu_openlink_incognito_newwindow">Otvori novu anonimnu karticu</string>
+  <string name="contextmenu_openlink_incognito_newwindow_background">Otvori novu anonimnu karticu u pozadini</string>
+  <string name="pref_content_ua">Korisnički agent</string>
 </resources>
