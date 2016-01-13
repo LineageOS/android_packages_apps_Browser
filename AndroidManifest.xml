@@ -60,7 +60,7 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 
     <application   android:name="Browser"
-                   android:label="@string/application_name_swe"
+                   android:label="@string/application_name"
                    android:icon="@mipmap/ic_launcher_browser"
                    android:backupAgent=".BrowserBackupAgent"
                    android:hardwareAccelerated="true"
@@ -96,7 +96,7 @@
         </activity>
 
         <activity android:name="BrowserActivity"
-                  android:label="@string/application_name_swe"
+                  android:label="@string/application_name"
                   android:launchMode="singleTask"
                   android:alwaysRetainTaskState="true"
                   android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
