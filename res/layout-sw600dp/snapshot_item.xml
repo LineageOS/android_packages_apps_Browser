@@ -39,7 +39,7 @@
         android:ellipsize="end"
         android:textSize="12sp"
         android:typeface="sans"
-        android:textColor="@android:color/white"
+        android:textColor="@color/snapshot_item_text_color"
         android:paddingLeft="6dip"
         android:paddingRight="2dip"
         android:gravity="center_vertical" />
@@ -62,7 +62,7 @@
         android:gravity="center_vertical"
         android:typeface="sans"
         android:textSize="14sp"
-        android:textColor="#AAAAAA" />
+        android:textColor="@color/snapshot_item_date_text_color" />
     <TextView android:id="@+id/size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,5 +73,5 @@
         android:gravity="center_vertical"
         android:typeface="sans"
         android:textSize="14sp"
-        android:textColor="#AAAAAA" />
+        android:textColor="@color/snapshot_item_title_text_color" />
 </RelativeLayout>
