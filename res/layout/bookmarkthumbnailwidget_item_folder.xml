@@ -55,6 +55,6 @@
             android:ellipsize="end"
             android:textSize="12sp"
             android:typeface="sans"
-            android:textColor="@android:color/white" />
+            android:textColor="@color/bookmark_thumbnail_widget_folder_label_text_color" />
     </LinearLayout>
 </RelativeLayout>

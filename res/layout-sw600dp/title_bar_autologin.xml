@@ -18,14 +18,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#FBF0A0"
+    android:background="@color/title_bar_autologin_background"
     android:gravity="center_vertical"
     android:visibility="gone">
     <TextView
         android:text="@string/autologin_bar_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/primary_text_light"
+        android:textColor="@color/autologin_bar_text_color"
         android:paddingLeft="15dip"
         android:paddingRight="15dip"
         android:textAppearance="?android:attr/textAppearanceMedium"/>
@@ -33,11 +33,11 @@
         android:id="@+id/autologin_account"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        style="@android:style/Widget.Holo.Light.Spinner" />
+        style="@style/LoginSpinnerTheme" />
     <Button
         android:id="@+id/autologin_login"
         android:text="@string/autologin_bar_login_text"
-        style="@android:style/Widget.Holo.Light.Button"
+        style="@style/LoginButtonTheme"
         android:layout_marginRight="15dip"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content" />
@@ -51,7 +51,7 @@
         android:id="@+id/autologin_error"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:textColor="#dd6826"
+        android:textColor="@color/title_bar_autologin_error_text_color"
         android:text="@string/autologin_bar_error"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:visibility="gone" />
