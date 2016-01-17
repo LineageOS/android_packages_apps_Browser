@@ -34,7 +34,7 @@
         android:ellipsize="marquee"
         android:typeface="sans"
         android:textSize="12sp"
-        android:textColor="#DDDDDD"
+        android:textColor="@color/qc_tab_title_text_color"
         />
     <ImageView
         android:id="@+id/thumb"
@@ -57,7 +57,7 @@
         android:ellipsize="marquee"
         android:typeface="sans"
         android:textSize="12sp"
-        android:textColor="#DDDDDD"
+        android:textColor="@color/qc_tab_title_text_color"
         android:elevation="5dp"
         />
 </LinearLayout>

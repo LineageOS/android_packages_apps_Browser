@@ -58,7 +58,7 @@
         android:ellipsize="marquee"
         android:typeface="sans"
         android:textSize="14sp"
-        android:textColor="#AAAAAA"
+        android:textColor="@color/bookmark_thumbnail_label_text_color"
         />
 
 </com.android.browser.view.BookmarkContainer>

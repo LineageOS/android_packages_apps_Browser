@@ -79,7 +79,7 @@
                     android:layout_height="1dip"
                     android:paddingLeft="32dip"
                     android:paddingRight="32dip"
-                    android:src="#404040"
+                    android:src="@color/preference_list_image_view_background"
                 />
             <android.preference.PreferenceFrameLayout android:id="@+id/prefs"
                     android:layout_width="match_parent"
