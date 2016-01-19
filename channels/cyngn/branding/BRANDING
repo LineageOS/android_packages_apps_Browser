@@ -1,0 +1,11 @@
+COMPANY_FULLNAME=Cyanogen, Inc.
+COMPANY_SHORTNAME=Cyngn
+PRODUCT_FULLNAME=Browser
+PRODUCT_SHORTNAME=Browser
+PRODUCT_INSTALLER_FULLNAME=Cyanogen Browser
+PRODUCT_INSTALLER_SHORTNAME=Cyanogen Browser
+COPYRIGHT=Copyright (c) 2016 Cyanogen, Inc.
+PACKAGE_NAME=com.cyngn.browser
+APK_LABEL=@string/application_name
+APK_AUTHORITIES=com.cyngn.browser
+APP_AUTHORITIES=com.cyngn.browser
