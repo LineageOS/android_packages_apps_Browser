@@ -131,7 +131,7 @@ public class DefaultHomePageAndSearchMatcher {
         private static final String UNDEFINED_PARTNER = "cya_oem";
         private static final String PARTNER_CODE_SYSTEM_PROP_YAHOO =
                 "ro.browser.search_code_yahoo";
-        private static final String YAHOO_URL = "http://www.yahoo.com";
+        private static final String YAHOO_URL = "https://search.yahoo.com";
         private static final String KEY_PARTNER_CODE = ".tsrc";
 
         @Override
