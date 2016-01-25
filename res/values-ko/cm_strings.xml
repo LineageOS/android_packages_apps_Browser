@@ -25,4 +25,9 @@
   <string name="full_screen_summary">전체 화면 탐색 사용</string>
   <string name="onehand_title">OneHand 탐색</string>
   <string name="onehand_summary">스와이프와 빠른 실행으로 더 편하게 웹 탐색</string>
+  <string name="permission_not_granted_dialog_title">권한이 부여되지 않았습니다</string>
+  <string name="permission_not_granted_dialog_message">외부 저장 장치에 쓰기 권한이 부여되지 않았습니다. 업데이트를 다운로드 할 수 없습니다.</string>
+  <string name="browser_error_title">브라우저 오류</string>
+  <string name="dialog_dismiss">취소</string>
+  <string name="error_permissions">앱이 실행하는 데 필요한 권한이 부여되지 않았습니다. 권한 설정을 확인해주세요.</string>
 </resources>

@@ -16,14 +16,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="accessibility_button_homescreen">Hjem-skjermen</string>
-  <string name="contextmenu_openlink_incognito_newwindow">Åpne i ny inkognitofane</string>
-  <string name="contextmenu_openlink_incognito_newwindow_background">Åpne i ny inkognitofane i bakgrunnen</string>
-  <string name="pref_content_ua">Brukeragent</string>
-  <string name="pref_interface_title">Grensesnitt</string>
-  <string name="full_screen_title">Fullskjerm</string>
-  <string name="onehand_title">OneHand navigasjon</string>
-  <string name="permission_not_granted_dialog_title">Ingen tilgang</string>
-  <string name="browser_error_title">Feil i nettleseren</string>
-  <string name="dialog_dismiss">Avvis</string>
+  <string name="accessibility_button_homescreen">Startschierm</string>
 </resources>

@@ -25,4 +25,9 @@
   <string name="full_screen_summary">Скрывать строку состояния и панель навигации</string>
   <string name="onehand_title">Управление одной рукой</string>
   <string name="onehand_summary">Упрощённая веб-навигация с помощью жестов и быстрых действий</string>
+  <string name="permission_not_granted_dialog_title">Доступ запрещён</string>
+  <string name="permission_not_granted_dialog_message">Запись на внешний носитель запрещена. Загрузка невозможна.</string>
+  <string name="browser_error_title">Ошибка браузера</string>
+  <string name="dialog_dismiss">Отменить</string>
+  <string name="error_permissions">У приложения отсутствуют разрешения, необходимые для запуска. Проверьте состояние разрешений в настройках.</string>
 </resources>
