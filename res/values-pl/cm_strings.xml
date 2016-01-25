@@ -25,4 +25,9 @@
   <string name="full_screen_summary">Włącz nawigację pełnoekranową</string>
   <string name="onehand_title">Nawigacja OneHand</string>
   <string name="onehand_summary">Łatwiejsza nawigacja w sieci z przesunięciami i szybkimi akcjami</string>
+  <string name="permission_not_granted_dialog_title">Odmowa dostępu</string>
+  <string name="permission_not_granted_dialog_message">Uprawnienia do zapisu w pamięci zewnętrznej nie zostały przyznane. Nie można pobrać.</string>
+  <string name="browser_error_title">Błąd przeglądarki</string>
+  <string name="dialog_dismiss">Odrzuć</string>
+  <string name="error_permissions">Aplikacja nie ma przyznanych krytycznych uprawnień niezbędnych do uruchomienia. Proszę sprawdzić ustawienia uprawnień.</string>
 </resources>

@@ -25,4 +25,9 @@
   <string name="full_screen_summary">Ativar a navegação imersiva</string>
   <string name="onehand_title">Navegação com uma mão</string>
   <string name="onehand_summary">Navegação mais fácil com deslizamentos e ações rápidas</string>
+  <string name="permission_not_granted_dialog_title">Permissão não concedida</string>
+  <string name="permission_not_granted_dialog_message">A permissão para escrever no armazenamento externo não foi concedida. Não é possível transferir a atualização.</string>
+  <string name="browser_error_title">Erro do navegador</string>
+  <string name="dialog_dismiss">Descartar</string>
+  <string name="error_permissions">A aplicação não tem permissões críticas necessárias para executar. Por favor, verifique as definições de permissões.</string>
 </resources>

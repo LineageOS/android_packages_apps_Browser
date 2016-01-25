@@ -25,4 +25,9 @@
   <string name="full_screen_summary">没入ナビゲーションを有効にする</string>
   <string name="onehand_title">OneHandナビゲーションバー</string>
   <string name="onehand_summary">スワイプとクイックアクションでウェブの閲覧を簡単にする</string>
+  <string name="permission_not_granted_dialog_title">権限が許可されていません</string>
+  <string name="permission_not_granted_dialog_message">外部ストレージの書き込み権限が許可されていないため、ダウンロードできません。</string>
+  <string name="browser_error_title">ブラウザエラー</string>
+  <string name="dialog_dismiss">閉じる</string>
+  <string name="error_permissions">アプリは実行に必要となる重要な権限が与えられていません。権限の設定を確認してください。</string>
 </resources>
