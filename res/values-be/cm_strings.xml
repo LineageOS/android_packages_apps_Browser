@@ -16,8 +16,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="accessibility_button_homescreen">Hemskärm</string>
-  <string name="contextmenu_openlink_incognito_newwindow">Öppna i ny inkognitoflik</string>
-  <string name="contextmenu_openlink_incognito_newwindow_background">Öppna i ny inkognito bakgrundsflik</string>
-  <string name="pref_content_ua">Användaragent</string>
+  <string name="accessibility_button_homescreen">Дамоў</string>
+  <string name="contextmenu_openlink_incognito_newwindow">Адчыніць новую ўкладку (інкогніта)</string>
+  <string name="contextmenu_openlink_incognito_newwindow_background">Адчыніць у фанавой ўкладцы (інкогніта)</string>
+  <string name="pref_content_ua">Карыстальнік</string>
 </resources>
