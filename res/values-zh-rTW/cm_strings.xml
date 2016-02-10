@@ -16,8 +16,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="accessibility_button_homescreen">Tuisskerm</string>
-  <string name="contextmenu_openlink_incognito_newwindow">Open nuwe privaat-oortjie</string>
-  <string name="contextmenu_openlink_incognito_newwindow_background">Open nuwe privaat-oortjie in die agtergrond</string>
-  <string name="pref_content_ua">Gebruikeragent</string>
+  <string name="accessibility_button_homescreen">主畫面</string>
+  <string name="contextmenu_openlink_incognito_newwindow">在無痕式分頁中開啟</string>
+  <string name="contextmenu_openlink_incognito_newwindow_background">在無痕式背景分頁中開啟</string>
+  <string name="pref_content_ua">使用者代理 (User agent)</string>
 </resources>
