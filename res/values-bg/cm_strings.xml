@@ -25,9 +25,9 @@
   <string name="full_screen_summary">Разрешаване скриване лентата на състоянието и лентата за навигация</string>
   <string name="onehand_title">Управление с една ръка</string>
   <string name="onehand_summary">По-лесна уеб навигация с жестове и бързи действия</string>
-  <string name="permission_not_granted_dialog_title">Разрешение не е предоставено</string>
-  <string name="permission_not_granted_dialog_message">Не е дадено разрешение за запис на външна памет за съхранение. Не може да изтеглите актуализация.</string>
+  <string name="permission_not_granted_dialog_title">Достъпът е отказан</string>
+  <string name="permission_not_granted_dialog_message">Не е дадено разрешение за запис на външна памет за съхранение. Не може да се изтегли.</string>
   <string name="browser_error_title">Грешка в браузъра</string>
   <string name="dialog_dismiss">Отхвърли</string>
-  <string name="error_permissions">Приложението няма разрешения, необходими за изпълнението. Моля проверете настройките за разрешения.</string>
+  <string name="error_permissions">Приложението няма разрешения, необходими за изпълнението. Моля проверете настройките с разрешения.</string>
 </resources>
