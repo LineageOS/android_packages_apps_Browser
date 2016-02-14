@@ -21,6 +21,7 @@
   <string name="pref_interface_title">Interfață</string>
   <string name="full_screen_title">Pe tot ecranul</string>
   <string name="onehand_title">Navigare cu o singură mână</string>
+  <string name="onehand_summary">Navigare internet mai ușoară cu glisări și acțiuni rapide</string>
   <string name="permission_not_granted_dialog_title">Permisiune neacordată</string>
   <string name="permission_not_granted_dialog_message">Permisiunea de a scrie pe stocarea externă neacordată. Nu se poate descărca.</string>
 </resources>

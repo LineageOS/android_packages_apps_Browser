@@ -17,4 +17,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="accessibility_button_homescreen">Tuisskerm</string>
+  <string name="contextmenu_openlink_incognito_newwindow">Open nuwe privaat-oortjie</string>
+  <string name="contextmenu_openlink_incognito_newwindow_background">Open nuwe privaat-oortjie in die agtergrond</string>
+  <string name="pref_content_ua">Gebruikeragent</string>
+  <string name="pref_interface_title">Koppelvlak</string>
+  <string name="full_screen_title">Volskerm</string>
+  <string name="full_screen_summary">Aktiveer vol skerm mode</string>
+  <string name="onehand_title">Eenhandige navigasie</string>
+  <string name="onehand_summary">Makliker web navigasie met vinnige aksies en swepe</string>
+  <string name="permission_not_granted_dialog_title">Toegang geweier</string>
+  <string name="permission_not_granted_dialog_message">Die toegang om na eksterne spasie te skryf is geweier. Kan nie aflaai nie.</string>
+  <string name="browser_error_title">Blaaier fout</string>
+  <string name="dialog_dismiss">Verwyder</string>
+  <string name="error_permissions">Die toep het nie die kritieke regte wat benodig word om toep uit te voer nie. Bevestig asseblief jou toegangs regte instellings.</string>
 </resources>
