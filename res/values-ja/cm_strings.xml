@@ -16,15 +16,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
   <string name="accessibility_button_homescreen">ホーム画面</string>
+  <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
   <string name="contextmenu_openlink_incognito_newwindow">新しいシークレットタブで開く</string>
+  <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
   <string name="contextmenu_openlink_incognito_newwindow_background">新しいバックグラウンドシークレットタブで開く</string>
+  <!-- User agent label -->
   <string name="pref_content_ua">ユーザーエージェント</string>
+  <!-- Interface preferences -->
   <string name="pref_interface_title">インターフェース</string>
+  <!-- FullScreen -->
   <string name="full_screen_title">全画面</string>
   <string name="full_screen_summary">没入ナビゲーションを有効にする</string>
+  <!-- OneHand -->
   <string name="onehand_title">OneHandナビゲーションバー</string>
   <string name="onehand_summary">スワイプとクイックアクションでウェブの閲覧を簡単にする</string>
+  <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">権限が許可されていません</string>
   <string name="permission_not_granted_dialog_message">外部ストレージの書き込み権限が許可されていないため、ダウンロードできません。</string>
   <string name="browser_error_title">ブラウザエラー</string>

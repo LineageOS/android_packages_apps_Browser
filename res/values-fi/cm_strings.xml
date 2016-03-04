@@ -16,15 +16,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
   <string name="accessibility_button_homescreen">Kotinäyttö</string>
+  <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
   <string name="contextmenu_openlink_incognito_newwindow">Avaa incognito-välilehdessä</string>
+  <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
   <string name="contextmenu_openlink_incognito_newwindow_background">Avaa taustalle incognito-välilehteen</string>
+  <!-- User agent label -->
   <string name="pref_content_ua">User agent</string>
+  <!-- Interface preferences -->
   <string name="pref_interface_title">Käyttöliittymä</string>
+  <!-- FullScreen -->
   <string name="full_screen_title">Koko näyttö</string>
   <string name="full_screen_summary">Ota koko näytön tila käyttöön</string>
+  <!-- OneHand -->
   <string name="onehand_title">OneHand-navigointi</string>
   <string name="onehand_summary">Helpompaa verkkoselailua pyyhkäisyillä ja pikatoiminnoilla</string>
+  <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">Käyttöoikeutta ei ole myönnetty</string>
   <string name="permission_not_granted_dialog_message">Oikeutta kirjoittaa ulkoiseen tallennustilaan ei ollut myönnetty. Päivitystä ei voida ladata.</string>
   <string name="browser_error_title">Virhe selaimessa</string>

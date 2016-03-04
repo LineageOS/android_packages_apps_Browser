@@ -16,17 +16,27 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
   <string name="accessibility_button_homescreen">Началния екран</string>
+  <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
   <string name="contextmenu_openlink_incognito_newwindow">Отваряне в таб \"инкогнито\"</string>
+  <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
   <string name="contextmenu_openlink_incognito_newwindow_background">Отвори в нов таб \"инкогнито\" на заден план</string>
+  <!-- User agent label -->
   <string name="pref_content_ua">Потребител</string>
+  <!-- Interface preferences -->
   <string name="pref_interface_title">Интерфейс</string>
+  <!-- FullScreen -->
   <string name="full_screen_title">Цял екран</string>
   <string name="full_screen_summary">Разрешаване скриване лентата на състоянието и лентата за навигация</string>
+  <!-- OneHand -->
   <string name="onehand_title">Управление с една ръка</string>
   <string name="onehand_summary">По-лесна уеб навигация с жестове и бързи действия</string>
+  <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">Достъпът е отказан</string>
-  <string name="permission_not_granted_dialog_message">Не е дадено разрешение за запис на външна памет за съхранение. Не може да се изтегли.</string>
+  <string name="permission_not_granted_dialog_message">Не е дадено разрешение за запис на външна памет за съхранение. Актуализацията не може да се изтегли.</string>
   <string name="browser_error_title">Грешка в браузъра</string>
   <string name="dialog_dismiss">Отхвърли</string>
   <string name="error_permissions">Приложението няма разрешения, необходими за изпълнението. Моля проверете настройките с разрешения.</string>

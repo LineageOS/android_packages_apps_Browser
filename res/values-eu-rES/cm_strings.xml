@@ -16,15 +16,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
   <string name="accessibility_button_homescreen">Hasiera-pantaila</string>
+  <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
   <string name="contextmenu_openlink_incognito_newwindow">Ireki fitxa pribatu berri batean</string>
+  <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
   <string name="contextmenu_openlink_incognito_newwindow_background">Ireki fitxa pribatu berri batean bigarren planoan</string>
+  <!-- User agent label -->
   <string name="pref_content_ua">Erabiltzaile agentea</string>
+  <!-- Interface preferences -->
   <string name="pref_interface_title">Interfazea</string>
+  <!-- FullScreen -->
   <string name="full_screen_title">Pantaila osoa</string>
   <string name="full_screen_summary">Gaitu murgilketa nabigazioa</string>
+  <!-- OneHand -->
   <string name="onehand_title">Esku bakarreko nabigazioa</string>
   <string name="onehand_summary">Web nabigazio errazagoa hatza pasatuz eta ekintza azkarrekin</string>
+  <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">Baimena ukatuta</string>
   <string name="permission_not_granted_dialog_message">Kanpo biltegiratzera idazteko baimena ukatu da. Ezin da deskargatu.</string>
   <string name="browser_error_title">Nabigatzailearen errorea</string>

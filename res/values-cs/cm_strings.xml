@@ -16,15 +16,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
   <string name="accessibility_button_homescreen">Výchozí plocha</string>
+  <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
   <string name="contextmenu_openlink_incognito_newwindow">Otevřít v novém anonymním panelu</string>
+  <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
   <string name="contextmenu_openlink_incognito_newwindow_background">Otevřít na pozadí v novém anonymním panelu</string>
+  <!-- User agent label -->
   <string name="pref_content_ua">Vlastní nastavení identifikace</string>
+  <!-- Interface preferences -->
   <string name="pref_interface_title">Rozhraní</string>
+  <!-- FullScreen -->
   <string name="full_screen_title">Na celou obrazovku</string>
   <string name="full_screen_summary">Navigace na celé obrazovce</string>
+  <!-- OneHand -->
   <string name="onehand_title">Ovládání jednou rukou</string>
   <string name="onehand_summary">Snadnější navigace na webu s gesty a zkratkami</string>
+  <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">Oprávnění není uděleno</string>
   <string name="permission_not_granted_dialog_message">Oprávnění pro zápis na externí úložiště nebylo uděleno. Nelze stahovat soubory.</string>
   <string name="browser_error_title">Chyba prohlížeče</string>

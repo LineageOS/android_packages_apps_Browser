@@ -16,15 +16,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
   <string name="accessibility_button_homescreen">Pagina iniziale</string>
+  <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
   <string name="contextmenu_openlink_incognito_newwindow">Apri in scheda incognito</string>
+  <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
   <string name="contextmenu_openlink_incognito_newwindow_background">Apri in scheda incognito in secondo piano</string>
+  <!-- User agent label -->
   <string name="pref_content_ua">User agent</string>
+  <!-- Interface preferences -->
   <string name="pref_interface_title">Interfaccia</string>
+  <!-- FullScreen -->
   <string name="full_screen_title">Schermo intero</string>
   <string name="full_screen_summary">Abilita navigazione immersiva</string>
+  <!-- OneHand -->
   <string name="onehand_title">Navigazione OneHand</string>
   <string name="onehand_summary">Navigazione agevolata con gesture e azioni rapide</string>
+  <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">Permesso non concesso</string>
   <string name="permission_not_granted_dialog_message">Il permesso di accedere alla memoria interna non è stato concesso. Impossibile avviare download.</string>
   <string name="browser_error_title">Errore Browser</string>

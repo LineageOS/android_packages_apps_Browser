@@ -16,15 +16,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
   <string name="accessibility_button_homescreen">Hjem-skjermen</string>
+  <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
   <string name="contextmenu_openlink_incognito_newwindow">Åpne i ny inkognitofane</string>
+  <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
   <string name="contextmenu_openlink_incognito_newwindow_background">Åpne i ny inkognitofane i bakgrunnen</string>
+  <!-- User agent label -->
   <string name="pref_content_ua">Brukeragent</string>
+  <!-- Interface preferences -->
   <string name="pref_interface_title">Grensesnitt</string>
+  <!-- FullScreen -->
   <string name="full_screen_title">Fullskjerm</string>
   <string name="full_screen_summary">Aktivere fullskjerm navigering</string>
+  <!-- OneHand -->
   <string name="onehand_title">OneHand navigasjon</string>
   <string name="onehand_summary">Enklere web navigasjon med sveip og rask handlinger</string>
+  <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">Ingen tilgang</string>
   <string name="permission_not_granted_dialog_message">Tillatelsen skrive til ekstern lagring ble ikke innvilget. Kan ikke laste ned oppdateringen.</string>
   <string name="browser_error_title">Feil i nettleseren</string>

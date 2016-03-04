@@ -16,15 +16,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
   <string name="accessibility_button_homescreen">主畫面</string>
+  <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
   <string name="contextmenu_openlink_incognito_newwindow">在無痕式分頁中開啟</string>
+  <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
   <string name="contextmenu_openlink_incognito_newwindow_background">在無痕式背景分頁中開啟</string>
+  <!-- User agent label -->
   <string name="pref_content_ua">使用者代理 (User agent)</string>
+  <!-- Interface preferences -->
   <string name="pref_interface_title">介面</string>
+  <!-- FullScreen -->
   <string name="full_screen_title">全螢幕</string>
   <string name="full_screen_summary">啟用全螢幕導航功能</string>
+  <!-- OneHand -->
   <string name="onehand_title">OneHand 導航</string>
   <string name="onehand_summary">透過滑動與快速操作來更方便地瀏覽網頁</string>
+  <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">未授予權限</string>
   <string name="permission_not_granted_dialog_message">未授予寫入外部儲存空間的權限，無法下載。</string>
   <string name="browser_error_title">瀏覽器錯誤</string>
