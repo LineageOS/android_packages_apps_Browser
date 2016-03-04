@@ -16,15 +16,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
   <string name="accessibility_button_homescreen">Startscherm</string>
+  <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
   <string name="contextmenu_openlink_incognito_newwindow">Openen in nieuw incognitotabblad</string>
+  <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
   <string name="contextmenu_openlink_incognito_newwindow_background">Openen in nieuw incognitotabblad op de achtergrond</string>
+  <!-- User agent label -->
   <string name="pref_content_ua">Useragent</string>
+  <!-- Interface preferences -->
   <string name="pref_interface_title">Uiterlijk</string>
+  <!-- FullScreen -->
   <string name="full_screen_title">Volledig scherm</string>
   <string name="full_screen_summary">Schermvullende weergave inschakelen</string>
+  <!-- OneHand -->
   <string name="onehand_title">Bedienen met één hand</string>
   <string name="onehand_summary">Makkelijkere webnavigatie met swipes en snelle acties</string>
+  <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">Machtiging niet verleend</string>
   <string name="permission_not_granted_dialog_message">Machtiging om naar de externe opslag te schrijven werd niet verleend. Kan update niet downloaden.</string>
   <string name="browser_error_title">Browserfout</string>

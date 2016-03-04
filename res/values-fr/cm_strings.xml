@@ -16,18 +16,28 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
   <string name="accessibility_button_homescreen">Écran d\'accueil</string>
+  <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
   <string name="contextmenu_openlink_incognito_newwindow">Ouvrir dans un nouvel onglet de navigation privée</string>
+  <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
   <string name="contextmenu_openlink_incognito_newwindow_background">Ouvrir dans un nouvel onglet de navigation privée en arrière-plan</string>
+  <!-- User agent label -->
   <string name="pref_content_ua">Agent utilisateur</string>
+  <!-- Interface preferences -->
   <string name="pref_interface_title">Interface</string>
+  <!-- FullScreen -->
   <string name="full_screen_title">Plein écran</string>
   <string name="full_screen_summary">Activer la navigation immersive</string>
+  <!-- OneHand -->
   <string name="onehand_title">Navigation à une main</string>
-  <string name="onehand_summary">Faciliter la navigation web avec balayages et actions rapides</string>
+  <string name="onehand_summary">Navigation web simplifiée avec balayages et actions rapides</string>
+  <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">Autorisation non accordée</string>
   <string name="permission_not_granted_dialog_message">L\'autorisation d\'écriture sur le stockage externe n\'a pas été accordée. Le téléchargement est impossible.</string>
   <string name="browser_error_title">Erreur du navigateur</string>
-  <string name="dialog_dismiss">Annuler</string>
+  <string name="dialog_dismiss">Fermer</string>
   <string name="error_permissions">L\'application ne dispose pas des autorisations critiques nécessaires à l\'exécution. Veuillez vérifier vos paramètres d\'autorisations.</string>
 </resources>

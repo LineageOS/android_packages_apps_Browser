@@ -16,15 +16,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
   <string name="accessibility_button_homescreen">Домашній екран</string>
+  <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
   <string name="contextmenu_openlink_incognito_newwindow">Відкрити в новій вкладці інкогніто</string>
+  <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
   <string name="contextmenu_openlink_incognito_newwindow_background">Відкрити в новій фоновій вкладці інкогніто</string>
+  <!-- User agent label -->
   <string name="pref_content_ua">Агент користувача</string>
+  <!-- Interface preferences -->
   <string name="pref_interface_title">Інтерфейс</string>
+  <!-- FullScreen -->
   <string name="full_screen_title">Повноекранний режим</string>
   <string name="full_screen_summary">Увімкнути режим \"занурення\"</string>
+  <!-- OneHand -->
   <string name="onehand_title">Керування однією рукою</string>
   <string name="onehand_summary">Легша веб-навігація за допомогою жестів та швидких дій</string>
+  <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">Дозвіл не надано</string>
   <string name="permission_not_granted_dialog_message">Не було надано дозвіл на запис до зовнішнього сховища. Збій завантаження.</string>
   <string name="browser_error_title">Помилка переглядача</string>

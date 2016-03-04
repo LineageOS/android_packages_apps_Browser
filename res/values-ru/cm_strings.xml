@@ -16,18 +16,28 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
   <string name="accessibility_button_homescreen">Домашний экран</string>
+  <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
   <string name="contextmenu_openlink_incognito_newwindow">Открыть в новой вкладке (инкогнито)</string>
+  <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
   <string name="contextmenu_openlink_incognito_newwindow_background">Открыть в фоновой вкладке (инкогнито)</string>
+  <!-- User agent label -->
   <string name="pref_content_ua">User Agent</string>
+  <!-- Interface preferences -->
   <string name="pref_interface_title">Интерфейс</string>
+  <!-- FullScreen -->
   <string name="full_screen_title">Полноэкранный режим</string>
-  <string name="full_screen_summary">Скрывать строку состояния и панель навигации</string>
+  <string name="full_screen_summary">Включить иммерсивную навигацию</string>
+  <!-- OneHand -->
   <string name="onehand_title">Управление одной рукой</string>
   <string name="onehand_summary">Упрощённая веб-навигация с помощью жестов и быстрых действий</string>
+  <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">Доступ запрещён</string>
-  <string name="permission_not_granted_dialog_message">Запись на внешний носитель запрещена. Загрузка невозможна.</string>
+  <string name="permission_not_granted_dialog_message">Запись на внешний носитель запрещена. Невозможно загрузить.</string>
   <string name="browser_error_title">Ошибка браузера</string>
   <string name="dialog_dismiss">Отменить</string>
-  <string name="error_permissions">У приложения отсутствуют разрешения, необходимые для запуска. Проверьте состояние разрешений в настройках.</string>
+  <string name="error_permissions">У приложения нет разрешений, необходимых для запуска. Проверьте настройки разрешений.</string>
 </resources>

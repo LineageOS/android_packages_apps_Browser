@@ -16,15 +16,25 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
   <string name="accessibility_button_homescreen">דף הבית</string>
+  <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
   <string name="contextmenu_openlink_incognito_newwindow">פתיחה בכרטיסיית גלישה בסתר חדשה</string>
+  <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
   <string name="contextmenu_openlink_incognito_newwindow_background">פתיחה בכרטיסיית גלישה בסתר חדשה ברקע</string>
+  <!-- User agent label -->
   <string name="pref_content_ua">סוכן משתמש</string>
+  <!-- Interface preferences -->
   <string name="pref_interface_title">ממשק</string>
+  <!-- FullScreen -->
   <string name="full_screen_title">מסך מלא</string>
   <string name="full_screen_summary">אפשר ניווט במסך מלא</string>
+  <!-- OneHand -->
   <string name="onehand_title">ניווט OneHand</string>
   <string name="onehand_summary">ניווט פשוט יותר ברשת באמצעות החלקות ופעולות מהירות</string>
+  <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">הרשאה לא ניתנה</string>
   <string name="permission_not_granted_dialog_message">ההרשאה לכתיבה לאחסון חיצוני לא ניתנה. לא ניתן להוריד.</string>
   <string name="browser_error_title">שגיאת דפדפן</string>
