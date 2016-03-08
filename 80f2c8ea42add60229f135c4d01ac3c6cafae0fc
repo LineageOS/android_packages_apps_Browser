@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ffb9cba7_7beacbac",
+        "filename": "swe_android_browser.gypi",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 14345
+      },
+      "writtenOn": "2016-03-08T01:11:35Z",
+      "side": 1,
+      "message": "Do we have an automated way to update the .jar?  We\u0027ll need this to keep parity with the current head of ambientsdk.",
+      "revId": "80f2c8ea42add60229f135c4d01ac3c6cafae0fc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
