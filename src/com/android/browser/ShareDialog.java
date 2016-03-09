@@ -43,6 +43,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.os.Environment;
 
 import java.util.List;
 import java.util.Collections;
@@ -66,6 +67,9 @@ public class ShareDialog extends AppItem {
     public final static String EXTRA_SHARE_SCREENSHOT = "share_screenshot";
     public final static String EXTRA_SHARE_FAVICON = "share_favicon";
     private static final String SCREENSHOT_DIRECTORY_NAME = "screenshot_share";
+    public static final String EXTERNAL_IMAGE_FILE_PATH = "browser-images";
+    // Keep this variable in sync with the value defined in file_paths.xml.
+    public static final String IMAGE_FILE_PATH = "images";
     private static final int MAX_SCREENSHOT_COUNT = 10;
 
     public ShareDialog (Activity activity, String title, String url, Bitmap favicon, Bitmap screenshot) {
@@ -94,7 +98,7 @@ public class ShareDialog extends AppItem {
     }
 
     private File getScreenshotDir() throws IOException {
-        File baseDir = UiUtils.getDirectoryForImageCapture(activity);
+        File baseDir = getDirectoryForImageCapture(activity);
         return new File(baseDir, SCREENSHOT_DIRECTORY_NAME);
     }
 
@@ -103,6 +107,47 @@ public class ShareDialog extends AppItem {
         if (file.isDirectory()) {
             for (File f : file.listFiles()) deleteScreenshotFiles(f);
         }
+    }
+
+    /**
+     * Get a directory for the image capture operation. For devices with JB MR2
+     * or latter android versions, the directory is IMAGE_FILE_PATH directory.
+     * For ICS devices, the directory is CAPTURE_IMAGE_DIRECTORY.
+     *
+     * @param context The application context.
+     * @return directory for the captured image to be stored.
+     */
+    private File getDirectoryForImageCapture(Context context) throws IOException {
+        File path;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
+            path = new File(context.getFilesDir(), IMAGE_FILE_PATH);
+            if (!path.exists() && !path.mkdir()) {
+                throw new IOException("Folder cannot be created.");
+            }
+        } else {
+            File externalDataDir =
+                    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM);
+            path = new File(
+                    externalDataDir.getAbsolutePath() + File.separator + EXTERNAL_IMAGE_FILE_PATH);
+            if (!path.exists() && !path.mkdirs()) {
+                path = externalDataDir;
+            }
+        }
+        return path;
+    }
+
+    /**
+     * Get a URI for |file| which has the image capture. This function assumes that path of |file|
+     * is based on the result of getDirectoryForImageCapture().
+     *
+     * @param context The application context.
+     * @param file image capture file.
+     * @return URI for |file|.
+     */
+    private Uri getUriForImageCaptureFile(Context context, File file) {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2
+                ? ContentUriUtils.getContentUriFromFile(context, file)
+                : Uri.fromFile(file);
     }
 
     /**
@@ -187,7 +232,7 @@ public class ShareDialog extends AppItem {
                     screenshot.compress(Bitmap.CompressFormat.JPEG, 90, fOut);
                     fOut.flush();
                     fOut.close();
-                    uri = UiUtils.getUriForImageCaptureFile(activity, saveFile);
+                    uri = getUriForImageCaptureFile(activity, saveFile);
                 }
             } catch (IOException ie) {
                 if (fOut != null) {
