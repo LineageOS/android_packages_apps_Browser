@@ -674,9 +674,29 @@ public class BrowserProvider2 extends SQLiteContentProvider {
             }
 
             Resources res = customResources == null ? getContext().getResources() : customResources;
-            final CharSequence[] bookmarks = res.getTextArray(R.array.bookmarks);
+            int bookmarksId = res.getIdentifier("config_custom_bookmarks", "array", "android");
+            CharSequence[] bookmarks = Resources.getSystem().getStringArray(bookmarksId);
             int size = bookmarks.length;
-            String[] preloads = res.getStringArray(R.array.bookmark_preloads);
+            if (size == 0) {
+                Log.d(TAG, "***custom_bookmarks found but size is 0");
+                bookmarks = res.getTextArray(R.array.bookmarks);
+                size = bookmarks.length;
+            }
+            else {
+                Log.d(TAG, "custom_bookmarks found and size is "+size);
+            }
+
+            int bookmarkspreloadid = res.getIdentifier("config_custom_bookmark_preloads", "array", "android");
+            String[] preloads = res.getStringArray(bookmarkspreloadid);
+            boolean use_custom_thumbnails = false;
+            if(preloads.length == 0) {
+                Log.d(TAG,"***custom bookmark preloads size of 0");
+                preloads = res.getStringArray(R.array.bookmark_preloads);
+            }
+            else {
+                use_custom_thumbnails = true;
+                Log.d(TAG,"***config custom bookmark preloads size is "+preloads.length);
+            }
 
             try {
                 String parent = Long.toString(parentId);
@@ -703,15 +723,30 @@ public class BrowserProvider2 extends SQLiteContentProvider {
                     String faviconFileName = preloads[i];
                     String thumbFileName = preloads[i+1];
 
-                    int favIconId = res.getIdentifier(faviconFileName, "raw",
-                            R.class.getPackage().getName());
+                    int favIconId = 0;
+                    if(use_custom_thumbnails) {
+                        favIconId = res.getIdentifier(faviconFileName, "raw", "android");
+                    }
+
+                    if(favIconId == 0){
+                        favIconId = res.getIdentifier(faviconFileName, "raw",
+                                R.class.getPackage().getName());
+                    }
+
                     if(favIconId == 0) {
                         favIconId = res.getIdentifier(faviconFileName, "raw",
                                 getContext().getPackageName());
                     }
 
-                    int thumbId = res.getIdentifier(thumbFileName, "raw",
-                            R.class.getPackage().getName());
+                    int thumbId = 0;
+                    if(use_custom_thumbnails) {
+                        thumbId = res.getIdentifier(thumbFileName, "raw", "android");
+                    }
+
+                    if(thumbId == 0){
+                        thumbId = res.getIdentifier(thumbFileName, "raw",
+                                R.class.getPackage().getName());
+                    }
                     if(thumbId == 0) {
                         thumbId = res.getIdentifier(thumbFileName, "raw",
                                 getContext().getPackageName());
