@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ffb9cba7_723bc5ea",
+        "filename": "src/com/android/browser/provider/BrowserProvider2.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 681,
+      "author": {
+        "id": 14096
+      },
+      "writtenOn": "2016-03-10T02:15:39Z",
+      "side": 1,
+      "message": "will remove these debugs in the next patchset.",
+      "range": {
+        "startLine": 681,
+        "startChar": 31,
+        "endLine": 681,
+        "endChar": 47
+      },
+      "revId": "d95ce1aad627e4bbf711265e45c92cedf2d93517",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
