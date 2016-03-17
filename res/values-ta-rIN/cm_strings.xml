@@ -17,13 +17,27 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
+  <string name="accessibility_button_homescreen">முகப்புத் திரை</string>
   <!-- Context Menu item to open the currently selected link in a new
             incognito window. -->
+  <string name="contextmenu_openlink_incognito_newwindow">புதிய மறைநிலை தாவலில் திற</string>
   <!-- Context Menu item to open the currently selected link in a new
          background window. [CHAR LIMIT=50] -->
+  <string name="contextmenu_openlink_incognito_newwindow_background">புதிய மறைநிலை பின்புலம் தாவலில் திற</string>
   <!-- User agent label -->
+  <string name="pref_content_ua">பயனர் முகவர்</string>
   <!-- Interface preferences -->
+  <string name="pref_interface_title">இடைமுகம்</string>
   <!-- FullScreen -->
+  <string name="full_screen_title">முழுத்திரை</string>
+  <string name="full_screen_summary">மூழ்குதல் வழிச்செல்லலை செயல்படுத்து</string>
   <!-- OneHand -->
+  <string name="onehand_title">OneHand வழிச்செல்லல்</string>
+  <string name="onehand_summary">தேய்த்தல்கள் மற்றும் விரைவான செயல்பாடுகளுடன் சுலபமான வலை வழிச்செல்லுதல்</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_title">அனுமதி வழங்கப்படவில்லை.</string>
+  <string name="permission_not_granted_dialog_message">வெளிப்புற சேமிப்பகத்தில் எழுதுவதற்கான அனுமதி வழங்கப்படவில்லை. பதிவிறக்க முடியவில்லை.</string>
+  <string name="browser_error_title">உலாவி பிழை.</string>
+  <string name="dialog_dismiss">விலக்கு</string>
+  <string name="error_permissions">தொடர்வதற்கு தேவையான முக்கிய அனுமதிகள் பயன்பாட்டிடம் இல்லை. தயவுசெய்து உங்கள் அனுமதிகள் அமைப்புகளை சரிபார்க்கவும்.</string>
 </resources>

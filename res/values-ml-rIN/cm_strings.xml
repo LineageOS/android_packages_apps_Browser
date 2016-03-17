@@ -17,13 +17,27 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
+  <string name="accessibility_button_homescreen">ഹോം സ്ക്രീൻ</string>
   <!-- Context Menu item to open the currently selected link in a new
             incognito window. -->
+  <string name="contextmenu_openlink_incognito_newwindow">പുതിയ ആൾമാറാട്ട ടാബിൽ തുറക്കുക</string>
   <!-- Context Menu item to open the currently selected link in a new
          background window. [CHAR LIMIT=50] -->
+  <string name="contextmenu_openlink_incognito_newwindow_background">പുതിയ ആൾമാറാട്ട പശ്ചാത്തല ടാബ തുറക്കുക</string>
   <!-- User agent label -->
+  <string name="pref_content_ua">User agent</string>
   <!-- Interface preferences -->
+  <string name="pref_interface_title">ഇന്റർഫേസ്</string>
   <!-- FullScreen -->
+  <string name="full_screen_title">പൂർണ്ണ സ്ക്രീൻ</string>
+  <string name="full_screen_summary">ഇമേഴ്സീവ് നാവിഗേഷൻ പ്രാപ്തമാക്കുക</string>
   <!-- OneHand -->
+  <string name="onehand_title">ഒരു കൈ നാവിഗേഷൻ</string>
+  <string name="onehand_summary">എളുപ്പമായ വെബ് നാവിഗേഷൻ സ്വൈപ്പ് &amp; ആക്ഷൻ കൊണ്ട്</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_title">അനുമതി നൽകിയില്ല</string>
+  <string name="permission_not_granted_dialog_message">ബാഹ്യ സംഭരണം എഴുതുവാൻ അനുമതി ലഭ്യമല്ല. ഡൗൺലോഡ് ചെയ്യാൻ കഴിയില്ല.</string>
+  <string name="browser_error_title">ബ്രൗസർ പിശക്</string>
+  <string name="dialog_dismiss">നിരസിക്കുക</string>
+  <string name="error_permissions">അപ്ലിക്കേഷൻ പ്രവർത്തിപ്പിക്കാൻ ആവശ്യമായ അനുമതികൾ ഇല്ല. നിങ്ങളുടെ അനുമതികൾ പരിശോധിക്കുക.</string>
 </resources>

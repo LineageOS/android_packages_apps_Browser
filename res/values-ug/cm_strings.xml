@@ -17,13 +17,27 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
+  <string name="accessibility_button_homescreen">باش ئېكران</string>
   <!-- Context Menu item to open the currently selected link in a new
             incognito window. -->
+  <string name="contextmenu_openlink_incognito_newwindow">يېڭى يوشۇرۇن بەتكۈچتە ئېچىڭ</string>
   <!-- Context Menu item to open the currently selected link in a new
          background window. [CHAR LIMIT=50] -->
+  <string name="contextmenu_openlink_incognito_newwindow_background">يېڭى يوشۇرۇن ئارقىدىكى بەتكۈچتە ئېچىڭ</string>
   <!-- User agent label -->
+  <string name="pref_content_ua">ئىشلەتكۈچى ۋاكالەتچىسى</string>
   <!-- Interface preferences -->
+  <string name="pref_interface_title">كۆرۈنمە يۈز</string>
   <!-- FullScreen -->
+  <string name="full_screen_title">پۈتۈن ئېكران</string>
+  <string name="full_screen_summary">چىنلاشتۇرۇلغان يولباشچىنى ئىشلىتىش</string>
   <!-- OneHand -->
+  <string name="onehand_title">بىر قول يولباشچى</string>
+  <string name="onehand_summary">سىيرىش ۋە تىز مەشخۇلاتنى ھازىرلىغان تور يولباشچىسى</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_title">ھوقۇق بېرىلمىدى</string>
+  <string name="permission_not_granted_dialog_message">سىرتقى ساقلىغۇچقا يېزىش ھوقۇقىغا ئېرىشەلمىدى. چۈشۈرۈشكە ئامالسىز.</string>
+  <string name="browser_error_title">تور كۆرگۈچ خاتالىقى</string>
+  <string name="dialog_dismiss">پەرۋا قىلماڭ</string>
+  <string name="error_permissions">بۇ ئەپ مۇھىم ھوقۇقنى ئالمىغان، شۇڭا يۈرگۈزۈلمەيدۇ. ئاۋۋال ھوقۇق تەڭشەكلىرىنى تەكشۈرۈپ بىقىڭ.</string>
 </resources>

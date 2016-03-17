@@ -17,13 +17,27 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
+  <string name="accessibility_button_homescreen">হোম স্ক্ৰীণ</string>
   <!-- Context Menu item to open the currently selected link in a new
             incognito window. -->
+  <string name="contextmenu_openlink_incognito_newwindow">নতুন ইনকগ্নিটো টেবত খোলক</string>
   <!-- Context Menu item to open the currently selected link in a new
          background window. [CHAR LIMIT=50] -->
+  <string name="contextmenu_openlink_incognito_newwindow_background">নতুন ইনকগ্নিটো পৃষ্ঠভূমি টেবত খোলক</string>
   <!-- User agent label -->
+  <string name="pref_content_ua">ব্যৱহাৰকৰ্তা এজেণ্ট</string>
   <!-- Interface preferences -->
+  <string name="pref_interface_title">ইণ্টাৰফেচ</string>
   <!-- FullScreen -->
+  <string name="full_screen_title">ফুল স্ক্ৰীণ</string>
+  <string name="full_screen_summary">ইমাৰ্চিভ নেভিগেচন সক্ষম কৰক</string>
   <!-- OneHand -->
+  <string name="onehand_title">একহতীয়া নেভিগেচন</string>
+  <string name="onehand_summary">ছোৱাইপ আৰু দ্ৰুত ক্ৰিয়াৰ সৈতে সহজ ৱেব নেভিগেচন</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_title">অনুমতি মঞ্জুৰ হোৱা নাই</string>
+  <string name="permission_not_granted_dialog_message">বাহ্যিক ষ্ট\'ৰেজলৈ লিখাৰ অনুমতি মঞ্জুৰ কৰা হোৱা নাই। ডাউনলোড কৰিব নোৱাৰি</string>
+  <string name="browser_error_title">ব্ৰাউজাৰৰ ত্ৰুটি</string>
+  <string name="dialog_dismiss">বৰ্খাস্ত কৰা</string>
+  <string name="error_permissions">এপ্পটোৰ চলাবলৈ আৱশ্যকীয় জটিল অনুমতি নাই। অনুগ্ৰহ কৰি আপোনাৰ অনুমতি ছেটিংছ পৰীক্ষা কৰক।</string>
 </resources>

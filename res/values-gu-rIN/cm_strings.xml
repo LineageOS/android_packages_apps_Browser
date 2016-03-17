@@ -17,13 +17,27 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
+  <string name="accessibility_button_homescreen">હોમ સ્ક્રીન</string>
   <!-- Context Menu item to open the currently selected link in a new
             incognito window. -->
+  <string name="contextmenu_openlink_incognito_newwindow">નવા ઇનકૉગ્નિટો ટૅબમાં ખોલો</string>
   <!-- Context Menu item to open the currently selected link in a new
          background window. [CHAR LIMIT=50] -->
+  <string name="contextmenu_openlink_incognito_newwindow_background">નવા ઇનકૉગ્નિટો બેકગ્રાઉન્ડ ટૅબમાં ખોલો</string>
   <!-- User agent label -->
+  <string name="pref_content_ua">ઉપયોગકર્તા એજન્ટ</string>
   <!-- Interface preferences -->
+  <string name="pref_interface_title">ઇન્ટરફેસ</string>
   <!-- FullScreen -->
+  <string name="full_screen_title">પૂર્ણ સ્ક્રીન</string>
+  <string name="full_screen_summary">ઇમર્સિવ નૅવિગેશન ‌સક્ષમ કરો</string>
   <!-- OneHand -->
+  <string name="onehand_title">OneHand નૅવિગેશન</string>
+  <string name="onehand_summary">સ્વાઇપ્સ અને ઝડપી ક્રિયાઓથી વેબ નૅવિગેશન વધુ સરળ</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_title">પરવાનગી નથી</string>
+  <string name="permission_not_granted_dialog_message">બાહ્ય સંગ્રહ લખવાની પરવાનગી આપવામાં આવી નહીં. ડાઉનલોડ ન કરી શકાયું.</string>
+  <string name="browser_error_title">બ્રાઉઝર ભૂલ</string>
+  <string name="dialog_dismiss">છોડી દો</string>
+  <string name="error_permissions">ઍપને ચાલવા માટે આવશ્યક મહત્ત્વની પરવાનગીઓ નથી. કૃપા કરીને તમારા પરવાનગી સેટિંગ્સ ચકાસો.</string>
 </resources>

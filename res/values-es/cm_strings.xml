@@ -35,4 +35,9 @@
   <string name="onehand_title">Navegacion con una mano</string>
   <string name="onehand_summary">Navegación web más fácil con desplazamientos y acciones rápidas</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_title">Permiso no concedido</string>
+  <string name="permission_not_granted_dialog_message">No se concedió el permiso para escribir en el almacenamiento externo. No se puede descargar.</string>
+  <string name="browser_error_title">Error del navegador</string>
+  <string name="dialog_dismiss">Descartar</string>
+  <string name="error_permissions">La aplicación no tiene los permisos críticos necesarios para funcionar. Por favor, comprueba tu configuración de permisos.</string>
 </resources>

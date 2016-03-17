@@ -17,16 +17,27 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
+  <string name="accessibility_button_homescreen">Pantalla de inicio</string>
   <!-- Context Menu item to open the currently selected link in a new
             incognito window. -->
+  <string name="contextmenu_openlink_incognito_newwindow">Abrir en pestaña de incógnito</string>
   <!-- Context Menu item to open the currently selected link in a new
          background window. [CHAR LIMIT=50] -->
+  <string name="contextmenu_openlink_incognito_newwindow_background">Abrir en pestaña de incógnito en segundo plano</string>
   <!-- User agent label -->
+  <string name="pref_content_ua">Agente de usuario</string>
   <!-- Interface preferences -->
+  <string name="pref_interface_title">Interfaz</string>
   <!-- FullScreen -->
+  <string name="full_screen_title">Pantalla completa</string>
   <string name="full_screen_summary">Activar navegación inmersiva</string>
   <!-- OneHand -->
   <string name="onehand_title">Navegación con una mano</string>
+  <string name="onehand_summary">Navegación web más fácil con desplazamientos y acciones rápidas</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_title">Permiso no concedido</string>
+  <string name="permission_not_granted_dialog_message">No se concedió el permiso para escribir en almacenamiento externo. No se puede descargar la actualización.</string>
+  <string name="browser_error_title">Error del navegador</string>
+  <string name="dialog_dismiss">Descartar</string>
   <string name="error_permissions">La aplicación no tiene los permisos críticos necesarios para que funcione. Comprueba la configuración de permisos.</string>
 </resources>

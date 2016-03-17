@@ -17,13 +17,27 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
+  <string name="accessibility_button_homescreen">ହୋମ୍ ସ୍କ୍ରିନ୍‍</string>
   <!-- Context Menu item to open the currently selected link in a new
             incognito window. -->
+  <string name="contextmenu_openlink_incognito_newwindow">ନୂତନ ଇନ୍‍କୋଗ୍ନି୍ଟୋ ଟ୍ୟାବ୍‍ ଖୋଲନ୍ତୁ</string>
   <!-- Context Menu item to open the currently selected link in a new
          background window. [CHAR LIMIT=50] -->
+  <string name="contextmenu_openlink_incognito_newwindow_background">ନୂତନ ଇନ୍‍କୋଗ୍ନି୍ଟୋ ପୃଷଭୂମି ଟ୍ୟାବ୍‍ ଖୋଲନ୍ତୁ</string>
   <!-- User agent label -->
+  <string name="pref_content_ua">ୟୁଜର୍‍ ଏଜେଣ୍ଟ</string>
   <!-- Interface preferences -->
+  <string name="pref_interface_title">ଇଂଟରଫେସ୍‍</string>
   <!-- FullScreen -->
+  <string name="full_screen_title">ପୂର୍ଣ୍ଣ ସ୍କ୍ରିନ୍</string>
+  <string name="full_screen_summary">ଇମର୍ସିଭ୍‍ ନେଭିଗେସନ୍‍ ସଷମ କରନ୍ତୁ</string>
   <!-- OneHand -->
+  <string name="onehand_title">ୱାନ୍‍ହ୍ୟାଣ୍ଡ ନେଭିଗେ୍ସନ</string>
+  <string name="onehand_summary">ସ୍ୱାଇପ୍‍ ଓ ଦ୍ରୁତ ସଂଚାଳନ ସହିତ ଅଧିକ ସହଜ ୱେବ୍‍ ନେଭିଗେସନ୍‍</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_title">ଅନୁମତି ଗ୍ରହଣ କରାଗଲା ନାହିଁ</string>
+  <string name="permission_not_granted_dialog_message">ବାହ୍ୟ ଷ୍ଟୋରେଜ୍‍ରେ ଲେଖିବା ପାଇଁ ଅନୁମତି ଗ୍ରହଣ କରାଗଲା ନାହିଁ ଡାଉନ୍‍ଲୋଡ୍‍ କରିହେବ ନାହିଁ।</string>
+  <string name="browser_error_title">ବ୍ରାଉଜର୍‍ ତ୍ରୁଟି</string>
+  <string name="dialog_dismiss">ବରଖାସ୍ତ</string>
+  <string name="error_permissions">ଏହି ଆପ୍ଲିକେସନ୍କୁ‍ ଚଳାଇବା ପାଇଁ କ୍ରିଟିକାଲ୍‍ ଅନୁମତି ଦିଆଯାଇନାହିଁ। ଆପଣଙ୍କ ଅନୁମତି ସେଟିଂସମୂହ ଦୟାକରି ପରୀକ୍ଷିତ କରନ୍ତୁ।</string>
 </resources>

@@ -35,4 +35,9 @@
   <string name="onehand_title">การนำทางมือเดียว</string>
   <string name="onehand_summary">ใช้งานเว็บไซต์ได้ง่ายขึ้นโดยใช้การเลื่อนและกวาดนิ้วแบบรวดเร็ว</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_title">ไม่ได้รับอนุญาต</string>
+  <string name="permission_not_granted_dialog_message">ไม่ได้รับสิทธิ์ในการเขียนที่เก็บข้อมูลภายนอก ไม่สามารถดาวน์โหลด</string>
+  <string name="browser_error_title">เบราว์เซอร์ผิดพลาด</string>
+  <string name="dialog_dismiss">ปิด</string>
+  <string name="error_permissions">แอปไม่ได้รับอนุญาตให้เข้าถึงสิทธิพื้นฐานที่ต้องใช้ กรุณาตรวจสอบที่การตั้งค่าการอนุญาต</string>
 </resources>
