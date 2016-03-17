@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7faddb67_d57c2622",
+        "filename": "src/com/android/browser/DownloadHandler.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2016-03-17T22:08:07Z",
+      "side": 1,
+      "message": "Is this necessary?",
+      "revId": "ecaca24ed23a6719bed6f783303a76ed9460af87",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
