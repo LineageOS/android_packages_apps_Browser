@@ -35,4 +35,9 @@
   <string name="onehand_title">Tek Elle Gezinme</string>
   <string name="onehand_summary">Kaydırmalar ve çabuk eylemlerle daha kolay web gezinmesi</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_title">İzin verilmedi</string>
+  <string name="permission_not_granted_dialog_message">Harici depolama birimine yazma izni verilmedi. İndirilemiyor.</string>
+  <string name="browser_error_title">Tarayıcı hatası</string>
+  <string name="dialog_dismiss">Vazgeç</string>
+  <string name="error_permissions">Bu uygulama çalışmak için gereken önemli izinlere sahip değil. Lütfen izin ayarlarınızı kontrol ediniz.</string>
 </resources>
