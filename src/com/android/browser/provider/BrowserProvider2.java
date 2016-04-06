@@ -665,10 +665,14 @@ public class BrowserProvider2 extends SQLiteContentProvider {
 
         private void addDefaultBookmarks(SQLiteDatabase db, long parentId) {
             String mcc = HomeAndSearchUtils.getSystemProperty("ro.prebundled.mcc", null);
+            String mnc = HomeAndSearchUtils.getSystemProperty("ro.prebundled.mnc", null);
             Configuration tempConfiguration = new Configuration();
             Resources customResources = null;
             if (!TextUtils.isEmpty(mcc)) {
                 tempConfiguration.mcc = Integer.parseInt(mcc);
+                if (!TextUtils.isEmpty(mnc)) {
+                        tempConfiguration.mnc = Integer.parseInt(mnc);
+                }
                 customResources = new Resources(getContext().getAssets(), new DisplayMetrics(),
                         tempConfiguration);
             }
