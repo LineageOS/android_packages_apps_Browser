@@ -39,5 +39,5 @@
   <string name="permission_not_granted_dialog_message">A permissão para escrever no armazenamento externo não foi concedida. Não é possível realizar o download.</string>
   <string name="browser_error_title">Erro no navegador</string>
   <string name="dialog_dismiss">Descartar</string>
-  <string name="error_permissions">O app não tem permissões críticas necessárias para executar. Por favor, verifique as configurações de permissões.</string>
+  <string name="error_permissions">O aplicativo não tem permissões críticas necessárias para executar. Por favor, verifique as configurações de permissões.</string>
 </resources>
