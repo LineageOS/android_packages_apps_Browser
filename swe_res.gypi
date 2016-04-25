@@ -20,6 +20,7 @@
           'destination': '<(PRODUCT_DIR)/swe_android_browser_apk/swe_res/jar/',
           'files': [
             '<(PRODUCT_DIR)/lib.java/swe_engine.jar'
+            '<(PRODUCT_DIR)/lib.java/ambientsdk.jar'
           ],
         },
         {
@@ -64,6 +65,13 @@
           'files': [
             '<(PRODUCT_DIR)/res.java/content_java.zip',
             '<(PRODUCT_DIR)/res.java/content_strings_grd.zip',
+          ],
+        },
+        #ambient res
+        {
+          'destination': '<(PRODUCT_DIR)/swe_android_browser_apk/swe_res/ambient_res/',
+          'files': [
+            '<(PRODUCT_DIR)/res.java/ambientsdk.zip',
           ],
         },
         #swe_res.

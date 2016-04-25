@@ -4,6 +4,31 @@
     'manifest_test_package_name%' : 'org.codeaurora.swe.browser.beta.tests',
   },
   'targets' : [
+    { 
+        # This jar contains the class files from classes.jar in
+        # the Ambient SDK, but not the resources.
+        'target_name': 'ambientsdk_javalib_no_res',
+        'type' : 'none', 
+        'variables': { 'jar_path': 'ambientsdk/java/classes.jar', },
+        'includes': ['../../build/java_prebuilt.gypi'], 
+    },
+    { 
+        # This target contains the Ambient SDK resources as well as
+        # the classes, by depending on ambientsdk_javalib_no_res, defined above.
+        # The browser project below will depend on this, but not on ambientsdk_javalib_no_res.
+        'target_name': 'ambientsdk_aar', 
+        'type': 'none', 
+        'variables': { 
+            'java_in_dir': 'ambientsdk/resources',
+            'R_package': ['com.cyanogen.ambient'],
+            'R_package_relpath': ['com/cyanogen/ambient'],
+            'has_java_resources': 1,
+            'res_v14_skip': 1,
+            'run_findbugs': 0, 
+        },
+        'dependencies': [ 'ambientsdk_javalib_no_res', ],
+        'includes': [ '../../build/java.gypi' ]
+    },
     {
       'target_name': 'swe_android_browser_apk',
       'type': 'none',
@@ -14,6 +39,7 @@
         '<@(libsweadrenoext_dependencies)',
         '<@(web_refiner_dependencies)',
         'fast_webview_java',
+        'ambientsdk_aar',
         #'android-support-v13',
       ],
       'variables': {
@@ -22,6 +48,7 @@
         'java_in_dir': '.',
         'resource_dir': '../browser/res',
         'assets_dir': '../../swe/browser/assets',
+        'additional_res_packages': ['com.cyanogen.ambient'],
         'conditions': [
           ['icu_use_data_file_flag==1', {
             'additional_input_paths': [
