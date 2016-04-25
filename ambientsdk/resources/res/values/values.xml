@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CallerInfoService"><attr format="string" name="pluginTitle"/><attr format="string" name="pluginDescription"/><attr format="reference" name="pluginProperties"/><attr format="string" name="pluginPrivacyPolicyUrl"/><attr format="reference" name="pluginBrandLogoLight"/><attr format="reference" name="pluginBrandLogoDark"/><attr format="reference" name="pluginBadgeLogo"/></declare-styleable>
+    <integer name="ambientsdk_version">1040100</integer>
+    <integer name="min_ambientcore_version">1030700</integer>
+    <integer name="needs_contacts_access">2</integer>
+    <integer name="supports_forward_lookup">4</integer>
+    <integer name="supports_spam">1</integer>
+    <string name="common_cyanogen_ambient_unknown_issue">Unknown issue</string>
+    <string name="df_domain_email">email</string>
+    <string name="df_domain_email_permission">Access your email</string>
+    <string name="df_domain_music">music</string>
+    <string name="df_domain_music_permission">Access your music</string>
+    <string name="install_ambient_msg">This application will not run unless you install Ambient services</string>
+    <string name="install_button_title">Install</string>
+    <string name="update_ambient_msg">This application will not run unless you update Ambient services</string>
+    <string name="update_ambient_title">Update Ambient services</string>
+    <string name="update_button_title">Update</string>
+</resources>
