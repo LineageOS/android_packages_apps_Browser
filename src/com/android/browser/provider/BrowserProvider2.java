@@ -680,7 +680,14 @@ public class BrowserProvider2 extends SQLiteContentProvider {
             Resources res = customResources == null ? getContext().getResources() : customResources;
             final CharSequence[] bookmarks = res.getTextArray(R.array.bookmarks);
             int size = bookmarks.length;
-            String[] preloads = res.getStringArray(R.array.bookmark_preloads);
+            /* initialize the preloads array as same item in bookmark and
+             * initilized with empty string */
+            String[] preloads = new String[size];
+            Arrays.fill(preloads, "");
+
+            String[] preloadsFromRawFile = res.getStringArray(R.array.bookmark_preloads);
+            int len = preloadsFromRawFile.length;
+            System.arraycopy(preloadsFromRawFile, 0, preloads, 0, len);
 
             try {
                 String parent = Long.toString(parentId);
