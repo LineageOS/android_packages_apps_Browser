@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5faad753_bb71110f",
+        "filename": "src/com/android/browser/DownloadSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2016-05-11T16:36:38Z",
+      "side": 1,
+      "message": "yeah, I copied and pasted the function into here.  Also should be showNotEnoughMemory instead of showNoEnoughMemory :)",
+      "parentUuid": "5faad753_3b876112",
+      "range": {
+        "startLine": 219,
+        "startChar": 35,
+        "endLine": 219,
+        "endChar": 40
+      },
+      "revId": "0d48f9c93a0a09d2e4b9123e864823b97fd28bc8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_9bc9b579",
         "filename": "src/com/android/browser/DownloadSettings.java",
         "patchSetId": 1
@@ -53,6 +77,30 @@
       "writtenOn": "2016-05-11T15:44:03Z",
       "side": 1,
       "message": "Should you not display some dialog here to tell the user what happened?",
+      "range": {
+        "startLine": 237,
+        "startChar": 12,
+        "endLine": 237,
+        "endChar": 18
+      },
+      "revId": "0d48f9c93a0a09d2e4b9123e864823b97fd28bc8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_5b625d40",
+        "filename": "src/com/android/browser/DownloadSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2016-05-11T16:36:38Z",
+      "side": 1,
+      "message": "This is how it was handled before.",
+      "parentUuid": "5faad753_7ba4f9b9",
       "range": {
         "startLine": 237,
         "startChar": 12,
@@ -123,6 +171,30 @@
       "writtenOn": "2016-05-11T15:44:03Z",
       "side": 1,
       "message": "If the file exists and the user say overwrite in the QueryDialog, how do you get back to performing download?",
+      "range": {
+        "startLine": 257,
+        "startChar": 12,
+        "endLine": 257,
+        "endChar": 72
+      },
+      "revId": "0d48f9c93a0a09d2e4b9123e864823b97fd28bc8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_7b65d944",
+        "filename": "src/com/android/browser/DownloadSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2016-05-11T16:36:38Z",
+      "side": 1,
+      "message": "I was wondering that too.  Didn\u0027t have time to investigate.\n\nAll of this is pre-existing code",
+      "parentUuid": "5faad753_7b92b94d",
       "range": {
         "startLine": 257,
         "startChar": 12,
