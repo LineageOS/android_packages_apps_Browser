@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "5faad753_3b876112",
+        "filename": "src/com/android/browser/DownloadSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 14113
+      },
+      "writtenOn": "2016-05-11T15:44:03Z",
+      "side": 1,
+      "message": "nitpicking, but should this be \"entered\" :)",
+      "range": {
+        "startLine": 219,
+        "startChar": 35,
+        "endLine": 219,
+        "endChar": 40
+      },
+      "revId": "0d48f9c93a0a09d2e4b9123e864823b97fd28bc8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5faad753_9bc9b579",
         "filename": "src/com/android/browser/DownloadSettings.java",
         "patchSetId": 1
@@ -13,6 +36,75 @@
       "writtenOn": "2016-05-11T15:34:14Z",
       "side": 1,
       "message": "trailing spaces.",
+      "revId": "0d48f9c93a0a09d2e4b9123e864823b97fd28bc8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_7ba4f9b9",
+        "filename": "src/com/android/browser/DownloadSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 14113
+      },
+      "writtenOn": "2016-05-11T15:44:03Z",
+      "side": 1,
+      "message": "Should you not display some dialog here to tell the user what happened?",
+      "range": {
+        "startLine": 237,
+        "startChar": 12,
+        "endLine": 237,
+        "endChar": 18
+      },
+      "revId": "0d48f9c93a0a09d2e4b9123e864823b97fd28bc8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_5b8fbd22",
+        "filename": "src/com/android/browser/DownloadSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 14113
+      },
+      "writtenOn": "2016-05-11T15:44:03Z",
+      "side": 1,
+      "message": "Is there a different message to display? Since this is not a memory issue but something else - folder doesn\u0027t exists? etc...",
+      "range": {
+        "startLine": 244,
+        "startChar": 12,
+        "endLine": 244,
+        "endChar": 75
+      },
+      "revId": "0d48f9c93a0a09d2e4b9123e864823b97fd28bc8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_7b92b94d",
+        "filename": "src/com/android/browser/DownloadSettings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 14113
+      },
+      "writtenOn": "2016-05-11T15:44:03Z",
+      "side": 1,
+      "message": "If the file exists and the user say overwrite in the QueryDialog, how do you get back to performing download?",
+      "range": {
+        "startLine": 257,
+        "startChar": 12,
+        "endLine": 257,
+        "endChar": 72
+      },
       "revId": "0d48f9c93a0a09d2e4b9123e864823b97fd28bc8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
