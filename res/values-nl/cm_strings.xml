@@ -38,6 +38,6 @@
   <string name="permission_not_granted_dialog_title">Machtiging niet verleend</string>
   <string name="permission_not_granted_dialog_message">Machtiging om naar de externe opslag te schrijven werd niet verleend. Kan update niet downloaden.</string>
   <string name="browser_error_title">Browserfout</string>
-  <string name="dialog_dismiss">Weggooien</string>
+  <string name="dialog_dismiss">Sluiten</string>
   <string name="error_permissions">De app heeft niet de essentiële machtigingen die nodig zijn om uit te voeren. Controleer de machtigingsinstellingen.</string>
 </resources>
