@@ -63,6 +63,7 @@
   <!-- Toast informing the user that loading has stopped for the current page. -->
   <!-- Menu item to stop the current page from loading. -->
   <!-- Menu item to reload or refresh the current page. -->
+  <string name="reload">Абнавіць</string>
   <!-- Menu item to go back to the previous page -->
   <!-- Menu item to go to the next page (only useful if the user has previously hit back.) -->
   <!-- Button label to confirm saving a bookmark. -->
@@ -268,6 +269,7 @@
   <!-- Settings label -->
   <!-- Settings summary -->
   <!-- Settings screen, section title [CHAR LIMIT=50] -->
+  <string name="pref_extras_title">Падрабязьней</string>
   <!-- Settings label -->
   <!-- Settings summary -->
   <!-- Settings category label [CHAR-LIMIT=50] -->
@@ -423,6 +425,7 @@
   <!-- Content description for back button [CHAR LIMIT=NONE] -->
   <!-- Content description for forward button [CHAR LIMIT=NONE] -->
   <!-- Content description for refresh button [CHAR LIMIT=NONE] -->
+  <string name="accessibility_button_refresh">Абнавіць старонку</string>
   <!-- Content description for stop button [CHAR LIMIT=NONE] -->
   <!-- Content description for add bookmark button [CHAR LIMIT=NONE] -->
   <!-- Content description for search button [CHAR LIMIT=NONE] -->
