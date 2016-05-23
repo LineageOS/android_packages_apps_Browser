@@ -16,6 +16,14 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
+  <string name="accessibility_button_homescreen">Ecran principal</string>
+  <!-- Context Menu item to open the currently selected link in a new
+            incognito window. -->
+  <string name="contextmenu_openlink_incognito_newwindow">Deschide într-o filă nouă incognito</string>
+  <!-- Context Menu item to open the currently selected link in a new
+         background window. [CHAR LIMIT=50] -->
   <string name="contextmenu_openlink_incognito_newwindow_background">Deschide incognito într-o nouă filă de fundal</string>
+  <!-- User agent label -->
   <string name="pref_content_ua">Agent utilizator</string>
 </resources>
