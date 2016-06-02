@@ -31,6 +31,7 @@
 package com.android.browser;
 
 import com.android.browser.R;
+import com.android.browser.util.HomeAndSearchUtils;
 
 import java.util.Locale;
 
@@ -55,7 +56,13 @@ abstract class BrowserConfigBase {
             return;
         }
 
-        String ua = mContext.getResources().getString(R.string.def_useragent);
+        // See if the device overrides the user agent
+        String ua = HomeAndSearchUtils.getSyspropUserAgentOverride();
+
+        if (TextUtils.isEmpty(ua)) {
+            // If not we can default to a channel overlay here
+            ua = mContext.getResources().getString(R.string.def_useragent);
+        }
 
         if (TextUtils.isEmpty(ua))
             return;
