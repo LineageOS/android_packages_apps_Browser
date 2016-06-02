@@ -24,6 +24,7 @@ import java.io.InputStreamReader;
 
 public class HomeAndSearchUtils {
     private static final String TAG = HomeAndSearchUtils.class.getSimpleName();
+    public static final String SYSPROP_USER_AGENT_OVERRIDE = "ro.browser.user_agent_override";
 
     public static String getSystemProperty(String key, String defaultValue) {
         String returnValue = defaultValue;
@@ -45,4 +46,9 @@ public class HomeAndSearchUtils {
         }
         return returnValue;
     }
+
+    public static String getSyspropUserAgentOverride() {
+        return getSystemProperty(SYSPROP_USER_AGENT_OVERRIDE, null);
+    }
+
 }
