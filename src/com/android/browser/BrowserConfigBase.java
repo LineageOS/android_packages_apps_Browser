@@ -31,13 +31,17 @@
 package com.android.browser;
 
 import com.android.browser.R;
+import com.android.browser.util.HomeAndSearchUtils;
 
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import android.os.Build;
 import android.content.Context;
 import android.text.TextUtils;
 
+import org.chromium.chrome.browser.ChromiumApplication;
 import org.codeaurora.swe.BrowserCommandLine;
 
 abstract class BrowserConfigBase {
@@ -55,7 +59,13 @@ abstract class BrowserConfigBase {
             return;
         }
 
-        String ua = mContext.getResources().getString(R.string.def_useragent);
+        // See if the device overrides the user agent
+        String ua = HomeAndSearchUtils.getSyspropUserAgentOverride();
+
+        if (TextUtils.isEmpty(ua)) {
+            // If not we can default to a channel overlay here
+            ua = mContext.getResources().getString(R.string.def_useragent);
+        }
 
         if (TextUtils.isEmpty(ua))
             return;
@@ -92,6 +102,26 @@ abstract class BrowserConfigBase {
         setExtraHTTPRequestHeaders();
     }
 
+    private String getAppleWebKitVersion() {
+        String originalUserAgent = ChromiumApplication.getBrowserUserAgent();
+        Pattern pattern = Pattern.compile("AppleWebKit/(.*?) ");
+        Matcher m = pattern.matcher(originalUserAgent);
+        if (m.find()) {
+            return m.group(1);
+        }
+        return "UNKNOWN";
+    }
+
+    private String getChromeVersion() {
+        String originalUserAgent = ChromiumApplication.getBrowserUserAgent();
+        Pattern pattern = Pattern.compile("Chrome/(.*?) ");
+        Matcher m = pattern.matcher(originalUserAgent);
+        if (m.find()) {
+            return m.group(1);
+        }
+        return "UNKNOWN";
+    }
+
     private String constructUserAgent(String userAgent) {
         try {
             userAgent = userAgent.replaceAll("<%build_model>", Build.MODEL);
@@ -99,6 +129,10 @@ abstract class BrowserConfigBase {
             userAgent = userAgent.replaceAll("<%build_id>", Build.ID);
             userAgent = userAgent.replaceAll("<%language>", Locale.getDefault().getLanguage());
             userAgent = userAgent.replaceAll("<%country>", Locale.getDefault().getCountry());
+            userAgent = userAgent.replaceAll("<%apple_webkit_version>", getAppleWebKitVersion());
+            userAgent = userAgent.replaceAll("<%chrome_version>", getChromeVersion());
+            // Use apple webkit version, was having trouble parsing, plus is the same 99% of time.
+            userAgent = userAgent.replaceAll("<%safari_version>", getAppleWebKitVersion());
             return userAgent;
         } catch (Exception ex) {
             return null;
