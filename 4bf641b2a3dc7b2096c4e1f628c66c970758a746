@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_6adcebe3",
+        "filename": "src/com/android/browser/BrowserConfigBase.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2016-06-02T17:36:13Z",
+      "side": 1,
+      "message": "herp derp!\n\nua \u003d",
+      "revId": "4bf641b2a3dc7b2096c4e1f628c66c970758a746",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
