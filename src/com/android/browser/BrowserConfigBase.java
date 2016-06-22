@@ -36,16 +36,21 @@ import com.android.browser.util.HomeAndSearchUtils;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.lang.UnsupportedOperationException;
 
 import android.os.Build;
 import android.content.Context;
 import android.text.TextUtils;
+import android.net.Uri;
+import android.database.Cursor;
+import android.util.Log;
 
 import org.chromium.chrome.browser.ChromiumApplication;
 import org.codeaurora.swe.BrowserCommandLine;
 
 abstract class BrowserConfigBase {
 
+    private static final String TAG = "BrowserConfigBase";
 
     private Context mContext;
 
@@ -91,6 +96,26 @@ abstract class BrowserConfigBase {
             BrowserCommandLine.appendSwitchWithValue(BrowserSwitches.HTTP_HEADERS, headers);
     }
 
+    public void setExtraUAProfUrl() {
+        // Example: header = "X_WAP_PROFILE:http://www-ccpp.tcl-ta.com/files/6039A.xml";
+        Uri urlUri = Uri.parse("content://com.cyngn.browser/uaprofurl");
+        String headerName = "X_WAP_PROFILE";
+        Cursor c = null;
+        try {
+            c = mContext.getContentResolver().query(urlUri, null, null, null, null);
+        } catch (UnsupportedOperationException e) {
+            Log.e(TAG, "Failed to get UA Prof URL");
+        }
+        String header = null;
+        if (c != null && c.getCount() > 0) {
+            c.moveToFirst();
+            String url = c.getString(0);
+            header = String.format("%s:%s", headerName, url);
+        }
+        if (!TextUtils.isEmpty(header))
+            BrowserCommandLine.appendSwitchWithValue(BrowserSwitches.HTTP_HEADERS, header);
+    }
+
     public void initCommandLineSwitches() {
         //SWE-hide-title-bar - enable following flags
         BrowserCommandLine.appendSwitchWithValue(BrowserSwitches.TOP_CONTROLS_SHOW_THRESHOLD, "0.5");
@@ -100,6 +125,7 @@ abstract class BrowserConfigBase {
         overrideUserAgent();
         overrideMediaDownload();
         setExtraHTTPRequestHeaders();
+        setExtraUAProfUrl();
     }
 
     private String getAppleWebKitVersion() {
