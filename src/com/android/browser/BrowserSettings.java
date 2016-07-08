@@ -27,6 +27,7 @@ import android.os.Build;
 import android.preference.ListPreference;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.webkit.ValueCallback;
 import android.webkit.WebStorage;
@@ -801,9 +802,17 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         SearchEngineRestriction.getInstance();
 
         String defaultSearchEngineValue = getUserSearchEngine();
+
+        // [NOTE][MSB]
+        // This will allow the vendor overlay to set this override that ignores our branding
+        // See: FEIJ-1538 for more detail
+        String killswitchOverridePage = DefaultHomePageAndSearchMatcher.getKillSwitchOverrideGoogle();
+        if (!TextUtils.isEmpty(killswitchOverridePage)) {
+            defaultSearchEngineValue = "google";
+        }
+
         if (defaultSearchEngineValue == null) {
             String tmp = DefaultHomePageAndSearchMatcher.getSearchProvider(mContext);
-
             if (DefaultHomePageAndSearchMatcher.BING_SEARCH_KEY.equals(tmp)) {
                 defaultSearchEngineValue = SearchEngine.BING;
             } else if (DefaultHomePageAndSearchMatcher.GOOGLE_SEARCH_KEY.equals(tmp)) {
@@ -812,24 +821,6 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
                 defaultSearchEngineValue = SearchEngine.YAHOO;
             }
         }
-//=======
-//        String defaultSearchEngineValue =
-//                DefaultHomePageAndSearchMatcher.getSearchProvider(mContext);
-//        if (DefaultHomePageAndSearchMatcher.BING_SEARCH_KEY.equals(defaultSearchEngineValue)) {
-//            defaultSearchEngineValue = SearchEngine.BING;
-//        } else {
-//            defaultSearchEngineValue = SearchEngine.YAHOO;
-//>>>>>>> theirs
-//=======
-//        String defaultSearchEngineValue =
-//                DefaultHomePageAndSearchMatcher.getSearchProvider(mContext);
-//        if (DefaultHomePageAndSearchMatcher.BING_SEARCH_KEY.equals(defaultSearchEngineValue)) {
-//            defaultSearchEngineValue = SearchEngine.BING;
-//        } else if (DefaultHomePageAndSearchMatcher.GOOGLE_SEARCH_KEY.equals(defaultSearchEngineValue)) {
-//            defaultSearchEngineValue = SearchEngine.GOOGLE;
-//        } else {
-//            defaultSearchEngineValue = SearchEngine.YAHOO;
-//>>>>>>> 4e12c6c... Allow override of search and home page with system prop.
         return defaultSearchEngineValue;
     }
 

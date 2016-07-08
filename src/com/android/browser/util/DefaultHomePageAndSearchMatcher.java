@@ -15,6 +15,7 @@
  */
 package com.android.browser.util;
 
+import android.text.TextUtils;
 import android.content.Context;
 import android.net.Uri;
 
@@ -36,6 +37,7 @@ public class DefaultHomePageAndSearchMatcher {
     public static final String SEARCH_HOME_OVERRIDE_YAHOO = "yahoo";
     public static final String SEARCH_HOME_OVERRIDE_BING = "bing";
     public static final String UNDEFINED_OVERRIDE_PROP = "undefined";
+    public static final String KILLSWITCH_OVERRIDE_GOOGLE = "killswitch_override_google";
     private static final String AUSTRALIA_COUNTRY_CODE = "AU";
     private static final HomePage sBingHomePage = new BingHomePage();
     private static final HomePage sYahooHomePage = new YahooHomePage();
@@ -67,8 +69,21 @@ public class DefaultHomePageAndSearchMatcher {
     }
 
     private static String getSearchOverride() {
+
+        // [NOTE][MSB]
+        // This will allow the vendor overlay to set this override that ignores our branding
+        // See: FEIJ-1538 for more detail
+        String killswitchOverridePage = getKillSwitchOverrideGoogle();
+        if (!TextUtils.isEmpty(killswitchOverridePage)) {
+            return SEARCH_HOME_OVERRIDE_GOOGLE;
+        }
+
         return HomeAndSearchUtils.getSystemProperty(SEARCH_HOME_OVERRIDE_SYSTEM_PROP,
                 UNDEFINED_OVERRIDE_PROP);
+    }
+
+    public static String getKillSwitchOverrideGoogle() {
+        return HomeAndSearchUtils.getSystemProperty(KILLSWITCH_OVERRIDE_GOOGLE, null);
     }
 
     public static Uri getHomePageUri(Context context) {
