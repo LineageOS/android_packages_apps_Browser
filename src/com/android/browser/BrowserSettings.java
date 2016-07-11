@@ -803,15 +803,15 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 
         String defaultSearchEngineValue = getUserSearchEngine();
 
-        // [NOTE][MSB]
-        // This will allow the vendor overlay to set this override that ignores our branding
-        // See: FEIJ-1538 for more detail
-        String killswitchOverridePage = DefaultHomePageAndSearchMatcher.getKillSwitchOverrideGoogle();
-        if (!TextUtils.isEmpty(killswitchOverridePage)) {
-            defaultSearchEngineValue = "google";
-        }
-
         if (defaultSearchEngineValue == null) {
+            // [NOTE][MSB]
+            // This will allow the vendor overlay to set this override that ignores our branding
+            // See: FEIJ-1538 for more detail
+            String killswitchOverridePage = DefaultHomePageAndSearchMatcher.getKillSwitchOverrideGoogle();
+            if (!TextUtils.isEmpty(killswitchOverridePage)) {
+                return defaultSearchEngineValue = "google";
+            }
+
             String tmp = DefaultHomePageAndSearchMatcher.getSearchProvider(mContext);
             if (DefaultHomePageAndSearchMatcher.BING_SEARCH_KEY.equals(tmp)) {
                 defaultSearchEngineValue = SearchEngine.BING;
