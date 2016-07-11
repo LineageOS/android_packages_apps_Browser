@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fa7e38b_822659b7",
+        "filename": "AndroidManifest.xml.jinja2",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2016-07-11T20:31:11Z",
+      "side": 1,
+      "message": "should you bump versionCode too?",
+      "revId": "3b97135f74d965500089162c57655d5464816f48",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
