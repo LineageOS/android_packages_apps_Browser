@@ -22,6 +22,8 @@ import android.net.Uri;
 import java.util.HashMap;
 import java.util.Locale;
 
+import com.android.browser.BrowserSettings;
+
 /**
  *  Maps a country from the current configuration's locale to a particular Uri.
  *
@@ -37,7 +39,6 @@ public class DefaultHomePageAndSearchMatcher {
     public static final String SEARCH_HOME_OVERRIDE_YAHOO = "yahoo";
     public static final String SEARCH_HOME_OVERRIDE_BING = "bing";
     public static final String UNDEFINED_OVERRIDE_PROP = "undefined";
-    public static final String KILLSWITCH_OVERRIDE_GOOGLE = "killswitch_override_google";
     private static final String AUSTRALIA_COUNTRY_CODE = "AU";
     private static final HomePage sBingHomePage = new BingHomePage();
     private static final HomePage sYahooHomePage = new YahooHomePage();
@@ -68,35 +69,23 @@ public class DefaultHomePageAndSearchMatcher {
         Uri getUri(Context context);
     }
 
-    private static String getSearchOverride() {
-
-        // [NOTE][MSB]
-        // This will allow the vendor overlay to set this override that ignores our branding
-        // See: FEIJ-1538 for more detail
-        String killswitchOverridePage = getKillSwitchOverrideGoogle();
-        if (!TextUtils.isEmpty(killswitchOverridePage)) {
-            return SEARCH_HOME_OVERRIDE_GOOGLE;
-        }
-
-        return HomeAndSearchUtils.getSystemProperty(SEARCH_HOME_OVERRIDE_SYSTEM_PROP,
-                UNDEFINED_OVERRIDE_PROP);
-    }
-
-    public static String getKillSwitchOverrideGoogle() {
-        return HomeAndSearchUtils.getSystemProperty(KILLSWITCH_OVERRIDE_GOOGLE, null);
-    }
-
     public static Uri getHomePageUri(Context context) {
-        String overrideString = getSearchOverride();
-        if (sOverrideToHomePage.containsKey(overrideString)) {
-            return sOverrideToHomePage.get(overrideString).getUri(context);
+        HomePage homePage = sDefaultHomePage;
+        boolean forced = false;
+
+        String defaultSearchValue = BrowserSettings.getDefaultSearchEngineValue(context);
+        if (!TextUtils.isEmpty(defaultSearchValue)) {
+            // This causes it to be forced
+            homePage = sOverrideToHomePage.get(defaultSearchValue);
+            forced = true;
         }
 
-        HomePage homePage = sDefaultHomePage;
-        Locale locale = context.getResources().getConfiguration().locale;
-        if (locale != null && locale.getCountry() != null &&
-                mLocaleToHomePage.containsKey(locale.getCountry())) {
-            homePage = mLocaleToHomePage.get(locale.getCountry());
+        if (!forced) {
+            Locale locale = context.getResources().getConfiguration().locale;
+            if (locale != null && locale.getCountry() != null &&
+                    mLocaleToHomePage.containsKey(locale.getCountry())) {
+                homePage = mLocaleToHomePage.get(locale.getCountry());
+            }
         }
         return homePage.getUri(context);
     }
@@ -113,11 +102,6 @@ public class DefaultHomePageAndSearchMatcher {
         if (locale != null && locale.getCountry() != null &&
                 mLocaleToHomePage.containsKey(locale.getCountry())) {
             homePage = mLocaleToHomePage.get(locale.getCountry());
-        }
-
-        String overrideString = getSearchOverride();
-        if (sOverrideToHomePage.containsKey(overrideString)) {
-            homePage = sOverrideToHomePage.get(overrideString);
         }
 
         if (homePage == sBingHomePage) {

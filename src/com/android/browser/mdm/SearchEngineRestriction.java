@@ -87,7 +87,7 @@ public class SearchEngineRestriction extends Restriction implements PreferenceKe
             enable(false);
             // Restore default search engine
             editor.putString(PREF_SEARCH_ENGINE,
-                    context.getString(R.string.default_search_engine_value));
+                BrowserSettings.getDefaultSearchEngineValue(Browser.getContext()));
             editor.apply();
         }
     }
