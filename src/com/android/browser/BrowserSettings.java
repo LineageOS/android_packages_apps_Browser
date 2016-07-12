@@ -21,14 +21,17 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Build;
 import android.preference.ListPreference;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.webkit.ValueCallback;
 import android.webkit.WebStorage;
 
@@ -497,6 +500,8 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 
     protected void updateSearchEngine(boolean force) {
         String searchEngineName = getSearchEngineName();
+        /* update the user search engine */
+        setUserSearchEngine(searchEngineName);
         if (force || mSearchEngine == null ||
                 !mSearchEngine.getName().equals(searchEngineName)) {
             mSearchEngine = SearchEngines.get(mContext, searchEngineName);
@@ -798,18 +803,10 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 
     public String getSearchEngineName() {
         // The following is a NOP if the SEARCH_ENGINE restriction has already been created. Otherwise,
-        // it creates the restriction and if enabled it sets the <default_search_engine_value>.
+        // it creates the restriction and if enabled it sets the default search engine value from #getDefaultSearchEngineValue(Context).
         SearchEngineRestriction.getInstance();
 
         String defaultSearchEngineValue = getUserSearchEngine();
-
-        // [NOTE][MSB]
-        // This will allow the vendor overlay to set this override that ignores our branding
-        // See: FEIJ-1538 for more detail
-        String killswitchOverridePage = DefaultHomePageAndSearchMatcher.getKillSwitchOverrideGoogle();
-        if (!TextUtils.isEmpty(killswitchOverridePage)) {
-            defaultSearchEngineValue = "google";
-        }
 
         if (defaultSearchEngineValue == null) {
             String tmp = DefaultHomePageAndSearchMatcher.getSearchProvider(mContext);
@@ -872,8 +869,45 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
                 mContext.getResources().getString(R.string.value_temporal_edge_swipe)).apply();
     }
 
+    public static String getDefaultSearchEngineValue(Context context) {
+        Uri urlUri = Uri.parse("content://com.cyngn.browser/defaultsearchenginevalue");
+        Cursor c = null;
+        try {
+            c = context.getContentResolver().query(urlUri, null, null, null, null);
+        } catch (UnsupportedOperationException e) {
+            Log.e(TAG, "Failed to get search engine");
+        }
+        String defaultValue = null;
+        if (c != null && c.getCount() > 0) {
+            if (c.moveToFirst()) {
+                defaultValue = c.getString(0);
+            }
+            c.close();
+        }
+        return defaultValue;
+    }
+
+    public static String getDefaultHomePageValue(Context context) {
+        Uri urlUri = Uri.parse("content://com.cyngn.browser/defaulthomepagevalue");
+        Cursor c = null;
+        try {
+            c = context.getContentResolver().query(urlUri, null, null, null, null);
+        } catch (UnsupportedOperationException e) {
+            Log.e(TAG, "Failed to get home page");
+        }
+        String defaultValue = null;
+        if (c != null && c.getCount() > 0) {
+            if (c.moveToFirst()) {
+                defaultValue = c.getString(0);
+            }
+            c.close();
+        }
+        return defaultValue;
+    }
+
+
     public void setUserSearchEngine(String engine) {
-        if (!engine.equals(mContext.getResources().getString(R.string.default_search_engine_value)))
+        if (!engine.equals(getDefaultSearchEngineValue(mContext)))
             mPrefs.edit().putString(
                 PREF_USER_SEARCH_ENGINE + mContext.getResources().getConfiguration().locale,
                 engine).apply();
@@ -886,7 +920,7 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
     public String getUserSearchEngine() {
         return mPrefs.getString(
                 PREF_USER_SEARCH_ENGINE + mContext.getResources().getConfiguration().locale
-                , mContext.getResources().getString(R.string.default_search_engine_value));
+                , getDefaultSearchEngineValue(mContext));
     }
 
     public void setEdgeSwipeSpatial() {

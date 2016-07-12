@@ -111,6 +111,7 @@ abstract class BrowserConfigBase {
             c.moveToFirst();
             String url = c.getString(0);
             header = String.format("%s:%s", headerName, url);
+            c.close();
         }
         if (!TextUtils.isEmpty(header))
             BrowserCommandLine.appendSwitchWithValue(BrowserSwitches.HTTP_HEADERS, header);
