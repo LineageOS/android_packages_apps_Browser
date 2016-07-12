@@ -497,6 +497,8 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 
     protected void updateSearchEngine(boolean force) {
         String searchEngineName = getSearchEngineName();
+        /* update the user search engine */
+        setUserSearchEngine(searchEngineName);
         if (force || mSearchEngine == null ||
                 !mSearchEngine.getName().equals(searchEngineName)) {
             mSearchEngine = SearchEngines.get(mContext, searchEngineName);
