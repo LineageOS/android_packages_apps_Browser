@@ -16,6 +16,24 @@
       "revId": "cd7ef45b6e03a69cbcd794b5d9cbafc8bc07a36b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa7e38b_ab7d716f",
+        "filename": "channels/cyngn/res/values/donottranslate-search_engines.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2016-07-12T23:34:15Z",
+      "side": 1,
+      "message": "yeah, we need to make this not do that.",
+      "parentUuid": "3fa7e38b_08f5ab57",
+      "revId": "cd7ef45b6e03a69cbcd794b5d9cbafc8bc07a36b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
