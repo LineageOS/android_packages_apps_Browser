@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fa7e38b_08f5ab57",
+        "filename": "channels/cyngn/res/values/donottranslate-search_engines.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 13409
+      },
+      "writtenOn": "2016-07-12T19:26:35Z",
+      "side": 1,
+      "message": "doesn\u0027t this change this value for all devices?",
+      "revId": "cd7ef45b6e03a69cbcd794b5d9cbafc8bc07a36b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
