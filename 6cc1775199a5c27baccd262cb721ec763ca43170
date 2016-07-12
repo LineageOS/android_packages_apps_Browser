@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fa7e38b_28766708",
+        "filename": "AndroidManifest.xml.jinja2",
+        "patchSetId": 5
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2016-07-12T18:21:36Z",
+      "side": 1,
+      "message": "This needs to be incremented",
+      "revId": "6cc1775199a5c27baccd262cb721ec763ca43170",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
