@@ -497,6 +497,8 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 
     protected void updateSearchEngine(boolean force) {
         String searchEngineName = getSearchEngineName();
+        /* update the user search engine */
+        setUserSearchEngine(searchEngineName);
         if (force || mSearchEngine == null ||
                 !mSearchEngine.getName().equals(searchEngineName)) {
             mSearchEngine = SearchEngines.get(mContext, searchEngineName);
@@ -798,7 +800,7 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
 
     public String getSearchEngineName() {
         // The following is a NOP if the SEARCH_ENGINE restriction has already been created. Otherwise,
-        // it creates the restriction and if enabled it sets the <default_search_engine_value>.
+        // it creates the restriction and if enabled it sets the default search engine value from #getDefaultSearchEngineValue().
         SearchEngineRestriction.getInstance();
 
         String defaultSearchEngineValue = getUserSearchEngine();
@@ -872,8 +874,26 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
                 mContext.getResources().getString(R.string.value_temporal_edge_swipe)).apply();
     }
 
+    private String getDefaultSearchEngineValue() {
+        Uri urlUri = Uri.parse("content://com.cyngn.browser/uaprofurl");
+        Cursor c = null;
+        try {
+            c = mContext.getContentResolver().query(urlUri, null, null, null, null);
+        } catch (UnsupportedOperationException e) {
+            Log.e(TAG, "Failed to get UA Prof URL");
+        }
+        String defaultValue = null;
+        if (c != null && c.getCount() > 0) {
+            if (c.moveToFirst()) {
+                defaultValue = c.getString(0); 
+            }
+            c.close();
+        }
+        return defaultValue;
+    }
+
     public void setUserSearchEngine(String engine) {
-        if (!engine.equals(mContext.getResources().getString(R.string.default_search_engine_value)))
+        if (!engine.equals(getDefaultSearchEngineValue()))
             mPrefs.edit().putString(
                 PREF_USER_SEARCH_ENGINE + mContext.getResources().getConfiguration().locale,
                 engine).apply();
@@ -886,7 +906,7 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
     public String getUserSearchEngine() {
         return mPrefs.getString(
                 PREF_USER_SEARCH_ENGINE + mContext.getResources().getConfiguration().locale
-                , mContext.getResources().getString(R.string.default_search_engine_value));
+                , getDefaultSearchEngineValue());
     }
 
     public void setEdgeSwipeSpatial() {
