@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fa7e38b_0ec373ef",
+        "filename": "src/com/android/browser/BrowserSettings.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 910,
+      "author": {
+        "id": 14187
+      },
+      "writtenOn": "2016-07-13T18:56:25Z",
+      "side": 1,
+      "message": "sorry but a white space  :(",
+      "range": {
+        "startLine": 910,
+        "startChar": 13,
+        "endLine": 910,
+        "endChar": 22
+      },
+      "revId": "7bf7d75ecec98f05adddc8a3659271941595c427",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
