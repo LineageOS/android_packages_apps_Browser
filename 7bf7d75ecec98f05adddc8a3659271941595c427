@@ -22,6 +22,30 @@
       "revId": "7bf7d75ecec98f05adddc8a3659271941595c427",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa7e38b_ce4a3b7f",
+        "filename": "src/com/android/browser/BrowserSettings.java",
+        "patchSetId": 11
+      },
+      "lineNbr": 910,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2016-07-13T18:58:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3fa7e38b_0ec373ef",
+      "range": {
+        "startLine": 910,
+        "startChar": 13,
+        "endLine": 910,
+        "endChar": 22
+      },
+      "revId": "7bf7d75ecec98f05adddc8a3659271941595c427",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
