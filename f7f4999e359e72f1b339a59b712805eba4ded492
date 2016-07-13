@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fa7e38b_6bdc5974",
+        "filename": "src/com/android/browser/BrowserSettings.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 888,
+      "author": {
+        "id": 6521
+      },
+      "writtenOn": "2016-07-13T00:40:09Z",
+      "side": 1,
+      "message": "dumb whitespace",
+      "range": {
+        "startLine": 888,
+        "startChar": 44,
+        "endLine": 888,
+        "endChar": 46
+      },
+      "revId": "f7f4999e359e72f1b339a59b712805eba4ded492",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
