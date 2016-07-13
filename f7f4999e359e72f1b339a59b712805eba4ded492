@@ -22,6 +22,30 @@
       "revId": "f7f4999e359e72f1b339a59b712805eba4ded492",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa7e38b_4be39d34",
+        "filename": "src/com/android/browser/BrowserSettings.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 888,
+      "author": {
+        "id": 10631
+      },
+      "writtenOn": "2016-07-13T01:06:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3fa7e38b_6bdc5974",
+      "range": {
+        "startLine": 888,
+        "startChar": 44,
+        "endLine": 888,
+        "endChar": 46
+      },
+      "revId": "f7f4999e359e72f1b339a59b712805eba4ded492",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
