@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fa7e38b_ce123bb2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 14187
+      },
+      "writtenOn": "2016-07-13T18:03:30Z",
+      "side": 1,
+      "message": "We can update the commit text to reflect that this patch can allow to overlay both default homepage and default search engine via CyngnBookmarkProvider",
+      "range": {
+        "startLine": 7,
+        "startChar": 13,
+        "endLine": 7,
+        "endChar": 19
+      },
+      "revId": "e4519c7961ad2cac1d86d74a226a4baff6e2dbc5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa7e38b_ae825fc7",
+        "filename": "src/com/android/browser/BrowserSettings.java",
+        "patchSetId": 10
+      },
+      "lineNbr": 910,
+      "author": {
+        "id": 14187
+      },
+      "writtenOn": "2016-07-13T18:03:30Z",
+      "side": 1,
+      "message": "Can engine be null? if we haven\u0027t define the default value in CyngnBookmarkProvider then we can get NPE here.",
+      "range": {
+        "startLine": 910,
+        "startChar": 55,
+        "endLine": 910,
+        "endChar": 63
+      },
+      "revId": "e4519c7961ad2cac1d86d74a226a4baff6e2dbc5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
