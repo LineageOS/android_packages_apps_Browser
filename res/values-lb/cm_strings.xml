@@ -20,11 +20,21 @@
   <string name="accessibility_button_homescreen">Startschierm</string>
   <!-- Context Menu item to open the currently selected link in a new
             incognito window. -->
+  <string name="contextmenu_openlink_incognito_newwindow">An engem Incognito-Tab opmaachen</string>
   <!-- Context Menu item to open the currently selected link in a new
          background window. [CHAR LIMIT=50] -->
+  <string name="contextmenu_openlink_incognito_newwindow_background">An engem Incognito-Tab am Hannergrond opmaachen</string>
   <!-- User agent label -->
+  <string name="pref_content_ua">User-Agent</string>
   <!-- Interface preferences -->
+  <string name="pref_interface_title">Interface</string>
   <!-- FullScreen -->
+  <string name="full_screen_title">Vollschierm</string>
+  <string name="full_screen_summary">Vollbild-Navigatioun aschalten</string>
   <!-- OneHand -->
+  <string name="onehand_summary">Einfach Web-Navigatioun mat Wëschen a séieren Aktiounen</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_message">D\'Berechtegung fir op den externen Späicher ze schreiwen gouf net erdeelt. Eroflueden net méiglech.</string>
+  <string name="browser_error_title">Browser-Feeler</string>
+  <string name="dialog_dismiss">Annuléieren</string>
 </resources>
