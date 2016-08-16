@@ -17,13 +17,26 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
+  <string name="accessibility_button_homescreen">Avakuva</string>
   <!-- Context Menu item to open the currently selected link in a new
             incognito window. -->
+  <string name="contextmenu_openlink_incognito_newwindow">Ava uuel inkognito vahekaardil</string>
   <!-- Context Menu item to open the currently selected link in a new
          background window. [CHAR LIMIT=50] -->
+  <string name="contextmenu_openlink_incognito_newwindow_background">Ava taustas uuel inkognito vahekaardil</string>
   <!-- User agent label -->
+  <string name="pref_content_ua">Kasutaja agent</string>
   <!-- Interface preferences -->
+  <string name="pref_interface_title">Liides</string>
   <!-- FullScreen -->
+  <string name="full_screen_title">Täisekraan</string>
   <!-- OneHand -->
+  <string name="onehand_title">OneHand navigeerimine</string>
+  <string name="onehand_summary">Lihtsam veebis navigeerimine libistamise ja lühiteedega</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_title">Luba ei anta</string>
+  <string name="permission_not_granted_dialog_message">Välisele andmekandjale ei antud kirjutamisõigust. Ei saa alla laadida.</string>
+  <string name="browser_error_title">Veebilehitseja viga</string>
+  <string name="dialog_dismiss">Katkesta</string>
+  <string name="error_permissions">Rakendusel pole käivitamiseks vajalike õigusi. Palun kontrollige õiguste sätteid.</string>
 </resources>
