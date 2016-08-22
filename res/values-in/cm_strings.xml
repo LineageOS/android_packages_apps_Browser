@@ -39,5 +39,5 @@
   <string name="permission_not_granted_dialog_message">Izin untuk menulis ke penyimpanan luar tidak diberikan. Tidak dapat mengunduh.</string>
   <string name="browser_error_title">Kesalahan pada peramban</string>
   <string name="dialog_dismiss">Abaikan</string>
-  <string name="error_permissions">Aplikasi tidak mempunyai izin yang kritis yang dibutuhkan untuk berjalan. Silakan cek izin peraturan Anda.</string>
+  <string name="error_permissions">App tidak memiliki izin kritis yang diperlukan untuk menjalankan. Periksa pengaturan perizinana Anda.</string>
 </resources>
