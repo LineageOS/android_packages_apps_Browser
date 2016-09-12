@@ -76,7 +76,11 @@ public class DefaultHomePageAndSearchMatcher {
         String defaultHomePageValue = BrowserSettings.getDefaultHomePageValue(context);
         if (!TextUtils.isEmpty(defaultHomePageValue)) {
             // This causes it to be forced
-            homePage = sOverrideToHomePage.get(defaultHomePageValue);
+            if (!defaultHomePageValue.startsWith("http://") && !defaultHomePageValue.startsWith("https://")) {
+                homePage = sOverrideToHomePage.get(defaultHomePageValue);
+            } else {
+                homePage = new UserHomePage(defaultHomePageValue);
+            }
             forced = true;
         }
 
@@ -154,6 +158,19 @@ public class DefaultHomePageAndSearchMatcher {
         @Override
         public Uri getUri(Context context) {
             return Uri.parse(GOOGLE_URL);
+        }
+    }
+
+    public static class UserHomePage implements HomePage {
+        private static String USER_URL;
+        public UserHomePage(String url) {
+            USER_URL = url;
+        }
+
+
+        @Override
+        public Uri getUri(Context context) {
+            return Uri.parse(USER_URL);
         }
     }
 }
