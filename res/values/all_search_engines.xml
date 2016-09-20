@@ -764,4 +764,12 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
     <item>UTF-8</item>
     <item></item>
   </string-array>
+  <string-array name="duckduckgo_fr_fr" translatable="false">
+    <item>DuckDuckGo (FR)</item>
+    <item>duckduckgo.com</item>
+    <item>https://duckduckgo.com/favicon.ico</item>
+    <item>https://duckduckgo.com/?q={searchTerms}&amp;t=cyanogenmod&amp;kl=fr-fr&amp;kh=1</item>
+    <item>UTF-8</item>
+    <item></item>
+  </string-array>
 </resources>
