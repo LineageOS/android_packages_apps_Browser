@@ -30,7 +30,7 @@
   <string name="pref_interface_title">インターフェース</string>
   <!-- FullScreen -->
   <string name="full_screen_title">全画面</string>
-  <string name="full_screen_summary">没入ナビゲーションを有効にする</string>
+  <string name="full_screen_summary">全画面ナビゲーションを有効にする</string>
   <!-- OneHand -->
   <string name="onehand_title">OneHandナビゲーションバー</string>
   <string name="onehand_summary">スワイプとクイックアクションでウェブの閲覧を簡単にする</string>

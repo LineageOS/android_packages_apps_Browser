@@ -30,14 +30,14 @@
   <string name="pref_interface_title">Antarmuka</string>
   <!-- FullScreen -->
   <string name="full_screen_title">Layar penuh</string>
-  <string name="full_screen_summary">Aktifkan ilmu pelayaran yang bersifat celupan</string>
+  <string name="full_screen_summary">Aktifkan navigasi immersive</string>
   <!-- OneHand -->
   <string name="onehand_title">Proses Navigasi Satu Tangan</string>
   <string name="onehand_summary">Navigasi web lebih mudah dengan gesekan dan aksi cepat</string>
   <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">Izin tidak diberikan</string>
   <string name="permission_not_granted_dialog_message">Izin untuk menulis ke penyimpanan luar tidak diberikan. Tidak dapat mengunduh.</string>
-  <string name="browser_error_title">Galat peramban</string>
-  <string name="dialog_dismiss">Tolak</string>
-  <string name="error_permissions">Aplikasi tidak mempunyai izin yang kritis yang dibutuhkan untuk berjalan. Silakan cek izin peraturan Anda.</string>
+  <string name="browser_error_title">Kesalahan pada peramban</string>
+  <string name="dialog_dismiss">Abaikan</string>
+  <string name="error_permissions">App tidak memiliki izin kritis yang diperlukan untuk menjalankan. Periksa pengaturan perizinana Anda.</string>
 </resources>
