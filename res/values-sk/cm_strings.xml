@@ -17,13 +17,27 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
+  <string name="accessibility_button_homescreen">Domovská obrazovka</string>
   <!-- Context Menu item to open the currently selected link in a new
             incognito window. -->
+  <string name="contextmenu_openlink_incognito_newwindow">Otvoriť na novej anonymnej karte</string>
   <!-- Context Menu item to open the currently selected link in a new
          background window. [CHAR LIMIT=50] -->
+  <string name="contextmenu_openlink_incognito_newwindow_background">Otvoriť na novej anonymnej karte na pozadí</string>
   <!-- User agent label -->
+  <string name="pref_content_ua">Užívateľský agent</string>
   <!-- Interface preferences -->
+  <string name="pref_interface_title">Rozhranie</string>
   <!-- FullScreen -->
+  <string name="full_screen_title">Celá obrazovka</string>
+  <string name="full_screen_summary">Navigácia na celej obrazovce</string>
   <!-- OneHand -->
+  <string name="onehand_title">Navigácia jednou rukou</string>
+  <string name="onehand_summary">Ľahšia webová navigácia s gestami a skratkami</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_title">Povolenie neudelené</string>
+  <string name="permission_not_granted_dialog_message">Povolenie pre zápis na externé úložisko nebolo udelené. Nemôžem stiahnuť.</string>
+  <string name="browser_error_title">Chyba prehliadača</string>
+  <string name="dialog_dismiss">Zamietnuť</string>
+  <string name="error_permissions">Aplikácia nemá kritické povolenia potrebné na spustenie. Skontrolujte nastavenia povolení.</string>
 </resources>
