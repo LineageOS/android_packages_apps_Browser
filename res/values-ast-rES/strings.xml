@@ -604,6 +604,7 @@
             error -->
   <string name="browserFrameFileErrorLabel">Problema rellacionáu col ficheru</string>
   <!-- Dialog box title -->
+  <string name="browserFrameFormResubmitLabel"></string>
   <!-- Dialog box message -->
   <string name="browserFrameFormResubmitMessage">La páxina que quies ver contién datos que yá s\'unviaron (\"POSTDATA\"). Si vuelves a unvialos, va repetise cualquier aición qu\'heba fecho\'l formulariu na páxina (por exemplu, busques o compres en llinia).</string>
   <!-- Dialog box title -->
