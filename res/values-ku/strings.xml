@@ -607,6 +607,7 @@
             error -->
   <string name="browserFrameFileErrorLabel">کێشه‌ی پەڕگە</string>
   <!-- Dialog box title -->
+  <string name="browserFrameFormResubmitLabel"></string>
   <!-- Dialog box message -->
   <string name="browserFrameFormResubmitMessage">ئه‌و په‌ڕه‌یه‌ی که‌ تۆ هه‌وڵه‌ده‌ی بیکه‌یته‌وه‌ پێشتر زانیاریه‌کانی تیادا نێردراوه‌ (\"POSTDATA\"). ئه‌گه‌ر تۆ فایله‌که‌ بنێریت هه‌ر چالاکیه‌ک له‌ په‌ڕه‌که‌ هه‌ڵیده‌گرێت (وه‌کو گه‌ڕان یان کڕینی له‌ ئه‌نته‌رنێت) دوباره‌ ئه‌کرێته‌وه‌.</string>
   <!-- Dialog box title -->
