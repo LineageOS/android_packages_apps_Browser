@@ -318,6 +318,7 @@
   <!-- Title for a dialog displayed when the browser runs into a file label
             error -->
   <!-- Dialog box title -->
+  <string name="browserFrameFormResubmitLabel"></string>
   <!-- Dialog box message -->
   <!-- Dialog box title -->
   <!-- Dialog box message -->
