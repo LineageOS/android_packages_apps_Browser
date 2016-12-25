@@ -604,6 +604,7 @@
             error -->
   <string name="browserFrameFileErrorLabel">ھۆججەت مەسىلىسى</string>
   <!-- Dialog box title -->
+  <string name="browserFrameFormResubmitLabel"></string>
   <!-- Dialog box message -->
   <string name="browserFrameFormResubmitMessage">سىز كۆرۈشنى سىناۋاتقان تور بەتتە تاپشۇرۇلغان سانلىق مەلۇمات (\"POSTDATA\") بار. ئەگەر بۇ سانلىق مەلۇماتلارنى قايتا يوللىسىڭىز، سىستېما شۇ تور بەتتىكى جەدۋەل ئىجرا قىلغان ھەممە مەشغۇلاتنى تەكرارلايدۇ (مەسىلەن، ئىزدەش ياكى توردا سېتىۋېلىش)</string>
   <!-- Dialog box title -->
