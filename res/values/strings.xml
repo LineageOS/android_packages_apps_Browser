@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2007 The Android Open Source Project
+     Copyright (C) 2016 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -801,10 +802,8 @@
     <string-array name="bookmarks" translatable="false">
         <item>Google</item>
         <item>http://www.google.com</item>
-        <item>CyanogenMod</item>
-        <item>http://www.cyanogenmod.org</item>
-        <item>CyanogenMod Wiki</item>
-        <item>http://wiki.cyanogenmod.org/w/Main_Page</item>
+        <item>LineageOS</item>
+        <item>http://www.lineageos.org</item>
     </string-array>
 
     <!-- The description of the suggestion that lets the user search the web for the query currently

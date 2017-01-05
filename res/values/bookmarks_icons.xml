@@ -3,9 +3,7 @@
     <array name="bookmark_preloads">
         <item>@raw/favicon_google</item>
         <item>@raw/thumb_google</item>
-        <item>@raw/favicon_cyanogenmod</item>
-        <item>@raw/thumb_cyanogenmod</item>
-        <item>@raw/favicon_cmwiki</item>
-        <item>@raw/thumb_cmwiki</item>
+        <item>@raw/favicon_lineageos</item>
+        <item>@raw/thumb_lineageos</item>
     </array>
 </resources>
