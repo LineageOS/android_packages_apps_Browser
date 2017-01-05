@@ -764,6 +764,8 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
     <item>UTF-8</item>
     <item></item>
   </string-array>
+<<<<<<< HEAD
+=======
   <string-array name="duckduckgo_fr_fr" translatable="false">
     <item>DuckDuckGo (FR)</item>
     <item>duckduckgo.com</item>
@@ -772,4 +774,5 @@ http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_4#OpenSearch_1.1_p
     <item>UTF-8</item>
     <item></item>
   </string-array>
+>>>>>>> 9fbbf4f... Browser: rebrand to LineageOS
 </resources>

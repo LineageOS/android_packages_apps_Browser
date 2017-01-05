@@ -801,10 +801,8 @@
     <string-array name="bookmarks" translatable="false">
         <item>Google</item>
         <item>http://www.google.com</item>
-        <item>CyanogenMod</item>
-        <item>http://www.cyanogenmod.org</item>
-        <item>CyanogenMod Wiki</item>
-        <item>http://wiki.cyanogenmod.org/w/Main_Page</item>
+        <item>LineageOS</item>
+        <item>http://www.lineageos.org</item>
     </string-array>
 
     <!-- The description of the suggestion that lets the user search the web for the query currently
