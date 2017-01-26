@@ -59,9 +59,9 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         PreferenceKeys {
 
     // TODO: Do something with this UserAgent stuff
-    private static final String DESKTOP_USERAGENT = "Mozilla/5.0 (X11; " +
-        "Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) " +
-        "Chrome/37.0.2049.0 Safari/537.36";
+    private static final String DESKTOP_USERAGENT = "Mozilla/5.0 (Linux; " +
+      "Android 5.1.1; Nexus 5 Build/LMY48B; wv) AppleWebKit/537.36 " +
+      "(KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.65 Safari/537.36";
 
     private static final String IPHONE_USERAGENT = "Mozilla/5.0 (iPhone; U; " +
         "CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 " +
@@ -79,12 +79,17 @@ public class BrowserSettings implements OnSharedPreferenceChangeListener,
         "Android 3.1; en-us; Xoom Build/HMJ25) AppleWebKit/534.13 " +
         "(KHTML, like Gecko) Version/4.0 Safari/534.13";
 
+    private static final String KITKAT_USERAGENT = "Mozilla/5.0 (Linux; " +
+        "Android 4.4; Nexus 5 Build/KTU84P) AppleWebKit/537.36 " +
+        "(KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36";
+
     private static final String USER_AGENTS[] = { null,
             DESKTOP_USERAGENT,
             IPHONE_USERAGENT,
             IPAD_USERAGENT,
             FROYO_USERAGENT,
             HONEYCOMB_USERAGENT,
+            KITKAT_USERAGENT,
     };
 
     // The minimum min font size
