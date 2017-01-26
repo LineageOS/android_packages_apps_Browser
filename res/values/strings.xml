@@ -584,6 +584,7 @@
         <item>iPad</item>
         <item>Froyo-N1</item>
         <item>Honeycomb-Xoom</item>
+        <item>KitKat-N5</item>
     </string-array>
     <!-- Do not tranlsate.  Development option -->
     <string-array name="pref_development_ua_values" translatable="false">
@@ -593,6 +594,7 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
+        <item>6</item>
     </string-array>
     <string name="pref_development_error_console" translatable="false">Show JavaScript Console</string>
     <!-- Do not translate. Development option to reset the prologin time [CHAR LIMIT=20] -->
