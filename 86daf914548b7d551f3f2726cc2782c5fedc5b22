@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_1e34dadc",
+        "filename": "src/com/android/browser/BrowserSettings.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2017-01-27T15:54:39Z",
+      "side": 1,
+      "message": "This is supposed to be a desktop user agent",
+      "revId": "86daf914548b7d551f3f2726cc2782c5fedc5b22",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
