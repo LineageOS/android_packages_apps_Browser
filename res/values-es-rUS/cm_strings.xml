@@ -39,5 +39,5 @@
   <string name="permission_not_granted_dialog_message">No se concedió el permiso para escribir en almacenamiento externo. No se puede descargar la actualización.</string>
   <string name="browser_error_title">Error del navegador</string>
   <string name="dialog_dismiss">Descartar</string>
-  <string name="error_permissions">La aplicación no tiene los permisos críticos necesarios para que funcione. Comprueba la configuración de permisos.</string>
+  <string name="error_permissions">La aplicación no tiene los permisos críticos necesarios para funcionar. Comprueba la configuración de permisos.</string>
 </resources>
