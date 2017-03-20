@@ -176,9 +176,11 @@
   <string name="browser_bookmarks_page_bookmarks_text">Marcadores</string>
   <!-- Settings screen strings -->
   <!-- Menu item to open the Settings screen -->
+  <string name="menu_preferences">Axustes</string>
   <!-- Settings screen, section title -->
   <!-- Settings label [CHAR LIMIT=45]-->
   <!-- Settings label -->
+  <string name="pref_content_load_images">Cargar imáxenes</string>
   <!-- Settings label -->
   <!-- Settings label [CHAR LIMIT=30] -->
   <!-- Settings label -->
@@ -291,7 +293,9 @@
   <!-- Settings summary -->
   <!-- Settings screen, section title [CHAR LIMIT=50] -->
   <!-- Settings label -->
+  <string name="pref_extras_website_settings">Axustes de sitios web</string>
   <!-- Settings summary -->
+  <string name="pref_extras_website_settings_summary">Axustes avanzaos pa sitios web individuales</string>
   <!-- Settings category label [CHAR-LIMIT=50] -->
   <!-- Settings label -->
   <!-- Settings summary -->
@@ -440,6 +444,7 @@
          the search engines list (Preferences->Advanced->Set search engine
          [CHAR LIMIT=80] -->
   <!-- Font size preview label in settings [CHAR LIMIT=30] -->
+  <string name="preview">Previsualización</string>
   <!-- Name for the user's unsynced, local bookmarks [CHAR LIMIT=50] -->
   <!-- Popup menu checkbox that allows the user to request the desktop version of a webpage [CHAR LIMIT=50] -->
   <!-- Preload permission label [CHAR LIMIT=40] -->
