@@ -28,6 +28,7 @@
   <!-- Name of tab containing the user's complete history, organized by time of last visit -->
   <string name="tab_history">Historial</string>
   <!-- Name of tab containing the user's saved pages, organized by time created [CHAR LIMIT=20] -->
+  <string name="tab_snapshots">Páxines guardaes</string>
   <!-- Toast shown when a history item's star is clicked, converting it to a bookmark -->
   <!-- Toast shown when a history item's star is clicked off, removing its bookmark -->
   <!-- Sign-in dialog -->
@@ -101,6 +102,7 @@
   <!-- Context menu item for setting the bookmark/history item as the homepage -->
   <!-- Toast informing the user that their action to save a bookmark has succeeded -->
   <!-- Toast informing the user that their action to save a bookmark did not succeed -->
+  <string name="bookmark_not_saved">Nun pue guardase\'l marcador.</string>
   <!-- Toast confirming that the homepage has been set -->
   <!-- Error that appears in the title of Bookmark dialog when user selects OK with empty Name field -->
   <!-- Error that appears in the title of Bookmark dialog when user selects OK with empty Location field -->
@@ -156,6 +158,7 @@
   <!-- Context Menu item to copy the url of the selected link to the
             clipboard -->
   <!-- Context Menu item to save the image to external storage -->
+  <string name="contextmenu_download_image">Guardar imaxe</string>
   <!-- Context Menu item to view the image by itself in the browser -->
   <!-- Context Menu item to set the image as the home screen wallpaper -->
   <!-- Context Menu item to open the dialer app with the selected phone number
@@ -223,6 +226,7 @@
   <!-- String for the user's phone number in the AutoFill profile editor. [CHAR-LIMIT=32] -->
   <!-- String to display in an error tooltip to inform the user the phone number they provided is not valid. [CHAR-LIMIT=32] -->
   <!-- Button text to save the AutoFill profile [CHAR-LIMIT=20] -->
+  <string name="autofill_profile_editor_save_profile">Guardar</string>
   <!-- Toast message displayed when the profile has been successfully saved [CHAR-LIMIT=none] -->
   <!-- Toast message displayed when the profile has been successfully deleted [CHAR-LIMIT=none] -->
   <!-- Button text to delete all the AutoFill profile data [CHAR-LIMIT=20] -->

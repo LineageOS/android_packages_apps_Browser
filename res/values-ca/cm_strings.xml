@@ -36,7 +36,7 @@
   <string name="onehand_summary">Navegació web més fàcil amb lliscaments i accions ràpides</string>
   <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">Permís no otorgat</string>
-  <string name="permission_not_granted_dialog_message">El permís per escriure en un emmagatzematge extern no ha estat otorgat. No es pot descarregar.</string>
+  <string name="permission_not_granted_dialog_message">No s\'ha concit el permís per escriure a l\'emmagatzematge extern. No es pot baixar.</string>
   <string name="browser_error_title">Error del navegador</string>
   <string name="dialog_dismiss">Descarta</string>
   <string name="error_permissions">L\'aplicació no té els permisos crítics necessaris per executar-se. Si us plau, comprova la configuració de permisos.</string>
