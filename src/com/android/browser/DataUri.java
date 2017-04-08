@@ -16,8 +16,7 @@
 package com.android.browser;
 
 import java.net.MalformedURLException;
-
-import libcore.io.Base64;
+import java.util.Base64;
 
 /**
  * Class extracts the mime type and data from a data uri.
@@ -46,7 +45,7 @@ public class DataUri {
                 commaIndex);
         mData = uri.substring(commaIndex + 1).getBytes();
         if (contentType.contains(BASE_64_ENCODING)) {
-            mData = Base64.decode(mData);
+            mData = Base64.getDecoder().decode(mData);
         }
         int semiIndex = contentType.indexOf(';');
         if (semiIndex > 0) {
