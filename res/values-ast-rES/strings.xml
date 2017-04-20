@@ -93,6 +93,7 @@
   <!-- Menu item that opens a dialog to save a bookmark for the current page [CHAR LIMIT=30] -->
   <!-- Title of the dialog to bookmark a page -->
   <!-- Option on bookmark dialog to remove the bookmark [CHAR LIMIT=30] -->
+  <string name="remove">Desaniciar</string>
   <!-- Menu item on the bookmarks page, to edit an existing bookmark -->
   <!-- Context menu item to create a shortcut to the bookmark on the desktop [CHAR LIMIT=50] -->
   <!-- Context menu item to open the currently highlighted bookmark -->
@@ -256,6 +257,7 @@
   <!-- Settings summary -->
   <!-- Confirmation dialog message -->
   <!-- Location settings category [CHAR-LIMIT=50] -->
+  <string name="pref_privacy_location_title">Allugamientu</string>
   <!-- Settings label -->
   <!-- Settings summary -->
   <!-- Settings label -->
@@ -296,6 +298,7 @@
   <!-- Settings label -->
   <!-- Settings summary -->
   <!-- Settings screen, section title [CHAR LIMIT=50] -->
+  <string name="pref_extras_title">Avanzao</string>
   <!-- Settings label -->
   <string name="pref_extras_website_settings">Axustes de sitios web</string>
   <!-- Settings summary -->
@@ -324,6 +327,7 @@
   <!-- Dialog box title -->
   <!-- Do not translate. Actual encoding values. Must be valid text encodings understandable from WebKit. -->
   <!-- Title for accessibility settings [CHAR LIMIT=25] -->
+  <string name="pref_accessibility_title">Accesibilidá</string>
   <!-- Font size settings category under accessibility settings [CHAR LIMIT=50] -->
   <!-- Title for lab settings [CHAR LIMIT=25] -->
   <!-- Title for lab quick controls feature [CHAR LIMIT=40] -->
@@ -387,6 +391,7 @@
             external storage is busy so they cannot download anything [CHAR LIMIT=25] -->
   <!-- Title for a dialog informing the user that the SD card used for
             external storage is busy so they cannot download anything -->
+  <string name="download_sdcard_busy_dlg_title" product="default">Tarxeta SD non disponible</string>
   <!-- Message for a dialog informing the user that the SD card used for
             external storage is busy so they cannot download anything.  Informs
             the user how to enable SD card storage [CHAR LIMIT=NONE] -->
