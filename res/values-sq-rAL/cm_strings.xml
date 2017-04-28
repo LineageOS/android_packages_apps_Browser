@@ -17,13 +17,25 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
+  <string name="accessibility_button_homescreen">Ekrani Home</string>
   <!-- Context Menu item to open the currently selected link in a new
             incognito window. -->
+  <string name="contextmenu_openlink_incognito_newwindow">Hape në një tab të ri inkonjito</string>
   <!-- Context Menu item to open the currently selected link in a new
          background window. [CHAR LIMIT=50] -->
+  <string name="contextmenu_openlink_incognito_newwindow_background">Hape në një tab të ri inkonjito në sfond</string>
   <!-- User agent label -->
+  <string name="pref_content_ua">User agent</string>
   <!-- Interface preferences -->
+  <string name="pref_interface_title">Ndërfaqe</string>
   <!-- FullScreen -->
   <!-- OneHand -->
+  <string name="onehand_title">Përdorimi me një dorë</string>
+  <string name="onehand_summary">Shfletim më i lehtë i internetit me rrëshqitje dhe veprime të shpejta</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_title">Leja nuk u dha</string>
+  <string name="permission_not_granted_dialog_message">Leja për të shkruajtur në memorien e jashtme nuk u dha. Shkarkimi nuk mund të kryhet.</string>
+  <string name="browser_error_title">Gabim i shfletuesit</string>
+  <string name="dialog_dismiss">Largo</string>
+  <string name="error_permissions">Aplikacioni nuk ka leje kritike që i nevojiten për t\'u hapur. Kontrollo parametrat e lejeve.</string>
 </resources>

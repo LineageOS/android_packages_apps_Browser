@@ -38,6 +38,6 @@
   <string name="permission_not_granted_dialog_title">Permisu non concedíu</string>
   <string name="permission_not_granted_dialog_message">Nun se concedió\'l permisu d\'escritura nel almacenamientu internu, Nun pue baxase.</string>
   <string name="browser_error_title">Fallu del restolador</string>
-  <string name="dialog_dismiss">Descartar</string>
-  <string name="error_permissions">L\'aplicación nun tien permisos críticos necesarios pa executase. Comprueba los tos permisos d\'axustes, por favor.</string>
+  <string name="dialog_dismiss">Escartar</string>
+  <string name="error_permissions">L\'aplicación nun tien permisos críticos precisos pa executase. Comprueba los tos axustes de permisos, por favor.</string>
 </resources>
