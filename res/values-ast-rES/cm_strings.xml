@@ -36,7 +36,7 @@
   <string name="onehand_summary">Navegación web más cenciella con desplazamientos y aiciones rápides</string>
   <!-- Permission check -->
   <string name="permission_not_granted_dialog_title">Permisu non concedíu</string>
-  <string name="permission_not_granted_dialog_message">Nun se concedió\'l permisu d\'escritura nel almacenamientu internu, Nun pue baxase.</string>
+  <string name="permission_not_granted_dialog_message">Nun se concedió\'l permisu d\'escritura nel almacenamientu esternu,.</string>
   <string name="browser_error_title">Fallu del restolador</string>
   <string name="dialog_dismiss">Escartar</string>
   <string name="error_permissions">L\'aplicación nun tien permisos críticos precisos pa executase. Comprueba los tos axustes de permisos, por favor.</string>

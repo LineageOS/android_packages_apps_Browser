@@ -259,6 +259,7 @@
   <!-- Location settings category [CHAR-LIMIT=50] -->
   <string name="pref_privacy_location_title">Allugamientu</string>
   <!-- Settings label -->
+  <string name="pref_privacy_enable_geolocation">Habilitar allugamientu</string>
   <!-- Settings summary -->
   <!-- Settings label -->
   <!-- Settings summary -->
@@ -416,8 +417,11 @@
   <!-- String shown in a progress view while a video is loading, before it starts playing -->
   <!-- Geolocation -->
   <!-- Permissions prompt -->
+  <string name="geolocation_permissions_prompt_message"><xliff:g id="website origin" example="maps.google.com">%s</xliff:g> quier saber el to allugamientu</string>
   <!-- Permissions prompt toast -->
   <!-- Settings -> Advanced -> Website settings -> <origin> -->
+  <string name="geolocation_settings_page_summary_allowed">Esti sitiu pue acceder anguaño a la to llocalización.</string>
+  <string name="geolocation_settings_page_summary_not_allowed">Anguaño esti sitiu nun pue acceder al to allugamietu</string>
   <!-- Settings page dialog -->
   <string name="geolocation_settings_page_dialog_cancel_button">Encaboxar</string>
   <!-- Label for the menu item in the website settings activity used to clear data stored by all websites -->
