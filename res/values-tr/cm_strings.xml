@@ -30,7 +30,7 @@
   <string name="pref_interface_title">Arayüz</string>
   <!-- FullScreen -->
   <string name="full_screen_title">Tam ekran</string>
-  <string name="full_screen_summary">Sürükleyici dolaşımı etkinleştir</string>
+  <string name="full_screen_summary">Tam ekran gezinmeyi etkinleştir</string>
   <!-- OneHand -->
   <string name="onehand_title">Tek Elle Gezinme</string>
   <string name="onehand_summary">Kaydırmalar ve çabuk eylemlerle daha kolay web gezinmesi</string>
