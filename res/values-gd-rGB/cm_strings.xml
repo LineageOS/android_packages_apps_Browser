@@ -17,13 +17,27 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
+  <string name="accessibility_button_homescreen">An sgrìn dachaidh</string>
   <!-- Context Menu item to open the currently selected link in a new
             incognito window. -->
+  <string name="contextmenu_openlink_incognito_newwindow">Fosgail ann an taba incognito ùr</string>
   <!-- Context Menu item to open the currently selected link in a new
          background window. [CHAR LIMIT=50] -->
+  <string name="contextmenu_openlink_incognito_newwindow_background">Fosgail ann an taba incognito ùr sa chùlaibh</string>
   <!-- User agent label -->
+  <string name="pref_content_ua">Àidseant-cleachdaiche</string>
   <!-- Interface preferences -->
+  <string name="pref_interface_title">Eadar-aghaidh</string>
   <!-- FullScreen -->
+  <string name="full_screen_title">Làn-sgrìn</string>
+  <string name="full_screen_summary">Cuir an comas an t-seòladaireachd làn-tumaidh</string>
   <!-- OneHand -->
+  <string name="onehand_title">Seòladaireachd aon-làmhach</string>
+  <string name="onehand_summary">Seòladaireachd nas fhasa air an lìon le grad-shlaighdeadh is grad-ghnìomhan</string>
   <!-- Permission check -->
+  <string name="permission_not_granted_dialog_title">Cha deach cead a thoirt</string>
+  <string name="permission_not_granted_dialog_message">Cha deach cead a thoirt airson sgrìobhadh air an stòras air an taobh a-muigh. Cha ghabh a luchdadh a-nuas.</string>
+  <string name="browser_error_title">Mearachd a’ bhrabhsair</string>
+  <string name="dialog_dismiss">Leig seachad</string>
+  <string name="error_permissions">Chan eil ceadan gu leòr aig an aplacaid is cha ruith e. Thoir sùil air roghainnean nan ceadan.</string>
 </resources>
