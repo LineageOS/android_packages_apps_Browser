@@ -16,14 +16,18 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Content description for home screen button [CHAR LIMIT=NONE] -->
-  <!-- Context Menu item to open the currently selected link in a new
-            incognito window. -->
-  <!-- Context Menu item to open the currently selected link in a new
-         background window. [CHAR LIMIT=50] -->
-  <!-- User agent label -->
-  <!-- Interface preferences -->
-  <!-- FullScreen -->
-  <!-- OneHand -->
-  <!-- Permission check -->
+    <string name="accessibility_button_homescreen">Sgrin gartref</string>
+    <string name="contextmenu_openlink_incognito_newwindow">Agor mewn tab cyfrinachol newydd</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">Agor mewn tab cyfrinachol newydd yn y cefndir</string>
+    <string name="pref_content_ua">Asiant defnyddiwr</string>
+    <string name="pref_interface_title">Rhyngwyneb</string>
+    <string name="full_screen_title">Sgrin lawn</string>
+    <string name="full_screen_summary">Galluogi llywio trochedig</string>
+    <string name="onehand_title">Llywio Unllaw</string>
+    <string name="onehand_summary">Llywio\'r we yn gynt wrth lithro a gyda gweithredoedd cyflym</string>
+    <string name="permission_not_granted_dialog_title">Ni roddir caniatâd</string>
+    <string name="permission_not_granted_dialog_message">Ni roddwyd caniatâd i ysgrifennu i storfa allanol. Methu â lawrlwytho.</string>
+    <string name="browser_error_title">Gwall porwr</string>
+    <string name="dialog_dismiss">Diystyru</string>
+    <string name="error_permissions">Nid oes gan yr ap yr hawliau sydd ei angen arno er mwyn rhedeg. Gwiria dy osodiadau caniatâd.</string>
 </resources>
