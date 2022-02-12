@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="accessibility_button_homescreen">హోమ్ స్క్రీన్</string>
+    <string name="contextmenu_openlink_incognito_newwindow">ఒక క్రొత్త అజ్ఞాత ట్యాబ్ లో తెరువు</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">ఒక క్రొత్త అజ్ఞాత నేపథ్య ట్యాబ్ లో తెరువు</string>
+    <string name="pref_content_ua">వినియోగదారు ఏజెంట్</string>
+    <string name="pref_interface_title">ఇంటర్‌ఫేస్</string>
+    <string name="full_screen_title">పూర్తి స్క్రీన్</string>
+    <string name="full_screen_summary">పూర్తి స్థాయిలో నేవిగేషన్ అమలు చెయ్యి</string>
+    <string name="onehand_title">వన్‌హేండ్ నేవిగేషన్</string>
+    <string name="onehand_summary">స్వైప్స్ మరియు త్వరిత చర్యలతో సులభమైన వెబ్ నేవిగేషన్</string>
+    <string name="permission_not_granted_dialog_title">అనుమతి ఇవ్వబడలేదు</string>
+    <string name="permission_not_granted_dialog_message">బాహ్య నిల్వలో వ్రాయడానికి అనుమతి ఇవ్వబడలేదు. డౌన్‌లోడ్ చేయలేకపోయింది.</string>
+    <string name="browser_error_title">బ్రౌజర్ దోషం</string>
+    <string name="dialog_dismiss">తీసివేయి</string>
+    <string name="error_permissions">నడపడానికి ప్రోగ్రాంకు కీలక అనుమతులు లేవు. దయచేసి మీ అనుమతుల సెట్టింగులను తనిఖీ చేయండి.</string>
+</resources>

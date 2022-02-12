@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="application_name">Iminig</string>
+    <string name="choose_upload">Fren afaylu i usider</string>
+    <string name="new_tab">Iccer amaynut</string>
+    <string name="new_incognito_tab">Iccer abnabak amaynut</string>
+    <string name="tab_bookmarks">Ticraḍ</string>
+    <string name="tab_most_visited">Ittwarzan aṭas</string>
+    <string name="tab_history">Amazray</string>
+    <string name="tab_snapshots">Isebtar yettwaskelsen</string>
+    <string name="sign_in_to">Qqen ar <xliff:g id="hostname">%s</xliff:g>\"<xliff:g id="realm">%s</xliff:g>\"</string>
+    <string name="username">Isem</string>
+    <string name="password">Awal uffir</string>
+    <string name="action">Kcem</string>
+    <string name="bookmarks_add_page">Sekles tacreḍt</string>
+    <string name="bookmarks_search">Iminig</string>
+    <string name="cancel">Sefsex</string>
+    <string name="ok">IH</string>
+    <string name="title_bar_loading">Asali\u2026</string>
+    <string name="page_info_address">Tansa :</string>
+    <string name="ssl_continue">Kemmel</string>
+    <string name="security_warning">Alɣu n teɣellist</string>
+    <string name="view_certificate">Wali turagt</string>
+    <string name="ssl_go_back">Uɣal ɣer deffir</string>
+    <string name="ssl_invalid">Turagt-agi mačči d tameɣtut.</string>
+    <string name="ssl_unknown">Tuccḍa tarussint deg turagt.</string>
+    <string name="stopping">Aseḥbes\u2026</string>
+    <string name="stop">Seḥbes</string>
+    <string name="reload">Smiren</string>
+    <string name="back">Tuɣalin</string>
+    <string name="forward">Ɣer zdat</string>
+    <string name="save">IH</string>
+    <string name="do_not_save">Sefsex</string>
+    <string name="location">Tansa</string>
+    <string name="account">Amiḍan</string>
+    <string name="containing_folder">Rnu ar</string>
+    <string name="new_folder">Akaram amaynut</string>
+    <string name="edit_folder">Ẓreg akaram</string>
+    <string name="delete_folder">Kkes akaram</string>
+    <string name="no_subfolders">Ulac idukaramen.</string>
+    <string name="add_to_bookmarks_menu_option">Ticraḍ n isebtar</string>
+    <string name="add_to_homescreen_menu_option">Agdil agejdan</string>
+    <string name="add_to_other_folder_menu_option">Akaram nniḍen</string>
+    <string name="name">Tabzimt</string>
+    <string name="http">http://</string>
+    <string name="save_to_bookmarks">Sekles ar ticraḍ</string>
+    <string name="remove">Kkes</string>
+    <string name="open_bookmark">Ldi</string>
+    <string name="remove_bookmark">Kkes tacreḍt</string>
+    <string name="set_as_homepage">Sbadu am usebter agejdan</string>
+    <string name="bookmark_saved">Yettwasekles ar ticraḍ.</string>
+    <string name="bookmark_not_saved">Ur izmir ara ad isekles ticraḍ.</string>
+    <string name="homepage_set">Asebter agejdan ittwasbadu.</string>
+    <string name="bookmark_url_not_valid">Yir URL.</string>
+    <string name="bookmark_thumbnail_view">Tinfulin</string>
+    <string name="bookmark_list_view">Tabdart</string>
+    <string name="current_page">seg\u0020</string>
+    <string name="open_all_in_new_window">Ldi akk deg iccaren imaynuten</string>
+    <string name="goto_dot">Bdu</string>
+    <string name="close_other_tabs">Mdel iccaren nniḍen</string>
+    <string name="bookmarks">Ticraḍ</string>
+    <string name="shortcut_bookmark">Ticraḍ</string>
+    <string name="history">Amazray</string>
+    <string name="menu_view_download">Isidar</string>
+    <string name="menu_save_snapshot">Sekles i tɣuri s war tuqqna</string>
+    <string name="saving_snapshot">Asekles\u2026</string>
+    <string name="snapshot_failed">Ur izmir ara ad isekles i tɣuri war tuqqna.</string>
+    <string name="contextheader_folder_empty">Akaram d ilem</string>
+    <string name="contextmenu_openlink">Ldi</string>
+    <string name="contextmenu_openlink_newwindow">Ldi deg iccer amaynut</string>
+    <string name="contextmenu_openlink_newwindow_background">Ldi deg iccer amaynut agilal</string>
+    <string name="contextmenu_savelink">Sekles aseɣwen</string>
+    <string name="contextmenu_sharelink">Bḍu aseɣwen</string>
+    <string name="contextmenu_copy">Nɣel</string>
+    <string name="contextmenu_copylink">Nɣel URL n useɣwen</string>
+    <string name="contextmenu_download_image">Sekles tugna</string>
+    <string name="contextmenu_view_image">Wali tugna</string>
+    <string name="contextmenu_set_wallpaper">Sbadu agalis</string>
+    <string name="contextmenu_dial_dot">Asuddes\u2026</string>
+    <string name="contextmenu_add_contact">Rnu anermis</string>
+    <string name="contextmenu_send_mail">Azen imayl</string>
+    <string name="contextmenu_map">Tagertilt</string>
+    <string name="choosertitle_sharevia">Bḍu s</string>
+    <string name="clear">Sfeḍ</string>
+    <string name="replace">Semselsi</string>
+    <string name="browser_bookmarks_page_bookmarks_text">Ticraḍ</string>
+    <string name="menu_preferences">Iɣewwaṛen</string>
+    <string name="pref_content_load_images">Sali-d tugniwin</string>
+    <string name="pref_content_load_images_summary">Sken tugniwin ɣef isebtaren n Web</string>
+    <string name="pref_content_javascript">Rmed JavaScript</string>
+    <string name="pref_content_open_in_background">Ldi g ugilal</string>
+    <string-array name="pref_content_plugins_choices">
+        <item>Dima irmed</item>
+        <item>On demand</item>
+        <item>Insa</item>
+    </string-array>
+    <string name="pref_content_open_in_background_summary">Ldi accaren imaynuten deffir iccer amiran</string>
+    <string name="pref_content_search_engine_summary">Fren amsedday unadi</string>
+    <string name="pref_set_homepage_to">Sbadu ɣef</string>
+    <string-array name="pref_homepage_choices">
+        <item>Asebter amiran</item>
+        <item>Asebter ilem</item>
+        <item>Asebter amezwer</item>
+        <item>Ismal ttwarzan aṭas</item>
+        <item>Wayeḍ</item>
+    </string-array>
+    <string name="pref_general_title">Amatu</string>
+    <string name="pref_general_sync_title">Amtawi</string>
+    <string name="pref_general_autofill_title">Taččaṛt tawurmant</string>
+    <string name="pref_autofill_enabled">Taččaṛt tawurmant n tferkit</string>
+    <string name="pref_autofill_enabled_summary">Ččar tugnawin Web s yiwet n tnalit</string>
+    <string name="pref_autofill_profile_editor_summary">Sbadu aḍris n tira tawurmant deg tferkiwin web</string>
+    <string name="autologin_bar_login_text">Kcem</string>
+    <string name="autologin_bar_hide_text">Ffer</string>
+    <string name="autofill_profile_editor_heading">Aru aḍris i tebɣiḍ s wudem awurman deg tferkiwin web.</string>
+    <string name="autofill_profile_editor_name">Isem aččuran:</string>
+    <string name="autofill_profile_editor_email_address">Imayl :</string>
+    <string name="autofill_profile_editor_company_name">Isem n tkebbanit:</string>
+    <string name="autofill_profile_editor_address_line_1">Izirig n tansa 1 :</string>
+    <string name="autofill_profile_editor_address_line_2">Izirig n tansa 2 :</string>
+    <string name="autofill_profile_editor_city">Tamdint/Tiɣremt :</string>
+    <string name="autofill_profile_editor_zip_code">Tangalt n lpusta:</string>
+    <string name="autofill_profile_editor_country">Tamurt:</string>
+    <string name="autofill_profile_editor_phone_number">Tiliɣri:</string>
+    <string name="autofill_profile_editor_phone_number_invalid">Yir uṭṭun n tiliɣri.</string>
+    <string name="autofill_profile_editor_save_profile">Sekles</string>
+    <string name="autofill_profile_successful_save">Aḍris n taččart tawurmant yettwasekles.</string>
+    <string name="autofill_profile_successful_delete">Aḍris n taččart tawurmant yettwakes.</string>
+    <string name="autofill_profile_editor_delete_profile">Kkes</string>
+    <string name="disable_autofill">Ssens taččaṛt tawurmant</string>
+    <string name="pref_privacy_security_title">Tabaḍnit &amp; taɣellist</string>
+    <string name="pref_privacy_clear_cache">Sfeḍ tuffirt</string>
+    <string name="pref_privacy_cookies_title">Inagan n tuqqna</string>
+    <string name="pref_privacy_clear_cookies_dlg">Kkes akk inagan n tuqqna?</string>
+    <string name="pref_privacy_clear_history">Sfeḍ amazray</string>
+    <string name="pref_privacy_clear_history_summary">Sfeḍ amezray n tunigin n uminig</string>
+    <string name="pref_privacy_clear_history_dlg">Kkes amezray n tunigin n uminig?</string>
+    <string name="pref_privacy_formdata_title">Isefka n tferkit</string>
+    <string name="pref_privacy_clear_form_data_summary">Sfeḍ akk isefka n tferkit yettwaskelsen</string>
+    <string name="pref_privacy_clear_form_data_dlg">Sfeḍ akk isefka n tferkit yettwaskelsen?</string>
+    <string name="pref_privacy_clear_passwords_summary">Sfeḍ akk awalen uffiren yettwaskelsen</string>
+    <string name="pref_privacy_location_title">Adig</string>
+    <string name="pref_privacy_enable_geolocation">Rmed adig</string>
+    <string name="pref_security_passwords_title">Awalen uffiren</string>
+    <string name="pref_security_remember_passwords">Cfu ɣef awalen uffiren</string>
+    <string name="pref_security_save_form_data">Cfu ɣef isefka n tferkit</string>
+    <string name="pref_security_accept_cookies">Qbel inagan n tuqqna</string>
+    <string-array name="pref_text_size_choices">
+        <item>Tiny</item>
+        <item>Meẓẓi</item>
+        <item>Amagnu</item>
+        <item>Ameqran</item>
+        <item>Meqqeṛ</item>
+    </string-array>
+    <string name="pref_min_font_size">Tiddi taddayt n tsefsit</string>
+    <string name="pref_min_font_size_value"><xliff:g id="font_size">%d</xliff:g>agaz</string>
+    <string name="pref_force_userscalable">Ḥettem asemɣer</string>
+    <string name="pref_force_userscalable_summary">Ttu asuter n usmel i wesenqed n usemɣer</string>
+    <string name="pref_inverted_category">Tiririt n ugdil yettin</string>
+    <string name="pref_inverted">Tiririt yettin</string>
+    <string name="pref_inverted_summary">Aberkan ad yeqqel d amellal, amellal d aberkan</string>
+    <string name="pref_inverted_contrast">Agatu</string>
+    <string-array name="pref_default_zoom_choices">
+        <item>Far</item>
+        <item>Alemmas</item>
+        <item>Mdel</item>
+    </string-array>
+    <string name="pref_extras_title">Talqayt</string>
+    <string name="pref_extras_website_settings_summary">Iγewwaṛen n telqayt n yismal Web iterrasanen</string>
+    <string name="pref_extras_reset_default_title">Wennez ɣer umezwer</string>
+    <string name="pref_extras_reset_default">Ales awennez ar iɣewwaren imezwar</string>
+    <string name="pref_extras_reset_default_summary">Err-d iɣewwaren imezwar</string>
+    <string name="pref_extras_reset_default_dlg">Er iɣewwaren ɣer wazalen imezwar?</string>
+    <string name="pref_development_title">Seɣtu</string>
+    <string name="pref_default_text_encoding">Asettengel n uḍris</string>
+    <string name="pref_default_text_encoding_dialogtitle">Asettengel n uḍris</string>
+    <string name="pref_accessibility_title">Tuffart</string>
+    <string name="pref_font_size_category">Teɣzi n uḍris</string>
+    <string name="pref_lab_title">Tinarimin</string>
+    <string name="pref_lab_fullscreen">Agdil aččuran</string>
+    <string-array name="pref_data_preload_choices">
+        <item>Weṛǧin</item>
+        <item>S Wi-Fi kan</item>
+        <item>Dima</item>
+    </string-array>
+    <string-array name="pref_link_prefetch_choices">
+        <item>Weṛǧin</item>
+        <item>S Wi-Fi kan</item>
+        <item>Dima</item>
+    </string-array>
+    <string name="pref_link_prefetch_summary">Sireg iminig akked ad yesider deg ugilal isebtar n web yedduklen</string>
+    <string name="browserFrameNetworkErrorLabel">Ugur n tuqqna</string>
+    <string name="browserFrameFormResubmitMessage">Asebter i tettaɛraḍeḍ ad twaliḍ yegber isefka yettwaznen yakan (\"POSTDATA\"). Ma tulseḍ tuzzna n yisefka, akk tigawin i tega tferkit ɣef usebter (akka am unadi neɣ tiɣin ɣef internet) ad alsent.</string>
+    <string name="loadSuspendedTitle">ulac tuqna</string>
+    <string name="clear_history">Sfeḍ amazray</string>
+    <string name="empty_history">Ulac amezray n uminig.</string>
+    <string name="go_home">Asebter agejdan</string>
+    <string name="add_new_bookmark">Rnu tacreḍt</string>
+    <string name="add_bookmark_short">Rnu</string>
+    <string name="search_hint">Nadi neɣ sekcem URL</string>
+    <string name="search_button_text">Bdu</string>
+    <string name="allow">Sireg</string>
+    <string name="block">Sewḥel</string>
+    <string name="too_many_windows_dialog_title">Talast n iccaren tewweḍ</string>
+    <string name="too_many_windows_dialog_message">Ur d-ileddi iccer amaynut arma yimdel yiwen.</string>
+    <string name="too_many_subwindows_dialog_title">Asfaylu udhim yeldi yakan</string>
+    <string name="download_no_sdcard_dlg_title" product="default">Ulac takarḍa SD</string>
+    <string name="download_no_sdcard_dlg_msg" product="default">Ttlaq tkarḍa SD akken ad-tsidreḍ <xliff:g id="filename">%s</xliff:g>.</string>
+    <string name="geolocation_permissions_prompt_remember">Cfu ɣef ismenyifen</string>
+    <string name="geolocation_settings_page_dialog_ok_button">IH</string>
+    <string name="geolocation_settings_page_dialog_cancel_button">Sefsex</string>
+    <string name="website_settings_clear_all">Sfeḍ akk</string>
+    <string name="website_settings_clear_all_dialog_message">Ad tekkseḍ akk isefka akked tsirag n usideg n usmel n web ?</string>
+    <string name="website_settings_clear_all_dialog_ok_button">IH</string>
+    <string name="website_settings_clear_all_dialog_cancel_button">Sefsex</string>
+    <string name="defaultBookmarksUpButton">Ticraḍ</string>
+    <string name="import_bookmarks_wizard_next">Uḍfiṛ</string>
+    <string name="import_bookmarks_wizard_previous">Γer deffir</string>
+</resources>

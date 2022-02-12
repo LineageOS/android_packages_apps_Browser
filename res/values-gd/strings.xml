@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="application_name">Brabhsair</string>
+    <string name="choose_upload">Tagh faidhle airson a luchdadh suas</string>
+    <string name="uploads_disabled">Tha casg air luchdadh suas fhaidhlichean.</string>
+    <string name="new_tab">Taba ùr</string>
+    <string name="new_incognito_tab">Taba dìomhair ùr</string>
+    <string name="tab_bookmarks">Comharran-lìn</string>
+    <string name="tab_most_visited">Air na thadhladh as trice</string>
+    <string name="tab_history">Eachdraidh</string>
+    <string name="tab_snapshots">Duilleagan a shàbhail thu</string>
+    <string name="added_to_bookmarks">Chaidh a chur ris na comharran-lìn.</string>
+    <string name="removed_from_bookmarks">Chaidh a thoirt air falbh o na comharran-lìn.</string>
+    <string name="sign_in_to">Clàraich a-steach gu <xliff:g id="hostname">%s1</xliff:g> \"<xliff:g id="realm">%s2</xliff:g>\"</string>
+    <string name="username">Ainm</string>
+    <string name="password">Facal-faire</string>
+    <string name="action">Clàraich a-steach</string>
+    <string name="bookmarks_add_page">Sàbhail ’na chomharra-lìn</string>
+    <string name="bookmarks_search">Brabhsair</string>
+    <string name="cancel">Sguir dheth</string>
+    <string name="ok">Ceart ma-thà</string>
+    <string name="title_bar_loading">’Ga luchdadh\u2026</string>
+    <string name="page_info">Mun duilleag</string>
+    <string name="page_info_view">Seall am fiosrachadh mun duilleag</string>
+    <string name="page_info_address">Seòladh:</string>
+    <string name="ssl_warnings_header">Tha duilgheadasan le teisteanas tèarainteachd na làraich seo.</string>
+    <string name="ssl_continue">Lean air adhart</string>
+    <string name="security_warning">Rabhadh tèarainteachd</string>
+    <string name="view_certificate">Seall an teisteanas</string>
+    <string name="ssl_go_back">Air ais</string>
+    <string name="ssl_untrusted">Chan ann o ùghdarras earbsach a tha an teisteanas seo.</string>
+    <string name="ssl_mismatch">Chan eil ainm na làraich seo co-ionnann ris an ainm san teisteanas.</string>
+    <string name="ssl_expired">Dh’fhalbh an ùine air an teisteanas.</string>
+    <string name="ssl_not_yet_valid">Chan eil an teisteanas seo dligheach fhathast.</string>
+    <string name="ssl_date_invalid">Tha ceann-là an teisteanais seo mì-dhligheach.</string>
+    <string name="ssl_invalid">Tha an teisteanas seo mì-dhligheach.</string>
+    <string name="ssl_unknown">Mearachd teisteanais nach aithne dhuinn.</string>
+    <string name="stopping">A’ cur stad air\u2026</string>
+    <string name="stop">Cuir stad air</string>
+    <string name="reload">Ath-nuadhaich</string>
+    <string name="back">Air ais</string>
+    <string name="forward">Air adhart</string>
+    <string name="save">Ceart ma-thà</string>
+    <string name="do_not_save">Sguir dheth</string>
+    <string name="location">Seòladh</string>
+    <string name="account">Cunntas</string>
+    <string name="containing_folder">Cuir ri</string>
+    <string name="new_folder">Pasgan ùr</string>
+    <string name="edit_folder">Deasaich am pasgan</string>
+    <string name="delete_folder">Sguab am pasgan às</string>
+    <string name="no_subfolders">Chan eil fo-phasgan ann.</string>
+    <string name="add_to_bookmarks_menu_option">Comharran-lìn</string>
+    <string name="add_to_homescreen_menu_option">An sgrìn dachaigh</string>
+    <string name="add_to_other_folder_menu_option">Pasgan eile</string>
+    <string name="name">Leubail</string>
+    <string name="http">http://</string>
+    <string name="save_to_bookmarks">Sàbhail sna comharran-lìn</string>
+    <string name="bookmark_this_page">Dèan comharra-lìn dhen duilleag seo</string>
+    <string name="remove">Thoir air falbh</string>
+    <string name="edit_bookmark">Deasaich an comharra-lìn</string>
+    <string name="create_shortcut_bookmark">Cuir ath-ghoirid ris an dachaigh</string>
+    <string name="open_bookmark">Fosgail</string>
+    <string name="remove_bookmark">Sguab às an comharra-lìn</string>
+    <string name="remove_from_bookmarks">Thoir air falbh o na comharran-lìn</string>
+    <string name="remove_history_item">Thoir air falbh on eachdraidh</string>
+    <string name="set_as_homepage">Suidhich mar an duilleag-dhachaigh</string>
+    <string name="bookmark_saved">Air a shàbhaladh sna comharran-lìn.</string>
+    <string name="bookmark_not_saved">Cha b’ urrainn dhuinn comharra-lìn a shàbhaladh.</string>
+    <string name="homepage_set">Chaidh an duilleag-dhachaigh a shuidheachadh.</string>
+    <string name="bookmark_needs_title">"Feumaidh ainm a bhith air comharra-lìn."</string>
+    <string name="bookmark_needs_url">"Feumaidh ionad a bhith aig comharra-lìn."</string>
+    <string name="bookmark_url_not_valid">Chan eil an URL seo dligheach.</string>
+    <string name="bookmark_cannot_save_url">Cha ghabh comharra-lìn a dhèanamh dhen URL seo.</string>
+    <string name="bookmark_page">Dèan comharra-lìn dhen duilleag mu dheireadh a choimhead thu air</string>
+    <string name="bookmark_thumbnail_view">Dealbhagan</string>
+    <string name="bookmark_list_view">Liosta</string>
+    <string name="current_page">o\u0020</string>
+    <string name="delete_bookmark_warning">A bheil thu airson an comharra-lìn “<xliff:g id="bookmark">%s</xliff:g>” a sguabadh às?</string>
+    <string name="open_all_in_new_window">Fosgail gach aon ann an taba ùr</string>
+    <string name="goto_dot">Siuthad</string>
+    <string name="select_dot">Tagh teacsa</string>
+    <string name="close_other_tabs">Dùin an còrr dhe na tabaichean</string>
+    <string name="bookmarks">Comharran-lìn</string>
+    <string name="shortcut_bookmark">Comharra-lìn</string>
+    <string name="shortcut_bookmark_title">Tagh comharra-lìn</string>
+    <string name="history">Eachdraidh</string>
+    <string name="menu_view_download">Luchdaidhean a-nuas</string>
+    <string name="copy_page_url">Dèan lethbhreac de URL na duilleige</string>
+    <string name="share_page">Co-roinn an duilleag</string>
+    <string name="menu_save_snapshot">Sàbhail a chùm leughaidh far loidhne</string>
+    <string name="saving_snapshot">’Ga shàbhaladh\u2026</string>
+    <string name="snapshot_failed">Cha b’ urrainn dhuinn a shàbhaladh a chùm leughaidh far loidhne.</string>
+    <string name="contextheader_folder_bookmarkcount"><xliff:g id="bookmark_count">%d</xliff:g> comharra(n)-lìn</string>
+    <string name="contextheader_folder_empty">Falamhaich am pasgan</string>
+    <string name="contextmenu_openlink">Fosgail</string>
+    <string name="contextmenu_openlink_newwindow">Fosgail ann an taba ùr</string>
+    <string name="contextmenu_openlink_newwindow_background">Fosgail ann an taba ùr sa chùlaibh</string>
+    <string name="contextmenu_savelink">Sàbhail an ceangal</string>
+    <string name="contextmenu_sharelink">Co-roinn an ceangal</string>
+    <string name="contextmenu_copy">Lethbhreac</string>
+    <string name="contextmenu_copylink">Dèan lethbhreac dhen URL</string>
+    <string name="contextmenu_download_image">Sàbhail an dealbh</string>
+    <string name="contextmenu_view_image">Seall an dealbh</string>
+    <string name="contextmenu_set_wallpaper">Suidhich mar phàipear-balla</string>
+    <string name="contextmenu_dial_dot">Daitheal…</string>
+    <string name="contextmenu_add_contact">Cuir ris an luchd-aithne</string>
+    <string name="contextmenu_send_mail">Cuir post-d</string>
+    <string name="contextmenu_map">Mapa</string>
+    <string name="choosertitle_sharevia">Co-roinn slighe</string>
+    <string name="clear">Falamhaich</string>
+    <string name="replace">Cuir ’na àite</string>
+    <string name="browser_bookmarks_page_bookmarks_text">Comharran-lìn</string>
+    <string name="menu_preferences">Roghainnean</string>
+    <string name="pref_content_title">Susbaint na duilleige</string>
+    <string name="pref_allow_apptabs">Ceadaich iomadh taba anns gach aplacaid</string>
+    <string name="pref_content_load_images">Luchdaich na dealbhan</string>
+    <string name="pref_content_load_images_summary">Seall na dealbhan ann an duilleagan-lìn</string>
+    <string name="pref_content_block_popups">Bac priob-uinneagan</string>
+    <string name="pref_content_javascript">Cuir JavaScript an comas</string>
+    <string name="pref_content_open_in_background">Fosgail sa chùlaibh</string>
+    <string name="pref_content_plugins">Cuir na plugain an comas</string>
+    <string-array name="pref_content_plugins_choices">
+        <item>Air an-còmhnaidh</item>
+        <item>Air iarrtas</item>
+        <item>Dheth</item>
+    </string-array>
+    <string name="pref_content_open_in_background_summary">Fosgail tabaichean ùra air cùlaibh an taba làithrich</string>
+    <string name="pref_content_homepage">Suidhich duilleag-dhachaigh</string>
+    <string name="pref_content_search_engine">Suidhich einnsean-luirg</string>
+    <string name="pref_content_search_engine_summary">Tagh einnsean-luirg</string>
+    <string name="pref_set_homepage_to">Cuir gu</string>
+    <string-array name="pref_homepage_choices">
+        <item>An duilleag làithreach</item>
+        <item>Duilleag bhàn</item>
+        <item>An duilleag bhunaiteach</item>
+        <item>Làraichean air an tadhail thu as trice</item>
+        <item>Eile</item>
+    </string-array>
+    <string name="pref_content_autofit">Meud dhuilleagan fèin-obrachail</string>
+    <string name="pref_content_autofit_summary">Fòrmataich duilleagan a-rèir meud na sgrìn</string>
+    <string name="pref_general_title">Coitcheann</string>
+    <string name="pref_general_sync_title">Sioncronaich</string>
+    <string name="pref_general_autofill_title">Fèin-lìonadh</string>
+    <string name="pref_autofill_enabled">Fèin-lìonadh fhoirmean</string>
+    <string name="pref_autofill_enabled_summary">Lìon foirmean-lìn le aon suathadh</string>
+    <string name="pref_autofill_profile_editor">Teacsa fèin-lìonaidh</string>
+    <string name="pref_autofill_profile_editor_summary">Suidhich teacsa airson fèin-lìonadh nam foirmean-lìn</string>
+    <string name="pref_autologin_title">Clàradh a-steach fèin-obrachail gu Google</string>
+    <string name="pref_autologin_progress">’Gad chlàradh a-steach gu làraichean Google slighe <xliff:g>%s</xliff:g></string>
+    <string name="autologin_bar_text">Clàraich a-steach mar</string>
+    <string name="autologin_bar_login_text">Clàraich a-steach</string>
+    <string name="autologin_bar_hide_text">Falaich</string>
+    <string name="autologin_bar_error">Cha b’ urrainn dhuinn do chlàradh a-steach.</string>
+    <string name="autofill_profile_editor_heading">Cuir a-steach an teacsa a tha thu airson lìonadh gu fèin-obrachail ann am foirmean-lìn.</string>
+    <string name="autofill_profile_editor_name">Ainm slàn:</string>
+    <string name="autofill_profile_editor_email_address">Post-d:</string>
+    <string name="autofill_profile_editor_company_name">Ainm na companaidh:</string>
+    <string name="autofill_profile_editor_address_line_1">1d loidhne dhen t-seòladh:</string>
+    <string name="autofill_profile_editor_address_line_1_hint">Seòladh sràide, bogsa P.O., c/o</string>
+    <string name="autofill_profile_editor_address_line_2">2na loidhne dhen t-seòladh:</string>
+    <string name="autofill_profile_editor_address_line_2_hint">Àras, suite, aonad, togalach, ùrlar is msaa.</string>
+    <string name="autofill_profile_editor_city">Cathair/Baile:</string>
+    <string name="autofill_profile_editor_state">Siorrachd/Còigeamh/Stàit:</string>
+    <string name="autofill_profile_editor_zip_code">Còd-puist:</string>
+    <string name="autofill_profile_editor_country">Dùthaich:</string>
+    <string name="autofill_profile_editor_phone_number">Fòn:</string>
+    <string name="autofill_profile_editor_phone_number_invalid">Àireamh fòn mhì-dhligheach.</string>
+    <string name="autofill_profile_editor_save_profile">Sàbhail</string>
+    <string name="autofill_profile_successful_save">Chaidh an teacsa fèin-lìonaidh a shàbhaladh.</string>
+    <string name="autofill_profile_successful_delete">Chaidh an teacsa fèin-lìonaidh a sguabadh às.</string>
+    <string name="autofill_profile_editor_delete_profile">Sguab às</string>
+    <string name="autofill_setup_dialog_message">’S urrainn dhan bhrabhsair foirmean-lìn mar am fear seo a lìonadh dhut gu fèin-obrachail. A bheil thu airson an teacsa fèin-lìonaidh agad a shuidheachadh?</string>
+    <string name="autofill_setup_dialog_negative_toast">’S urrainn dhut an teacsa fèin-lìonaidh agad a shuidheachadh uair sam bith ann am “Brabhsair” &gt; “Roghainnean” &gt; “Coitcheann”.</string>
+    <string name="disable_autofill">Cuir am fèin-lìonadh à comas</string>
+    <string name="pref_privacy_security_title">Prìobhaideachd ⁊ tèarainteachd</string>
+    <string name="pref_privacy_clear_cache">Falamhaich an tasgadan</string>
+    <string name="pref_privacy_clear_cache_summary">Falamhaich an t-susbaint is na stòir-dhàta san tasgadan ionadail</string>
+    <string name="pref_privacy_clear_cache_dlg">An sguab thu às an t-susbaint is na stòir-dhàta san tasgadan ionadail?</string>
+    <string name="pref_privacy_cookies_title">Briosgaidean</string>
+    <string name="pref_privacy_clear_cookies">Falamhaich dàta nam briosgaidean uile</string>
+    <string name="pref_privacy_clear_cookies_summary">Falamhaich a h-uile briosgaid a’ bhrabhsair</string>
+    <string name="pref_privacy_clear_cookies_dlg">A bheil thu airson gach briosgaid a sguabadh às?</string>
+    <string name="pref_privacy_clear_history">Falamhaich an eachdraidh</string>
+    <string name="pref_privacy_clear_history_summary">Falamhaich eachdraidh seòladaireachd a’ bhrabhsair</string>
+    <string name="pref_privacy_clear_history_dlg">A bheil thu airson eachdraidh seòladaireachd a’ bhrabhsair a sguabadh às?</string>
+    <string name="pref_privacy_formdata_title">Dàta nam foirm</string>
+    <string name="pref_privacy_clear_form_data">Falamhaich dàta nam foirmean</string>
+    <string name="pref_privacy_clear_form_data_summary">Falamhaich dàta gu lèir nam foirmean</string>
+    <string name="pref_privacy_clear_form_data_dlg">An sguab thu às dàta gu lèir nam foirmean?</string>
+    <string name="pref_privacy_clear_passwords">Falamhaich na faclan-faire</string>
+    <string name="pref_privacy_clear_passwords_summary">Falamhaich gach facal-faire a chaidh a shàbhaladh</string>
+    <string name="pref_privacy_clear_passwords_dlg">An sguab thu às gach facal-faire a chaidh a shàbhaladh?</string>
+    <string name="pref_privacy_location_title">Ionad</string>
+    <string name="pref_privacy_enable_geolocation">Cuir an t-ionad an comas</string>
+    <string name="pref_privacy_enable_geolocation_summary">Thoir cead do làraichean gun iarr iad inntrigeadh air d’ ionad</string>
+    <string name="pref_privacy_clear_geolocation_access">Falamhaich inntrigeadh dhan ionad</string>
+    <string name="pref_privacy_clear_geolocation_access_summary">Falamhaich cead air d’ ionad o gach làrach-lìn</string>
+    <string name="pref_privacy_clear_geolocation_access_dlg">A bheil thu cead inntrigidh dha d’ ionad a thoirt air falbh o gach làrach-lìn?</string>
+    <string name="pref_security_passwords_title">Faclan-faire</string>
+    <string name="pref_security_remember_passwords">Cuimhnich na faclan-faire</string>
+    <string name="pref_security_remember_passwords_summary">Sàbhai# ainmean-cleachdaiche ’s faclan-faire airson làraichean-lìn</string>
+    <string name="pref_security_save_form_data">Cuimhnich dàta nam foirmean</string>
+    <string name="pref_security_save_form_data_summary">Cum an cuimhne an dàta a chuireas mi a-steach ann am foirmichean airson a chleachdadh a-rithist</string>
+    <string name="pref_security_show_security_warning">Seall rabhaidhean tèarainteachd</string>
+    <string name="pref_security_show_security_warning_summary">Seall rabhadh ma tha duilgheadas tèarainteachd aig làrach</string>
+    <string name="pref_security_accept_cookies">Gabh ri briosgaidean</string>
+    <string name="pref_security_accept_cookies_summary">Leig le làraichean dàta bhriosgaidean a leughadh is a shàbhaladh</string>
+    <string-array name="pref_text_size_choices">
+        <item>Beag bìodach</item>
+        <item>Beag</item>
+        <item>Àbhaisteach</item>
+        <item>Mòr</item>
+        <item>Anabarrach mòr</item>
+    </string-array>
+    <string name="pref_min_font_size">Meud as lugha a’ chrutha-chlò</string>
+    <string name="pref_min_font_size_value"><xliff:g id="font_size">%d</xliff:g>pt</string>
+    <string name="pref_text_zoom">Sgèileadh an teacsa</string>
+    <string name="pref_zoom_on_double_tap">Dèan sùmadh ri linn gnogaig dhùbailte</string>
+    <string name="pref_force_userscalable">Sparradh an t-sùm</string>
+    <string name="pref_force_userscalable_summary">Tar-àithn iarrtasan làraichean-lìn a tha ag iarraidh an sùm a stiùireadh</string>
+    <string name="pref_inverted_category">Reandaradh ais-thionndaichte na sgrìn</string>
+    <string name="pref_inverted">Reandaradh ais-thionndaichte</string>
+    <string name="pref_inverted_summary">Bidh dubh an àite gil agus a chaochladh</string>
+    <string name="pref_inverted_contrast">Iomsgaradh</string>
+    <string name="pref_default_zoom">An sùm bunaiteach</string>
+    <string-array name="pref_default_zoom_choices">
+        <item>Fad air falbh</item>
+        <item>Sa mheadhan</item>
+        <item>Dlùth</item>
+    </string-array>
+    <string name="pref_default_zoom_dialogtitle">An sùm bunaiteach</string>
+    <string name="pref_content_load_page">Fosgail duilleagan san fhoir-shealladh</string>
+    <string name="pref_content_load_page_summary">Seall foir-shealladh de dhuilleagan a tha air an ùr-fhosgladh</string>
+    <string name="pref_extras_title">Adhartach</string>
+    <string name="pref_extras_website_settings">Roghainnean na làraich-lìn</string>
+    <string name="pref_extras_website_settings_summary">Roghainnean adhartach airson làraichean-lìn fa leth</string>
+    <string name="pref_extras_reset_default_title">Ath-shuidhich air na bun-roghainnean</string>
+    <string name="pref_extras_reset_default">Ath-shuidhich air a’ bhun-roghainn</string>
+    <string name="pref_extras_reset_default_summary">Aisig na roghainnean bunaiteach</string>
+    <string name="pref_extras_reset_default_dlg">A bheil thu na roghainnean bunaiteach a thilleadh?</string>
+    <string name="pref_development_title">Dì-bhugaich</string>
+    <string name="pref_default_text_encoding">Còdachadh an teacsa</string>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Laideann-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Sìnis (GBK)</item>
+        <item>Sìnis (Big5)</item>
+        <item>Seapanais (ISO-2022-JP)</item>
+        <item>Seapanais (SHIFT_JIS)</item>
+        <item>Seapanais (EUC-JP)</item>
+        <item>Coirèanais (EUC-KR)</item>
+        </string-array>
+    <string name="pref_default_text_encoding_dialogtitle">Còdachadh an teacsa</string>
+    <string name="pref_accessibility_title">So-ruigsinneachd</string>
+    <string name="pref_font_size_category">Meud an teacsa</string>
+    <string name="pref_lab_title">Deuchainn-lannan</string>
+    <string name="pref_lab_quick_controls">Grad-uidheaman-smachd</string>
+    <string name="pref_lab_quick_controls_summary">Slaod d’ òrdag a-steach on oir chlì no dheas airson cothrom fhaighinn air na h-uidheaman smachd is bàraichean na h-aplacaid is an URL a chur am falach</string>
+    <string name="pref_use_instant_search">Google Instant</string>
+    <string name="pref_use_instant_search_summary">      Cleachd Google Instant nuair a nì thu lorg air Google a sheallas dhut toraidhean
+      ’s tu a’ sgrìobhadh (dh’fhaoidte gun caith thu barrachd dàta ’na chois).</string>
+    <string name="pref_lab_fullscreen">Làn-sgrìn</string>
+    <string name="pref_lab_fullscreen_summary">      Cleachd modh na làn-sgrìn gus bàr na staide a chur am falach</string>
+    <string name="pref_data_title">Stiùireadh leud a’ bhanna</string>
+    <string name="pref_data_preload_title">Ro-luchdadh nan toraidhean luirg</string>
+    <string-array name="pref_data_preload_choices">
+        <item>Chan ann idir</item>
+        <item>Air WiFi a-mhàin</item>
+        <item>An-còmhnaidh</item>
+    </string-array>
+    <string name="pref_data_preload_summary">Leig leis a’ bhrabhsair toraidhean sa bheil earbsa mòr a ro-luchdadh sa chùlaibh</string>
+    <string name="pref_data_preload_dialogtitle">Ro-luchdadh nan toraidhean luirg</string>
+    <string name="pref_link_prefetch_title">Ro-luchdadh nan duilleagan-lìn</string>
+    <string-array name="pref_link_prefetch_choices">
+        <item>Chan ann idir</item>
+        <item>Air WiFi a-mhàin</item>
+        <item>An-còmhnaidh</item>
+    </string-array>
+    <string name="pref_link_prefetch_summary">Leig leis a’ bhrabhsair duilleagan-lìn co-cheangailte a ro-luchdadh sa chùlaibh</string>
+    <string name="pref_link_prefetch_dialogtitle">Ro-luchdadh nan duilleagan-lìn</string>
+    <string name="browserFrameNetworkErrorLabel">Duilgheadas leis a’ cheangal</string>
+    <string name="browserFrameFileErrorLabel">Duilgheadas leis an fhaidhle</string>
+    <string name="browserFrameFormResubmitMessage">Tha thu airson coimhead air duilleag air a bheil dàta a chaidh a chur mu thràth (“POSTDATA”). Ma chuireas tu an dàta às ùr, thèid gnìomh sam bith a rinn am foirm air an duilleag (mar lorg air an lìon no ceannach bathair) an aon rud a-rithist.</string>
+    <string name="loadSuspendedTitle">Gun cheangal</string>
+    <string name="loadSuspended">Chan urrainn dhan bhrabhsair an duilleag seo a
+luchdadh a chionn ’s nach eil ceangal ris an eadar-lìon ann.</string>
+    <string name="clear_history">Falamhaich an eachdraidh</string>
+    <string name="browser_history">Duilleagan o chionn goirid</string>
+    <string name="empty_history">Chan eil eachdraidh aig a’ bhrabhsair.</string>
+    <string name="go_home">Duilleag-dhachaigh</string>
+    <string name="add_new_bookmark">Cuir comharra-lìn ris</string>
+    <string name="add_bookmark_short">Cuir ris</string>
+    <string name="search_hint">Dèan lorg no cuir a-steach URL</string>
+    <string name="search_button_text">Siuthad</string>
+    <string name="search_settings_description">Comharran-lìn is an eachdraidh-lìn</string>
+    <string name="popup_window_attempt">An leig thu leis an làrach seo
+      priob-uinneag fhosgladh?</string>
+    <string name="allow">Ceadaich</string>
+    <string name="block">Bac</string>
+    <string name="too_many_windows_dialog_title">Tha na tha ceadaichte de thabaichean agad</string>
+    <string name="too_many_windows_dialog_message">Chan urrainn dhut taba ùr fhosgladh gus an dùin thu fear.</string>
+    <string name="too_many_subwindows_dialog_title">Tha priob-uinneag fosgailte mu thràth</string>
+    <string name="too_many_subwindows_dialog_message">Chan fhaod ach aon phriob-uinneag
+      a bhith fosgailte aig an aon àm.</string>
+    <string name="download_no_sdcard_dlg_title" product="nosdcard">Chan eil stòras USB ri làimh</string>
+    <string name="download_no_sdcard_dlg_title" product="default">Chan eil cairt SD ann</string>
+    <string name="download_no_sdcard_dlg_msg" product="nosdcard">Feumaidh tu stòras USB mus urrainn dhut <xliff:g id="filename">%s</xliff:g> a luchdadh a-nuas.</string>
+    <string name="download_no_sdcard_dlg_msg" product="default">Feumaidh tu cairt SD mus urrainn dhut <xliff:g id="filename">%s</xliff:g> a luchdadh a-nuas.</string>
+    <string name="download_sdcard_busy_dlg_title" product="nosdcard">Chan eil stòras USB ri làimh</string>
+    <string name="download_sdcard_busy_dlg_title" product="default">Chan eil cairt SD ri làimh</string>
+    <string name="download_sdcard_busy_dlg_msg" product="nosdcard">Tha an stòras USB trang. Airson luchdadh a-nuas a cheadachadh, suath ri “Cuir dheth an stòras USB” sa bhrath.</string>
+    <string name="download_sdcard_busy_dlg_msg" product="default">Tha a’ chairt SD trang. Airson luchdadh a-nuas a cheadachadh, suath ri “Cuir dheth an stòras USB” sa bhrath.</string>
+    <string name="cannot_download">Chan urrainn dhut ach URLaichean “http” no “https” a luchdadh a-nuas.</string>
+    <string name="download_pending">A’ tòiseachadh air an luchdadh a-nuas\u2026</string>
+    <string name="search_the_web">Lorg air an lìon</string>
+    <string name="webstorage_outofspace_notification_title">Tha stòras a’ bhrabhsair làn</string>
+    <string name="webstorage_outofspace_notification_text">Suath ris gus àite a shaoradh.</string>
+    <string name="webstorage_clear_data_title">Falamhaich an dàta san stòras</string>
+    <string name="webstorage_clear_data_dialog_message">A bheil thu airson an dàta gu lèir a tha an làrach-lìn seo a’ stòradh a sguabadh às?</string>
+    <string name="webstorage_clear_data_dialog_ok_button">Ceart ma-thà</string>
+    <string name="webstorage_clear_data_dialog_cancel_button">Sguir dheth</string>
+    <string name="webstorage_origin_summary_mb_stored">MB air a stòradh air an fhòn agad</string>
+    <string name="loading_video">A’ luchdadh a’ video…</string>
+    <string name="permissions_prompt_message">Bu mhath le <xliff:g id="website origin" example="maps.google.com">%s</xliff:g> <xliff:g id="resources" example="camera, microphone">%s</xliff:g> a chleachdadh.</string>
+    <string name="permissions_prompt_allow">Ceadaich</string>
+    <string name="permissions_prompt_deny">Diùlt</string>
+    <string name="permissions_prompt_remember">Cuimhnich mo roghainn</string>
+    <string name="resource_protected_media_id">ID meadhain dhìonta</string>
+    <string name="resource_video_capture">an camara</string>
+    <string name="resource_audio_capture">am micreofon</string>
+    <string name="geolocation_permissions_prompt_message">Bu mhath le <xliff:g id="website origin" example="maps.google.com">%s</xliff:g> fiosrachadh càit a bheil thu</string>
+    <string name="geolocation_permissions_prompt_share">Nochd m’ ionad</string>
+    <string name="geolocation_permissions_prompt_dont_share">Diùlt</string>
+    <string name="geolocation_permissions_prompt_remember">Cuimhnich mo roghainn</string>
+    <string name="geolocation_permissions_prompt_toast_allowed">Tha cothrom aig an làrach seo air d’ ionad. Atharraichidh tu seo air sgrìn nan “Roghainnean” &gt; “Adhartach” &gt; “Làrach-lìn”.</string>
+    <string name="geolocation_permissions_prompt_toast_disallowed">Chan eil cothrom aig an làrach seo air d’ ionad. Atharraichidh tu seo air sgrìn nan “Roghainnean” &gt; “Adhartach” &gt; “Làrach-lìn”.</string>
+    <string name="geolocation_settings_page_title">Falamhaich cead air an ionad</string>
+    <string name="geolocation_settings_page_summary_allowed">Tha cothrom air d’ ionad aig an làrach seo</string>
+    <string name="geolocation_settings_page_summary_not_allowed">Chan eil cothrom air d’ ionad aig an làrach seo</string>
+    <string name="geolocation_settings_page_dialog_message">A bheil thu airson cead air d’ ionad aig an làrach seo fhalamhachadh?</string>
+    <string name="geolocation_settings_page_dialog_ok_button">Ceart ma-thà</string>
+    <string name="geolocation_settings_page_dialog_cancel_button">Sguir dheth</string>
+    <string name="website_settings_clear_all">Falamhaich a h-uile</string>
+    <string name="website_settings_clear_all_dialog_message">A bheil thu airson an dàta air fad air làraichean-lìn agus ceadan air d’ ionad a sguabadh às?</string>
+    <string name="website_settings_clear_all_dialog_ok_button">Ceart ma-thà</string>
+    <string name="website_settings_clear_all_dialog_cancel_button">Sguir dheth</string>
+    <string name="progress_dialog_setting_wallpaper">A’ suidheachadh a’ phàipeir-bhalla\u2026</string>
+    <string name="defaultBookmarksUpButton">Comharran-lìn</string>
+    <string name="empty_bookmarks_folder">Chan eil comharra-lìn ann.</string>
+    <string name="other_bookmarks">Comharran-lìn eile</string>
+    <string name="rlz_access_point">Y1</string>
+    <string name="account_chooser_dialog_title" msgid="4833571985009544332">Tagh cunntas</string>
+    <string name="import_bookmarks_dialog_title">Sioncronaich le cunntas Google</string>
+    <string name="import_bookmarks_dialog_description">Chan eil na comharran-lìn air an uidheam seo co-cheangailte ri cunntas Google fhathast. Cuir na comharran-lìn seo ri cunntas gus an sàbhaladh. Sguab às iad mur eil thu airson an sioncronachadh.</string>
+    <string name="import_bookmarks_dialog_select_add_account">Cuir comharran-lìn air an uidheam seo ris is tòisich air sioncronachadh le cunntas Google</string>
+    <string name="import_bookmarks_dialog_delete_select_account">Sguab às comharran-lìn air an uidheam seo is tòisich air sioncronachadh le cunntas Google</string>
+    <string name="import_bookmarks_dialog_confirm_delete">A bheil thu airson na comharran-lìn air an uidheam seo a sguabadh às is tòiseachadh air sioncronachadh le <xliff:g id="Google account" example="account@example.com">%s</xliff:g>?</string>
+    <string name="import_bookmarks_dialog_confirm_add">A bheil thu airson na comharran-lìn a th’ air an uidheam seo a cur ris is tòiseachadh air sioncronachadh le <xliff:g id="Google account" example="account@example.com">%s</xliff:g>?</string>
+    <string name="import_bookmarks_dialog_remove">Sguab às na comharran-lìn</string>
+    <string name="import_bookmarks_wizard_next">Air adhart</string>
+    <string name="import_bookmarks_wizard_previous">Air ais</string>
+    <string name="import_bookmarks_wizard_cancel">Sguir dheth</string>
+    <string name="import_bookmarks_wizard_done">Deiseil</string>
+    <string name="import_bookmarks_dialog_add">Cuir comharran-lìn ri cunntas Google</string>
+    <string name="import_bookmarks_dialog_import">Cuir na comharran-lìn Android agad ris na comharran-lìn aig <xliff:g id="Google account" example="account@example.com">%s</xliff:g></string>
+    <string name="menu_share_url">Co-roinn</string>
+    <string name="max_tabs_warning">Chan eil tabaichean air fhàgail</string>
+    <string name="instant_search_label">Google le Instant (deuchainn-lannan)</string>
+    <string name="preview">Ro-shealladh</string>
+    <string name="local_bookmarks">Ionadail</string>
+    <string name="ua_switcher_desktop">Iarr làrach nan desktop</string>
+    <string name="permission_preload_label">Ro-luchdaich toraidhean</string>
+    <string name="empty_snapshots_folder">Gun duilleagan sàbhailte.</string>
+    <string name="remove_snapshot">Sguab às an duilleag a chaidh a shàbhaladh</string>
+    <string name="snapshot_go_live">Gu beò</string>
+    <string name="accessibility_button_back">Air ais</string>
+    <string name="accessibility_button_forward">Air adhart</string>
+    <string name="accessibility_button_refresh">Ath-nuadhaich an duilleag</string>
+    <string name="accessibility_button_stop">Cuir stad air luchdadh na duilleige</string>
+    <string name="accessibility_button_addbookmark">Dèan comharra-lìn dhen duilleag</string>
+    <string name="accessibility_button_search">Lorg</string>
+    <string name="accessibility_button_voice">Tòisich air lorg gutha</string>
+    <string name="accessibility_button_bookmarks">Comharran-lìn</string>
+    <string name="accessibility_button_closetab">Dùin an taba</string>
+    <string name="accessibility_button_newtab">Fosgail taba ùr</string>
+    <string name="accessibility_button_newincognitotab">Fosgail taba gun urra ùr</string>
+    <string name="accessibility_button_clear">Falamhaich an t-ion-chur</string>
+    <string name="accessibility_button_uaswitch">Cleachd user agent eile</string>
+    <string name="accessibility_button_go">Siuthad</string>
+    <string name="accessibility_button_navscreen">Manaidsear nan duilleag</string>
+    <string name="accessibility_button_more">Barrachd roghainnean</string>
+    <string name="accessibility_state_incognito">Duilleag gun urra</string>
+    <string name="accessibility_state_frozen">Duilleag a chaidh a shàbhaladh</string>
+    <string name="accessibility_transition_navscreen">Stiùireadh thabaichean</string>
+    <string name="accessibility_button_bookmarks_folder_up">Am pasgan roimhe</string>
+</resources>

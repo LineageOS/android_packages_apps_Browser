@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="accessibility_button_homescreen">முகப்புத் திரை</string>
+    <string name="contextmenu_openlink_incognito_newwindow">புதிய மறைநிலை தாவலில் திற</string>
+    <string name="contextmenu_openlink_incognito_newwindow_background">புதிய மறைநிலை பின்புலம் தாவலில் திற</string>
+    <string name="pref_content_ua">பயனர் முகவர்</string>
+    <string name="pref_interface_title">இடைமுகம்</string>
+    <string name="full_screen_title">முழுத்திரை</string>
+    <string name="full_screen_summary">மூழ்குதல் வழிச்செல்லலை செயல்படுத்து</string>
+    <string name="onehand_title">OneHand வழிச்செல்லல்</string>
+    <string name="onehand_summary">தேய்த்தல்கள் மற்றும் விரைவான செயல்பாடுகளுடன் சுலபமான வலை வழிச்செல்லுதல்</string>
+    <string name="permission_not_granted_dialog_title">அனுமதி வழங்கப்படவில்லை.</string>
+    <string name="permission_not_granted_dialog_message">வெளிப்புற சேமிப்பகத்தில் எழுதுவதற்கான அனுமதி வழங்கப்படவில்லை. பதிவிறக்க முடியவில்லை.</string>
+    <string name="browser_error_title">உலாவி பிழை.</string>
+    <string name="dialog_dismiss">விலக்கு</string>
+    <string name="error_permissions">தொடர்வதற்கு தேவையான முக்கிய அனுமதிகள் பயன்பாட்டிடம் இல்லை. தயவுசெய்து உங்கள் அனுமதிகள் அமைப்புகளை சரிபார்க்கவும்.</string>
+</resources>

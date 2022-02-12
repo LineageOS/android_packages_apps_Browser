@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="application_name">Navigadore</string>
+    <string name="choose_upload">Sèbera archìviu de carrigare</string>
+    <string name="uploads_disabled">Is carrigamentos de archìvios sunt disativados.</string>
+    <string name="new_tab">Ischeda noa</string>
+    <string name="new_incognito_tab">Ischeda noa in incògnitu</string>
+    <string name="tab_bookmarks">Signalibros</string>
+    <string name="tab_most_visited">Prus bisitadu</string>
+    <string name="tab_history">Cronologia</string>
+    <string name="tab_snapshots">Pàginas sarvadas</string>
+    <string name="added_to_bookmarks">Agiuntu a is signalibros.</string>
+    <string name="removed_from_bookmarks">Bogadu dae is signalibros.</string>
+    <string name="username">Nùmene</string>
+    <string name="password">Crae</string>
+    <string name="bookmarks_add_page">Sarva signalibru</string>
+    <string name="bookmarks_search">Navigadore</string>
+    <string name="cancel">Annulla</string>
+    <string name="ok">AB</string>
+    <string name="title_bar_loading">Carrighende\u2026</string>
+    <string name="page_info">Informatziones de sa pàgina</string>
+    <string name="page_info_view">Visualiza informatziones de sa pàgina</string>
+    <string name="page_info_address">Indiritzu:</string>
+    <string name="ssl_warnings_header">B\'at problemas cun su tzertificadu de seguresa pro custu situ.</string>
+    <string name="ssl_continue">Sighi</string>
+    <string name="security_warning">Avisu de seguresa</string>
+    <string name="view_certificate">Visualiza tzertificadu</string>
+    <string name="ssl_go_back">In segus</string>
+    <string name="ssl_untrusted">Custu tzertificadu no est de un\'autoridade fidada.</string>
+    <string name="ssl_mismatch">Su nùmene de su situ non currispondet cun su nùmene de su tzertificadu.</string>
+    <string name="ssl_expired">Custu tzertificadu est iscadidu.</string>
+    <string name="ssl_not_yet_valid">Custu tzertificadu no est ancora bàlidu.</string>
+    <string name="ssl_date_invalid">Custu tzertificadu tenet una data non bàlida.</string>
+    <string name="ssl_invalid">Custu tzertificadu no est bàlidu.</string>
+    <string name="ssl_unknown">Errore de tzertificadu non connotu.</string>
+    <string name="stopping">Firmende\u2026</string>
+    <string name="stop">Firma·ddu</string>
+    <string name="reload">Agiorna</string>
+    <string name="back">In segus</string>
+    <string name="forward">Torra a imbiare</string>
+    <string name="save">AB</string>
+    <string name="do_not_save">Annulla</string>
+    <string name="location">Indiritzu</string>
+    <string name="account">Contu</string>
+    <string name="containing_folder">Agiunghe a</string>
+    <string name="new_folder">Cartella noa</string>
+    <string name="edit_folder">Modìfica sa cartella</string>
+    <string name="delete_folder">Cantzella sa cartella</string>
+    <string name="no_subfolders">Peruna sutacartella.</string>
+    <string name="add_to_bookmarks_menu_option">Signalibros</string>
+    <string name="add_to_homescreen_menu_option">Ischermada printzipale</string>
+    <string name="add_to_other_folder_menu_option">Àtera cartella</string>
+    <string name="name">Eticheta</string>
+    <string name="http">http://</string>
+    <string name="save_to_bookmarks">Sarva in signalibros</string>
+    <string name="bookmark_this_page">Faghe custa pàgina a signalibru</string>
+    <string name="remove">Boga</string>
+    <string name="edit_bookmark">Modìfica signalibru</string>
+    <string name="create_shortcut_bookmark">Agiunghe curtziadòrgiu a sa pàgina printzipale</string>
+    <string name="open_bookmark">Aberi</string>
+    <string name="remove_bookmark">Cantzella signalibru</string>
+    <string name="remove_from_bookmarks">Boga dae signalibros</string>
+    <string name="remove_history_item">Boga dae sa cronologia</string>
+    <string name="set_as_homepage">Imposta comente pàgina printzipale</string>
+    <string name="bookmark_saved">Sarvadu in signalibros.</string>
+    <string name="bookmark_not_saved">No at fatu a sarvare su signalibru.</string>
+    <string name="homepage_set">Pagina printzipale impostada.</string>
+    <string name="bookmark_needs_title">"Su signalibru depet tènnere unu nùmene."</string>
+    <string name="bookmark_needs_url">"Su signalibru depet tènnere una positzione."</string>
+    <string name="bookmark_url_not_valid">Custu URL no est bàlidu.</string>
+    <string name="bookmark_cannot_save_url">Custu URL non si podet fàghere a signalibru.</string>
+    <string name="bookmark_page">Faghe a signalibru s\'ùrtima pàgina visualizada</string>
+    <string name="bookmark_thumbnail_view">Miniaturas</string>
+    <string name="bookmark_list_view">Lista</string>
+    <string name="current_page">dae\u0020</string>
+    <string name="delete_bookmark_warning">Cantzella signalibru \"<xliff:g id="bookmark">%s</xliff:g>\"?</string>
+    <string name="open_all_in_new_window">Aberi totu in ischedas noas</string>
+    <string name="goto_dot">Bae</string>
+    <string name="select_dot">Seletziona testu</string>
+    <string name="close_other_tabs">Serra is àteras ischedas</string>
+    <string name="bookmarks">Signalibros</string>
+    <string name="shortcut_bookmark">Signalibru</string>
+    <string name="shortcut_bookmark_title">Sèbera unu signalibru</string>
+    <string name="history">Cronologia</string>
+    <string name="menu_view_download">Iscarrigamentos</string>
+    <string name="copy_page_url">Còpia URL de sa pàgina</string>
+    <string name="share_page">Cumpartzi pàgina</string>
+    <string name="menu_save_snapshot">Sarva pro letura fora de lìnia</string>
+    <string name="saving_snapshot">Sarvende\u2026</string>
+    <string name="snapshot_failed">No at fatu a sarvare pro letura fora de lìnia.</string>
+    <string name="contextheader_folder_bookmarkcount"><xliff:g id="bookmark_count">%d</xliff:g> signalibros</string>
+    <string name="contextheader_folder_empty">Cartella bòida</string>
+    <string name="contextmenu_openlink">Aberi</string>
+    <string name="contextmenu_openlink_newwindow">Aberi in un\'ischeda noa</string>
+    <string name="contextmenu_openlink_newwindow_background">Aberi in un\'ischeda noa in segundu pianu</string>
+    <string name="contextmenu_savelink">Sarva ligòngiu</string>
+    <string name="contextmenu_sharelink">Cumpartzi ligòngiu</string>
+    <string name="contextmenu_copy">Còpia</string>
+    <string name="contextmenu_copylink">Còpia URL de su ligòngiu</string>
+    <string name="contextmenu_download_image">Sarva immàgine</string>
+    <string name="contextmenu_view_image">Visualiza immàgine</string>
+    <string name="contextmenu_set_wallpaper">Imposta comente isfundu</string>
+    <string name="contextmenu_dial_dot">Cumpone\u2026</string>
+    <string name="contextmenu_add_contact">Agiunghe cuntatu</string>
+    <string name="contextmenu_send_mail">Imbia messàgiu de posta eletrònica</string>
+    <string name="contextmenu_map">Mapa</string>
+    <string name="choosertitle_sharevia">Cumpartzi tràmite</string>
+    <string name="clear">Lìmpia</string>
+    <string name="replace">Càmbia cun àteru</string>
+    <string name="browser_bookmarks_page_bookmarks_text">Signalibros</string>
+    <string name="menu_preferences">Impostatziones</string>
+    <string name="pref_content_title">Cuntenutu de sa pàgina</string>
+    <string name="pref_allow_apptabs">Permite ischedas mùltiplas pro aplicatzione</string>
+    <string name="pref_content_load_images">Càrriga immàgines</string>
+    <string name="pref_content_load_images_summary">Mustra immàgines in pàginas web</string>
+    <string name="pref_content_block_popups">Bloca is ventanas a cumparsa</string>
+    <string name="pref_content_javascript">Ativa JavaScript</string>
+    <string name="pref_content_open_in_background">Aberi in segundu pianu</string>
+    <string-array name="pref_content_plugins_choices">
+        <item>Semper allutu</item>
+        <item>Si rechertu</item>
+        <item>Istudadu</item>
+    </string-array>
+    <string name="pref_content_open_in_background_summary">Aberi ischedas noas a palas de s\'ischeda currente</string>
+    <string name="pref_content_homepage">Imposta pàgina printzipale</string>
+    <string name="pref_content_search_engine">Imposta motore de chirca</string>
+    <string name="pref_content_search_engine_summary">Sèbera unu motore de chirca</string>
+    <string name="pref_set_homepage_to">Imposta in</string>
+    <string-array name="pref_homepage_choices">
+        <item>Pàgina currente</item>
+        <item>Pàgina bòida</item>
+        <item>Pàgina predefinida</item>
+        <item>Sitos prus bisitados</item>
+        <item>Àteru</item>
+    </string-array>
+    <string name="pref_content_autofit">Àuto-assenta pàginas</string>
+    <string name="pref_content_autofit_summary">Formata is pàginas web pro chi s\'adatent a s\'ischermu</string>
+    <string name="pref_general_title">Generale</string>
+    <string name="pref_general_sync_title">Sincronizatzione</string>
+    <string name="pref_general_autofill_title">Àuto-cumpletamentu</string>
+    <string name="pref_autofill_enabled">Mòdulu in àuto-cumpletamentu</string>
+    <string name="pref_autofill_profile_editor">Testu in àuto-cumpletamentu</string>
+    <string name="pref_autofill_profile_editor_summary">Imposta su testu pro s\'àuto-cumpletamentu in is mòdulos web</string>
+    <string name="pref_autologin_title">Iscritzione a Google automàtica</string>
+    <string name="pref_autologin_progress">Intrende a is sitos Google impreende <xliff:g>%s</xliff:g></string>
+    <string name="autologin_bar_hide_text">Cua</string>
+    <string name="autofill_profile_editor_heading">Iscrie su testu chi boles a àuto-cumpletare in is mòdulos web.</string>
+    <string name="autofill_profile_editor_name">Nùmene e sambenadu:</string>
+    <string name="autofill_profile_editor_email_address">Indiritzu de posta:</string>
+    <string name="autofill_profile_editor_company_name">Nùmene de s\'azienda:</string>
+    <string name="autofill_profile_editor_address_line_1">Lìnia indiritzu 1:</string>
+    <string name="autofill_profile_editor_address_line_1_hint">Ruga, casella postale</string>
+    <string name="autofill_profile_editor_address_line_2">Lìnia indiritzu 2:</string>
+    <string name="autofill_profile_editor_address_line_2_hint">Apartamentu, suite, unidade, edifìtziu, pianu, etc.</string>
+    <string name="autofill_profile_editor_city">Tzitade/Bidda:</string>
+    <string name="autofill_profile_editor_state">Natzione/ Provìntzia / Regione:</string>
+    <string name="autofill_profile_editor_zip_code">Còdighe postale:</string>
+    <string name="autofill_profile_editor_country">Paisu:</string>
+    <string name="autofill_profile_editor_phone_number">Telèfonu:</string>
+    <string name="autofill_profile_editor_phone_number_invalid">Nùmeru de telèfonu non bàlidu.</string>
+    <string name="autofill_profile_editor_save_profile">Sarva</string>
+    <string name="autofill_profile_successful_save">Testu in àuto-cumpletamentu sarvadu.</string>
+    <string name="autofill_profile_successful_delete">Testu in àuto-cumpletamentu cantzelladu.</string>
+    <string name="autofill_profile_editor_delete_profile">Cantzella</string>
+    <string name="autofill_setup_dialog_message">Su navigadore podet cumpletare in automàticu is mòdulos web comente a custu. Boles impostare su testu in àuto-cumpletamentu?</string>
+    <string name="autofill_setup_dialog_negative_toast">Podes semper impostare su testu in àuto-cumpletamentu dae su navigadore &gt; Impostatziones &gt; Ischermu generale.</string>
+    <string name="disable_autofill">Disativa àuto-cumpletamentu</string>
+    <string name="pref_privacy_security_title">Riservadesa &amp; seguresa</string>
+    <string name="pref_privacy_clear_cache">Lìmpia memòria temporànea</string>
+    <string name="pref_privacy_clear_cache_summary">Lìmpia is cuntenutos e bases de datos locales de sa memòria temporànea</string>
+    <string name="pref_privacy_clear_cache_dlg">Cantzellare is cuntenutos e bases de datos locales de sa memòria temporànea?</string>
+    <string name="pref_privacy_clear_history">Lìmpia sa cronologia</string>
+    <string name="pref_privacy_clear_history_summary">Lìmpia sa cronologia de navigatzione</string>
+    <string name="pref_privacy_clear_history_dlg">Cantzellare sa cronologia de navigatzione?</string>
+    <string name="pref_privacy_formdata_title">Datos de mòdulos</string>
+    <string name="pref_privacy_clear_form_data">Lìmpia is datos de mòdulos</string>
+    <string name="pref_privacy_clear_form_data_summary">Lìmpia totu is datos de mòdulos sarvados</string>
+    <string name="pref_privacy_clear_form_data_dlg">Cantzellare totu is datos de mòdulos sarvados?</string>
+    <string name="pref_privacy_clear_passwords">Lìmpia craes</string>
+    <string name="pref_privacy_clear_passwords_summary">Lìmpia totu is craes sarvadas</string>
+    <string name="pref_privacy_clear_passwords_dlg">Cantzellare totu is craes sarvadas?</string>
+    <string name="pref_privacy_location_title">Positzione</string>
+    <string name="pref_privacy_enable_geolocation">Ativa positzione</string>
+    <string name="pref_privacy_enable_geolocation_summary">Permiti a is sitos de rechedere s\'atzessu a sa positzione tua</string>
+    <string name="pref_privacy_clear_geolocation_access">Lìmpia s\'atzessu a sa positzione</string>
+    <string name="pref_privacy_clear_geolocation_access_summary">Limpiare s\'atzessu a sa positzione pro totu is sitos</string>
+    <string name="pref_privacy_clear_geolocation_access_dlg">Limpiare s\'atzessu a sa positzione de is sitos web?</string>
+    <string name="pref_security_passwords_title">Craes</string>
+    <string name="pref_security_remember_passwords">Regorda craes</string>
+    <string name="pref_security_remember_passwords_summary">Sarva nùmenes utente e craes pro sitos web</string>
+    <string name="pref_security_save_form_data">Regorda datos de mòdulos</string>
+    <string name="pref_security_save_form_data_summary">Regorda is datos chi iscrio in is mòdulos pro ddos impreare a pustis</string>
+    <string name="pref_security_show_security_warning">Mustra avisos de seguresa</string>
+    <string name="pref_security_show_security_warning_summary">Mustra s\'avisu si b\'at problemas cun sa seguresa de unu situ</string>
+    <string-array name="pref_text_size_choices">
+        <item>Piticu meda</item>
+        <item>Piticu</item>
+        <item>Normale</item>
+        <item>Mannu</item>
+        <item>Enorme</item>
+    </string-array>
+    <string name="pref_min_font_size">Mannària mìnima de su caràtere</string>
+    <string name="pref_min_font_size_value"><xliff:g id="font_size">%d</xliff:g>pt</string>
+    <string name="pref_text_zoom">Iscala de mannària de su testu</string>
+    <string name="pref_zoom_on_double_tap">Ammània cun su tocu dòpiu</string>
+    <string name="pref_force_userscalable">Fortza s\'ativatzione de s\'ismanniamentu</string>
+    <string name="pref_force_userscalable_summary">Ignora sa rechesta de unu situ web de controllare s\'ismanniamentu</string>
+    <string name="pref_inverted_category">Furriadura de colores</string>
+    <string name="pref_inverted">Colores furriados</string>
+    <string name="pref_inverted_summary">Su nieddu si faghet biancu e a s\'imbesse</string>
+    <string name="pref_inverted_contrast">Cuntrastu</string>
+    <string name="pref_default_zoom">Ismanniamentu predefinidu</string>
+    <string-array name="pref_default_zoom_choices">
+        <item>Istesiadu</item>
+        <item>Mesanu</item>
+        <item>Serra</item>
+    </string-array>
+    <string name="pref_default_zoom_dialogtitle">Ismanniamentu predefinidu</string>
+    <string name="pref_content_load_page">Aberi pàginas in panoràmica</string>
+    <string name="pref_content_load_page_summary">Mustra panoràmica de is pàginas abertas pagu ora</string>
+    <string name="pref_extras_title">Connoschèntzia avantzada</string>
+    <string name="pref_extras_website_settings">Impostatziones de sitos web</string>
+    <string name="pref_extras_website_settings_summary">Impostatziones avantzadas pro sitos web personales</string>
+    <string name="pref_extras_reset_default_title">Torra a is impostatziones predefinidas</string>
+    <string name="pref_extras_reset_default">Torra a is impostatziones predefinidas</string>
+    <string name="pref_extras_reset_default_summary">Recùpera impostatziones predefinidas</string>
+    <string name="pref_extras_reset_default_dlg">Ripristinare is impostatziones a is valores predefinidos?</string>
+    <string name="pref_development_title">Curregi</string>
+    <string name="pref_default_text_encoding">Codìfica de su testu</string>
+    <string-array name="pref_default_text_encoding_choices">
+        <item>Latinu-1 (ISO-8859-1)</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Tzinesu (GBK)</item>
+        <item>Tzinesu (Big5)</item>
+        <item>Giaponesu (ISO-2022-JP)</item>
+        <item>Giaponesu (SHIFT_JIS)</item>
+        <item>Giaponesu (EUC-JP)</item>
+        <item>Coreanu (EUC-KR)</item>
+        </string-array>
+    <string name="pref_default_text_encoding_dialogtitle">Codìfica de su testu</string>
+    <string name="pref_accessibility_title">Atzessibilidade</string>
+    <string name="pref_font_size_category">Mannària de su testu</string>
+    <string name="pref_lab_quick_controls">Controllos lestros</string>
+    <string name="pref_lab_quick_controls_summary">        Iscurre su pòddighe dae s\'oru de manca o de dereta pro abèrrere is controllos lestros e cuare is istancas de s\'URL e de s\'aplicatzione</string>
+    <string name="pref_use_instant_search">Google Instant</string>
+    <string name="pref_use_instant_search_summary">      Imprea Google Instant cando impreas Google Search, pro mustrare is resurtados in su mentras chi
+      iscries (podet crèschere s\'impreu de datos).</string>
+    <string name="pref_lab_fullscreen">Totu ischermu</string>
+    <string name="pref_lab_fullscreen_summary">Imprea sa modalidade a totu ischermu pro cuare s\'istanca de istadu</string>
+    <string name="pref_data_title">Gestione de sa largària de banda</string>
+    <string name="pref_data_preload_title">Chirca resurtados in pre-carrigamentu</string>
+    <string-array name="pref_data_preload_choices">
+        <item>Mai</item>
+        <item>Isceti cun Wi-Fi</item>
+        <item>Semper</item>
+    </string-array>
+    <string name="pref_data_preload_summary">Permite a su navigadore de pre-carrigare resurtados de chirca riservados in segundu pianu</string>
+    <string name="pref_data_preload_dialogtitle">Chirca resurtados in pre-carrigamentu</string>
+    <string name="pref_link_prefetch_title">Pre-carrigamentu pàgina web</string>
+    <string-array name="pref_link_prefetch_choices">
+        <item>Mai</item>
+        <item>Isceti cun Wi-Fi</item>
+        <item>Semper</item>
+    </string-array>
+    <string name="pref_link_prefetch_summary">Permite a su navigadore de pre-carrigare pàginas web ligongiadas in segundu pianu</string>
+    <string name="pref_link_prefetch_dialogtitle">Pre-carrigamentu pàgina web</string>
+    <string name="browserFrameNetworkErrorLabel">Problema de connessione</string>
+    <string name="browserFrameFileErrorLabel">Problema de archìviu</string>
+    <string name="browserFrameFormResubmitMessage">Sa pàgina chi chircas de visualizare cuntenet datos chi si sunt giai imbiados (\"POSTDATOS\"). Si torras a imbiare is datos, cale si siat atzione chi su mòdulu de sa pàgina at esecutadu (comente una chirca o una còmpora in lìnia) s\'at a repìtere.</string>
+    <string name="loadSuspendedTitle">Peruna connessione</string>
+    <string name="loadSuspended">Si navigadore non podet carrigare custa pàgina ca non b\'at
+      connessione a internet.</string>
+    <string name="clear_history">Lìmpia sa cronologia</string>
+    <string name="browser_history">Pàginas bisitadas pagu ora</string>
+    <string name="empty_history">Peruna cronologia de navigatzione.</string>
+    <string name="go_home">Pàgina printzipale</string>
+    <string name="add_new_bookmark">Agiunghe signalibru</string>
+    <string name="add_bookmark_short">Agiunghe</string>
+    <string name="search_hint">Chirca o iscrie un\'URL</string>
+    <string name="search_button_text">Bae</string>
+    <string name="search_settings_description">Signalibros e cronologia web</string>
+    <string name="popup_window_attempt">Permìtere a custu situ de abèrrere una
+      ventana a cumparsa?</string>
+    <string name="allow">Permite</string>
+    <string name="block">Bloca</string>
+    <string name="too_many_windows_dialog_title">Lìmite de ischedas cròmpidu</string>
+    <string name="too_many_windows_dialog_message">Non faghet a abèrrere un\'ischeda noa finas a cando nde serras una.</string>
+    <string name="too_many_subwindows_dialog_title">Ventana a cumparsa giai aberta</string>
+    <string name="too_many_subwindows_dialog_message">Si podet abèrrere isceti una ventana a cumparsa
+      a sa borta.</string>
+    <string name="download_no_sdcard_dlg_title" product="nosdcard">Archiviatzione USB no a disponimentu</string>
+    <string name="download_no_sdcard_dlg_title" product="default">Peruna ischeda SD</string>
+    <string name="download_no_sdcard_dlg_msg" product="nosdcard">S\'archiviazione USB est recherta pro iscarrigare <xliff:g id="filename">%s</xliff:g>.</string>
+    <string name="download_no_sdcard_dlg_msg" product="default">Un\'ischeda SD est recherta pro iscarrigare <xliff:g id="filename">%s</xliff:g>.</string>
+    <string name="download_sdcard_busy_dlg_title" product="nosdcard">Archiviatzione USB no a disponimentu</string>
+    <string name="download_sdcard_busy_dlg_title" product="default">Ischeda SD no a disponimentu</string>
+    <string name="download_sdcard_busy_dlg_msg" product="nosdcard">S\'archiviatzione USB est ocupada. Pro permìtere iscarrigamentos, incarca Disativa archiviatzione USB in sa notìfica.</string>
+    <string name="download_sdcard_busy_dlg_msg" product="default">S\'ischeda SD est ocupada. Pro permìtere iscarrigamentos, incarca Disativa archiviatzione USB in sa notìfica.</string>
+    <string name="cannot_download">Faghet a iscarrigare isceti URL \"http\" o \"https\".</string>
+    <string name="download_pending">Cumintzende s\'iscarrigamentu\u2026</string>
+    <string name="search_the_web">Chirca in ìnternet</string>
+    <string name="webstorage_outofspace_notification_title">Archiviatzione de su navigadore prena</string>
+    <string name="webstorage_outofspace_notification_text">Toca pro fàghere logu.</string>
+    <string name="webstorage_clear_data_title">Lìmpia is datos archiviados</string>
+    <string name="webstorage_clear_data_dialog_message">Cantzellare totu is datos archiviados in custu situ web?</string>
+    <string name="webstorage_clear_data_dialog_ok_button">AB</string>
+    <string name="webstorage_clear_data_dialog_cancel_button">Annulla</string>
+    <string name="webstorage_origin_summary_mb_stored">MB archiviadu in su telèfonu tuo</string>
+    <string name="loading_video">Carrighende vìdeu\u2026</string>
+    <string name="permissions_prompt_message"><xliff:g id="website origin" example="maps.google.com">%s</xliff:g> bolet impreare su <xliff:g id="resources" example="camera, microphone">%s</xliff:g>.</string>
+    <string name="permissions_prompt_allow">Permite</string>
+    <string name="permissions_prompt_deny">Nega</string>
+    <string name="permissions_prompt_remember">Regorda preferèntzia</string>
+    <string name="resource_protected_media_id">ID de media amparadu</string>
+    <string name="resource_video_capture">càmera</string>
+    <string name="resource_audio_capture">micròfonu</string>
+    <string name="geolocation_permissions_prompt_message"><xliff:g id="website origin" example="maps.google.com">%s</xliff:g> bolet ischire sa positzione tua</string>
+    <string name="geolocation_permissions_prompt_share">Cumpartzi positzione</string>
+    <string name="geolocation_permissions_prompt_dont_share">Refuda</string>
+    <string name="geolocation_permissions_prompt_remember">Regorda preferèntzia</string>
+    <string name="geolocation_permissions_prompt_toast_allowed">Custu situ podet atzèdere a sa positzione tua. Càmbia·ddu in Impostatziones &gt; Avantzadas &gt; Ischermu sitos web.</string>
+    <string name="geolocation_permissions_prompt_toast_disallowed">Custu situ non podet atzèdere a sa positzione tua. Càmbia·ddu in Impostatziones &gt; Avantzadas &gt; Ischermu sitos web.</string>
+    <string name="geolocation_settings_page_title">Lìmpia s\'atzessu a sa positzione</string>
+    <string name="geolocation_settings_page_summary_allowed">Custu situ immoe podet atzèdere a sa positzione tua</string>
+    <string name="geolocation_settings_page_summary_not_allowed">Custu situ immoe non podet atzèdere a sa positzione tua</string>
+    <string name="geolocation_settings_page_dialog_message">Limpiare s\'atzessu a sa positzione pro custu situ?</string>
+    <string name="geolocation_settings_page_dialog_ok_button">AB</string>
+    <string name="geolocation_settings_page_dialog_cancel_button">Annulla</string>
+    <string name="website_settings_clear_all">Cantzella·nche totu</string>
+    <string name="website_settings_clear_all_dialog_message">Cantzellare totu is datos e is permissos de positziones de is sitos web?</string>
+    <string name="website_settings_clear_all_dialog_ok_button">AB</string>
+    <string name="website_settings_clear_all_dialog_cancel_button">Annulla</string>
+    <string name="progress_dialog_setting_wallpaper">Impostende s\'isfundu\u2026</string>
+    <string name="defaultBookmarksUpButton">Signalibros</string>
+    <string name="empty_bookmarks_folder">Perunu signalibru.</string>
+    <string name="other_bookmarks">Àteros signalibros</string>
+    <string name="rlz_access_point">Y1</string>
+    <string name="account_chooser_dialog_title" msgid="4833571985009544332">Sèbera contu</string>
+    <string name="import_bookmarks_dialog_title">Sincroniza cun unu contu Google</string>
+    <string name="import_bookmarks_dialog_description">Is signalibros in custu dispositivu non sunt assotziados cun unu contu Google. Sarva custos signalibros agiunghende·ddos a unu contu. Cantzella custos signalibros si non ddos boles sincronizare.</string>
+    <string name="import_bookmarks_dialog_select_add_account">Agiunghe signalibros a custu dispositvu e cumintza sa sincronizatzione cun unu contu Google</string>
+    <string name="import_bookmarks_dialog_delete_select_account">Cantzella signalibros in custu dispositvu e cumintza sa sincronizatzione cun unu contu Google</string>
+    <string name="import_bookmarks_dialog_confirm_delete">Cantzellare is signalibros in custu dispositivu e cumintzare a sincronizare is signalibros cun <xliff:g id="Google account" example="account@example.com">%s</xliff:g>?</string>
+    <string name="import_bookmarks_dialog_confirm_add">Agiùnghere signalibros in custu dispositivu e cumintzare a sincronizare signalibros cun <xliff:g id="Google account" example="account@example.com">%s</xliff:g>?</string>
+    <string name="import_bookmarks_dialog_remove">Cantzella signalibros</string>
+    <string name="import_bookmarks_wizard_next">Imbeniente</string>
+    <string name="import_bookmarks_wizard_previous">Pretzedente</string>
+    <string name="import_bookmarks_wizard_cancel">Annulla</string>
+    <string name="import_bookmarks_wizard_done">Fatu</string>
+    <string name="import_bookmarks_dialog_add">Agiunghe signalibros a su contu Google</string>
+    <string name="import_bookmarks_dialog_import">Agiùnghere is signalibros tuos de Android a is signalibros pro <xliff:g id="Google account" example="account@example.com">%s</xliff:g></string>
+    <string name="menu_share_url">Cumpartzidura</string>
+    <string name="max_tabs_warning">Non b\'at prus ischedas a disponimentu</string>
+    <string name="preview">Anteprima</string>
+    <string name="local_bookmarks">Locales</string>
+    <string name="ua_switcher_desktop">Rechede situ de iscrivania</string>
+    <string name="permission_preload_label">Pre-carrigamentu de is resurtados</string>
+    <string name="empty_snapshots_folder">Peruna pàgina sarvada.</string>
+    <string name="remove_snapshot">Cantzella pàgina sarvada</string>
+    <string name="snapshot_go_live">In direta</string>
+    <string name="accessibility_button_back">In segus</string>
+    <string name="accessibility_button_forward">A in antis</string>
+    <string name="accessibility_button_refresh">Agiorna sa pàgina</string>
+    <string name="accessibility_button_stop">Firma su carrigamentu de sa pàgina</string>
+    <string name="accessibility_button_addbookmark">Agiunghe sa pàgina a is signalibros</string>
+    <string name="accessibility_button_search">Chirca</string>
+    <string name="accessibility_button_voice">Cumintza chirca de boghe</string>
+    <string name="accessibility_button_bookmarks">Signalibros</string>
+    <string name="accessibility_button_closetab">Serra ischeda</string>
+    <string name="accessibility_button_newtab">Aberi un\'ischeda noa</string>
+    <string name="accessibility_button_newincognitotab">Aberi un\'ischeda noa in incògnitu</string>
+    <string name="accessibility_button_clear">Lìmpia intrada</string>
+    <string name="accessibility_button_uaswitch">Càmbia agente de utente</string>
+    <string name="accessibility_button_go">Bae</string>
+    <string name="accessibility_button_navscreen">Gestione de sa pàgina</string>
+    <string name="accessibility_button_more">Àteras optziones</string>
+    <string name="accessibility_state_incognito">Pàgina in incògnitu</string>
+    <string name="accessibility_state_frozen">Pàgina sarvada</string>
+    <string name="accessibility_transition_navscreen">Gestione de ischedas</string>
+    <string name="accessibility_button_bookmarks_folder_up">Cartella pretzedente</string>
+</resources>
